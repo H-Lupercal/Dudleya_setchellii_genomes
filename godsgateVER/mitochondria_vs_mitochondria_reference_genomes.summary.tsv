@@ -1,0 +1,17 @@
+query	reference	title	query_covered_bp	query_coverage	reference_coverage	weighted_identity	hsp_count	total_hsp_aligned_bp	bitscore_sum
+mitochondria	gb|PV256627.1|	Graptopetalum paraguayense mitochondrion, complete genome	172759	0.7099	0.422	97.69	116	175157	299297.0
+mitochondria	gb|OP588116.1|	Sedum plumbizincicola voucher KPBK001 mitochondrion, complete genome	166616	0.6847	0.4693	97.288	117	171123	288379.0
+mitochondria	ref|NC_069572.1|	Sedum plumbizincicola voucher KPBK001 mitochondrion, complete genome	166616	0.6847	0.4693	97.288	117	171123	288379.0
+mitochondria	gb|PV608516.1|	Sedum sarmentosum mitochondrion, complete genome	160651	0.6601	0.6152	97.426	122	164528	278636.0
+mitochondria	gb|OP573219.1|	Rhodiola tangutica mitochondrion, complete genome	156015	0.6411	0.3656	97.485	163	162525	276079.0
+mitochondria	ref|NC_072122.1|	Rhodiola tangutica mitochondrion, complete genome	156015	0.6411	0.3656	97.485	163	162525	276079.0
+mitochondria	gb|OP312067.1|	Rhodiola crenulata mitochondrion, complete genome	139338	0.5726	0.4332	97.436	143	142809	242109.0
+mitochondria	ref|NC_070303.1|	Rhodiola crenulata mitochondrion, complete genome	139338	0.5726	0.4332	97.436	143	142809	242109.0
+mitochondria	gb|PP024540.1|	Rhodiola rosea mitochondrion, complete genome	136149	0.5595	0.3658	97.658	199	163016	278608.0
+mitochondria	gb|OR188139.1|	Rhodiola juparensis mitochondrion, complete genome	127183	0.5226	0.3793	97.378	142	130342	220602.0
+mitochondria	ref|NC_082108.1|	Rhodiola juparensis mitochondrion, complete genome	127183	0.5226	0.3793	97.378	142	130342	220602.0
+mitochondria	gb|OP312068.1|	Rhodiola wallichiana chromosome 1 mitochondrion, complete sequence	97477	0.4005	0.4327	97.284	92	98576	166150.0
+mitochondria	gb|OP312070.1|	Rhodiola sacra chromosome 1 mitochondrion, complete sequence	77454	0.3183	0.3744	97.34	110	78717	133071.0
+mitochondria	gb|OP312071.1|	Rhodiola sacra chromosome 2 mitochondrion, complete sequence	60755	0.2497	0.4389	97.438	56	61476	104209.0
+mitochondria	gb|OP312069.1|	Rhodiola wallichiana chromosome 2 mitochondrion, complete sequence	58457	0.2402	0.503	96.891	58	58996	98248.0
+mitochondria	gb|CM082116.1|	Rhodiola kirilowii isolate R_Ki mitochondrion, complete sequence, whole genome shotgun sequence	37583	0.1544	0.4231	96.758	49	44848	74279.0

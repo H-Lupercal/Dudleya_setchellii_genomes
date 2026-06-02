@@ -1,0 +1,9 @@
+query	reference	title	query_covered_bp	query_coverage	reference_coverage	weighted_identity	hsp_count	total_hsp_aligned_bp	bitscore_sum
+mitochondria	gb|OQ076651.1|	Dudleya farinosa chloroplast, complete genome	3023	0.0124	0.0171	77.676	7	4896	2730.0
+mitochondria	ref|NC_085682.1|	Dudleya farinosa chloroplast, complete genome	3023	0.0124	0.0171	77.676	7	4896	2730.0
+mitochondria	gb|PX244390.1|	Dudleya nesiotica chloroplast, complete genome	3023	0.0124	0.0171	77.635	7	4896	2720.0
+mitochondria	gb|PX244393.1|	Dudleya candelabrum chloroplast, complete genome	3023	0.0124	0.0171	77.635	7	4896	2720.0
+mitochondria	gb|PX244389.1|	Dudleya virens chloroplast, complete genome	3023	0.0124	0.0171	77.635	7	4896	2719.0
+mitochondria	gb|PX244391.1|	Dudleya lanceolata chloroplast, complete genome	3023	0.0124	0.0172	77.601	7	4902	2708.0
+mitochondria	gb|PX244394.1|	Dudleya sp. T72600-1 chloroplast, complete genome	2906	0.0119	0.0142	75.366	9	4778	2020.0
+mitochondria	gb|PX244392.1|	Dudleya greenei chloroplast, complete genome	2300	0.0095	0.0146	75.506	7	4156	1800.0

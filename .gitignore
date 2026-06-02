@@ -1,0 +1,58 @@
+# Generated BLAST database index files
+*.ndb
+*.nhr
+*.nin
+*.njs
+*.nog
+*.nos
+*.not
+*.nsq
+*.ntf
+*.nto
+
+# Generated/downloaded reference bundles and copied query FASTAs
+dudleya_organelle_qc/*_refs.fa
+dudleya_organelle_qc/*_cds_*.fa
+godsgateVER/references/
+godsgateVER/*_refs.fa
+godsgateVER/*_cross_refs.fa
+godsgateVER/input_*.fa
+godsgateVER/*_query.fa
+godsgateVER/annotation/*.fa
+godsgateVER/annotation/*_ref_features.*.fa
+
+# Intermediate feature-transfer metadata and raw annotation BLAST outputs
+godsgateVER/annotation/*_feature_meta.json
+godsgateVER/annotation/*_feature_blastn.tsv
+godsgateVER/annotation/*_protein_tblastn.tsv
+
+# Raw whole-genome BLAST outputs from Godsgate; keep compact *.summary.tsv files
+godsgateVER/*.blastn.tsv
+
+# Intermediate marker/protein alignment outputs from the independent QC pass
+dudleya_organelle_qc/*_aa_vs_*.tsv
+dudleya_organelle_qc/*_cds_vs_*.tsv
+
+# Keep original input FASTAs
+!Dudleya_hifiasm_purged_manual_chloroplast.fa
+!Dudleya_hifiasm_purged_manual_mitochondria.fa
+
+# Keep reports
+!dudleya_organelle_qc/report.md
+!godsgateVER/report.md
+
+# Keep independent QC whole-genome evidence
+!dudleya_organelle_qc/chloroplast_vs_cprefs.tsv
+!dudleya_organelle_qc/chloroplast_vs_mitorefs.tsv
+!dudleya_organelle_qc/mitochondria_vs_cprefs.tsv
+!dudleya_organelle_qc/mitochondria_vs_mitorefs.tsv
+
+# Keep Godsgate annotations and summaries
+!godsgateVER/question.txt
+!godsgateVER/input_stats.json
+!godsgateVER/reference_search_summary.json
+!godsgateVER/proof_summary.json
+!godsgateVER/annotation_summary.json
+!godsgateVER/*.summary.tsv
+!godsgateVER/*.annotation.tsv
+!godsgateVER/*.draft.gff3

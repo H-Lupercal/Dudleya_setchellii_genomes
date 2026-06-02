@@ -1,0 +1,2 @@
+Verify and annotate Dudleya setchellii candidate mitochondrial and chloroplast FASTA assemblies using related species/families because D. setchellii has not been sequenced.
+Input folder: /home/neil/Downloads/dudleya/Dudleya_S_genomes
