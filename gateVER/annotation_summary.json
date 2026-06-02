@@ -1,8 +1,8 @@
 {
   "chloroplast": {
     "row_count": 717,
-    "tsv": "/home/neil/godsgate_results/dudleya-organelles/chloroplast.annotation.tsv",
-    "gff3": "/home/neil/godsgate_results/dudleya-organelles/chloroplast.draft.gff3",
+    "tsv": "/home/neil/gate_results/dudleya-organelles/chloroplast.annotation.tsv",
+    "gff3": "/home/neil/gate_results/dudleya-organelles/chloroplast.draft.gff3",
     "by_type": {
       "gene": 260,
       "tRNA": 59,
@@ -18,8 +18,8 @@
   },
   "mitochondria": {
     "row_count": 509,
-    "tsv": "/home/neil/godsgate_results/dudleya-organelles/mitochondria.annotation.tsv",
-    "gff3": "/home/neil/godsgate_results/dudleya-organelles/mitochondria.draft.gff3",
+    "tsv": "/home/neil/gate_results/dudleya-organelles/mitochondria.annotation.tsv",
+    "gff3": "/home/neil/gate_results/dudleya-organelles/mitochondria.draft.gff3",
     "by_type": {
       "CDS": 269,
       "gene": 186,

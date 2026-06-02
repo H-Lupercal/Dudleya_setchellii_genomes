@@ -78,15 +78,15 @@
 
 ## Draft annotation summary
 - chloroplast: 717 raw homology-supported feature hits; best nonredundant draft: 238 features. Raw by type {'gene': 260, 'tRNA': 59, 'CDS': 386, 'rRNA': 12}; raw confidence {'low': 78, 'medium': 114, 'high': 491, 'weak': 34}. Best nonredundant by type {'gene': 119, 'CDS': 85, 'tRNA': 30, 'rRNA': 4}; best confidence {'high': 224, 'medium': 2, 'low': 11, 'weak': 1}.
-  - TSV: /home/neil/godsgate_results/dudleya-organelles/chloroplast.annotation.tsv
-  - GFF3: /home/neil/godsgate_results/dudleya-organelles/chloroplast.draft.gff3
-  - Best nonredundant TSV: /home/neil/godsgate_results/dudleya-organelles/chloroplast.best_nonredundant.annotation.tsv
-  - Best nonredundant GFF3: /home/neil/godsgate_results/dudleya-organelles/chloroplast.best_nonredundant.draft.gff3
+  - TSV: /home/neil/gate_results/dudleya-organelles/chloroplast.annotation.tsv
+  - GFF3: /home/neil/gate_results/dudleya-organelles/chloroplast.draft.gff3
+  - Best nonredundant TSV: /home/neil/gate_results/dudleya-organelles/chloroplast.best_nonredundant.annotation.tsv
+  - Best nonredundant GFF3: /home/neil/gate_results/dudleya-organelles/chloroplast.best_nonredundant.draft.gff3
 - mitochondria: 509 raw homology-supported feature hits; best nonredundant draft: 96 features. Raw by type {'CDS': 269, 'gene': 186, 'tRNA': 38, 'rRNA': 16}; raw confidence {'low': 55, 'high': 370, 'medium': 37, 'weak': 47}. Best nonredundant by type {'CDS': 34, 'gene': 47, 'tRNA': 13, 'rRNA': 2}; best confidence {'high': 79, 'medium': 7, 'low': 5, 'weak': 5}.
-  - TSV: /home/neil/godsgate_results/dudleya-organelles/mitochondria.annotation.tsv
-  - GFF3: /home/neil/godsgate_results/dudleya-organelles/mitochondria.draft.gff3
-  - Best nonredundant TSV: /home/neil/godsgate_results/dudleya-organelles/mitochondria.best_nonredundant.annotation.tsv
-  - Best nonredundant GFF3: /home/neil/godsgate_results/dudleya-organelles/mitochondria.best_nonredundant.draft.gff3
+  - TSV: /home/neil/gate_results/dudleya-organelles/mitochondria.annotation.tsv
+  - GFF3: /home/neil/gate_results/dudleya-organelles/mitochondria.draft.gff3
+  - Best nonredundant TSV: /home/neil/gate_results/dudleya-organelles/mitochondria.best_nonredundant.annotation.tsv
+  - Best nonredundant GFF3: /home/neil/gate_results/dudleya-organelles/mitochondria.best_nonredundant.draft.gff3
 
 ## Interpretation limits
 - This is a homology-transfer draft, not a curated GenBank-submission annotation.

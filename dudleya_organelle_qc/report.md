@@ -7,7 +7,7 @@ This report summarizes the evidence generated in `dudleya_organelle_qc/` for two
 - `../Dudleya_hifiasm_purged_manual_chloroplast.fa`
 - `../Dudleya_hifiasm_purged_manual_mitochondria.fa`
 
-Only files in `dudleya_organelle_qc/` and the two raw input FASTAs were used for this report. The `godsgateVER/` directory was not used.
+Only files in `dudleya_organelle_qc/` and the two raw input FASTAs were used for this report. The `gateVER/` directory was not used.
 
 This folder contains QC and homology evidence for organelle identity. It is not a final curated annotation package and does not contain GFF3 or GTF annotation files.
 

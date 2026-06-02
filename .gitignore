@@ -13,21 +13,21 @@
 # Generated/downloaded reference bundles and copied query FASTAs
 dudleya_organelle_qc/*_refs.fa
 dudleya_organelle_qc/*_cds_*.fa
-godsgateVER/references/
-godsgateVER/*_refs.fa
-godsgateVER/*_cross_refs.fa
-godsgateVER/input_*.fa
-godsgateVER/*_query.fa
-godsgateVER/annotation/*.fa
-godsgateVER/annotation/*_ref_features.*.fa
+gateVER/references/
+gateVER/*_refs.fa
+gateVER/*_cross_refs.fa
+gateVER/input_*.fa
+gateVER/*_query.fa
+gateVER/annotation/*.fa
+gateVER/annotation/*_ref_features.*.fa
 
 # Intermediate feature-transfer metadata and raw annotation BLAST outputs
-godsgateVER/annotation/*_feature_meta.json
-godsgateVER/annotation/*_feature_blastn.tsv
-godsgateVER/annotation/*_protein_tblastn.tsv
+gateVER/annotation/*_feature_meta.json
+gateVER/annotation/*_feature_blastn.tsv
+gateVER/annotation/*_protein_tblastn.tsv
 
-# Raw whole-genome BLAST outputs from Godsgate; keep compact *.summary.tsv files
-godsgateVER/*.blastn.tsv
+# Raw whole-genome BLAST outputs from Gate; keep compact *.summary.tsv files
+gateVER/*.blastn.tsv
 
 # Intermediate marker/protein alignment outputs from the independent QC pass
 dudleya_organelle_qc/*_aa_vs_*.tsv
@@ -39,7 +39,7 @@ dudleya_organelle_qc/*_cds_vs_*.tsv
 
 # Keep reports
 !dudleya_organelle_qc/report.md
-!godsgateVER/report.md
+!gateVER/report.md
 
 # Keep independent QC whole-genome evidence
 !dudleya_organelle_qc/chloroplast_vs_cprefs.tsv
@@ -47,12 +47,12 @@ dudleya_organelle_qc/*_cds_vs_*.tsv
 !dudleya_organelle_qc/mitochondria_vs_cprefs.tsv
 !dudleya_organelle_qc/mitochondria_vs_mitorefs.tsv
 
-# Keep Godsgate annotations and summaries
-!godsgateVER/question.txt
-!godsgateVER/input_stats.json
-!godsgateVER/reference_search_summary.json
-!godsgateVER/proof_summary.json
-!godsgateVER/annotation_summary.json
-!godsgateVER/*.summary.tsv
-!godsgateVER/*.annotation.tsv
-!godsgateVER/*.draft.gff3
+# Keep Gate annotations and summaries
+!gateVER/question.txt
+!gateVER/input_stats.json
+!gateVER/reference_search_summary.json
+!gateVER/proof_summary.json
+!gateVER/annotation_summary.json
+!gateVER/*.summary.tsv
+!gateVER/*.annotation.tsv
+!gateVER/*.draft.gff3
