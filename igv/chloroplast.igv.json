@@ -1,0 +1,14 @@
+{
+  "id": "dudleya_chloroplast",
+  "name": "Dudleya chloroplast",
+  "fastaURL": "chloroplast.fa",
+  "indexURL": "chloroplast.fa.fai",
+  "chromosomeOrder": ["chloroplast"],
+  "tracks": [
+    {
+      "name": "Draft chloroplast annotations",
+      "format": "gff3",
+      "url": "chloroplast.gff3"
+    }
+  ]
+}
