@@ -88,6 +88,26 @@
   - Best nonredundant TSV: /home/neil/gate_results/dudleya-organelles/mitochondria.best_nonredundant.annotation.tsv
   - Best nonredundant GFF3: /home/neil/gate_results/dudleya-organelles/mitochondria.best_nonredundant.draft.gff3
 
+## gateVER annotation integrity checks
+- Report package: `gateVER/annotation_integrity/report.md`
+- Validation checklist: `gateVER/annotation_integrity/validation_checklist.tsv`
+- Per-CDS ORF and boundary table: `gateVER/annotation_integrity/cds_integrity.tsv`
+- Annotation overlap/duplicate flags: `gateVER/annotation_integrity/annotation_flags.tsv`
+- Expected gene presence: `gateVER/annotation_integrity/expected_gene_presence.tsv`
+- Mitochondrial core-gene presence: `gateVER/annotation_integrity/mitochondrial_core_gene_presence.tsv`
+- Chloroplast IR feature placement: `gateVER/annotation_integrity/chloroplast_ir_feature_check.tsv`
+- tRNA/rRNA plausibility: `gateVER/annotation_integrity/trna_rrna_plausibility.tsv`
+- Gene-content comparison: `gateVER/annotation_integrity/gene_content_comparison.tsv`
+- Plastome IR/LSC/SSC comparison: `gateVER/annotation_integrity/plastome_structure_comparison.tsv`
+- Assembly and identity flags: `gateVER/annotation_integrity/assembly_flags.tsv`
+- Whole-genome synteny: `gateVER/annotation_integrity/whole_genome_synteny_check.tsv`
+- Cross-organelle validation: `gateVER/annotation_integrity/cross_organelle_validation.tsv`
+- Repeat structure: `gateVER/annotation_integrity/repeat_structure_check.tsv`
+- Read/graph/tool availability: `gateVER/annotation_integrity/read_graph_tool_availability.tsv`
+- Manual IGV review targets: `gateVER/annotation_integrity/manual_review_targets.tsv`
+
+These integrity checks use only gateVER files and intentionally ignore the independent `dudleya_organelle_qc/` folder. Current best nonredundant CDS classifications are: chloroplast `51 PASS`, `25 WARN`, `9 REVIEW`; mitochondria `11 PASS`, `14 WARN`, `9 REVIEW`. Additional checks cover expected gene content, mitochondrial core genes, chloroplast IR feature placement, tRNA/rRNA labels, whole-genome synteny, cross-organelle signal, and self-repeat structure. Treat `WARN` and `REVIEW` CDS models as homology-supported but not curated until their boundaries, split-gene behavior, possible mitochondrial RNA editing, or overlap flags are inspected. Read-backed coverage/junction validation is not available from this repository because no read alignment, raw read, or assembly graph files are present.
+
 ## Interpretation limits
 - This is a homology-transfer draft, not a curated GenBank-submission annotation.
 - Complete Dudleya setchellii organelle genomes were not found as public NCBI references here. Two short D. abramsii subsp. setchellii marker records exist, but chloroplast whole-genome evidence uses other complete Dudleya chloroplasts and mitochondrial evidence uses other Crassulaceae mitochondria.

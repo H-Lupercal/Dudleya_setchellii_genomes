@@ -1,0 +1,7 @@
+check	status	evidence	validation_impact
+read_or_graph_files_present	NOT_AVAILABLE_IN_REPOSITORY	No BAM/CRAM/SAM/GFA/PAF/FASTQ/depth/cov files found under repository root	Coverage, SNP/indel hotspot, and mtDNA junction support checks require read alignments or assembly graph files.
+tool_available:tRNAscan-SE	NOT_AVAILABLE_IN_PATH	not found	Used if available for external validation; absence does not invalidate FASTA/reference checks.
+tool_available:aragorn	NOT_AVAILABLE_IN_PATH	not found	Used if available for external validation; absence does not invalidate FASTA/reference checks.
+tool_available:minimap2	NOT_AVAILABLE_IN_PATH	not found	Used if available for external validation; absence does not invalidate FASTA/reference checks.
+tool_available:samtools	AVAILABLE	/home/neil/miniconda3/bin/samtools	Used if available for external validation; absence does not invalidate FASTA/reference checks.
+tool_available:blastn	AVAILABLE	/home/neil/.local/bin/blastn	Used if available for external validation; absence does not invalidate FASTA/reference checks.

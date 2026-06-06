@@ -1,0 +1,68 @@
+{
+  "scope": "gateVER only; dudleya_organelle_qc ignored",
+  "output_dir": "/home/neil/Downloads/dudleya/Dudleya_S_genomes/gateVER/annotation_integrity",
+  "files": [
+    "annotation_flags.tsv",
+    "assembly_flags.tsv",
+    "cds_integrity.tsv",
+    "chloroplast_ir_feature_check.tsv",
+    "cross_organelle_validation.tsv",
+    "expected_gene_presence.tsv",
+    "gene_content_comparison.tsv",
+    "manifest.json",
+    "manual_review_targets.tsv",
+    "mitochondrial_core_gene_presence.tsv",
+    "plastome_structure_comparison.tsv",
+    "read_graph_tool_availability.tsv",
+    "repeat_structure_check.tsv",
+    "report.md",
+    "trna_rrna_plausibility.tsv",
+    "validation_checklist.tsv",
+    "whole_genome_synteny_check.tsv"
+  ],
+  "cds_status_by_organelle": {
+    "chloroplast": {
+      "PASS": 51,
+      "WARN": 25,
+      "REVIEW": 9
+    },
+    "mitochondria": {
+      "REVIEW": 9,
+      "PASS": 11,
+      "WARN": 14
+    }
+  },
+  "annotation_flag_counts": {
+    "feature_counts": 2,
+    "strongly_overlapping_CDS": 16
+  },
+  "terminal_duplicate": {
+    "duplicate_start": 150275,
+    "duplicate_length": 26690,
+    "pident": 99.944,
+    "length": 26702,
+    "qstart": 150275,
+    "qend": 176964,
+    "sstart": 1,
+    "send": 26700,
+    "orientation": "forward",
+    "bitscore": 48068.0
+  },
+  "validation_round": "expanded one-time validation checks",
+  "new_validation_tables": [
+    "expected_gene_presence.tsv",
+    "mitochondrial_core_gene_presence.tsv",
+    "chloroplast_ir_feature_check.tsv",
+    "trna_rrna_plausibility.tsv",
+    "whole_genome_synteny_check.tsv",
+    "cross_organelle_validation.tsv",
+    "repeat_structure_check.tsv",
+    "read_graph_tool_availability.tsv",
+    "manual_review_targets.tsv",
+    "validation_checklist.tsv"
+  ],
+  "data_limitations": [
+    "No read alignment, raw read, or assembly graph files found in repository; read-backed mtDNA structure validation cannot be performed from current repo contents."
+  ],
+  "mitochondrial_core_gene_note": "cob and cytb treated as synonyms; only cob is counted in core-gene table"
+}

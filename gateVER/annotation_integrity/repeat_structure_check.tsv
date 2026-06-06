@@ -1,0 +1,9 @@
+organelle	rank	length_bp	identity_percent	query_coordinates	match_coordinates	orientation	terminal_direct_duplicate	interpretation
+chloroplast	1	26702	99.944	150275-176964	1-26700	forward	yes	terminal redundancy candidate
+chloroplast	2	26702	99.944	1-26700	150275-176964	forward	yes	terminal redundancy candidate
+chloroplast	3	25742	99.953	114282-140017	71834-97569	reverse	no	inverted repeat candidate
+chloroplast	4	25742	99.953	71834-97569	114282-140017	reverse	no	inverted repeat candidate
+mitochondria	1	69706	99.999	153662-223367	84115-153820	forward	no	large internal/direct repeat candidate
+mitochondria	2	69706	99.999	84115-153820	153662-223367	forward	no	large internal/direct repeat candidate
+mitochondria	3	28078	100.0	31770-59847	1-28078	reverse	no	inverted repeat candidate
+mitochondria	4	28078	100.0	1-28078	31770-59847	reverse	no	inverted repeat candidate

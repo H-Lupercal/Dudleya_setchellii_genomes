@@ -1,0 +1,17 @@
+comparison	reference	title	query_coverage	weighted_identity	hsp_count	large_hsp_count	forward_hsp_count	reverse_hsp_count	status
+chloroplast_vs_chloroplast	gb|PX244389.1|	Dudleya virens chloroplast, complete genome	1.0	99.565	7	5	4	3	HIGH_COLLINEARITY_OR_FEW_BLOCKS
+chloroplast_vs_chloroplast	gb|PX244393.1|	Dudleya candelabrum chloroplast, complete genome	1.0	99.388	8	6	7	1	HIGH_COLLINEARITY_OR_FEW_BLOCKS
+chloroplast_vs_chloroplast	gb|PX244390.1|	Dudleya nesiotica chloroplast, complete genome	1.0	99.368	8	6	6	2	HIGH_COLLINEARITY_OR_FEW_BLOCKS
+chloroplast_vs_chloroplast	gb|OQ076651.1|	Dudleya farinosa chloroplast, complete genome	0.9995	99.359	9	6	7	2	HIGH_COLLINEARITY_OR_FEW_BLOCKS
+chloroplast_vs_chloroplast	ref|NC_085682.1|	Dudleya farinosa chloroplast, complete genome	0.9995	99.359	9	6	7	2	HIGH_COLLINEARITY_OR_FEW_BLOCKS
+chloroplast_vs_chloroplast	gb|PX244391.1|	Dudleya lanceolata chloroplast, complete genome	0.9995	99.342	7	6	6	1	HIGH_COLLINEARITY_OR_FEW_BLOCKS
+chloroplast_vs_chloroplast	gb|PX244392.1|	Dudleya greenei chloroplast, complete genome	0.7859	89.802	102	2	86	16	PARTIAL_OR_REARRANGED_REFERENCE_MATCH
+chloroplast_vs_chloroplast	gb|PX244394.1|	Dudleya sp. T72600-1 chloroplast, complete genome	0.7619	89.193	135	0	105	30	PARTIAL_OR_REARRANGED_REFERENCE_MATCH
+mitochondria_vs_mitochondria	gb|PV256627.1|	Graptopetalum paraguayense mitochondrion, complete genome	0.7099	97.69	116	0	50	66	PARTIAL_OR_REARRANGED_REFERENCE_MATCH
+mitochondria_vs_mitochondria	gb|OP588116.1|	Sedum plumbizincicola voucher KPBK001 mitochondrion, complete genome	0.6847	97.288	117	0	46	71	LOWER_SUPPORT_REFERENCE
+mitochondria_vs_mitochondria	ref|NC_069572.1|	Sedum plumbizincicola voucher KPBK001 mitochondrion, complete genome	0.6847	97.288	117	0	46	71	LOWER_SUPPORT_REFERENCE
+mitochondria_vs_mitochondria	gb|PV608516.1|	Sedum sarmentosum mitochondrion, complete genome	0.6601	97.426	122	0	78	44	LOWER_SUPPORT_REFERENCE
+mitochondria_vs_mitochondria	gb|OP573219.1|	Rhodiola tangutica mitochondrion, complete genome	0.6411	97.485	163	0	75	88	LOWER_SUPPORT_REFERENCE
+mitochondria_vs_mitochondria	ref|NC_072122.1|	Rhodiola tangutica mitochondrion, complete genome	0.6411	97.485	163	0	75	88	LOWER_SUPPORT_REFERENCE
+mitochondria_vs_mitochondria	gb|OP312067.1|	Rhodiola crenulata mitochondrion, complete genome	0.5726	97.436	143	0	63	80	LOWER_SUPPORT_REFERENCE
+mitochondria_vs_mitochondria	ref|NC_070303.1|	Rhodiola crenulata mitochondrion, complete genome	0.5726	97.436	143	0	63	80	LOWER_SUPPORT_REFERENCE

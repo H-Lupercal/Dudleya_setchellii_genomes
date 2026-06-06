@@ -40,3 +40,5 @@ This loads both organelle references and the combined draft annotation track tog
 - `mitochondria.igv.json`: IGV genome definition for the mitochondrion only.
 
 These annotations are draft homology-transfer annotations. Use them as evidence-guided feature calls, not as a fully curated organelle annotation.
+
+For feature-level QC before interpreting a CDS in IGV, use `../gateVER/annotation_integrity/report.md`, `../gateVER/annotation_integrity/cds_integrity.tsv`, and `../gateVER/annotation_integrity/manual_review_targets.tsv`. The IGV GFF3 files mirror the gateVER best nonredundant draft annotations, while the integrity tables flag CDS models, IR junctions, terminal redundancy, and overlaps that need boundary, split-gene, RNA-editing, or visual review.

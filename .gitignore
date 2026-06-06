@@ -56,3 +56,9 @@ dudleya_organelle_qc/*_cds_vs_*.tsv
 !gateVER/*.summary.tsv
 !gateVER/*.annotation.tsv
 !gateVER/*.draft.gff3
+
+# Keep expanded Gate annotation-integrity validation outputs
+!gateVER/annotation_integrity/
+!gateVER/annotation_integrity/report.md
+!gateVER/annotation_integrity/manifest.json
+!gateVER/annotation_integrity/*.tsv
