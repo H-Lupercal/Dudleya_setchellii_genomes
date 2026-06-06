@@ -42,7 +42,7 @@ These are FASTA-only analyses. Raw reads were not mapped back in this repository
 
 If you use this repository, cite the repository URL and cite the NCBI accessions used as reference evidence. The key accessions and searches are listed in `gateVER/reference_search_summary.json`, `gateVER/report.md`, and `dudleya_organelle_qc/report.md`.
 
-For citation questions, data-use questions, or reuse requests, contact Justen Witthal at Santa Clara University (SCU) at `jwhittall@scu.edu`, or contact the repository owner at `neilsumanth9@gmail.com`.
+For citation questions, data-use questions, or reuse requests, contact Justen Whittall at Santa Clara University (SCU) at `jwhittall@scu.edu`, or contact the repository owner at `neilsumanth9@gmail.com`.
 
 ## License
 
