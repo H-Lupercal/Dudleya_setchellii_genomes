@@ -33,6 +33,21 @@ gateVER/*.blastn.tsv
 dudleya_organelle_qc/*_aa_vs_*.tsv
 dudleya_organelle_qc/*_cds_vs_*.tsv
 
+# Python/runtime caches
+__pycache__/
+*.py[cod]
+
+# Recomputable intermediates from the focused NC_085682.1 comparison.
+# Keep the script, docs, downloaded NCBI records, and final TSV/MD reports.
+nc085682_comparison/NC_085682.1.fa
+nc085682_comparison/NC_085682.1.gb
+nc085682_comparison/candidate_raw.fa
+nc085682_comparison/candidate_terminal_deduplicated.fa
+nc085682_comparison/candidate_terminal_deduplicated_rotated.fa
+nc085682_comparison/*blastn*.tsv
+nc085682_comparison/normalized_alignment.fa
+nc085682_comparison/normalized_pair_for_mafft.fa
+
 # Keep original input FASTAs
 !Dudleya_hifiasm_purged_manual_chloroplast.fa
 !Dudleya_hifiasm_purged_manual_mitochondria.fa

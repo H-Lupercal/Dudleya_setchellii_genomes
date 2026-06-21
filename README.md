@@ -4,7 +4,7 @@ This repository contains two candidate organelle FASTA assemblies for *Dudleya s
 
 ## Repository Contents
 
-The root FASTA files are `Dudleya_hifiasm_purged_manual_chloroplast.fa` and `Dudleya_hifiasm_purged_manual_mitochondria.fa`. The `dudleya_organelle_qc/` directory contains an independent BLAST-based QC and identity report. The `gateVER/` directory contains reference search summaries, whole-genome comparison summaries, proof JSON, draft annotation TSV and GFF3 files, a detailed report, and the `gateVER/annotation_integrity/` report package. The `igv/` directory contains combined and per-organelle FASTA, GFF3, and IGV JSON files for visual inspection.
+The root FASTA files are `Dudleya_hifiasm_purged_manual_chloroplast.fa` and `Dudleya_hifiasm_purged_manual_mitochondria.fa`. The `dudleya_organelle_qc/` directory contains an independent BLAST-based QC and identity report. The `gateVER/` directory contains reference search summaries, whole-genome comparison summaries, proof JSON, draft annotation TSV and GFF3 files, a detailed report, and the `gateVER/annotation_integrity/` report package. The `nc085682_comparison/` directory contains a focused, reproducible comparison between the candidate chloroplast and public reference `NC_085682.1`, including sequence divergence, synonymous/nonsynonymous CDS substitutions, gene content, gene order, and rerun documentation. The `igv/` directory contains combined and per-organelle FASTA, GFF3, and IGV JSON files for visual inspection.
 
 ## Requirements
 
@@ -25,6 +25,8 @@ For annotation integrity checks, use the gateVER-only report package in `gateVER
 ## Results
 
 The chloroplast FASTA is strongly supported as a Dudleya chloroplast genome. The contig `ptg000216l_1` covers nearly all complete Dudleya chloroplast references at about 99.3 to 99.6 percent weighted nucleotide identity.
+
+The focused `NC_085682.1` comparison in `nc085682_comparison/` reproduces the raw BLAST result against *Dudleya farinosa* chloroplast reference `NC_085682.1` from https://www.ncbi.nlm.nih.gov/nuccore/NC_085682.1 at 99.359 percent weighted identity. The downloaded NCBI files are saved in that folder as `NC_085682.1.fetched.fa` and `NC_085682.1.fetched.gb`. After removing the candidate terminal duplicate and rotating to the reference origin, the normalized projection gives 99.556017 percent similarity excluding gaps, 99.365529 percent similarity counting reference deletions, and 99.193527 percent similarity when unmapped reference bases are counted as differences. The same package reports CDS synonymous/nonsynonymous substitutions and gene-content/order comparisons.
 
 The mitochondrial FASTA is supported as a Crassulaceae plant mitochondrial genome. The contig `ptg000317l_1` covers large portions of related mitochondrial references at about 97.3 to 97.7 percent weighted nucleotide identity. The cross-organelle comparisons found no evidence that the two FASTA labels are swapped.
 

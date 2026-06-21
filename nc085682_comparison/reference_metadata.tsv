@@ -1,0 +1,2 @@
+accession	length_bp	description	locus_date	fetch_date	source	nuccore_url	efetch_fasta_url	efetch_genbank_url
+NC_085682.1	150780	Dudleya farinosa chloroplast, complete genome.	01-FEB-2024	2026-06-21	live NCBI EFetch	https://www.ncbi.nlm.nih.gov/nuccore/NC_085682.1	https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_085682.1&rettype=fasta&retmode=text	https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_085682.1&rettype=gb&retmode=text
