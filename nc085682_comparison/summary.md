@@ -3,8 +3,8 @@
 ## Reference and Candidate
 - Reference: NC_085682.1, Dudleya farinosa chloroplast, complete genome. (150780 bp; LOCUS date 01-FEB-2024).
 - Reference source: live NCBI EFetch; fetch date recorded as 2026-06-21.
-- Candidate raw plastome: 176964 bp; ambiguous bases 0.
-- Candidate primary comparison plastome: terminal de-duplicated to 150274 bp by trimming the suffix starting at position 150275.
+- Candidate *Dudleya setchellii* raw chloroplast assembly: 176964 bp; ambiguous bases 0.
+- Candidate *Dudleya setchellii* primary comparison plastome: terminal de-duplicated to 150274 bp by trimming the suffix starting at position 150275.
 - Rotation/orientation: BLAST anchor at candidate position 140018 in + orientation, pident 97.978, length 7664 bp.
 
 ## Whole-Genome Divergence
@@ -31,4 +31,4 @@
 - Gene-order rows projected on the opposite strand: 31, consistent with an SSC-orientation difference and IR-copy effects. Inspect `gene_order.tsv` for exact rows.
 
 ## Interpretation
-The candidate chloroplast is very close to NC_085682.1 after removing the terminal duplicate and rotating to the same circular origin. The raw BLAST result remains consistent with existing gateVER evidence, while the normalized BLAST projection gives the biologically more meaningful divergence estimate. Gene content is mostly present by alignment; differences from the draft annotation should be interpreted as annotation completeness/copy-number issues unless `gene_content.tsv` marks projection absence. Synonymous/nonsynonymous totals are codon-consequence counts from projected shared CDS and are not model-based dN/dS or Ka/Ks estimates.
+The candidate *Dudleya setchellii* chloroplast is very close to the public *Dudleya farinosa* chloroplast reference `NC_085682.1` after removing the candidate terminal duplicate and rotating to the same circular origin. The raw BLAST result remains consistent with existing gateVER evidence, while the normalized BLAST projection gives the biologically more meaningful divergence estimate. Gene content is mostly present by alignment; differences from the draft annotation should be interpreted as annotation completeness/copy-number issues unless `gene_content.tsv` marks projection absence. Synonymous/nonsynonymous totals are codon-consequence counts from projected shared CDS and are not model-based dN/dS or Ka/Ks estimates.
