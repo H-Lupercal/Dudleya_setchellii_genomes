@@ -77,7 +77,7 @@ class PopulationOutputTests(unittest.TestCase):
 
         self.assertIn("fst", pairwise)
         self.assertIn("haplotype_diversity", population)
-        self.assertIn("# Step 17 Population Genetics", report)
+        self.assertIn("# Population Genetics", report)
 
 
 if __name__ == "__main__":

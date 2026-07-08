@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run Step 6: build downstream include/exclude sample sets."""
+"""Run: build downstream include/exclude sample sets."""
 
 from pathlib import Path
 import sys

@@ -91,14 +91,14 @@ TOOL_SPECS = (
         "fastp",
         ("fastp",),
         "required_current",
-        "Evan-style read QC/trimming if rerunning raw-read QC",
+        "read QC/trimming if rerunning raw-read QC",
         ("--version",),
     ),
     ToolSpec(
         "fastqc",
         ("fastqc",),
         "required_current",
-        "Evan-style read QC reports",
+        "read QC reports",
         ("--version",),
     ),
     ToolSpec(
@@ -161,7 +161,7 @@ TOOL_SPECS = (
         "snakemake",
         ("snakemake",),
         "recommended_remaining",
-        "optional integration with Evan-style Snakemake orchestration",
+        "optional integration with Snakemake orchestration",
         ("--version",),
     ),
     ToolSpec(
@@ -260,7 +260,7 @@ def missing_note(necessity: str) -> str:
     if necessity == "required_current":
         return "Install before rerunning the completed mapping/QC/variant/tree pipeline."
     if necessity == "required_remaining":
-        return "Install before continuing to the remaining professor-requested analyses."
+        return "Install before continuing to the remaining planned analyses."
     return "Recommended, but not strictly blocking for the immediate next scripted step."
 
 
@@ -430,9 +430,9 @@ def write_report(path: Path, results: list[ToolResult], audit_label: str) -> Non
                 else "- The completed pipeline is not fully reproducible until the missing current-pipeline tools are installed."
             ),
             (
-                "- The remaining professor-requested analyses have their required external tools available."
+                "- The remaining planned analyses have their required external tools available."
                 if summary.ready_for_remaining_goal
-                else "- Do not continue to the remaining professor-requested analyses until missing required remaining-goal tools are installed or replaced by documented in-repo implementations."
+                else "- Do not continue to the remaining planned analyses until missing required remaining-goal tools are installed or replaced by documented in-repo implementations."
             ),
         ]
     )

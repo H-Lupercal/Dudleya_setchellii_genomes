@@ -87,7 +87,7 @@ class DownstreamSampleSetTests(unittest.TestCase):
                 "r2_paths": "r2.fastq.gz",
                 "downstream_cpDNA_use": "include",
                 "downstream_mtDNA_use": "include",
-                "include_reason": "passes Step 5 downstream QC",
+                "include_reason": "passes all-sample-alignment downstream QC",
             }
         ]
         excluded = [

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run Step 9: build SNP-only cpDNA/mtDNA FASTA alignments."""
+"""Run: build SNP-only cpDNA/mtDNA FASTA alignments."""
 
 from pathlib import Path
 import sys

@@ -1,6 +1,6 @@
 """Run cpDNA and mtDNA admixture-style clustering.
 
-This is Step 13 of the pipeline. It converts filtered haploid organelle SNP
+This stage converts filtered haploid organelle SNP
 alignments into pseudo-diploid homozygous PLINK PED/MAP inputs, runs ADMIXTURE
 across a fixed K range with cross-validation, picks the lowest-CV K separately
 for cpDNA and mtDNA, and renders structure-style plots.
@@ -43,7 +43,7 @@ BASES = {"A", "C", "G", "T"}
 
 
 class AdmixtureAnalysisError(RuntimeError):
-    """Raised when Step 13 cannot run safely."""
+    """Raised when this stage cannot run safely."""
 
 
 @dataclass(frozen=True)
@@ -484,7 +484,7 @@ def write_admixture_outputs(
 def write_admixture_report(path: Path, rows: list[dict[str, str]], run_label: str) -> None:
     label = run_label or "full"
     lines = [
-        "# Step 13 Admixture-Style Clustering",
+        "# Admixture-Style Clustering",
         "",
         "This step runs ADMIXTURE on cpDNA and mtDNA SNP alignments separately.",
         "Because ADMIXTURE is a diploid-oriented tool, haploid organelle calls",
@@ -618,7 +618,7 @@ def run_admixture_analysis(
 
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Step 13: run cpDNA/mtDNA ADMIXTURE-style clustering."
+        description="Run cpDNA/mtDNA ADMIXTURE-style clustering."
     )
     parser.add_argument("--snp-alignment-dir", type=Path, default=DEFAULT_SNP_ALIGNMENT_DIR)
     parser.add_argument("--metadata-path", type=Path, default=DEFAULT_METADATA_PATH)

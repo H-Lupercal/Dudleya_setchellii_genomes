@@ -106,7 +106,7 @@ class CallableConsensusOutputTests(unittest.TestCase):
 
         self.assertIn("consensus_length", summary)
         self.assertIn("masked_failed_variant_sites", summary)
-        self.assertIn("# Step 10 Callable-Site Consensus Alignment", report)
+        self.assertIn("# Callable-Site Consensus Alignment", report)
         self.assertIn("full callable-site FASTA alignments", report)
 
 

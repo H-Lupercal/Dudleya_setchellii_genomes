@@ -125,7 +125,7 @@ class AdmixtureOutputTests(unittest.TestCase):
             report = (output_dir / "primary.admixture_report.md").read_text()
 
         self.assertIn("cv_error", summary)
-        self.assertIn("# Step 13 Admixture-Style Clustering", report)
+        self.assertIn("# Admixture-Style Clustering", report)
         self.assertIn("pseudo-diploid homozygous", report)
 
 

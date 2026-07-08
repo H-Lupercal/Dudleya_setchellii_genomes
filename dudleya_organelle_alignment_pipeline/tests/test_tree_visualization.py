@@ -85,7 +85,7 @@ class TreeVisualizationRenderingTests(unittest.TestCase):
             report = (output_dir / "primary.tree_visualization_report.md").read_text()
 
         self.assertIn("png_path", summary)
-        self.assertIn("# Step 14 Tree Visualizations", report)
+        self.assertIn("# Tree Visualizations", report)
         self.assertIn("cpDNA", report)
 
 

@@ -1,7 +1,7 @@
 """Run all primary samples through cpDNA/mtDNA alignment and track-aware QC.
 
-This is Step 5 of the pipeline. It scales the Step 3 alignment/QC machinery to
-all primary paired-end samples and applies the Step 4 analysis tracks when
+This stage scales the alignment/QC machinery to
+all primary paired-end samples and applies the analysis tracks when
 summarizing coverage. It does not call variants, build consensus FASTAs, or run
 PCA/tree/Fst/admixture analyses.
 """
@@ -109,7 +109,7 @@ def read_tsv(path: Path) -> list[dict[str, str]]:
 
 
 def read_track_regions(track_table: Path) -> list[TrackRegion]:
-    """Read Step 4 track manifest and its BED files."""
+    """Read the analysis-track manifest and its BED files."""
 
     regions: list[TrackRegion] = []
     for track in read_tsv(track_table):
@@ -147,7 +147,7 @@ def read_track_regions(track_table: Path) -> list[TrackRegion]:
                 )
 
     if not regions:
-        raise AlignmentError(f"No Step 4 track regions found in {track_table}")
+        raise AlignmentError(f"No analysis-track regions found in {track_table}")
     return regions
 
 
@@ -174,7 +174,7 @@ def parse_track_depth_file(
     depth_path: Path,
     track_regions: list[TrackRegion],
 ) -> dict[str, TrackMetrics]:
-    """Summarize depth over Step 4 track intervals.
+    """Summarize depth over the analysis-track intervals.
 
     Missing positions count as zero because each track's denominator is the
     total BED-defined region length, not only positions observed in the depth
@@ -483,10 +483,10 @@ def write_report(
         row for row in sample_summaries if row["qc_notes"] != "pass_initial_mapping_screen"
     ]
     lines = [
-        "# Step 5 All-Sample Organelle Alignment",
+        "# All-Sample Organelle Alignment",
         "",
         "This step maps every primary paired-end sample to the combined",
-        "cpDNA/mtDNA reference and summarizes coverage using the Step 4",
+        "cpDNA/mtDNA reference and summarizes coverage using the",
         "analysis tracks. It does not call variants or build consensus FASTAs.",
         "",
         "## Inputs",
@@ -520,7 +520,7 @@ def write_report(
         "",
         "- `all_sample_alignment_sample_summary.tsv`: one row per sample.",
         "- `all_sample_alignment_by_organelle.tsv`: one row per sample and organelle.",
-        "- `all_sample_alignment_by_track.tsv`: one row per sample and Step 4 track.",
+        "- `all_sample_alignment_by_track.tsv`: one row per sample and analysis track.",
         "- `commands.tsv`: external commands run plus reuse decisions.",
         "- `bam/`, `qc/`, and `logs/`: generated alignment artifacts ignored by git.",
         "",
@@ -577,7 +577,7 @@ def format_track_medians(track_rows: list[dict[str, str]]) -> list[str]:
 
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Run Step 5 all-sample cpDNA/mtDNA alignment and track-aware QC."
+        description="Run all-sample cpDNA/mtDNA alignment and track-aware QC."
     )
     parser.add_argument("--sample-table", type=Path, default=DEFAULT_SAMPLE_TABLE)
     parser.add_argument("--track-table", type=Path, default=DEFAULT_TRACK_TABLE)

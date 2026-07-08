@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run step 2: validate/index the organelle reference and choose pilot samples."""
+"""Run: validate/index the organelle reference and choose pilot samples."""
 
 from pathlib import Path
 import sys

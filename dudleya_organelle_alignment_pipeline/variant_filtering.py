@@ -1,6 +1,6 @@
 """Filter raw haploid cpDNA/mtDNA variants for downstream analyses.
 
-This is Step 8 of the pipeline. It consumes the Step 7 raw VCF summary and
+This stage consumes the raw VCF summary and
 writes filtered biallelic SNP VCFs for PCA, trees, Fst, and clustering inputs.
 Consensus FASTA generation happens in a later step.
 """
@@ -34,7 +34,7 @@ DEFAULT_THREADS = 4
 
 
 class VariantFilteringError(RuntimeError):
-    """Raised when Step 8 cannot safely filter variants."""
+    """Raised when this stage cannot safely filter variants."""
 
 
 @dataclass(frozen=True)
@@ -352,9 +352,9 @@ def write_report(
 ) -> None:
     label = run_label or "full"
     lines = [
-        "# Step 8 Variant Filtering",
+        "# Variant Filtering",
         "",
-        "This step filters the raw haploid cpDNA and mtDNA variant calls from Step 7.",
+        "This step filters the raw haploid cpDNA and mtDNA variant calls.",
         "Consensus FASTA generation, alignments, PCA, and trees happen in later steps.",
         "",
         "## Run",
@@ -387,7 +387,7 @@ def write_report(
 
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Step 8: filter raw haploid cpDNA/mtDNA variants."
+        description="Filter raw haploid cpDNA/mtDNA variants."
     )
     parser.add_argument("--variant-calling-dir", type=Path, default=DEFAULT_VARIANT_CALLING_DIR)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)

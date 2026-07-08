@@ -1,20 +1,18 @@
-# Dudleya cpDNA and mtDNA population analysis work plan
+# Dudleya cpDNA and mtDNA Population Analysis Methods
 
 ## Objective
 
-Use the annotated organelle references in this repo to analyze cpDNA and mtDNA
-variation across the Dudleya sequencing samples.
+Use the annotated organelle references in this repository to analyze cpDNA and
+mtDNA variation across the Dudleya sequencing samples.
 
-## Current Status As Of 2026-07-07
+## Status As Of 2026-07-07
 
-This plan is historical context plus reproducibility guidance. The completed
-results under `dudleya_organelle_alignment_pipeline/results/` are the source of
-truth for the finished primary analysis.
-
-Start with:
+This document records the methods and reproducibility guidance for the completed
+analysis. The results under `dudleya_organelle_alignment_pipeline/results/` are
+the authoritative record of the finished primary analysis, indexed by:
 
 ```text
-dudleya_organelle_alignment_pipeline/results/PROFESSOR_HANDOFF.md
+dudleya_organelle_alignment_pipeline/PROCESS.md
 dudleya_organelle_alignment_pipeline/results/organelle_population_report.md
 dudleya_organelle_alignment_pipeline/results/final_deliverables_manifest.tsv
 ```
@@ -27,11 +25,11 @@ Primary deliverables now completed:
 - cpDNA and mtDNA SNP alignments for PCA/admixture/Fst.
 - cpDNA and mtDNA PCA plots and coordinate tables.
 - cpDNA and mtDNA maximum-likelihood trees with 1,000 ultrafast bootstrap
-  replicates; ML satisfies the requested "NJ or ML" tree requirement.
+  replicates; ML satisfies the "NJ or ML" tree requirement.
 - cpDNA and mtDNA ADMIXTURE-style organelle haplotype clustering with K=1..8
   and five seeded replicates per K.
 - Pairwise Fst and population summaries for 34 metadata-resolved populations.
-- Tool audit and professor handoff report.
+- Tool audit and integrated results report.
 
 Interpretation notes that still matter:
 
@@ -44,17 +42,6 @@ Interpretation notes that still matter:
   and 146 filtered SNPs, not the full repeat-rich mitochondrial contig.
 - ADMIXTURE is used as organelle haplotype clustering, not nuclear admixture;
   haploid calls are pseudo-diploid homozygotes for tool compatibility.
-
-Deliverables:
-
-- cpDNA all-sample alignment.
-- mtDNA all-sample alignment.
-- cpDNA and mtDNA PCA plots.
-- cpDNA and mtDNA phylogenetic trees, preferably maximum likelihood; Neighbor
-  Joining is acceptable as a quick check.
-- Structure/admixture-style plots with K selected empirically.
-- Pairwise Fst and basic population summaries.
-- Sample-level QC report.
 
 ## Data Locations
 
@@ -72,10 +59,10 @@ Main analysis should start with `QB3.Berkeley.251217/QB3.Results.260109`.
 
 The two initial-genome folders can be added later if needed. They do not follow
 the main filename convention, so sample recoding should use the first rows of
-Evan's second attached CSV.
+the supplied initial-batch population-code CSV.
 
-The Winter 2026 class dataset should stay out of the main run unless we decide
-to make a separate Quicksilver North DUSE analysis.
+The Winter 2026 class dataset should stay out of the main run unless a separate
+Quicksilver North DUSE analysis is undertaken.
 
 ## Filename Convention
 
@@ -89,7 +76,8 @@ Fields:
 
 - `species`: `CY` for *D. cymosa*, `AB**` for *D. abramsii*, or blank for
   *D. setchellii*.
-- `popcode`: population code. Use Evan's attached popcode CSV.
+- `popcode`: population code. Use the population-code CSV
+  (`Dudleya DNAx - Population Codes.csv`).
 - `LP_{###}`: collection/sample number.
 - `Du-{#}`: Dudleya sample identifier.
 - `other labels`: sequencing/run labels.
@@ -155,18 +143,14 @@ mtDNA:
 
 Run cpDNA and mtDNA separately.
 
-Recommended output layout:
+Output layout: stage-numbered directories under
+`dudleya_organelle_alignment_pipeline/results/` (`00_manifest/` through
+`20_bootstrap_tree_visualization/`), with cpDNA and mtDNA kept as separate
+`cpDNA.*` and `mtDNA.*` files within each stage. See
+`dudleya_organelle_alignment_pipeline/PROCESS.md` for the full stage index.
 
-```text
-dudleya_organelle_reference_verification/references/
-dudleya_organelle_alignment_pipeline/results/00_manifest/analysis_samples.tsv
-dudleya_organelle_alignment_pipeline/results/organelle_cpDNA/
-dudleya_organelle_alignment_pipeline/results/organelle_mtDNA/
-```
-
-Use Evan Hackstadt's pipeline as a starting point:
-
-https://github.com/evanhackstadt/dudleya
+Use the published Dudleya conservation-genomics pipeline as a starting point
+(Hackstadt, https://github.com/evanhackstadt/dudleya).
 
 Useful pieces to reuse:
 
@@ -231,9 +215,9 @@ For each sample and organelle, report:
 Flag samples with low breadth, low depth, extreme depth profiles, or unexpected
 mapping behavior.
 
-Post-Step 5 downstream QC decision:
+Post-Stage 06 downstream QC decision:
 
-The Step 5 alignments remain available for audit, but the following samples are
+The Stage 06 alignments remain available for audit, but the following samples are
 ignored for downstream primary cpDNA and mtDNA population-genetic analyses:
 
 | Sample | cpDNA use | mtDNA use | Reason |
@@ -254,7 +238,7 @@ clustering should exclude these three samples from the primary analysis set.
 
 ## Analysis Tracks
 
-Step 4 now defines the machine-readable tracks that separate coverage QC from
+Stage 05 now defines the machine-readable tracks that separate coverage QC from
 population-genetic site selection:
 
 ```text
@@ -299,7 +283,7 @@ Primary path:
 
 Optional low-coverage path:
 
-- Adapt Evan's ANGSD/PCAngsd path if hard calls are unreliable.
+- Adapt the published pipeline's ANGSD/PCAngsd path if hard calls are unreliable.
 - Confirm haploid/organelle assumptions before using ANGSD outputs downstream.
 
 ## Analyses
@@ -341,25 +325,26 @@ Fst and population summaries:
 
 ## Final Outputs
 
+The authoritative deliverable list is
+`dudleya_organelle_alignment_pipeline/results/final_deliverables_manifest.tsv`,
+and the integrated narrative is
+`dudleya_organelle_alignment_pipeline/results/organelle_population_report.md`.
+The final deliverable files, relative to `dudleya_organelle_alignment_pipeline/`,
+are (one `cpDNA.*` and one `mtDNA.*` file each):
+
 ```text
-results/organelle_cpDNA/alignments/cpDNA.all_samples.consensus.fa
-results/organelle_cpDNA/variants/cpDNA.filtered.vcf.gz
-results/organelle_cpDNA/pca/cpDNA_pca.png
-results/organelle_cpDNA/tree/cpDNA_tree.png
-results/organelle_cpDNA/admixture/cpDNA_bestK_structure.png
-results/organelle_cpDNA/popgen/cpDNA_pairwise_fst.tsv
-
-results/organelle_mtDNA/alignments/mtDNA.all_samples.consensus.fa
-results/organelle_mtDNA/variants/mtDNA.filtered.vcf.gz
-results/organelle_mtDNA/pca/mtDNA_pca.png
-results/organelle_mtDNA/tree/mtDNA_tree.png
-results/organelle_mtDNA/admixture/mtDNA_bestK_structure.png
-results/organelle_mtDNA/popgen/mtDNA_pairwise_fst.tsv
-
+results/11_callable_consensus/cpDNA.primary.callable_consensus.fa       (and mtDNA)
+results/10_snp_alignment/cpDNA.primary.snp_alignment.fa                 (and mtDNA)
+results/09_variant_filtering/cpDNA.primary.filtered.vcf.gz              (and mtDNA)
+results/15_pca/cpDNA.primary.pca.png                                    (and mtDNA)
+results/19_bootstrap_phylogenetic_tree/cpDNA.primary.iqtree_ml.treefile (and mtDNA)
+results/20_bootstrap_tree_visualization/cpDNA.primary.iqtree_ml_tree.png (and mtDNA)
+results/18_admixture_replicates/cpDNA.primary.bestK8.structure.png      (and mtDNA)
+results/17_population_genetics/cpDNA.primary.population_genetics.pairwise_fst.tsv (and mtDNA)
 results/organelle_population_report.md
 ```
 
-## Immediate Next Steps
+## Reproduction Sequence
 
 1. Use `dudleya_organelle_alignment_pipeline/results/00_manifest/analysis_samples.tsv`
    as the primary paired-end sample table.
@@ -372,12 +357,12 @@ results/organelle_population_report.md
    Quicksilver North DUSE analysis.
 5. Use the local `.tools/bioconda-env/` environment, or recreate it from
    `dudleya_organelle_alignment_pipeline/environment.yml`, for mapping and QC.
-6. Use the Step 5 all-sample alignment summaries to make downstream sample QC
+6. Use the Stage 06 all-sample alignment summaries to make downstream sample QC
    decisions.
-7. Build the Step 6 downstream sample set and use it as the input for variant
+7. Build the Stage 07 downstream sample set and use it as the input for variant
    calling, consensus alignments, PCA, trees, Fst, and admixture-style
    clustering.
-8. Run Step 7 first as a controlled five-sample smoke call from the standard
+8. Run Stage 08 first as a controlled five-sample smoke call from the standard
    main batch, then review before launching the full 275-sample haploid variant
    call.
 
@@ -421,11 +406,11 @@ Samples written: 280
 Issues written: 2
 Reference records checked: 2
 Pilot samples written: 15
-Step 4 analysis tracks written: 6
-Step 6 downstream included samples: 275
-Step 7 smoke run samples: 5
-Step 7 smoke cpDNA raw variant records: 556
-Step 7 smoke mtDNA raw variant records: 40
+Stage 05 analysis tracks written: 6
+Stage 07 downstream included samples: 275
+Stage 08 smoke run samples: 5
+Stage 08 smoke cpDNA raw variant records: 556
+Stage 08 smoke mtDNA raw variant records: 40
 ```
 
 Current local tool environment:
@@ -445,7 +430,7 @@ Reference indexes now exist for:
 dudleya_organelle_reference_verification/references/dudleya_cp_mt.fa
 ```
 
-Step 3 pilot alignment outputs:
+Stage 02 pilot alignment outputs:
 
 ```text
 dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/pilot_alignment_sample_summary.tsv
@@ -454,7 +439,7 @@ dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/pilot_alignment_
 dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/commands.tsv
 ```
 
-Current Step 3 pilot result:
+Current Stage 02 pilot result:
 
 ```text
 Pilot samples summarized: 15
@@ -466,7 +451,7 @@ Median mitochondrial breadth >=1x: 0.960445
 ```
 
 Interpretation: the original low mtDNA breadth call was caused by a
-`samtools depth` flag interpretation error. The current Step 3 summaries use
+`samtools depth` flag interpretation error. The current Stage 02 summaries use
 `samtools depth -q 20 -Q 0`, where `-q` is minimum base quality and `-Q` is
 minimum mapping quality. With permissive mapping-quality depth, mtDNA has broad
 pilot read support. However, a MAPQ>=20 check shows that much of the mtDNA
@@ -501,7 +486,7 @@ Interpretation: cpDNA has broad read support and is ready for all-sample
 processing. For SNP-based population analyses, use a repeat-aware mask or keep
 one IR copy so duplicated inverted-repeat sequence is not counted twice.
 
-Current Step 4 mask result:
+Current Stage 05 mask result:
 
 ```text
 cpDNA population-site bases retained: 124538
@@ -510,5 +495,5 @@ mtDNA permissive coverage track: 243359 bp
 mtDNA high-confidence unique track: 44930 bp
 ```
 
-Interpretation: Step 5 should run all primary paired-end samples once, but
+Interpretation: Stage 06 should run all primary paired-end samples once, but
 report coverage and downstream candidate sites through these separate tracks.

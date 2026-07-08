@@ -1,13 +1,16 @@
 # Dudleya Organelle Alignment Pipeline
 
-This folder contains the custom cpDNA/mtDNA workflow for the downloaded
-Dudleya whole-genome FASTQ data. The pipeline is being built in small,
-auditable steps so that sample identity and QC are clear before any bulk
-alignment starts.
+This directory contains the custom cpDNA/mtDNA workflow for the downloaded
+Dudleya whole-genome FASTQ data. The workflow is organised into small, auditable
+steps so that sample identity and QC are established before bulk alignment.
 
-## Step 1: Manifest And Preflight Validation
+The authoritative, ordered stage index is [`PROCESS.md`](PROCESS.md). Stages are
+identified by their `results/NN_.../` directory number, and the section headings
+below use those canonical stage numbers.
 
-Step 1 scans the downloaded FASTQ files and writes a sample manifest. It does
+## Stage 00: Manifest And Preflight Validation
+
+Stage 00 scans the downloaded FASTQ files and writes a sample manifest. It does
 not trim reads, align reads, call variants, or build cpDNA/mtDNA consensus
 sequences.
 
@@ -87,7 +90,7 @@ Parsed as:
 These samples can be aligned, but population metadata remains unresolved until
 a manual lookup table is added.
 
-## Run Step 1
+## Run Stage 00
 
 From the repository root:
 
@@ -148,21 +151,22 @@ be written up separately as an individual/sensitivity analysis. Do not mix
 single-end results from these samples into the primary paired-end alignment,
 PCA, tree, Fst, or structure/admixture-style outputs.
 
-## How Evan's Pipeline Fits
+## Relationship To The Published Conservation-Genomics Pipeline
 
-Evan Hackstadt's Dudleya pipeline remains the reference for general WGS QC
-habits: sample-table driven processing, read QC, aggregate QC summaries, and
-organized downstream outputs. This organelle pipeline starts with a custom
-manifest because the cpDNA/mtDNA task uses a different reference structure and
-needs separate chloroplast and mitochondrial outputs.
+A published Dudleya conservation-genomics pipeline (Hackstadt,
+https://github.com/evanhackstadt/dudleya) provides the reference pattern for
+general whole-genome-sequencing QC: sample-table-driven processing, read QC,
+aggregate QC summaries, and organized downstream outputs. This organelle pipeline
+starts with a custom manifest because the cpDNA/mtDNA task uses a different
+reference structure and needs separate chloroplast and mitochondrial outputs.
 
-After this manifest step, the next step can borrow Evan-style QC organization
-while replacing the biological core with organelle-specific mapping, coverage,
+After this manifest step, subsequent steps reuse that QC organization while
+replacing the biological core with organelle-specific mapping, coverage,
 consensus, and cpDNA/mtDNA alignment generation.
 
-## Step 2: Reference And Pilot Preflight
+## Stage 01: Reference And Pilot Preflight
 
-Step 2 validates the combined cpDNA/mtDNA reference, records whether required
+Stage 01 validates the combined cpDNA/mtDNA reference, records whether required
 tools are installed, creates reference indexes only when those tools are
 available, and writes a representative pilot sample table.
 
@@ -260,13 +264,13 @@ micromamba create -y \
   -f dudleya_organelle_alignment_pipeline/environment.yml
 ```
 
-Step 2 has created the `samtools faidx` and `bwa index` files for:
+Stage 01 has created the `samtools faidx` and `bwa index` files for:
 
 ```text
 dudleya_organelle_reference_verification/references/dudleya_cp_mt.fa
 ```
 
-To reproduce Steps 1 and 2:
+To reproduce Stages 00 and 01:
 
 ```bash
 python3 -m unittest \
@@ -277,9 +281,9 @@ env PATH="$PWD/.tools/bioconda-env/bin:$PATH" \
   python3 dudleya_organelle_alignment_pipeline/scripts/prepare_reference_and_pilot.py
 ```
 
-## Step 3: Pilot Organelle Alignment
+## Stage 02: Pilot Organelle Alignment
 
-Step 3 aligns the 15 pilot samples from `pilot_samples.tsv` to the combined
+Stage 02 aligns the 15 pilot samples from `pilot_samples.tsv` to the combined
 cpDNA/mtDNA reference. It keeps mapped read records, writes sorted/indexed BAMs,
 and summarizes cpDNA and mtDNA mapped read counts, input mapping fraction, mean
 depth, and breadth at `>=1x`, `>=5x`, and `>=10x`.
@@ -307,7 +311,7 @@ dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/logs/
 ```
 
 The BAM, depth, and log files are generated analysis artifacts and are ignored
-by git. The top-level Step 3 summaries are small enough to keep as the pilot QC
+by git. The top-level Stage 02 summaries are small enough to keep as the pilot QC
 record.
 
 Current pilot result:
@@ -348,10 +352,10 @@ The cpDNA verification supports moving forward with all-sample chloroplast
 processing. The main caution is the expected chloroplast inverted repeat:
 `82091-107826` and `124539-150274` in the normalized reference.
 
-## Step 4: Analysis Masks And Tracks
+## Stage 05: Analysis Masks And Tracks
 
-Step 4 converts the cpDNA and mtDNA verification findings into the exact tracks
-that Step 5 must use. It does not align reads, call variants, create consensus
+Stage 05 converts the cpDNA and mtDNA verification findings into the exact tracks
+that Stage 06 must use. It does not align reads, call variants, create consensus
 FASTAs, or run population-genetic analyses.
 
 Run from the repository root:
@@ -374,7 +378,7 @@ dudleya_organelle_alignment_pipeline/results/05_analysis_masks/mtdna_permissive_
 dudleya_organelle_alignment_pipeline/results/05_analysis_masks/mtdna_high_confidence_unique_regions.bed
 ```
 
-Current Step 4 decisions:
+Current Stage 05 decisions:
 
 - BED files are 0-based, half-open.
 - `analysis_regions.tsv` records the same intervals as 1-based inclusive
@@ -390,14 +394,14 @@ Current Step 4 decisions:
   `mtdna_high_confidence_unique_regions.bed`, currently two high-MAPQ consensus
   intervals totaling 44,930 bp.
 
-`analysis_tracks.tsv` is the authoritative machine-readable contract for Step 5:
+`analysis_tracks.tsv` is the authoritative machine-readable contract for Stage 06:
 coverage-QC tracks are not interchangeable with population-genetic tracks.
 
-## Step 5: All-Sample Organelle Alignment
+## Stage 06: All-Sample Organelle Alignment
 
-Step 5 maps every primary paired-end sample from `analysis_samples.tsv` to the
+Stage 06 maps every primary paired-end sample from `analysis_samples.tsv` to the
 combined cpDNA/mtDNA reference and summarizes coverage by organelle and by the
-Step 4 analysis tracks.
+Stage 05 analysis tracks.
 
 It does not call variants, create consensus FASTAs, make final alignments, or
 run PCA/tree/Fst/admixture analyses.
@@ -425,13 +429,13 @@ dudleya_organelle_alignment_pipeline/results/06_all_sample_alignment/logs/
 ```
 
 The BAM, depth, and log files are generated analysis artifacts and are ignored
-by git. The top-level Step 5 summaries are small enough to keep as the
+by git. The top-level Stage 06 summaries are small enough to keep as the
 all-sample QC record.
 
 The command is resumable. If an output BAM and its QC files already exist for a
-sample, Step 5 reuses them unless `--force` or `--refresh-qc` is passed.
+sample, Stage 06 reuses them unless `--force` or `--refresh-qc` is passed.
 
-After reviewing Step 5 QC, the downstream primary analysis set excludes:
+After reviewing Stage 06 QC, the downstream primary analysis set excludes:
 
 - `ABAB_MAD_LP_222_Du-589`
 - `CY_HUN_LP_265_Du-684`
@@ -442,9 +446,9 @@ samples in the run and failed one or both organelle coverage screens. The
 machine-readable decision record is
 `results/06_all_sample_alignment/downstream_sample_qc_decisions.tsv`.
 
-## Step 6: Downstream Sample Set
+## Stage 07: Downstream Sample Set
 
-Step 6 converts the Step 5 QC decisions and upstream missing-mate exclusions
+Stage 07 converts the Stage 06 QC decisions and upstream missing-mate exclusions
 into the exact sample tables that variant calling and later population-genetic
 steps must use.
 
@@ -464,9 +468,9 @@ dudleya_organelle_alignment_pipeline/results/07_downstream_sample_set/downstream
 
 The primary downstream sample set should contain 275 samples.
 
-## Step 7: Haploid Variant Calling
+## Stage 08: Haploid Variant Calling
 
-Step 7 uses the Step 6 included sample set and calls raw haploid variants
+Stage 08 uses the Stage 07 included sample set and calls raw haploid variants
 separately for cpDNA and mtDNA. It restricts cpDNA to the IR-aware
 `cpdna_population_sites` track and mtDNA to the `mtdna_high_confidence_unique`
 track. Calls are variant-only (`bcftools call -m -v`). Filtering and consensus
@@ -485,9 +489,9 @@ env PATH="$PWD/.tools/bioconda-env/bin:$PATH" \
   --sample-id ABAB_MAD_LP_325_Du-596
 ```
 
-## Step 11: Bootstrap-Supported Phylogenetic Trees
+## Stage 19: Bootstrap-Supported Phylogenetic Trees
 
-Step 11 builds cpDNA and mtDNA maximum-likelihood trees from the full
+Stage 19 builds cpDNA and mtDNA maximum-likelihood trees from the full
 callable-site consensus alignments. The final deliverable run uses IQ-TREE
 with 1,000 ultrafast bootstrap replicates and BNNI correction.
 
@@ -512,9 +516,9 @@ dudleya_organelle_alignment_pipeline/results/19_bootstrap_phylogenetic_tree/prim
 dudleya_organelle_alignment_pipeline/results/19_bootstrap_phylogenetic_tree/primary.phylogenetic_tree_report.md
 ```
 
-## Step 12: PCA Visualization
+## Stage 15: PCA Visualization
 
-Step 12 computes cpDNA and mtDNA PCA from the filtered haploid SNP-only
+Stage 15 computes cpDNA and mtDNA PCA from the filtered haploid SNP-only
 alignments. It writes coordinate tables, variance summaries, and PNG/PDF/SVG
 figures for each organelle.
 
@@ -544,9 +548,9 @@ dudleya_organelle_alignment_pipeline/results/15_pca/primary.pca_summary.tsv
 dudleya_organelle_alignment_pipeline/results/15_pca/primary.pca_report.md
 ```
 
-## Step 13: Admixture-Style Clustering
+## Stage 18: Admixture-Style Clustering
 
-Step 13 runs ADMIXTURE separately for cpDNA and mtDNA across a fixed K range
+Stage 18 runs ADMIXTURE separately for cpDNA and mtDNA across a fixed K range
 with cross-validation. For the final stability run, use multiple seeded
 replicates per K and select the lowest mean CV error. Haploid organelle calls
 are encoded as pseudo-diploid homozygotes for the diploid-oriented ADMIXTURE
@@ -575,10 +579,12 @@ dudleya_organelle_alignment_pipeline/results/18_admixture_replicates/cpDNA.prima
 dudleya_organelle_alignment_pipeline/results/18_admixture_replicates/mtDNA.primary.bestK8.structure.png
 ```
 
-## Step 14: Tree Visualization
+## Stage 14: Tree Visualization
 
-Step 14 renders the Step 11 IQ-TREE Newick trees into static figures for
-inspection and reporting. It does not alter the inferred tree topology.
+Stage 14 renders the Stage 12 IQ-TREE Newick trees into static figures for
+inspection and reporting. It does not alter the inferred tree topology. The final
+publication figures are the Stage 20 renderings of the Stage 19
+bootstrap-supported trees.
 
 Run from the repository root:
 
@@ -602,9 +608,9 @@ dudleya_organelle_alignment_pipeline/results/14_tree_visualization/primary.tree_
 dudleya_organelle_alignment_pipeline/results/14_tree_visualization/primary.tree_visualization_report.md
 ```
 
-## Step 17: Fst And Population Summaries
+## Stage 17: Fst And Population Summaries
 
-Step 17 computes pairwise population Fst and per-population summary statistics
+Stage 17 computes pairwise population Fst and per-population summary statistics
 from the filtered haploid SNP alignments. It uses only samples with resolved
 population codes for population-level summaries.
 
@@ -644,7 +650,7 @@ dudleya_organelle_alignment_pipeline/results/08_variant_calling/variant_calling_
 dudleya_organelle_alignment_pipeline/results/08_variant_calling/commands.tsv
 ```
 
-Useful Step 3 controlled-run options:
+Useful Stage 02 controlled-run options:
 
 ```bash
 env PATH="$PWD/.tools/bioconda-env/bin:$PATH" \
@@ -660,7 +666,7 @@ env PATH="$PWD/.tools/bioconda-env/bin:$PATH" \
   --refresh-qc
 ```
 
-To reproduce Steps 1 through 4:
+To reproduce Stages 00 through 08:
 
 ```bash
 python3 -m unittest \

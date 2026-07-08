@@ -1,7 +1,7 @@
 """Run haploid cpDNA/mtDNA variant calling for downstream analyses.
 
-This is Step 7 of the pipeline. It uses the Step 6 downstream sample set and
-the Step 4 population-genetic tracks to call raw haploid variants separately
+This stage uses the downstream sample set and
+the population-genetic tracks to call raw haploid variants separately
 for cpDNA and mtDNA. Filtering and consensus generation happen in later steps.
 """
 
@@ -41,7 +41,7 @@ DEFAULT_THREADS = 4
 
 
 class VariantCallingError(RuntimeError):
-    """Raised when Step 7 cannot safely call variants."""
+    """Raised when this stage cannot safely call variants."""
 
 
 @dataclass(frozen=True)
@@ -514,7 +514,7 @@ def write_report(
 ) -> None:
     label = run_label or "full"
     lines = [
-        "# Step 7 Haploid Variant Calling",
+        "# Haploid Variant Calling",
         "",
         "This step calls raw haploid variants separately for cpDNA and mtDNA.",
         "Filtering and consensus generation happen in later steps.",
@@ -548,7 +548,7 @@ def write_report(
 
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Step 7: call raw haploid cpDNA/mtDNA variants."
+        description="Call raw haploid cpDNA/mtDNA variants."
     )
     parser.add_argument("--sample-table", type=Path, default=DEFAULT_SAMPLE_TABLE)
     parser.add_argument("--track-table", type=Path, default=DEFAULT_TRACK_TABLE)

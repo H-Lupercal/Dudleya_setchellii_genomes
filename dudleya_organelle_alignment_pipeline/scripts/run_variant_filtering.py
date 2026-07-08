@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run Step 8: filter raw haploid cpDNA/mtDNA variants."""
+"""Run: filter raw haploid cpDNA/mtDNA variants."""
 
 from pathlib import Path
 import sys

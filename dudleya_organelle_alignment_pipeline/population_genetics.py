@@ -1,6 +1,6 @@
 """Compute cpDNA and mtDNA population genetic summaries.
 
-This is Step 17 of the pipeline. It consumes filtered haploid SNP alignments
+This stage consumes filtered haploid SNP alignments
 and sample metadata, then writes pairwise Fst and per-population summary tables
 for cpDNA and mtDNA separately.
 """
@@ -377,7 +377,7 @@ def write_population_genetics_report(
 ) -> None:
     label = run_label or "full"
     lines = [
-        "# Step 17 Population Genetics",
+        "# Population Genetics",
         "",
         "This step computes pairwise population Fst and per-population summary",
         "statistics from filtered haploid cpDNA and mtDNA SNP alignments.",
@@ -412,7 +412,7 @@ def write_population_genetics_report(
 
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Step 17: compute cpDNA/mtDNA Fst and population summaries."
+        description="Compute cpDNA/mtDNA Fst and population summaries."
     )
     parser.add_argument("--snp-alignment-dir", type=Path, default=DEFAULT_SNP_ALIGNMENT_DIR)
     parser.add_argument("--metadata-path", type=Path, default=DEFAULT_METADATA_PATH)

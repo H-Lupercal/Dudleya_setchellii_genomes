@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run step 1: build the Dudleya organelle FASTQ manifest."""
+"""Run: build the Dudleya organelle FASTQ manifest."""
 
 from pathlib import Path
 import sys

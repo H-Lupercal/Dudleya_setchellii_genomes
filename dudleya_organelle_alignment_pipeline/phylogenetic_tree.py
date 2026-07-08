@@ -1,6 +1,6 @@
 """Build cpDNA and mtDNA phylogenetic trees from callable consensus alignments.
 
-This is Step 11 of the pipeline. It consumes Step 10 full callable-site FASTA
+This stage consumes the full callable-site FASTA
 alignments and runs IQ-TREE maximum-likelihood tree inference separately for
 cpDNA and mtDNA.
 """
@@ -32,7 +32,7 @@ DEFAULT_BOOTSTRAP_REPLICATES = 0
 
 
 class PhylogeneticTreeError(RuntimeError):
-    """Raised when Step 11 cannot safely build phylogenetic trees."""
+    """Raised when this stage cannot safely build phylogenetic trees."""
 
 
 @dataclass(frozen=True)
@@ -326,9 +326,9 @@ def write_tree_outputs(
 def write_report(path: Path, results: list[TreeResult], run_label: str) -> None:
     label = run_label or "full"
     lines = [
-        "# Step 11 Phylogenetic Trees",
+        "# Phylogenetic Trees",
         "",
-        "This step builds cpDNA and mtDNA phylogenetic trees from the Step 10",
+        "This step builds cpDNA and mtDNA phylogenetic trees from the",
         "full callable-site consensus FASTA alignments using IQ-TREE maximum-likelihood",
         "inference. Bootstrap support is included when",
         "requested for the run.",
@@ -362,7 +362,7 @@ def write_report(path: Path, results: list[TreeResult], run_label: str) -> None:
 
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Step 11: build cpDNA/mtDNA phylogenetic trees with IQ-TREE."
+        description="Build cpDNA/mtDNA phylogenetic trees with IQ-TREE."
     )
     parser.add_argument("--consensus-dir", type=Path, default=DEFAULT_CONSENSUS_DIR)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)

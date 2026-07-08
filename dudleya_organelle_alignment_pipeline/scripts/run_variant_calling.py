@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run Step 7: call raw haploid cpDNA/mtDNA variants."""
+"""Run: call raw haploid cpDNA/mtDNA variants."""
 
 from pathlib import Path
 import sys

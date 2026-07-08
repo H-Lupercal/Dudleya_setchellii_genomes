@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run step 3: pilot cpDNA/mtDNA alignment and mapping QC."""
+"""Run: pilot cpDNA/mtDNA alignment and mapping QC."""
 
 from pathlib import Path
 import sys

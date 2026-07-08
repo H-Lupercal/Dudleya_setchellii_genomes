@@ -1,6 +1,6 @@
 """Build cpDNA and mtDNA PCA visualizations from haploid SNP alignments.
 
-This is Step 12 of the pipeline. It consumes the Step 9 SNP-only FASTA
+This stage consumes the SNP-only FASTA
 alignments and writes PCA coordinates, variance summaries, static figures, and
 a short report for cpDNA and mtDNA separately.
 """
@@ -421,7 +421,7 @@ def write_pca_outputs(output_dir: Path, results: list[PcaResult], run_label: str
 def write_pca_report(path: Path, results: list[PcaResult], run_label: str) -> None:
     label = run_label or "full"
     lines = [
-        "# Step 12 PCA Visualization",
+        "# PCA Visualization",
         "",
         "This step computes cpDNA and mtDNA PCA from the filtered haploid",
         "SNP-only alignments. Missing SNP states are mean-imputed per retained",
@@ -431,7 +431,7 @@ def write_pca_report(path: Path, results: list[PcaResult], run_label: str) -> No
         "## Run",
         "",
         f"- Run label: `{label}`",
-        "- Input: Step 9 SNP-only FASTA alignments",
+        "- Input: SNP-only FASTA alignments",
         "- Output formats: coordinates TSV, variance TSV, PNG, PDF, SVG",
         "",
         "## Results",
@@ -476,7 +476,7 @@ def run_pca_analysis(
 
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Step 12: build cpDNA/mtDNA PCA visualizations."
+        description="Build cpDNA/mtDNA PCA visualizations."
     )
     parser.add_argument("--snp-alignment-dir", type=Path, default=DEFAULT_SNP_ALIGNMENT_DIR)
     parser.add_argument("--metadata-path", type=Path, default=DEFAULT_METADATA_PATH)

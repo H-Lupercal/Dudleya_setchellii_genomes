@@ -1,7 +1,7 @@
 """Build full callable-site cpDNA/mtDNA consensus FASTA alignments.
 
-This is Step 10 of the pipeline. It consumes Step 7 raw haploid variants,
-Step 8 filtered SNPs, Step 4 population-genetic BED tracks, and Step 5 depth
+This stage consumes the raw haploid variants,
+filtered SNPs, population-genetic BED tracks, and depth
 files to produce one all-sample consensus FASTA per organelle.
 """
 
@@ -45,7 +45,7 @@ DEFAULT_MIN_DEPTH = 1
 
 
 class CallableConsensusError(RuntimeError):
-    """Raised when Step 10 cannot safely build consensus alignments."""
+    """Raised when this stage cannot safely build consensus alignments."""
 
 
 @dataclass(frozen=True)
@@ -614,13 +614,13 @@ def write_report(
 ) -> None:
     label = run_label or "full"
     lines = [
-        "# Step 10 Callable-Site Consensus Alignment",
+        "# Callable-Site Consensus Alignment",
         "",
         "This step builds full callable-site FASTA alignments for cpDNA and mtDNA.",
-        "Each alignment follows the Step 4 population-genetic BED track, starts",
-        "from the annotated organelle reference, overlays Step 8 filtered haploid",
-        "SNP genotypes, masks Step 7 raw variant sites that failed filtering, and",
-        "uses Step 5 depth files to write `N` at bases below the minimum depth.",
+        "Each alignment follows the population-genetic BED track, starts",
+        "from the annotated organelle reference, overlays the filtered haploid",
+        "SNP genotypes, masks the raw variant sites that failed filtering, and",
+        "uses the depth files to write `N` at bases below the minimum depth.",
         "",
         "## Run",
         "",
@@ -653,7 +653,7 @@ def write_report(
 
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Step 10: build full callable-site cpDNA/mtDNA consensus alignments."
+        description="Build full callable-site cpDNA/mtDNA consensus alignments."
     )
     parser.add_argument("--reference", type=Path, default=DEFAULT_REFERENCE)
     parser.add_argument("--sample-table", type=Path, default=DEFAULT_SAMPLE_TABLE)

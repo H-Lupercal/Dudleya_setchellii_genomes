@@ -1,6 +1,6 @@
 """Render cpDNA and mtDNA phylogenetic tree figures.
 
-This is Step 14 of the pipeline. It consumes the Step 11 IQ-TREE Newick
+This stage consumes the IQ-TREE Newick
 treefiles and writes static PNG, PDF, and SVG figures for review and reports.
 """
 
@@ -214,9 +214,9 @@ def write_tree_visualization_outputs(
 def write_report(path: Path, results: list[TreeFigureResult], run_label: str) -> None:
     label = run_label or "full"
     lines = [
-        "# Step 14 Tree Visualizations",
+        "# Tree Visualizations",
         "",
-        "This step renders the Step 11 IQ-TREE Newick trees into static figures",
+        "This step renders the IQ-TREE Newick trees into static figures",
         "for visual inspection, reporting, and downstream sharing.",
         "",
         "## Run",
@@ -264,7 +264,7 @@ def run_tree_visualizations(
 
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Step 14: render cpDNA/mtDNA phylogenetic tree figures."
+        description="Render cpDNA/mtDNA phylogenetic tree figures."
     )
     parser.add_argument("--tree-dir", type=Path, default=DEFAULT_TREE_DIR)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)

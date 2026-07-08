@@ -18,7 +18,7 @@ multiple competing sources of truth.
 | Path | Purpose |
 |---|---|
 | `dudleya_organelle_reference_verification/` | Canonical cpDNA/mtDNA references, annotations, identity evidence, NC_085682 chloroplast comparison, independent BLAST QC, and annotation-integrity checks. |
-| `dudleya_organelle_alignment_pipeline/` | Reproducible cpDNA/mtDNA FASTQ-processing and population-genomics pipeline, including QC, alignments, variant calling, PCA, trees, admixture, and Fst outputs. |
+| `dudleya_organelle_alignment_pipeline/` | Reproducible cpDNA/mtDNA FASTQ-processing and population-genomics pipeline, including QC, alignments, variant calling, PCA, trees, admixture, and Fst outputs. See `PROCESS.md` for the ordered stage index. |
 | `dudleya_conservation_genomics_pipeline/` | Local credited copy of the SCU Dudleya conservation genomics pipeline originally published at `https://github.com/evanhackstadt/dudleya`. |
 | `genomicsDrive_data_dump/` | Downloaded sequencing FASTQ data. |
 | `ORGANELLE_POPGEN_WORK_PLAN.md` | Work plan for cpDNA/mtDNA population analysis from the FASTQ data. |
@@ -27,14 +27,13 @@ multiple competing sources of truth.
 
 ## Final Organelle Population-Genomics Results
 
-The professor's requested deliverables are complete for cpDNA and mtDNA. Start
-with the handoff report, then use the specific output files below as needed.
+The cpDNA and mtDNA population-genomics deliverables are complete. The two index
+files below summarise the analysis; the per-analysis output files follow.
 Generated analysis products remain local and are intentionally ignored by git;
-the three professor-facing result indexes under `results/` stay visible.
+the result index files under `results/` stay visible.
 
 | File | What it is |
 |---|---|
-| [`dudleya_organelle_alignment_pipeline/results/PROFESSOR_HANDOFF.md`](dudleya_organelle_alignment_pipeline/results/PROFESSOR_HANDOFF.md) | Short professor-facing completion note with the final goal, what was produced, and caveats. |
 | [`dudleya_organelle_alignment_pipeline/results/organelle_population_report.md`](dudleya_organelle_alignment_pipeline/results/organelle_population_report.md) | Integrated methods/results report covering references, QC, alignments, PCA, ML trees, admixture, Fst, and caveats. |
 | [`dudleya_organelle_alignment_pipeline/results/final_deliverables_manifest.tsv`](dudleya_organelle_alignment_pipeline/results/final_deliverables_manifest.tsv) | Machine-readable list of the final deliverables and notes. |
 
@@ -140,18 +139,16 @@ dudleya_organelle_reference_verification/annotation_integrity_checks/report.md
 
 ## Pipeline Status
 
-The cpDNA/mtDNA FASTQ-processing and downstream population-genomics pipeline is
-implemented here:
+The cpDNA/mtDNA FASTQ-processing and population-genomics pipeline is implemented
+in `dudleya_organelle_alignment_pipeline/` and has been run to completion across
+all stages, from `results/00_manifest/` through
+`results/20_bootstrap_tree_visualization/`.
 
-```text
-dudleya_organelle_alignment_pipeline/
-```
+- Ordered stage index (authoritative): [`dudleya_organelle_alignment_pipeline/PROCESS.md`](dudleya_organelle_alignment_pipeline/PROCESS.md).
+- Per-stage usage and commands: [`dudleya_organelle_alignment_pipeline/README.md`](dudleya_organelle_alignment_pipeline/README.md).
 
-The final professor-facing deliverables have already been run through alignment,
-haploid variant calling, SNP/callable alignments, PCA, maximum-likelihood trees,
-admixture-style structure plots, and population-genetic summaries. Recreate or
-validate the earlier manifest/reference/pilot/QC and smoke variant-calling steps
-from the repo root with:
+To recreate or validate the upstream manifest/reference/pilot/QC and smoke
+variant-calling stages from the repository root:
 
 ```bash
 python3 -m unittest \
@@ -181,98 +178,25 @@ env PATH="$PWD/.tools/bioconda-env/bin:$PATH" \
   --sample-id ABAB_MAD_LP_325_Du-596
 ```
 
-Use this table for the primary paired-end cpDNA/mtDNA alignment:
+Authoritative sample tables:
 
 ```text
 dudleya_organelle_alignment_pipeline/results/00_manifest/analysis_samples.tsv
-```
-
-Two manually verified missing-mate samples are excluded from that primary table
-and documented in:
-
-```text
 dudleya_organelle_alignment_pipeline/results/00_manifest/excluded_samples.tsv
+dudleya_organelle_alignment_pipeline/results/07_downstream_sample_set/included_samples.tsv
 ```
 
-The current pilot table is:
+`analysis_samples.tsv` is the primary paired-end input; `excluded_samples.tsv`
+records the two missing-mate exclusions; `included_samples.tsv` is the 275-sample
+downstream set used for variant calling and all population-genetic analyses.
 
-```text
-dudleya_organelle_alignment_pipeline/results/01_reference_pilot/pilot_samples.tsv
-```
-
-A local repo-specific bioinformatics environment has been created at
-`.tools/bioconda-env/`. It is intentionally ignored by git; recreate it from
-`dudleya_organelle_alignment_pipeline/environment.yml` if needed. Step 2 now
-finds `bwa`, `samtools`, `fastp`, `fastqc`, `multiqc`, and `bcftools` when run
-with that environment on `PATH`, and it has created the `samtools faidx` and
-`bwa index` files for `dudleya_cp_mt.fa`.
-
-Step 3 pilot alignment writes filtered organelle BAMs and depth files under:
-
-```text
-dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/
-```
-
-Only the small top-level pilot summaries are intended to be kept in git.
-The current pilot run summarized 15 samples and 30 sample-by-organelle rows.
-After correcting the `samtools depth` quality flags, median breadth at `>=1x`
-is about `1.000` for chloroplast and `0.960` for mitochondria. The remaining
-mtDNA concern is not broad absence of coverage; it is that repeat-rich mtDNA
-regions often have low mapping quality and need a separate unique-placement
-mask before variant calling.
-
-The focused mtDNA investigation report is:
-
-```text
-dudleya_organelle_alignment_pipeline/results/03_mtdna_investigation/mtdna_investigation_report.md
-```
-
-The focused cpDNA verification report is:
-
-```text
-dudleya_organelle_alignment_pipeline/results/04_cpdna_investigation/cpdna_verification_report.md
-```
-
-The cpDNA pilot verification supports moving forward with all-sample chloroplast
-processing. The main cpDNA caution is standard chloroplast inverted-repeat
-handling: the normalized reference has a 25,742 bp reverse repeat pair at
-`82091-107826` and `124539-150274`, so downstream SNP analyses should mask one
-IR copy or otherwise avoid counting duplicated IR sequence twice.
-
-Step 4 defines those analysis rules as machine-readable BED/TSV files:
-
-```text
-dudleya_organelle_alignment_pipeline/results/05_analysis_masks/
-```
-
-Key Step 4 decisions:
-
-- cpDNA sample QC can use the full chloroplast reference.
-- cpDNA population-genetic outputs should use
-  `cpdna_population_sites.bed`, which keeps one IR copy and excludes the
-  duplicate IR copy `124539-150274`.
-- mtDNA sample QC should use the whole-reference permissive coverage track.
-- mtDNA variant calling and population-genetic outputs should use
-  `mtdna_high_confidence_unique_regions.bed`, currently 44,930 bp supported by
-  high-MAPQ pilot evidence.
-
-Step 5 writes the all-sample alignment and track-aware QC summaries under:
-
-```text
-dudleya_organelle_alignment_pipeline/results/06_all_sample_alignment/
-```
-
-Step 6 writes the primary downstream include/exclude sample set under:
-
-```text
-dudleya_organelle_alignment_pipeline/results/07_downstream_sample_set/
-```
-
-Step 7 writes raw haploid cpDNA/mtDNA variant-calling outputs under:
-
-```text
-dudleya_organelle_alignment_pipeline/results/08_variant_calling/
-```
+The local bioinformatics environment lives at `.tools/bioconda-env/` (git-ignored;
+recreate from `dudleya_organelle_alignment_pipeline/environment.yml`). Two analysis
+cautions carry through to the population-genetic tracks: the chloroplast inverted
+repeat (a 25,742 bp pair at `82091-107826` and `124539-150274`) is masked to one
+copy for SNP analyses, and mtDNA population genetics is restricted to the 44,930 bp
+high-confidence unique track. The supporting pilot investigations are in
+`results/03_mtdna_investigation/` and `results/04_cpdna_investigation/`.
 
 ## Limitations
 

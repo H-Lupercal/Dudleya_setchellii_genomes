@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run Step 13: cpDNA/mtDNA ADMIXTURE-style clustering."""
+"""Run: cpDNA/mtDNA ADMIXTURE-style clustering."""
 
 from pathlib import Path
 import sys

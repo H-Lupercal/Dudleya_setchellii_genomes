@@ -1,7 +1,7 @@
 """Run pilot cpDNA/mtDNA read mapping and summarize organelle signal.
 
-This is step 3 of the pipeline. It aligns only the representative pilot samples
-chosen in step 2, keeps mapped reads against the combined cpDNA/mtDNA reference,
+This stage aligns only the representative pilot samples
+chosen earlier, keeps mapped reads against the combined cpDNA/mtDNA reference,
 and writes mapping/depth summaries for review before any all-sample run.
 """
 
@@ -128,7 +128,7 @@ def read_alignment_samples(
             continue
         if len(r1_paths) != 1 or len(r2_paths) != 1:
             raise AlignmentError(
-                "Step 3 currently expects exactly one R1 and one R2 FASTQ per "
+                "This stage currently expects exactly one R1 and one R2 FASTQ per "
                 f"pilot sample. Review sample {sample_id} before alignment."
             )
         samples.append(
@@ -368,7 +368,7 @@ def require_reference_indexes(reference_path: Path) -> None:
     missing = [path.as_posix() for path in required if not path.exists()]
     if missing:
         raise AlignmentError(
-            "Missing reference index files. Re-run Step 2 before alignment: "
+            "Missing reference index files. Re-run reference/pilot preflight before alignment: "
             + "; ".join(missing)
         )
 
@@ -592,7 +592,7 @@ def write_report(
     cp_rows = [row for row in organelle_rows if row["organelle"] == "chloroplast"]
     mt_rows = [row for row in organelle_rows if row["organelle"] == "mitochondria"]
     lines = [
-        "# Step 3 Pilot Organelle Alignment",
+        "# Pilot Organelle Alignment",
         "",
         "This step aligns the representative pilot samples to the combined",
         "cpDNA/mtDNA reference and summarizes organelle mapping signal. It does",
@@ -763,7 +763,7 @@ def run_pilot_alignment(
 
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Run Step 3 pilot cpDNA/mtDNA alignment and mapping QC."
+        description="Run pilot cpDNA/mtDNA alignment and mapping QC."
     )
     parser.add_argument("--pilot-table", type=Path, default=DEFAULT_PILOT_TABLE)
     parser.add_argument("--reference", type=Path, default=DEFAULT_REFERENCE)

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run Step 17: cpDNA/mtDNA Fst and population summaries."""
+"""Run: cpDNA/mtDNA Fst and population summaries."""
 
 from pathlib import Path
 import sys

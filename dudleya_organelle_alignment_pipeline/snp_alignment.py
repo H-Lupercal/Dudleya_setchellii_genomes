@@ -1,6 +1,6 @@
 """Build SNP-only cpDNA/mtDNA FASTA alignments from filtered haploid VCFs.
 
-This is Step 9 of the pipeline. It converts Step 8 filtered biallelic SNP VCFs
+This stage converts the filtered biallelic SNP VCFs
 into all-sample FASTA alignments suitable for quick phylogenetic trees and PCA
 matrix generation. Reference-length consensus FASTAs can be generated later if
 needed for full callable-site analyses.
@@ -28,7 +28,7 @@ DEFAULT_RUN_LABEL = "primary"
 
 
 class SnpAlignmentError(RuntimeError):
-    """Raised when Step 9 cannot safely build SNP alignments."""
+    """Raised when this stage cannot safely build SNP alignments."""
 
 
 @dataclass(frozen=True)
@@ -291,7 +291,7 @@ def write_alignment_outputs(
 def write_report(path: Path, results: list[SnpAlignmentResult], run_label: str) -> None:
     label = run_label or "full"
     lines = [
-        "# Step 9 SNP Alignment",
+        "# SNP Alignment",
         "",
         "This step converts filtered haploid cpDNA and mtDNA SNP VCFs into",
         "SNP-only FASTA alignments. These alignments are intended for quick",
@@ -326,7 +326,7 @@ def write_report(path: Path, results: list[SnpAlignmentResult], run_label: str) 
 
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Step 9: build SNP-only cpDNA/mtDNA FASTA alignments."
+        description="Build SNP-only cpDNA/mtDNA FASTA alignments."
     )
     parser.add_argument("--variant-filtering-dir", type=Path, default=DEFAULT_VARIANT_FILTERING_DIR)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)

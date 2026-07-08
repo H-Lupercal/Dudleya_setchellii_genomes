@@ -189,7 +189,7 @@ def parse_fastq_path(path: Path) -> FastqRecord:
 
 
 def load_population_codes(csv_path: Path) -> dict[str, PopulationCode]:
-    """Load Evan's population-code spreadsheet as a code-indexed dictionary."""
+    """Load the population-code spreadsheet as a code-indexed dictionary."""
 
     if not csv_path.exists():
         return {}
@@ -442,7 +442,7 @@ def write_preflight_summary(
     lines = [
         "# Dudleya Organelle Alignment Preflight Summary",
         "",
-        "This is step 1 of the cpDNA/mtDNA alignment pipeline. It validates",
+        "This stage validates",
         "sample naming, R1/R2 pairing, and population-code metadata before",
         "any read alignment is attempted.",
         "",

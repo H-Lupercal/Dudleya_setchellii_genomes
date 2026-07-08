@@ -81,8 +81,14 @@ dudleya_organelle_reference_verification/evidence/independent_blast_qc/*_cds_vs_
 # Python/runtime caches
 __pycache__/
 *.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 
-# Temporary working notes
+# Workflow runtime state
+.snakemake/
 
 # Local tool environments and package-download caches
 .tools/
@@ -91,7 +97,6 @@ dudleya_conservation_genomics_pipeline/
 # Dudleya organelle alignment pipeline outputs.
 # Generated analysis products stay local; reports/manifests list final deliverable paths.
 dudleya_organelle_alignment_pipeline/results/*
-!dudleya_organelle_alignment_pipeline/results/PROFESSOR_HANDOFF.md
 !dudleya_organelle_alignment_pipeline/results/organelle_population_report.md
 !dudleya_organelle_alignment_pipeline/results/final_deliverables_manifest.tsv
 

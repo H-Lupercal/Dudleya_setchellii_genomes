@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run Step 10: build full callable-site cpDNA/mtDNA consensus alignments."""
+"""Run: build full callable-site cpDNA/mtDNA consensus alignments."""
 
 from pathlib import Path
 import sys

@@ -1,6 +1,6 @@
 """Prepare the combined organelle reference and pilot sample table.
 
-This is step 2 of the pipeline. It still does not align reads. It checks that
+This stage still does not align reads. It checks that
 the cpDNA/mtDNA reference is structurally ready for mapping, records whether
 required external tools are available, creates indexes only when the tools are
 installed, and chooses a small representative pilot sample set.
@@ -399,7 +399,7 @@ def write_summary(
 ) -> None:
     missing_tools = [check.tool for check in tool_checks if check.status == "MISSING"]
     lines = [
-        "# Step 2 Reference And Pilot Preflight",
+        "# Reference And Pilot Preflight",
         "",
         "This step validates the combined cpDNA/mtDNA reference, records tool",
         "availability, prepares indexes only when tools are installed, and writes",
@@ -468,7 +468,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
         default=Path(
             "dudleya_organelle_alignment_pipeline/results/00_manifest/analysis_samples.tsv"
         ),
-        help="Primary paired-end sample table from step 1.",
+        help="Primary paired-end sample table from the manifest stage.",
     )
     parser.add_argument(
         "--output-dir",

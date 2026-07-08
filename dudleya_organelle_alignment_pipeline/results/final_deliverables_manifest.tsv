@@ -1,5 +1,5 @@
 deliverable	organelle	file_path	notes
-final_integrated_report	both	dudleya_organelle_alignment_pipeline/results/organelle_population_report.md	Professor-facing summary of goal, methods, outputs, and caveats.
+final_integrated_report	both	dudleya_organelle_alignment_pipeline/results/organelle_population_report.md	Integrated summary of objective, methods, outputs, and caveats.
 callable_alignment	cpDNA	dudleya_organelle_alignment_pipeline/results/11_callable_consensus/cpDNA.primary.callable_consensus.fa	Full callable-site consensus alignment; 275 samples x 124,538 sites.
 callable_alignment	mtDNA	dudleya_organelle_alignment_pipeline/results/11_callable_consensus/mtDNA.primary.callable_consensus.fa	Full callable-site consensus alignment; 275 samples x 44,930 sites.
 snp_alignment	cpDNA	dudleya_organelle_alignment_pipeline/results/10_snp_alignment/cpDNA.primary.snp_alignment.fa	Filtered haploid SNP alignment; 2,015 SNP sites.

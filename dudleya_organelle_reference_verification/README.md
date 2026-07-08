@@ -2,7 +2,7 @@
 
 This package is the canonical chloroplast and mitochondrial reference package
 for the Dudleya organelle/population-analysis work. It consolidates the former
-tool-output and Codex comparison folders into one descriptive layout.
+tool-output and comparison folders into one descriptive layout.
 
 ## Contents
 

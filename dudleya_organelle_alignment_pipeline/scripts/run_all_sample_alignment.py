@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run step 5: all-sample cpDNA/mtDNA alignment and track-aware QC."""
+"""Run: all-sample cpDNA/mtDNA alignment and track-aware QC."""
 
 from pathlib import Path
 import sys

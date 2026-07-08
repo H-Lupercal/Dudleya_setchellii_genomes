@@ -75,7 +75,7 @@ class VariantFilteringOutputTests(unittest.TestCase):
 
         self.assertIn("filtered_records", summary)
         self.assertIn("2000", summary)
-        self.assertIn("# Step 8 Variant Filtering", report)
+        self.assertIn("# Variant Filtering", report)
         self.assertIn("Maximum missing genotype fraction: 0.2", report)
         self.assertIn("Minimum minor allele count: 2", report)
         self.assertIn("bcftools view", commands)

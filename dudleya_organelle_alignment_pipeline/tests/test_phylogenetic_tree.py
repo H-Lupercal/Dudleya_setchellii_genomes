@@ -101,7 +101,7 @@ class PhylogeneticTreeOutputTests(unittest.TestCase):
             commands = (output_dir / "primary.phylogenetic_tree_commands.tsv").read_text()
 
         self.assertIn("treefile_path", summary)
-        self.assertIn("# Step 11 Phylogenetic Trees", report)
+        self.assertIn("# Phylogenetic Trees", report)
         self.assertIn("IQ-TREE maximum-likelihood", report)
         self.assertIn("iqtree -s", commands)
 

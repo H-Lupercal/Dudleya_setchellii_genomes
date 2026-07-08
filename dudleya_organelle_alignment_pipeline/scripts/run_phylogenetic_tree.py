@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run Step 11: build cpDNA/mtDNA phylogenetic trees."""
+"""Run: build cpDNA/mtDNA phylogenetic trees."""
 
 from pathlib import Path
 import sys

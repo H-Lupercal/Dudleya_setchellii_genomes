@@ -27,7 +27,7 @@ The comparison answers four questions:
 The script downloads current `NC_085682.1` FASTA and GenBank records from NCBI
 EFetch. If network access is unavailable, the normal run fails instead of using
 cached reference data. This is intentional so the committed comparison artifacts
-come from NCBI, not from earlier workflow cache state.
+come from NCBI, not from cached workflow state.
 
 ## Dependencies
 
@@ -79,7 +79,7 @@ option. Do not use that option for the results committed in this repository.
 ## Key Outputs
 
 - `similarity_results.tsv`: one-row summary of the similarity run.
-- `summary.md`: narrative interpretation and headline numbers.
+- `summary.md`: narrative interpretation and key metrics.
 - `whole_genome_divergence.tsv`: raw BLAST and normalized projection divergence.
 - `cds_substitutions.tsv`: CDS-level synonymous/nonsynonymous substitution table.
 - `gene_content.tsv`: reference feature counts, projected candidate presence,

@@ -73,7 +73,7 @@ class SnpAlignmentOutputTests(unittest.TestCase):
 
         self.assertIn("alignment_sites", summary)
         self.assertIn("missing_bases", summary)
-        self.assertIn("# Step 9 SNP Alignment", report)
+        self.assertIn("# SNP Alignment", report)
         self.assertIn("SNP-only FASTA alignments", report)
 
 

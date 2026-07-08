@@ -1,17 +1,21 @@
 # Dudleya Organelle Population Analysis Report
 
-## Professor's Goal
+## Objective
 
-"Create an alignment of all samples for the cpDNA and separately for the mtDNA
-genomes using those annotated references; create a PCA visualization and a
-phylogenetic tree (Neighbor Joining or maximum likelihood); generate population
-genetic parameters such as admixture/structure plots with optimal K determined
-empirically and Fst; think about whether to use Evan's pipeline for QC."
+This analysis characterises chloroplast (cpDNA) and mitochondrial (mtDNA) genome
+variation across the Dudleya sequencing samples. The aims are to (i) build
+all-sample cpDNA and mtDNA alignments against the annotated organelle references,
+(ii) visualise population structure with principal component analysis (PCA),
+(iii) infer cpDNA and mtDNA phylogenies by maximum likelihood, with Neighbor
+Joining accepted as a quick topology check, (iv) estimate population-genetic
+parameters, including admixture/structure-style clustering with the number of
+clusters K selected empirically and pairwise Fst, and (v) evaluate whether an
+existing conservation-genomics pipeline is suitable for read quality control.
 
 ## Status
 
-The requested primary organelle analysis has been generated for the 275-sample
-downstream set. The workflow used the annotated cpDNA and mtDNA references from
+The primary organelle analysis was generated for the 275-sample downstream set.
+The workflow used the annotated cpDNA and mtDNA references from
 `dudleya_organelle_reference_verification/`, excluded the two missing-mate
 samples and three low-input QC-fail samples, and kept cpDNA and mtDNA outputs
 separate.
@@ -25,11 +29,12 @@ separate.
 - Primary downstream samples used for alignments, PCA, trees, and admixture: 275.
 - Metadata-resolved populations used for Fst/population summaries: 34.
 
-Evan Hackstadt's Snakemake pipeline was treated as the QC reference pattern:
-sample-table driven processing, read-QC awareness, organized summaries, and
-aggregate reporting. The core biological workflow here remains custom because
-the analysis is organelle-specific, haploid, and uses cpDNA/mtDNA tracks rather
-than a nuclear reference workflow.
+A published conservation-genomics pipeline (Hackstadt, Dudleya pipeline,
+https://github.com/evanhackstadt/dudleya) was adopted as the quality-control
+reference pattern: sample-table-driven processing, read-QC awareness, organized
+summaries, and aggregate reporting. The core biological workflow here remains
+custom because the analysis is organelle-specific, haploid, and uses cpDNA/mtDNA
+tracks rather than a nuclear-reference workflow.
 
 ## Alignments
 

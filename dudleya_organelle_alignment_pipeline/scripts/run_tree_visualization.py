@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run Step 14: render cpDNA/mtDNA phylogenetic tree figures."""
+"""Run: render cpDNA/mtDNA phylogenetic tree figures."""
 
 from pathlib import Path
 import sys

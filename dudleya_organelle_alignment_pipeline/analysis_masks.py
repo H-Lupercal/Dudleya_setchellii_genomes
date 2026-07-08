@@ -1,6 +1,6 @@
 """Define cpDNA and mtDNA analysis masks for all-sample processing.
 
-This is step 4 of the pipeline. It does not align reads or call variants.
+This stage does not align reads or call variants.
 It turns the cpDNA and mtDNA verification results into explicit BED tracks so
 the all-sample run can apply the same scientific rules reproducibly.
 """
@@ -32,7 +32,7 @@ DEFAULT_MTDNA_HIGH_CONFIDENCE_THRESHOLD = 12
 
 
 class MaskDefinitionError(ValueError):
-    """Raised when Step 4 source evidence cannot define a usable mask."""
+    """Raised when this stage source evidence cannot define a usable mask."""
 
 
 @dataclass(frozen=True)
@@ -580,7 +580,7 @@ def write_summary(
         region.length_bp for region in mtdna.high_confidence_unique_regions
     )
     lines = [
-        "# Step 4 Analysis Masks",
+        "# Analysis Masks",
         "",
         "This step defines the cpDNA and mtDNA tracks that the all-sample run",
         "must use. It does not align reads, call variants, or create final",
@@ -618,7 +618,7 @@ def write_summary(
         "",
         "## Outputs",
         "",
-        "- `analysis_tracks.tsv`: machine-readable track purpose and Step 5 use.",
+        "- `analysis_tracks.tsv`: machine-readable track purpose and downstream use.",
         "- `analysis_regions.tsv`: machine-readable interval audit table.",
         "- `*.bed`: regions and masks consumed by later alignment/QC/variant steps.",
         "",
@@ -628,19 +628,19 @@ def write_summary(
 
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Create cpDNA and mtDNA analysis masks for Step 5."
+        description="Create cpDNA and mtDNA analysis masks."
     )
     parser.add_argument(
         "--output-dir",
         type=Path,
         default=DEFAULT_OUTPUT_DIR,
-        help="Folder for Step 4 BED tracks and manifests.",
+        help="Folder for the BED tracks and manifests.",
     )
     parser.add_argument(
         "--cpdna-repeat-intervals",
         type=Path,
         default=DEFAULT_CPDNA_REPEAT_INTERVALS,
-        help="cpDNA self-repeat interval table from Step 4 cpDNA verification.",
+        help="cpDNA self-repeat interval table from the cpDNA verification.",
     )
     parser.add_argument(
         "--mtdna-high-mapq-intervals",

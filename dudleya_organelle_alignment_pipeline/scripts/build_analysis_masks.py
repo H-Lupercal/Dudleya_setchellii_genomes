@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run step 4: create cpDNA/mtDNA analysis masks and track manifests."""
+"""Run: create cpDNA/mtDNA analysis masks and track manifests."""
 
 from pathlib import Path
 import sys

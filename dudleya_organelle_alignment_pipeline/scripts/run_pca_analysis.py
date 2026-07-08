@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run Step 12: build cpDNA/mtDNA PCA visualizations."""
+"""Run: build cpDNA/mtDNA PCA visualizations."""
 
 from pathlib import Path
 import sys

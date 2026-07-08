@@ -1,7 +1,7 @@
 """Build the downstream sample set after all-sample organelle alignment QC.
 
-This is Step 6 of the pipeline. It does not call variants or create
-alignments. It converts the Step 5 QC decisions into the sample lists that
+This stage does not call variants or create
+alignments. It converts the QC decisions into the sample lists that
 variant calling, consensus generation, PCA, tree, Fst, and clustering steps
 must use.
 """
@@ -64,7 +64,7 @@ EXCLUDED_FIELDNAMES = [
 
 
 class DownstreamSampleSetError(RuntimeError):
-    """Raised when Step 6 cannot build a safe downstream sample set."""
+    """Raised when this stage cannot build a safe downstream sample set."""
 
 
 def read_tsv(path: Path) -> list[dict[str, str]]:
@@ -130,7 +130,7 @@ def build_included_row(row: dict[str, str]) -> dict[str, str]:
         "r2_paths": row.get("r2_paths", ""),
         "downstream_cpDNA_use": "include",
         "downstream_mtDNA_use": "include",
-        "include_reason": "passes Step 5 downstream QC",
+        "include_reason": "passes all-sample-alignment downstream QC",
     }
 
 
@@ -212,7 +212,7 @@ def write_report(
         stage_counts[stage] = stage_counts.get(stage, 0) + 1
 
     lines = [
-        "# Step 6 Downstream Sample Set",
+        "# Downstream Sample Set",
         "",
         "This step defines the sample set for downstream haploid variant calling,",
         "consensus FASTA generation, cpDNA/mtDNA all-sample alignments, PCA,",
@@ -237,7 +237,7 @@ def write_report(
             "- `included_samples.tsv`: samples to use in primary downstream analyses.",
             "- `excluded_samples.tsv`: samples excluded before downstream analyses.",
             "",
-            "The included sample set should be used by Step 7 variant calling and",
+            "The included sample set should be used by variant calling and",
             "all later population-genetic outputs.",
             "",
         ]
@@ -271,7 +271,7 @@ def generate_downstream_sample_set(
 
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Step 6: build downstream sample include/exclude tables."
+        description="Build downstream sample include/exclude tables."
     )
     parser.add_argument("--analysis-sample-table", type=Path, default=DEFAULT_ANALYSIS_SAMPLE_TABLE)
     parser.add_argument("--upstream-excluded-table", type=Path, default=DEFAULT_UPSTREAM_EXCLUDED_TABLE)

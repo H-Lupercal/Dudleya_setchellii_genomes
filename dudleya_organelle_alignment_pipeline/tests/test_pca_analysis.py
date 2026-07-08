@@ -90,7 +90,7 @@ class PcaOutputTests(unittest.TestCase):
             self.assertTrue(result.pdf_path.exists())
             self.assertTrue(result.svg_path.exists())
             self.assertIn("mtDNA", summary)
-            self.assertIn("# Step 12 PCA Visualization", report)
+            self.assertIn("# PCA Visualization", report)
 
 
 if __name__ == "__main__":
