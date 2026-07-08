@@ -1,0 +1,25 @@
+name: dudleya-organelle-tools
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python>=3.11
+  - bwa=0.7.*
+  - samtools>=1.23
+  - bcftools>=1.23
+  - fastp
+  - fastqc
+  - multiqc
+  - iqtree
+  - plink
+  - admixture
+  - vcftools
+  - bedtools
+  - matplotlib-base
+  - pandas
+  - scikit-learn
+  - biopython
+  - seaborn
+  - r-ggplot2
+  - r-ape
+  - r-patchwork

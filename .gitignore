@@ -10,70 +10,92 @@
 *.ntf
 *.nto
 
+# Generated read-mapping reference indexes
+*.amb
+*.ann
+*.bwt
+*.pac
+*.sa
+*.fai
+
+# Heavy alignment/variant intermediates
+*.sam
+*.bam
+*.bai
+*.cram
+*.crai
+*.bcf
+*.vcf
+*.vcf.gz
+*.g.vcf.gz
+*.tbi
+*.csi
+*.depth.tsv
+*.flagstat.txt
+*.idxstats.tsv
+*.alignment.log
+*.bcftools.log
+*.bam_list.txt
+*.sample_names.txt
+
+# Local sequencing data downloads. These are raw data inputs, not repo artifacts.
+genomicsDrive_data_dump/
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+
+# Downloaded/compressed FASTA data drops
+*.fa.gz
+*.fasta.gz
+*.fna.gz
+*.fas.gz
+*.faa.gz
+*.ffn.gz
+
 # Generated/downloaded reference bundles and copied query FASTAs
-dudleya_organelle_qc/*_refs.fa
-dudleya_organelle_qc/*_cds_*.fa
-gateVER/references/
-gateVER/*_refs.fa
-gateVER/*_cross_refs.fa
-gateVER/input_*.fa
-gateVER/*_query.fa
-gateVER/annotation/*.fa
-gateVER/annotation/*_ref_features.*.fa
+dudleya_organelle_reference_verification/evidence/independent_blast_qc/*_refs.fa
+dudleya_organelle_reference_verification/evidence/independent_blast_qc/*_cds_*.fa
+dudleya_organelle_reference_verification/evidence/nc085682_chloroplast_comparison/reference/*.fa
+dudleya_organelle_reference_verification/evidence/nc085682_chloroplast_comparison/NC_085682.1.fa
+dudleya_organelle_reference_verification/evidence/nc085682_chloroplast_comparison/candidate_raw.fa
+dudleya_organelle_reference_verification/evidence/nc085682_chloroplast_comparison/candidate_terminal_deduplicated.fa
+dudleya_organelle_reference_verification/evidence/nc085682_chloroplast_comparison/candidate_terminal_deduplicated_rotated.fa
+dudleya_organelle_reference_verification/evidence/nc085682_chloroplast_comparison/normalized_alignment.fa
+dudleya_organelle_reference_verification/evidence/nc085682_chloroplast_comparison/normalized_pair_for_mafft.fa
+dudleya_organelle_reference_verification/annotations/*.fa
+dudleya_organelle_reference_verification/annotations/*_ref_features.*.fa
 
 # Intermediate feature-transfer metadata and raw annotation BLAST outputs
-gateVER/annotation/*_feature_meta.json
-gateVER/annotation/*_feature_blastn.tsv
-gateVER/annotation/*_protein_tblastn.tsv
+dudleya_organelle_reference_verification/annotations/*_feature_meta.json
+dudleya_organelle_reference_verification/annotations/*_feature_blastn.tsv
+dudleya_organelle_reference_verification/annotations/*_protein_tblastn.tsv
 
-# Raw whole-genome BLAST outputs from Gate; keep compact *.summary.tsv files
-gateVER/*.blastn.tsv
+# Raw whole-genome BLAST outputs; keep compact summary/report files
+dudleya_organelle_reference_verification/**/*.blastn.tsv
 
 # Intermediate marker/protein alignment outputs from the independent QC pass
-dudleya_organelle_qc/*_aa_vs_*.tsv
-dudleya_organelle_qc/*_cds_vs_*.tsv
+dudleya_organelle_reference_verification/evidence/independent_blast_qc/*_aa_vs_*.tsv
+dudleya_organelle_reference_verification/evidence/independent_blast_qc/*_cds_vs_*.tsv
 
 # Python/runtime caches
 __pycache__/
 *.py[cod]
 
-# Recomputable intermediates from the focused NC_085682.1 comparison.
-# Keep the script, docs, downloaded NCBI records, and final TSV/MD reports.
-nc085682_comparison/NC_085682.1.fa
-nc085682_comparison/NC_085682.1.gb
-nc085682_comparison/candidate_raw.fa
-nc085682_comparison/candidate_terminal_deduplicated.fa
-nc085682_comparison/candidate_terminal_deduplicated_rotated.fa
-nc085682_comparison/*blastn*.tsv
-nc085682_comparison/normalized_alignment.fa
-nc085682_comparison/normalized_pair_for_mafft.fa
+# Temporary working notes
 
-# Keep original input FASTAs
+# Local tool environments and package-download caches
+.tools/
+dudleya_conservation_genomics_pipeline/
+
+# Dudleya organelle alignment pipeline outputs.
+# Generated analysis products stay local; reports/manifests list final deliverable paths.
+dudleya_organelle_alignment_pipeline/results/*
+!dudleya_organelle_alignment_pipeline/results/PROFESSOR_HANDOFF.md
+!dudleya_organelle_alignment_pipeline/results/organelle_population_report.md
+!dudleya_organelle_alignment_pipeline/results/final_deliverables_manifest.tsv
+
+# Keep original input and curated package FASTAs
 !Dudleya_hifiasm_purged_manual_chloroplast.fa
 !Dudleya_hifiasm_purged_manual_mitochondria.fa
-
-# Keep reports
-!dudleya_organelle_qc/report.md
-!gateVER/report.md
-
-# Keep independent QC whole-genome evidence
-!dudleya_organelle_qc/chloroplast_vs_cprefs.tsv
-!dudleya_organelle_qc/chloroplast_vs_mitorefs.tsv
-!dudleya_organelle_qc/mitochondria_vs_cprefs.tsv
-!dudleya_organelle_qc/mitochondria_vs_mitorefs.tsv
-
-# Keep Gate annotations and summaries
-!gateVER/question.txt
-!gateVER/input_stats.json
-!gateVER/reference_search_summary.json
-!gateVER/proof_summary.json
-!gateVER/annotation_summary.json
-!gateVER/*.summary.tsv
-!gateVER/*.annotation.tsv
-!gateVER/*.draft.gff3
-
-# Keep expanded Gate annotation-integrity validation outputs
-!gateVER/annotation_integrity/
-!gateVER/annotation_integrity/report.md
-!gateVER/annotation_integrity/manifest.json
-!gateVER/annotation_integrity/*.tsv
+!dudleya_organelle_reference_verification/references/*.fa
