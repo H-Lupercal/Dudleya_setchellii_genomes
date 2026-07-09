@@ -1,11 +1,11 @@
 # Initial Pipeline Run
 
-This folder contains the organized final-output snapshot from the initial
-organelle population genomics run.
+This folder keeps the final-output snapshot from the first organelle population
+genomics run.
 
-The `results/` directory contains real copied final deliverables from the
-original pipeline results directory so the files are directly browsable on
-GitHub. A provenance symlink is retained as `source_results_symlink`:
+The files under `results/` are copied from the original pipeline results
+directory so they can be browsed directly on GitHub. The original location is
+also kept as `source_results_symlink`:
 
 ```text
 initial_pipeline_run/source_results_symlink -> ../dudleya_organelle_alignment_pipeline/results
@@ -26,5 +26,4 @@ initial_pipeline_run/source_results_symlink -> ../dudleya_organelle_alignment_pi
 | [results/20_bootstrap_tree_visualization/cpDNA.primary.iqtree_ml_tree.png](results/20_bootstrap_tree_visualization/cpDNA.primary.iqtree_ml_tree.png) | Initial rendered cpDNA ML tree figure. |
 | [results/20_bootstrap_tree_visualization/mtDNA.primary.iqtree_ml_tree.png](results/20_bootstrap_tree_visualization/mtDNA.primary.iqtree_ml_tree.png) | Initial rendered mtDNA ML tree figure. |
 
-Use [../full_pipeline_run/](../full_pipeline_run/) for the second complete rerun
-performed with all 16 CPU threads.
+Use [../full_pipeline_run/](../full_pipeline_run/) for the main 16-thread rerun.

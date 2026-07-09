@@ -1,26 +1,26 @@
-# Dudleya setchellii Organelle Reference Verification
+# Dudleya setchellii Organelle References And Population Analysis
 
-This repository contains verified *Dudleya setchellii* chloroplast and
-mitochondrial reference assets, supporting evidence, downloaded sequencing data,
-and a local copy of the Dudleya conservation-genomics pipeline.
+This repository contains the *Dudleya setchellii* chloroplast and mitochondrial
+reference work, the read-backed cpDNA/mtDNA population-genomics pipeline, and
+the final result folders for the organelle analysis.
 
-The canonical organelle verification package is:
+The reference-verification work is in:
 
 ```text
 dudleya_organelle_reference_verification/
 ```
 
-Older analysis folders were merged into that package and removed to avoid
-multiple competing sources of truth.
+Older reference-check folders were folded into that package so the evidence is
+kept in one place.
 
 ## Key Contents
 
 | Path | Purpose |
 |---|---|
-| `dudleya_organelle_reference_verification/` | Canonical cpDNA/mtDNA references, annotations, identity evidence, NC_085682 chloroplast comparison, independent BLAST QC, and annotation-integrity checks. |
+| `dudleya_organelle_reference_verification/` | cpDNA/mtDNA references, annotations, identity evidence, NC_085682 chloroplast comparison, independent BLAST QC, and annotation-integrity checks. |
 | `dudleya_organelle_alignment_pipeline/` | Reproducible cpDNA/mtDNA FASTQ-processing and population-genomics pipeline, including QC, alignments, variant calling, PCA, trees, admixture, and Fst outputs. See `PROCESS.md` for the ordered stage index. |
-| `initial_pipeline_run/` | Organized entry point for the initial pipeline output snapshot, with real copied final results and a provenance symlink back to `dudleya_organelle_alignment_pipeline/results/`. |
-| `full_pipeline_run/` | Organized second full pipeline rerun using all 16 CPU threads, with run report, logs, metadata, and final result files. |
+| `initial_pipeline_run/` | Snapshot of the first pipeline result set, copied into a GitHub-browsable folder. |
+| `full_pipeline_run/` | Main submission result set: second full rerun using 16 CPU threads, with report, logs, metadata, and final files. |
 | `dudleya_conservation_genomics_pipeline/` | Local credited copy of the SCU Dudleya conservation genomics pipeline originally published at `https://github.com/evanhackstadt/dudleya`. |
 | `genomicsDrive_data_dump/` | Downloaded sequencing FASTQ data. |
 | `ORGANELLE_POPGEN_WORK_PLAN.md` | Work plan for cpDNA/mtDNA population analysis from the FASTQ data. |
@@ -29,36 +29,37 @@ multiple competing sources of truth.
 
 ## Final Organelle Population-Genomics Results
 
-There are two organized output folders:
+There are two output folders:
 
 | Run | Folder | Notes |
 |---|---|---|
-| Initial run | [`initial_pipeline_run/`](initial_pipeline_run/) | Entry point for the first result snapshot, with copied final outputs under `results/` and a provenance symlink back to the original pipeline results. |
-| Second full rerun | [`full_pipeline_run/`](full_pipeline_run/) | Complete rerun using all 16 CPU threads; stages `00` through `20` completed and produced a 34G organized result folder. |
+| Initial run | [`initial_pipeline_run/`](initial_pipeline_run/) | First result snapshot, copied under `results/` for browsing on GitHub. |
+| Second full rerun | [`full_pipeline_run/`](full_pipeline_run/) | Main result set for review. This rerun used 16 CPU threads, completed stages `00` through `20`, and produced a 34G result folder. |
 
 Use the second full rerun for current interpretation unless you are explicitly
 comparing against the initial run.
 
-### Challenge Checklist
+### What Was Asked And What Was Produced
 
-This repository explicitly addresses the requested organelle population-genomics
-challenge as follows:
+The main challenge was to build separate cpDNA and mtDNA alignments for all
+usable samples, then summarize structure with PCA, trees, ADMIXTURE, and Fst.
+The primary files from the second rerun are:
 
-| Challenge requirement | Primary result |
+| Requested item | Where to inspect it |
 |---|---|
-| Create an alignment of all samples for cpDNA | [`full_pipeline_run/results/11_callable_consensus/cpDNA.primary.callable_consensus.fa`](full_pipeline_run/results/11_callable_consensus/cpDNA.primary.callable_consensus.fa) and [`full_pipeline_run/results/10_snp_alignment/cpDNA.primary.snp_alignment.fa`](full_pipeline_run/results/10_snp_alignment/cpDNA.primary.snp_alignment.fa). |
-| Create an alignment of all samples for mtDNA | [`full_pipeline_run/results/11_callable_consensus/mtDNA.primary.callable_consensus.fa`](full_pipeline_run/results/11_callable_consensus/mtDNA.primary.callable_consensus.fa) and [`full_pipeline_run/results/10_snp_alignment/mtDNA.primary.snp_alignment.fa`](full_pipeline_run/results/10_snp_alignment/mtDNA.primary.snp_alignment.fa). |
-| Use the annotated cpDNA and mtDNA references | Mapping and analysis use the canonical references in [`dudleya_organelle_reference_verification/references/`](dudleya_organelle_reference_verification/references/) with annotations in [`dudleya_organelle_reference_verification/annotations/`](dudleya_organelle_reference_verification/annotations/). |
-| PCA visualization | [`full_pipeline_run/results/15_pca/cpDNA.primary.pca.png`](full_pipeline_run/results/15_pca/cpDNA.primary.pca.png), [`full_pipeline_run/results/15_pca/mtDNA.primary.pca.png`](full_pipeline_run/results/15_pca/mtDNA.primary.pca.png), and their coordinate tables. |
-| Phylogenetic tree | Maximum-likelihood IQ-TREE outputs in [`full_pipeline_run/results/19_bootstrap_phylogenetic_tree/`](full_pipeline_run/results/19_bootstrap_phylogenetic_tree/) and rendered figures in [`full_pipeline_run/results/20_bootstrap_tree_visualization/`](full_pipeline_run/results/20_bootstrap_tree_visualization/). |
-| ADMIXTURE / structure plot with empirical K | Five-replicate K=1..8 runs in [`full_pipeline_run/results/18_admixture_replicates/`](full_pipeline_run/results/18_admixture_replicates/); best K=8 for both cpDNA and mtDNA by mean CV error. |
-| Fst and population-genetic parameters | Pairwise Fst and population summaries in [`full_pipeline_run/results/17_population_genetics/`](full_pipeline_run/results/17_population_genetics/). |
-| QC and Evan pipeline context | The pipeline includes manifest checks, pilot alignment, all-sample alignment QC, downstream sample filtering, tool audit, and stage logs; the local credited copy of Evan's Dudleya pipeline is retained in [`dudleya_conservation_genomics_pipeline/`](dudleya_conservation_genomics_pipeline/) for context. |
+| cpDNA alignment | [`cpDNA.primary.callable_consensus.fa`](full_pipeline_run/results/11_callable_consensus/cpDNA.primary.callable_consensus.fa) and [`cpDNA.primary.snp_alignment.fa`](full_pipeline_run/results/10_snp_alignment/cpDNA.primary.snp_alignment.fa). |
+| mtDNA alignment | [`mtDNA.primary.callable_consensus.fa`](full_pipeline_run/results/11_callable_consensus/mtDNA.primary.callable_consensus.fa) and [`mtDNA.primary.snp_alignment.fa`](full_pipeline_run/results/10_snp_alignment/mtDNA.primary.snp_alignment.fa). |
+| Annotated references | References in [`dudleya_organelle_reference_verification/references/`](dudleya_organelle_reference_verification/references/) and annotations in [`dudleya_organelle_reference_verification/annotations/`](dudleya_organelle_reference_verification/annotations/). |
+| PCA | [`cpDNA.primary.pca.png`](full_pipeline_run/results/15_pca/cpDNA.primary.pca.png), [`mtDNA.primary.pca.png`](full_pipeline_run/results/15_pca/mtDNA.primary.pca.png), and the coordinate tables in [`results/15_pca/`](full_pipeline_run/results/15_pca/). |
+| Phylogenetic trees | IQ-TREE files in [`results/19_bootstrap_phylogenetic_tree/`](full_pipeline_run/results/19_bootstrap_phylogenetic_tree/) and rendered tree figures in [`results/20_bootstrap_tree_visualization/`](full_pipeline_run/results/20_bootstrap_tree_visualization/). |
+| ADMIXTURE / structure plots | Five-replicate K=1..8 runs in [`results/18_admixture_replicates/`](full_pipeline_run/results/18_admixture_replicates/); best K=8 for both cpDNA and mtDNA by mean CV error. |
+| Fst and population summaries | Pairwise Fst and population tables in [`results/17_population_genetics/`](full_pipeline_run/results/17_population_genetics/). |
+| QC and Evan pipeline context | Manifest checks, pilot alignment, all-sample alignment QC, downstream sample filtering, tool audit, and stage logs are included in the pipeline outputs. Evan Hackstadt's Dudleya pipeline copy is retained in [`dudleya_conservation_genomics_pipeline/`](dudleya_conservation_genomics_pipeline/). |
 
 | File | What it is |
 |---|---|
-| [`full_pipeline_run/README.md`](full_pipeline_run/README.md) | Result index with links to the organized rerun outputs. |
-| [`full_pipeline_run/FULL_PIPELINE_RUN_REPORT.md`](full_pipeline_run/FULL_PIPELINE_RUN_REPORT.md) | Narrative report covering what ran, issues encountered, fixes, outputs, and verification. |
+| [`full_pipeline_run/README.md`](full_pipeline_run/README.md) | Short index to the main rerun outputs. |
+| [`full_pipeline_run/FULL_PIPELINE_RUN_REPORT.md`](full_pipeline_run/FULL_PIPELINE_RUN_REPORT.md) | Lab-notebook style report: run history, fixes, outputs, checks, and caveats. |
 | [`full_pipeline_run/logs/stage_status.tsv`](full_pipeline_run/logs/stage_status.tsv) | Stage ledger showing completion of `00_manifest` through `20_bootstrap_tree_visualization`. |
 | [`full_pipeline_run/run_metadata.txt`](full_pipeline_run/run_metadata.txt) | Run start/finish times, thread count, Python environment, and result size. |
 
@@ -109,9 +110,9 @@ ADMIXTURE is a haploid organelle clustering visualization using pseudo-diploid
 encoding; and mtDNA analyses use the 44,930 bp high-confidence unique track,
 leaving repeat-rich mtDNA regions out of population-genetic interpretation.
 
-## Canonical References
+## Reference FASTAs
 
-Use these files for the next mapping and population-analysis steps:
+These are the reference FASTAs used for mapping and downstream analysis:
 
 ```text
 dudleya_organelle_reference_verification/references/chloroplast.normalized.fa
@@ -123,7 +124,7 @@ The chloroplast reference has been terminal-deduplicated and rotated to the
 `NC_085682.1` origin. The mitochondrial reference keeps the verified
 mitochondrial candidate sequence with a stable `mitochondria` FASTA header.
 
-## Canonical Annotations
+## Reference Annotations
 
 ```text
 dudleya_organelle_reference_verification/annotations/chloroplast.gff3
@@ -171,7 +172,7 @@ in `dudleya_organelle_alignment_pipeline/` and has been run to completion across
 all stages, from `results/00_manifest/` through
 `results/20_bootstrap_tree_visualization/`.
 
-- Ordered stage index (authoritative): [`dudleya_organelle_alignment_pipeline/PROCESS.md`](dudleya_organelle_alignment_pipeline/PROCESS.md).
+- Ordered stage index: [`dudleya_organelle_alignment_pipeline/PROCESS.md`](dudleya_organelle_alignment_pipeline/PROCESS.md).
 - Per-stage usage and commands: [`dudleya_organelle_alignment_pipeline/README.md`](dudleya_organelle_alignment_pipeline/README.md).
 
 To recreate or validate the upstream manifest/reference/pilot/QC and smoke
@@ -205,7 +206,7 @@ env PATH="$PWD/.tools/bioconda-env/bin:$PATH" \
   --sample-id ABAB_MAD_LP_325_Du-596
 ```
 
-Authoritative sample tables:
+Sample tables:
 
 ```text
 dudleya_organelle_alignment_pipeline/results/00_manifest/analysis_samples.tsv
@@ -229,7 +230,7 @@ high-confidence unique track. The supporting pilot investigations are in
 
 The verification evidence is FASTA-based. Read-backed coverage, SNP/indel
 review, and mitochondrial repeat/junction validation require mapping the
-downloaded FASTQ data back to the canonical references.
+downloaded FASTQ data back to the reference FASTAs.
 
 No license has been declared for these data. Contact the project owners before
 reuse or redistribution beyond normal review and citation.

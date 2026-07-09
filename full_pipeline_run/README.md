@@ -1,7 +1,8 @@
 # Second Full Pipeline Run Results
 
-This folder contains the second complete rerun of the Dudleya cpDNA/mtDNA
-organelle population-genomics pipeline.
+This is the main result folder for the cpDNA/mtDNA population analysis. It is a
+second full run of the pipeline, started after the initial result set was
+checked and the final sample count and ADMIXTURE edge case were resolved.
 
 Run facts:
 
@@ -9,29 +10,29 @@ Run facts:
 - Started: `2026-07-08T09:24:13-07:00`
 - Finished: `2026-07-08T18:46:47-07:00`
 - CPU threads requested: `16`
-- Result size: `34G`
+- Folder size: `34G`
 - Final downstream sample count: `278`
 - Stage ledger: [`logs/stage_status.tsv`](logs/stage_status.tsv)
 - Run metadata: [`run_metadata.txt`](run_metadata.txt)
-- Full narrative report: [`FULL_PIPELINE_RUN_REPORT.md`](FULL_PIPELINE_RUN_REPORT.md)
+- Run report: [`FULL_PIPELINE_RUN_REPORT.md`](FULL_PIPELINE_RUN_REPORT.md)
 
-## Folder Layout
+## What Is Here
 
 | Path | Contents |
 |---|---|
-| [`results/`](results/) | Organized per-stage outputs from `00_manifest` through `20_bootstrap_tree_visualization`. |
-| [`logs/`](logs/) | One log per pipeline stage plus the stage-completion ledger. |
+| [`results/`](results/) | Stage outputs from `00_manifest` through `20_bootstrap_tree_visualization`. |
+| [`logs/`](logs/) | One log per stage, plus the stage-completion ledger. |
 | [`run_full_pipeline.sh`](run_full_pipeline.sh) | Start-to-finish runner used for this rerun. |
 | [`resume_from_stage_07.sh`](resume_from_stage_07.sh) | Resume helper used after the sample-count guard was updated. |
 | [`resume_from_stage_15.sh`](resume_from_stage_15.sh) | Resume helper used after selecting the bioconda Python environment. |
 | [`resume_from_stage_16.sh`](resume_from_stage_16.sh) | Resume helper used after ADMIXTURE all-missing-sample handling was added. |
 
-## Final Reports And Ledgers
+## Reports And Run Checks
 
 | File | What it is |
 |---|---|
-| [`FULL_PIPELINE_RUN_REPORT.md`](FULL_PIPELINE_RUN_REPORT.md) | Human-readable report covering what ran, what changed, final outputs, and verification. |
-| [`logs/stage_status.tsv`](logs/stage_status.tsv) | Completion ledger for all stages `00` through `20`. |
+| [`FULL_PIPELINE_RUN_REPORT.md`](FULL_PIPELINE_RUN_REPORT.md) | What ran, what failed, what was fixed, and which outputs to inspect. |
+| [`logs/stage_status.tsv`](logs/stage_status.tsv) | Ledger for stages `00` through `20`. |
 | [`results/13_tool_audit/primary.tool_audit_report.md`](results/13_tool_audit/primary.tool_audit_report.md) | Tool audit from the rerun environment. |
 | [`results/18_admixture_replicates/primary.admixture_report.md`](results/18_admixture_replicates/primary.admixture_report.md) | Five-replicate ADMIXTURE-style clustering report. |
 | [`results/19_bootstrap_phylogenetic_tree/primary.phylogenetic_tree_report.md`](results/19_bootstrap_phylogenetic_tree/primary.phylogenetic_tree_report.md) | 1,000-UFBoot IQ-TREE report. |
@@ -45,8 +46,8 @@ Run facts:
 | [`results/11_callable_consensus/mtDNA.primary.callable_consensus.fa`](results/11_callable_consensus/mtDNA.primary.callable_consensus.fa) | mtDNA callable-site consensus alignment: 278 samples x 44,930 sites. |
 | [`results/10_snp_alignment/cpDNA.primary.snp_alignment.fa`](results/10_snp_alignment/cpDNA.primary.snp_alignment.fa) | cpDNA filtered haploid SNP alignment: 278 samples x 2,022 SNP sites. |
 | [`results/10_snp_alignment/mtDNA.primary.snp_alignment.fa`](results/10_snp_alignment/mtDNA.primary.snp_alignment.fa) | mtDNA filtered haploid SNP alignment: 278 samples x 146 SNP sites. |
-| [`results/10_snp_alignment/primary.snp_alignment_summary.tsv`](results/10_snp_alignment/primary.snp_alignment_summary.tsv) | Machine-readable SNP alignment summary. |
-| [`results/11_callable_consensus/primary.callable_consensus_summary.tsv`](results/11_callable_consensus/primary.callable_consensus_summary.tsv) | Machine-readable callable-consensus summary. |
+| [`results/10_snp_alignment/primary.snp_alignment_summary.tsv`](results/10_snp_alignment/primary.snp_alignment_summary.tsv) | SNP alignment summary. |
+| [`results/11_callable_consensus/primary.callable_consensus_summary.tsv`](results/11_callable_consensus/primary.callable_consensus_summary.tsv) | Callable-consensus summary. |
 
 ## PCA
 
@@ -81,3 +82,12 @@ Run facts:
 | [`results/17_population_genetics/mtDNA.primary.population_genetics.pairwise_fst.tsv`](results/17_population_genetics/mtDNA.primary.population_genetics.pairwise_fst.tsv) | mtDNA pairwise Fst table: 595 comparisons across 35 populations. |
 | [`results/17_population_genetics/cpDNA.primary.population_genetics.population_summary.tsv`](results/17_population_genetics/cpDNA.primary.population_genetics.population_summary.tsv) | cpDNA population summary table. |
 | [`results/17_population_genetics/mtDNA.primary.population_genetics.population_summary.tsv`](results/17_population_genetics/mtDNA.primary.population_genetics.population_summary.tsv) | mtDNA population summary table. |
+
+## Notes For Interpretation
+
+- The trees are maximum-likelihood IQ-TREE outputs with 1,000 ultrafast
+  bootstraps, not neighbor-joining trees.
+- ADMIXTURE is used here as an organelle haplotype-clustering view. Haploid
+  calls were encoded as pseudo-diploid homozygous genotypes.
+- One mtDNA sample with all SNP genotypes missing was excluded from ADMIXTURE
+  input only; the other downstream analyses keep the 278-sample set.

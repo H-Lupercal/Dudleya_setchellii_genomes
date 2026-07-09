@@ -1,25 +1,25 @@
 # Second Full Pipeline Run Report
 
-This report documents the second complete rerun of the Dudleya cpDNA/mtDNA
-organelle population-genomics pipeline in [`full_pipeline_run/`](.).
+This report records the second full run of the Dudleya cpDNA/mtDNA organelle
+population-genomics pipeline in [`full_pipeline_run/`](.).
 
-## Executive Summary
+## Summary
 
-The pipeline completed all stages from `00_manifest` through
-`20_bootstrap_tree_visualization` using 16 CPU threads where pipeline tools
-accepted a thread count. Outputs are organized under [`results/`](results/) and
-stage logs are under [`logs/`](logs/).
+The run completed stages `00_manifest` through `20_bootstrap_tree_visualization`.
+Tools that accepted a thread count were run with 16 requested CPU threads. The
+result files are under [`results/`](results/), and the per-stage logs are under
+[`logs/`](logs/).
 
 Final run facts:
 
 - Started: `2026-07-08T09:24:13-07:00`
 - Finished: `2026-07-08T18:46:47-07:00`
-- Result size: `34G`
+- Folder size: `34G`
 - Final downstream sample count: `278`
 - Stage ledger: [`logs/stage_status.tsv`](logs/stage_status.tsv)
 - Run metadata: [`run_metadata.txt`](run_metadata.txt)
 
-## What Happened During The Run
+## Run Notes
 
 1. The full pipeline was launched with `16` requested CPU threads.
 2. Stages `00` through `06` completed, producing manifests, reference checks,
@@ -33,14 +33,14 @@ Final run facts:
 5. Stage `15` initially used system Python, which did not have `scikit-learn`.
    The runner was updated to use the local bioconda Python at
    `.tools/bioconda-env/bin/python3`, then PCA completed.
-6. Stage `16` initially hit an ADMIXTURE input error because one mtDNA sample
-   had all SNP genotypes missing. The ADMIXTURE stage was updated to exclude
-   all-missing samples from ADMIXTURE inputs only and record the exclusion.
+6. Stage `16` initially hit an ADMIXTURE input error because one mtDNA sample had
+   all SNP genotypes missing. The ADMIXTURE stage now removes all-missing samples
+   from ADMIXTURE input only and writes the exclusion record.
 7. Stages `16` through `20` then completed: single-run ADMIXTURE, population
    genetics, five-replicate ADMIXTURE, 1,000-UFBoot ML trees, and final tree
    visualizations.
 
-## Final Deliverables
+## Main Outputs
 
 ### Alignments
 
@@ -76,10 +76,10 @@ Final run facts:
 | [`results/17_population_genetics/cpDNA.primary.population_genetics.pairwise_fst.tsv`](results/17_population_genetics/cpDNA.primary.population_genetics.pairwise_fst.tsv) | cpDNA pairwise Fst: 595 comparisons across 35 populations. |
 | [`results/17_population_genetics/mtDNA.primary.population_genetics.pairwise_fst.tsv`](results/17_population_genetics/mtDNA.primary.population_genetics.pairwise_fst.tsv) | mtDNA pairwise Fst: 595 comparisons across 35 populations. |
 
-## ADMIXTURE-Only Exclusion
+## ADMIXTURE Exclusion
 
 ADMIXTURE rejects individuals with all genotypes missing. One mtDNA sample was
-therefore excluded from ADMIXTURE input only:
+excluded from ADMIXTURE input only:
 
 | Sample | Organelle | Reason |
 |---|---|---|
@@ -89,16 +89,16 @@ The exclusion file is
 [`results/18_admixture_replicates/mtDNA.primary.pseudo_diploid.excluded_samples.tsv`](results/18_admixture_replicates/mtDNA.primary.pseudo_diploid.excluded_samples.tsv).
 Other pipeline stages retain the full 278-sample downstream set.
 
-## Verification
+## Checks
 
 The final checks were:
 
 - All stages `00` through `20` appear in
   [`logs/stage_status.tsv`](logs/stage_status.tsv).
 - Final tree visualization rendered cpDNA and mtDNA trees with 278 tips each.
-- Unit tests passed: `70 tests in 1.149s, OK`.
+- Unit tests passed in the pipeline environment: `70 tests in 1.149s, OK`.
 
-## Notes And Caveats
+## Caveats
 
 - ADMIXTURE is used as an organelle haplotype-clustering visualization. Haploid
   organelle calls are encoded as pseudo-diploid homozygous genotypes.
