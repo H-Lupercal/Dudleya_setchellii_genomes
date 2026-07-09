@@ -1,0 +1,10 @@
+=== 00_manifest Sample manifest and preflight validation ===
+Started: 2026-07-08T09:24:13-07:00
+Command: python3 dudleya_organelle_alignment_pipeline/scripts/build_sample_manifest.py --output-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/00_manifest
+
+FASTQ files discovered: 558
+Samples written: 280
+Issues written: 2
+Output directory: /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/00_manifest
+
+Finished: 2026-07-08T09:24:13-07:00

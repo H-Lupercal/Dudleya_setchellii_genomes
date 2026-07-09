@@ -1,0 +1,5 @@
+organelle	track_id	step	command
+cpDNA	cpdna_population_sites	filter	bcftools view --threads 4 -m2 -M2 -v snps --min-ac 2:minor -i 'F_MISSING<=0.2' -Oz -o dudleya_organelle_alignment_pipeline/results/09_variant_filtering/cpDNA.primary.filtered.vcf.gz dudleya_organelle_alignment_pipeline/results/08_variant_calling/cpDNA.primary.raw.vcf.gz
+cpDNA	cpdna_population_sites	index	bcftools index -t dudleya_organelle_alignment_pipeline/results/09_variant_filtering/cpDNA.primary.filtered.vcf.gz
+mtDNA	mtdna_high_confidence_unique	filter	bcftools view --threads 4 -m2 -M2 -v snps --min-ac 2:minor -i 'F_MISSING<=0.2' -Oz -o dudleya_organelle_alignment_pipeline/results/09_variant_filtering/mtDNA.primary.filtered.vcf.gz dudleya_organelle_alignment_pipeline/results/08_variant_calling/mtDNA.primary.raw.vcf.gz
+mtDNA	mtdna_high_confidence_unique	index	bcftools index -t dudleya_organelle_alignment_pipeline/results/09_variant_filtering/mtDNA.primary.filtered.vcf.gz

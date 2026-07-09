@@ -1,0 +1,276 @@
+sample_id	organelle	pc1	pc2	species	popcode	population_name	naming_profile	plot_group
+DU-173	cpDNA	2.83912597	-6.89064932				initial_du_dash	initial_du_dash
+DU-229	cpDNA	2.17714456	-1.30621492				initial_du_dash	initial_du_dash
+DU-247	cpDNA	3.99047093	4.81880096				initial_du_dash	initial_du_dash
+DU-254	cpDNA	3.93981627	4.84826469				initial_du_dash	initial_du_dash
+DU-270	cpDNA	2.76681736	-6.69040791				initial_du_dash	initial_du_dash
+DU-297	cpDNA	3.98955359	4.81603158				initial_du_dash	initial_du_dash
+DU-443	cpDNA	-15.32111960	0.56878241				initial_du_dash	initial_du_dash
+DU-4A	cpDNA	4.06324276	4.92985266				initial_du_dash	initial_du_dash
+DU014LP012	cpDNA	0.91712322	-2.27984769				initial_du_lp	initial_du_lp
+DU037LP013	cpDNA	0.91987416	-2.28477294				initial_du_lp	initial_du_lp
+DU059LP015	cpDNA	2.80222703	-6.78236282				initial_du_lp	initial_du_lp
+DU078LP011	cpDNA	3.29552011	2.35067443				initial_du_lp	initial_du_lp
+DU079LP010	cpDNA	3.29552011	2.35067443				initial_du_lp	initial_du_lp
+ABAB_MAD_LP_223_Du-590	cpDNA	-8.65583508	-1.93696274	D. abramsii ssp. abramsii	ABAB_MAD	Madonna Inn	main_standard	D. abramsii ssp. abramsii_ABAB_MAD
+ABAB_MAD_LP_322_Du-593	cpDNA	-8.61903316	-1.93897551	D. abramsii ssp. abramsii	ABAB_MAD	Madonna Inn	main_standard	D. abramsii ssp. abramsii_ABAB_MAD
+ABAB_MAD_LP_323_Du-594	cpDNA	-8.62391930	-1.93098059	D. abramsii ssp. abramsii	ABAB_MAD	Madonna Inn	main_standard	D. abramsii ssp. abramsii_ABAB_MAD
+ABAB_MAD_LP_324_Du-595	cpDNA	-8.62879523	-1.93534443	D. abramsii ssp. abramsii	ABAB_MAD	Madonna Inn	main_standard	D. abramsii ssp. abramsii_ABAB_MAD
+ABAB_MAD_LP_325_Du-596	cpDNA	-8.56915493	-1.91169756	D. abramsii ssp. abramsii	ABAB_MAD	Madonna Inn	main_standard	D. abramsii ssp. abramsii_ABAB_MAD
+ABAB_MAD_LP_326_Du-597	cpDNA	-8.64179400	-1.84327209	D. abramsii ssp. abramsii	ABAB_MAD	Madonna Inn	main_standard	D. abramsii ssp. abramsii_ABAB_MAD
+ABAB_MAD_LP_327_Du-598	cpDNA	-8.64787570	-1.84650936	D. abramsii ssp. abramsii	ABAB_MAD	Madonna Inn	main_standard	D. abramsii ssp. abramsii_ABAB_MAD
+ABBE_BERN_LP_311_Du-780	cpDNA	-16.52170571	1.33099845	D. abramsii ssp. bettinae	ABBE_BERN	San Bernardino Creek Road	main_standard	D. abramsii ssp. bettinae_ABBE_BERN
+ABBE_BERN_LP_312_Du-781	cpDNA	-16.35458553	1.30943075	D. abramsii ssp. bettinae	ABBE_BERN	San Bernardino Creek Road	main_standard	D. abramsii ssp. bettinae_ABBE_BERN
+ABBE_BERN_LP_313_Du-782	cpDNA	-16.41760759	1.33165274	D. abramsii ssp. bettinae	ABBE_BERN	San Bernardino Creek Road	main_standard	D. abramsii ssp. bettinae_ABBE_BERN
+ABBE_BERN_LP_314_Du-783	cpDNA	-16.22789758	1.29403862	D. abramsii ssp. bettinae	ABBE_BERN	San Bernardino Creek Road	main_standard	D. abramsii ssp. bettinae_ABBE_BERN
+ABMU_HOR_LP_306_Du-775	cpDNA	-8.59874622	-1.96521460	D. abramsii ssp. murina	ABMU_HOR	Horse Canyon (SLO)	main_standard	D. abramsii ssp. murina_ABMU_HOR
+ABMU_HOR_LP_308_Du-777	cpDNA	-8.58006932	-1.97837210	D. abramsii ssp. murina	ABMU_HOR	Horse Canyon (SLO)	main_standard	D. abramsii ssp. murina_ABMU_HOR
+ABMU_HOR_LP_358_Du-770	cpDNA	-8.67097636	-1.92427585	D. abramsii ssp. murina	ABMU_HOR	Horse Canyon (SLO)	main_standard	D. abramsii ssp. murina_ABMU_HOR
+ABMU_HOR_LP_359_Du-771	cpDNA	-8.61085338	-1.95794781	D. abramsii ssp. murina	ABMU_HOR	Horse Canyon (SLO)	main_standard	D. abramsii ssp. murina_ABMU_HOR
+ABMU_HOR_LP_360_Du-772	cpDNA	-8.61556044	-1.96243007	D. abramsii ssp. murina	ABMU_HOR	Horse Canyon (SLO)	main_standard	D. abramsii ssp. murina_ABMU_HOR
+ABMU_HOR_LP_361_Du-773	cpDNA	-8.61212391	-1.95871036	D. abramsii ssp. murina	ABMU_HOR	Horse Canyon (SLO)	main_standard	D. abramsii ssp. murina_ABMU_HOR
+BAI_LP_105_Du-222	cpDNA	2.19443962	-1.35560774	D. setchellii	BAI	Baird Ridgeline	main_standard	D. setchellii_BAI
+BAI_LP_106_Du-223	cpDNA	2.18250415	-1.30197221	D. setchellii	BAI	Baird Ridgeline	main_standard	D. setchellii_BAI
+BAI_LP_108_Du-225	cpDNA	2.17267210	-1.30309559	D. setchellii	BAI	Baird Ridgeline	main_standard	D. setchellii_BAI
+BAI_LP_109_Du-226	cpDNA	2.14092447	-1.30282254	D. setchellii	BAI	Baird Ridgeline	main_standard	D. setchellii_BAI
+BAI_LP_110_Du-227	cpDNA	2.19203576	-1.34126659	D. setchellii	BAI	Baird Ridgeline	main_standard	D. setchellii_BAI
+BAI_LP_111_Du-228	cpDNA	2.17326768	-1.27697078	D. setchellii	BAI	Baird Ridgeline	main_standard	D. setchellii_BAI
+BAI_LP_112_Du-230	cpDNA	2.17936619	-1.31284342	D. setchellii	BAI	Baird Ridgeline	main_standard	D. setchellii_BAI
+BAI_LP_113_Du-231	cpDNA	2.14530558	-1.35468722	D. setchellii	BAI	Baird Ridgeline	main_standard	D. setchellii_BAI
+BAI_LP_114_Du-232	cpDNA	2.17074546	-1.30062775	D. setchellii	BAI	Baird Ridgeline	main_standard	D. setchellii_BAI
+BAI_LP_319_Du-233	cpDNA	2.17064018	-1.30057627	D. setchellii	BAI	Baird Ridgeline	main_standard	D. setchellii_BAI
+COM_LP_269_Du-703	cpDNA	3.24885543	2.26670226	D. setchellii	COM	Communication Hill	main_standard	D. setchellii_COM
+COM_LP_270_Du-704	cpDNA	3.25428953	2.27662489	D. setchellii	COM	Communication Hill	main_standard	D. setchellii_COM
+COM_LP_272_Du-707	cpDNA	3.24941360	2.27226105	D. setchellii	COM	Communication Hill	main_standard	D. setchellii_COM
+COM_LP_274_Du-709	cpDNA	3.22263666	2.18565312	D. setchellii	COM	Communication Hill	main_standard	D. setchellii_COM
+COM_LP_276_Du-711	cpDNA	3.24941360	2.27226105	D. setchellii	COM	Communication Hill	main_standard	D. setchellii_COM
+COM_LP_277_Du-712	cpDNA	3.24941360	2.27226105	D. setchellii	COM	Communication Hill	main_standard	D. setchellii_COM
+COM_LP_341_Du-713	cpDNA	3.25482880	2.27710753	D. setchellii	COM	Communication Hill	main_standard	D. setchellii_COM
+COM_LP_342_Du-714	cpDNA	3.25482880	2.27710753	D. setchellii	COM	Communication Hill	main_standard	D. setchellii_COM
+COM_LP_343_Du-715	cpDNA	3.24941360	2.27226105	D. setchellii	COM	Communication Hill	main_standard	D. setchellii_COM
+CROB_LP_169_Du-381	cpDNA	4.04828411	4.84107947	D. setchellii	CROB	Crosp Bench	main_standard	D. setchellii_CROB
+CROB_LP_170_Du-382	cpDNA	4.06386499	4.93172359	D. setchellii	CROB	Crosp Bench	main_standard	D. setchellii_CROB
+CROB_LP_172_Du-384	cpDNA	4.06279983	4.93028539	D. setchellii	CROB	Crosp Bench	main_standard	D. setchellii_CROB
+CROB_LP_173_Du-385	cpDNA	4.06386499	4.93172359	D. setchellii	CROB	Crosp Bench	main_standard	D. setchellii_CROB
+CROB_LP_174_Du-386	cpDNA	4.06386499	4.93172359	D. setchellii	CROB	Crosp Bench	main_standard	D. setchellii_CROB
+CROB_LP_175_Du-387	cpDNA	4.06386499	4.93172359	D. setchellii	CROB	Crosp Bench	main_standard	D. setchellii_CROB
+CROB_LP_176_Du-388	cpDNA	4.06386499	4.93172359	D. setchellii	CROB	Crosp Bench	main_standard	D. setchellii_CROB
+CROB_LP_177_Du-389	cpDNA	4.07302500	4.91999056	D. setchellii	CROB	Crosp Bench	main_standard	D. setchellii_CROB
+CROB_LP_320_Du-395	cpDNA	4.07302500	4.91999056	D. setchellii	CROB	Crosp Bench	main_standard	D. setchellii_CROB
+CROB_LP_321_Du-396	cpDNA	4.05844979	4.92687711	D. setchellii	CROB	Crosp Bench	main_standard	D. setchellii_CROB
+CROS_LP_085_Du-181	cpDNA	4.06324276	4.92985266	D. setchellii	CROS	Crosp South End	main_standard	D. setchellii_CROS
+CROS_LP_086_Du-182	cpDNA	4.06324276	4.92985266	D. setchellii	CROS	Crosp South End	main_standard	D. setchellii_CROS
+CROS_LP_087_Du-183	cpDNA	4.06332626	4.93125944	D. setchellii	CROS	Crosp South End	main_standard	D. setchellii_CROS
+CROS_LP_088_Du-184	cpDNA	4.06386553	4.93174208	D. setchellii	CROS	Crosp South End	main_standard	D. setchellii_CROS
+CROS_LP_089_Du-185	cpDNA	4.06106253	4.92324359	D. setchellii	CROS	Crosp South End	main_standard	D. setchellii_CROS
+CROS_LP_090_Du-186	cpDNA	4.06324276	4.92985266	D. setchellii	CROS	Crosp South End	main_standard	D. setchellii_CROS
+CROS_LP_091_Du-187	cpDNA	4.00577787	4.79787765	D. setchellii	CROS	Crosp South End	main_standard	D. setchellii_CROS
+CROS_LP_092_Du-188	cpDNA	4.01221378	4.81709314	D. setchellii	CROS	Crosp South End	main_standard	D. setchellii_CROS
+CROS_LP_093_Du-189	cpDNA	4.01949920	4.79670422	D. setchellii	CROS	Crosp South End	main_standard	D. setchellii_CROS
+CROS_LP_094_Du-190	cpDNA	4.01159938	4.81525123	D. setchellii	CROS	Crosp South End	main_standard	D. setchellii_CROS
+CY_ALA_LP_298-Du-767	cpDNA	0.93756830	-2.21082881	D. cymosa	CY_ALA	Los Alanitos Dam	main_standard	D. cymosa_CY_ALA
+CY_ALA_LP_299-Du-768	cpDNA	0.93591035	-2.20044649	D. cymosa	CY_ALA	Los Alanitos Dam	main_standard	D. cymosa_CY_ALA
+CY_ALA_LP_357_Du-769	cpDNA	0.93935664	-2.22214181	D. cymosa	CY_ALA	Los Alanitos Dam	main_standard	D. cymosa_CY_ALA
+CY_BAL_LP_226_Du-602	cpDNA	-16.54720144	1.34404365	D. cymosa	CY_BAL	Baldwin Lake	main_standard	D. cymosa_CY_BAL
+CY_BAL_LP_227_Du-603	cpDNA	-16.45783042	1.32578933	D. cymosa	CY_BAL	Baldwin Lake	main_standard	D. cymosa_CY_BAL
+CY_BAL_LP_228_Du-604	cpDNA	-16.60099537	1.36878274	D. cymosa	CY_BAL	Baldwin Lake	main_standard	D. cymosa_CY_BAL
+CY_BGL_LP_210_Du-577	cpDNA	-16.44307085	1.34133504	D. cymosa	CY_BGL	Below Green Lake	main_standard	D. cymosa_CY_BGL
+CY_BGL_LP_212_Du-579	cpDNA	-16.39222072	1.32857675	D. cymosa	CY_BGL	Below Green Lake	main_standard	D. cymosa_CY_BGL
+CY_BOU_LP_288_Du-737	cpDNA	0.89616483	-2.28481388	D. cymosa	CY_BOU	Boulder Ridge	main_standard	D. cymosa_CY_BOU
+CY_BOU_LP_290_Du-739	cpDNA	0.89990965	-2.30139339	D. cymosa	CY_BOU	Boulder Ridge	main_standard	D. cymosa_CY_BOU
+CY_BOU_LP_291_Du-740	cpDNA	0.89990965	-2.30139339	D. cymosa	CY_BOU	Boulder Ridge	main_standard	D. cymosa_CY_BOU
+CY_BOU_LP_292_Du-741	cpDNA	0.89616483	-2.28481388	D. cymosa	CY_BOU	Boulder Ridge	main_standard	D. cymosa_CY_BOU
+CY_BOU_LP_354_Du-742	cpDNA	0.90904197	-2.30714467	D. cymosa	CY_BOU	Boulder Ridge	main_standard	D. cymosa_CY_BOU
+CY_CAS_LP_328_Du-610	cpDNA	-13.91817923	0.50388420	D. cymosa	CY_CAS	Castle Rock Falls	main_standard	D. cymosa_CY_CAS
+CY_CAS_LP_329_Du-611	cpDNA	0.93291313	-2.22644928	D. cymosa	CY_CAS	Castle Rock Falls	main_standard	D. cymosa_CY_CAS
+CY_CAS_LP_330_Du-607	cpDNA	0.88448144	-2.22125828	D. cymosa	CY_CAS	Castle Rock Falls	main_standard	D. cymosa_CY_CAS
+CY_CAS_LP_331_Du-608	cpDNA	0.82904345	-2.21809311	D. cymosa	CY_CAS	Castle Rock Falls	main_standard	D. cymosa_CY_CAS
+CY_CAS_LP_332_Du-609	cpDNA	0.85942496	-2.17882501	D. cymosa	CY_CAS	Castle Rock Falls	main_standard	D. cymosa_CY_CAS
+CY_HICN_LP_236_Du-614	cpDNA	-15.29572885	0.57915443	D. cymosa	CY_HICN	Hick's Road North	main_standard	D. cymosa_CY_HICN
+CY_HICN_LP_333_Du-612	cpDNA	-15.24795187	0.57014773	D. cymosa	CY_HICN	Hick's Road North	main_standard	D. cymosa_CY_HICN
+CY_HICN_LP_334_Du-613	cpDNA	-15.19957881	0.56954765	D. cymosa	CY_HICN	Hick's Road North	main_standard	D. cymosa_CY_HICN
+CY_HICN_LP_335_Du-615	cpDNA	-15.35719541	0.58546726	D. cymosa	CY_HICN	Hick's Road North	main_standard	D. cymosa_CY_HICN
+CY_HICN_LP_336_Du-616	cpDNA	-15.30602924	0.58077712	D. cymosa	CY_HICN	Hick's Road North	main_standard	D. cymosa_CY_HICN
+CY_HICS_LP_293_Du-757	cpDNA	0.89605687	-2.24132718	D. cymosa	CY_HICS	Hicks Rd. South	main_standard	D. cymosa_CY_HICS
+CY_HICS_LP_295_Du-759	cpDNA	0.90650819	-2.30854199	D. cymosa	CY_HICS	Hicks Rd. South	main_standard	D. cymosa_CY_HICS
+CY_HICS_LP_297_Du-761	cpDNA	0.89578490	-2.27774065	D. cymosa	CY_HICS	Hicks Rd. South	main_standard	D. cymosa_CY_HICS
+CY_HICS_LP_355_Du-762	cpDNA	0.89774137	-2.28300717	D. cymosa	CY_HICS	Hicks Rd. South	main_standard	D. cymosa_CY_HICS
+CY_HICS_LP_356_Du-763	cpDNA	0.90114450	-2.27349794	D. cymosa	CY_HICS	Hicks Rd. South	main_standard	D. cymosa_CY_HICS
+CY_HUN_LP_264_Du-683	cpDNA	-18.81270258	2.14060319	D. cymosa	CY_HUN	Hunting Hollow	main_standard	D. cymosa_CY_HUN
+CY_HUN_LP_266_Du-685	cpDNA	-18.80351569	2.13799058	D. cymosa	CY_HUN	Hunting Hollow	main_standard	D. cymosa_CY_HUN
+CY_HUN_LP_267_Du-686	cpDNA	-18.79134785	2.12912990	D. cymosa	CY_HUN	Hunting Hollow	main_standard	D. cymosa_CY_HUN
+CY_HUN_LP_268_Du-687	cpDNA	-18.81178644	2.13733735	D. cymosa	CY_HUN	Hunting Hollow	main_standard	D. cymosa_CY_HUN
+CY_SIE_LP_188_Du-445	cpDNA	-15.35178021	0.59031374	D. cymosa	CY_SIE	Sierra Azule	main_standard	D. cymosa_CY_SIE
+CY_SIE_LP_189_Du-446	cpDNA	-15.34577740	0.58967800	D. cymosa	CY_SIE	Sierra Azule	main_standard	D. cymosa_CY_SIE
+CY_SIE_LP_190_Du-447	cpDNA	-15.35135203	0.59101261	D. cymosa	CY_SIE	Sierra Azule	main_standard	D. cymosa_CY_SIE
+CY_SIE_LP_191_Du-448	cpDNA	0.91421849	-2.25151016	D. cymosa	CY_SIE	Sierra Azule	main_standard	D. cymosa_CY_SIE
+CY_WOO_LP_259_Du-664	cpDNA	0.87280850	-2.26188275	D. cymosa	CY_WOO	Hicks & Woods Rd.	main_standard	D. cymosa_CY_WOO
+CY_WOO_LP_260_Du-665	cpDNA	0.88882277	-2.30511538	D. cymosa	CY_WOO	Hicks & Woods Rd.	main_standard	D. cymosa_CY_WOO
+CY_WOO_LP_261_Du-667	cpDNA	0.81740606	-2.13835222	D. cymosa	CY_WOO	Hicks & Woods Rd.	main_standard	D. cymosa_CY_WOO
+CY_WOO_LP_262_Du-668	cpDNA	0.88789265	-2.30480342	D. cymosa	CY_WOO	Hicks & Woods Rd.	main_standard	D. cymosa_CY_WOO
+CY_WOO_LP_263_Du-669	cpDNA	0.88788193	-2.30464707	D. cymosa	CY_WOO	Hicks & Woods Rd.	main_standard	D. cymosa_CY_WOO
+DAN_LP_043_Du-68	cpDNA	3.30551568	2.33852457	D. setchellii	DAN	Dana Rock	main_standard	D. setchellii_DAN
+DAN_LP_044_Du-69	cpDNA	3.29552011	2.35067443	D. setchellii	DAN	Dana Rock	main_standard	D. setchellii_DAN
+DAN_LP_045_Du-70	cpDNA	3.29216167	2.33992905	D. setchellii	DAN	Dana Rock	main_standard	D. setchellii_DAN
+DAN_LP_046_Du-71	cpDNA	3.29216167	2.33992905	D. setchellii	DAN	Dana Rock	main_standard	D. setchellii_DAN
+DAN_LP_047_Du-72	cpDNA	3.29552011	2.35067443	D. setchellii	DAN	Dana Rock	main_standard	D. setchellii_DAN
+DOV_LP_078_Du-174	cpDNA	2.27090306	-1.42624605	D. setchellii	DOV	Dove Road	main_standard	D. setchellii_DOV
+DOV_LP_079_Du-175	cpDNA	2.26209438	-1.38511251	D. setchellii	DOV	Dove Road	main_standard	D. setchellii_DOV
+DOV_LP_080_Du-176	cpDNA	2.26979737	-1.40639536	D. setchellii	DOV	Dove Road	main_standard	D. setchellii_DOV
+DOV_LP_081_Du-177	cpDNA	2.27064070	-1.40833962	D. setchellii	DOV	Dove Road	main_standard	D. setchellii_DOV
+DOV_LP_082_Du-178	cpDNA	2.27939207	-1.42527636	D. setchellii	DOV	Dove Road	main_standard	D. setchellii_DOV
+DOV_LP_083_Du-179	cpDNA	2.26209438	-1.38511251	D. setchellii	DOV	Dove Road	main_standard	D. setchellii_DOV
+DOV_LP_084_Du-180	cpDNA	2.27277633	-1.41691784	D. setchellii	DOV	Dove Road	main_standard	D. setchellii_DOV
+DUD_LP_132_Du-283	cpDNA	4.00113662	4.85136100	D. setchellii	DUD	Dude Rock	main_standard	D. setchellii_DUD
+DUD_LP_133_Du-284	cpDNA	4.00113662	4.85136100	D. setchellii	DUD	Dude Rock	main_standard	D. setchellii_DUD
+DUD_LP_134_Du-285	cpDNA	4.00113662	4.85136100	D. setchellii	DUD	Dude Rock	main_standard	D. setchellii_DUD
+DUD_LP_135_Du-286	cpDNA	4.00113662	4.85136100	D. setchellii	DUD	Dude Rock	main_standard	D. setchellii_DUD
+DUD_LP_136_Du-287	cpDNA	3.99139005	4.82158362	D. setchellii	DUD	Dude Rock	main_standard	D. setchellii_DUD
+DUD_LP_137_Du-288	cpDNA	4.07186350	4.91763699	D. setchellii	DUD	Dude Rock	main_standard	D. setchellii_DUD
+DUD_LP_138_Du-289	cpDNA	4.00113662	4.85136100	D. setchellii	DUD	Dude Rock	main_standard	D. setchellii_DUD
+DUD_LP_139_Du-290	cpDNA	3.99322601	4.82713193	D. setchellii	DUD	Dude Rock	main_standard	D. setchellii_DUD
+KIRN_LP_179_Du-421	cpDNA	4.08471449	4.99715590	D. setchellii	KIRN	Kirby N. Rd. Canyon	main_standard	D. setchellii_KIRN
+KIRN_LP_180_Du-422	cpDNA	4.01534780	5.02086203	D. setchellii	KIRN	Kirby N. Rd. Canyon	main_standard	D. setchellii_KIRN
+KIRN_LP_181_Du-423	cpDNA	4.01534780	5.02086203	D. setchellii	KIRN	Kirby N. Rd. Canyon	main_standard	D. setchellii_KIRN
+KIRN_LP_182_Du-424	cpDNA	4.01534780	5.02086203	D. setchellii	KIRN	Kirby N. Rd. Canyon	main_standard	D. setchellii_KIRN
+KIRN_LP_183_Du-425	cpDNA	4.01534780	5.02086203	D. setchellii	KIRN	Kirby N. Rd. Canyon	main_standard	D. setchellii_KIRN
+KIRN_LP_184_Du-426	cpDNA	4.01534780	5.02086203	D. setchellii	KIRN	Kirby N. Rd. Canyon	main_standard	D. setchellii_KIRN
+KIRN_LP_185_Du-427	cpDNA	4.01534780	5.02086203	D. setchellii	KIRN	Kirby N. Rd. Canyon	main_standard	D. setchellii_KIRN
+KIRN_LP_186_Du-428	cpDNA	4.01534780	5.02086203	D. setchellii	KIRN	Kirby N. Rd. Canyon	main_standard	D. setchellii_KIRN
+KIRN_LP_187_Du-429	cpDNA	4.08471449	4.99715590	D. setchellii	KIRN	Kirby N. Rd. Canyon	main_standard	D. setchellii_KIRN
+KIRT_LP_159_Du-364	cpDNA	4.01992817	5.00386569	D. setchellii	KIRT	KC Transect	main_standard	D. setchellii_KIRT
+KIRT_LP_160_Du-365	cpDNA	4.02440253	5.00918048	D. setchellii	KIRT	KC Transect	main_standard	D. setchellii_KIRT
+KIRT_LP_161_Du-366	cpDNA	4.02396854	5.00864636	D. setchellii	KIRT	KC Transect	main_standard	D. setchellii_KIRT
+KIRT_LP_162_Du-367	cpDNA	4.02396854	5.00864636	D. setchellii	KIRT	KC Transect	main_standard	D. setchellii_KIRT
+KIRT_LP_163_Du-368	cpDNA	4.02440253	5.00918048	D. setchellii	KIRT	KC Transect	main_standard	D. setchellii_KIRT
+KIRT_LP_164_Du-369	cpDNA	4.02386326	5.00869784	D. setchellii	KIRT	KC Transect	main_standard	D. setchellii_KIRT
+KIRT_LP_165_Du-370	cpDNA	4.02440253	5.00918048	D. setchellii	KIRT	KC Transect	main_standard	D. setchellii_KIRT
+KIRT_LP_166_Du-371	cpDNA	4.02450781	5.00912899	D. setchellii	KIRT	KC Transect	main_standard	D. setchellii_KIRT
+KIRT_LP_167_Du-372	cpDNA	4.02544865	5.00866068	D. setchellii	KIRT	KC Transect	main_standard	D. setchellii_KIRT
+KIRT_LP_168_Du-373	cpDNA	4.01524252	5.02091351	D. setchellii	KIRT	KC Transect	main_standard	D. setchellii_KIRT
+MALV_LP_095_Du-201	cpDNA	4.09569934	5.03088928	D. setchellii	MALV	Malech Vista	main_standard	D. setchellii_MALV
+MALV_LP_096_Du-202	cpDNA	4.09569934	5.03088928	D. setchellii	MALV	Malech Vista	main_standard	D. setchellii_MALV
+MALV_LP_097_Du-203	cpDNA	4.09569934	5.03088928	D. setchellii	MALV	Malech Vista	main_standard	D. setchellii_MALV
+MALV_LP_098_Du-204	cpDNA	4.09569934	5.03088928	D. setchellii	MALV	Malech Vista	main_standard	D. setchellii_MALV
+MALV_LP_099_Du-205	cpDNA	4.09130550	5.01739676	D. setchellii	MALV	Malech Vista	main_standard	D. setchellii_MALV
+MALV_LP_100_Du-206	cpDNA	4.09569934	5.03088928	D. setchellii	MALV	Malech Vista	main_standard	D. setchellii_MALV
+MALV_LP_101_Du-207	cpDNA	4.09130550	5.01739676	D. setchellii	MALV	Malech Vista	main_standard	D. setchellii_MALV
+MALV_LP_102_Du-208	cpDNA	4.08848156	5.00872817	D. setchellii	MALV	Malech Vista	main_standard	D. setchellii_MALV
+MALV_LP_103_Du-209	cpDNA	4.09569934	5.03088928	D. setchellii	MALV	Malech Vista	main_standard	D. setchellii_MALV
+MALV_LP_104_Du-210	cpDNA	4.09569934	5.03088928	D. setchellii	MALV	Malech Vista	main_standard	D. setchellii_MALV
+OCO_LP_058_Du-115	cpDNA	-19.09981302	2.24262180	D. setchellii	OCO	O'Connell Ranch Pacheco Pass	main_standard	D. setchellii_OCO
+OCO_LP_059_Du-106	cpDNA	-19.18596295	2.25755794	D. setchellii	OCO	O'Connell Ranch Pacheco Pass	main_standard	D. setchellii_OCO
+OCO_LP_060_Du-107	cpDNA	-19.08639958	2.24105022	D. setchellii	OCO	O'Connell Ranch Pacheco Pass	main_standard	D. setchellii_OCO
+OCO_LP_061_Du-108	cpDNA	-19.17901940	2.24976872	D. setchellii	OCO	O'Connell Ranch Pacheco Pass	main_standard	D. setchellii_OCO
+OCO_LP_062_Du-109	cpDNA	-19.19852970	2.25271920	D. setchellii	OCO	O'Connell Ranch Pacheco Pass	main_standard	D. setchellii_OCO
+OCO_LP_063_Du-110	cpDNA	-19.09289988	2.18458769	D. setchellii	OCO	O'Connell Ranch Pacheco Pass	main_standard	D. setchellii_OCO
+OCO_LP_064_Du-111	cpDNA	-19.15608464	2.18549231	D. setchellii	OCO	O'Connell Ranch Pacheco Pass	main_standard	D. setchellii_OCO
+OCO_LP_065_Du-112	cpDNA	-19.18128097	2.25592228	D. setchellii	OCO	O'Connell Ranch Pacheco Pass	main_standard	D. setchellii_OCO
+OCO_LP_066_Du-113	cpDNA	-19.04104843	2.22946813	D. setchellii	OCO	O'Connell Ranch Pacheco Pass	main_standard	D. setchellii_OCO
+OCO_LP_067_Du-114	cpDNA	-19.07621564	2.23939601	D. setchellii	OCO	O'Connell Ranch Pacheco Pass	main_standard	D. setchellii_OCO
+QUI1_LP_249_Du-648	cpDNA	0.89319573	-2.28131303	D. setchellii	QUI1	Quicklsilver SE Mine Hill Tr. #1	main_standard	D. setchellii_QUI1
+QUI1_LP_250_Du-649	cpDNA	0.93397046	-2.25223217	D. setchellii	QUI1	Quicklsilver SE Mine Hill Tr. #1	main_standard	D. setchellii_QUI1
+QUI1_LP_251_Du-650	cpDNA	0.88838535	-2.28082355	D. setchellii	QUI1	Quicklsilver SE Mine Hill Tr. #1	main_standard	D. setchellii_QUI1
+QUI1_LP_252_Du-651	cpDNA	0.88966567	-2.24848003	D. setchellii	QUI1	Quicklsilver SE Mine Hill Tr. #1	main_standard	D. setchellii_QUI1
+QUI1_LP_253_Du-652	cpDNA	0.89105627	-2.25807918	D. setchellii	QUI1	Quicklsilver SE Mine Hill Tr. #1	main_standard	D. setchellii_QUI1
+QUI1_LP_254_Du-653	cpDNA	0.89026180	-2.25802174	D. setchellii	QUI1	Quicklsilver SE Mine Hill Tr. #1	main_standard	D. setchellii_QUI1
+QUI1_LP_255_Du-654	cpDNA	0.89462977	-2.28071683	D. setchellii	QUI1	Quicklsilver SE Mine Hill Tr. #1	main_standard	D. setchellii_QUI1
+QUI1_LP_257_Du-656	cpDNA	0.89466516	-2.28059218	D. setchellii	QUI1	Quicklsilver SE Mine Hill Tr. #1	main_standard	D. setchellii_QUI1
+QUI1_LP_258_Du-657	cpDNA	0.89462977	-2.28071683	D. setchellii	QUI1	Quicklsilver SE Mine Hill Tr. #1	main_standard	D. setchellii_QUI1
+QUI2_LP_243_Du-631	cpDNA	2.85404720	-6.92361577	D. setchellii	QUI2	Quicklsilver SE Mine Hill Tr. #2	main_standard	D. setchellii_QUI2
+QUI2_LP_244_Du-632	cpDNA	2.85405792	-6.92377213	D. setchellii	QUI2	Quicklsilver SE Mine Hill Tr. #2	main_standard	D. setchellii_QUI2
+QUI2_LP_245_Du-633	cpDNA	2.84800735	-6.88690300	D. setchellii	QUI2	Quicklsilver SE Mine Hill Tr. #2	main_standard	D. setchellii_QUI2
+QUI2_LP_246_Du-634	cpDNA	2.86320721	-6.93534880	D. setchellii	QUI2	Quicklsilver SE Mine Hill Tr. #2	main_standard	D. setchellii_QUI2
+QUI2_LP_247_Du-635	cpDNA	2.85404720	-6.92361577	D. setchellii	QUI2	Quicklsilver SE Mine Hill Tr. #2	main_standard	D. setchellii_QUI2
+QUI2_LP_248_Du-636	cpDNA	2.85404720	-6.92361577	D. setchellii	QUI2	Quicklsilver SE Mine Hill Tr. #2	main_standard	D. setchellii_QUI2
+QUI2_LP_337_Du-638	cpDNA	2.85418788	-6.92354260	D. setchellii	QUI2	Quicklsilver SE Mine Hill Tr. #2	main_standard	D. setchellii_QUI2
+QUI2_LP_338_Du-639	cpDNA	2.85362074	-6.92387601	D. setchellii	QUI2	Quicklsilver SE Mine Hill Tr. #2	main_standard	D. setchellii_QUI2
+QUI2_LP_339_Du-640	cpDNA	2.84349626	-6.85959478	D. setchellii	QUI2	Quicklsilver SE Mine Hill Tr. #2	main_standard	D. setchellii_QUI2
+QUI2_LP_340_Du-641	cpDNA	2.84800735	-6.88690300	D. setchellii	QUI2	Quicklsilver SE Mine Hill Tr. #2	main_standard	D. setchellii_QUI2
+QUIN_LP_069_Du-155	cpDNA	2.86560103	-6.94998298	D. setchellii	QUIN	Quicksilver NE	main_standard	D. setchellii_QUIN
+QUIN_LP_070_Du-156	cpDNA	2.86054187	-6.94878993	D. setchellii	QUIN	Quicksilver NE	main_standard	D. setchellii_QUIN
+QUIN_LP_071_Du-157	cpDNA	2.86560103	-6.94998298	D. setchellii	QUIN	Quicksilver NE	main_standard	D. setchellii_QUIN
+QUIN_LP_072_Du-158	cpDNA	2.86545842	-6.94988665	D. setchellii	QUIN	Quicksilver NE	main_standard	D. setchellii_QUIN
+QUIN_LP_073_Du-159	cpDNA	2.86574170	-6.94990981	D. setchellii	QUIN	Quicksilver NE	main_standard	D. setchellii_QUIN
+QUIN_LP_074_Du-160	cpDNA	2.86561817	-6.94997586	D. setchellii	QUIN	Quicksilver NE	main_standard	D. setchellii_QUIN
+QUIN_LP_075_Du-161	cpDNA	2.85645816	-6.93824282	D. setchellii	QUIN	Quicksilver NE	main_standard	D. setchellii_QUIN
+QUIN_LP_076_Du-162	cpDNA	2.85645816	-6.93824282	D. setchellii	QUIN	Quicksilver NE	main_standard	D. setchellii_QUIN
+QUIN_LP_077_Du-163	cpDNA	2.85645816	-6.93824282	D. setchellii	QUIN	Quicksilver NE	main_standard	D. setchellii_QUIN
+QUIN_LP_318_Du-164	cpDNA	2.86601974	-6.95092681	D. setchellii	QUIN	Quicksilver NE	main_standard	D. setchellii_QUIN
+RIC_LP_192_Du-521	cpDNA	4.09388965	5.02403674	D. setchellii	RIC	Richmond Ranch	main_standard	D. setchellii_RIC
+RIC_LP_193_Du-522	cpDNA	4.09388965	5.02403674	D. setchellii	RIC	Richmond Ranch	main_standard	D. setchellii_RIC
+RIC_LP_194_Du-523	cpDNA	4.09388965	5.02403674	D. setchellii	RIC	Richmond Ranch	main_standard	D. setchellii_RIC
+RIC_LP_195_Du-524	cpDNA	4.09388965	5.02403674	D. setchellii	RIC	Richmond Ranch	main_standard	D. setchellii_RIC
+RIC_LP_196_Du-525	cpDNA	4.09388965	5.02403674	D. setchellii	RIC	Richmond Ranch	main_standard	D. setchellii_RIC
+RIC_LP_197_Du-526	cpDNA	2.04914333	-1.08164978	D. setchellii	RIC	Richmond Ranch	main_standard	D. setchellii_RIC
+RIC_LP_198_Du-527	cpDNA	4.09388965	5.02403674	D. setchellii	RIC	Richmond Ranch	main_standard	D. setchellii_RIC
+RIC_LP_199_Du-528	cpDNA	4.09388965	5.02403674	D. setchellii	RIC	Richmond Ranch	main_standard	D. setchellii_RIC
+RIC_LP_200_Du-529	cpDNA	4.09388965	5.02403674	D. setchellii	RIC	Richmond Ranch	main_standard	D. setchellii_RIC
+RIC_LP_201_Du-530	cpDNA	4.09388965	5.02403674	D. setchellii	RIC	Richmond Ranch	main_standard	D. setchellii_RIC
+RSV_LP_049_Du-85	cpDNA	2.72650249	-6.68717979	D. setchellii	RSV	Rancho San Vicente	main_standard	D. setchellii_RSV
+RSV_LP_050_Du-87	cpDNA	2.70793091	-6.69270249	D. setchellii	RSV	Rancho San Vicente	main_standard	D. setchellii_RSV
+RSV_LP_051_Du-88	cpDNA	2.68462973	-6.58920777	D. setchellii	RSV	Rancho San Vicente	main_standard	D. setchellii_RSV
+RSV_LP_052_Du-89	cpDNA	2.72650249	-6.68717979	D. setchellii	RSV	Rancho San Vicente	main_standard	D. setchellii_RSV
+RSV_LP_053_Du-90	cpDNA	2.70751768	-6.69015811	D. setchellii	RSV	Rancho San Vicente	main_standard	D. setchellii_RSV
+RSV_LP_055_Du-92	cpDNA	2.72650249	-6.68717979	D. setchellii	RSV	Rancho San Vicente	main_standard	D. setchellii_RSV
+RSV_LP_057_Du-94	cpDNA	2.72596322	-6.68766242	D. setchellii	RSV	Rancho San Vicente	main_standard	D. setchellii_RSV
+RSV_LP_315_Du-95	cpDNA	2.73073642	-6.70822864	D. setchellii	RSV	Rancho San Vicente	main_standard	D. setchellii_RSV
+RSV_LP_316_Du-96	cpDNA	2.72491830	-6.68125309	D. setchellii	RSV	Rancho San Vicente	main_standard	D. setchellii_RSV
+SILG_LP_149_Du-343	cpDNA	2.22313096	-1.32544780	D. setchellii	SILG	Silver Creek Golf	main_standard	D. setchellii_SILG
+SILG_LP_150_Du-344	cpDNA	2.27716635	-1.42922516	D. setchellii	SILG	Silver Creek Golf	main_standard	D. setchellii_SILG
+SILG_LP_151_Du-345	cpDNA	2.25537434	-1.37500151	D. setchellii	SILG	Silver Creek Golf	main_standard	D. setchellii_SILG
+SILG_LP_152_Du-346	cpDNA	2.27774535	-1.42804567	D. setchellii	SILG	Silver Creek Golf	main_standard	D. setchellii_SILG
+SILG_LP_153_Du-347	cpDNA	2.27786412	-1.43030926	D. setchellii	SILG	Silver Creek Golf	main_standard	D. setchellii_SILG
+SILG_LP_154_Du-348	cpDNA	2.27715586	-1.42920886	D. setchellii	SILG	Silver Creek Golf	main_standard	D. setchellii_SILG
+SILG_LP_155_Du-349	cpDNA	2.25373573	-1.37344909	D. setchellii	SILG	Silver Creek Golf	main_standard	D. setchellii_SILG
+SILG_LP_156_Du-350	cpDNA	2.27826545	-1.42884590	D. setchellii	SILG	Silver Creek Golf	main_standard	D. setchellii_SILG
+SILG_LP_157_Du-351	cpDNA	2.28086023	-1.42659408	D. setchellii	SILG	Silver Creek Golf	main_standard	D. setchellii_SILG
+SILG_LP_158_Du-352	cpDNA	2.25869193	-1.38075107	D. setchellii	SILG	Silver Creek Golf	main_standard	D. setchellii_SILG
+SILR_LP_346_Du-729	cpDNA	3.30082495	2.35679466	D. setchellii	SILR	Silver Creek Valley Rd. + Razorback + water tower	main_standard	D. setchellii_SILR
+SILR_LP_347_Du-730	cpDNA	3.30082495	2.35679466	D. setchellii	SILR	Silver Creek Valley Rd. + Razorback + water tower	main_standard	D. setchellii_SILR
+SILR_LP_348_Du-731	cpDNA	3.30082495	2.35679466	D. setchellii	SILR	Silver Creek Valley Rd. + Razorback + water tower	main_standard	D. setchellii_SILR
+SILR_LP_349_Du-732	cpDNA	3.30082495	2.35679466	D. setchellii	SILR	Silver Creek Valley Rd. + Razorback + water tower	main_standard	D. setchellii_SILR
+SILR_LP_351_Du-734	cpDNA	3.28550418	2.33064469	D. setchellii	SILR	Silver Creek Valley Rd. + Razorback + water tower	main_standard	D. setchellii_SILR
+SILR_LP_353_Du-736	cpDNA	3.26284550	2.28784182	D. setchellii	SILR	Silver Creek Valley Rd. + Razorback + water tower	main_standard	D. setchellii_SILR
+STI_LP_027_Du-45	cpDNA	2.81809525	-6.70458857	D. setchellii	STI	Stiles Ranch	main_standard	D. setchellii_STI
+STI_LP_028_Du-46	cpDNA	2.79539587	-6.76039872	D. setchellii	STI	Stiles Ranch	main_standard	D. setchellii_STI
+STI_LP_029_Du-47	cpDNA	2.80196173	-6.74095370	D. setchellii	STI	Stiles Ranch	main_standard	D. setchellii_STI
+STI_LP_030_Du-48	cpDNA	2.80119056	-6.74309768	D. setchellii	STI	Stiles Ranch	main_standard	D. setchellii_STI
+STI_LP_031_Du-49	cpDNA	2.81634879	-6.78443730	D. setchellii	STI	Stiles Ranch	main_standard	D. setchellii_STI
+STI_LP_032_Du-50	cpDNA	2.79539587	-6.76039872	D. setchellii	STI	Stiles Ranch	main_standard	D. setchellii_STI
+STI_LP_033_Du-51	cpDNA	2.80119056	-6.74309768	D. setchellii	STI	Stiles Ranch	main_standard	D. setchellii_STI
+STI_LP_034_Du-52	cpDNA	2.79924807	-6.77184034	D. setchellii	STI	Stiles Ranch	main_standard	D. setchellii_STI
+STI_LP_035_Du-53	cpDNA	2.80993002	-6.80364566	D. setchellii	STI	Stiles Ranch	main_standard	D. setchellii_STI
+STI_LP_036_Du-54	cpDNA	2.80065129	-6.74358032	D. setchellii	STI	Stiles Ranch	main_standard	D. setchellii_STI
+STI_LP_037_Du-55	cpDNA	2.80993002	-6.80364566	D. setchellii	STI	Stiles Ranch	main_standard	D. setchellii_STI
+STI_LP_038_Du-56	cpDNA	2.80309886	-6.78168156	D. setchellii	STI	Stiles Ranch	main_standard	D. setchellii_STI
+STI_LP_039_Du-57	cpDNA	2.79539587	-6.76039872	D. setchellii	STI	Stiles Ranch	main_standard	D. setchellii_STI
+STI_LP_040_Du-58	cpDNA	2.81754955	-6.70523469	D. setchellii	STI	Stiles Ranch	main_standard	D. setchellii_STI
+STI_LP_041_Du-60	cpDNA	2.79539587	-6.76039872	D. setchellii	STI	Stiles Ranch	main_standard	D. setchellii_STI
+STI_LP_042_Du-61	cpDNA	2.81268005	-6.70943505	D. setchellii	STI	Stiles Ranch	main_standard	D. setchellii_STI
+TIL_LP_123_Du-263	cpDNA	2.80428498	-6.72168050	D. setchellii	TIL	Tilton Ranch Road	main_standard	D. setchellii_TIL
+TIL_LP_124_Du-264	cpDNA	2.81615311	-6.69302602	D. setchellii	TIL	Tilton Ranch Road	main_standard	D. setchellii_TIL
+TIL_LP_125_Du-265	cpDNA	2.75924963	-6.56414208	D. setchellii	TIL	Tilton Ranch Road	main_standard	D. setchellii_TIL
+TIL_LP_126_Du-266	cpDNA	2.75768964	-6.57899372	D. setchellii	TIL	Tilton Ranch Road	main_standard	D. setchellii_TIL
+TIL_LP_127_Du-267	cpDNA	2.65128523	-6.27438819	D. setchellii	TIL	Tilton Ranch Road	main_standard	D. setchellii_TIL
+TIL_LP_128_Du-268	cpDNA	2.80880075	-6.66579304	D. setchellii	TIL	Tilton Ranch Road	main_standard	D. setchellii_TIL
+TIL_LP_129_Du-269	cpDNA	2.80786009	-6.74003669	D. setchellii	TIL	Tilton Ranch Road	main_standard	D. setchellii_TIL
+TIL_LP_130_Du-271	cpDNA	2.80898820	-6.68800291	D. setchellii	TIL	Tilton Ranch Road	main_standard	D. setchellii_TIL
+TIL_LP_131_Du-272	cpDNA	2.82044326	-6.71986919	D. setchellii	TIL	Tilton Ranch Road	main_standard	D. setchellii_TIL
+TULP_LP_115_Du-242	cpDNA	4.01067628	4.81251344	D. setchellii	TULP	Tulare Hill NW Parks	main_standard	D. setchellii_TULP
+TULP_LP_116_Du-243	cpDNA	3.93981627	4.84826469	D. setchellii	TULP	Tulare Hill NW Parks	main_standard	D. setchellii_TULP
+TULP_LP_117_Du-244	cpDNA	3.99047093	4.81880096	D. setchellii	TULP	Tulare Hill NW Parks	main_standard	D. setchellii_TULP
+TULP_LP_118_Du-245	cpDNA	3.99598312	4.83547838	D. setchellii	TULP	Tulare Hill NW Parks	main_standard	D. setchellii_TULP
+TULP_LP_119_Du-246	cpDNA	3.99598312	4.83547838	D. setchellii	TULP	Tulare Hill NW Parks	main_standard	D. setchellii_TULP
+TULP_LP_120_Du-248	cpDNA	4.01067628	4.81251344	D. setchellii	TULP	Tulare Hill NW Parks	main_standard	D. setchellii_TULP
+TULP_LP_121_Du-249	cpDNA	3.99598312	4.83547838	D. setchellii	TULP	Tulare Hill NW Parks	main_standard	D. setchellii_TULP
+TULP_LP_122_Du-250	cpDNA	3.93981627	4.84826469	D. setchellii	TULP	Tulare Hill NW Parks	main_standard	D. setchellii_TULP
+TULP_LP_140_Du-302	cpDNA	3.99322601	4.82713193	D. setchellii	TULP	Tulare Hill NW Parks	main_standard	D. setchellii_TULP
+TULP_LP_141_Du-303	cpDNA	4.02767156	4.77656429	D. setchellii	TULP	Tulare Hill NW Parks	main_standard	D. setchellii_TULP
+TULP_LP_142_Du-304	cpDNA	3.99659957	4.70075764	D. setchellii	TULP	Tulare Hill NW Parks	main_standard	D. setchellii_TULP
+TULP_LP_143_Du-305	cpDNA	3.98098967	4.79001057	D. setchellii	TULP	Tulare Hill NW Parks	main_standard	D. setchellii_TULP
+TULP_LP_144_Du-306	cpDNA	3.98098967	4.79001057	D. setchellii	TULP	Tulare Hill NW Parks	main_standard	D. setchellii_TULP
+TULP_LP_145_Du-307	cpDNA	3.99909057	4.81079976	D. setchellii	TULP	Tulare Hill NW Parks	main_standard	D. setchellii_TULP
+TULP_LP_146_Du-308	cpDNA	3.99036565	4.81885244	D. setchellii	TULP	Tulare Hill NW Parks	main_standard	D. setchellii_TULP
+TULP_LP_147_Du-309	cpDNA	4.01313740	4.81981124	D. setchellii	TULP	Tulare Hill NW Parks	main_standard	D. setchellii_TULP
+TULP_LP_148_Du-310	cpDNA	4.01303213	4.81986273	D. setchellii	TULP	Tulare Hill NW Parks	main_standard	D. setchellii_TULP

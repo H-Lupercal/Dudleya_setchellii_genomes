@@ -1,0 +1,3 @@
+organelle	track_id	sample_count	variant_records	raw_vcf_path	raw_vcf_index_path	log_path
+cpDNA	cpdna_population_sites	5	556	dudleya_organelle_alignment_pipeline/results/08_variant_calling/cpDNA.smoke.raw.vcf.gz	dudleya_organelle_alignment_pipeline/results/08_variant_calling/cpDNA.smoke.raw.vcf.gz.tbi	dudleya_organelle_alignment_pipeline/results/08_variant_calling/cpDNA.smoke.raw.bcftools.log
+mtDNA	mtdna_high_confidence_unique	5	40	dudleya_organelle_alignment_pipeline/results/08_variant_calling/mtDNA.smoke.raw.vcf.gz	dudleya_organelle_alignment_pipeline/results/08_variant_calling/mtDNA.smoke.raw.vcf.gz.tbi	dudleya_organelle_alignment_pipeline/results/08_variant_calling/mtDNA.smoke.raw.bcftools.log

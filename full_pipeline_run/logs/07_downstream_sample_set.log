@@ -1,0 +1,9 @@
+=== 07_downstream_sample_set Downstream include/exclude sample set ===
+Started: 2026-07-08T13:54:42-07:00
+Command: python3 dudleya_organelle_alignment_pipeline/scripts/build_downstream_sample_set.py --analysis-sample-table /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/00_manifest/analysis_samples.tsv --upstream-excluded-table /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/00_manifest/excluded_samples.tsv --qc-decision-table /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/06_all_sample_alignment/all_sample_alignment_sample_summary.tsv --output-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/07_downstream_sample_set --expected-included -1
+
+Downstream included samples: 278
+Downstream excluded samples: 2
+Output directory: /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/07_downstream_sample_set
+
+Finished: 2026-07-08T13:54:42-07:00

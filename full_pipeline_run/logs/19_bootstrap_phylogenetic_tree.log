@@ -1,0 +1,9 @@
+=== 19_bootstrap_phylogenetic_tree Final 1,000-UFBoot maximum-likelihood trees ===
+Started: 2026-07-08T18:43:05-07:00
+Command: /home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/python3 dudleya_organelle_alignment_pipeline/scripts/run_phylogenetic_tree.py --consensus-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/11_callable_consensus --output-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/19_bootstrap_phylogenetic_tree --run-label primary --threads 16 --bootstrap-replicates 1000 --force
+
+cpDNA: iqtree_ml_ufboot1000 tree for 278 samples at /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/19_bootstrap_phylogenetic_tree/cpDNA.primary.iqtree_ml.treefile
+mtDNA: iqtree_ml_ufboot1000 tree for 278 samples at /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/19_bootstrap_phylogenetic_tree/mtDNA.primary.iqtree_ml.treefile
+Output directory: /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/19_bootstrap_phylogenetic_tree
+
+Finished: 2026-07-08T18:46:42-07:00

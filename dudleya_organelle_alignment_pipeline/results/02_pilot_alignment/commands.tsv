@@ -1,0 +1,61 @@
+sample_id	step	command
+DU-173	index	samtools index dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/DU-173.organelle.sorted.bam
+DU-173	flagstat	samtools flagstat dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/DU-173.organelle.sorted.bam
+DU-173	idxstats	samtools idxstats dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/DU-173.organelle.sorted.bam
+DU-173	depth	samtools depth -aa -q 20 -Q 0 dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/DU-173.organelle.sorted.bam
+DU014LP012	index	samtools index dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/DU014LP012.organelle.sorted.bam
+DU014LP012	flagstat	samtools flagstat dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/DU014LP012.organelle.sorted.bam
+DU014LP012	idxstats	samtools idxstats dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/DU014LP012.organelle.sorted.bam
+DU014LP012	depth	samtools depth -aa -q 20 -Q 0 dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/DU014LP012.organelle.sorted.bam
+CY_ALA_LP_298-Du-767	index	samtools index dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CY_ALA_LP_298-Du-767.organelle.sorted.bam
+CY_ALA_LP_298-Du-767	flagstat	samtools flagstat dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CY_ALA_LP_298-Du-767.organelle.sorted.bam
+CY_ALA_LP_298-Du-767	idxstats	samtools idxstats dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CY_ALA_LP_298-Du-767.organelle.sorted.bam
+CY_ALA_LP_298-Du-767	depth	samtools depth -aa -q 20 -Q 0 dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CY_ALA_LP_298-Du-767.organelle.sorted.bam
+ABAB_MAD_LP_222_Du-589	index	samtools index dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/ABAB_MAD_LP_222_Du-589.organelle.sorted.bam
+ABAB_MAD_LP_222_Du-589	flagstat	samtools flagstat dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/ABAB_MAD_LP_222_Du-589.organelle.sorted.bam
+ABAB_MAD_LP_222_Du-589	idxstats	samtools idxstats dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/ABAB_MAD_LP_222_Du-589.organelle.sorted.bam
+ABAB_MAD_LP_222_Du-589	depth	samtools depth -aa -q 20 -Q 0 dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/ABAB_MAD_LP_222_Du-589.organelle.sorted.bam
+BAI_LP_105_Du-222	index	samtools index dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/BAI_LP_105_Du-222.organelle.sorted.bam
+BAI_LP_105_Du-222	flagstat	samtools flagstat dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/BAI_LP_105_Du-222.organelle.sorted.bam
+BAI_LP_105_Du-222	idxstats	samtools idxstats dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/BAI_LP_105_Du-222.organelle.sorted.bam
+BAI_LP_105_Du-222	depth	samtools depth -aa -q 20 -Q 0 dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/BAI_LP_105_Du-222.organelle.sorted.bam
+CY_BAL_LP_226_Du-602	index	samtools index dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CY_BAL_LP_226_Du-602.organelle.sorted.bam
+CY_BAL_LP_226_Du-602	flagstat	samtools flagstat dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CY_BAL_LP_226_Du-602.organelle.sorted.bam
+CY_BAL_LP_226_Du-602	idxstats	samtools idxstats dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CY_BAL_LP_226_Du-602.organelle.sorted.bam
+CY_BAL_LP_226_Du-602	depth	samtools depth -aa -q 20 -Q 0 dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CY_BAL_LP_226_Du-602.organelle.sorted.bam
+ABBE_BERN_LP_311_Du-780	index	samtools index dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/ABBE_BERN_LP_311_Du-780.organelle.sorted.bam
+ABBE_BERN_LP_311_Du-780	flagstat	samtools flagstat dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/ABBE_BERN_LP_311_Du-780.organelle.sorted.bam
+ABBE_BERN_LP_311_Du-780	idxstats	samtools idxstats dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/ABBE_BERN_LP_311_Du-780.organelle.sorted.bam
+ABBE_BERN_LP_311_Du-780	depth	samtools depth -aa -q 20 -Q 0 dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/ABBE_BERN_LP_311_Du-780.organelle.sorted.bam
+COM_LP_269_Du-703	index	samtools index dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/COM_LP_269_Du-703.organelle.sorted.bam
+COM_LP_269_Du-703	flagstat	samtools flagstat dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/COM_LP_269_Du-703.organelle.sorted.bam
+COM_LP_269_Du-703	idxstats	samtools idxstats dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/COM_LP_269_Du-703.organelle.sorted.bam
+COM_LP_269_Du-703	depth	samtools depth -aa -q 20 -Q 0 dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/COM_LP_269_Du-703.organelle.sorted.bam
+CY_BGL_LP_210_Du-577	index	samtools index dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CY_BGL_LP_210_Du-577.organelle.sorted.bam
+CY_BGL_LP_210_Du-577	flagstat	samtools flagstat dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CY_BGL_LP_210_Du-577.organelle.sorted.bam
+CY_BGL_LP_210_Du-577	idxstats	samtools idxstats dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CY_BGL_LP_210_Du-577.organelle.sorted.bam
+CY_BGL_LP_210_Du-577	depth	samtools depth -aa -q 20 -Q 0 dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CY_BGL_LP_210_Du-577.organelle.sorted.bam
+ABMU_HOR_LP_306_Du-775	index	samtools index dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/ABMU_HOR_LP_306_Du-775.organelle.sorted.bam
+ABMU_HOR_LP_306_Du-775	flagstat	samtools flagstat dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/ABMU_HOR_LP_306_Du-775.organelle.sorted.bam
+ABMU_HOR_LP_306_Du-775	idxstats	samtools idxstats dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/ABMU_HOR_LP_306_Du-775.organelle.sorted.bam
+ABMU_HOR_LP_306_Du-775	depth	samtools depth -aa -q 20 -Q 0 dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/ABMU_HOR_LP_306_Du-775.organelle.sorted.bam
+CROB_LP_169_Du-381	index	samtools index dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CROB_LP_169_Du-381.organelle.sorted.bam
+CROB_LP_169_Du-381	flagstat	samtools flagstat dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CROB_LP_169_Du-381.organelle.sorted.bam
+CROB_LP_169_Du-381	idxstats	samtools idxstats dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CROB_LP_169_Du-381.organelle.sorted.bam
+CROB_LP_169_Du-381	depth	samtools depth -aa -q 20 -Q 0 dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CROB_LP_169_Du-381.organelle.sorted.bam
+CY_BOU_LP_288_Du-737	index	samtools index dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CY_BOU_LP_288_Du-737.organelle.sorted.bam
+CY_BOU_LP_288_Du-737	flagstat	samtools flagstat dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CY_BOU_LP_288_Du-737.organelle.sorted.bam
+CY_BOU_LP_288_Du-737	idxstats	samtools idxstats dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CY_BOU_LP_288_Du-737.organelle.sorted.bam
+CY_BOU_LP_288_Du-737	depth	samtools depth -aa -q 20 -Q 0 dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CY_BOU_LP_288_Du-737.organelle.sorted.bam
+CROS_LP_085_Du-181	index	samtools index dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CROS_LP_085_Du-181.organelle.sorted.bam
+CROS_LP_085_Du-181	flagstat	samtools flagstat dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CROS_LP_085_Du-181.organelle.sorted.bam
+CROS_LP_085_Du-181	idxstats	samtools idxstats dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CROS_LP_085_Du-181.organelle.sorted.bam
+CROS_LP_085_Du-181	depth	samtools depth -aa -q 20 -Q 0 dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CROS_LP_085_Du-181.organelle.sorted.bam
+CY_CAS_LP_328_Du-610	index	samtools index dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CY_CAS_LP_328_Du-610.organelle.sorted.bam
+CY_CAS_LP_328_Du-610	flagstat	samtools flagstat dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CY_CAS_LP_328_Du-610.organelle.sorted.bam
+CY_CAS_LP_328_Du-610	idxstats	samtools idxstats dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CY_CAS_LP_328_Du-610.organelle.sorted.bam
+CY_CAS_LP_328_Du-610	depth	samtools depth -aa -q 20 -Q 0 dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/CY_CAS_LP_328_Du-610.organelle.sorted.bam
+DAN_LP_043_Du-68	index	samtools index dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/DAN_LP_043_Du-68.organelle.sorted.bam
+DAN_LP_043_Du-68	flagstat	samtools flagstat dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/DAN_LP_043_Du-68.organelle.sorted.bam
+DAN_LP_043_Du-68	idxstats	samtools idxstats dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/DAN_LP_043_Du-68.organelle.sorted.bam
+DAN_LP_043_Du-68	depth	samtools depth -aa -q 20 -Q 0 dudleya_organelle_alignment_pipeline/results/02_pilot_alignment/bam/DAN_LP_043_Du-68.organelle.sorted.bam

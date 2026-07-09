@@ -49,18 +49,55 @@ class AdmixtureInputTests(unittest.TestCase):
                 site_table_path=Path("sites.tsv"),
             )
 
-            ped_path, map_path = write_pseudo_diploid_ped_map(
+            ped_path, map_path, included_sample_ids, excluded_sample_ids = (
+                write_pseudo_diploid_ped_map(
+                    admixture_input,
+                    output_dir,
+                    run_label="primary",
+                )
+            )
+
+            ped = ped_path.read_text()
+            map_text = map_path.read_text()
+
+        self.assertEqual(included_sample_ids, ["DU-1", "DU-2"])
+        self.assertEqual(excluded_sample_ids, [])
+        self.assertIn("DU-1 DU-1 0 0 0 -9 A A 0 0", ped)
+        self.assertIn("DU-2 DU-2 0 0 0 -9 T T G G", ped)
+        self.assertIn("mtDNA_snp_1", map_text)
+
+    def test_write_pseudo_diploid_ped_map_excludes_all_missing_samples(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            output_dir = Path(tmp)
+            fasta_path = output_dir / "tiny.fa"
+            fasta_path.write_text(">DU-1\nNN\n>DU-2\nTG\n")
+            admixture_input = AdmixtureInput(
+                organelle="mtDNA",
+                track_id="mtdna_high_confidence_unique",
+                sample_count=2,
+                alignment_sites=2,
+                missing_bases=2,
+                alignment_fasta_path=fasta_path,
+                site_table_path=Path("sites.tsv"),
+            )
+
+            ped_path, _, included_sample_ids, excluded_sample_ids = write_pseudo_diploid_ped_map(
                 admixture_input,
                 output_dir,
                 run_label="primary",
             )
 
             ped = ped_path.read_text()
-            map_text = map_path.read_text()
+            excluded = (
+                output_dir
+                / "mtDNA.primary.pseudo_diploid.excluded_samples.tsv"
+            ).read_text()
 
-        self.assertIn("DU-1 DU-1 0 0 0 -9 A A 0 0", ped)
+        self.assertEqual(included_sample_ids, ["DU-2"])
+        self.assertEqual(excluded_sample_ids, ["DU-1"])
+        self.assertNotIn("DU-1 DU-1", ped)
         self.assertIn("DU-2 DU-2 0 0 0 -9 T T G G", ped)
-        self.assertIn("mtDNA_snp_1", map_text)
+        self.assertIn("DU-1\tmtDNA\tall_snp_genotypes_missing", excluded)
 
 
 class AdmixtureCommandTests(unittest.TestCase):
@@ -106,6 +143,7 @@ class AdmixtureOutputTests(unittest.TestCase):
                     "mean_cv_error": "0.1",
                     "sd_cv_error": "0.0",
                     "replicate_count": "1",
+                    "excluded_sample_count": "0",
                     "q_path": "cpDNA.2.Q",
                     "p_path": "cpDNA.2.P",
                     "log_path": "cpDNA.K2.log",

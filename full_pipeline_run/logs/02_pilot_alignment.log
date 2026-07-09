@@ -1,0 +1,24 @@
+=== 02_pilot_alignment Pilot organelle alignment ===
+Started: 2026-07-08T09:24:14-07:00
+Command: python3 dudleya_organelle_alignment_pipeline/scripts/run_pilot_alignment.py --pilot-table /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/01_reference_pilot/pilot_samples.tsv --output-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/02_pilot_alignment --threads 16 --force
+
+[1/15] DU-173
+[2/15] DU014LP012
+[3/15] CY_ALA_LP_298-Du-767
+[4/15] ABAB_MAD_LP_222_Du-589
+[5/15] BAI_LP_105_Du-222
+[6/15] CY_BAL_LP_226_Du-602
+[7/15] ABBE_BERN_LP_311_Du-780
+[8/15] COM_LP_269_Du-703
+[9/15] CY_BGL_LP_210_Du-577
+[10/15] ABMU_HOR_LP_306_Du-775
+[11/15] CROB_LP_169_Du-381
+[12/15] CY_BOU_LP_288_Du-737
+[13/15] CROS_LP_085_Du-181
+[14/15] CY_CAS_LP_328_Du-610
+[15/15] DAN_LP_043_Du-68
+Pilot samples summarized: 15
+Organelle summary rows: 30
+Output directory: /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/02_pilot_alignment
+
+Finished: 2026-07-08T09:42:45-07:00

@@ -1,0 +1,25 @@
+tool_id	executable	necessity	required_for	status	path	version	note
+python3	python3	required_current	pipeline scripts, tests, PCA/Fst helper code	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/python3	Python 3.14.6	Available on PATH.
+bwa	bwa	required_current	read mapping to combined cpDNA/mtDNA reference	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/bwa	bwa	Available on PATH.
+samtools	samtools	required_current	BAM sorting/indexing/depth/QC	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/samtools	samtools 1.23.1	Available on PATH.
+bcftools	bcftools	required_current	haploid variant calling, filtering, and VCF indexing	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/bcftools	bcftools 1.23.1	Available on PATH.
+fastp	fastp	required_current	Evan-style read QC/trimming if rerunning raw-read QC	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/fastp	fastp 1.3.5	Available on PATH.
+fastqc	fastqc	required_current	Evan-style read QC reports	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/fastqc	FastQC v0.12.1	Available on PATH.
+multiqc	multiqc	required_current	aggregate QC reports	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/multiqc	multiqc, version 1.35	Available on PATH.
+iqtree	iqtree	required_current	maximum-likelihood cpDNA/mtDNA phylogenetic trees	FOUND	/home/neil/miniconda3/bin/iqtree	IQ-TREE version 3.1.2 for Linux x86 64-bit built May 17 2026	Available on PATH.
+FastTree	FastTree	recommended_remaining	quick approximate ML tree checks	FOUND	/home/neil/miniconda3/bin/FastTree	FastTree 2.2.0 Double precision:	Available on PATH.
+plink	plink	required_remaining	PCA matrix handling and ADMIXTURE input preparation	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/plink	PLINK v1.9.0-b.8 64-bit (22 Oct 2024)	Available on PATH.
+admixture	admixture	required_remaining	structure/admixture-style clustering and empirical K selection	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/admixture	****                   ADMIXTURE Version 1.3.0                  ****	Available on PATH.
+vcftools	vcftools	recommended_remaining	VCF-based population summary checks	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/vcftools	VCFtools (0.1.17)	Available on PATH.
+bedtools	bedtools	recommended_remaining	interval QC and mask cross-checking	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/bedtools	bedtools v2.31.1	Available on PATH.
+Rscript	Rscript	required_remaining	PCA/tree/admixture/Fst plotting outputs	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/Rscript	Rscript (R) version 4.5.3 (2026-03-11)	Available on PATH.
+snakemake	snakemake	recommended_remaining	optional integration with Evan-style Snakemake orchestration	MISSING			Recommended, but not strictly blocking for the immediate next scripted step.
+python_matplotlib	python3	required_remaining	PCA scatterplots, tree rendering, and static PNG/PDF figures	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/python3	3.11.0	Available on PATH.
+python_pandas	python3	required_remaining	figure-ready metadata tables and plotting data frames	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/python3	3.0.3	Available on PATH.
+python_sklearn	python3	required_remaining	PCA calculation and variance summaries	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/python3	1.9.0	Available on PATH.
+python_biopython	python3	required_remaining	Newick tree parsing and scripted tree rendering	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/python3	1.87	Available on PATH.
+python_seaborn	python3	recommended_remaining	polished statistical plots	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/python3	0.13.2	Available on PATH.
+python_ete3	python3	recommended_remaining	alternate Newick tree visualization	MISSING	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/python3		Executable found, but version/import check failed: Traceback (most recent call last):
+r_ggplot2	Rscript	required_remaining	R-based PCA/admixture/Fst plots	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/Rscript	4.0.3	Available on PATH.
+r_ape	Rscript	required_remaining	R-based phylogenetic tree parsing/rendering	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/Rscript	5.8.1	Available on PATH.
+r_patchwork	Rscript	recommended_remaining	combining multiple R figure panels	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/Rscript	1.3.2	Available on PATH.

@@ -1,0 +1,6 @@
+metric	value
+hsp_count	28
+cpdna_union_bp_with_mtdna_hit	4119
+cpdna_union_fraction_with_mtdna_hit	0.027410
+mtdna_hit_bp_overlapping_high_mapq_non_consensus	2654
+mtdna_hit_fraction_of_high_mapq_non_consensus	0.057266

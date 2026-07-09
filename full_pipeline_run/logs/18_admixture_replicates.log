@@ -1,0 +1,9 @@
+=== 18_admixture_replicates Five-replicate final ADMIXTURE-style clustering ===
+Started: 2026-07-08T18:29:42-07:00
+Command: /home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/python3 dudleya_organelle_alignment_pipeline/scripts/run_admixture_analysis.py --snp-alignment-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/10_snp_alignment --metadata-path /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/07_downstream_sample_set/included_samples.tsv --output-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/18_admixture_replicates --run-label primary --threads 16 --replicates 5 --force
+
+cpDNA: best K=8 with mean CV error 0.08512200 at /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/18_admixture_replicates/cpDNA.primary.bestK8.structure.png
+mtDNA: best K=8 with mean CV error 0.11156800 at /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/18_admixture_replicates/mtDNA.primary.bestK8.structure.png
+Output directory: /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/18_admixture_replicates
+
+Finished: 2026-07-08T18:43:05-07:00

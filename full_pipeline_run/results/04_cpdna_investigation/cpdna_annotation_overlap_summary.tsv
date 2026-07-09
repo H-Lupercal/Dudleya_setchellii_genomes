@@ -1,0 +1,5 @@
+feature_type	feature_count	repeat_overlap_ge50	high_mapq_consensus_ge50
+CDS	85	18	69
+gene	119	30	91
+rRNA	4	4	0
+tRNA	30	10	20

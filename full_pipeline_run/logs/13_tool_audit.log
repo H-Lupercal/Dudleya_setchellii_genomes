@@ -1,0 +1,10 @@
+=== 13_tool_audit Bioinformatics tool audit ===
+Started: 2026-07-08T18:24:11-07:00
+Command: python3 dudleya_organelle_alignment_pipeline/scripts/run_tool_audit.py --output-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/13_tool_audit --audit-label primary
+
+Tools checked: 24
+Tools found: 22
+Missing required remaining-goal tools: none
+Output directory: /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/13_tool_audit
+
+Finished: 2026-07-08T18:24:14-07:00

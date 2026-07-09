@@ -1,0 +1,1063 @@
+IQ-TREE 3.1.2 built May 17 2026
+
+Input file name: dudleya_organelle_alignment_pipeline/results/11_callable_consensus/mtDNA.primary.callable_consensus.fa
+Type of analysis: tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 808521
+
+REFERENCES
+----------
+
+To cite IQ-TREE 3 please use:
+
+Thomas K.F. Wong, Nhan Ly-Trong, Huaiyan Ren, Hector Banos, Andrew J. Roger,
+Edward Susko, Chris Bielow, Nicola De Maio, Nick Goldman, Matthew W. Hahn,
+Gavin Huttley, Robert Lanfear, Bui Quang Minh (2025)
+IQ-TREE 3: Phylogenomic Inference Software using Complex Evolutionary Models.
+Submitted.
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 275 sequences with 44930 nucleotide sites
+Number of constant sites: 44784 (= 99.6751% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 44784 (= 99.6751% of all sites)
+Number of parsimony informative sites: 146
+Number of distinct site patterns: 345
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: GTR+F+G4
+
+Rate parameter R:
+
+  A-C: 0.7166
+  A-G: 0.5868
+  A-T: 1.6505
+  C-G: 0.3959
+  C-T: 0.8365
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.27
+  pi(C) = 0.2234
+  pi(G) = 0.2288
+  pi(T) = 0.2778
+
+Rate matrix Q:
+
+  A     -1.11    0.2361     0.198    0.6764
+  C    0.2854   -0.7618    0.1336    0.3428
+  G    0.2337    0.1304   -0.7739    0.4098
+  T    0.6573    0.2756    0.3374     -1.27
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 0.02004
+
+ Category  Relative_rate  Proportion
+  1         5.063e-31      0.25
+  2         1.064e-15      0.25
+  3         9.78e-07       0.25
+  4         4              0.25
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -64189.2122 (s.e. 186.8297)
+Unconstrained log-likelihood (without tree): -86703.4530
+Number of free parameters (#branches + #model parameters): 386
+Akaike information criterion (AIC) score: 129150.4244
+Corrected Akaike information criterion (AICc) score: 129157.1317
+Bayesian information criterion (BIC) score: 132513.5888
+
+Total tree length (sum of branch lengths): 0.0047
+Sum of internal branch lengths: 0.0034 (72.7043% of tree length)
+
+WARNING: 120 near-zero internal branches (<0.0000) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'DU-173' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++**DU-173
+|
+|                                                                                                                              +**DU-229
+|                                                                                                                           +--| (86)
+|                                                                                                                           |  +**BAI_LP_106_Du-223
+|                                                                                                                        +**| (63)
+|                                                                                                                        |  |  +**BAI_LP_109_Du-226
+|                                                                                                                        |  +**| (85)
+|                                                                                                                        |     +**BAI_LP_113_Du-231
+|                                                                                                                     +--| (97)
+|                                                                                                                     |  |  +**BAI_LP_105_Du-222
+|                                                                                                                     |  +--| (89)
+|                                                                                                                     |     +**BAI_LP_108_Du-225
+|                                                                                                                  +**| (77)
+|                                                                                                                  |  |        +**DOV_LP_078_Du-174
+|                                                                                                                  |  |     +**| (88)
+|                                                                                                                  |  |     |  +**DOV_LP_079_Du-175
+|                                                                                                                  |  |  +**| (74)
+|                                                                                                                  |  |  |  |        +**SILG_LP_149_Du-343
+|                                                                                                                  |  |  |  |     +**| (26)
+|                                                                                                                  |  |  |  |     |  +**SILG_LP_158_Du-352
+|                                                                                                                  |  |  |  |  +**| (76)
+|                                                                                                                  |  |  |  |  |  +**SILG_LP_150_Du-344
+|                                                                                                                  |  |  |  +--| (79)
+|                                                                                                                  |  |  |     +**SILG_LP_157_Du-351
+|                                                                                                                  |  +--| (97)
+|                                                                                                                  |     |     +**SILG_LP_151_Du-345
+|                                                                                                                  |     |  +**| (74)
+|                                                                                                                  |     |  |  +**SILG_LP_152_Du-346
+|                                                                                                                  |     +--| (98)
+|                                                                                                                  |        +**SILG_LP_156_Du-350
+|                                                                                                               +--| (56)
+|                                                                                                               |  |              +**DU-247
+|                                                                                                               |  |           +**| (22)
+|                                                                                                               |  |           |  +**DU-254
+|                                                                                                               |  |        +**| (3)
+|                                                                                                               |  |        |  |            +--COM_LP_269_Du-703
+|                                                                                                               |  |        |  |         +--| (64)
+|                                                                                                               |  |        |  |         |  |  +**COM_LP_274_Du-709
+|                                                                                                               |  |        |  |         |  +**| (89)
+|                                                                                                               |  |        |  |         |     +**COM_LP_277_Du-712
+|                                                                                                               |  |        |  |     +---| (99)
+|                                                                                                               |  |        |  |     |   |  +**COM_LP_270_Du-704
+|                                                                                                               |  |        |  |     |   +**| (87)
+|                                                                                                               |  |        |  |     |      +**COM_LP_272_Du-707
+|                                                                                                               |  |        |  |  +--| (48)
+|                                                                                                               |  |        |  |  |  |  +**TULP_LP_143_Du-305
+|                                                                                                               |  |        |  |  |  +**| (88)
+|                                                                                                               |  |        |  |  |     +**TULP_LP_144_Du-306
+|                                                                                                               |  |        |  +**| (8)
+|                                                                                                               |  |        |     +**TULP_LP_140_Du-302
+|                                                                                                               |  |     +**| (13)
+|                                                                                                               |  |     |  |           +**DU-4A
+|                                                                                                               |  |     |  |        +--| (87)
+|                                                                                                               |  |     |  |        |  +**CROS_LP_085_Du-181
+|                                                                                                               |  |     |  |     +--| (89)
+|                                                                                                               |  |     |  |     |  |     +**CROB_LP_169_Du-381
+|                                                                                                               |  |     |  |     |  |  +--| (78)
+|                                                                                                               |  |     |  |     |  |  |  |  +**CROB_LP_170_Du-382
+|                                                                                                               |  |     |  |     |  |  |  +**| (88)
+|                                                                                                               |  |     |  |     |  |  |     +**CROB_LP_173_Du-385
+|                                                                                                               |  |     |  |     |  +**| (62)
+|                                                                                                               |  |     |  |     |     |  +**CROS_LP_089_Du-185
+|                                                                                                               |  |     |  |     |     +**| (81)
+|                                                                                                               |  |     |  |     |        +**DUD_LP_137_Du-288
+|                                                                                                               |  |     |  |  +--| (77)
+|                                                                                                               |  |     |  |  |  |     +**CROB_LP_172_Du-384
+|                                                                                                               |  |     |  |  |  |  +--| (85)
+|                                                                                                               |  |     |  |  |  |  |  +**MALV_LP_095_Du-201
+|                                                                                                               |  |     |  |  |  +**| (52)
+|                                                                                                               |  |     |  |  |     |  +**CROS_LP_093_Du-189
+|                                                                                                               |  |     |  |  |     +**| (78)
+|                                                                                                               |  |     |  |  |        +**KIRN_LP_179_Du-421
+|                                                                                                               |  |     |  +**| (14)
+|                                                                                                               |  |     |     |                  +**DU078LP011
+|                                                                                                               |  |     |     |               +**| (29)
+|                                                                                                               |  |     |     |               |  |     +--DAN_LP_043_Du-68
+|                                                                                                               |  |     |     |               |  |  +**| (29)
+|                                                                                                               |  |     |     |               |  |  |  +**DAN_LP_047_Du-72
+|                                                                                                               |  |     |     |               |  +**| (28)
+|                                                                                                               |  |     |     |               |     +**DAN_LP_044_Du-69
+|                                                                                                               |  |     |     |            +**| (28)
+|                                                                                                               |  |     |     |            |  +**DAN_LP_045_Du-70
+|                                                                                                               |  |     |     |         +**| (29)
+|                                                                                                               |  |     |     |         |  +**DAN_LP_046_Du-71
+|                                                                                                               |  |     |     |      +--| (97)
+|                                                                                                               |  |     |     |      |  +**DU079LP010
+|                                                                                                               |  |     |     |  +---| (98)
+|                                                                                                               |  |     |     |  |   |  +**SILR_LP_346_Du-729
+|                                                                                                               |  |     |     |  |   +**| (100)
+|                                                                                                               |  |     |     |  |      +**SILR_LP_347_Du-730
+|                                                                                                               |  |     |     +**| (11)
+|                                                                                                               |  |     |        |                       +**CROS_LP_091_Du-187
+|                                                                                                               |  |     |        |                    +--| (90)
+|                                                                                                               |  |     |        |                    |  +**CROS_LP_094_Du-190
+|                                                                                                               |  |     |        |                 +--| (46)
+|                                                                                                               |  |     |        |                 |  +**CROS_LP_092_Du-188
+|                                                                                                               |  |     |        |              +**| (33)
+|                                                                                                               |  |     |        |              |  |  +**TULP_LP_120_Du-248
+|                                                                                                               |  |     |        |              |  +**| (69)
+|                                                                                                               |  |     |        |              |     +**TULP_LP_145_Du-307
+|                                                                                                               |  |     |        |           +**| (7)
+|                                                                                                               |  |     |        |           |  +**TULP_LP_141_Du-303
+|                                                                                                               |  |     |        |        +**| (7)
+|                                                                                                               |  |     |        |        |  +**TULP_LP_115_Du-242
+|                                                                                                               |  |     |        |     +**| (19)
+|                                                                                                               |  |     |        |     |  +**TULP_LP_147_Du-309
+|                                                                                                               |  |     |        |  +**| (12)
+|                                                                                                               |  |     |        |  |  +**TULP_LP_148_Du-310
+|                                                                                                               |  |     |        +--| (86)
+|                                                                                                               |  |     |           +**TULP_LP_142_Du-304
+|                                                                                                               |  |  +--| (80)
+|                                                                                                               |  |  |  +**TULP_LP_146_Du-308
+|                                                                                                               |  +--| (71)
+|                                                                                                               |     +--RIC_LP_197_Du-526
+|                                                                                                            +**| (52)
+|                                                                                                            |  |                    +**QUI1_LP_249_Du-648
+|                                                                                                            |  |                 +--| (73)
+|                                                                                                            |  |                 |  +--QUI1_LP_250_Du-649
+|                                                                                                            |  |              +**| (33)
+|                                                                                                            |  |              |  +--QUI1_LP_251_Du-650
+|                                                                                                            |  |           +**| (24)
+|                                                                                                            |  |           |  +**QUI1_LP_252_Du-651
+|                                                                                                            |  |        +**| (33)
+|                                                                                                            |  |        |  +**QUI1_LP_254_Du-653
+|                                                                                                            |  |     +**| (1)
+|                                                                                                            |  |     |  +**QUI1_LP_255_Du-654
+|                                                                                                            |  |  +**| (15)
+|                                                                                                            |  |  |  +**QUI1_LP_253_Du-652
+|                                                                                                            |  +--| (74)
+|                                                                                                            |     |  +**QUI1_LP_257_Du-656
+|                                                                                                            |     +--| (28)
+|                                                                                                            |        +**QUI1_LP_258_Du-657
+|                                                                                                         +--| (98)
+|                                                                                                         |  |                                                 +**DU-443
+|                                                                                                         |  |                                              +**| (91)
+|                                                                                                         |  |                                              |  +**CY_SIE_LP_189_Du-446
+|                                                                                                         |  |                                           +**| (49)
+|                                                                                                         |  |                                           |  |  +**CY_HICN_LP_334_Du-613
+|                                                                                                         |  |                                           |  +**| (81)
+|                                                                                                         |  |                                           |     +**CY_HICN_LP_336_Du-616
+|                                                                                                         |  |                                        +--| (79)
+|                                                                                                         |  |                                        |  |  +**CY_HICN_LP_236_Du-614
+|                                                                                                         |  |                                        |  +**| (84)
+|                                                                                                         |  |                                        |     |  +**CY_SIE_LP_188_Du-445
+|                                                                                                         |  |                                        |     +**| (15)
+|                                                                                                         |  |                                        |        +**CY_SIE_LP_190_Du-447
+|                                                                                                         |  |                                     +--| (99)
+|                                                                                                         |  |                                     |  +**CY_HICN_LP_335_Du-615
+|                                                                                                         |  |                             +-------| (100)
+|                                                                                                         |  |                             |       +--CY_HICN_LP_333_Du-612
+|                                                                                                         |  |                    +--------| (100)
+|                                                                                                         |  |                    |        +**CY_CAS_LP_328_Du-610
+|                                                                                                         |  |      +-------------| (100)
+|                                                                                                         |  |      |             |                +**ABBE_BERN_LP_311_Du-780
+|                                                                                                         |  |      |             |             +**| (83)
+|                                                                                                         |  |      |             |             |  +**CY_BGL_LP_210_Du-577
+|                                                                                                         |  |      |             |          +**| (69)
+|                                                                                                         |  |      |             |          |  |  +**ABBE_BERN_LP_313_Du-782
+|                                                                                                         |  |      |             |          |  +**| (74)
+|                                                                                                         |  |      |             |          |     +**ABBE_BERN_LP_314_Du-783
+|                                                                                                         |  |      |             |       +**| (38)
+|                                                                                                         |  |      |             |       |  |            +**CY_BAL_LP_226_Du-602
+|                                                                                                         |  |      |             |       |  |         +**| (99)
+|                                                                                                         |  |      |             |       |  |         |  +**CY_BAL_LP_227_Du-603
+|                                                                                                         |  |      |             |       |  |  +------| (100)
+|                                                                                                         |  |      |             |       |  |  |      +**CY_BAL_LP_228_Du-604
+|                                                                                                         |  |      |             |       |  +--| (43)
+|                                                                                                         |  |      |             |       |     +**CY_BGL_LP_212_Du-579
+|                                                                                                         |  |      |             |  +----| (100)
+|                                                                                                         |  |      |             |  |    +**ABBE_BERN_LP_312_Du-781
+|                                                                                                         |  |      |             +--| (62)
+|                                                                                                         |  |      |                |                  +**CY_HUN_LP_264_Du-683
+|                                                                                                         |  |      |                |               +**| (77)
+|                                                                                                         |  |      |                |               |  +**CY_HUN_LP_267_Du-686
+|                                                                                                         |  |      |                |            +**| (53)
+|                                                                                                         |  |      |                |            |  +**CY_HUN_LP_268_Du-687
+|                                                                                                         |  |      |                |         +--| (99)
+|                                                                                                         |  |      |                |         |  +**CY_HUN_LP_266_Du-685
+|                                                                                                         |  |      |                +---------| (100)
+|                                                                                                         |  |      |                          |           +**OCO_LP_058_Du-115
+|                                                                                                         |  |      |                          |        +**| (28)
+|                                                                                                         |  |      |                          |        |  +**OCO_LP_067_Du-114
+|                                                                                                         |  |      |                          |     +**| (25)
+|                                                                                                         |  |      |                          |     |  |  +**OCO_LP_063_Du-110
+|                                                                                                         |  |      |                          |     |  +--| (66)
+|                                                                                                         |  |      |                          |     |     +**OCO_LP_064_Du-111
+|                                                                                                         |  |      |                          |  +**| (36)
+|                                                                                                         |  |      |                          |  |  |        +**OCO_LP_059_Du-106
+|                                                                                                         |  |      |                          |  |  |     +**| (98)
+|                                                                                                         |  |      |                          |  |  |     |  +**OCO_LP_060_Du-107
+|                                                                                                         |  |      |                          |  |  |  +--| (67)
+|                                                                                                         |  |      |                          |  |  |  |  +**OCO_LP_061_Du-108
+|                                                                                                         |  |      |                          |  |  +--| (88)
+|                                                                                                         |  |      |                          |  |     |  +**OCO_LP_062_Du-109
+|                                                                                                         |  |      |                          |  |     +**| (58)
+|                                                                                                         |  |      |                          |  |        +**OCO_LP_065_Du-112
+|                                                                                                         |  |      |                          +--| (92)
+|                                                                                                         |  |      |                             +--OCO_LP_066_Du-113
+|                                                                                                         |  |  +---| (95)
+|                                                                                                         |  |  |   |                           +**ABAB_MAD_LP_223_Du-590
+|                                                                                                         |  |  |   |                        +**| (46)
+|                                                                                                         |  |  |   |                        |  +**ABAB_MAD_LP_327_Du-598
+|                                                                                                         |  |  |   |                     +--| (70)
+|                                                                                                         |  |  |   |                     |  |  +**ABAB_MAD_LP_322_Du-593
+|                                                                                                         |  |  |   |                     |  +**| (29)
+|                                                                                                         |  |  |   |                     |     |  +**ABAB_MAD_LP_323_Du-594
+|                                                                                                         |  |  |   |                     |     +--| (97)
+|                                                                                                         |  |  |   |                     |        +**ABAB_MAD_LP_324_Du-595
+|                                                                                                         |  |  |   |                  +--| (96)
+|                                                                                                         |  |  |   |                  |  +**ABAB_MAD_LP_326_Du-597
+|                                                                                                         |  |  |   |               +--| (84)
+|                                                                                                         |  |  |   |               |  +**ABAB_MAD_LP_325_Du-596
+|                                                                                                         |  |  |   |            +--| (49)
+|                                                                                                         |  |  |   |            |  |        +**ABMU_HOR_LP_306_Du-775
+|                                                                                                         |  |  |   |            |  |     +**| (74)
+|                                                                                                         |  |  |   |            |  |     |  +**ABMU_HOR_LP_361_Du-773
+|                                                                                                         |  |  |   |            |  |  +**| (67)
+|                                                                                                         |  |  |   |            |  |  |  +**ABMU_HOR_LP_308_Du-777
+|                                                                                                         |  |  |   |            |  +--| (83)
+|                                                                                                         |  |  |   |            |     |  +**ABMU_HOR_LP_359_Du-771
+|                                                                                                         |  |  |   |            |     +--| (72)
+|                                                                                                         |  |  |   |            |        +**ABMU_HOR_LP_360_Du-772
+|                                                                                                         |  |  |   +------------| (100)
+|                                                                                                         |  |  |                +**ABMU_HOR_LP_358_Du-770
+|                                                                                                         |  +**| (66)
+|                                                                                                         |     |        +**DU014LP012
+|                                                                                                         |     |     +**| (3)
+|                                                                                                         |     |     |  |           +**CY_BOU_LP_288_Du-737
+|                                                                                                         |     |     |  |        +**| (39)
+|                                                                                                         |     |     |  |        |  +**CY_HICS_LP_297_Du-761
+|                                                                                                         |     |     |  |     +**| (7)
+|                                                                                                         |     |     |  |     |  +--CY_WOO_LP_261_Du-667
+|                                                                                                         |     |     |  |  +**| (19)
+|                                                                                                         |     |     |  |  |  |  +**CY_BOU_LP_291_Du-740
+|                                                                                                         |     |     |  |  |  +**| (3)
+|                                                                                                         |     |     |  |  |     |  +**CY_HICS_LP_295_Du-759
+|                                                                                                         |     |     |  |  |     +--| (41)
+|                                                                                                         |     |     |  |  |        +--CY_WOO_LP_260_Du-665
+|                                                                                                         |     |     |  +**| (16)
+|                                                                                                         |     |     |     +**CY_SIE_LP_191_Du-448
+|                                                                                                         |     |  +**| (4)
+|                                                                                                         |     |  |  |  +**CY_BOU_LP_292_Du-741
+|                                                                                                         |     |  |  +**| (55)
+|                                                                                                         |     |  |     +**CY_HICS_LP_355_Du-762
+|                                                                                                         |     +**| (39)
+|                                                                                                         |        |  +**DU037LP013
+|                                                                                                         |        +**| (1)
+|                                                                                                         |           |        +**CY_ALA_LP_298-Du-767
+|                                                                                                         |           |     +--| (100)
+|                                                                                                         |           |     |  |  +**CY_ALA_LP_299-Du-768
+|                                                                                                         |           |     |  +**| (79)
+|                                                                                                         |           |     |     +**CY_ALA_LP_357_Du-769
+|                                                                                                         |           |  +--| (74)
+|                                                                                                         |           |  |  |     +**CY_CAS_LP_329_Du-611
+|                                                                                                         |           |  |  |  +**| (62)
+|                                                                                                         |           |  |  |  |  +**CY_CAS_LP_331_Du-608
+|                                                                                                         |           |  |  +--| (96)
+|                                                                                                         |           |  |     |  +**CY_CAS_LP_330_Du-607
+|                                                                                                         |           |  |     +**| (46)
+|                                                                                                         |           |  |        +**CY_CAS_LP_332_Du-609
+|                                                                                                         |           +**| (15)
+|                                                                                                         |              |     +**CY_WOO_LP_259_Du-664
+|                                                                                                         |              |  +**| (68)
+|                                                                                                         |              |  |  +**CY_WOO_LP_262_Du-668
+|                                                                                                         |              +--| (62)
+|                                                                                                         |                 +**CY_WOO_LP_263_Du-669
+|                                                                                                      +--| (42)
+|                                                                                                      |  |     +**STI_LP_034_Du-52
+|                                                                                                      |  |  +**| (66)
+|                                                                                                      |  |  |  +**STI_LP_039_Du-57
+|                                                                                                      |  +**| (61)
+|                                                                                                      |     +**STI_LP_041_Du-60
+|                                                                                                   +**| (40)
+|                                                                                                   |  +**STI_LP_032_Du-50
+|                                                                                                +**| (27)
+|                                                                                                |  +**DU059LP015
+|                                                                                             +**| (40)
+|                                                                                             |  +**STI_LP_030_Du-48
+|                                                                                          +**| (6)
+|                                                                                          |  +**STI_LP_038_Du-56
+|                                                                                       +**| (11)
+|                                                                                       |  +**STI_LP_035_Du-53
+|                                                                                    +**| (5)
+|                                                                                    |  +**STI_LP_028_Du-46
+|                                                                                 +--| (4)
+|                                                                                 |  +**STI_LP_033_Du-51
+|                                                                              +**| (8)
+|                                                                              |  +**STI_LP_029_Du-47
+|                                                                           +**| (8)
+|                                                                           |  +**STI_LP_036_Du-54
+|                                                                        +**| (39)
+|                                                                        |  +**STI_LP_031_Du-49
+|                                                                     +--| (57)
+|                                                                     |  +**STI_LP_037_Du-55
+|                                                                  +**| (16)
+|                                                                  |  +**TIL_LP_125_Du-265
+|                                                               +**| (22)
+|                                                               |  +**TIL_LP_126_Du-266
+|                                                            +--| (18)
+|                                                            |  |        +**DU-270
+|                                                            |  |     +--| (67)
+|                                                            |  |     |  |  +**TIL_LP_129_Du-269
+|                                                            |  |     |  +**| (42)
+|                                                            |  |     |     |  +**TIL_LP_130_Du-271
+|                                                            |  |     |     +**| (76)
+|                                                            |  |     |        +**TIL_LP_131_Du-272
+|                                                            |  |  +--| (63)
+|                                                            |  |  |  +**TIL_LP_123_Du-263
+|                                                            |  +**| (41)
+|                                                            |     |           +**STI_LP_027_Du-45
+|                                                            |     |        +**| (90)
+|                                                            |     |        |  +**STI_LP_040_Du-58
+|                                                            |     |     +--| (63)
+|                                                            |     |     |  +**STI_LP_042_Du-61
+|                                                            |     |  +--| (64)
+|                                                            |     |  |  +**TIL_LP_124_Du-264
+|                                                            |     +--| (88)
+|                                                            |        |  +--TIL_LP_127_Du-267
+|                                                            |        +**| (69)
+|                                                            |           +**TIL_LP_128_Du-268
+|                                                         +--| (24)
+|                                                         |  |     +**RSV_LP_049_Du-85
+|                                                         |  |  +**| (18)
+|                                                         |  |  |  |     +**RSV_LP_050_Du-87
+|                                                         |  |  |  |  +--| (67)
+|                                                         |  |  |  |  |  |  +**RSV_LP_051_Du-88
+|                                                         |  |  |  |  |  +**| (46)
+|                                                         |  |  |  |  |     +**RSV_LP_053_Du-90
+|                                                         |  |  |  +**| (21)
+|                                                         |  |  |     |     +**RSV_LP_055_Du-92
+|                                                         |  |  |     |  +**| (77)
+|                                                         |  |  |     |  |  +**RSV_LP_057_Du-94
+|                                                         |  |  |     +**| (62)
+|                                                         |  |  |        +**RSV_LP_315_Du-95
+|                                                         |  +**| (17)
+|                                                         |     +**RSV_LP_052_Du-89
+|                                                     +---| (99)
+|                                                     |   +**RSV_LP_316_Du-96
+|                                                  +**| (49)
+|                                                  |  +**QUI2_LP_339_Du-640
+|                                               +**| (21)
+|                                               |  +**QUI2_LP_246_Du-634
+|                                            +**| (17)
+|                                            |  +**QUI2_LP_243_Du-631
+|                                         +**| (11)
+|                                         |  +**QUIN_LP_074_Du-160
+|                                      +**| (12)
+|                                      |  +**QUIN_LP_075_Du-161
+|                                   +**| (12)
+|                                   |  +**QUIN_LP_071_Du-157
+|                                +**| (8)
+|                                |  +**QUI2_LP_245_Du-633
+|                             +**| (3)
+|                             |  +**QUI2_LP_340_Du-641
+|                          +**| (3)
+|                          |  +**QUI2_LP_248_Du-636
+|                       +**| (1)
+|                       |  +**QUI2_LP_247_Du-635
+|                    +**| (3)
+|                    |  +**QUIN_LP_073_Du-159
+|                 +**| (1)
+|                 |  +**QUI2_LP_244_Du-632
+|              +**| (8)
+|              |  +**QUIN_LP_072_Du-158
+|           +**| (1)
+|           |  +**QUI2_LP_338_Du-639
+|        +**| (1)
+|        |  +**QUI2_LP_337_Du-638
+|     +**| (7)
+|     |  +**QUIN_LP_318_Du-164
+|  +**| (23)
+|  |  +**QUIN_LP_070_Du-156
++**| (15)
+|  +**QUIN_LP_077_Du-163
+|
+|  +**QUIN_LP_069_Du-155
++**| (28)
+   +**QUIN_LP_076_Du-162
+
+Tree in newick format:
+
+(DU-173:0.0000010000,((((((((((((((((((((((((((((((((((((((((((DU-229:0.0000010000,BAI_LP_106_Du-223:0.0000010000)86:0.0000222737,(BAI_LP_109_Du-226:0.0000010000,BAI_LP_113_Du-231:0.0000010000)85:0.0000010000)63:0.0000010000,(BAI_LP_105_Du-222:0.0000010000,BAI_LP_108_Du-225:0.0000010000)89:0.0000222737)97:0.0000669225,(((DOV_LP_078_Du-174:0.0000010000,DOV_LP_079_Du-175:0.0000010000)88:0.0000010000,(((SILG_LP_149_Du-343:0.0000010000,SILG_LP_158_Du-352:0.0000010000)26:0.0000010000,SILG_LP_150_Du-344:0.0000010000)76:0.0000010000,SILG_LP_157_Du-351:0.0000010000)79:0.0000222737)74:0.0000010000,((SILG_LP_151_Du-345:0.0000010000,SILG_LP_152_Du-346:0.0000010000)74:0.0000010000,SILG_LP_156_Du-350:0.0000010000)98:0.0000669225)97:0.0000669225)77:0.0000010000,(((((DU-247:0.0000010000,DU-254:0.0000010000)22:0.0000010000,((((COM_LP_269_Du-703:0.0000222737,(COM_LP_274_Du-709:0.0000010000,COM_LP_277_Du-712:0.0000010000)89:0.0000010000)64:0.0000222737,(COM_LP_270_Du-704:0.0000010000,COM_LP_272_Du-707:0.0000010000)87:0.0000010000)99:0.0001117069,(TULP_LP_143_Du-305:0.0000010000,TULP_LP_144_Du-306:0.0000010000)88:0.0000010000)48:0.0000222737,TULP_LP_140_Du-302:0.0000010000)8:0.0000010000)3:0.0000010000,((((DU-4A:0.0000010000,CROS_LP_085_Du-181:0.0000010000)87:0.0000222737,((CROB_LP_169_Du-381:0.0000010000,(CROB_LP_170_Du-382:0.0000010000,CROB_LP_173_Du-385:0.0000010000)88:0.0000010000)78:0.0000222737,(CROS_LP_089_Du-185:0.0000010000,DUD_LP_137_Du-288:0.0000010000)81:0.0000010000)62:0.0000010000)89:0.0000445812,((CROB_LP_172_Du-384:0.0000010000,MALV_LP_095_Du-201:0.0000010000)85:0.0000222737,(CROS_LP_093_Du-189:0.0000010000,KIRN_LP_179_Du-421:0.0000010000)78:0.0000010000)52:0.0000010000)77:0.0000222737,((((((DU078LP011:0.0000010000,((DAN_LP_043_Du-68:0.0000222737,DAN_LP_047_Du-72:0.0000010000)29:0.0000010000,DAN_LP_044_Du-69:0.0000010000)28:0.0000010000)29:0.0000010000,DAN_LP_045_Du-70:0.0000010000)28:0.0000010000,DAN_LP_046_Du-71:0.0000010000)29:0.0000010000,DU079LP010:0.0000010000)97:0.0000445812,(SILR_LP_346_Du-729:0.0000010000,SILR_LP_347_Du-730:0.0000010000)100:0.0000010000)98:0.0001117069,((((((((CROS_LP_091_Du-187:0.0000010000,CROS_LP_094_Du-190:0.0000010000)90:0.0000222737,CROS_LP_092_Du-188:0.0000010000)46:0.0000222737,(TULP_LP_120_Du-248:0.0000010000,TULP_LP_145_Du-307:0.0000010000)69:0.0000010000)33:0.0000010000,TULP_LP_141_Du-303:0.0000010000)7:0.0000010000,TULP_LP_115_Du-242:0.0000010000)7:0.0000010000,TULP_LP_147_Du-309:0.0000010000)19:0.0000010000,TULP_LP_148_Du-310:0.0000010000)12:0.0000010000,TULP_LP_142_Du-304:0.0000010000)86:0.0000432952)11:0.0000010000)14:0.0000010000)13:0.0000010000,TULP_LP_146_Du-308:0.0000010000)80:0.0000222737,RIC_LP_197_Du-526:0.0000669225)71:0.0000445812)56:0.0000222737,(((((((QUI1_LP_249_Du-648:0.0000010000,QUI1_LP_250_Du-649:0.0000222737)73:0.0000651406,QUI1_LP_251_Du-650:0.0000222737)33:0.0000010000,QUI1_LP_252_Du-651:0.0000010000)24:0.0000010000,QUI1_LP_254_Du-653:0.0000010000)33:0.0000010000,QUI1_LP_255_Du-654:0.0000010000)1:0.0000010000,QUI1_LP_253_Du-652:0.0000010000)15:0.0000010000,(QUI1_LP_257_Du-656:0.0000010000,QUI1_LP_258_Du-657:0.0000010000)28:0.0000222737)74:0.0000222737)52:0.0000010000,(((((((((DU-443:0.0000010000,CY_SIE_LP_189_Du-446:0.0000010000)91:0.0000028433,(CY_HICN_LP_334_Du-613:0.0000010000,CY_HICN_LP_336_Du-616:0.0000010000)81:0.0000220914)49:0.0000217292,(CY_HICN_LP_236_Du-614:0.0000010000,(CY_SIE_LP_188_Du-445:0.0000010000,CY_SIE_LP_190_Du-447:0.0000010000)15:0.0000010000)84:0.0000028557)79:0.0000445452,CY_HICN_LP_335_Du-615:0.0000010000)99:0.0000669225,CY_HICN_LP_333_Du-612:0.0000445812)100:0.0002016838,CY_CAS_LP_328_Du-610:0.0000010000)100:0.0002329917,(((((ABBE_BERN_LP_311_Du-780:0.0000010000,CY_BGL_LP_210_Du-577:0.0000010000)83:0.0000010000,(ABBE_BERN_LP_313_Du-782:0.0000010000,ABBE_BERN_LP_314_Du-783:0.0000010000)74:0.0000010000)69:0.0000214380,(((CY_BAL_LP_226_Du-602:0.0000010000,CY_BAL_LP_227_Du-603:0.0000010000)99:0.0000010000,CY_BAL_LP_228_Du-604:0.0000010000)100:0.0001791384,CY_BGL_LP_212_Du-579:0.0000023296)43:0.0000222737)38:0.0000010000,ABBE_BERN_LP_312_Du-781:0.0000010000)100:0.0001431252,((((CY_HUN_LP_264_Du-683:0.0000010000,CY_HUN_LP_267_Du-686:0.0000010000)77:0.0000010000,CY_HUN_LP_268_Du-687:0.0000010000)53:0.0000010000,CY_HUN_LP_266_Du-685:0.0000010000)99:0.0000474432,((((OCO_LP_058_Du-115:0.0000010000,OCO_LP_067_Du-114:0.0000010000)28:0.0000010000,(OCO_LP_063_Du-110:0.0000010000,OCO_LP_064_Du-111:0.0000010000)66:0.0000222737)25:0.0000010000,(((OCO_LP_059_Du-106:0.0000010000,OCO_LP_060_Du-107:0.0000010000)98:0.0000010000,OCO_LP_061_Du-108:0.0000010000)67:0.0000222737,(OCO_LP_062_Du-109:0.0000010000,OCO_LP_065_Du-112:0.0000010000)58:0.0000010000)88:0.0000445812)36:0.0000010000,OCO_LP_066_Du-113:0.0000222737)92:0.0000866758)100:0.0002570092)62:0.0000264102)100:0.0003487397,((((((ABAB_MAD_LP_223_Du-590:0.0000010000,ABAB_MAD_LP_327_Du-598:0.0000010000)46:0.0000010000,(ABAB_MAD_LP_322_Du-593:0.0000010000,(ABAB_MAD_LP_323_Du-594:0.0000010000,ABAB_MAD_LP_324_Du-595:0.0000010000)97:0.0000222737)29:0.0000010000)70:0.0000222737,ABAB_MAD_LP_326_Du-597:0.0000010000)96:0.0000669225,ABAB_MAD_LP_325_Du-596:0.0000010000)84:0.0000222737,(((ABMU_HOR_LP_306_Du-775:0.0000010000,ABMU_HOR_LP_361_Du-773:0.0000010000)74:0.0000010000,ABMU_HOR_LP_308_Du-777:0.0000010000)67:0.0000010000,(ABMU_HOR_LP_359_Du-771:0.0000010000,ABMU_HOR_LP_360_Du-772:0.0000010000)72:0.0000222737)83:0.0000445812)49:0.0000222737,ABMU_HOR_LP_358_Du-770:0.0000010000)100:0.0003109003)95:0.0001137443,(((DU014LP012:0.0000010000,((((CY_BOU_LP_288_Du-737:0.0000010000,CY_HICS_LP_297_Du-761:0.0000010000)39:0.0000010000,CY_WOO_LP_261_Du-667:0.0000222737)7:0.0000010000,(CY_BOU_LP_291_Du-740:0.0000010000,(CY_HICS_LP_295_Du-759:0.0000010000,CY_WOO_LP_260_Du-665:0.0000222737)41:0.0000222737)3:0.0000010000)19:0.0000010000,CY_SIE_LP_191_Du-448:0.0000010000)16:0.0000010000)3:0.0000010000,(CY_BOU_LP_292_Du-741:0.0000010000,CY_HICS_LP_355_Du-762:0.0000010000)55:0.0000010000)4:0.0000010000,(DU037LP013:0.0000010000,(((CY_ALA_LP_298-Du-767:0.0000010000,(CY_ALA_LP_299-Du-768:0.0000010000,CY_ALA_LP_357_Du-769:0.0000010000)79:0.0000010000)100:0.0000445812,((CY_CAS_LP_329_Du-611:0.0000010000,CY_CAS_LP_331_Du-608:0.0000010000)62:0.0000010000,(CY_CAS_LP_330_Du-607:0.0000010000,CY_CAS_LP_332_Du-609:0.0000010000)46:0.0000010000)96:0.0000222737)74:0.0000222737,((CY_WOO_LP_259_Du-664:0.0000010000,CY_WOO_LP_262_Du-668:0.0000010000)68:0.0000010000,CY_WOO_LP_263_Du-669:0.0000010000)62:0.0000222737)15:0.0000010000)1:0.0000010000)39:0.0000010000)66:0.0000212514)98:0.0000892977,((STI_LP_034_Du-52:0.0000010000,STI_LP_039_Du-57:0.0000010000)66:0.0000010000,STI_LP_041_Du-60:0.0000010000)61:0.0000010000)42:0.0000222737,STI_LP_032_Du-50:0.0000010000)40:0.0000010000,DU059LP015:0.0000010000)27:0.0000010000,STI_LP_030_Du-48:0.0000010000)40:0.0000010000,STI_LP_038_Du-56:0.0000010000)6:0.0000010000,STI_LP_035_Du-53:0.0000010000)11:0.0000010000,STI_LP_028_Du-46:0.0000010000)5:0.0000010000,STI_LP_033_Du-51:0.0000010000)4:0.0000264981,STI_LP_029_Du-47:0.0000010000)8:0.0000010000,STI_LP_036_Du-54:0.0000010000)8:0.0000010000,STI_LP_031_Du-49:0.0000010000)39:0.0000010000,STI_LP_037_Du-55:0.0000010000)57:0.0000329943,TIL_LP_125_Du-265:0.0000010000)16:0.0000010000,TIL_LP_126_Du-266:0.0000010000)22:0.0000023296,(((DU-270:0.0000010000,(TIL_LP_129_Du-269:0.0000010000,(TIL_LP_130_Du-271:0.0000010000,TIL_LP_131_Du-272:0.0000010000)76:0.0000010000)42:0.0000010000)67:0.0000222737,TIL_LP_123_Du-263:0.0000010000)63:0.0000222737,((((STI_LP_027_Du-45:0.0000010000,STI_LP_040_Du-58:0.0000010000)90:0.0000010000,STI_LP_042_Du-61:0.0000010000)63:0.0000222737,TIL_LP_124_Du-264:0.0000010000)64:0.0000222737,(TIL_LP_127_Du-267:0.0000238317,TIL_LP_128_Du-268:0.0000010000)69:0.0000010000)88:0.0000445812)41:0.0000010000)18:0.0000223190,((RSV_LP_049_Du-85:0.0000010000,((RSV_LP_050_Du-87:0.0000010000,(RSV_LP_051_Du-88:0.0000010000,RSV_LP_053_Du-90:0.0000010000)46:0.0000010000)67:0.0000222737,((RSV_LP_055_Du-92:0.0000010000,RSV_LP_057_Du-94:0.0000010000)77:0.0000010000,RSV_LP_315_Du-95:0.0000010000)62:0.0000010000)21:0.0000010000)18:0.0000010000,RSV_LP_052_Du-89:0.0000010000)17:0.0000021050)24:0.0000222737,RSV_LP_316_Du-96:0.0000023296)99:0.0001093576,QUI2_LP_339_Du-640:0.0000010000)49:0.0000010000,QUI2_LP_246_Du-634:0.0000010000)21:0.0000010000,QUI2_LP_243_Du-631:0.0000010000)17:0.0000010000,QUIN_LP_074_Du-160:0.0000010000)11:0.0000010000,QUIN_LP_075_Du-161:0.0000010000)12:0.0000023296,QUIN_LP_071_Du-157:0.0000010000)12:0.0000010000,QUI2_LP_245_Du-633:0.0000010000)8:0.0000010000,QUI2_LP_340_Du-641:0.0000010000)3:0.0000010000,QUI2_LP_248_Du-636:0.0000010000)3:0.0000010000,QUI2_LP_247_Du-635:0.0000010000)1:0.0000010000,QUIN_LP_073_Du-159:0.0000010000)3:0.0000010000,QUI2_LP_244_Du-632:0.0000010000)1:0.0000010000,QUIN_LP_072_Du-158:0.0000010000)8:0.0000010000,QUI2_LP_338_Du-639:0.0000010000)1:0.0000010000,QUI2_LP_337_Du-638:0.0000010000)1:0.0000010000,QUIN_LP_318_Du-164:0.0000010000)7:0.0000010000,QUIN_LP_070_Du-156:0.0000010000)23:0.0000010000,QUIN_LP_077_Du-163:0.0000010000)15:0.0000010000,(QUIN_LP_069_Du-155:0.0000010000,QUIN_LP_076_Du-162:0.0000010000)28:0.0000010000);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -64216.605276
+Robinson-Foulds distance between ML tree and consensus tree: 104
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--DU-173
+|
+|                                                                                                                  +**DU-229
+|                                                                                                               +**|
+|                                                                                                               |  +**BAI_LP_111_Du-228
+|                                                                                                            +--|
+|                                                                                                            |  +**BAI_LP_110_Du-227
+|                                                                                                         +--| (86)
+|                                                                                                         |  +--BAI_LP_106_Du-223
+|                                                                                                      +--| (63)
+|                                                                                                      |  |  +--BAI_LP_109_Du-226
+|                                                                                                      |  +--| (85)
+|                                                                                                      |     +--BAI_LP_113_Du-231
+|                                                                                                   +--| (97)
+|                                                                                                   |  |           +**BAI_LP_105_Du-222
+|                                                                                                   |  |        +**|
+|                                                                                                   |  |        |  +**BAI_LP_112_Du-230
+|                                                                                                   |  |     +**|
+|                                                                                                   |  |     |  +**BAI_LP_114_Du-232
+|                                                                                                   |  |  +--|
+|                                                                                                   |  |  |  +**BAI_LP_319_Du-233
+|                                                                                                   |  +--| (89)
+|                                                                                                   |     +--BAI_LP_108_Du-225
+|                                                                                                +--| (77)
+|                                                                                                |  |                       +**DOV_LP_078_Du-174
+|                                                                                                |  |                    +**|
+|                                                                                                |  |                    |  +**DOV_LP_080_Du-176
+|                                                                                                |  |                 +**|
+|                                                                                                |  |                 |  +**DOV_LP_081_Du-177
+|                                                                                                |  |              +**|
+|                                                                                                |  |              |  +**DOV_LP_083_Du-179
+|                                                                                                |  |           +**|
+|                                                                                                |  |           |  +**DOV_LP_082_Du-178
+|                                                                                                |  |        +--|
+|                                                                                                |  |        |  +**DOV_LP_084_Du-180
+|                                                                                                |  |     +--| (88)
+|                                                                                                |  |     |  +--DOV_LP_079_Du-175
+|                                                                                                |  |  +--| (74)
+|                                                                                                |  |  |  |              +**SILG_LP_149_Du-343
+|                                                                                                |  |  |  |           +**|
+|                                                                                                |  |  |  |           |  +**SILG_LP_154_Du-348
+|                                                                                                |  |  |  |        +--|
+|                                                                                                |  |  |  |        |  +**SILG_LP_153_Du-347
+|                                                                                                |  |  |  |     +--| (38)
+|                                                                                                |  |  |  |     |  +--SILG_LP_150_Du-344
+|                                                                                                |  |  |  |  +--| (76)
+|                                                                                                |  |  |  |  |  +--SILG_LP_158_Du-352
+|                                                                                                |  |  |  +--| (79)
+|                                                                                                |  |  |     +--SILG_LP_157_Du-351
+|                                                                                                |  +--| (97)
+|                                                                                                |     |        +**SILG_LP_151_Du-345
+|                                                                                                |     |     +--|
+|                                                                                                |     |     |  +**SILG_LP_155_Du-349
+|                                                                                                |     |  +--| (74)
+|                                                                                                |     |  |  +--SILG_LP_152_Du-346
+|                                                                                                |     +--| (98)
+|                                                                                                |        +--SILG_LP_156_Du-350
+|                                                                                             +--| (56)
+|                                                                                             |  |                                                     +**DU-247
+|                                                                                             |  |                                                  +**|
+|                                                                                             |  |                                                  |  +**DUD_LP_132_Du-283
+|                                                                                             |  |                                               +**|
+|                                                                                             |  |                                               |  +**TULP_LP_116_Du-243
+|                                                                                             |  |                                            +**|
+|                                                                                             |  |                                            |  +**TULP_LP_122_Du-250
+|                                                                                             |  |                                         +**|
+|                                                                                             |  |                                         |  +**DUD_LP_135_Du-286
+|                                                                                             |  |                                      +**|
+|                                                                                             |  |                                      |  +**DUD_LP_133_Du-284
+|                                                                                             |  |                                   +**|
+|                                                                                             |  |                                   |  +**DUD_LP_134_Du-285
+|                                                                                             |  |                                +**|
+|                                                                                             |  |                                |  +**TULP_LP_119_Du-246
+|                                                                                             |  |                             +**|
+|                                                                                             |  |                             |  +**TULP_LP_117_Du-244
+|                                                                                             |  |                          +**|
+|                                                                                             |  |                          |  +**DUD_LP_136_Du-287
+|                                                                                             |  |                       +**|
+|                                                                                             |  |                       |  +**TULP_LP_121_Du-249
+|                                                                                             |  |                    +**|
+|                                                                                             |  |                    |  +**DUD_LP_138_Du-289
+|                                                                                             |  |                 +**|
+|                                                                                             |  |                 |  +**DUD_LP_139_Du-290
+|                                                                                             |  |              +**|
+|                                                                                             |  |              |  +**TULP_LP_118_Du-245
+|                                                                                             |  |           +--|
+|                                                                                             |  |           |  +**DU-297
+|                                                                                             |  |        +--| (22)
+|                                                                                             |  |        |  +--DU-254
+|                                                                                             |  |     +--| (32)
+|                                                                                             |  |     |  |                             +**DU-4A
+|                                                                                             |  |     |  |                          +**|
+|                                                                                             |  |     |  |                          |  +**CROS_LP_090_Du-186
+|                                                                                             |  |     |  |                       +**|
+|                                                                                             |  |     |  |                       |  +**CROS_LP_088_Du-184
+|                                                                                             |  |     |  |                    +**|
+|                                                                                             |  |     |  |                    |  +**CROS_LP_086_Du-182
+|                                                                                             |  |     |  |                 +--|
+|                                                                                             |  |     |  |                 |  +**CROS_LP_087_Du-183
+|                                                                                             |  |     |  |              +--| (87)
+|                                                                                             |  |     |  |              |  +--CROS_LP_085_Du-181
+|                                                                                             |  |     |  |           +--| (89)
+|                                                                                             |  |     |  |           |  |     +--CROB_LP_169_Du-381
+|                                                                                             |  |     |  |           |  |  +--| (78)
+|                                                                                             |  |     |  |           |  |  |  |                    +**CROB_LP_170_Du-382
+|                                                                                             |  |     |  |           |  |  |  |                 +**|
+|                                                                                             |  |     |  |           |  |  |  |                 |  +**CROB_LP_321_Du-396
+|                                                                                             |  |     |  |           |  |  |  |              +**|
+|                                                                                             |  |     |  |           |  |  |  |              |  +**CROB_LP_174_Du-386
+|                                                                                             |  |     |  |           |  |  |  |           +**|
+|                                                                                             |  |     |  |           |  |  |  |           |  +**CROB_LP_175_Du-387
+|                                                                                             |  |     |  |           |  |  |  |        +**|
+|                                                                                             |  |     |  |           |  |  |  |        |  +**CROB_LP_320_Du-395
+|                                                                                             |  |     |  |           |  |  |  |     +**|
+|                                                                                             |  |     |  |           |  |  |  |     |  +**CROB_LP_177_Du-389
+|                                                                                             |  |     |  |           |  |  |  |  +--|
+|                                                                                             |  |     |  |           |  |  |  |  |  +**CROB_LP_176_Du-388
+|                                                                                             |  |     |  |           |  |  |  +--| (88)
+|                                                                                             |  |     |  |           |  |  |     +--CROB_LP_173_Du-385
+|                                                                                             |  |     |  |           |  +--| (62)
+|                                                                                             |  |     |  |           |     |  +--CROS_LP_089_Du-185
+|                                                                                             |  |     |  |           |     +--| (81)
+|                                                                                             |  |     |  |           |        +--DUD_LP_137_Du-288
+|                                                                                             |  |     |  |        +--| (77)
+|                                                                                             |  |     |  |        |  |                                +**CROB_LP_172_Du-384
+|                                                                                             |  |     |  |        |  |                             +**|
+|                                                                                             |  |     |  |        |  |                             |  +**MALV_LP_103_Du-209
+|                                                                                             |  |     |  |        |  |                          +**|
+|                                                                                             |  |     |  |        |  |                          |  +**MALV_LP_100_Du-206
+|                                                                                             |  |     |  |        |  |                       +**|
+|                                                                                             |  |     |  |        |  |                       |  +**MALV_LP_098_Du-204
+|                                                                                             |  |     |  |        |  |                    +**|
+|                                                                                             |  |     |  |        |  |                    |  +**MALV_LP_099_Du-205
+|                                                                                             |  |     |  |        |  |                 +**|
+|                                                                                             |  |     |  |        |  |                 |  +**MALV_LP_097_Du-203
+|                                                                                             |  |     |  |        |  |              +**|
+|                                                                                             |  |     |  |        |  |              |  +**MALV_LP_096_Du-202
+|                                                                                             |  |     |  |        |  |           +**|
+|                                                                                             |  |     |  |        |  |           |  +**MALV_LP_101_Du-207
+|                                                                                             |  |     |  |        |  |        +**|
+|                                                                                             |  |     |  |        |  |        |  +**MALV_LP_104_Du-210
+|                                                                                             |  |     |  |        |  |     +--|
+|                                                                                             |  |     |  |        |  |     |  +**MALV_LP_102_Du-208
+|                                                                                             |  |     |  |        |  |  +--| (85)
+|                                                                                             |  |     |  |        |  |  |  +--MALV_LP_095_Du-201
+|                                                                                             |  |     |  |        |  +--| (52)
+|                                                                                             |  |     |  |        |     |                                                                                   +**CROS_LP_093_Du-189
+|                                                                                             |  |     |  |        |     |                                                                                +**|
+|                                                                                             |  |     |  |        |     |                                                                                |  +**RIC_LP_193_Du-522
+|                                                                                             |  |     |  |        |     |                                                                             +**|
+|                                                                                             |  |     |  |        |     |                                                                             |  +**KIRT_LP_161_Du-366
+|                                                                                             |  |     |  |        |     |                                                                          +**|
+|                                                                                             |  |     |  |        |     |                                                                          |  +**KIRN_LP_184_Du-426
+|                                                                                             |  |     |  |        |     |                                                                       +**|
+|                                                                                             |  |     |  |        |     |                                                                       |  +**KIRN_LP_181_Du-423
+|                                                                                             |  |     |  |        |     |                                                                    +**|
+|                                                                                             |  |     |  |        |     |                                                                    |  +**KIRT_LP_168_Du-373
+|                                                                                             |  |     |  |        |     |                                                                 +**|
+|                                                                                             |  |     |  |        |     |                                                                 |  +**RIC_LP_196_Du-525
+|                                                                                             |  |     |  |        |     |                                                              +**|
+|                                                                                             |  |     |  |        |     |                                                              |  +**RIC_LP_199_Du-528
+|                                                                                             |  |     |  |        |     |                                                           +**|
+|                                                                                             |  |     |  |        |     |                                                           |  +**KIRT_LP_159_Du-364
+|                                                                                             |  |     |  |        |     |                                                        +**|
+|                                                                                             |  |     |  |        |     |                                                        |  +**KIRT_LP_162_Du-367
+|                                                                                             |  |     |  |        |     |                                                     +**|
+|                                                                                             |  |     |  |        |     |                                                     |  +**KIRN_LP_185_Du-427
+|                                                                                             |  |     |  |        |     |                                                  +**|
+|                                                                                             |  |     |  |        |     |                                                  |  +**KIRN_LP_180_Du-422
+|                                                                                             |  |     |  |        |     |                                               +**|
+|                                                                                             |  |     |  |        |     |                                               |  +**RIC_LP_192_Du-521
+|                                                                                             |  |     |  |        |     |                                            +**|
+|                                                                                             |  |     |  |        |     |                                            |  +**KIRT_LP_163_Du-368
+|                                                                                             |  |     |  |        |     |                                         +**|
+|                                                                                             |  |     |  |        |     |                                         |  +**KIRT_LP_164_Du-369
+|                                                                                             |  |     |  |        |     |                                      +**|
+|                                                                                             |  |     |  |        |     |                                      |  +**KIRT_LP_167_Du-372
+|                                                                                             |  |     |  |        |     |                                   +**|
+|                                                                                             |  |     |  |        |     |                                   |  +**KIRT_LP_166_Du-371
+|                                                                                             |  |     |  |        |     |                                +**|
+|                                                                                             |  |     |  |        |     |                                |  +**RIC_LP_198_Du-527
+|                                                                                             |  |     |  |        |     |                             +**|
+|                                                                                             |  |     |  |        |     |                             |  +**RIC_LP_195_Du-524
+|                                                                                             |  |     |  |        |     |                          +**|
+|                                                                                             |  |     |  |        |     |                          |  +**RIC_LP_201_Du-530
+|                                                                                             |  |     |  |        |     |                       +**|
+|                                                                                             |  |     |  |        |     |                       |  +**KIRT_LP_165_Du-370
+|                                                                                             |  |     |  |        |     |                    +**|
+|                                                                                             |  |     |  |        |     |                    |  +**RIC_LP_200_Du-529
+|                                                                                             |  |     |  |        |     |                 +**|
+|                                                                                             |  |     |  |        |     |                 |  +**RIC_LP_194_Du-523
+|                                                                                             |  |     |  |        |     |              +**|
+|                                                                                             |  |     |  |        |     |              |  +**KIRN_LP_186_Du-428
+|                                                                                             |  |     |  |        |     |           +**|
+|                                                                                             |  |     |  |        |     |           |  +**KIRN_LP_187_Du-429
+|                                                                                             |  |     |  |        |     |        +**|
+|                                                                                             |  |     |  |        |     |        |  +**KIRN_LP_182_Du-424
+|                                                                                             |  |     |  |        |     |     +**|
+|                                                                                             |  |     |  |        |     |     |  +**KIRT_LP_160_Du-365
+|                                                                                             |  |     |  |        |     |  +--|
+|                                                                                             |  |     |  |        |     |  |  +**KIRN_LP_183_Du-425
+|                                                                                             |  |     |  |        |     +--| (78)
+|                                                                                             |  |     |  |        |        +--KIRN_LP_179_Du-421
+|                                                                                             |  |     |  |     +--| (22)
+|                                                                                             |  |     |  |     |  |                    +--CROS_LP_091_Du-187
+|                                                                                             |  |     |  |     |  |                 +--| (90)
+|                                                                                             |  |     |  |     |  |                 |  +--CROS_LP_094_Du-190
+|                                                                                             |  |     |  |     |  |              +--| (46)
+|                                                                                             |  |     |  |     |  |              |  +--CROS_LP_092_Du-188
+|                                                                                             |  |     |  |     |  |           +--| (33)
+|                                                                                             |  |     |  |     |  |           |  |  +--TULP_LP_120_Du-248
+|                                                                                             |  |     |  |     |  |           |  +--| (69)
+|                                                                                             |  |     |  |     |  |           |     +--TULP_LP_145_Du-307
+|                                                                                             |  |     |  |     |  |        +--| (10)
+|                                                                                             |  |     |  |     |  |        |  +--TULP_LP_147_Du-309
+|                                                                                             |  |     |  |     |  |     +--| (8)
+|                                                                                             |  |     |  |     |  |     |  +--TULP_LP_115_Du-242
+|                                                                                             |  |     |  |     |  |  +--| (19)
+|                                                                                             |  |     |  |     |  |  |  +--TULP_LP_141_Du-303
+|                                                                                             |  |     |  |     |  +--| (86)
+|                                                                                             |  |     |  |     |     |  +--TULP_LP_142_Du-304
+|                                                                                             |  |     |  |     |     +--| (13)
+|                                                                                             |  |     |  |     |        +--TULP_LP_148_Du-310
+|                                                                                             |  |     |  |  +--| (13)
+|                                                                                             |  |     |  |  |  |                     +--DU078LP011
+|                                                                                             |  |     |  |  |  |                  +--| (39)
+|                                                                                             |  |     |  |  |  |                  |  +--DAN_LP_045_Du-70
+|                                                                                             |  |     |  |  |  |               +--| (40)
+|                                                                                             |  |     |  |  |  |               |  +--DAN_LP_046_Du-71
+|                                                                                             |  |     |  |  |  |            +--| (40)
+|                                                                                             |  |     |  |  |  |            |  +--DU079LP010
+|                                                                                             |  |     |  |  |  |         +--| (35)
+|                                                                                             |  |     |  |  |  |         |  |  +--DAN_LP_043_Du-68
+|                                                                                             |  |     |  |  |  |         |  +--| (29)
+|                                                                                             |  |     |  |  |  |         |     +--DAN_LP_047_Du-72
+|                                                                                             |  |     |  |  |  |      +--| (97)
+|                                                                                             |  |     |  |  |  |      |  +--DAN_LP_044_Du-69
+|                                                                                             |  |     |  |  |  |  +---| (98)
+|                                                                                             |  |     |  |  |  |  |   |              +**SILR_LP_346_Du-729
+|                                                                                             |  |     |  |  |  |  |   |           +**|
+|                                                                                             |  |     |  |  |  |  |   |           |  +**SILR_LP_351_Du-734
+|                                                                                             |  |     |  |  |  |  |   |        +**|
+|                                                                                             |  |     |  |  |  |  |   |        |  +**SILR_LP_349_Du-732
+|                                                                                             |  |     |  |  |  |  |   |     +**|
+|                                                                                             |  |     |  |  |  |  |   |     |  +**SILR_LP_353_Du-736
+|                                                                                             |  |     |  |  |  |  |   |  +--|
+|                                                                                             |  |     |  |  |  |  |   |  |  +**SILR_LP_348_Du-731
+|                                                                                             |  |     |  |  |  |  |   +--| (100)
+|                                                                                             |  |     |  |  |  |  |      +--SILR_LP_347_Du-730
+|                                                                                             |  |     |  |  |  +--| (37)
+|                                                                                             |  |     |  |  |     |         +--COM_LP_269_Du-703
+|                                                                                             |  |     |  |  |     |      +--| (64)
+|                                                                                             |  |     |  |  |     |      |  |     +**COM_LP_274_Du-709
+|                                                                                             |  |     |  |  |     |      |  |  +--|
+|                                                                                             |  |     |  |  |     |      |  |  |  +**COM_LP_343_Du-715
+|                                                                                             |  |     |  |  |     |      |  +--| (89)
+|                                                                                             |  |     |  |  |     |      |     +--COM_LP_277_Du-712
+|                                                                                             |  |     |  |  |     |  +---| (99)
+|                                                                                             |  |     |  |  |     |  |   |           +**COM_LP_270_Du-704
+|                                                                                             |  |     |  |  |     |  |   |        +**|
+|                                                                                             |  |     |  |  |     |  |   |        |  +**COM_LP_276_Du-711
+|                                                                                             |  |     |  |  |     |  |   |     +**|
+|                                                                                             |  |     |  |  |     |  |   |     |  +**COM_LP_342_Du-714
+|                                                                                             |  |     |  |  |     |  |   |  +--|
+|                                                                                             |  |     |  |  |     |  |   |  |  +**COM_LP_341_Du-713
+|                                                                                             |  |     |  |  |     |  |   +--| (87)
+|                                                                                             |  |     |  |  |     |  |      +--COM_LP_272_Du-707
+|                                                                                             |  |     |  |  |     +--| (48)
+|                                                                                             |  |     |  |  |        |  +--TULP_LP_143_Du-305
+|                                                                                             |  |     |  |  |        +--| (88)
+|                                                                                             |  |     |  |  |           +--TULP_LP_144_Du-306
+|                                                                                             |  |     |  +--| (8)
+|                                                                                             |  |     |     +--TULP_LP_146_Du-308
+|                                                                                             |  |  +--| (80)
+|                                                                                             |  |  |  +--TULP_LP_140_Du-302
+|                                                                                             |  +--| (71)
+|                                                                                             |     +--RIC_LP_197_Du-526
+|                                                                                          +--| (52)
+|                                                                                          |  |                 +--QUI1_LP_249_Du-648
+|                                                                                          |  |              +--| (73)
+|                                                                                          |  |              |  +--QUI1_LP_250_Du-649
+|                                                                                          |  |           +--| (39)
+|                                                                                          |  |           |  +--QUI1_LP_257_Du-656
+|                                                                                          |  |        +--| (17)
+|                                                                                          |  |        |  +--QUI1_LP_251_Du-650
+|                                                                                          |  |     +--| (20)
+|                                                                                          |  |     |  +--QUI1_LP_254_Du-653
+|                                                                                          |  |  +--| (46)
+|                                                                                          |  |  |  +--QUI1_LP_252_Du-651
+|                                                                                          |  +--| (74)
+|                                                                                          |     |     +--QUI1_LP_253_Du-652
+|                                                                                          |     |  +--| (62)
+|                                                                                          |     |  |  +--QUI1_LP_255_Du-654
+|                                                                                          |     +--| (25)
+|                                                                                          |        +--QUI1_LP_258_Du-657
+|                                                                                       +--| (98)
+|                                                                                       |  |                                                  +--DU-443
+|                                                                                       |  |                                               +--| (91)
+|                                                                                       |  |                                               |  +--CY_SIE_LP_189_Du-446
+|                                                                                       |  |                                            +--| (49)
+|                                                                                       |  |                                            |  |  +--CY_HICN_LP_334_Du-613
+|                                                                                       |  |                                            |  +--| (81)
+|                                                                                       |  |                                            |     +--CY_HICN_LP_336_Du-616
+|                                                                                       |  |                                         +--| (79)
+|                                                                                       |  |                                         |  |     +--CY_HICN_LP_236_Du-614
+|                                                                                       |  |                                         |  |  +--| (57)
+|                                                                                       |  |                                         |  |  |  +--CY_SIE_LP_188_Du-445
+|                                                                                       |  |                                         |  +--| (84)
+|                                                                                       |  |                                         |     +--CY_SIE_LP_190_Du-447
+|                                                                                       |  |                                      +--| (99)
+|                                                                                       |  |                                      |  +--CY_HICN_LP_335_Du-615
+|                                                                                       |  |                              +-------| (100)
+|                                                                                       |  |                              |       +--CY_HICN_LP_333_Du-612
+|                                                                                       |  |                     +--------| (100)
+|                                                                                       |  |                     |        +--CY_CAS_LP_328_Du-610
+|                                                                                       |  |      +--------------| (100)
+|                                                                                       |  |      |              |                    +--ABBE_BERN_LP_311_Du-780
+|                                                                                       |  |      |              |                 +--| (83)
+|                                                                                       |  |      |              |                 |  +--CY_BGL_LP_210_Du-577
+|                                                                                       |  |      |              |              +--| (69)
+|                                                                                       |  |      |              |              |  |  +--ABBE_BERN_LP_313_Du-782
+|                                                                                       |  |      |              |              |  +--| (74)
+|                                                                                       |  |      |              |              |     +--ABBE_BERN_LP_314_Du-783
+|                                                                                       |  |      |              |           +--| (43)
+|                                                                                       |  |      |              |           |  |         +--CY_BAL_LP_226_Du-602
+|                                                                                       |  |      |              |           |  |      +--| (99)
+|                                                                                       |  |      |              |           |  |      |  +--CY_BAL_LP_227_Du-603
+|                                                                                       |  |      |              |           |  +------| (100)
+|                                                                                       |  |      |              |           |         +--CY_BAL_LP_228_Du-604
+|                                                                                       |  |      |              |        +--| (38)
+|                                                                                       |  |      |              |        |  +--CY_BGL_LP_212_Du-579
+|                                                                                       |  |      |              |  +-----| (100)
+|                                                                                       |  |      |              |  |     +--ABBE_BERN_LP_312_Du-781
+|                                                                                       |  |      |              +--| (62)
+|                                                                                       |  |      |                 |                  +--CY_HUN_LP_264_Du-683
+|                                                                                       |  |      |                 |               +--| (77)
+|                                                                                       |  |      |                 |               |  +--CY_HUN_LP_267_Du-686
+|                                                                                       |  |      |                 |            +--| (53)
+|                                                                                       |  |      |                 |            |  +--CY_HUN_LP_268_Du-687
+|                                                                                       |  |      |                 |         +--| (99)
+|                                                                                       |  |      |                 |         |  +--CY_HUN_LP_266_Du-685
+|                                                                                       |  |      |                 +---------| (100)
+|                                                                                       |  |      |                           |        +--OCO_LP_058_Du-115
+|                                                                                       |  |      |                           |     +--| (31)
+|                                                                                       |  |      |                           |     |  |  +--OCO_LP_066_Du-113
+|                                                                                       |  |      |                           |     |  +--| (39)
+|                                                                                       |  |      |                           |     |     +--OCO_LP_067_Du-114
+|                                                                                       |  |      |                           |  +--| (54)
+|                                                                                       |  |      |                           |  |  |  +--OCO_LP_063_Du-110
+|                                                                                       |  |      |                           |  |  +--| (66)
+|                                                                                       |  |      |                           |  |     +--OCO_LP_064_Du-111
+|                                                                                       |  |      |                           +--| (92)
+|                                                                                       |  |      |                              |        +--OCO_LP_059_Du-106
+|                                                                                       |  |      |                              |     +--| (98)
+|                                                                                       |  |      |                              |     |  +--OCO_LP_060_Du-107
+|                                                                                       |  |      |                              |  +--| (67)
+|                                                                                       |  |      |                              |  |  +--OCO_LP_061_Du-108
+|                                                                                       |  |      |                              +--| (88)
+|                                                                                       |  |      |                                 |  +--OCO_LP_062_Du-109
+|                                                                                       |  |      |                                 +--| (58)
+|                                                                                       |  |      |                                    +--OCO_LP_065_Du-112
+|                                                                                       |  |  +---| (95)
+|                                                                                       |  |  |   |                          +--ABAB_MAD_LP_223_Du-590
+|                                                                                       |  |  |   |                       +--| (46)
+|                                                                                       |  |  |   |                       |  +--ABAB_MAD_LP_327_Du-598
+|                                                                                       |  |  |   |                    +--| (70)
+|                                                                                       |  |  |   |                    |  |  +--ABAB_MAD_LP_322_Du-593
+|                                                                                       |  |  |   |                    |  +--| (29)
+|                                                                                       |  |  |   |                    |     |  +--ABAB_MAD_LP_323_Du-594
+|                                                                                       |  |  |   |                    |     +--| (97)
+|                                                                                       |  |  |   |                    |        +--ABAB_MAD_LP_324_Du-595
+|                                                                                       |  |  |   |                 +--| (96)
+|                                                                                       |  |  |   |                 |  +--ABAB_MAD_LP_326_Du-597
+|                                                                                       |  |  |   |              +--| (84)
+|                                                                                       |  |  |   |              |  +--ABAB_MAD_LP_325_Du-596
+|                                                                                       |  |  |   |           +--| (49)
+|                                                                                       |  |  |   |           |  |        +--ABMU_HOR_LP_306_Du-775
+|                                                                                       |  |  |   |           |  |     +--| (74)
+|                                                                                       |  |  |   |           |  |     |  +--ABMU_HOR_LP_361_Du-773
+|                                                                                       |  |  |   |           |  |  +--| (67)
+|                                                                                       |  |  |   |           |  |  |  +--ABMU_HOR_LP_308_Du-777
+|                                                                                       |  |  |   |           |  +--| (83)
+|                                                                                       |  |  |   |           |     |  +--ABMU_HOR_LP_359_Du-771
+|                                                                                       |  |  |   |           |     +--| (72)
+|                                                                                       |  |  |   |           |        +--ABMU_HOR_LP_360_Du-772
+|                                                                                       |  |  |   +-----------| (100)
+|                                                                                       |  |  |               +--ABMU_HOR_LP_358_Du-770
+|                                                                                       |  +**| (66)
+|                                                                                       |     |                       +**DU014LP012
+|                                                                                       |     |                    +**|
+|                                                                                       |     |                    |  +**CY_BOU_LP_354_Du-742
+|                                                                                       |     |                 +**|
+|                                                                                       |     |                 |  +**CY_HICS_LP_293_Du-757
+|                                                                                       |     |              +--|
+|                                                                                       |     |              |  +**CY_BOU_LP_290_Du-739
+|                                                                                       |     |           +--| (14)
+|                                                                                       |     |           |  +--DU037LP013
+|                                                                                       |     |        +--| (5)
+|                                                                                       |     |        |  |  +--CY_BOU_LP_292_Du-741
+|                                                                                       |     |        |  +--| (55)
+|                                                                                       |     |        |     +--CY_HICS_LP_355_Du-762
+|                                                                                       |     |     +--| (13)
+|                                                                                       |     |     |  |              +**CY_BOU_LP_288_Du-737
+|                                                                                       |     |     |  |           +--|
+|                                                                                       |     |     |  |           |  +**CY_HICS_LP_356_Du-763
+|                                                                                       |     |     |  |        +--| (39)
+|                                                                                       |     |     |  |        |  +--CY_HICS_LP_297_Du-761
+|                                                                                       |     |     |  |     +--| (16)
+|                                                                                       |     |     |  |     |  |     +--CY_HICS_LP_295_Du-759
+|                                                                                       |     |     |  |     |  |  +--| (41)
+|                                                                                       |     |     |  |     |  |  |  +--CY_WOO_LP_260_Du-665
+|                                                                                       |     |     |  |     |  +--| (28)
+|                                                                                       |     |     |  |     |     +--CY_WOO_LP_261_Du-667
+|                                                                                       |     |     |  |  +--| (19)
+|                                                                                       |     |     |  |  |  +--CY_BOU_LP_291_Du-740
+|                                                                                       |     |     |  +--| (16)
+|                                                                                       |     |     |     +--CY_SIE_LP_191_Du-448
+|                                                                                       |     |  +--| (16)
+|                                                                                       |     |  |  |     +--CY_WOO_LP_259_Du-664
+|                                                                                       |     |  |  |  +--| (68)
+|                                                                                       |     |  |  |  |  +--CY_WOO_LP_262_Du-668
+|                                                                                       |     |  |  +--| (62)
+|                                                                                       |     |  |     +--CY_WOO_LP_263_Du-669
+|                                                                                       |     +--| (39)
+|                                                                                       |        |     +--CY_ALA_LP_298-Du-767
+|                                                                                       |        |  +--| (100)
+|                                                                                       |        |  |  |  +--CY_ALA_LP_299-Du-768
+|                                                                                       |        |  |  +--| (79)
+|                                                                                       |        |  |     +--CY_ALA_LP_357_Du-769
+|                                                                                       |        +--| (74)
+|                                                                                       |           |     +--CY_CAS_LP_329_Du-611
+|                                                                                       |           |  +--| (62)
+|                                                                                       |           |  |  +--CY_CAS_LP_331_Du-608
+|                                                                                       |           +--| (96)
+|                                                                                       |              |  +--CY_CAS_LP_330_Du-607
+|                                                                                       |              +--| (46)
+|                                                                                       |                 +--CY_CAS_LP_332_Du-609
+|                                                                                    +--| (42)
+|                                                                                    |  |     +--STI_LP_034_Du-52
+|                                                                                    |  |  +--| (66)
+|                                                                                    |  |  |  +--STI_LP_039_Du-57
+|                                                                                    |  +--| (61)
+|                                                                                    |     +--STI_LP_041_Du-60
+|                                                                                 +--| (40)
+|                                                                                 |  +--STI_LP_032_Du-50
+|                                                                              +--| (27)
+|                                                                              |  +--DU059LP015
+|                                                                           +--| (40)
+|                                                                           |  +--STI_LP_030_Du-48
+|                                                                        +--| (25)
+|                                                                        |  +--STI_LP_031_Du-49
+|                                                                     +--| (14)
+|                                                                     |  |  +--STI_LP_035_Du-53
+|                                                                     |  +--| (9)
+|                                                                     |     +--STI_LP_038_Du-56
+|                                                                  +--| (11)
+|                                                                  |  +--STI_LP_036_Du-54
+|                                                               +--| (10)
+|                                                               |  +--STI_LP_028_Du-46
+|                                                            +--| (15)
+|                                                            |  +--STI_LP_033_Du-51
+|                                                         +--| (39)
+|                                                         |  +--STI_LP_029_Du-47
+|                                                      +--| (57)
+|                                                      |  +--STI_LP_037_Du-55
+|                                                   +--| (22)
+|                                                   |  |  +--TIL_LP_125_Du-265
+|                                                   |  +--| (23)
+|                                                   |     +--TIL_LP_126_Du-266
+|                                                +--| (18)
+|                                                |  |        +--DU-270
+|                                                |  |     +--| (67)
+|                                                |  |     |  |  +--TIL_LP_129_Du-269
+|                                                |  |     |  +--| (42)
+|                                                |  |     |     |  +--TIL_LP_130_Du-271
+|                                                |  |     |     +--| (76)
+|                                                |  |     |        +--TIL_LP_131_Du-272
+|                                                |  |  +--| (63)
+|                                                |  |  |  +--TIL_LP_123_Du-263
+|                                                |  +--| (41)
+|                                                |     |           +--STI_LP_027_Du-45
+|                                                |     |        +--| (90)
+|                                                |     |        |  +--STI_LP_040_Du-58
+|                                                |     |     +--| (63)
+|                                                |     |     |  +--STI_LP_042_Du-61
+|                                                |     |  +--| (64)
+|                                                |     |  |  +--TIL_LP_124_Du-264
+|                                                |     +--| (88)
+|                                                |        |  +--TIL_LP_127_Du-267
+|                                                |        +--| (69)
+|                                                |           +--TIL_LP_128_Du-268
+|                                            +---| (99)
+|                                            |   |     +--RSV_LP_049_Du-85
+|                                            |   |  +--| (47)
+|                                            |   |  |  |     +--RSV_LP_050_Du-87
+|                                            |   |  |  |  +--| (67)
+|                                            |   |  |  |  |  |  +--RSV_LP_051_Du-88
+|                                            |   |  |  |  |  +--| (46)
+|                                            |   |  |  |  |     +--RSV_LP_053_Du-90
+|                                            |   |  |  +--| (49)
+|                                            |   |  |     |        +--RSV_LP_055_Du-92
+|                                            |   |  |     |     +--| (77)
+|                                            |   |  |     |     |  +--RSV_LP_057_Du-94
+|                                            |   |  |     |  +--| (62)
+|                                            |   |  |     |  |  +--RSV_LP_315_Du-95
+|                                            |   |  |     +--| (45)
+|                                            |   |  |        +--RSV_LP_316_Du-96
+|                                            |   +--| (52)
+|                                            |      +--RSV_LP_052_Du-89
+|                                         +--| (49)
+|                                         |  +--QUI2_LP_339_Du-640
+|                                      +--| (21)
+|                                      |  +--QUI2_LP_246_Du-634
+|                                   +--| (17)
+|                                   |  +--QUI2_LP_243_Du-631
+|                                +--| (11)
+|                                |  +--QUIN_LP_074_Du-160
+|                             +--| (12)
+|                             |  +--QUIN_LP_075_Du-161
+|                          +--| (12)
+|                          |  +--QUIN_LP_071_Du-157
+|                       +--| (8)
+|                       |  +--QUI2_LP_245_Du-633
+|                    +--| (6)
+|                    |  +--QUI2_LP_248_Du-636
+|                 +--| (5)
+|                 |  |     +--QUI2_LP_247_Du-635
+|                 |  |  +--| (9)
+|                 |  |  |  +--QUIN_LP_072_Du-158
+|                 |  +--| (4)
+|                 |     +--QUI2_LP_340_Du-641
+|              +--| (6)
+|              |  +--QUI2_LP_244_Du-632
+|           +--| (8)
+|           |  |  +--QUI2_LP_337_Du-638
+|           |  +--| (11)
+|           |     +--QUIN_LP_073_Du-159
+|        +--| (8)
+|        |  |  +--QUI2_LP_338_Du-639
+|        |  +--| (10)
+|        |     +--QUIN_LP_070_Du-156
+|     +--| (23)
+|     |  +--QUIN_LP_318_Du-164
+|  +--| (44)
+|  |  +--QUIN_LP_069_Du-155
++--| (53)
+|  +--QUIN_LP_077_Du-163
+|
++--QUIN_LP_076_Du-162
+
+
+Consensus tree in newick format: 
+
+(DU-173:0.0000023296,((((((((((((((((((((((((((((((((((((((DU-229:0.0000000000,BAI_LP_111_Du-228:0.0000000000):0.0000000000,BAI_LP_110_Du-227:0.0000000000):0.0000023296,BAI_LP_106_Du-223:0.0000023296)86:0.0000222737,(BAI_LP_109_Du-226:0.0000023296,BAI_LP_113_Du-231:0.0000023296)85:0.0000023296)63:0.0000023296,((((BAI_LP_105_Du-222:0.0000000000,BAI_LP_112_Du-230:0.0000000000):0.0000000000,BAI_LP_114_Du-232:0.0000000000):0.0000000000,BAI_LP_319_Du-233:0.0000000000):0.0000023296,BAI_LP_108_Du-225:0.0000023296)89:0.0000222737)97:0.0000672276,((((((((DOV_LP_078_Du-174:0.0000000000,DOV_LP_080_Du-176:0.0000000000):0.0000000000,DOV_LP_081_Du-177:0.0000000000):0.0000000000,DOV_LP_083_Du-179:0.0000000000):0.0000000000,DOV_LP_082_Du-178:0.0000000000):0.0000000000,DOV_LP_084_Du-180:0.0000000000):0.0000023296,DOV_LP_079_Du-175:0.0000023296)88:0.0000023296,(((((SILG_LP_149_Du-343:0.0000000000,SILG_LP_154_Du-348:0.0000000000):0.0000000000,SILG_LP_153_Du-347:0.0000000000):0.0000023296,SILG_LP_150_Du-344:0.0000023296)38:0.0000023296,SILG_LP_158_Du-352:0.0000023296)76:0.0000023296,SILG_LP_157_Du-351:0.0000023296)79:0.0000222737)74:0.0000023296,(((SILG_LP_151_Du-345:0.0000000000,SILG_LP_155_Du-349:0.0000000000):0.0000023296,SILG_LP_152_Du-346:0.0000023296)74:0.0000023296,SILG_LP_156_Du-350:0.0000023296)98:0.0000672207)97:0.0000672292)77:0.0000023296,((((((((((((((((((DU-247:0.0000000000,DUD_LP_132_Du-283:0.0000000000):0.0000000000,TULP_LP_116_Du-243:0.0000000000):0.0000000000,TULP_LP_122_Du-250:0.0000000000):0.0000000000,DUD_LP_135_Du-286:0.0000000000):0.0000000000,DUD_LP_133_Du-284:0.0000000000):0.0000000000,DUD_LP_134_Du-285:0.0000000000):0.0000000000,TULP_LP_119_Du-246:0.0000000000):0.0000000000,TULP_LP_117_Du-244:0.0000000000):0.0000000000,DUD_LP_136_Du-287:0.0000000000):0.0000000000,TULP_LP_121_Du-249:0.0000000000):0.0000000000,DUD_LP_138_Du-289:0.0000000000):0.0000000000,DUD_LP_139_Du-290:0.0000000000):0.0000000000,TULP_LP_118_Du-245:0.0000000000):0.0000000000,DU-297:0.0000000000):0.0000023296,DU-254:0.0000023296)22:0.0000023296,((((((((((DU-4A:0.0000000000,CROS_LP_090_Du-186:0.0000000000):0.0000000000,CROS_LP_088_Du-184:0.0000000000):0.0000000000,CROS_LP_086_Du-182:0.0000000000):0.0000000000,CROS_LP_087_Du-183:0.0000000000):0.0000023296,CROS_LP_085_Du-181:0.0000023296)87:0.0000222737,((CROB_LP_169_Du-381:0.0000023296,(((((((CROB_LP_170_Du-382:0.0000000000,CROB_LP_321_Du-396:0.0000000000):0.0000000000,CROB_LP_174_Du-386:0.0000000000):0.0000000000,CROB_LP_175_Du-387:0.0000000000):0.0000000000,CROB_LP_320_Du-395:0.0000000000):0.0000000000,CROB_LP_177_Du-389:0.0000000000):0.0000000000,CROB_LP_176_Du-388:0.0000000000):0.0000023296,CROB_LP_173_Du-385:0.0000023296)88:0.0000023296)78:0.0000222737,(CROS_LP_089_Du-185:0.0000023296,DUD_LP_137_Du-288:0.0000023296)81:0.0000023296)62:0.0000023296)89:0.0000457088,(((((((((((CROB_LP_172_Du-384:0.0000000000,MALV_LP_103_Du-209:0.0000000000):0.0000000000,MALV_LP_100_Du-206:0.0000000000):0.0000000000,MALV_LP_098_Du-204:0.0000000000):0.0000000000,MALV_LP_099_Du-205:0.0000000000):0.0000000000,MALV_LP_097_Du-203:0.0000000000):0.0000000000,MALV_LP_096_Du-202:0.0000000000):0.0000000000,MALV_LP_101_Du-207:0.0000000000):0.0000000000,MALV_LP_104_Du-210:0.0000000000):0.0000000000,MALV_LP_102_Du-208:0.0000000000):0.0000023296,MALV_LP_095_Du-201:0.0000023296)85:0.0000222737,((((((((((((((((((((((((((((CROS_LP_093_Du-189:0.0000000000,RIC_LP_193_Du-522:0.0000000000):0.0000000000,KIRT_LP_161_Du-366:0.0000000000):0.0000000000,KIRN_LP_184_Du-426:0.0000000000):0.0000000000,KIRN_LP_181_Du-423:0.0000000000):0.0000000000,KIRT_LP_168_Du-373:0.0000000000):0.0000000000,RIC_LP_196_Du-525:0.0000000000):0.0000000000,RIC_LP_199_Du-528:0.0000000000):0.0000000000,KIRT_LP_159_Du-364:0.0000000000):0.0000000000,KIRT_LP_162_Du-367:0.0000000000):0.0000000000,KIRN_LP_185_Du-427:0.0000000000):0.0000000000,KIRN_LP_180_Du-422:0.0000000000):0.0000000000,RIC_LP_192_Du-521:0.0000000000):0.0000000000,KIRT_LP_163_Du-368:0.0000000000):0.0000000000,KIRT_LP_164_Du-369:0.0000000000):0.0000000000,KIRT_LP_167_Du-372:0.0000000000):0.0000000000,KIRT_LP_166_Du-371:0.0000000000):0.0000000000,RIC_LP_198_Du-527:0.0000000000):0.0000000000,RIC_LP_195_Du-524:0.0000000000):0.0000000000,RIC_LP_201_Du-530:0.0000000000):0.0000000000,KIRT_LP_165_Du-370:0.0000000000):0.0000000000,RIC_LP_200_Du-529:0.0000000000):0.0000000000,RIC_LP_194_Du-523:0.0000000000):0.0000000000,KIRN_LP_186_Du-428:0.0000000000):0.0000000000,KIRN_LP_187_Du-429:0.0000000000):0.0000000000,KIRN_LP_182_Du-424:0.0000000000):0.0000000000,KIRT_LP_160_Du-365:0.0000000000):0.0000000000,KIRN_LP_183_Du-425:0.0000000000):0.0000023296,KIRN_LP_179_Du-421:0.0000023296)78:0.0000023296)52:0.0000023296)77:0.0000222737,(((((((CROS_LP_091_Du-187:0.0000023296,CROS_LP_094_Du-190:0.0000023296)90:0.0000220139,CROS_LP_092_Du-188:0.0000023296)46:0.0000222737,(TULP_LP_120_Du-248:0.0000023296,TULP_LP_145_Du-307:0.0000023296)69:0.0000023296)33:0.0000023296,TULP_LP_147_Du-309:0.0000023296)10:0.0000023296,TULP_LP_115_Du-242:0.0000023296)8:0.0000023296,TULP_LP_141_Du-303:0.0000023296)19:0.0000023296,(TULP_LP_142_Du-304:0.0000023296,TULP_LP_148_Du-310:0.0000023296)13:0.0000023296)86:0.0000412687)22:0.0000023296,(((((((DU078LP011:0.0000023296,DAN_LP_045_Du-70:0.0000023296)39:0.0000023296,DAN_LP_046_Du-71:0.0000023296)40:0.0000023296,DU079LP010:0.0000023296)40:0.0000407654,(DAN_LP_043_Du-68:0.0000222737,DAN_LP_047_Du-72:0.0000023296)29:0.0000023296)35:0.0000023619,DAN_LP_044_Du-69:0.0000023296)97:0.0000023619,(((((SILR_LP_346_Du-729:0.0000000000,SILR_LP_351_Du-734:0.0000000000):0.0000000000,SILR_LP_349_Du-732:0.0000000000):0.0000000000,SILR_LP_353_Du-736:0.0000000000):0.0000000000,SILR_LP_348_Du-731:0.0000000000):0.0000023296,SILR_LP_347_Du-730:0.0000023296)100:0.0000023296)98:0.0001120494,(((COM_LP_269_Du-703:0.0000222737,((COM_LP_274_Du-709:0.0000000000,COM_LP_343_Du-715:0.0000000000):0.0000023296,COM_LP_277_Du-712:0.0000023296)89:0.0000023296)64:0.0000222737,((((COM_LP_270_Du-704:0.0000000000,COM_LP_276_Du-711:0.0000000000):0.0000000000,COM_LP_342_Du-714:0.0000000000):0.0000000000,COM_LP_341_Du-713:0.0000000000):0.0000023296,COM_LP_272_Du-707:0.0000023296)87:0.0000023296)99:0.0001120442,(TULP_LP_143_Du-305:0.0000023296,TULP_LP_144_Du-306:0.0000023296)88:0.0000023296)48:0.0000222737)37:0.0000023296)13:0.0000023296,TULP_LP_146_Du-308:0.0000023296)8:0.0000023296)32:0.0000023296,TULP_LP_140_Du-302:0.0000023296)80:0.0000234190,RIC_LP_197_Du-526:0.0000653825)71:0.0000455880)56:0.0000212220,((((((QUI1_LP_249_Du-648:0.0000222177,QUI1_LP_250_Du-649:0.0000023296)73:0.0000025885,QUI1_LP_257_Du-656:0.0000023296)39:0.0000831722,QUI1_LP_251_Du-650:0.0000222737)17:0.0000020300,QUI1_LP_254_Du-653:0.0000023296)20:0.0000020300,QUI1_LP_252_Du-651:0.0000023296)46:0.0000020300,((QUI1_LP_253_Du-652:0.0000023296,QUI1_LP_255_Du-654:0.0000023296)62:0.0000023296,QUI1_LP_258_Du-657:0.0000222737)25:0.0000023296)74:0.0000222737)52:0.0000023296,(((((((((DU-443:0.0000023296,CY_SIE_LP_189_Du-446:0.0000023296)91:0.0000023296,(CY_HICN_LP_334_Du-613:0.0000023296,CY_HICN_LP_336_Du-616:0.0000023296)81:0.0000222737)49:0.0000222737,((CY_HICN_LP_236_Du-614:0.0000023296,CY_SIE_LP_188_Du-445:0.0000023296)57:0.0000023296,CY_SIE_LP_190_Du-447:0.0000023296)84:0.0000023296)79:0.0000446571,CY_HICN_LP_335_Du-615:0.0000023296)99:0.0000685639,CY_HICN_LP_333_Du-612:0.0000445812)100:0.0002018739,CY_CAS_LP_328_Du-610:0.0000020300)100:0.0002326347,((((((ABBE_BERN_LP_311_Du-780:0.0000023296,CY_BGL_LP_210_Du-577:0.0000023296)83:0.0000023296,(ABBE_BERN_LP_313_Du-782:0.0000023296,ABBE_BERN_LP_314_Du-783:0.0000023296)74:0.0000023296)69:0.0000023296,((CY_BAL_LP_226_Du-602:0.0000023296,CY_BAL_LP_227_Du-603:0.0000023296)99:0.0000026868,CY_BAL_LP_228_Du-604:0.0000023296)100:0.0001774470)43:0.0000222737,CY_BGL_LP_212_Du-579:0.0000222737)38:0.0000023296,ABBE_BERN_LP_312_Du-781:0.0000023296)100:0.0001443181,((((CY_HUN_LP_264_Du-683:0.0000023296,CY_HUN_LP_267_Du-686:0.0000023296)77:0.0000023296,CY_HUN_LP_268_Du-687:0.0000023296)53:0.0000023296,CY_HUN_LP_266_Du-685:0.0000023296)99:0.0000477600,(((OCO_LP_058_Du-115:0.0000023296,(OCO_LP_066_Du-113:0.0000222737,OCO_LP_067_Du-114:0.0000023296)39:0.0000023296)31:0.0000023296,(OCO_LP_063_Du-110:0.0000023296,OCO_LP_064_Du-111:0.0000023296)66:0.0000222737)54:0.0000023296,(((OCO_LP_059_Du-106:0.0000023296,OCO_LP_060_Du-107:0.0000023296)98:0.0000023296,OCO_LP_061_Du-108:0.0000023296)67:0.0000222737,(OCO_LP_062_Du-109:0.0000023296,OCO_LP_065_Du-112:0.0000023296)58:0.0000023296)88:0.0000445812)92:0.0000870973)100:0.0002571106)62:0.0000274050)100:0.0003699588,((((((ABAB_MAD_LP_223_Du-590:0.0000023296,ABAB_MAD_LP_327_Du-598:0.0000023296)46:0.0000023296,(ABAB_MAD_LP_322_Du-593:0.0000023296,(ABAB_MAD_LP_323_Du-594:0.0000023296,ABAB_MAD_LP_324_Du-595:0.0000023296)97:0.0000222737)29:0.0000023296)70:0.0000222737,ABAB_MAD_LP_326_Du-597:0.0000023296)96:0.0000669225,ABAB_MAD_LP_325_Du-596:0.0000023296)84:0.0000225415,(((ABMU_HOR_LP_306_Du-775:0.0000023296,ABMU_HOR_LP_361_Du-773:0.0000023296)74:0.0000023296,ABMU_HOR_LP_308_Du-777:0.0000023296)67:0.0000023296,(ABMU_HOR_LP_359_Du-771:0.0000023296,ABMU_HOR_LP_360_Du-772:0.0000023296)72:0.0000222737)83:0.0000445812)49:0.0000222737,ABMU_HOR_LP_358_Du-770:0.0000023296)100:0.0002909985)95:0.0001140153,((((((((DU014LP012:0.0000000000,CY_BOU_LP_354_Du-742:0.0000000000):0.0000000000,CY_HICS_LP_293_Du-757:0.0000000000):0.0000000000,CY_BOU_LP_290_Du-739:0.0000000000):0.0000023296,DU037LP013:0.0000023296)14:0.0000023296,(CY_BOU_LP_292_Du-741:0.0000023296,CY_HICS_LP_355_Du-762:0.0000023296)55:0.0000023296)5:0.0000023296,(((((CY_BOU_LP_288_Du-737:0.0000000000,CY_HICS_LP_356_Du-763:0.0000000000):0.0000023296,CY_HICS_LP_297_Du-761:0.0000023296)39:0.0000023296,((CY_HICS_LP_295_Du-759:0.0000023296,CY_WOO_LP_260_Du-665:0.0000222737)41:0.0000222737,CY_WOO_LP_261_Du-667:0.0000222737)28:0.0000023296)16:0.0000023296,CY_BOU_LP_291_Du-740:0.0000023296)19:0.0000023296,CY_SIE_LP_191_Du-448:0.0000023296)16:0.0000023296)13:0.0000023296,((CY_WOO_LP_259_Du-664:0.0000023296,CY_WOO_LP_262_Du-668:0.0000023296)68:0.0000023296,CY_WOO_LP_263_Du-669:0.0000023296)62:0.0000222737)16:0.0000023296,((CY_ALA_LP_298-Du-767:0.0000023296,(CY_ALA_LP_299-Du-768:0.0000023296,CY_ALA_LP_357_Du-769:0.0000023296)79:0.0000023296)100:0.0000445812,((CY_CAS_LP_329_Du-611:0.0000023296,CY_CAS_LP_331_Du-608:0.0000023296)62:0.0000023296,(CY_CAS_LP_330_Du-607:0.0000023296,CY_CAS_LP_332_Du-609:0.0000023296)46:0.0000023296)96:0.0000222737)74:0.0000222737)39:0.0000202196)66:0.0000012764)98:0.0000892977,((STI_LP_034_Du-52:0.0000023296,STI_LP_039_Du-57:0.0000023296)66:0.0000023296,STI_LP_041_Du-60:0.0000023296)61:0.0000023296)42:0.0000222737,STI_LP_032_Du-50:0.0000023296)40:0.0000023296,DU059LP015:0.0000023296)27:0.0000023296,STI_LP_030_Du-48:0.0000023296)40:0.0000059284,STI_LP_031_Du-49:0.0000023296)25:0.0000023619,(STI_LP_035_Du-53:0.0000023296,STI_LP_038_Du-56:0.0000023296)9:0.0000023296)14:0.0000023619,STI_LP_036_Du-54:0.0000023296)11:0.0000023619,STI_LP_028_Du-46:0.0000023296)10:0.0000023619,STI_LP_033_Du-51:0.0000023296)15:0.0000023619,STI_LP_029_Du-47:0.0000023296)39:0.0000147527,STI_LP_037_Du-55:0.0000023296)57:0.0000324611,(TIL_LP_125_Du-265:0.0000023296,TIL_LP_126_Du-266:0.0000023296)23:0.0000023296)22:0.0000023296,(((DU-270:0.0000023296,(TIL_LP_129_Du-269:0.0000023296,(TIL_LP_130_Du-271:0.0000023296,TIL_LP_131_Du-272:0.0000023296)76:0.0000023296)42:0.0000023296)67:0.0000222737,TIL_LP_123_Du-263:0.0000023296)63:0.0000222737,((((STI_LP_027_Du-45:0.0000023296,STI_LP_040_Du-58:0.0000023296)90:0.0000023296,STI_LP_042_Du-61:0.0000023296)63:0.0000222737,TIL_LP_124_Du-264:0.0000023296)64:0.0000222737,(TIL_LP_127_Du-267:0.0000239293,TIL_LP_128_Du-268:0.0000023296)69:0.0000023296)88:0.0000445812)41:0.0000023296)18:0.0000023296,((RSV_LP_049_Du-85:0.0000023296,((RSV_LP_050_Du-87:0.0000023296,(RSV_LP_051_Du-88:0.0000023296,RSV_LP_053_Du-90:0.0000023296)46:0.0000023296)67:0.0000222737,(((RSV_LP_055_Du-92:0.0000023296,RSV_LP_057_Du-94:0.0000023296)77:0.0000023296,RSV_LP_315_Du-95:0.0000023296)62:0.0000023296,RSV_LP_316_Du-96:0.0000222737)45:0.0000023296)49:0.0000023296)47:0.0000023296,RSV_LP_052_Du-89:0.0000023296)52:0.0000222737)99:0.0001075213,QUI2_LP_339_Du-640:0.0000023296)49:0.0000023296,QUI2_LP_246_Du-634:0.0000023296)21:0.0000023296,QUI2_LP_243_Du-631:0.0000023296)17:0.0000023296,QUIN_LP_074_Du-160:0.0000023296)11:0.0000023296,QUIN_LP_075_Du-161:0.0000023296)12:0.0000023296,QUIN_LP_071_Du-157:0.0000023296)12:0.0000023296,QUI2_LP_245_Du-633:0.0000023296)8:0.0000023296,QUI2_LP_248_Du-636:0.0000023296)6:0.0000023296,((QUI2_LP_247_Du-635:0.0000023296,QUIN_LP_072_Du-158:0.0000023296)9:0.0000023296,QUI2_LP_340_Du-641:0.0000023296)4:0.0000023296)5:0.0000023296,QUI2_LP_244_Du-632:0.0000023296)6:0.0000023296,(QUI2_LP_337_Du-638:0.0000023296,QUIN_LP_073_Du-159:0.0000023296)11:0.0000023296)8:0.0000023296,(QUI2_LP_338_Du-639:0.0000023296,QUIN_LP_070_Du-156:0.0000023296)10:0.0000023296)8:0.0000023296,QUIN_LP_318_Du-164:0.0000023296)23:0.0000023296,QUIN_LP_069_Du-155:0.0000023296)44:0.0000023296,QUIN_LP_077_Du-163:0.0000023296)53:0.0000023296,QUIN_LP_076_Du-162:0.0000023296);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t dudleya_organelle_alignment_pipeline/results/19_bootstrap_phylogenetic_tree/mtDNA.primary.iqtree_ml.treefile -m "GTR{0.716625,0.586798,1.6505,0.395949,0.836514}+F{0.270011,0.223371,0.228768,0.27785}+G4{0.0200397}" --length 44930
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s dudleya_organelle_alignment_pipeline/results/11_callable_consensus/mtDNA.primary.callable_consensus.fa --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s dudleya_organelle_alignment_pipeline/results/11_callable_consensus/mtDNA.primary.callable_consensus.fa --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Tue Jul  7 23:15:03 2026
+Total CPU time used: 226.942011 seconds (0h:3m:46s)
+Total wall-clock time used: 57.97820091 seconds (0h:0m:57s)
+

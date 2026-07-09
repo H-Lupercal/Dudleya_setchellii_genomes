@@ -1,0 +1,22 @@
+stage	description	log
+00_manifest	Sample manifest and preflight validation	/home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/logs/00_manifest.log
+01_reference_pilot	Reference validation, indexing, and pilot sample selection	/home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/logs/01_reference_pilot.log
+02_pilot_alignment	Pilot organelle alignment	/home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/logs/02_pilot_alignment.log
+03_mtdna_investigation	Archive mtDNA investigation evidence consumed by Stage 05	/home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/logs/03_mtdna_investigation.log
+04_cpdna_investigation	Archive cpDNA investigation evidence consumed by Stage 05	/home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/logs/04_cpdna_investigation.log
+05_analysis_masks	Analysis masks and population tracks	/home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/logs/05_analysis_masks.log
+06_all_sample_alignment	All-sample organelle alignment and track-aware QC	/home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/logs/06_all_sample_alignment.log
+07_downstream_sample_set	Downstream include/exclude sample set	/home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/logs/07_downstream_sample_set.log
+08_variant_calling	Haploid cpDNA and mtDNA variant calling	/home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/logs/08_variant_calling.log
+09_variant_filtering	Variant filtering and callable-site definition	/home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/logs/09_variant_filtering.log
+10_snp_alignment	Filtered haploid SNP alignments	/home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/logs/10_snp_alignment.log
+11_callable_consensus	Full callable-site consensus alignments	/home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/logs/11_callable_consensus.log
+12_phylogenetic_tree	Initial maximum-likelihood trees	/home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/logs/12_phylogenetic_tree.log
+13_tool_audit	Bioinformatics tool audit	/home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/logs/13_tool_audit.log
+14_tree_visualization	Tree figures for initial ML trees	/home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/logs/14_tree_visualization.log
+15_pca	PCA visualizations	/home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/logs/15_pca.log
+16_admixture	Single-run ADMIXTURE-style clustering	/home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/logs/16_admixture.log
+17_population_genetics	Pairwise Fst and population summaries	/home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/logs/17_population_genetics.log
+18_admixture_replicates	Five-replicate final ADMIXTURE-style clustering	/home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/logs/18_admixture_replicates.log
+19_bootstrap_phylogenetic_tree	Final 1,000-UFBoot maximum-likelihood trees	/home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/logs/19_bootstrap_phylogenetic_tree.log
+20_bootstrap_tree_visualization	Tree figures for final bootstrap ML trees	/home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/logs/20_bootstrap_tree_visualization.log

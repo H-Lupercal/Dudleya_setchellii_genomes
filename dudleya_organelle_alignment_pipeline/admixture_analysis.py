@@ -121,12 +121,17 @@ def write_pseudo_diploid_ped_map(
     admixture_input: AdmixtureInput,
     output_dir: Path,
     run_label: str,
-) -> tuple[Path, Path]:
+) -> tuple[Path, Path, list[str], list[str]]:
     output_dir.mkdir(parents=True, exist_ok=True)
     records = read_fasta(admixture_input.alignment_fasta_path)
     prefix = output_dir / f"{admixture_input.organelle}.{run_label}.pseudo_diploid"
     ped_path = Path(f"{prefix}.ped")
     map_path = Path(f"{prefix}.map")
+    excluded_path = output_dir / (
+        f"{admixture_input.organelle}.{run_label}.pseudo_diploid.excluded_samples.tsv"
+    )
+    included_sample_ids: list[str] = []
+    excluded_sample_ids: list[str] = []
 
     with map_path.open("w") as map_handle:
         for site_index in range(admixture_input.alignment_sites):
@@ -135,6 +140,10 @@ def write_pseudo_diploid_ped_map(
 
     with ped_path.open("w") as ped_handle:
         for sample_id, sequence in records:
+            if all(base not in BASES for base in sequence):
+                excluded_sample_ids.append(sample_id)
+                continue
+            included_sample_ids.append(sample_id)
             genotype_fields: list[str] = []
             for base in sequence:
                 allele = base if base in BASES else "0"
@@ -143,7 +152,26 @@ def write_pseudo_diploid_ped_map(
                 " ".join([sample_id, sample_id, "0", "0", "0", "-9", *genotype_fields])
                 + "\n"
             )
-    return ped_path, map_path
+    with excluded_path.open("w", newline="") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=["sample_id", "organelle", "reason"],
+            delimiter="\t",
+        )
+        writer.writeheader()
+        for sample_id in excluded_sample_ids:
+            writer.writerow(
+                {
+                    "sample_id": sample_id,
+                    "organelle": admixture_input.organelle,
+                    "reason": "all_snp_genotypes_missing",
+                }
+            )
+    if not included_sample_ids:
+        raise AdmixtureAnalysisError(
+            f"No informative {admixture_input.organelle} samples remain for ADMIXTURE"
+        )
+    return ped_path, map_path, included_sample_ids, excluded_sample_ids
 
 
 def build_admixture_command(
@@ -316,6 +344,7 @@ def write_q_table_and_plot(
     output_dir: Path,
     run_label: str,
     best_k: int,
+    sample_ids: list[str] | None = None,
 ) -> tuple[Path, Path, Path, Path]:
     try:
         import matplotlib
@@ -325,7 +354,10 @@ def write_q_table_and_plot(
     except ImportError as exc:
         raise AdmixtureAnalysisError("Missing matplotlib for ADMIXTURE plots") from exc
 
-    sample_ids = [sample_id for sample_id, _ in read_fasta(admixture_input.alignment_fasta_path)]
+    if sample_ids is None:
+        sample_ids = [
+            sample_id for sample_id, _ in read_fasta(admixture_input.alignment_fasta_path)
+        ]
     q_matrix = read_q_matrix(q_path)
     if len(q_matrix) != len(sample_ids):
         raise AdmixtureAnalysisError(f"Q row count does not match samples for {q_path}")
@@ -462,6 +494,7 @@ def write_admixture_outputs(
             "mean_cv_error",
             "sd_cv_error",
             "replicate_count",
+            "excluded_sample_count",
             "q_path",
             "p_path",
             "log_path",
@@ -557,14 +590,26 @@ def run_admixture_analysis(
     inputs = read_admixture_inputs(snp_alignment_dir=snp_alignment_dir, run_label=run_label)
     all_rows: list[dict[str, str]] = []
     for admixture_input in inputs:
-        ped_path, _ = write_pseudo_diploid_ped_map(admixture_input, output_dir, run_label)
+        ped_path, _, included_sample_ids, excluded_sample_ids = write_pseudo_diploid_ped_map(
+            admixture_input,
+            output_dir,
+            run_label,
+        )
         bed_path, plink_command = run_plink_make_bed(
             plink_executable=plink_executable,
             ped_path=ped_path,
             output_dir=output_dir,
             force=force,
         )
-        k_max_for_input = min(max_k, admixture_input.sample_count - 1, admixture_input.alignment_sites)
+        k_max_for_input = min(
+            max_k,
+            len(included_sample_ids) - 1,
+            admixture_input.alignment_sites,
+        )
+        if k_max_for_input < min_k:
+            raise AdmixtureAnalysisError(
+                f"Not enough informative {admixture_input.organelle} samples for K range"
+            )
         k_rows: list[dict[str, str]] = []
         for k in range(min_k, k_max_for_input + 1):
             for replicate in range(1, replicates + 1):
@@ -581,6 +626,7 @@ def run_admixture_analysis(
                 )
                 row["track_id"] = admixture_input.track_id
                 row["plink_command"] = plink_command
+                row["excluded_sample_count"] = str(len(excluded_sample_ids))
                 k_rows.append(row)
         stability_rows = summarize_replicate_stability(k_rows)
         stability_by_k = {row["k"]: row for row in stability_rows if row["organelle"] == admixture_input.organelle}
@@ -597,6 +643,7 @@ def run_admixture_analysis(
             output_dir=output_dir,
             run_label=run_label,
             best_k=best_k,
+            sample_ids=included_sample_ids,
         )
         cv_plot_path = write_cv_plot(output_dir, admixture_input.organelle, run_label, k_rows)
         for row in k_rows:

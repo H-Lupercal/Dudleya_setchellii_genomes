@@ -19,6 +19,8 @@ multiple competing sources of truth.
 |---|---|
 | `dudleya_organelle_reference_verification/` | Canonical cpDNA/mtDNA references, annotations, identity evidence, NC_085682 chloroplast comparison, independent BLAST QC, and annotation-integrity checks. |
 | `dudleya_organelle_alignment_pipeline/` | Reproducible cpDNA/mtDNA FASTQ-processing and population-genomics pipeline, including QC, alignments, variant calling, PCA, trees, admixture, and Fst outputs. See `PROCESS.md` for the ordered stage index. |
+| `initial_pipeline_run/` | Organized entry point for the initial pipeline output snapshot, with real copied final results and a provenance symlink back to `dudleya_organelle_alignment_pipeline/results/`. |
+| `full_pipeline_run/` | Organized second full pipeline rerun using all 16 CPU threads, with run report, logs, metadata, and final result files. |
 | `dudleya_conservation_genomics_pipeline/` | Local credited copy of the SCU Dudleya conservation genomics pipeline originally published at `https://github.com/evanhackstadt/dudleya`. |
 | `genomicsDrive_data_dump/` | Downloaded sequencing FASTQ data. |
 | `ORGANELLE_POPGEN_WORK_PLAN.md` | Work plan for cpDNA/mtDNA population analysis from the FASTQ data. |
@@ -27,60 +29,69 @@ multiple competing sources of truth.
 
 ## Final Organelle Population-Genomics Results
 
-The cpDNA and mtDNA population-genomics deliverables are complete. The two index
-files below summarise the analysis; the per-analysis output files follow.
-Generated analysis products remain local and are intentionally ignored by git;
-the result index files under `results/` stay visible.
+There are two organized output folders:
+
+| Run | Folder | Notes |
+|---|---|---|
+| Initial run | [`initial_pipeline_run/`](initial_pipeline_run/) | Entry point for the first result snapshot, with copied final outputs under `results/` and a provenance symlink back to the original pipeline results. |
+| Second full rerun | [`full_pipeline_run/`](full_pipeline_run/) | Complete rerun using all 16 CPU threads; stages `00` through `20` completed and produced a 34G organized result folder. |
+
+Use the second full rerun for current interpretation unless you are explicitly
+comparing against the initial run.
 
 | File | What it is |
 |---|---|
-| [`dudleya_organelle_alignment_pipeline/results/organelle_population_report.md`](dudleya_organelle_alignment_pipeline/results/organelle_population_report.md) | Integrated methods/results report covering references, QC, alignments, PCA, ML trees, admixture, Fst, and caveats. |
-| [`dudleya_organelle_alignment_pipeline/results/final_deliverables_manifest.tsv`](dudleya_organelle_alignment_pipeline/results/final_deliverables_manifest.tsv) | Machine-readable list of the final deliverables and notes. |
+| [`full_pipeline_run/README.md`](full_pipeline_run/README.md) | Result index with links to the organized rerun outputs. |
+| [`full_pipeline_run/FULL_PIPELINE_RUN_REPORT.md`](full_pipeline_run/FULL_PIPELINE_RUN_REPORT.md) | Narrative report covering what ran, issues encountered, fixes, outputs, and verification. |
+| [`full_pipeline_run/logs/stage_status.tsv`](full_pipeline_run/logs/stage_status.tsv) | Stage ledger showing completion of `00_manifest` through `20_bootstrap_tree_visualization`. |
+| [`full_pipeline_run/run_metadata.txt`](full_pipeline_run/run_metadata.txt) | Run start/finish times, thread count, Python environment, and result size. |
 
 ### Alignments
 
 | File | What it is |
 |---|---|
-| [`dudleya_organelle_alignment_pipeline/results/11_callable_consensus/cpDNA.primary.callable_consensus.fa`](dudleya_organelle_alignment_pipeline/results/11_callable_consensus/cpDNA.primary.callable_consensus.fa) | cpDNA full callable-site consensus alignment: 275 samples x 124,538 callable sites. |
-| [`dudleya_organelle_alignment_pipeline/results/11_callable_consensus/mtDNA.primary.callable_consensus.fa`](dudleya_organelle_alignment_pipeline/results/11_callable_consensus/mtDNA.primary.callable_consensus.fa) | mtDNA high-confidence unique-track callable consensus alignment: 275 samples x 44,930 callable sites. |
-| [`dudleya_organelle_alignment_pipeline/results/10_snp_alignment/cpDNA.primary.snp_alignment.fa`](dudleya_organelle_alignment_pipeline/results/10_snp_alignment/cpDNA.primary.snp_alignment.fa) | cpDNA filtered haploid SNP alignment with 2,015 SNP sites. |
-| [`dudleya_organelle_alignment_pipeline/results/10_snp_alignment/mtDNA.primary.snp_alignment.fa`](dudleya_organelle_alignment_pipeline/results/10_snp_alignment/mtDNA.primary.snp_alignment.fa) | mtDNA filtered haploid SNP alignment with 146 SNP sites. |
+| [`full_pipeline_run/results/11_callable_consensus/cpDNA.primary.callable_consensus.fa`](full_pipeline_run/results/11_callable_consensus/cpDNA.primary.callable_consensus.fa) | cpDNA callable-site consensus alignment: 278 samples x 124,538 callable sites. |
+| [`full_pipeline_run/results/11_callable_consensus/mtDNA.primary.callable_consensus.fa`](full_pipeline_run/results/11_callable_consensus/mtDNA.primary.callable_consensus.fa) | mtDNA high-confidence unique-track callable consensus alignment: 278 samples x 44,930 callable sites. |
+| [`full_pipeline_run/results/10_snp_alignment/cpDNA.primary.snp_alignment.fa`](full_pipeline_run/results/10_snp_alignment/cpDNA.primary.snp_alignment.fa) | cpDNA filtered haploid SNP alignment with 2,022 SNP sites. |
+| [`full_pipeline_run/results/10_snp_alignment/mtDNA.primary.snp_alignment.fa`](full_pipeline_run/results/10_snp_alignment/mtDNA.primary.snp_alignment.fa) | mtDNA filtered haploid SNP alignment with 146 SNP sites. |
 
 ### PCA
 
 | File | What it is |
 |---|---|
-| [`dudleya_organelle_alignment_pipeline/results/15_pca/cpDNA.primary.pca.png`](dudleya_organelle_alignment_pipeline/results/15_pca/cpDNA.primary.pca.png) | cpDNA PCA plot; PC1 explains 36.62 percent and PC2 explains 14.65 percent. |
-| [`dudleya_organelle_alignment_pipeline/results/15_pca/mtDNA.primary.pca.png`](dudleya_organelle_alignment_pipeline/results/15_pca/mtDNA.primary.pca.png) | mtDNA PCA plot; PC1 explains 34.48 percent and PC2 explains 14.06 percent. |
-| [`dudleya_organelle_alignment_pipeline/results/15_pca/cpDNA.primary.pca.coordinates.tsv`](dudleya_organelle_alignment_pipeline/results/15_pca/cpDNA.primary.pca.coordinates.tsv) | cpDNA sample coordinates and metadata for replotting or labeling PCA results. |
-| [`dudleya_organelle_alignment_pipeline/results/15_pca/mtDNA.primary.pca.coordinates.tsv`](dudleya_organelle_alignment_pipeline/results/15_pca/mtDNA.primary.pca.coordinates.tsv) | mtDNA sample coordinates and metadata for replotting or labeling PCA results. |
+| [`full_pipeline_run/results/15_pca/cpDNA.primary.pca.png`](full_pipeline_run/results/15_pca/cpDNA.primary.pca.png) | cpDNA PCA plot; PC1 explains 37.04 percent and PC2 explains 14.45 percent. |
+| [`full_pipeline_run/results/15_pca/mtDNA.primary.pca.png`](full_pipeline_run/results/15_pca/mtDNA.primary.pca.png) | mtDNA PCA plot; PC1 explains 34.43 percent and PC2 explains 14.03 percent. |
+| [`full_pipeline_run/results/15_pca/cpDNA.primary.pca.coordinates.tsv`](full_pipeline_run/results/15_pca/cpDNA.primary.pca.coordinates.tsv) | cpDNA sample coordinates and metadata for replotting or labeling PCA results. |
+| [`full_pipeline_run/results/15_pca/mtDNA.primary.pca.coordinates.tsv`](full_pipeline_run/results/15_pca/mtDNA.primary.pca.coordinates.tsv) | mtDNA sample coordinates and metadata for replotting or labeling PCA results. |
 
 ### Phylogenetic Trees
 
 | File | What it is |
 |---|---|
-| [`dudleya_organelle_alignment_pipeline/results/19_bootstrap_phylogenetic_tree/cpDNA.primary.iqtree_ml.treefile`](dudleya_organelle_alignment_pipeline/results/19_bootstrap_phylogenetic_tree/cpDNA.primary.iqtree_ml.treefile) | cpDNA IQ-TREE maximum-likelihood tree, GTR+F+G4, 1,000 ultrafast bootstraps with BNNI. |
-| [`dudleya_organelle_alignment_pipeline/results/19_bootstrap_phylogenetic_tree/mtDNA.primary.iqtree_ml.treefile`](dudleya_organelle_alignment_pipeline/results/19_bootstrap_phylogenetic_tree/mtDNA.primary.iqtree_ml.treefile) | mtDNA IQ-TREE maximum-likelihood tree, GTR+F+G4, 1,000 ultrafast bootstraps with BNNI. |
-| [`dudleya_organelle_alignment_pipeline/results/20_bootstrap_tree_visualization/cpDNA.primary.iqtree_ml_tree.png`](dudleya_organelle_alignment_pipeline/results/20_bootstrap_tree_visualization/cpDNA.primary.iqtree_ml_tree.png) | Rendered cpDNA ML tree figure with bootstrap support. |
-| [`dudleya_organelle_alignment_pipeline/results/20_bootstrap_tree_visualization/mtDNA.primary.iqtree_ml_tree.png`](dudleya_organelle_alignment_pipeline/results/20_bootstrap_tree_visualization/mtDNA.primary.iqtree_ml_tree.png) | Rendered mtDNA ML tree figure with bootstrap support. |
+| [`full_pipeline_run/results/19_bootstrap_phylogenetic_tree/cpDNA.primary.iqtree_ml.treefile`](full_pipeline_run/results/19_bootstrap_phylogenetic_tree/cpDNA.primary.iqtree_ml.treefile) | cpDNA IQ-TREE maximum-likelihood tree, GTR+F+G4, 1,000 ultrafast bootstraps with BNNI. |
+| [`full_pipeline_run/results/19_bootstrap_phylogenetic_tree/mtDNA.primary.iqtree_ml.treefile`](full_pipeline_run/results/19_bootstrap_phylogenetic_tree/mtDNA.primary.iqtree_ml.treefile) | mtDNA IQ-TREE maximum-likelihood tree, GTR+F+G4, 1,000 ultrafast bootstraps with BNNI. |
+| [`full_pipeline_run/results/20_bootstrap_tree_visualization/cpDNA.primary.iqtree_ml_tree.png`](full_pipeline_run/results/20_bootstrap_tree_visualization/cpDNA.primary.iqtree_ml_tree.png) | Rendered cpDNA ML tree figure with bootstrap support. |
+| [`full_pipeline_run/results/20_bootstrap_tree_visualization/mtDNA.primary.iqtree_ml_tree.png`](full_pipeline_run/results/20_bootstrap_tree_visualization/mtDNA.primary.iqtree_ml_tree.png) | Rendered mtDNA ML tree figure with bootstrap support. |
 
-### Admixture And Population Statistics
+### ADMIXTURE And Population Statistics
 
 | File | What it is |
 |---|---|
-| [`dudleya_organelle_alignment_pipeline/results/18_admixture_replicates/cpDNA.primary.bestK8.structure.png`](dudleya_organelle_alignment_pipeline/results/18_admixture_replicates/cpDNA.primary.bestK8.structure.png) | cpDNA ADMIXTURE-style structure plot; replicate-based best K=8. |
-| [`dudleya_organelle_alignment_pipeline/results/18_admixture_replicates/mtDNA.primary.bestK8.structure.png`](dudleya_organelle_alignment_pipeline/results/18_admixture_replicates/mtDNA.primary.bestK8.structure.png) | mtDNA ADMIXTURE-style structure plot; replicate-based best K=8. |
-| [`dudleya_organelle_alignment_pipeline/results/18_admixture_replicates/primary.admixture_report.md`](dudleya_organelle_alignment_pipeline/results/18_admixture_replicates/primary.admixture_report.md) | K=1..8, five-replicate CV-error sweep and haploid pseudo-diploid encoding note. |
-| [`dudleya_organelle_alignment_pipeline/results/17_population_genetics/cpDNA.primary.population_genetics.pairwise_fst.tsv`](dudleya_organelle_alignment_pipeline/results/17_population_genetics/cpDNA.primary.population_genetics.pairwise_fst.tsv) | cpDNA pairwise Fst table: 561 comparisons across 34 resolved populations. |
-| [`dudleya_organelle_alignment_pipeline/results/17_population_genetics/mtDNA.primary.population_genetics.pairwise_fst.tsv`](dudleya_organelle_alignment_pipeline/results/17_population_genetics/mtDNA.primary.population_genetics.pairwise_fst.tsv) | mtDNA pairwise Fst table: 561 comparisons across 34 resolved populations. |
-| [`dudleya_organelle_alignment_pipeline/results/17_population_genetics/cpDNA.primary.population_genetics.population_summary.tsv`](dudleya_organelle_alignment_pipeline/results/17_population_genetics/cpDNA.primary.population_genetics.population_summary.tsv) | cpDNA population summary with sample counts, haplotypes, diversity, nucleotide diversity, and private variants. |
-| [`dudleya_organelle_alignment_pipeline/results/17_population_genetics/mtDNA.primary.population_genetics.population_summary.tsv`](dudleya_organelle_alignment_pipeline/results/17_population_genetics/mtDNA.primary.population_genetics.population_summary.tsv) | mtDNA population summary with sample counts, haplotypes, diversity, nucleotide diversity, and private variants. |
-| [`dudleya_organelle_alignment_pipeline/results/13_tool_audit/primary.tool_audit_report.md`](dudleya_organelle_alignment_pipeline/results/13_tool_audit/primary.tool_audit_report.md) | Installed/verified bioinformatics and visualization tool audit. |
+| [`full_pipeline_run/results/18_admixture_replicates/cpDNA.primary.bestK8.structure.png`](full_pipeline_run/results/18_admixture_replicates/cpDNA.primary.bestK8.structure.png) | cpDNA ADMIXTURE-style structure plot; replicate-based best K=8. |
+| [`full_pipeline_run/results/18_admixture_replicates/mtDNA.primary.bestK8.structure.png`](full_pipeline_run/results/18_admixture_replicates/mtDNA.primary.bestK8.structure.png) | mtDNA ADMIXTURE-style structure plot; replicate-based best K=8. |
+| [`full_pipeline_run/results/18_admixture_replicates/primary.admixture_report.md`](full_pipeline_run/results/18_admixture_replicates/primary.admixture_report.md) | K=1..8, five-replicate CV-error sweep and haploid pseudo-diploid encoding note. |
+| [`full_pipeline_run/results/18_admixture_replicates/mtDNA.primary.pseudo_diploid.excluded_samples.tsv`](full_pipeline_run/results/18_admixture_replicates/mtDNA.primary.pseudo_diploid.excluded_samples.tsv) | ADMIXTURE-only mtDNA exclusion record for the single all-missing SNP-genotype sample. |
+| [`full_pipeline_run/results/17_population_genetics/cpDNA.primary.population_genetics.pairwise_fst.tsv`](full_pipeline_run/results/17_population_genetics/cpDNA.primary.population_genetics.pairwise_fst.tsv) | cpDNA pairwise Fst table: 595 comparisons across 35 resolved populations. |
+| [`full_pipeline_run/results/17_population_genetics/mtDNA.primary.population_genetics.pairwise_fst.tsv`](full_pipeline_run/results/17_population_genetics/mtDNA.primary.population_genetics.pairwise_fst.tsv) | mtDNA pairwise Fst table: 595 comparisons across 35 resolved populations. |
+| [`full_pipeline_run/results/17_population_genetics/cpDNA.primary.population_genetics.population_summary.tsv`](full_pipeline_run/results/17_population_genetics/cpDNA.primary.population_genetics.population_summary.tsv) | cpDNA population summary with sample counts, haplotypes, diversity, nucleotide diversity, and private variants. |
+| [`full_pipeline_run/results/17_population_genetics/mtDNA.primary.population_genetics.population_summary.tsv`](full_pipeline_run/results/17_population_genetics/mtDNA.primary.population_genetics.population_summary.tsv) | mtDNA population summary with sample counts, haplotypes, diversity, nucleotide diversity, and private variants. |
+| [`full_pipeline_run/results/13_tool_audit/primary.tool_audit_report.md`](full_pipeline_run/results/13_tool_audit/primary.tool_audit_report.md) | Installed/verified bioinformatics and visualization tool audit from the rerun environment. |
 
 Main interpretation caveats: trees are ML rather than a standalone rendered NJ
-tree; Fst is a custom haploid Nei-style estimate over informative SNPs; and
-mtDNA analyses use the 44,930 bp high-confidence unique track, leaving
-repeat-rich mtDNA regions out of population-genetic interpretation.
+tree; Fst is a custom haploid Nei-style estimate over informative SNPs;
+ADMIXTURE is a haploid organelle clustering visualization using pseudo-diploid
+encoding; and mtDNA analyses use the 44,930 bp high-confidence unique track,
+leaving repeat-rich mtDNA regions out of population-genetic interpretation.
 
 ## Canonical References
 

@@ -1,0 +1,9 @@
+=== 08_variant_calling Haploid cpDNA and mtDNA variant calling ===
+Started: 2026-07-08T13:54:42-07:00
+Command: python3 dudleya_organelle_alignment_pipeline/scripts/run_variant_calling.py --sample-table /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/07_downstream_sample_set/included_samples.tsv --track-table /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/05_analysis_masks/analysis_tracks.tsv --bam-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/06_all_sample_alignment/bam --output-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/08_variant_calling --run-label primary --threads 16 --force
+
+cpDNA: 2531 raw variant records across 278 samples
+mtDNA: 192 raw variant records across 278 samples
+Output directory: /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/08_variant_calling
+
+Finished: 2026-07-08T18:23:31-07:00

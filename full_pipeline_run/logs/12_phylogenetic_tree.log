@@ -1,0 +1,9 @@
+=== 12_phylogenetic_tree Initial maximum-likelihood trees ===
+Started: 2026-07-08T18:24:10-07:00
+Command: python3 dudleya_organelle_alignment_pipeline/scripts/run_phylogenetic_tree.py --consensus-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/11_callable_consensus --output-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/12_phylogenetic_tree --run-label primary --threads 16 --force
+
+cpDNA: iqtree_ml_fast tree for 278 samples at /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/12_phylogenetic_tree/cpDNA.primary.iqtree_ml.treefile
+mtDNA: iqtree_ml_fast tree for 278 samples at /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/12_phylogenetic_tree/mtDNA.primary.iqtree_ml.treefile
+Output directory: /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/12_phylogenetic_tree
+
+Finished: 2026-07-08T18:24:11-07:00

@@ -1,0 +1,6 @@
+=== 05_analysis_masks Analysis masks and population tracks ===
+Started: 2026-07-08T09:42:45-07:00
+Command: python3 dudleya_organelle_alignment_pipeline/scripts/build_analysis_masks.py --output-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/05_analysis_masks --cpdna-repeat-intervals /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/04_cpdna_investigation/cpdna_self_repeat_intervals.tsv --mtdna-high-mapq-intervals /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/03_mtdna_investigation/mtdna_high_mapq_consensus_intervals.tsv
+
+
+Finished: 2026-07-08T09:42:45-07:00

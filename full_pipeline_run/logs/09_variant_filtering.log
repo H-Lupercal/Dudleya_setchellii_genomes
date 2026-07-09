@@ -1,0 +1,9 @@
+=== 09_variant_filtering Variant filtering and callable-site definition ===
+Started: 2026-07-08T18:23:31-07:00
+Command: python3 dudleya_organelle_alignment_pipeline/scripts/run_variant_filtering.py --variant-calling-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/08_variant_calling --output-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/09_variant_filtering --run-label primary --threads 16 --force
+
+cpDNA: 2022 filtered records from 2531 raw records
+mtDNA: 146 filtered records from 192 raw records
+Output directory: /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/09_variant_filtering
+
+Finished: 2026-07-08T18:23:32-07:00

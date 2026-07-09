@@ -1,0 +1,526 @@
+IQ-TREE version 3.1.2 for Linux x86 64-bit built May 17 2026
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    sparky (AVX512, FMA3, 30 GB RAM)
+Command: /home/neil/miniconda3/bin/iqtree -s dudleya_organelle_alignment_pipeline/results/11_callable_consensus/mtDNA.primary.callable_consensus.fa --seqtype DNA -m GTR+F+G4 --prefix dudleya_organelle_alignment_pipeline/results/19_bootstrap_phylogenetic_tree/mtDNA.primary.iqtree_ml -T 4 --safe --redo --quiet -B 1000 --bnni
+Seed:    808521 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Tue Jul  7 23:14:05 2026
+Kernel:  Safe AVX+FMA - 4 threads (16 CPU cores detected)
+
+Reading alignment file dudleya_organelle_alignment_pipeline/results/11_callable_consensus/mtDNA.primary.callable_consensus.fa ... Fasta format detected
+Reading fasta file: done in 0.0597939 secs using 96.31% CPU
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.028676 secs using 355% CPU
+WARNING: 44 sites contain only gaps or ambiguous characters.
+Alignment has 275 sequences with 44930 columns, 345 distinct patterns
+146 parsimony-informative, 0 singleton sites, 44784 constant sites
+                         Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 2.19345e-05 secs using 364.7% CPU
+   1  DU-173                     1.14%    passed     99.68%
+   2  DU-229                     0.10%    passed    100.00%
+   3  DU-247                     0.10%    passed    100.00%
+   4  DU-254                     0.10%    passed    100.00%
+   5  DU-270                     0.40%    passed     99.80%
+   6  DU-297                     0.10%    passed    100.00%
+   7  DU-443                     0.10%    passed     99.99%
+   8  DU-4A                      0.10%    passed    100.00%
+   9  DU014LP012                 0.10%    passed     99.99%
+  10  DU037LP013                 0.10%    passed     99.99%
+  11  DU059LP015                 0.36%    passed     99.86%
+  12  DU078LP011                 0.40%    passed     99.16%
+  13  DU079LP010                 0.33%    passed     99.63%
+  14  ABAB_MAD_LP_223_Du-590     0.12%    passed    100.00%
+  15  ABAB_MAD_LP_322_Du-593     0.11%    passed     99.99%
+  16  ABAB_MAD_LP_323_Du-594     0.14%    passed     99.99%
+  17  ABAB_MAD_LP_324_Du-595     0.12%    passed     99.99%
+  18  ABAB_MAD_LP_325_Du-596     0.11%    passed    100.00%
+  19  ABAB_MAD_LP_326_Du-597     0.11%    passed    100.00%
+  20  ABAB_MAD_LP_327_Du-598     0.12%    passed     99.99%
+  21  ABBE_BERN_LP_311_Du-780    0.10%    passed    100.00%
+  22  ABBE_BERN_LP_312_Du-781    0.10%    passed    100.00%
+  23  ABBE_BERN_LP_313_Du-782    0.10%    passed    100.00%
+  24  ABBE_BERN_LP_314_Du-783    0.10%    passed    100.00%
+  25  ABMU_HOR_LP_306_Du-775     0.10%    passed    100.00%
+  26  ABMU_HOR_LP_308_Du-777     0.10%    passed    100.00%
+  27  ABMU_HOR_LP_358_Du-770     0.10%    passed    100.00%
+  28  ABMU_HOR_LP_359_Du-771     0.10%    passed    100.00%
+  29  ABMU_HOR_LP_360_Du-772     0.10%    passed    100.00%
+  30  ABMU_HOR_LP_361_Du-773     0.10%    passed    100.00%
+  31  BAI_LP_105_Du-222          0.10%    passed    100.00%
+  32  BAI_LP_106_Du-223          0.10%    passed    100.00%
+  33  BAI_LP_108_Du-225          0.10%    passed    100.00%
+  34  BAI_LP_109_Du-226          0.10%    passed    100.00%
+  35  BAI_LP_110_Du-227          0.10%    passed    100.00%
+  36  BAI_LP_111_Du-228          0.10%    passed    100.00%
+  37  BAI_LP_112_Du-230          0.10%    passed    100.00%
+  38  BAI_LP_113_Du-231          0.10%    passed    100.00%
+  39  BAI_LP_114_Du-232          0.10%    passed    100.00%
+  40  BAI_LP_319_Du-233          0.10%    passed    100.00%
+  41  COM_LP_269_Du-703          0.10%    passed    100.00%
+  42  COM_LP_270_Du-704          0.10%    passed    100.00%
+  43  COM_LP_272_Du-707          0.10%    passed    100.00%
+  44  COM_LP_274_Du-709          0.10%    passed    100.00%
+  45  COM_LP_276_Du-711          0.10%    passed    100.00%
+  46  COM_LP_277_Du-712          0.10%    passed    100.00%
+  47  COM_LP_341_Du-713          0.10%    passed    100.00%
+  48  COM_LP_342_Du-714          0.10%    passed    100.00%
+  49  COM_LP_343_Du-715          0.10%    passed    100.00%
+  50  CROB_LP_169_Du-381         0.16%    passed    100.00%
+  51  CROB_LP_170_Du-382         0.10%    passed    100.00%
+  52  CROB_LP_172_Du-384         0.10%    passed    100.00%
+  53  CROB_LP_173_Du-385         0.10%    passed    100.00%
+  54  CROB_LP_174_Du-386         0.10%    passed    100.00%
+  55  CROB_LP_175_Du-387         0.10%    passed    100.00%
+  56  CROB_LP_176_Du-388         0.10%    passed    100.00%
+  57  CROB_LP_177_Du-389         0.10%    passed    100.00%
+  58  CROB_LP_320_Du-395         0.10%    passed    100.00%
+  59  CROB_LP_321_Du-396         0.10%    passed    100.00%
+  60  CROS_LP_085_Du-181         0.10%    passed    100.00%
+  61  CROS_LP_086_Du-182         0.10%    passed    100.00%
+  62  CROS_LP_087_Du-183         0.10%    passed    100.00%
+  63  CROS_LP_088_Du-184         0.10%    passed    100.00%
+  64  CROS_LP_089_Du-185         0.10%    passed     99.99%
+  65  CROS_LP_090_Du-186         0.10%    passed    100.00%
+  66  CROS_LP_091_Du-187         0.10%    passed    100.00%
+  67  CROS_LP_092_Du-188         0.10%    passed    100.00%
+  68  CROS_LP_093_Du-189         0.10%    passed    100.00%
+  69  CROS_LP_094_Du-190         0.10%    passed    100.00%
+  70  CY_ALA_LP_298-Du-767       0.11%    passed    100.00%
+  71  CY_ALA_LP_299-Du-768       0.10%    passed     99.99%
+  72  CY_ALA_LP_357_Du-769       0.10%    passed     99.99%
+  73  CY_BAL_LP_226_Du-602       0.45%    passed     99.92%
+  74  CY_BAL_LP_227_Du-603       0.29%    passed     99.93%
+  75  CY_BAL_LP_228_Du-604       1.85%    passed     98.69%
+  76  CY_BGL_LP_210_Du-577       0.10%    passed    100.00%
+  77  CY_BGL_LP_212_Du-579       0.10%    passed    100.00%
+  78  CY_BOU_LP_288_Du-737       0.10%    passed     99.99%
+  79  CY_BOU_LP_290_Du-739       0.10%    passed     99.99%
+  80  CY_BOU_LP_291_Du-740       0.10%    passed     99.99%
+  81  CY_BOU_LP_292_Du-741       0.10%    passed     99.99%
+  82  CY_BOU_LP_354_Du-742       0.10%    passed     99.99%
+  83  CY_CAS_LP_328_Du-610       0.11%    passed    100.00%
+  84  CY_CAS_LP_329_Du-611       0.10%    passed     99.99%
+  85  CY_CAS_LP_330_Du-607       0.11%    passed     99.99%
+  86  CY_CAS_LP_331_Du-608       0.11%    passed     99.99%
+  87  CY_CAS_LP_332_Du-609       0.10%    passed     99.99%
+  88  CY_HICN_LP_236_Du-614      0.10%    passed     99.99%
+  89  CY_HICN_LP_333_Du-612      0.10%    passed    100.00%
+  90  CY_HICN_LP_334_Du-613      0.11%    passed     99.99%
+  91  CY_HICN_LP_335_Du-615      0.10%    passed     99.99%
+  92  CY_HICN_LP_336_Du-616      0.10%    passed     99.99%
+  93  CY_HICS_LP_293_Du-757      0.10%    passed     99.99%
+  94  CY_HICS_LP_295_Du-759      0.24%    passed    100.00%
+  95  CY_HICS_LP_297_Du-761      0.10%    passed     99.99%
+  96  CY_HICS_LP_355_Du-762      0.10%    passed     99.99%
+  97  CY_HICS_LP_356_Du-763      0.10%    passed     99.99%
+  98  CY_HUN_LP_264_Du-683       0.12%    passed    100.00%
+  99  CY_HUN_LP_266_Du-685       0.11%    passed    100.00%
+ 100  CY_HUN_LP_267_Du-686       0.12%    passed    100.00%
+ 101  CY_HUN_LP_268_Du-687       0.16%    passed     99.99%
+ 102  CY_SIE_LP_188_Du-445       0.10%    passed     99.99%
+ 103  CY_SIE_LP_189_Du-446       0.10%    passed     99.99%
+ 104  CY_SIE_LP_190_Du-447       0.10%    passed     99.99%
+ 105  CY_SIE_LP_191_Du-448       0.10%    passed     99.99%
+ 106  CY_WOO_LP_259_Du-664       0.10%    passed     99.99%
+ 107  CY_WOO_LP_260_Du-665       0.11%    passed     99.99%
+ 108  CY_WOO_LP_261_Du-667       0.12%    passed     99.99%
+ 109  CY_WOO_LP_262_Du-668       0.11%    passed     99.99%
+ 110  CY_WOO_LP_263_Du-669       0.10%    passed     99.99%
+ 111  DAN_LP_043_Du-68           0.51%    passed     98.36%
+ 112  DAN_LP_044_Du-69           0.47%    passed     98.49%
+ 113  DAN_LP_045_Du-70           0.36%    passed     99.54%
+ 114  DAN_LP_046_Du-71           0.35%    passed     99.56%
+ 115  DAN_LP_047_Du-72           0.51%    passed     98.37%
+ 116  DOV_LP_078_Du-174          0.10%    passed     99.99%
+ 117  DOV_LP_079_Du-175          0.10%    passed     99.99%
+ 118  DOV_LP_080_Du-176          0.10%    passed     99.99%
+ 119  DOV_LP_081_Du-177          0.10%    passed     99.99%
+ 120  DOV_LP_082_Du-178          0.10%    passed     99.99%
+ 121  DOV_LP_083_Du-179          0.10%    passed     99.99%
+ 122  DOV_LP_084_Du-180          0.10%    passed     99.99%
+ 123  DUD_LP_132_Du-283          0.10%    passed    100.00%
+ 124  DUD_LP_133_Du-284          0.10%    passed    100.00%
+ 125  DUD_LP_134_Du-285          0.10%    passed    100.00%
+ 126  DUD_LP_135_Du-286          0.10%    passed    100.00%
+ 127  DUD_LP_136_Du-287          0.10%    passed    100.00%
+ 128  DUD_LP_137_Du-288          0.10%    passed     99.99%
+ 129  DUD_LP_138_Du-289          0.10%    passed    100.00%
+ 130  DUD_LP_139_Du-290          0.10%    passed    100.00%
+ 131  KIRN_LP_179_Du-421         0.10%    passed    100.00%
+ 132  KIRN_LP_180_Du-422         0.10%    passed    100.00%
+ 133  KIRN_LP_181_Du-423         0.10%    passed    100.00%
+ 134  KIRN_LP_182_Du-424         0.10%    passed    100.00%
+ 135  KIRN_LP_183_Du-425         0.10%    passed    100.00%
+ 136  KIRN_LP_184_Du-426         0.10%    passed    100.00%
+ 137  KIRN_LP_185_Du-427         0.10%    passed    100.00%
+ 138  KIRN_LP_186_Du-428         0.10%    passed    100.00%
+ 139  KIRN_LP_187_Du-429         0.10%    passed    100.00%
+ 140  KIRT_LP_159_Du-364         0.10%    passed    100.00%
+ 141  KIRT_LP_160_Du-365         0.10%    passed    100.00%
+ 142  KIRT_LP_161_Du-366         0.10%    passed    100.00%
+ 143  KIRT_LP_162_Du-367         0.10%    passed    100.00%
+ 144  KIRT_LP_163_Du-368         0.10%    passed    100.00%
+ 145  KIRT_LP_164_Du-369         0.10%    passed    100.00%
+ 146  KIRT_LP_165_Du-370         0.10%    passed    100.00%
+ 147  KIRT_LP_166_Du-371         0.10%    passed    100.00%
+ 148  KIRT_LP_167_Du-372         0.10%    passed    100.00%
+ 149  KIRT_LP_168_Du-373         0.10%    passed    100.00%
+ 150  MALV_LP_095_Du-201         0.10%    passed    100.00%
+ 151  MALV_LP_096_Du-202         0.10%    passed    100.00%
+ 152  MALV_LP_097_Du-203         0.10%    passed    100.00%
+ 153  MALV_LP_098_Du-204         0.10%    passed    100.00%
+ 154  MALV_LP_099_Du-205         0.10%    passed    100.00%
+ 155  MALV_LP_100_Du-206         0.10%    passed    100.00%
+ 156  MALV_LP_101_Du-207         0.10%    passed    100.00%
+ 157  MALV_LP_102_Du-208         0.10%    passed    100.00%
+ 158  MALV_LP_103_Du-209         0.10%    passed    100.00%
+ 159  MALV_LP_104_Du-210         0.10%    passed    100.00%
+ 160  OCO_LP_058_Du-115          0.12%    passed     99.99%
+ 161  OCO_LP_059_Du-106          0.12%    passed    100.00%
+ 162  OCO_LP_060_Du-107          0.12%    passed    100.00%
+ 163  OCO_LP_061_Du-108          0.10%    passed    100.00%
+ 164  OCO_LP_062_Du-109          0.11%    passed    100.00%
+ 165  OCO_LP_063_Du-110          0.11%    passed     99.99%
+ 166  OCO_LP_064_Du-111          0.13%    passed    100.00%
+ 167  OCO_LP_065_Du-112          0.11%    passed    100.00%
+ 168  OCO_LP_066_Du-113          0.13%    passed     99.99%
+ 169  OCO_LP_067_Du-114          0.13%    passed     99.99%
+ 170  QUI1_LP_249_Du-648         0.10%    passed     99.98%
+ 171  QUI1_LP_250_Du-649         0.10%    passed     99.96%
+ 172  QUI1_LP_251_Du-650         0.27%    passed     99.81%
+ 173  QUI1_LP_252_Du-651         0.11%    passed     99.99%
+ 174  QUI1_LP_253_Du-652         0.10%    passed     99.99%
+ 175  QUI1_LP_254_Du-653         0.13%    passed     99.97%
+ 176  QUI1_LP_255_Du-654         0.10%    passed     99.99%
+ 177  QUI1_LP_257_Du-656         0.11%    passed     99.96%
+ 178  QUI1_LP_258_Du-657         0.10%    passed     99.99%
+ 179  QUI2_LP_243_Du-631         1.11%    passed     99.93%
+ 180  QUI2_LP_244_Du-632         0.97%    passed     99.24%
+ 181  QUI2_LP_245_Du-633         0.83%    passed     99.84%
+ 182  QUI2_LP_246_Du-634         1.19%    passed     99.91%
+ 183  QUI2_LP_247_Du-635         0.91%    passed     99.78%
+ 184  QUI2_LP_248_Du-636         0.93%    passed     99.61%
+ 185  QUI2_LP_337_Du-638         0.94%    passed     99.77%
+ 186  QUI2_LP_338_Du-639         1.10%    passed     99.50%
+ 187  QUI2_LP_339_Du-640         1.17%    passed     99.98%
+ 188  QUI2_LP_340_Du-641         0.88%    passed     99.85%
+ 189  QUIN_LP_069_Du-155         1.21%    passed     99.88%
+ 190  QUIN_LP_070_Du-156         1.08%    passed     99.64%
+ 191  QUIN_LP_071_Du-157         0.98%    passed     99.89%
+ 192  QUIN_LP_072_Du-158         0.97%    passed     99.75%
+ 193  QUIN_LP_073_Du-159         0.92%    passed     99.82%
+ 194  QUIN_LP_074_Du-160         1.13%    passed     99.90%
+ 195  QUIN_LP_075_Du-161         1.12%    passed     99.80%
+ 196  QUIN_LP_076_Du-162         1.12%    passed     99.83%
+ 197  QUIN_LP_077_Du-163         0.97%    passed     99.68%
+ 198  QUIN_LP_318_Du-164         1.15%    passed     99.79%
+ 199  RIC_LP_192_Du-521          0.10%    passed    100.00%
+ 200  RIC_LP_193_Du-522          0.10%    passed    100.00%
+ 201  RIC_LP_194_Du-523          0.10%    passed    100.00%
+ 202  RIC_LP_195_Du-524          0.10%    passed    100.00%
+ 203  RIC_LP_196_Du-525          0.10%    passed    100.00%
+ 204  RIC_LP_197_Du-526          0.10%    passed    100.00%
+ 205  RIC_LP_198_Du-527          0.10%    passed    100.00%
+ 206  RIC_LP_199_Du-528          0.10%    passed    100.00%
+ 207  RIC_LP_200_Du-529          0.10%    passed    100.00%
+ 208  RIC_LP_201_Du-530          0.10%    passed    100.00%
+ 209  RSV_LP_049_Du-85           0.30%    passed     99.96%
+ 210  RSV_LP_050_Du-87           0.40%    passed     99.78%
+ 211  RSV_LP_051_Du-88           0.42%    passed     99.75%
+ 212  RSV_LP_052_Du-89           0.26%    passed     99.98%
+ 213  RSV_LP_053_Du-90           0.40%    passed     99.79%
+ 214  RSV_LP_055_Du-92           0.42%    passed     99.80%
+ 215  RSV_LP_057_Du-94           0.42%    passed     99.80%
+ 216  RSV_LP_315_Du-95           0.42%    passed     99.81%
+ 217  RSV_LP_316_Du-96           0.42%    passed     99.71%
+ 218  SILG_LP_149_Du-343         0.10%    passed     99.99%
+ 219  SILG_LP_150_Du-344         0.10%    passed     99.99%
+ 220  SILG_LP_151_Du-345         0.10%    passed     99.99%
+ 221  SILG_LP_152_Du-346         0.10%    passed     99.99%
+ 222  SILG_LP_153_Du-347         0.10%    passed     99.99%
+ 223  SILG_LP_154_Du-348         0.10%    passed     99.99%
+ 224  SILG_LP_155_Du-349         0.10%    passed     99.99%
+ 225  SILG_LP_156_Du-350         0.10%    passed     99.99%
+ 226  SILG_LP_157_Du-351         0.18%    passed     99.99%
+ 227  SILG_LP_158_Du-352         0.11%    passed     99.98%
+ 228  SILR_LP_346_Du-729         0.10%    passed    100.00%
+ 229  SILR_LP_347_Du-730         0.10%    passed    100.00%
+ 230  SILR_LP_348_Du-731         0.10%    passed    100.00%
+ 231  SILR_LP_349_Du-732         0.10%    passed    100.00%
+ 232  SILR_LP_351_Du-734         0.10%    passed    100.00%
+ 233  SILR_LP_353_Du-736         0.10%    passed    100.00%
+ 234  STI_LP_027_Du-45           0.43%    passed     99.81%
+ 235  STI_LP_028_Du-46           0.43%    passed     99.79%
+ 236  STI_LP_029_Du-47           0.61%    passed     99.86%
+ 237  STI_LP_030_Du-48           0.34%    passed     99.96%
+ 238  STI_LP_031_Du-49           0.40%    passed     99.82%
+ 239  STI_LP_032_Du-50           0.10%    passed     99.99%
+ 240  STI_LP_033_Du-51           0.44%    passed     99.81%
+ 241  STI_LP_034_Du-52           0.41%    passed     99.77%
+ 242  STI_LP_035_Du-53           0.42%    passed     99.82%
+ 243  STI_LP_036_Du-54           0.43%    passed     99.78%
+ 244  STI_LP_037_Du-55           0.42%    passed     99.71%
+ 245  STI_LP_038_Du-56           0.42%    passed     99.82%
+ 246  STI_LP_039_Du-57           0.41%    passed     99.77%
+ 247  STI_LP_040_Du-58           0.43%    passed     99.83%
+ 248  STI_LP_041_Du-60           0.40%    passed     99.81%
+ 249  STI_LP_042_Du-61           0.40%    passed     99.80%
+ 250  TIL_LP_123_Du-263          0.48%    passed     99.81%
+ 251  TIL_LP_124_Du-264          0.41%    passed     99.86%
+ 252  TIL_LP_125_Du-265          0.44%    passed     99.81%
+ 253  TIL_LP_126_Du-266          0.43%    passed     99.79%
+ 254  TIL_LP_127_Du-267          6.57%    passed     97.72%
+ 255  TIL_LP_128_Du-268          0.41%    passed     99.88%
+ 256  TIL_LP_129_Du-269          0.41%    passed     99.76%
+ 257  TIL_LP_130_Du-271          0.41%    passed     99.85%
+ 258  TIL_LP_131_Du-272          0.41%    passed     99.85%
+ 259  TULP_LP_115_Du-242         0.10%    passed     99.99%
+ 260  TULP_LP_116_Du-243         0.10%    passed    100.00%
+ 261  TULP_LP_117_Du-244         0.10%    passed    100.00%
+ 262  TULP_LP_118_Du-245         0.10%    passed    100.00%
+ 263  TULP_LP_119_Du-246         0.10%    passed    100.00%
+ 264  TULP_LP_120_Du-248         0.10%    passed     99.99%
+ 265  TULP_LP_121_Du-249         0.10%    passed    100.00%
+ 266  TULP_LP_122_Du-250         0.10%    passed    100.00%
+ 267  TULP_LP_140_Du-302         0.10%    passed    100.00%
+ 268  TULP_LP_141_Du-303         0.10%    passed     99.99%
+ 269  TULP_LP_142_Du-304         0.10%    passed     99.99%
+ 270  TULP_LP_143_Du-305         0.10%    passed    100.00%
+ 271  TULP_LP_144_Du-306         0.10%    passed    100.00%
+ 272  TULP_LP_145_Du-307         0.10%    passed     99.99%
+ 273  TULP_LP_146_Du-308         0.10%    passed     99.99%
+ 274  TULP_LP_147_Du-309         0.10%    passed     99.99%
+ 275  TULP_LP_148_Du-310         0.10%    passed     99.99%
+****  TOTAL                      0.25%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: BAI_LP_106_Du-223 is identical to DU-229 but kept for subsequent analysis
+NOTE: DU-254 is identical to DU-247 but kept for subsequent analysis
+NOTE: CY_SIE_LP_189_Du-446 is identical to DU-443 but kept for subsequent analysis
+NOTE: CROS_LP_085_Du-181 is identical to DU-4A but kept for subsequent analysis
+NOTE: DU037LP013 is identical to DU014LP012 but kept for subsequent analysis
+NOTE: CY_BGL_LP_210_Du-577 is identical to ABBE_BERN_LP_311_Du-780 but kept for subsequent analysis
+NOTE: ABBE_BERN_LP_314_Du-783 is identical to ABBE_BERN_LP_313_Du-782 but kept for subsequent analysis
+NOTE: ABMU_HOR_LP_361_Du-773 is identical to ABMU_HOR_LP_306_Du-775 but kept for subsequent analysis
+NOTE: BAI_LP_108_Du-225 is identical to BAI_LP_105_Du-222 but kept for subsequent analysis
+NOTE: BAI_LP_113_Du-231 is identical to BAI_LP_109_Du-226 but kept for subsequent analysis
+NOTE: COM_LP_272_Du-707 is identical to COM_LP_270_Du-704 but kept for subsequent analysis
+NOTE: COM_LP_277_Du-712 is identical to COM_LP_274_Du-709 but kept for subsequent analysis
+NOTE: CROB_LP_173_Du-385 is identical to CROB_LP_170_Du-382 but kept for subsequent analysis
+NOTE: MALV_LP_095_Du-201 is identical to CROB_LP_172_Du-384 but kept for subsequent analysis
+NOTE: DUD_LP_137_Du-288 is identical to CROS_LP_089_Du-185 but kept for subsequent analysis
+NOTE: CROS_LP_094_Du-190 is identical to CROS_LP_091_Du-187 but kept for subsequent analysis
+NOTE: KIRN_LP_179_Du-421 is identical to CROS_LP_093_Du-189 but kept for subsequent analysis
+NOTE: CY_ALA_LP_357_Du-769 is identical to CY_ALA_LP_299-Du-768 but kept for subsequent analysis
+NOTE: CY_HICS_LP_297_Du-761 is identical to CY_BOU_LP_288_Du-737 but kept for subsequent analysis
+NOTE: CY_HICS_LP_355_Du-762 is identical to CY_BOU_LP_292_Du-741 but kept for subsequent analysis
+NOTE: CY_SIE_LP_188_Du-445 is identical to CY_HICN_LP_236_Du-614 but kept for subsequent analysis
+NOTE: DOV_LP_079_Du-175 is identical to DOV_LP_078_Du-174 but kept for subsequent analysis
+NOTE: QUI1_LP_255_Du-654 is identical to QUI1_LP_253_Du-652 but kept for subsequent analysis
+NOTE: RSV_LP_057_Du-94 is identical to RSV_LP_055_Du-92 but kept for subsequent analysis
+NOTE: SILG_LP_150_Du-344 is identical to SILG_LP_149_Du-343 but kept for subsequent analysis
+NOTE: SILG_LP_152_Du-346 is identical to SILG_LP_151_Du-345 but kept for subsequent analysis
+NOTE: SILR_LP_347_Du-730 is identical to SILR_LP_346_Du-729 but kept for subsequent analysis
+NOTE: STI_LP_039_Du-57 is identical to STI_LP_034_Du-52 but kept for subsequent analysis
+NOTE: STI_LP_038_Du-56 is identical to STI_LP_035_Du-53 but kept for subsequent analysis
+NOTE: TULP_LP_147_Du-309 is identical to TULP_LP_115_Du-242 but kept for subsequent analysis
+NOTE: TULP_LP_144_Du-306 is identical to TULP_LP_143_Du-305 but kept for subsequent analysis
+Checking for duplicate sequences: done in 0.000209093 secs using 398.9% CPU
+Identifying sites to remove: done in 0.015358 secs using 380.5% CPU
+NOTE: 85 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: BAI_LP_110_Du-227 (identical to DU-229) is ignored but added at the end
+NOTE: BAI_LP_111_Du-228 (identical to DU-229) is ignored but added at the end
+NOTE: DU-297 (identical to DU-247) is ignored but added at the end
+NOTE: DUD_LP_132_Du-283 (identical to DU-247) is ignored but added at the end
+NOTE: DUD_LP_133_Du-284 (identical to DU-247) is ignored but added at the end
+NOTE: DUD_LP_134_Du-285 (identical to DU-247) is ignored but added at the end
+NOTE: DUD_LP_135_Du-286 (identical to DU-247) is ignored but added at the end
+NOTE: DUD_LP_136_Du-287 (identical to DU-247) is ignored but added at the end
+NOTE: DUD_LP_138_Du-289 (identical to DU-247) is ignored but added at the end
+NOTE: DUD_LP_139_Du-290 (identical to DU-247) is ignored but added at the end
+NOTE: TULP_LP_116_Du-243 (identical to DU-247) is ignored but added at the end
+NOTE: TULP_LP_117_Du-244 (identical to DU-247) is ignored but added at the end
+NOTE: TULP_LP_118_Du-245 (identical to DU-247) is ignored but added at the end
+NOTE: TULP_LP_119_Du-246 (identical to DU-247) is ignored but added at the end
+NOTE: TULP_LP_121_Du-249 (identical to DU-247) is ignored but added at the end
+NOTE: TULP_LP_122_Du-250 (identical to DU-247) is ignored but added at the end
+NOTE: CROS_LP_086_Du-182 (identical to DU-4A) is ignored but added at the end
+NOTE: CROS_LP_087_Du-183 (identical to DU-4A) is ignored but added at the end
+NOTE: CROS_LP_088_Du-184 (identical to DU-4A) is ignored but added at the end
+NOTE: CROS_LP_090_Du-186 (identical to DU-4A) is ignored but added at the end
+NOTE: CY_BOU_LP_290_Du-739 (identical to DU014LP012) is ignored but added at the end
+NOTE: CY_BOU_LP_354_Du-742 (identical to DU014LP012) is ignored but added at the end
+NOTE: CY_HICS_LP_293_Du-757 (identical to DU014LP012) is ignored but added at the end
+NOTE: BAI_LP_112_Du-230 (identical to BAI_LP_105_Du-222) is ignored but added at the end
+NOTE: BAI_LP_114_Du-232 (identical to BAI_LP_105_Du-222) is ignored but added at the end
+NOTE: BAI_LP_319_Du-233 (identical to BAI_LP_105_Du-222) is ignored but added at the end
+NOTE: COM_LP_276_Du-711 (identical to COM_LP_270_Du-704) is ignored but added at the end
+NOTE: COM_LP_341_Du-713 (identical to COM_LP_270_Du-704) is ignored but added at the end
+NOTE: COM_LP_342_Du-714 (identical to COM_LP_270_Du-704) is ignored but added at the end
+NOTE: COM_LP_343_Du-715 (identical to COM_LP_274_Du-709) is ignored but added at the end
+NOTE: CROB_LP_174_Du-386 (identical to CROB_LP_170_Du-382) is ignored but added at the end
+NOTE: CROB_LP_175_Du-387 (identical to CROB_LP_170_Du-382) is ignored but added at the end
+NOTE: CROB_LP_176_Du-388 (identical to CROB_LP_170_Du-382) is ignored but added at the end
+NOTE: CROB_LP_177_Du-389 (identical to CROB_LP_170_Du-382) is ignored but added at the end
+NOTE: CROB_LP_320_Du-395 (identical to CROB_LP_170_Du-382) is ignored but added at the end
+NOTE: CROB_LP_321_Du-396 (identical to CROB_LP_170_Du-382) is ignored but added at the end
+NOTE: MALV_LP_096_Du-202 (identical to CROB_LP_172_Du-384) is ignored but added at the end
+NOTE: MALV_LP_097_Du-203 (identical to CROB_LP_172_Du-384) is ignored but added at the end
+NOTE: MALV_LP_098_Du-204 (identical to CROB_LP_172_Du-384) is ignored but added at the end
+NOTE: MALV_LP_099_Du-205 (identical to CROB_LP_172_Du-384) is ignored but added at the end
+NOTE: MALV_LP_100_Du-206 (identical to CROB_LP_172_Du-384) is ignored but added at the end
+NOTE: MALV_LP_101_Du-207 (identical to CROB_LP_172_Du-384) is ignored but added at the end
+NOTE: MALV_LP_102_Du-208 (identical to CROB_LP_172_Du-384) is ignored but added at the end
+NOTE: MALV_LP_103_Du-209 (identical to CROB_LP_172_Du-384) is ignored but added at the end
+NOTE: MALV_LP_104_Du-210 (identical to CROB_LP_172_Du-384) is ignored but added at the end
+NOTE: KIRN_LP_180_Du-422 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: KIRN_LP_181_Du-423 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: KIRN_LP_182_Du-424 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: KIRN_LP_183_Du-425 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: KIRN_LP_184_Du-426 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: KIRN_LP_185_Du-427 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: KIRN_LP_186_Du-428 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: KIRN_LP_187_Du-429 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: KIRT_LP_159_Du-364 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: KIRT_LP_160_Du-365 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: KIRT_LP_161_Du-366 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: KIRT_LP_162_Du-367 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: KIRT_LP_163_Du-368 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: KIRT_LP_164_Du-369 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: KIRT_LP_165_Du-370 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: KIRT_LP_166_Du-371 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: KIRT_LP_167_Du-372 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: KIRT_LP_168_Du-373 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: RIC_LP_192_Du-521 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: RIC_LP_193_Du-522 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: RIC_LP_194_Du-523 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: RIC_LP_195_Du-524 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: RIC_LP_196_Du-525 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: RIC_LP_198_Du-527 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: RIC_LP_199_Du-528 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: RIC_LP_200_Du-529 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: RIC_LP_201_Du-530 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: CY_HICS_LP_356_Du-763 (identical to CY_BOU_LP_288_Du-737) is ignored but added at the end
+NOTE: DOV_LP_080_Du-176 (identical to DOV_LP_078_Du-174) is ignored but added at the end
+NOTE: DOV_LP_081_Du-177 (identical to DOV_LP_078_Du-174) is ignored but added at the end
+NOTE: DOV_LP_082_Du-178 (identical to DOV_LP_078_Du-174) is ignored but added at the end
+NOTE: DOV_LP_083_Du-179 (identical to DOV_LP_078_Du-174) is ignored but added at the end
+NOTE: DOV_LP_084_Du-180 (identical to DOV_LP_078_Du-174) is ignored but added at the end
+NOTE: SILG_LP_153_Du-347 (identical to SILG_LP_149_Du-343) is ignored but added at the end
+NOTE: SILG_LP_154_Du-348 (identical to SILG_LP_149_Du-343) is ignored but added at the end
+NOTE: SILG_LP_155_Du-349 (identical to SILG_LP_151_Du-345) is ignored but added at the end
+NOTE: SILR_LP_348_Du-731 (identical to SILR_LP_346_Du-729) is ignored but added at the end
+NOTE: SILR_LP_349_Du-732 (identical to SILR_LP_346_Du-729) is ignored but added at the end
+NOTE: SILR_LP_351_Du-734 (identical to SILR_LP_346_Du-729) is ignored but added at the end
+NOTE: SILR_LP_353_Du-736 (identical to SILR_LP_346_Du-729) is ignored but added at the end
+Alignment was printed to dudleya_organelle_alignment_pipeline/results/19_bootstrap_phylogenetic_tree/mtDNA.primary.iqtree_ml.uniqueseq.phy
+
+For your convenience alignment with unique sequences printed to dudleya_organelle_alignment_pipeline/results/19_bootstrap_phylogenetic_tree/mtDNA.primary.iqtree_ml.uniqueseq.phy
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.004 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 808521)...
+
+NOTE: 10 MB RAM (0 GB) is required!
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -64270.106
+2. Current log-likelihood: -64214.176
+3. Current log-likelihood: -64213.715
+Optimal log-likelihood: -64213.630
+Rate parameters:  A-C: 0.77257  A-G: 0.58305  A-T: 1.78829  C-G: 0.41372  C-T: 0.98285  G-T: 1.00000
+Base frequencies:  A: 0.270  C: 0.223  G: 0.229  T: 0.278
+Gamma shape alpha: 0.020
+Parameters optimization took 3 rounds (0.056 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.030206 secs using 400% CPU
+Computing ML distances took 0.030260 sec (of wall-clock time) 0.120935 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.000161886 secs using 442.3% CPU
+Constructing RapidNJ tree: done in 0.00185895 secs using 404.9% CPU
+Computing RapidNJ tree took 0.002035 sec (of wall-clock time) 0.008272 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -64224.593
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.412 second
+Computing log-likelihood of 98 initial trees ... 0.253 seconds
+Current best score: -64195.998
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -64189.297
+Iteration 10 / LogL: -64197.256 / Time: 0h:0m:3s
+Iteration 20 / LogL: -64196.378 / Time: 0h:0m:6s
+Finish initializing candidate tree set (20)
+Current best tree score: -64189.297 / CPU time: 6.336
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -64199.244 / Time: 0h:0m:7s (0h:0m:19s left)
+Iteration 40 / LogL: -64190.948 / Time: 0h:0m:9s (0h:0m:14s left)
+Iteration 50 / LogL: -64198.739 / Time: 0h:0m:10s (0h:0m:11s left)
+Iteration 60 / LogL: -64196.842 / Time: 0h:0m:12s (0h:0m:8s left)
+Iteration 70 / LogL: -64191.988 / Time: 0h:0m:13s (0h:0m:6s left)
+Iteration 80 / LogL: -64205.998 / Time: 0h:0m:14s (0h:0m:3s left)
+Iteration 90 / LogL: -64194.101 / Time: 0h:0m:16s (0h:0m:1s left)
+Iteration 100 / LogL: -64197.168 / Time: 0h:0m:17s (0h:0m:0s left)
+Refining ufboot trees with NNI 1 branch...
+100 samples done
+200 samples done
+300 samples done
+400 samples done
+500 samples done
+600 samples done
+700 samples done
+800 samples done
+900 samples done
+1000 samples done
+Total 1000 ufboot trees refined
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:0m:57s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -64189.297
+2. Current log-likelihood: -64189.260
+3. Current log-likelihood: -64189.237
+4. Current log-likelihood: -64189.222
+Optimal log-likelihood: -64189.212
+Rate parameters:  A-C: 0.71662  A-G: 0.58680  A-T: 1.65050  C-G: 0.39595  C-T: 0.83651  G-T: 1.00000
+Base frequencies:  A: 0.270  C: 0.223  G: 0.229  T: 0.278
+Gamma shape alpha: 0.020
+Parameters optimization took 4 rounds (0.061 sec)
+BEST SCORE FOUND : -64189.212
+Creating bootstrap support values...
+Split supports printed to NEXUS file dudleya_organelle_alignment_pipeline/results/19_bootstrap_phylogenetic_tree/mtDNA.primary.iqtree_ml.splits.nex
+Total tree length: 0.005
+
+Total number of iterations: 102
+CPU time used for tree search: 225.281 sec (0h:3m:45s)
+Wall-clock time used for tree search: 56.969 sec (0h:0m:56s)
+Total CPU time used: 226.942 sec (0h:3m:46s)
+Total wall-clock time used: 57.422 sec (0h:0m:57s)
+UFBoot trees printed to dudleya_organelle_alignment_pipeline/results/19_bootstrap_phylogenetic_tree/mtDNA.primary.iqtree_ml.ufboot
+
+Computing bootstrap consensus tree...
+Reading input file dudleya_organelle_alignment_pipeline/results/19_bootstrap_phylogenetic_tree/mtDNA.primary.iqtree_ml.splits.nex...
+190 taxa and 10615 splits.
+Consensus tree written to dudleya_organelle_alignment_pipeline/results/19_bootstrap_phylogenetic_tree/mtDNA.primary.iqtree_ml.contree
+Reading input trees file dudleya_organelle_alignment_pipeline/results/19_bootstrap_phylogenetic_tree/mtDNA.primary.iqtree_ml.contree
+Log-likelihood of consensus tree: -64216.605
+
+Analysis results written to: 
+  IQ-TREE report:                dudleya_organelle_alignment_pipeline/results/19_bootstrap_phylogenetic_tree/mtDNA.primary.iqtree_ml.iqtree
+  Maximum-likelihood tree:       dudleya_organelle_alignment_pipeline/results/19_bootstrap_phylogenetic_tree/mtDNA.primary.iqtree_ml.treefile
+  Likelihood distances:          dudleya_organelle_alignment_pipeline/results/19_bootstrap_phylogenetic_tree/mtDNA.primary.iqtree_ml.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          dudleya_organelle_alignment_pipeline/results/19_bootstrap_phylogenetic_tree/mtDNA.primary.iqtree_ml.splits.nex
+  Consensus tree:                dudleya_organelle_alignment_pipeline/results/19_bootstrap_phylogenetic_tree/mtDNA.primary.iqtree_ml.contree
+  UFBoot trees:                  dudleya_organelle_alignment_pipeline/results/19_bootstrap_phylogenetic_tree/mtDNA.primary.iqtree_ml.ufboot
+  Screen log file:               dudleya_organelle_alignment_pipeline/results/19_bootstrap_phylogenetic_tree/mtDNA.primary.iqtree_ml.log
+
+Date and Time: Tue Jul  7 23:15:03 2026
