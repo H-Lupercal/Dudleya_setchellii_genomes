@@ -21,6 +21,8 @@ kept in one place.
 | `dudleya_organelle_alignment_pipeline/` | Reproducible cpDNA/mtDNA FASTQ-processing and population-genomics pipeline, including QC, alignments, variant calling, PCA, trees, admixture, and Fst outputs. See `PROCESS.md` for the ordered stage index. |
 | `initial_pipeline_run/` | Snapshot of the first pipeline result set, copied into a GitHub-browsable folder. |
 | `full_pipeline_run/` | Main submission result set: second full rerun using 16 CPU threads, with report, logs, metadata, and final files. |
+| `genome_maps/` | Circular cpDNA and mtDNA genome-structure maps generated from the reference FASTA and GFF3 annotation files. |
+| `submission_figures/` | Extra review figures: Fst heatmaps, population-colored trees, and a six-panel summary figure. |
 | `dudleya_conservation_genomics_pipeline/` | Local credited copy of the SCU Dudleya conservation genomics pipeline originally published at `https://github.com/evanhackstadt/dudleya`. |
 | `genomicsDrive_data_dump/` | Downloaded sequencing FASTQ data. |
 | `ORGANELLE_POPGEN_WORK_PLAN.md` | Work plan for cpDNA/mtDNA population analysis from the FASTQ data. |
@@ -52,6 +54,8 @@ The primary files from the second rerun are:
 | Annotated references | References in [`dudleya_organelle_reference_verification/references/`](dudleya_organelle_reference_verification/references/) and annotations in [`dudleya_organelle_reference_verification/annotations/`](dudleya_organelle_reference_verification/annotations/). |
 | PCA | [`cpDNA.primary.pca.png`](full_pipeline_run/results/15_pca/cpDNA.primary.pca.png), [`mtDNA.primary.pca.png`](full_pipeline_run/results/15_pca/mtDNA.primary.pca.png), and the coordinate tables in [`results/15_pca/`](full_pipeline_run/results/15_pca/). |
 | Phylogenetic trees | IQ-TREE files in [`results/19_bootstrap_phylogenetic_tree/`](full_pipeline_run/results/19_bootstrap_phylogenetic_tree/) and rendered tree figures in [`results/20_bootstrap_tree_visualization/`](full_pipeline_run/results/20_bootstrap_tree_visualization/). |
+| Circular genome maps | [`genome_maps/cpDNA.circular_genome_map.png`](genome_maps/cpDNA.circular_genome_map.png) and [`genome_maps/mtDNA.circular_genome_map.png`](genome_maps/mtDNA.circular_genome_map.png), drawn from the reference FASTA and annotation GFF3 files. |
+| Fst heatmaps and summary panel | [`submission_figures/cpDNA.pairwise_fst_heatmap.png`](submission_figures/cpDNA.pairwise_fst_heatmap.png), [`submission_figures/mtDNA.pairwise_fst_heatmap.png`](submission_figures/mtDNA.pairwise_fst_heatmap.png), and [`submission_figures/dudleya_organelle_submission_panel.png`](submission_figures/dudleya_organelle_submission_panel.png). |
 | ADMIXTURE / structure plots | Five-replicate K=1..8 runs in [`results/18_admixture_replicates/`](full_pipeline_run/results/18_admixture_replicates/); best K=8 for both cpDNA and mtDNA by mean CV error. |
 | Fst and population summaries | Pairwise Fst and population tables in [`results/17_population_genetics/`](full_pipeline_run/results/17_population_genetics/). |
 | QC and Evan pipeline context | Manifest checks, pilot alignment, all-sample alignment QC, downstream sample filtering, tool audit, and stage logs are included in the pipeline outputs. Evan Hackstadt's Dudleya pipeline copy is retained in [`dudleya_conservation_genomics_pipeline/`](dudleya_conservation_genomics_pipeline/). |

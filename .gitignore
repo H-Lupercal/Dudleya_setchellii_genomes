@@ -87,6 +87,10 @@ __pycache__/
 .coverage
 htmlcov/
 
+# Local plotting/font caches
+genome_maps/.matplotlib/
+submission_figures/.matplotlib/
+
 # Workflow runtime state
 .snakemake/
 

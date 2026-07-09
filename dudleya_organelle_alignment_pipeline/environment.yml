@@ -19,6 +19,7 @@ dependencies:
   - pandas
   - scikit-learn
   - biopython
+  - pycirclize
   - seaborn
   - r-ggplot2
   - r-ape
