@@ -39,6 +39,22 @@ There are two organized output folders:
 Use the second full rerun for current interpretation unless you are explicitly
 comparing against the initial run.
 
+### Challenge Checklist
+
+This repository explicitly addresses the requested organelle population-genomics
+challenge as follows:
+
+| Challenge requirement | Primary result |
+|---|---|
+| Create an alignment of all samples for cpDNA | [`full_pipeline_run/results/11_callable_consensus/cpDNA.primary.callable_consensus.fa`](full_pipeline_run/results/11_callable_consensus/cpDNA.primary.callable_consensus.fa) and [`full_pipeline_run/results/10_snp_alignment/cpDNA.primary.snp_alignment.fa`](full_pipeline_run/results/10_snp_alignment/cpDNA.primary.snp_alignment.fa). |
+| Create an alignment of all samples for mtDNA | [`full_pipeline_run/results/11_callable_consensus/mtDNA.primary.callable_consensus.fa`](full_pipeline_run/results/11_callable_consensus/mtDNA.primary.callable_consensus.fa) and [`full_pipeline_run/results/10_snp_alignment/mtDNA.primary.snp_alignment.fa`](full_pipeline_run/results/10_snp_alignment/mtDNA.primary.snp_alignment.fa). |
+| Use the annotated cpDNA and mtDNA references | Mapping and analysis use the canonical references in [`dudleya_organelle_reference_verification/references/`](dudleya_organelle_reference_verification/references/) with annotations in [`dudleya_organelle_reference_verification/annotations/`](dudleya_organelle_reference_verification/annotations/). |
+| PCA visualization | [`full_pipeline_run/results/15_pca/cpDNA.primary.pca.png`](full_pipeline_run/results/15_pca/cpDNA.primary.pca.png), [`full_pipeline_run/results/15_pca/mtDNA.primary.pca.png`](full_pipeline_run/results/15_pca/mtDNA.primary.pca.png), and their coordinate tables. |
+| Phylogenetic tree | Maximum-likelihood IQ-TREE outputs in [`full_pipeline_run/results/19_bootstrap_phylogenetic_tree/`](full_pipeline_run/results/19_bootstrap_phylogenetic_tree/) and rendered figures in [`full_pipeline_run/results/20_bootstrap_tree_visualization/`](full_pipeline_run/results/20_bootstrap_tree_visualization/). |
+| ADMIXTURE / structure plot with empirical K | Five-replicate K=1..8 runs in [`full_pipeline_run/results/18_admixture_replicates/`](full_pipeline_run/results/18_admixture_replicates/); best K=8 for both cpDNA and mtDNA by mean CV error. |
+| Fst and population-genetic parameters | Pairwise Fst and population summaries in [`full_pipeline_run/results/17_population_genetics/`](full_pipeline_run/results/17_population_genetics/). |
+| QC and Evan pipeline context | The pipeline includes manifest checks, pilot alignment, all-sample alignment QC, downstream sample filtering, tool audit, and stage logs; the local credited copy of Evan's Dudleya pipeline is retained in [`dudleya_conservation_genomics_pipeline/`](dudleya_conservation_genomics_pipeline/) for context. |
+
 | File | What it is |
 |---|---|
 | [`full_pipeline_run/README.md`](full_pipeline_run/README.md) | Result index with links to the organized rerun outputs. |
