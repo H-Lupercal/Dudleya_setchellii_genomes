@@ -1346,3 +1346,289 @@
 - future support for embedding QC profile names in submission packages.
 - final "dream version" note describing the ideal future state of the repository.
 - final "next obvious move" note naming the most useful single addition after submission.
+- ranked top-10 future analyses with rationale, required inputs, expected output, and estimated effort.
+- ranked top-10 future figures with rationale, source files, expected audience, and estimated effort.
+- ranked top-10 future QC checks with rationale, failure mode, and expected remediation.
+- ranked top-10 future documentation improvements with rationale and target reader.
+- ranked top-10 future reproducibility improvements with rationale and implementation notes.
+- ranked top-10 future publication improvements with rationale and expected manuscript section.
+- ranked top-10 future professor-facing improvements with rationale and exact deliverable.
+- ranked top-10 future lab-handoff improvements with rationale and exact user.
+- ranked top-10 future coding improvements with rationale and affected scripts.
+- ranked top-10 future biological questions that this dataset could help address.
+- one-page decision matrix for what to implement next.
+- one-page decision matrix for what not to implement before submission.
+- one-page decision matrix for what requires raw-read access.
+- one-page decision matrix for what requires stronger metadata.
+- one-page decision matrix for what requires more biological review.
+- one-page decision matrix for what requires external database comparisons.
+- one-page decision matrix for what would most improve scientific confidence.
+- one-page decision matrix for what would most improve visual presentation.
+- one-page decision matrix for what would most improve reproducibility.
+- one-page decision matrix for what would most improve GitHub readability.
+- formal "result of record" declaration for the submitted run.
+- formal "analysis scope" declaration for the submitted run.
+- formal "out of scope" declaration for analyses not attempted.
+- formal "known limitations" declaration for the submitted run.
+- formal "rerun policy" explaining when a new output folder should be created.
+- formal "final output policy" explaining which files are primary deliverables.
+- formal "intermediate output policy" explaining which files are for debugging only.
+- formal "figure policy" explaining which figures are main, supplemental, and exploratory.
+- formal "sample exclusion policy" explaining how excluded samples are handled.
+- formal "metadata correction policy" explaining how sample labels should be updated.
+- formal "reference update policy" explaining how cpDNA and mtDNA references should be changed.
+- formal "annotation update policy" explaining how annotation files should be changed.
+- formal "environment update policy" explaining how dependency changes should be recorded.
+- formal "tool replacement policy" explaining how alternate bioinformatics tools should be evaluated.
+- formal "random seed policy" explaining which steps need deterministic seeds.
+- formal "directory naming policy" explaining future run folder names.
+- formal "GitHub commit policy" explaining how to separate code, docs, and result changes.
+- formal "archive policy" explaining what belongs in GitHub versus external storage.
+- formal "review policy" explaining what should be checked before sharing results.
+- formal "manual inspection policy" explaining which figures require human review.
+- concise methods paragraph for alignment generation.
+- concise methods paragraph for SNP alignment generation.
+- concise methods paragraph for callable consensus generation.
+- concise methods paragraph for PCA.
+- concise methods paragraph for maximum-likelihood tree inference.
+- concise methods paragraph for Neighbor Joining tree inference if added.
+- concise methods paragraph for ADMIXTURE-style analysis.
+- concise methods paragraph for empirical best-K selection.
+- concise methods paragraph for pairwise Fst estimation.
+- concise methods paragraph for circular genome map generation.
+- concise methods paragraph for SNP-density track generation.
+- concise methods paragraph for genome annotation verification.
+- concise methods paragraph for sample filtering.
+- concise methods paragraph for missing-data handling.
+- concise methods paragraph for output organization.
+- concise methods paragraph for reproducibility checks.
+- concise results paragraph for cpDNA alignment.
+- concise results paragraph for mtDNA alignment.
+- concise results paragraph for cpDNA PCA.
+- concise results paragraph for mtDNA PCA.
+- concise results paragraph for cpDNA phylogeny.
+- concise results paragraph for mtDNA phylogeny.
+- concise results paragraph for cpDNA ADMIXTURE.
+- concise results paragraph for mtDNA ADMIXTURE.
+- concise results paragraph for cpDNA Fst.
+- concise results paragraph for mtDNA Fst.
+- concise results paragraph for cpDNA circular genome map.
+- concise results paragraph for mtDNA circular genome map.
+- concise results paragraph comparing cpDNA and mtDNA.
+- concise results paragraph summarizing QC outcomes.
+- concise results paragraph summarizing caveats.
+- sentence-level caveat for small population sample sizes.
+- sentence-level caveat for uneven population sample sizes.
+- sentence-level caveat for missing mtDNA data.
+- sentence-level caveat for organellar inheritance.
+- sentence-level caveat for pseudo-diploid genotype encoding.
+- sentence-level caveat for ADMIXTURE interpretation.
+- sentence-level caveat for PCA interpretation.
+- sentence-level caveat for tree-rooting interpretation.
+- sentence-level caveat for bootstrap support.
+- sentence-level caveat for reference-guided alignments.
+- sentence-level caveat for annotation-derived gene summaries.
+- sentence-level caveat for Fst values from linked organellar sites.
+- sentence-level caveat for comparing cpDNA and mtDNA directly.
+- sentence-level caveat for using these results in conservation decisions.
+- sentence-level caveat for extrapolating beyond sampled individuals.
+- sentence-level caveat for taxonomy interpretation.
+- sentence-level caveat for population labels.
+- sentence-level caveat for geographic labels.
+- sentence-level caveat for sample collection history.
+- sentence-level caveat for unverified raw-read coverage.
+- polished figure caption for the combined submission panel.
+- polished figure caption for cpDNA circular genome map.
+- polished figure caption for mtDNA circular genome map.
+- polished figure caption for cpDNA PCA.
+- polished figure caption for mtDNA PCA.
+- polished figure caption for cpDNA tree.
+- polished figure caption for mtDNA tree.
+- polished figure caption for cpDNA ADMIXTURE.
+- polished figure caption for mtDNA ADMIXTURE.
+- polished figure caption for cpDNA Fst heatmap.
+- polished figure caption for mtDNA Fst heatmap.
+- polished figure caption for population-colored cpDNA tree.
+- polished figure caption for population-colored mtDNA tree.
+- polished figure caption for future haplotype networks.
+- polished figure caption for future gene-level SNP summaries.
+- polished figure caption for future SNP-density plots.
+- polished figure caption for future missingness plots.
+- polished figure caption for future QC dashboards.
+- polished figure caption for future run-comparison panels.
+- polished figure caption for future barcode-region comparison.
+- polished supplementary table caption for primary alignments.
+- polished supplementary table caption for SNP-site tables.
+- polished supplementary table caption for callable consensus files.
+- polished supplementary table caption for PCA coordinates.
+- polished supplementary table caption for tree files.
+- polished supplementary table caption for ADMIXTURE outputs.
+- polished supplementary table caption for Fst matrices.
+- polished supplementary table caption for sample inclusion tables.
+- polished supplementary table caption for excluded sample tables.
+- polished supplementary table caption for tool audit tables.
+- polished supplementary table caption for genome-map summary tables.
+- polished supplementary table caption for submission-figure summary tables.
+- polished supplementary table caption for future haplotype tables.
+- polished supplementary table caption for future gene-level SNP tables.
+- polished supplementary table caption for future QC tables.
+- polished supplementary table caption for future run-comparison tables.
+- final README table that groups outputs by challenge requirement.
+- final README table that groups outputs by file type.
+- final README table that groups outputs by cpDNA versus mtDNA.
+- final README table that groups outputs by primary versus supplemental.
+- final README table that groups outputs by generated versus manually written.
+- final README table that groups outputs by reproducibility role.
+- final README table that groups outputs by reviewer priority.
+- final README table that groups outputs by scientific question.
+- final README table that groups outputs by pipeline stage.
+- final README table that groups outputs by folder.
+- final README note explaining why the repository includes generated files.
+- final README note explaining why the repository includes two output folders.
+- final README note explaining why some cache folders are ignored.
+- final README note explaining why local tool installs are ignored.
+- final README note explaining why full outputs are committed.
+- final README note explaining how to browse the results quickly.
+- final README note explaining how to verify the challenge checklist.
+- final README note explaining how to rerun only visuals.
+- final README note explaining how to regenerate the full analysis.
+- final README note explaining how to contact the maintainer if this becomes a lab resource.
+- compact "start here" file for graders.
+- compact "start here" file for future lab users.
+- compact "start here" file for future developers.
+- compact "start here" file for future figure updates.
+- compact "start here" file for future data additions.
+- compact "start here" file for future manuscript work.
+- compact "start here" file for future QC work.
+- compact "start here" file for future publication work.
+- compact "start here" file for future archive work.
+- compact "start here" file for future teaching use.
+- final repository map drawn as a simple text tree.
+- final repository map drawn as a PNG diagram.
+- final repository map drawn as an SVG diagram.
+- final repository map drawn as a Mermaid diagram.
+- final pipeline workflow drawn as a Mermaid diagram.
+- final pipeline workflow drawn as a Graphviz diagram.
+- final pipeline workflow drawn as a publication-style image.
+- final challenge-response workflow drawn as a diagram.
+- final data-provenance workflow drawn as a diagram.
+- final figure-generation workflow drawn as a diagram.
+- final QC workflow drawn as a diagram.
+- final reproducibility workflow drawn as a diagram.
+- final submission-package workflow drawn as a diagram.
+- final future-work roadmap drawn as a diagram.
+- final lab-handoff workflow drawn as a diagram.
+- final run-audit workflow drawn as a diagram.
+- future script that turns this future-additions list into GitHub issues.
+- future script that groups this future-additions list by topic.
+- future script that ranks this future-additions list by effort.
+- future script that ranks this future-additions list by scientific value.
+- future script that ranks this future-additions list by visual impact.
+- future script that ranks this future-additions list by submission relevance.
+- future script that ranks this future-additions list by reproducibility value.
+- future script that converts this list into a roadmap.
+- future script that converts this list into a project board.
+- future script that converts this list into a grant-style work plan.
+- future script that converts this list into a lab rotation project plan.
+- future script that converts this list into a manuscript supplement checklist.
+- future script that converts this list into a professor-facing next-steps memo.
+- future script that detects duplicated ideas in this list.
+- future script that detects near-duplicated ideas in this list.
+- future script that clusters related ideas in this list.
+- future script that labels ideas as biology, figure, QC, docs, code, metadata, or reproducibility.
+- future script that labels ideas as no-rerun, partial-rerun, or full-rerun.
+- future script that labels ideas as easy, medium, hard, or speculative.
+- future script that labels ideas as safe, needs review, or risky.
+- future script that labels ideas as assignment, publication, lab, teaching, or archive.
+- future script that extracts the best immediate next steps from this list.
+- future script that extracts all ideas requiring raw reads.
+- future script that extracts all ideas requiring external tools.
+- future script that extracts all ideas requiring metadata.
+- future script that extracts all ideas requiring professor input.
+- future script that extracts all ideas requiring manual curation.
+- future script that extracts all ideas requiring new biological interpretation.
+- future script that extracts all ideas that are pure documentation.
+- future script that extracts all ideas that are pure visualization.
+- future script that extracts all ideas that are pure reproducibility.
+- future script that extracts all ideas that are pure QC.
+- future script that extracts all ideas that are pure pipeline engineering.
+- final "do these first" shortlist with three additions.
+- final "do these next" shortlist with five additions.
+- final "do these later" shortlist with ten additions.
+- final "do not do until after submission" shortlist.
+- final "only do with professor approval" shortlist.
+- final "only do with raw reads" shortlist.
+- final "only do with better metadata" shortlist.
+- final "only do for publication" shortlist.
+- final "only do if this becomes a lab pipeline" shortlist.
+- final "quick visual wins" shortlist.
+- final "quick documentation wins" shortlist.
+- final "quick reproducibility wins" shortlist.
+- final "quick scientific wins" shortlist.
+- final "big scientific wins" shortlist.
+- final "big infrastructure wins" shortlist.
+- final "big figure wins" shortlist.
+- final "big interpretation wins" shortlist.
+- final "big archive wins" shortlist.
+- final "highest professor impact" shortlist.
+- final "highest lab reuse impact" shortlist.
+- final "highest GitHub portfolio impact" shortlist.
+- final "highest manuscript impact" shortlist.
+- final "highest scientific caution impact" shortlist.
+- final "highest reproducibility impact" shortlist.
+- final "highest future student impact" shortlist.
+- final "highest conservation-genomics impact" shortlist.
+- final "highest organelle-biology impact" shortlist.
+- final "highest data-quality impact" shortlist.
+- checklist for confirming no final figures are ignored by Git.
+- checklist for confirming no final tables are ignored by Git.
+- checklist for confirming no final reports are ignored by Git.
+- checklist for confirming no final alignments are ignored by Git.
+- checklist for confirming no final tree files are ignored by Git.
+- checklist for confirming cache folders are ignored by Git.
+- checklist for confirming local tools are ignored by Git.
+- checklist for confirming raw data policy is clear.
+- checklist for confirming final output links are live.
+- checklist for confirming generated figures open correctly.
+- checklist for confirming generated PDFs open correctly.
+- checklist for confirming generated SVGs open correctly.
+- checklist for confirming generated TSV files have headers.
+- checklist for confirming generated FASTA files are valid.
+- checklist for confirming generated tree files are valid Newick.
+- checklist for confirming generated README files are not stale.
+- checklist for confirming generated reports mention current output folders.
+- checklist for confirming challenge deliverables are explicitly linked.
+- checklist for confirming primary outputs are easy to find.
+- checklist for confirming caveats are not buried.
+- checklist for confirming the professor can inspect results without rerunning anything.
+- checklist for confirming the pipeline can still be rerun by a future user.
+- final archival ZIP with only professor-facing files.
+- final archival ZIP with all final outputs.
+- final archival ZIP with all final outputs and scripts.
+- final archival ZIP with all final outputs, scripts, and metadata.
+- final archival ZIP with figures only.
+- final archival ZIP with tables only.
+- final archival ZIP with alignments only.
+- final archival ZIP with tree files only.
+- final archival ZIP with reports only.
+- final archival ZIP with genome maps only.
+- final archival ZIP with submission figures only.
+- final archival ZIP with reproducibility files only.
+- final archival ZIP with checksums and manifests.
+- final archival ZIP with README-first navigation.
+- final archival ZIP with professor-ready naming.
+- final archival ZIP with lab-ready naming.
+- final archival ZIP with publication-supplement naming.
+- final archival ZIP validation report.
+- final archival ZIP checksum file.
+- final archival ZIP contents manifest.
+- final archival ZIP README.
+- final archival ZIP caveat note.
+- final archival ZIP methods note.
+- final archival ZIP figure index.
+- final archival ZIP table index.
+- final archival ZIP data provenance note.
+- final archival ZIP rerun note.
+- final archival ZIP Git commit note.
+- final archival ZIP environment note.
+- final archival ZIP citation note.
