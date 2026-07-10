@@ -90,6 +90,8 @@ htmlcov/
 # Local plotting/font caches
 genome_maps/.matplotlib/
 submission_figures/.matplotlib/
+review_response/.matplotlib/
+review_response/RESPONSE_TO_QUESTIONS.md
 
 # Workflow runtime state
 .snakemake/
