@@ -95,6 +95,7 @@ review_response/RESPONSE_TO_QUESTIONS.md
 
 # Workflow runtime state
 .snakemake/
+.superpowers/
 
 # Local tool environments and package-download caches
 .tools/
