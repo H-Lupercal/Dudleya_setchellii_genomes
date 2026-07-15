@@ -23,4 +23,5 @@ dependencies:
   - seaborn
   - r-ggplot2
   - r-ape
+  - r-pegas>=1.3
   - r-patchwork

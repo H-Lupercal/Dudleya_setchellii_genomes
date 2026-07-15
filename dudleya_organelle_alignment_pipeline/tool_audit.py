@@ -221,6 +221,13 @@ TOOL_SPECS = (
         ("-e", "cat(as.character(packageVersion('ape')))"),
     ),
     ToolSpec(
+        "r_pegas",
+        ("Rscript",),
+        "required_current",
+        "haploid cpDNA/mtDNA haplotype networks",
+        ("-e", "cat(as.character(packageVersion('pegas')))"),
+    ),
+    ToolSpec(
         "r_patchwork",
         ("Rscript",),
         "recommended_remaining",
