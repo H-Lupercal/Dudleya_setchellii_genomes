@@ -633,6 +633,61 @@ dudleya_organelle_alignment_pipeline/results/17_population_genetics/primary.popu
 dudleya_organelle_alignment_pipeline/results/17_population_genetics/primary.population_genetics_report.md
 ```
 
+## Stage 21: Haploid Haplotype Networks
+
+Stage 21 adds a haploid-native view of organelle sequence relationships without
+removing or replacing the Stage 18 ADMIXTURE-style analysis. It reads the
+filtered Stage 10 SNP alignments and Stage 07 sample metadata, then processes
+cpDNA and mtDNA separately with `ape` and `pegas::haploNet`.
+
+Before network inference, conservative complete-case filtering removes every
+SNP column that contains a non-ACGT state in any sample. This keeps all 275
+samples but drops sites with missing calls: cpDNA retains 1,977 of 2,015 sites
+and mtDNA retains 116 of 146. The resulting networks contain 151 cpDNA
+haplotypes and 58 mtDNA haplotypes.
+
+Run from the repository root with the pipeline environment active:
+
+```bash
+env PATH="$PWD/.tools/bioconda-env/bin:$PATH" \
+  R_DEFAULT_DEVICE=png \
+  python3 dudleya_organelle_alignment_pipeline/scripts/run_haplotype_network.py \
+  --run-label primary
+```
+
+In each figure, node area is proportional to the number of samples assigned to
+the haplotype and colored sectors show species-group composition; unresolved
+species metadata is gray. Exact sample-to-haplotype assignments, coordinates,
+mutation counts, and primary versus alternative link status are retained in
+TSV files. To prevent thousands of valid alternative connections from turning
+the cpDNA panel into an unreadable hairball, the figures show primary links
+only. For networks with more than 25 nodes, node IDs are omitted and primary
+edges at or above the 90th percentile in mutation count (with a minimum of five
+steps) are labeled. These are display rules only and do not change `haploNet`
+inference.
+
+Key outputs:
+
+```text
+dudleya_organelle_alignment_pipeline/results/21_haplotype_network/cpDNA.primary.haplotype_network.png
+dudleya_organelle_alignment_pipeline/results/21_haplotype_network/mtDNA.primary.haplotype_network.png
+dudleya_organelle_alignment_pipeline/results/21_haplotype_network/cpDNA.primary.haplotype_assignments.tsv
+dudleya_organelle_alignment_pipeline/results/21_haplotype_network/mtDNA.primary.haplotype_assignments.tsv
+dudleya_organelle_alignment_pipeline/results/21_haplotype_network/cpDNA.primary.haplotype_network_edges.tsv
+dudleya_organelle_alignment_pipeline/results/21_haplotype_network/mtDNA.primary.haplotype_network_edges.tsv
+dudleya_organelle_alignment_pipeline/results/21_haplotype_network/cpDNA.primary.popart.nex
+dudleya_organelle_alignment_pipeline/results/21_haplotype_network/mtDNA.primary.popart.nex
+dudleya_organelle_alignment_pipeline/results/21_haplotype_network/primary.haplotype_network_report.md
+```
+
+The PopART-compatible NEXUS files contain the filtered DNA matrix and one-hot
+species trait columns for interoperability; the checked-in PNG/PDF/SVG figures
+are rendered reproducibly by `pegas`. Because each organelle is inherited as a
+linked lineage, these networks describe haplotype identity and sequence
+connections. They are not ancestry proportions and do not by themselves infer
+gene-flow direction, admixture fractions, divergence times, or nuclear
+population structure.
+
 Full-run command, after the smoke output is reviewed:
 
 ```bash

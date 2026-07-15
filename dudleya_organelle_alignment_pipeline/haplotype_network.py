@@ -524,8 +524,15 @@ def write_haplotype_network_outputs(
         "",
         "Nodes are haplotypes, node area is sample frequency, colored sectors are species groups, and edge labels are mutational steps. These are descriptions of sequence relationships and haplotype sharing, not ancestry proportions.",
         "",
+        "For readability, the figures display primary links only. The edge TSV files retain both primary and alternative links and mark them with the `alternative_link` field.",
+        "",
     ]
     for result in results:
+        edge_rows = read_tsv(result.paths.edges)
+        alternative_edge_count = sum(
+            row["alternative_link"].lower() == "true" for row in edge_rows
+        )
+        primary_edge_count = len(edge_rows) - alternative_edge_count
         report_lines.extend(
             [
                 f"## {result.organelle}",
@@ -536,7 +543,8 @@ def write_haplotype_network_outputs(
                     f"{result.source_site_count} (dropped {result.dropped_site_count})"
                 ),
                 f"- Haplotypes: {result.haplotype_count}",
-                f"- Network edges: {result.edge_count}",
+                f"- Primary links: {primary_edge_count}",
+                f"- Alternative links retained in table: {alternative_edge_count}",
                 f"- Figure: `{result.paths.png}`",
                 f"- Assignments: `{result.paths.assignments}`",
                 f"- PopART NEXUS: `{result.paths.popart_nexus}`",
@@ -547,7 +555,7 @@ def write_haplotype_network_outputs(
         [
             "## Interpretation limits",
             "",
-            "Organelle sites are linked and represent a single nonrecombining lineage per organelle. The networks do not estimate nuclear population structure, admixture fractions, direction of gene flow, or the timing of shared ancestry.",
+            "Organelle sites are linked and represent a single nonrecombining lineage per organelle. Nodes are haplotypes, not populations, and links are not known ancestral transitions. The networks do not estimate nuclear population structure, admixture fractions, direction of gene flow, or the timing of shared ancestry.",
             "",
         ]
     )

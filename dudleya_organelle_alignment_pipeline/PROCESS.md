@@ -5,7 +5,7 @@ source of truth for stage order, inputs, and outputs.
 
 Each stage is identified by its `results/NN_.../` directory number, which is the
 canonical stage identifier used in all paths and documentation. Directory numbers
-are contiguous (00-20) and include the pilot investigations (03, 04) and the
+are contiguous (00-21) and include the pilot investigations (03, 04) and the
 separate initial/final runs. The auto-generated stage reports use descriptive
 titles (for example `# Phylogenetic Trees`).
 
@@ -38,6 +38,7 @@ the variant-calling stage and is not part of the primary results.
 | 18 | ADMIXTURE-style clustering, five-replicate (final) | `scripts/run_admixture_analysis.py --replicates 5 --output-dir results/18_admixture_replicates` | `results/18_admixture_replicates/` | `primary.admixture_report.md` |
 | 19 | Maximum-likelihood trees, 1,000 UFBoot (final) | `scripts/run_phylogenetic_tree.py --bootstrap-replicates 1000 --output-dir results/19_bootstrap_phylogenetic_tree` | `results/19_bootstrap_phylogenetic_tree/` | `primary.phylogenetic_tree_report.md` |
 | 20 | Tree figures for the Stage 19 bootstrap trees (final) | `scripts/run_tree_visualization.py` (pointed at the Stage 19 trees) | `results/20_bootstrap_tree_visualization/` | `primary.tree_visualization_report.md` |
+| 21 | Haploid cpDNA/mtDNA haplotype networks and PopART exports | `scripts/run_haplotype_network.py` | `results/21_haplotype_network/` | `primary.haplotype_network_report.md` |
 
 ## Initial-Versus-Final Runs
 
@@ -56,12 +57,15 @@ The final deliverables and their exact paths are listed in
 `results/final_deliverables_manifest.tsv`, and the integrated methods/results
 narrative is `results/organelle_population_report.md`.
 
+Stage 21 is additive: it provides a haploid-native visualization alongside the
+existing Stage 18 ADMIXTURE-style results rather than replacing them.
+
 ## Command Provenance
 
 Each stage has a runner script and a `report.md` (or `*_summary.md`) recording
 its parameters and results. Stages that shell out to external tools also write a
 verbatim `commands.tsv`: mapping (02, 06), variant calling (08), variant
-filtering (09), and trees (12, 19). For the remaining stages, the exact
+filtering (09), trees (12, 19), and haplotype networks (21). For the remaining stages, the exact
 invocation is given in the reproduction command blocks in `README.md` and the
 top-level `../README.md`, and the key parameters are recorded in each stage
 report.

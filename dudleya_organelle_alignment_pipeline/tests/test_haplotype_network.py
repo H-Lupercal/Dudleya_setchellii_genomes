@@ -289,6 +289,8 @@ class Stage21IntegrationTests(unittest.TestCase):
         self.assertIn("pegas::haploNet", report)
         self.assertIn("complete-case filtering", report)
         self.assertIn("not ancestry proportions", report)
+        self.assertIn("primary links only", report)
+        self.assertIn("alternative links", report)
 
 
 if __name__ == "__main__":
