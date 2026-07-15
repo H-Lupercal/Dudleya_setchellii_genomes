@@ -79,6 +79,7 @@ class ToolAuditCheckTests(unittest.TestCase):
         self.assertIn("python_biopython", tool_ids)
         self.assertIn("r_ggplot2", tool_ids)
         self.assertIn("r_ape", tool_ids)
+        self.assertIn("r_ggtree", tool_ids)
         self.assertIn("r_pegas", tool_ids)
 
     def test_summarize_audit_flags_missing_required_remaining_tools(self):

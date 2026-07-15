@@ -221,6 +221,13 @@ TOOL_SPECS = (
         ("-e", "cat(as.character(packageVersion('ape')))"),
     ),
     ToolSpec(
+        "r_ggtree",
+        ("Rscript",),
+        "required_current",
+        "additive R phylogenetic tree figures with support and species keys",
+        ("-e", "cat(as.character(packageVersion('ggtree')))"),
+    ),
+    ToolSpec(
         "r_pegas",
         ("Rscript",),
         "required_current",

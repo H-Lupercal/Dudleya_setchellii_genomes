@@ -608,6 +608,61 @@ dudleya_organelle_alignment_pipeline/results/14_tree_visualization/primary.tree_
 dudleya_organelle_alignment_pipeline/results/14_tree_visualization/primary.tree_visualization_report.md
 ```
 
+## Additive R Visualization Alternatives
+
+The pipeline also provides R-rendered alternatives for every existing PCA,
+ADMIXTURE structure, ADMIXTURE cross-validation, initial-tree, and
+bootstrap-tree figure. These files are additions: they read existing TSV and
+Newick outputs, do not rerun the underlying biological analyses, and do not
+replace or overwrite the original Matplotlib figures.
+
+Run all 14 R figure jobs from the repository root:
+
+```bash
+python3 dudleya_organelle_alignment_pipeline/scripts/run_r_visualizations.py \
+  --rscript .tools/bioconda-env/bin/Rscript
+```
+
+Pass `--force` to regenerate R alternatives that already exist, or select one
+or more source stages with `--stages`, for example:
+
+```bash
+python3 dudleya_organelle_alignment_pipeline/scripts/run_r_visualizations.py \
+  --rscript .tools/bioconda-env/bin/Rscript \
+  --stages 15_pca 20_bootstrap_tree_visualization \
+  --force
+```
+
+The additional filenames make the rendering method explicit:
+
+```text
+*.pca.r_ggplot.{png,pdf,svg}
+*.structure.r_ggplot.{png,pdf,svg}
+*.admixture_cv.r_ggplot.{png,pdf,svg}
+*.iqtree_ml_tree.r_ggtree.{png,pdf,svg}
+```
+
+Legend and interpretation rules are generated with each graph:
+
+- PCA and tree colors use the same fixed, colorblind-friendly species palette;
+  unresolved metadata is gray. PCA no longer cycles 36 population groups
+  through a 20-color palette.
+- ADMIXTURE structure plots label colors as inferred clusters and state that
+  cluster numbers and colors are arbitrary, not named biological populations.
+  White boundaries and x-axis labels show the metadata population ordering.
+- Cross-validation plots state that lower error is better, mark the selected K,
+  and show mean plus/minus one standard deviation when replicates are present.
+- Bootstrap tree figures identify internal numbers as UFBoot support
+  percentages from 1,000 replicates. Tree tip colors are metadata annotations
+  and do not affect inference.
+
+Each affected results directory receives
+`primary.r_visualization_commands.tsv` and
+`primary.r_visualization_report.md` so the exact inputs, commands, outputs,
+legend conventions, and interpretation limits remain auditable. The R
+renderers use `ggplot2`, `ape`, and `ggtree`; the Stage 21 network renderer
+continues to use `ape` and `pegas`.
+
 ## Stage 17: Fst And Population Summaries
 
 Stage 17 computes pairwise population Fst and per-population summary statistics
