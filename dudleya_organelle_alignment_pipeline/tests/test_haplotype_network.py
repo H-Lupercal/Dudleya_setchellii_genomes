@@ -5,8 +5,12 @@ from pathlib import Path
 
 from dudleya_organelle_alignment_pipeline.haplotype_network import (
     HaplotypeNetworkError,
+    build_popart_nexus,
+    build_renderer_command,
     filter_complete_case_sites,
+    network_paths,
     validate_sample_metadata,
+    validate_renderer_outputs,
     write_network_input_fasta,
     write_network_metadata,
     write_network_site_table,
@@ -72,6 +76,66 @@ class CompleteCaseTests(unittest.TestCase):
         )
         self.assertEqual(fasta_text, ">S1\nACT\n>S2\nATT\n")
         self.assertEqual(metadata_rows[1]["species_group"], "unresolved")
+
+
+class ExportAndRendererContractTests(unittest.TestCase):
+    def test_popart_nexus_and_renderer_command(self):
+        metadata = {
+            "S1": {"species": "D. cymosa"},
+            "S2": {"species": ""},
+        }
+
+        nexus = build_popart_nexus(
+            [("S1", "ACT"), ("S2", "ATT")],
+            metadata,
+        )
+        command = build_renderer_command(
+            Path("/bin/Rscript"),
+            Path("render.R"),
+            Path("in.fa"),
+            Path("meta.tsv"),
+            Path("out/cpDNA.primary"),
+            "cpDNA",
+        )
+
+        self.assertIn("#NEXUS", nexus)
+        self.assertIn("NTAX=2 NCHAR=3", nexus)
+        self.assertIn("BEGIN TRAITS;", nexus)
+        self.assertIn("S1 D._cymosa", nexus)
+        self.assertIn("S2 unresolved", nexus)
+        self.assertEqual(
+            command,
+            [
+                "/bin/Rscript",
+                "render.R",
+                "in.fa",
+                "meta.tsv",
+                "out/cpDNA.primary",
+                "cpDNA",
+            ],
+        )
+
+    def test_renderer_validation_rejects_missing_or_empty_output(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            paths = network_paths(Path(tmp), "cpDNA", "primary")
+            for path in paths.renderer_outputs:
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("content\n")
+
+            paths.edges.write_text("")
+            with self.assertRaisesRegex(
+                HaplotypeNetworkError,
+                str(paths.edges),
+            ):
+                validate_renderer_outputs(paths)
+
+            paths.edges.write_text("content\n")
+            paths.svg.unlink()
+            with self.assertRaisesRegex(
+                HaplotypeNetworkError,
+                str(paths.svg),
+            ):
+                validate_renderer_outputs(paths)
 
 
 if __name__ == "__main__":
