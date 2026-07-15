@@ -1,4 +1,5 @@
 import csv
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
@@ -136,6 +137,54 @@ class ExportAndRendererContractTests(unittest.TestCase):
                 str(paths.svg),
             ):
                 validate_renderer_outputs(paths)
+
+
+class PegasRendererIntegrationTests(unittest.TestCase):
+    def test_renderer_writes_network_tables_and_three_figure_formats(self):
+        pipeline_dir = Path(__file__).resolve().parents[1]
+        repo_root = pipeline_dir.parent
+        rscript = repo_root / ".tools/bioconda-env/bin/Rscript"
+        renderer = pipeline_dir / "scripts/render_haplotype_network.R"
+
+        with tempfile.TemporaryDirectory() as tmp:
+            output_dir = Path(tmp)
+            fasta = output_dir / "tiny.fa"
+            metadata = output_dir / "metadata.tsv"
+            paths = network_paths(output_dir, "cpDNA", "tiny")
+            fasta.write_text(">S1\nAAA\n>S2\nAAA\n>S3\nAAT\n>S4\nATT\n")
+            metadata.write_text(
+                "sample_id\tspecies_group\tspecies\tpopcode\tpopulation_name\tnaming_profile\n"
+                "S1\tD. cymosa\tD. cymosa\tCY1\tOne\tmain_standard\n"
+                "S2\tD. cymosa\tD. cymosa\tCY1\tOne\tmain_standard\n"
+                "S3\tD. setchellii\tD. setchellii\tSE1\tTwo\tmain_standard\n"
+                "S4\tD. setchellii\tD. setchellii\tSE1\tTwo\tmain_standard\n"
+            )
+
+            completed = subprocess.run(
+                build_renderer_command(
+                    rscript,
+                    renderer,
+                    fasta,
+                    metadata,
+                    paths.prefix,
+                    "cpDNA",
+                ),
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+            self.assertEqual(completed.returncode, 0, completed.stderr)
+            validate_renderer_outputs(paths)
+            with paths.assignments.open(newline="") as handle:
+                assignments = list(csv.DictReader(handle, delimiter="\t"))
+            with paths.haplotype_summary.open(newline="") as handle:
+                haplotypes = list(csv.DictReader(handle, delimiter="\t"))
+            with paths.edges.open(newline="") as handle:
+                edges = list(csv.DictReader(handle, delimiter="\t"))
+
+        self.assertEqual(len(assignments), 4)
+        self.assertEqual(len(haplotypes), 3)
+        self.assertGreater(len(edges), 0)
 
 
 if __name__ == "__main__":
