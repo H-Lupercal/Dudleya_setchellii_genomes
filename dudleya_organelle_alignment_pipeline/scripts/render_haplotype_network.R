@@ -137,8 +137,14 @@ pie_counts <- t(vapply(
 ))
 colnames(pie_counts) <- species_levels
 rownames(pie_counts) <- haplotype_ids
-node_sizes <- sqrt(vapply(hap_indexes, length, integer(1)))
+node_size_scale <- max(1, median(net[, 3]))
+node_sizes <- sqrt(vapply(hap_indexes, length, integer(1))) * node_size_scale
 observed_species <- species_levels[colSums(pie_counts) > 0]
+show_all_labels <- length(haplotype_ids) <= 25
+long_edge_threshold <- max(
+  5,
+  as.numeric(quantile(net[, 3], probs = 0.9, names = FALSE, type = 1))
+)
 
 draw_network <- function(coordinates = NULL) {
   graphics::layout(matrix(c(1, 2), nrow = 1), widths = c(4, 1))
@@ -148,15 +154,37 @@ draw_network <- function(coordinates = NULL) {
     size = node_sizes,
     pie = pie_counts,
     bg = unname(species_palette),
-    labels = length(haplotype_ids) <= 75,
+    labels = show_all_labels,
     legend = FALSE,
-    show.mutation = 3,
+    show.mutation = if (show_all_labels) 3 else 0,
+    threshold = 0,
     xy = coordinates,
     fast = FALSE
   )
+  if (!show_all_labels) {
+    long_edges <- which(net[, 3] >= long_edge_threshold)
+    if (length(long_edges)) {
+      from <- as.integer(net[long_edges, 1])
+      to <- as.integer(net[long_edges, 2])
+      text(
+        (plotted$xx[from] + plotted$xx[to]) / 2,
+        (plotted$yy[from] + plotted$yy[to]) / 2,
+        labels = net[long_edges, 3],
+        cex = 0.65,
+        font = 2
+      )
+    }
+  }
   title(main = paste(organelle, "haplotype network (pegas)"))
   mtext(
-    "Node area = sample count; sectors = species group; edge labels = mutation steps",
+    if (show_all_labels) {
+      "Node area = sample count; sectors = species group; edge labels = mutation steps"
+    } else {
+      paste0(
+        "Node area = sample count; sectors = species group; ",
+        "primary-edge labels shown for ≥", long_edge_threshold, " mutation steps"
+      )
+    },
     side = 1,
     line = 1,
     cex = 0.75
