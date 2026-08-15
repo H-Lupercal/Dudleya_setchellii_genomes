@@ -1,0 +1,2 @@
+organelle	track_id	sample_count	consensus_length	missing_bases	alignment_fasta_path
+cpDNA_mtDNA	cpdna_then_mtdna	275	169468	158798	dudleya_organelle_alignment_pipeline/results/22_concatenated_consensus/cpDNA_mtDNA.primary.concatenated_consensus.fa
