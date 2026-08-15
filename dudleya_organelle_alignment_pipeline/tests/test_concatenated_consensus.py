@@ -5,6 +5,8 @@ from pathlib import Path
 from dudleya_organelle_alignment_pipeline.concatenated_consensus import (
     ConcatenatedConsensusError,
     concatenate_consensus_alignments,
+    read_fasta_alignment,
+    run_concatenation,
 )
 
 
@@ -42,6 +44,44 @@ class ConcatenatedConsensusBuildTests(unittest.TestCase):
                 "Duplicate FASTA identifier S1",
             ):
                 concatenate_consensus_alignments(cpdna_path, mtdna_path)
+
+
+class ConcatenatedConsensusOutputTests(unittest.TestCase):
+    def test_run_writes_combined_fasta_compatibility_summary_and_provenance(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            cpdna_path = root / "cpDNA.fa"
+            cpdna_path.write_text(">S1\nACGN\n>S2\nTTAA\n")
+            mtdna_path = root / "mtDNA.fa"
+            mtdna_path.write_text(">S2\nGG\n>S1\nNC\n")
+            output_dir = root / "output"
+
+            result = run_concatenation(
+                cpdna_path=cpdna_path,
+                mtdna_path=mtdna_path,
+                output_dir=output_dir,
+                run_label="primary",
+            )
+            written = read_fasta_alignment(result.fasta_path)
+            compatibility = (
+                output_dir / "primary.callable_consensus_summary.tsv"
+            ).read_text()
+            detailed = (
+                output_dir / "primary.concatenated_consensus_summary.tsv"
+            ).read_text()
+            report = (
+                output_dir / "primary.concatenated_consensus_report.md"
+            ).read_text()
+
+        self.assertEqual(result.sample_count, 2)
+        self.assertEqual(result.combined_length, 6)
+        self.assertEqual(written.sample_names, ("S1", "S2"))
+        self.assertEqual(written.sequences["S1"], "ACGNNC")
+        self.assertIn("cpDNA_mtDNA\tcpdna_then_mtdna\t2\t6", compatibility)
+        self.assertIn("cpDNA_end\tmtDNA_start", detailed)
+        self.assertIn("\t4\t5\t", detailed)
+        self.assertIn("cpDNA positions: 1-4", report)
+        self.assertIn("mtDNA positions: 5-6", report)
 
     def test_rejects_mismatched_sample_identifier_sets(self):
         with tempfile.TemporaryDirectory() as tmp:
