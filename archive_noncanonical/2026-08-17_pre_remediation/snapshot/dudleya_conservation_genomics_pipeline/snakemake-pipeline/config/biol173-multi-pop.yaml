@@ -1,0 +1,168 @@
+# /WAVE/projects2/whittalllab/dudleya/snakemake-pipeline/config/173-tree.yaml
+# Note: changing the layout of this file might break the update_sample_config.py script
+ref_genome: "/WAVE/projects/whittalllab/dudleya/draft_genome/Dudleya_hifiasm_purged_host_genome.fasta"
+anc_genome: "/WAVE/projects/whittalllab/dudleya/ancestral_genome_Du-14/D_cymosa_consensus.fa.gz"
+
+data_parent_dir: "/WAVE/datasets/whittalllab/dudleya"
+output_name: "results-biol173-multi-pop"
+
+samples:
+  QUIN_LP_10_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_10_EAMF6_S4_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_10_EAMF6_S4_L001_R2_001.fastq.gz"
+  QUIN_LP_11_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_11_EAMF8_S1_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_11_EAMF8_S1_L001_R2_001.fastq.gz"
+  QUIN_LP_14_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_14_CRDC2_S9_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_14_CRDC2_S9_L001_R2_001.fastq.gz"
+  QUIN_LP_17_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_17_CRDC7_S11_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_17_CRDC7_S11_L001_R2_001.fastq.gz"
+  QUIN_LP_19_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_19_MRHS3_S17_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_19_MRHS3_S17_L001_R2_001.fastq.gz"
+  QUIN_LP_1_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_1_SSRJ2_S3_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_1_SSRJ2_S3_L001_R2_001.fastq.gz"
+  QUIN_LP_20_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_20_MRHS6_S2_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_20_MRHS6_S2_L001_R2_001.fastq.gz"
+  QUIN_LP_22_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_22_MRHS1_S6_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_22_MRHS1_S6_L001_R2_001.fastq.gz"
+  QUIN_LP_23_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_23_MRHS2_S12_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_23_MRHS2_S12_L001_R2_001.fastq.gz"
+  QUIN_LP_25_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_25_IFML1_S5_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_25_IFML1_S5_L001_R2_001.fastq.gz"
+  QUIN_LP_26_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_26_IFML2_S16_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_26_IFML2_S16_L001_R2_001.fastq.gz"
+  QUIN_LP_28_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_28_IFML3_S15_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_28_IFML3_S15_L001_R2_001.fastq.gz"
+  QUIN_LP_29_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_29_IFML6_S14_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_29_IFML6_S14_L001_R2_001.fastq.gz"
+  QUIN_LP_31_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_31_EAMF2_S30_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_31_EAMF2_S30_L001_R2_001.fastq.gz"
+  QUIN_LP_32_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_32_EAMF4_S36_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_32_EAMF4_S36_L001_R2_001.fastq.gz"
+  QUIN_LP_37_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_37_MRHS4_S22_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_37_MRHS4_S22_L001_R2_001.fastq.gz"
+  QUIN_LP_40_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_40_MRHS7_S21_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_40_MRHS7_S21_L001_R2_001.fastq.gz"
+  QUIN_LP_41_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_41_MRHS8_S24_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_41_MRHS8_S24_L001_R2_001.fastq.gz"
+  QUIN_LP_43_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_43_SSRJ1_S31_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_43_SSRJ1_S31_L001_R2_001.fastq.gz"
+  QUIN_LP_44_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_44_SSRJ4_S33_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_44_SSRJ4_S33_L001_R2_001.fastq.gz"
+  QUIN_LP_52_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_52_CRDC6_S34_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_52_CRDC6_S34_L001_R2_001.fastq.gz"
+  QUIN_LP_55_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_55_IFML4_S32_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_55_IFML4_S32_L001_R2_001.fastq.gz"
+  QUIN_LP_56_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_56_IFML5_S26_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_56_IFML5_S26_L001_R2_001.fastq.gz"
+  QUIN_LP_58_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_58_IFML7_S23_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_58_IFML7_S23_L001_R2_001.fastq.gz"
+  QUIN_LP_59_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_59_IFML8_S27_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_59_IFML8_S27_L001_R2_001.fastq.gz"
+  QUIN_LP_5_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_5_SSRJ7_S10_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_5_SSRJ7_S10_L001_R2_001.fastq.gz"
+  QUIN_LP_61_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_61_CRDC1_S39_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_61_CRDC1_S39_L001_R2_001.fastq.gz"
+  QUIN_LP_62_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_62_CRDC3_S41_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_62_CRDC3_S41_L001_R2_001.fastq.gz"
+  QUIN_LP_63_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_63_CRDC4_S43_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_63_CRDC4_S43_L001_R2_001.fastq.gz"
+  QUIN_LP_64_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_64_CRDC6_S40_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_64_CRDC6_S40_L001_R2_001.fastq.gz"
+  QUIN_LP_65_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_65_CRDC8_S42_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_65_CRDC8_S42_L001_R2_001.fastq.gz"
+  QUIN_LP_66_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_66_CRDCDu-786_S38_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_66_CRDCDu-786_S38_L001_R2_001.fastq.gz"
+  QUIN_LP_7_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_7_EAMF1_S7_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_7_EAMF1_S7_L001_R2_001.fastq.gz"
+  QUIN_LP_8_:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_8_EAMF3_S13_L001_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads_biol173/QUIN_LP_8_EAMF3_S13_L001_R2_001.fastq.gz"
+  COM_LP_269_Du-703:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/COM_LP_269_Du-703_S239_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/COM_LP_269_Du-703_S239_L005_R2_001.fastq.gz"
+  DOV_LP_080_Du-176:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/DOV_LP_080_Du-176_S105_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/DOV_LP_080_Du-176_S105_L005_R2_001.fastq.gz"
+  RIC_LP_199_Du-528:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/RIC_LP_199_Du-528_S161_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/RIC_LP_199_Du-528_S161_L005_R2_001.fastq.gz"
+  CROB_LP_177_Du-389:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/CROB_LP_177_Du-389_S179_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/CROB_LP_177_Du-389_S179_L005_R2_001.fastq.gz"
+  KIRN_LP_184_Du-426:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/KIRN_LP_184_Du-426_S169_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/KIRN_LP_184_Du-426_S169_L005_R2_001.fastq.gz"
+  MALV_LP_095_Du-201:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/MALV_LP_095_Du-201_S97_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/MALV_LP_095_Du-201_S97_L005_R2_001.fastq.gz"
+  TULP_LP_120_Du-248:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/TULP_LP_120_Du-248_S204_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/TULP_LP_120_Du-248_S204_L005_R2_001.fastq.gz"
+  DUD_LP_136_Du-287:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/DUD_LP_136_Du-287_S163_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/DUD_LP_136_Du-287_S163_L005_R2_001.fastq.gz"
+  STI_LP_034_Du-52:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/STI_LP_034_Du-52_S101_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/STI_LP_034_Du-52_S101_L005_R2_001.fastq.gz"
+  RSV_LP_050_Du-87:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/RSV_LP_050_Du-87_S40_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/RSV_LP_050_Du-87_S40_L005_R2_001.fastq.gz"
+  QUI1_LP_255_Du-654:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/QUI1_LP_255_Du-654_S256_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/QUI1_LP_255_Du-654_S256_L005_R2_001.fastq.gz"
+  BAI_LP_105_Du-222:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/BAI_LP_105_Du-222_S37_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/BAI_LP_105_Du-222_S37_L005_R2_001.fastq.gz"
+  CY_HICN_LP_236_Du-614:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/CY_HICN_LP_236_Du-614_S224_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/CY_HICN_LP_236_Du-614_S224_L005_R2_001.fastq.gz"
+  CY_SIE_LP_189_Du-446:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/CY_SIE_LP_189_Du-446_S139_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/CY_SIE_LP_189_Du-446_S139_L005_R2_001.fastq.gz"
+  CY_HUN_LP_267_Du-686:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/CY_HUN_LP_267_Du-686_S218_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/CY_HUN_LP_267_Du-686_S218_L005_R2_001.fastq.gz"
+  CY_BOU_LP_290_Du-739:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/CY_BOU_LP_290_Du-739_S288_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/CY_BOU_LP_290_Du-739_S288_L005_R2_001.fastq.gz"
+  ABMU_HOR_LP_308_Du-777:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/ABMU_HOR_LP_308_Du-777_S232_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/ABMU_HOR_LP_308_Du-777_S232_L005_R2_001.fastq.gz"
+  ABBE_BERN_LP_312_Du-781:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/ABBE_BERN_LP_312_Du-781_S271_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/ABBE_BERN_LP_312_Du-781_S271_L005_R2_001.fastq.gz"
+  ABAB_MAD_LP_322_Du-593:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/ABAB_MAD_LP_322_Du-593_S172_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/ABAB_MAD_LP_322_Du-593_S172_L005_R2_001.fastq.gz"

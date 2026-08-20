@@ -1,9 +1,0 @@
-=== 10_snp_alignment Filtered haploid SNP alignments ===
-Started: 2026-07-08T18:23:32-07:00
-Command: python3 dudleya_organelle_alignment_pipeline/scripts/run_snp_alignment.py --variant-filtering-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/09_variant_filtering --output-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/10_snp_alignment --run-label primary
-
-cpDNA: 2022 SNP-alignment sites across 278 samples
-mtDNA: 146 SNP-alignment sites across 278 samples
-Output directory: /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/10_snp_alignment
-
-Finished: 2026-07-08T18:23:32-07:00

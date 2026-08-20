@@ -1,0 +1,2 @@
+selected_k	replicate	seed	cv_error	boundary_optimum	q_path
+12	8	425408	0.05863	yes	canonical_publication/results/supplement/publication-20260817/admixture/mitochondria/selected_K12.best_cv.Q.tsv

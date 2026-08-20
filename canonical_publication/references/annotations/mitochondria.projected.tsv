@@ -1,0 +1,56 @@
+feature_id	feature_type	gene	product	start_1based	end_1based	strand	query_coverage	identity_percent	external_accession	status
+feature_00008	gene	ccmFc		3653	5907	+	1.000000	99.512000	PV256627.1	draft_projection
+feature_00039	gene	COX1		6974	8557	+	1.000000	99.242000	PV256627.1	draft_projection
+feature_00040	CDS	COX1	cytochrome c oxidase subunit I	6974	8557	+	1.000000	99.242000	PV256627.1	draft_projection
+feature_00036	gene	rpl5		11531	12088	+	1.000000	100.000000	PV256627.1	draft_projection
+feature_00037	CDS	rpl5	ribosomal protein L5	11531	12088	+	1.000000	100.000000	PV256627.1	draft_projection
+feature_00034	gene	rps14		12090	12305	+	1.000000	99.537000	PV256627.1	draft_projection
+feature_00035	CDS	rps14	ribosomal protein S14	12090	12305	+	1.000000	99.537000	PV256627.1	draft_projection
+feature_00032	gene	trnE-TTC		13704	13775	-	1.000000	100.000000	PV256627.1	draft_projection
+feature_00033	tRNA	trnE-TTC	tRNA-Glu	13704	13775	-	1.000000	100.000000	PV256627.1	draft_projection
+feature_00047	gene	rpl10		20551	21039	-	1.000000	99.387000	PV256627.1	draft_projection
+feature_00048	CDS	rpl10	ribosomal protein L10	20551	21039	-	1.000000	99.387000	PV256627.1	draft_projection
+feature_00084	gene	ATP6		60233	61016	+	0.997455	99.235000	PV256627.1	draft_projection
+feature_00085	CDS	ATP6	ATP synthase F0 subunit 6	60233	61016	+	0.997455	99.235000	PV256627.1	draft_projection
+feature_00074	gene	ND9		80519	81091	+	1.000000	99.651000	PV256627.1	draft_projection
+feature_00075	CDS	ND9	NADH dehydrogenase subunit 9	80519	81091	+	1.000000	99.651000	PV256627.1	draft_projection
+feature_00072	gene	trnW-CCA		82048	82121	+	1.000000	98.649000	PV256627.1	draft_projection
+feature_00073	tRNA	trnW-CCA	tRNA-Trp	82048	82121	+	1.000000	98.649000	PV256627.1	draft_projection
+feature_00070	gene	trnM-CAT		83446	83519	+	1.000000	98.649000	PV256627.1	draft_projection
+feature_00071	tRNA	trnM-CAT	tRNA-Met	83446	83519	+	1.000000	98.649000	PV256627.1	draft_projection
+feature_00030	gene	trnM-CAT		99369	99442	-	0.986667	98.649000	PV256627.1	draft_projection
+feature_00031	tRNA	trnM-CAT	tRNA-Met	99369	99442	-	0.986667	98.649000	PV256627.1	draft_projection
+feature_00016	gene	rps7		107717	108163	-	1.000000	100.000000	PV256627.1	draft_projection
+feature_00017	CDS	rps7	ribosomal protein S7	107717	108163	-	1.000000	100.000000	PV256627.1	draft_projection
+feature_00018	gene	rrn18		109101	111026	+	1.009434	98.858000	PV256627.1	draft_projection
+feature_00019	rRNA	rrn18	18S ribosomal RNA	109101	111026	+	1.009434	98.858000	PV256627.1	draft_projection
+feature_00020	gene	rrn5		111185	111305	+	1.000000	100.000000	PV256627.1	draft_projection
+feature_00021	rRNA	rrn5	5S ribosomal RNA	111185	111305	+	1.000000	100.000000	PV256627.1	draft_projection
+feature_00022	gene	CYTB		111447	112628	+	1.000000	99.408000	PV256627.1	draft_projection
+feature_00023	CDS	CYTB	cytochrome b	111447	112628	+	1.000000	99.408000	PV256627.1	draft_projection
+feature_00024	gene	ATP9		113023	113244	+	1.000000	99.099000	PV256627.1	draft_projection
+feature_00025	CDS	ATP9	ATPase subunit 9	113023	113244	+	1.000000	99.099000	PV256627.1	draft_projection
+feature_00026	gene	trnQ-TTG		113463	113534	+	1.000000	100.000000	PV256627.1	draft_projection
+feature_00027	tRNA	trnQ-TTG	tRNA-Gln	113463	113534	+	1.000000	100.000000	PV256627.1	draft_projection
+feature_00068	gene	ATP4		120814	121410	-	1.000000	99.330000	PV256627.1	draft_projection
+feature_00069	CDS	ATP4	ATPase subunit 4	120814	121410	-	1.000000	99.330000	PV256627.1	draft_projection
+feature_00066	gene	ND4L		121584	121886	-	1.000000	100.000000	PV256627.1	draft_projection
+feature_00067	CDS	ND4L	NADH dehydrogenase subunit 4L	121584	121886	-	1.000000	100.000000	PV256627.1	draft_projection
+feature_00064	gene	ND4		123186	129626	-	0.832150	98.278000	PV256627.1	draft_projection
+feature_00062	gene	matR		133714	135661	-	1.000514	99.384000	PV256627.1	draft_projection
+feature_00063	CDS	matR	maturase	133714	135661	-	1.000514	99.384000	PV256627.1	draft_projection
+feature_00060	gene	trnH-GTG		138538	138611	-	1.000000	100.000000	PV256627.1	draft_projection
+feature_00061	tRNA	trnH-GTG	tRNA-His	138538	138611	-	1.000000	100.000000	PV256627.1	draft_projection
+feature_00087	gene	COX3		141772	142569	+	1.000000	98.747000	PV256627.1	draft_projection
+feature_00088	CDS	COX3	cytochrome c oxidase subunit III	141772	142569	+	1.000000	98.747000	PV256627.1	draft_projection
+feature_00086	gene	sdh4-pseudo		142497	142614	+	1.000000	97.458000	PV256627.1	draft_projection
+feature_00012	gene	ATP8		142792	143271	+	1.000000	98.958000	PV256627.1	draft_projection
+feature_00013	CDS	ATP8	ATP synthase F0 subunit 8	142792	143271	+	1.000000	98.958000	PV256627.1	draft_projection
+feature_00058	gene	trnY-GTA		149258	149340	+	1.000000	100.000000	PV256627.1	draft_projection
+feature_00059	tRNA	trnY-GTA	tRNA-Tyr	149258	149340	+	1.000000	100.000000	PV256627.1	draft_projection
+feature_00093	gene	ccmB		223336	223956	+	1.000000	99.678000	PV256627.1	draft_projection
+feature_00094	CDS	ccmB	cytochrome c biogenesis B	223336	223956	+	1.000000	99.678000	PV256627.1	draft_projection
+feature_00080	gene	ccmC		240456	241142	-	1.000000	99.563000	PV256627.1	draft_projection
+feature_00081	CDS	ccmC	cytochrome c biogenesis C	240456	241142	-	1.000000	99.563000	PV256627.1	draft_projection
+feature_00082	gene	ATP1		241601	243133	-	1.000000	99.152000	PV256627.1	draft_projection
+feature_00083	CDS	ATP1	ATPase subunit 1	241601	243133	-	1.000000	99.152000	PV256627.1	draft_projection

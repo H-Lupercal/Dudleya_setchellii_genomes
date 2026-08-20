@@ -1,4 +1,29 @@
-# Generated BLAST database index files
+# Immutable local source data (represented by canonical checksum manifests)
+source_data/
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+
+# Canonical regenerable work and heavy intermediates
+canonical_publication/work/**
+!canonical_publication/work/.gitkeep
+canonical_publication/provenance/runs/*/logs/
+canonical_publication/results/qc/*/fastp/*.html
+canonical_publication/results/qc/*/fastp/*.json
+*.sam
+*.bam
+*.bai
+*.cram
+*.crai
+*.bcf
+*.g.vcf.gz
+*.fai
+*.amb
+*.ann
+*.bwt
+*.pac
+*.sa
 *.ndb
 *.nhr
 *.nin
@@ -9,76 +34,50 @@
 *.nsq
 *.ntf
 *.nto
-
-# Generated read-mapping reference indexes
-*.amb
-*.ann
-*.bwt
-*.pac
-*.sa
-*.fai
-
-# Heavy alignment/variant intermediates
-*.sam
-*.bam
-*.bai
-*.cram
-*.crai
-*.bcf
-*.vcf
-*.vcf.gz
-*.g.vcf.gz
 *.tbi
 *.csi
-*.depth.tsv
-*.flagstat.txt
-*.idxstats.tsv
-*.alignment.log
-*.bcftools.log
-*.bam_list.txt
-*.sample_names.txt
+*.ckp.gz
+*.ufboot
 
-# Local sequencing data downloads. These are raw data inputs, not repo artifacts.
-genomicsDrive_data_dump/
-*.fastq
-*.fastq.gz
-*.fq
-*.fq.gz
+# Canonical final VCFs are deliberate tracked deliverables.
+*.vcf
+*.vcf.gz
+!canonical_publication/results/variants/*.vcf
+!canonical_publication/results/variants/*.vcf.gz
+!canonical_publication/results/variants/**/*.vcf
+!canonical_publication/results/variants/**/*.vcf.gz
+!canonical_publication/pipeline/tests/fixtures/*.vcf
 
-# Downloaded/compressed FASTA data drops
-*.fa.gz
-*.fasta.gz
-*.fna.gz
-*.fas.gz
-*.faa.gz
-*.ffn.gz
+# The archive remains on disk and is checksummed, but large derived products
+# are represented in Git by its manifest rather than duplicated into history.
+archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/results/**
+!archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/results/**/
+!archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/results/**/*.md
+!archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/results/**/*.tsv
+!archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/results/**/*.csv
+!archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/results/**/*.treefile
+archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/*.pdf
+archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/*.png
+archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/*.svg
+archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/*.log
+archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/*.phy
+archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/*.ped
+archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/*.bed
+archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/*.bim
+archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/*.fam
+archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/*.nosex
+archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/*.P
+archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/*.Q
+!archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/results/**/*.txt
+!archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/results/**/*.bed
 
-# Generated/downloaded reference bundles and copied query FASTAs
-dudleya_organelle_reference_verification/evidence/independent_blast_qc/*_refs.fa
-dudleya_organelle_reference_verification/evidence/independent_blast_qc/*_cds_*.fa
-dudleya_organelle_reference_verification/evidence/nc085682_chloroplast_comparison/reference/*.fa
-dudleya_organelle_reference_verification/evidence/nc085682_chloroplast_comparison/NC_085682.1.fa
-dudleya_organelle_reference_verification/evidence/nc085682_chloroplast_comparison/candidate_raw.fa
-dudleya_organelle_reference_verification/evidence/nc085682_chloroplast_comparison/candidate_terminal_deduplicated.fa
-dudleya_organelle_reference_verification/evidence/nc085682_chloroplast_comparison/candidate_terminal_deduplicated_rotated.fa
-dudleya_organelle_reference_verification/evidence/nc085682_chloroplast_comparison/normalized_alignment.fa
-dudleya_organelle_reference_verification/evidence/nc085682_chloroplast_comparison/normalized_pair_for_mafft.fa
-dudleya_organelle_reference_verification/annotations/*.fa
-dudleya_organelle_reference_verification/annotations/*_ref_features.*.fa
+# Per-base depth and callable-position matrices are large derived datasets,
+# despite their tabular extensions.  They remain local and are represented by
+# the checksummed archive manifest.
+archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/results/**/*.depth.tsv
+archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/results/**/*.callable_sites.tsv
 
-# Intermediate feature-transfer metadata and raw annotation BLAST outputs
-dudleya_organelle_reference_verification/annotations/*_feature_meta.json
-dudleya_organelle_reference_verification/annotations/*_feature_blastn.tsv
-dudleya_organelle_reference_verification/annotations/*_protein_tblastn.tsv
-
-# Raw whole-genome BLAST outputs; keep compact summary/report files
-dudleya_organelle_reference_verification/**/*.blastn.tsv
-
-# Intermediate marker/protein alignment outputs from the independent QC pass
-dudleya_organelle_reference_verification/evidence/independent_blast_qc/*_aa_vs_*.tsv
-dudleya_organelle_reference_verification/evidence/independent_blast_qc/*_cds_vs_*.tsv
-
-# Python/runtime caches
+# Runtime caches and local environments
 __pycache__/
 *.py[cod]
 .pytest_cache/
@@ -86,119 +85,11 @@ __pycache__/
 .ruff_cache/
 .coverage
 htmlcov/
-
-# Local plotting/font caches
-genome_maps/.matplotlib/
-submission_figures/.matplotlib/
-review_response/.matplotlib/
-review_response/RESPONSE_TO_QUESTIONS.md
-
-# Workflow runtime state
 .snakemake/
 .superpowers/
-
-# Local tool environments and package-download caches
 .tools/
-dudleya_conservation_genomics_pipeline/
+**/.matplotlib/
 
-# Dudleya organelle alignment pipeline outputs.
-# Keep final deliverables and compact provenance visible. Heavy intermediates
-# such as BAMs, VCF indexes, BLAST databases, and runtime caches are ignored by
-# the global rules above or the explicit directory rules below.
-dudleya_organelle_alignment_pipeline/results/**
-!dudleya_organelle_alignment_pipeline/results/
-!dudleya_organelle_alignment_pipeline/results/**/
-!dudleya_organelle_alignment_pipeline/results/**/*.md
-!dudleya_organelle_alignment_pipeline/results/**/*summary.tsv
-!dudleya_organelle_alignment_pipeline/results/**/*commands.tsv
-!dudleya_organelle_alignment_pipeline/results/**/*excluded_samples.tsv
-!dudleya_organelle_alignment_pipeline/results/**/*tool_audit.tsv
-!dudleya_organelle_alignment_pipeline/results/**/*stage_status.tsv
-!dudleya_organelle_alignment_pipeline/results/final_deliverables_manifest.tsv
-!dudleya_organelle_alignment_pipeline/results/organelle_population_report.md
-!dudleya_organelle_alignment_pipeline/results/10_snp_alignment/**
-!dudleya_organelle_alignment_pipeline/results/11_callable_consensus/**
-!dudleya_organelle_alignment_pipeline/results/14_tree_visualization/**
-!dudleya_organelle_alignment_pipeline/results/15_pca/**
-!dudleya_organelle_alignment_pipeline/results/16_admixture/**
-!dudleya_organelle_alignment_pipeline/results/17_population_genetics/**
-!dudleya_organelle_alignment_pipeline/results/18_admixture_replicates/**
-!dudleya_organelle_alignment_pipeline/results/19_bootstrap_phylogenetic_tree/**
-!dudleya_organelle_alignment_pipeline/results/20_bootstrap_tree_visualization/**
-dudleya_organelle_alignment_pipeline/results/16_admixture/**/*.bed
-dudleya_organelle_alignment_pipeline/results/16_admixture/**/*.bim
-dudleya_organelle_alignment_pipeline/results/16_admixture/**/*.fam
-dudleya_organelle_alignment_pipeline/results/16_admixture/**/*.map
-dudleya_organelle_alignment_pipeline/results/16_admixture/**/*.ped
-dudleya_organelle_alignment_pipeline/results/16_admixture/**/*.nosex
-dudleya_organelle_alignment_pipeline/results/16_admixture/**/*.P
-dudleya_organelle_alignment_pipeline/results/16_admixture/**/*.Q
-dudleya_organelle_alignment_pipeline/results/16_admixture/**/*.log
-dudleya_organelle_alignment_pipeline/results/18_admixture_replicates/**/*.bed
-dudleya_organelle_alignment_pipeline/results/18_admixture_replicates/**/*.bim
-dudleya_organelle_alignment_pipeline/results/18_admixture_replicates/**/*.fam
-dudleya_organelle_alignment_pipeline/results/18_admixture_replicates/**/*.map
-dudleya_organelle_alignment_pipeline/results/18_admixture_replicates/**/*.ped
-dudleya_organelle_alignment_pipeline/results/18_admixture_replicates/**/*.nosex
-dudleya_organelle_alignment_pipeline/results/18_admixture_replicates/**/*.P
-dudleya_organelle_alignment_pipeline/results/18_admixture_replicates/**/*.Q
-dudleya_organelle_alignment_pipeline/results/18_admixture_replicates/**/*.log
-dudleya_organelle_alignment_pipeline/results/**/bam/
-dudleya_organelle_alignment_pipeline/results/**/qc/
-dudleya_organelle_alignment_pipeline/results/**/logs/
-
-# Initial organized output folder.
-initial_pipeline_run/results/16_admixture/**/*.bed
-initial_pipeline_run/results/16_admixture/**/*.bim
-initial_pipeline_run/results/16_admixture/**/*.fam
-initial_pipeline_run/results/16_admixture/**/*.map
-initial_pipeline_run/results/16_admixture/**/*.ped
-initial_pipeline_run/results/16_admixture/**/*.nosex
-initial_pipeline_run/results/16_admixture/**/*.P
-initial_pipeline_run/results/16_admixture/**/*.Q
-initial_pipeline_run/results/16_admixture/**/*.log
-initial_pipeline_run/results/18_admixture_replicates/**/*.bed
-initial_pipeline_run/results/18_admixture_replicates/**/*.bim
-initial_pipeline_run/results/18_admixture_replicates/**/*.fam
-initial_pipeline_run/results/18_admixture_replicates/**/*.map
-initial_pipeline_run/results/18_admixture_replicates/**/*.ped
-initial_pipeline_run/results/18_admixture_replicates/**/*.nosex
-initial_pipeline_run/results/18_admixture_replicates/**/*.P
-initial_pipeline_run/results/18_admixture_replicates/**/*.Q
-initial_pipeline_run/results/18_admixture_replicates/**/*.log
-
-# Second full rerun output folder.
-full_pipeline_run/results/**
-!full_pipeline_run/results/
-!full_pipeline_run/results/**/
-!full_pipeline_run/results/**/*.md
-!full_pipeline_run/results/**/*summary.tsv
-!full_pipeline_run/results/**/*commands.tsv
-!full_pipeline_run/results/**/*excluded_samples.tsv
-!full_pipeline_run/results/**/*tool_audit.tsv
-!full_pipeline_run/results/**/*stage_status.tsv
-!full_pipeline_run/results/10_snp_alignment/**
-!full_pipeline_run/results/11_callable_consensus/**
-!full_pipeline_run/results/14_tree_visualization/**
-!full_pipeline_run/results/15_pca/**
-!full_pipeline_run/results/17_population_genetics/**
-!full_pipeline_run/results/18_admixture_replicates/**
-!full_pipeline_run/results/19_bootstrap_phylogenetic_tree/**
-!full_pipeline_run/results/20_bootstrap_tree_visualization/**
-full_pipeline_run/results/18_admixture_replicates/**/*.bed
-full_pipeline_run/results/18_admixture_replicates/**/*.bim
-full_pipeline_run/results/18_admixture_replicates/**/*.fam
-full_pipeline_run/results/18_admixture_replicates/**/*.map
-full_pipeline_run/results/18_admixture_replicates/**/*.ped
-full_pipeline_run/results/18_admixture_replicates/**/*.nosex
-full_pipeline_run/results/18_admixture_replicates/**/*.P
-full_pipeline_run/results/18_admixture_replicates/**/*.Q
-full_pipeline_run/results/18_admixture_replicates/**/*.log
-full_pipeline_run/results/**/bam/
-full_pipeline_run/results/**/qc/
-full_pipeline_run/results/**/logs/
-
-# Keep original input and curated package FASTAs
-!Dudleya_hifiasm_purged_manual_chloroplast.fa
-!Dudleya_hifiasm_purged_manual_mitochondria.fa
-!dudleya_organelle_reference_verification/references/*.fa
+# Preserve the nested repository's worktree code while keeping its internal
+# Git object database local and untouched.
+archive_noncanonical/2026-08-17_pre_remediation/snapshot/dudleya_conservation_genomics_pipeline/.git/

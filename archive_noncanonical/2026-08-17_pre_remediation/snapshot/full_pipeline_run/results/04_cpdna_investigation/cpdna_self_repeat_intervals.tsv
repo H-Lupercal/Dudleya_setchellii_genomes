@@ -1,0 +1,3 @@
+rank	length_bp	identity_percent	query_start	query_end	match_start	match_end	orientation
+1	25742	99.953	124539	150274	82091	107826	reverse
+2	25742	99.953	82091	107826	124539	150274	reverse

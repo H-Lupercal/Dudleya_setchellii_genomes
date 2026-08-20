@@ -1,0 +1,3 @@
+organelle	external_accession	candidate_features	mapped_features	unmapped_features	mapped_fraction	status
+chloroplast	NC_085682.1	263	242	21	0.9201520912547528	draft_projection_not_de_novo_annotation
+mitochondria	PV256627.1	97	55	42	0.5670103092783505	draft_projection_not_de_novo_annotation

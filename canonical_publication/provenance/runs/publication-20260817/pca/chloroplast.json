@@ -1,0 +1,65 @@
+{
+  "fingerprint": {
+    "commands": [
+      "mean imputation; marker standardization; sklearn PCA"
+    ],
+    "digest": "8f0c4fcb5c34d72efa5e3d541c6b3f4beacd652a23d9e0afc1c64b9423bfa1e3",
+    "inputs": [
+      [
+        "canonical_publication/metadata/qc/publication-20260817/chloroplast_samples.tsv",
+        "613831e85e35d5f7b5acf8b2c45cb4b5e382c3e53dd88be2dc8e091a7ffb389b"
+      ],
+      [
+        "canonical_publication/results/variants/publication-20260817/chloroplast.mac2_ordination.vcf.gz",
+        "41f3562747aa5ab49ccefa939b28d35f7c0143aee37f7621e708757023c86e2d"
+      ],
+      [
+        "provenance:executable_sha256:bcftools",
+        "228dbc164dc0ad835ab3b767ec05b5977004a989949151a19d8b20b11b37695c"
+      ],
+      [
+        "provenance:executable_sha256:numpy",
+        "c73f9387a63c5d3f89bbf323b4792ffb376e005b57d4d39718f7c000b7a1276a"
+      ],
+      [
+        "provenance:executable_sha256:scikit-learn",
+        "c73f9387a63c5d3f89bbf323b4792ffb376e005b57d4d39718f7c000b7a1276a"
+      ],
+      [
+        "provenance:git_commit",
+        "5b932a95a1fa998569397491bfdec1d79d5bb84d"
+      ],
+      [
+        "provenance:pipeline_code",
+        "68fc535fc1dbfadd826c0301754aba9a4f48a223b537ef5a2e64a86d89a1c6ad"
+      ],
+      [
+        "provenance:tool:bcftools",
+        "bcftools 1.24 | Using htslib 1.23.1 | Copyright (C) 2026 Genome Research Ltd."
+      ],
+      [
+        "provenance:tool:numpy",
+        "2.5.0"
+      ],
+      [
+        "provenance:tool:scikit-learn",
+        "1.9.0"
+      ]
+    ],
+    "stage": "pca:chloroplast",
+    "upstream": [
+      [
+        "variants",
+        "0887aaad9365e7f7dbc0978292bb21340e2fb6ff8cd7ad7abe2f53d3a40bd2ad"
+      ]
+    ]
+  },
+  "marker_count": 2023,
+  "organelle": "chloroplast",
+  "outputs": {
+    "canonical_publication/results/pca/publication-20260817/chloroplast.coordinates.tsv": "ac7034e3b94b251ac8a7895801e47f08c1fc9c7eddb98eb692c1d2dfec90ee4e",
+    "canonical_publication/results/pca/publication-20260817/chloroplast.variance.tsv": "505a301dcb718c7f7b14bb86ef1ff3a5adf526cf37fe90f4755671e1087a5377"
+  },
+  "sample_count": 276,
+  "status": "complete"
+}

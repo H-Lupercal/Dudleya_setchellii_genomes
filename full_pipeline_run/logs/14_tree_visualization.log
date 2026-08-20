@@ -1,9 +1,0 @@
-=== 14_tree_visualization Tree figures for initial ML trees ===
-Started: 2026-07-08T18:24:14-07:00
-Command: python3 dudleya_organelle_alignment_pipeline/scripts/run_tree_visualization.py --tree-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/12_phylogenetic_tree --output-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/14_tree_visualization --run-label primary
-
-cpDNA: rendered 278 tips to /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/14_tree_visualization/cpDNA.primary.iqtree_ml_tree.png, /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/14_tree_visualization/cpDNA.primary.iqtree_ml_tree.pdf, and /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/14_tree_visualization/cpDNA.primary.iqtree_ml_tree.svg
-mtDNA: rendered 278 tips to /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/14_tree_visualization/mtDNA.primary.iqtree_ml_tree.png, /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/14_tree_visualization/mtDNA.primary.iqtree_ml_tree.pdf, and /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/14_tree_visualization/mtDNA.primary.iqtree_ml_tree.svg
-Output directory: /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/14_tree_visualization
-
-Finished: 2026-07-08T18:24:18-07:00

@@ -1,0 +1,490 @@
+IQ-TREE version 3.1.2 for Linux x86 64-bit built May 17 2026
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    sparky (AVX512, FMA3, 30 GB RAM)
+Command: iqtree3 -s canonical_publication/results/alignments/publication-20260817/chloroplast.callable_alignment.fa -pre canonical_publication/results/trees/publication-20260817/chloroplast.primary -st DNA -m MFP -alrt 1000 -B 1000 -bnni -seed 271828 -nt 8
+Seed:    271828 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu Aug 20 02:32:34 2026
+Kernel:  AVX+FMA - 8 threads (16 CPU cores detected)
+
+Reading alignment file canonical_publication/results/alignments/publication-20260817/chloroplast.callable_alignment.fa ... Fasta format detected
+Reading fasta file: done in 0.196272 secs using 92.85% CPU
+Constructing alignment: done in 0.108328 secs using 748.4% CPU
+WARNING: 41563 sites contain only gaps or ambiguous characters.
+Alignment has 276 sequences with 150274 columns, 6622 distinct patterns
+2023 parsimony-informative, 238 singleton sites, 148013 constant sites
+                         Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.000311136 secs using 347.8% CPU
+   1  ABAB_MAD_LP_223_Du-590    32.70%    passed     43.34%
+   2  ABAB_MAD_LP_322_Du-593    31.06%    passed     93.43%
+   3  ABAB_MAD_LP_323_Du-594    32.76%    passed     34.77%
+   4  ABAB_MAD_LP_324_Du-595    32.68%    passed     44.30%
+   5  ABAB_MAD_LP_325_Du-596    32.17%    passed     75.87%
+   6  ABAB_MAD_LP_326_Du-597    32.41%    passed     61.95%
+   7  ABAB_MAD_LP_327_Du-598    32.75%    passed     40.05%
+   8  ABBE_BERN_LP_311_Du-780   31.45%    passed     99.78%
+   9  ABBE_BERN_LP_312_Du-781   32.26%    passed     60.24%
+  10  ABBE_BERN_LP_313_Du-782   32.35%    passed     61.56%
+  11  ABBE_BERN_LP_314_Du-783   32.51%    passed     40.75%
+  12  ABMU_HOR_LP_306_Du-775    31.77%    passed     95.75%
+  13  ABMU_HOR_LP_308_Du-777    31.65%    passed     98.65%
+  14  ABMU_HOR_LP_358_Du-770    31.20%    passed     96.91%
+  15  ABMU_HOR_LP_359_Du-771    31.24%    passed     99.07%
+  16  ABMU_HOR_LP_360_Du-772    30.96%    passed     96.29%
+  17  ABMU_HOR_LP_361_Du-773    31.21%    passed     99.15%
+  18  BAI_LP_105_Du-222         29.48%    passed     51.38%
+  19  BAI_LP_106_Du-223         29.46%    passed     53.45%
+  20  BAI_LP_108_Du-225         29.72%    passed     54.98%
+  21  BAI_LP_109_Du-226         29.72%    passed     58.07%
+  22  BAI_LP_110_Du-227         29.24%    passed     51.44%
+  23  BAI_LP_111_Du-228         29.38%    passed     49.11%
+  24  BAI_LP_112_Du-230         29.84%    passed     67.21%
+  25  BAI_LP_113_Du-231         29.54%    passed     39.48%
+  26  BAI_LP_114_Du-232         29.71%    passed     54.68%
+  27  BAI_LP_319_Du-233         31.54%    passed     94.28%
+  28  COM_LP_269_Du-703         31.39%    passed     94.37%
+  29  COM_LP_270_Du-704         31.95%    passed     62.15%
+  30  COM_LP_272_Du-707         31.33%    passed     98.88%
+  31  COM_LP_274_Du-709         31.39%    passed     97.69%
+  32  COM_LP_276_Du-711         31.95%    passed     65.13%
+  33  COM_LP_277_Du-712         31.68%    passed     85.45%
+  34  COM_LP_341_Du-713         31.06%    passed     99.95%
+  35  COM_LP_342_Du-714         31.75%    passed     84.56%
+  36  COM_LP_343_Du-715         31.29%    passed     98.34%
+  37  CROB_LP_169_Du-381        32.07%    passed     60.95%
+  38  CROB_LP_170_Du-382        30.72%    passed     97.43%
+  39  CROB_LP_172_Du-384        31.62%    passed     93.42%
+  40  CROB_LP_173_Du-385        30.57%    passed     96.79%
+  41  CROB_LP_174_Du-386        30.32%    passed     88.54%
+  42  CROB_LP_175_Du-387        30.61%    passed     97.69%
+  43  CROB_LP_176_Du-388        30.58%    passed     97.19%
+  44  CROB_LP_177_Du-389        29.93%    passed     67.39%
+  45  CROB_LP_320_Du-395        31.00%    passed     99.66%
+  46  CROB_LP_321_Du-396        30.80%    passed     99.46%
+  47  CROS_LP_085_Du-181        29.80%    passed     54.60%
+  48  CROS_LP_086_Du-182        29.06%    passed     27.11%
+  49  CROS_LP_087_Du-183        29.37%    passed     42.54%
+  50  CROS_LP_088_Du-184        29.30%    passed     42.48%
+  51  CROS_LP_089_Du-185        28.46%    passed     10.28%
+  52  CROS_LP_090_Du-186        29.10%    passed     33.12%
+  53  CROS_LP_091_Du-187        28.87%    passed      9.51%
+  54  CROS_LP_092_Du-188        29.52%    passed     21.36%
+  55  CROS_LP_093_Du-189        29.62%    passed     58.14%
+  56  CROS_LP_094_Du-190        28.87%    passed      7.55%
+  57  CY_ALA_LP_298-Du-767      32.17%    passed     61.80%
+  58  CY_ALA_LP_299-Du-768      32.25%    passed     57.33%
+  59  CY_ALA_LP_357_Du-769      31.14%    passed     99.93%
+  60  CY_BAL_LP_226_Du-602      32.08%    passed     69.91%
+  61  CY_BAL_LP_227_Du-603      32.20%    passed     63.13%
+  62  CY_BAL_LP_228_Du-604      32.93%    passed     28.04%
+  63  CY_BGL_LP_210_Du-577      31.72%    passed     95.56%
+  64  CY_BGL_LP_212_Du-579      30.90%    passed     97.12%
+  65  CY_BOU_LP_288_Du-737      31.99%    passed     76.04%
+  66  CY_BOU_LP_290_Du-739      30.88%    passed     98.24%
+  67  CY_BOU_LP_291_Du-740      31.87%    passed     86.47%
+  68  CY_BOU_LP_292_Du-741      31.95%    passed     76.49%
+  69  CY_BOU_LP_354_Du-742      31.02%    passed     99.59%
+  70  CY_CAS_LP_328_Du-610      32.43%    passed     40.24%
+  71  CY_CAS_LP_329_Du-611      31.86%    passed     91.30%
+  72  CY_CAS_LP_330_Du-607      32.29%    passed     67.74%
+  73  CY_CAS_LP_331_Du-608      32.62%    passed     32.95%
+  74  CY_CAS_LP_332_Du-609      32.23%    passed     64.99%
+  75  CY_HICN_LP_236_Du-614     31.31%    passed     99.46%
+  76  CY_HICN_LP_333_Du-612     32.62%    passed     29.16%
+  77  CY_HICN_LP_334_Du-613     32.87%    passed      8.68%
+  78  CY_HICN_LP_335_Du-615     32.52%    passed     31.04%
+  79  CY_HICN_LP_336_Du-616     32.32%    passed     53.46%
+  80  CY_HICS_LP_293_Du-757     32.40%    passed     42.54%
+  81  CY_HICS_LP_295_Du-759     33.22%    passed     11.52%
+  82  CY_HICS_LP_297_Du-761     32.17%    passed     67.79%
+  83  CY_HICS_LP_355_Du-762     31.24%    passed     99.87%
+  84  CY_HICS_LP_356_Du-763     31.61%    passed     95.10%
+  85  CY_HUN_LP_264_Du-683      32.21%    passed     77.47%
+  86  CY_HUN_LP_265_Du-684      46.69%    passed     46.67%
+  87  CY_HUN_LP_266_Du-685      31.87%    passed     93.27%
+  88  CY_HUN_LP_267_Du-686      32.44%    passed     68.60%
+  89  CY_HUN_LP_268_Du-687      32.54%    passed     53.25%
+  90  CY_SIE_LP_188_Du-445      30.22%    passed     84.67%
+  91  CY_SIE_LP_189_Du-446      30.15%    passed     75.71%
+  92  CY_SIE_LP_190_Du-447      29.98%    passed     62.20%
+  93  CY_SIE_LP_191_Du-448      30.49%    passed     93.36%
+  94  CY_WOO_LP_259_Du-664      31.71%    passed     95.07%
+  95  CY_WOO_LP_260_Du-665      32.54%    passed     36.15%
+  96  CY_WOO_LP_261_Du-667      33.25%    passed      5.19%
+  97  CY_WOO_LP_262_Du-668      32.51%    passed     34.31%
+  98  CY_WOO_LP_263_Du-669      32.14%    passed     70.15%
+  99  DAN_LP_043_Du-68          31.81%    passed     75.46%
+ 100  DAN_LP_044_Du-69          31.19%    passed     99.13%
+ 101  DAN_LP_045_Du-70          29.57%    passed     63.40%
+ 102  DAN_LP_046_Du-71          31.05%    passed     99.95%
+ 103  DAN_LP_047_Du-72          31.46%    passed     96.66%
+ 104  DOV_LP_078_Du-174         30.24%    passed     88.24%
+ 105  DOV_LP_079_Du-175         29.32%    passed     42.40%
+ 106  DOV_LP_080_Du-176         28.69%    passed     22.36%
+ 107  DOV_LP_081_Du-177         28.94%    passed     29.99%
+ 108  DOV_LP_082_Du-178         29.25%    passed     50.78%
+ 109  DOV_LP_083_Du-179         29.32%    passed     32.92%
+ 110  DOV_LP_084_Du-180         29.14%    passed     33.06%
+ 111  DU-173                    29.05%    passed     29.56%
+ 112  DU-229                    29.34%    passed     39.51%
+ 113  DU-247                    29.21%    passed     22.01%
+ 114  DU-254                    29.41%    passed     28.77%
+ 115  DU-270                    29.60%    passed     49.48%
+ 116  DU-297                    29.16%    passed     18.17%
+ 117  DU-443                    29.60%    passed     58.08%
+ 118  DU-4A                     29.15%    passed     30.68%
+ 119  DU014LP012                28.68%    passed     16.59%
+ 120  DU037LP013                28.43%    passed     10.71%
+ 121  DU059LP015                28.83%    passed     25.70%
+ 122  DU078LP011                28.28%    passed      8.39%
+ 123  DU079LP010                28.90%    passed     45.69%
+ 124  DUD_LP_132_Du-283         31.79%    passed     82.90%
+ 125  DUD_LP_133_Du-284         30.89%    passed     96.91%
+ 126  DUD_LP_134_Du-285         30.73%    passed     90.49%
+ 127  DUD_LP_135_Du-286         30.80%    passed     92.64%
+ 128  DUD_LP_136_Du-287         30.76%    passed     91.29%
+ 129  DUD_LP_137_Du-288         31.20%    passed     99.87%
+ 130  DUD_LP_138_Du-289         30.91%    passed     98.14%
+ 131  DUD_LP_139_Du-290         31.14%    passed     99.91%
+ 132  KIRN_LP_179_Du-421        29.82%    passed     67.02%
+ 133  KIRN_LP_180_Du-422        30.31%    passed     88.26%
+ 134  KIRN_LP_181_Du-423        30.50%    passed     95.57%
+ 135  KIRN_LP_182_Du-424        29.82%    passed     69.23%
+ 136  KIRN_LP_183_Du-425        30.08%    passed     84.53%
+ 137  KIRN_LP_184_Du-426        30.02%    passed     76.43%
+ 138  KIRN_LP_185_Du-427        29.87%    passed     74.62%
+ 139  KIRN_LP_186_Du-428        29.75%    passed     73.86%
+ 140  KIRN_LP_187_Du-429        29.76%    passed     68.59%
+ 141  KIRT_LP_159_Du-364        32.13%    passed     57.85%
+ 142  KIRT_LP_160_Du-365        30.51%    passed     96.97%
+ 143  KIRT_LP_161_Du-366        30.67%    passed     98.75%
+ 144  KIRT_LP_162_Du-367        30.83%    passed     99.79%
+ 145  KIRT_LP_163_Du-368        30.51%    passed     97.85%
+ 146  KIRT_LP_164_Du-369        30.82%    passed     99.22%
+ 147  KIRT_LP_165_Du-370        29.61%    passed     62.38%
+ 148  KIRT_LP_166_Du-371        29.97%    passed     75.17%
+ 149  KIRT_LP_167_Du-372        31.35%    passed     99.21%
+ 150  KIRT_LP_168_Du-373        30.23%    passed     87.79%
+ 151  MALV_LP_095_Du-201        28.46%    passed      9.63%
+ 152  MALV_LP_096_Du-202        28.96%    passed     32.25%
+ 153  MALV_LP_097_Du-203        28.86%    passed     25.00%
+ 154  MALV_LP_098_Du-204        28.91%    passed     21.53%
+ 155  MALV_LP_099_Du-205        29.75%    passed     46.22%
+ 156  MALV_LP_100_Du-206        28.97%    passed     27.96%
+ 157  MALV_LP_101_Du-207        28.96%    passed     25.15%
+ 158  MALV_LP_102_Du-208        29.35%    passed     38.06%
+ 159  MALV_LP_103_Du-209        29.23%    passed     35.96%
+ 160  MALV_LP_104_Du-210        29.26%    passed     40.48%
+ 161  OCO_LP_058_Du-115         32.46%    passed     57.87%
+ 162  OCO_LP_059_Du-106         32.31%    passed     76.75%
+ 163  OCO_LP_060_Du-107         32.75%    passed     40.85%
+ 164  OCO_LP_061_Du-108         32.05%    passed     88.01%
+ 165  OCO_LP_062_Du-109         32.01%    passed     91.94%
+ 166  OCO_LP_063_Du-110         32.82%    passed     39.24%
+ 167  OCO_LP_064_Du-111         32.65%    passed     45.50%
+ 168  OCO_LP_065_Du-112         32.43%    passed     66.65%
+ 169  OCO_LP_066_Du-113         32.90%    passed     23.33%
+ 170  OCO_LP_067_Du-114         32.81%    passed     34.41%
+ 171  QUI1_LP_249_Du-648        32.41%    passed     41.65%
+ 172  QUI1_LP_250_Du-649        32.46%    passed     34.75%
+ 173  QUI1_LP_251_Du-650        33.00%    passed      9.08%
+ 174  QUI1_LP_252_Du-651        32.73%    passed     21.71%
+ 175  QUI1_LP_253_Du-652        31.97%    passed     73.44%
+ 176  QUI1_LP_254_Du-653        32.72%    passed     25.31%
+ 177  QUI1_LP_255_Du-654        31.99%    passed     74.36%
+ 178  QUI1_LP_257_Du-656        32.51%    passed     34.30%
+ 179  QUI1_LP_258_Du-657        31.55%    passed     97.75%
+ 180  QUI2_LP_243_Du-631        31.45%    passed     99.22%
+ 181  QUI2_LP_244_Du-632        32.73%    passed     22.97%
+ 182  QUI2_LP_245_Du-633        32.56%    passed     31.40%
+ 183  QUI2_LP_246_Du-634        32.02%    passed     78.80%
+ 184  QUI2_LP_247_Du-635        31.85%    passed     83.02%
+ 185  QUI2_LP_248_Du-636        31.77%    passed     89.38%
+ 186  QUI2_LP_337_Du-638        32.92%    passed     13.03%
+ 187  QUI2_LP_338_Du-639        32.62%    passed     28.43%
+ 188  QUI2_LP_339_Du-640        31.69%    passed     94.12%
+ 189  QUI2_LP_340_Du-641        31.67%    passed     95.12%
+ 190  QUIN_LP_069_Du-155        32.47%    passed     46.57%
+ 191  QUIN_LP_070_Du-156        32.84%    passed     17.48%
+ 192  QUIN_LP_071_Du-157        32.44%    passed     44.20%
+ 193  QUIN_LP_072_Du-158        32.73%    passed     25.18%
+ 194  QUIN_LP_073_Du-159        32.50%    passed     31.19%
+ 195  QUIN_LP_074_Du-160        32.27%    passed     56.77%
+ 196  QUIN_LP_075_Du-161        29.03%    passed     34.95%
+ 197  QUIN_LP_076_Du-162        29.87%    passed     67.60%
+ 198  QUIN_LP_077_Du-163        29.18%    passed     33.27%
+ 199  QUIN_LP_318_Du-164        31.70%    passed     93.22%
+ 200  RIC_LP_192_Du-521         29.87%    passed     68.08%
+ 201  RIC_LP_193_Du-522         30.05%    passed     82.40%
+ 202  RIC_LP_194_Du-523         29.92%    passed     76.81%
+ 203  RIC_LP_195_Du-524         31.01%    passed     99.91%
+ 204  RIC_LP_196_Du-525         31.04%    passed     99.63%
+ 205  RIC_LP_197_Du-526         31.75%    passed     93.85%
+ 206  RIC_LP_198_Du-527         29.48%    passed     51.75%
+ 207  RIC_LP_199_Du-528         30.25%    passed     86.65%
+ 208  RIC_LP_200_Du-529         29.69%    passed     66.37%
+ 209  RIC_LP_201_Du-530         29.52%    passed     61.48%
+ 210  RSV_LP_049_Du-85          30.48%    passed     93.94%
+ 211  RSV_LP_050_Du-87          29.98%    passed     72.75%
+ 212  RSV_LP_051_Du-88          32.02%    passed     76.39%
+ 213  RSV_LP_052_Du-89          30.96%    passed     99.20%
+ 214  RSV_LP_053_Du-90          30.62%    passed     96.52%
+ 215  RSV_LP_055_Du-92          31.41%    passed     98.61%
+ 216  RSV_LP_057_Du-94          30.40%    passed     93.37%
+ 217  RSV_LP_315_Du-95          29.91%    passed     67.55%
+ 218  RSV_LP_316_Du-96          30.66%    passed     97.00%
+ 219  SILG_LP_149_Du-343        31.97%    passed     68.24%
+ 220  SILG_LP_150_Du-344        32.04%    passed     69.94%
+ 221  SILG_LP_151_Du-345        31.53%    passed     95.16%
+ 222  SILG_LP_152_Du-346        31.75%    passed     85.17%
+ 223  SILG_LP_153_Du-347        31.95%    passed     72.33%
+ 224  SILG_LP_154_Du-348        31.32%    passed     99.61%
+ 225  SILG_LP_155_Du-349        31.95%    passed     73.20%
+ 226  SILG_LP_156_Du-350        31.56%    passed     95.93%
+ 227  SILG_LP_157_Du-351        32.04%    passed     63.84%
+ 228  SILG_LP_158_Du-352        32.66%    passed     61.98%
+ 229  SILR_LP_346_Du-729        31.33%    passed     98.31%
+ 230  SILR_LP_347_Du-730        30.40%    passed     97.58%
+ 231  SILR_LP_348_Du-731        31.22%    passed     99.63%
+ 232  SILR_LP_349_Du-732        31.14%    passed     99.82%
+ 233  SILR_LP_351_Du-734        31.08%    passed     99.99%
+ 234  SILR_LP_353_Du-736        32.25%    passed     41.59%
+ 235  STI_LP_027_Du-45          32.04%    passed     69.72%
+ 236  STI_LP_028_Du-46          31.35%    passed     98.99%
+ 237  STI_LP_029_Du-47          32.59%    passed     29.85%
+ 238  STI_LP_030_Du-48          31.65%    passed     96.21%
+ 239  STI_LP_031_Du-49          32.35%    passed     50.41%
+ 240  STI_LP_032_Du-50          31.69%    passed     94.32%
+ 241  STI_LP_033_Du-51          32.40%    passed     49.34%
+ 242  STI_LP_034_Du-52          31.35%    passed     99.86%
+ 243  STI_LP_035_Du-53          30.37%    passed     82.96%
+ 244  STI_LP_036_Du-54          31.92%    passed     80.22%
+ 245  STI_LP_037_Du-55          30.44%    passed     92.50%
+ 246  STI_LP_038_Du-56          30.35%    passed     81.35%
+ 247  STI_LP_039_Du-57          31.52%    passed     98.45%
+ 248  STI_LP_040_Du-58          32.82%    passed     22.99%
+ 249  STI_LP_041_Du-60          31.41%    passed     98.64%
+ 250  STI_LP_042_Du-61          31.56%    passed     97.67%
+ 251  TIL_LP_123_Du-263         32.11%    passed     73.80%
+ 252  TIL_LP_124_Du-264         31.57%    passed     96.21%
+ 253  TIL_LP_125_Du-265         32.40%    passed     43.67%
+ 254  TIL_LP_126_Du-266         31.94%    passed     79.68%
+ 255  TIL_LP_127_Du-267         34.49%    passed     12.12%
+ 256  TIL_LP_128_Du-268         31.49%    passed     98.29%
+ 257  TIL_LP_129_Du-269         31.83%    passed     86.35%
+ 258  TIL_LP_130_Du-271         31.24%    passed     99.90%
+ 259  TIL_LP_131_Du-272         31.86%    passed     81.08%
+ 260  TULP_LP_115_Du-242        28.72%    passed      9.14%
+ 261  TULP_LP_116_Du-243        28.85%    passed     11.74%
+ 262  TULP_LP_117_Du-244        29.42%    passed     26.64%
+ 263  TULP_LP_118_Du-245        28.49%    passed      7.86%
+ 264  TULP_LP_119_Du-246        28.60%    passed      7.14%
+ 265  TULP_LP_120_Du-248        28.19%    failed      2.90%
+ 266  TULP_LP_121_Du-249        29.10%    passed      9.24%
+ 267  TULP_LP_122_Du-250        28.91%    passed     11.05%
+ 268  TULP_LP_140_Du-302        32.06%    passed     67.05%
+ 269  TULP_LP_141_Du-303        31.16%    passed     99.63%
+ 270  TULP_LP_142_Du-304        32.01%    passed     73.50%
+ 271  TULP_LP_143_Du-305        31.90%    passed     81.28%
+ 272  TULP_LP_144_Du-306        31.66%    passed     93.67%
+ 273  TULP_LP_145_Du-307        32.22%    passed     53.60%
+ 274  TULP_LP_146_Du-308        31.67%    passed     92.60%
+ 275  TULP_LP_147_Du-309        30.95%    passed     97.30%
+ 276  TULP_LP_148_Du-310        31.47%    passed     99.13%
+****  TOTAL                     31.09%  1 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: minimal branch length is reduced to 0.000000665451 for long alignment
+Checking for duplicate sequences: done in 0.00103307 secs using 768.9% CPU
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.024 seconds
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -170690.359
+Optimal log-likelihood: -170690.294
+Rate parameters:  A-C: 1.03261  A-G: 0.85132  A-T: 0.27157  C-G: 0.48559  C-T: 0.77039  G-T: 1.00000
+Base frequencies:  A: 0.317  C: 0.183  G: 0.176  T: 0.324
+Proportion of invariable sites: 0.493
+Gamma shape alpha: 0.213
+Parameters optimization took 1 rounds (0.218 sec)
+Time for fast ML tree search: 1.646 seconds
+
+NOTE: ModelFinder requires 618 MB RAM!
+ModelFinder will test up to 968 DNA models (sample size: 150274 epsilon: 0.100) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  JC            175236.791   549 351571.582   351575.615   357017.780
+  2  JC+I          174995.443   550 351090.887   351094.935   356547.006
+  3  JC+G4         175032.340   550 351164.680   351168.728   356620.799
+  4  JC+I+G4       174991.128   551 351084.256   351088.319   356550.295
+  5  JC+R2         175075.659   551 351253.318   351257.381   356719.357
+  6  JC+R3         174980.023   553 351066.047   351070.139   356551.926
+  7  JC+R4         174897.077   555 350904.154   350908.276   356409.874
+  8  JC+R5         174832.633   557 350779.266   350783.418   356304.826
+  9  JC+R6         174815.492   559 350748.984   350753.166   356294.385
+ 10  JC+R7         174815.308   561 350752.616   350756.828   356317.857
+ 14  JC+I+R2       174993.324   552 351090.649   351094.726   356566.608
+ 15  JC+I+R3       174963.686   554 351035.373   351039.480   356531.172
+ 16  JC+I+R4       174814.763   556 350741.526   350745.663   356257.166
++I+R5 reinitialized from +I+R4 with factor 0.500
++I+R5 reinitialized from +I+R4 with factor 0.250
+ 17  JC+I+R5       174814.819   558 350745.638   350749.805   356281.119
+ 38  JC+I+R4       174814.763   556 350741.526   350745.663   356257.166
+ 60  F81+I+R4      174814.763   556 350741.527   350745.664   356257.167
+ 82  F81+F+I+R4    170771.103   559 342660.206   342664.388   348205.606
+104  K2P+I+R4      174809.102   557 350732.203   350736.355   356257.763
+126  K2P+I+R4      174809.102   557 350732.203   350736.355   356257.763
+148  HKY+I+R4      174808.951   557 350731.903   350736.055   356257.463
+170  HKY+F+I+R4    170757.515   560 342635.029   342639.226   348190.350
+192  TNe+I+R4      174807.882   558 350731.763   350735.930   356267.243
+214  TNe+I+R4      174807.881   558 350731.763   350735.930   356267.243
+236  TN+I+R4       174807.881   558 350731.762   350735.928   356267.242
+258  TN+F+I+R4     170755.530   561 342633.059   342637.271   348198.300
+280  K3P+I+R4      174637.257   558 350390.514   350394.681   355925.994
+302  K3P+I+R4      174637.257   558 350390.514   350394.681   355925.994
+324  K3Pu+I+R4     174637.257   558 350390.514   350394.681   355925.995
+346  K3Pu+F+I+R4   170526.137   561 342174.273   342178.485   347739.514
+368  TPM2+I+R4     174807.139   558 350730.277   350734.444   356265.757
+390  TPM2+I+R4     174807.139   558 350730.277   350734.444   356265.757
+412  TPM2u+I+R4    174807.134   558 350730.269   350734.436   356265.749
+434  TPM2u+F+I+R4  170724.854   561 342571.707   342575.919   348136.948
+456  TPM3+I+R4     174806.287   558 350728.574   350732.741   356264.054
+478  TPM3+I+R4     174806.287   558 350728.574   350732.741   356264.054
+500  TPM3u+I+R4    174806.286   558 350728.573   350732.740   356264.053
+522  TPM3u+F+I+R4  170724.269   561 342570.539   342574.751   348135.780
+544  TIMe+I+R4     174636.226   559 350390.451   350394.633   355935.852
+566  TIMe+I+R4     174636.226   559 350390.451   350394.633   355935.852
+588  TIM+I+R4      174636.204   559 350390.407   350394.589   355935.808
+610  TIM+F+I+R4    170524.211   562 342172.422   342176.649   347747.583
+632  TIM2e+I+R4    174806.091   559 350730.183   350734.365   356275.583
+654  TIM2e+I+R4    174806.091   559 350730.183   350734.365   356275.583
+676  TIM2+I+R4     174806.084   559 350730.168   350734.350   356275.569
+698  TIM2+F+I+R4   170722.803   562 342569.607   342573.834   348144.768
+720  TIM3e+I+R4    174805.210   559 350728.420   350732.602   356273.821
+742  TIM3e+I+R4    174805.210   559 350728.420   350732.602   356273.821
+764  TIM3+I+R4     174805.205   559 350728.410   350732.592   356273.811
+786  TIM3+F+I+R4   170722.300   562 342568.600   342572.827   348143.761
+808  TVMe+I+R4     174637.149   560 350394.298   350398.494   355949.618
+830  TVMe+I+R4     174637.149   560 350394.298   350398.494   355949.618
+852  TVM+I+R4      174637.128   560 350394.255   350398.452   355949.576
+874  TVM+F+I+R4    170511.619   563 342149.238   342153.480   347734.319
+896  SYM+I+R4      174636.059   561 350394.119   350398.330   355959.360
+918  SYM+I+R4      174636.059   561 350394.119   350398.330   355959.360
+940  GTR+I+R4      174636.040   561 350394.080   350398.292   355959.321
+962  GTR+F+I+R4    170509.705   564 342147.410   342151.667   347742.412
+Akaike Information Criterion:           GTR+F+I+R4
+Corrected Akaike Information Criterion: GTR+F+I+R4
+Bayesian Information Criterion:         TVM+F+I+R4
+Best-fit model: TVM+F+I+R4 chosen according to BIC
+
+All model information printed to canonical_publication/results/trees/publication-20260817/chloroplast.primary.model.gz
+CPU time for ModelFinder: 1168.157 seconds (0h:19m:28s)
+Wall-clock time for ModelFinder: 148.615 seconds (0h:2m:28s)
+Generating 1000 samples for ultrafast bootstrap (seed: 271828)...
+
+NOTE: 262 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -170511.588
+Optimal log-likelihood: -170511.584
+Rate parameters:  A-C: 0.99082  A-G: 0.78479  A-T: 0.26131  C-G: 0.46473  C-T: 0.78479  G-T: 1.00000
+Base frequencies:  A: 0.317  C: 0.183  G: 0.176  T: 0.324
+Proportion of invariable sites: 0.574
+Site proportion and rates:  (0.148,0.000) (0.149,3.353) (0.129,3.354) (0.000,197.119)
+Parameters optimization took 1 rounds (0.271 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.0565901 secs using 801.6% CPU
+Computing ML distances took 0.057648 sec (of wall-clock time) 0.461012 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.000191927 secs using 840.4% CPU
+Constructing RapidNJ tree: done in 0.00637507 secs using 824.1% CPU
+Computing RapidNJ tree took 0.006613 sec (of wall-clock time) 0.059065 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -170660.859
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 3.134 second
+Computing log-likelihood of 98 initial trees ... 3.533 seconds
+Current best score: -170508.666
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -170496.846
+Iteration 10 / LogL: -170508.536 / Time: 0h:2m:57s
+Iteration 20 / LogL: -170505.259 / Time: 0h:3m:5s
+Finish initializing candidate tree set (20)
+Current best tree score: -170496.846 / CPU time: 35.424
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -170506.449 / Time: 0h:3m:11s (0h:1m:43s left)
+Iteration 40 / LogL: -170520.798 / Time: 0h:3m:16s (0h:1m:15s left)
+Iteration 50 / LogL: -170506.276 / Time: 0h:3m:22s (0h:0m:56s left)
+Iteration 60 / LogL: -171171.207 / Time: 0h:3m:29s (0h:0m:41s left)
+Iteration 70 / LogL: -170512.230 / Time: 0h:3m:34s (0h:0m:29s left)
+Iteration 80 / LogL: -170503.840 / Time: 0h:3m:40s (0h:0m:19s left)
+Iteration 90 / LogL: -170514.353 / Time: 0h:3m:46s (0h:0m:9s left)
+Iteration 100 / LogL: -170508.933 / Time: 0h:3m:52s (0h:0m:0s left)
+Refining ufboot trees with NNI 1 branch...
+100 samples done
+200 samples done
+300 samples done
+400 samples done
+500 samples done
+600 samples done
+700 samples done
+800 samples done
+900 samples done
+1000 samples done
+Total 1000 ufboot trees refined
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:8m:41s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -170496.846
+2. Current log-likelihood: -170496.803
+Optimal log-likelihood: -170496.801
+Rate parameters:  A-C: 1.00245  A-G: 0.78677  A-T: 0.26434  C-G: 0.46870  C-T: 0.78677  G-T: 1.00000
+Base frequencies:  A: 0.317  C: 0.183  G: 0.176  T: 0.324
+Proportion of invariable sites: 0.573
+Site proportion and rates:  (0.148,0.000) (0.149,3.331) (0.130,3.331) (0.000,206.126)
+Parameters optimization took 2 rounds (0.669 sec)
+BEST SCORE FOUND : -170496.801
+
+Testing tree branches by SH-like aLRT with 1000 replicates...
+10.279 sec.
+Creating bootstrap support values...
+Split supports printed to NEXUS file canonical_publication/results/trees/publication-20260817/chloroplast.primary.splits.nex
+Total tree length: 0.024
+
+Total number of iterations: 102
+CPU time used for tree search: 2887.779 sec (0h:48m:7s)
+Wall-clock time used for tree search: 372.054 sec (0h:6m:12s)
+Total CPU time used: 4154.420 sec (1h:9m:14s)
+Total wall-clock time used: 533.215 sec (0h:8m:53s)
+UFBoot trees printed to canonical_publication/results/trees/publication-20260817/chloroplast.primary.ufboot
+
+Computing bootstrap consensus tree...
+Reading input file canonical_publication/results/trees/publication-20260817/chloroplast.primary.splits.nex...
+276 taxa and 3446 splits.
+Consensus tree written to canonical_publication/results/trees/publication-20260817/chloroplast.primary.contree
+Reading input trees file canonical_publication/results/trees/publication-20260817/chloroplast.primary.contree
+Log-likelihood of consensus tree: -170527.352
+
+Analysis results written to: 
+  IQ-TREE report:                canonical_publication/results/trees/publication-20260817/chloroplast.primary.iqtree
+  Maximum-likelihood tree:       canonical_publication/results/trees/publication-20260817/chloroplast.primary.treefile
+  Likelihood distances:          canonical_publication/results/trees/publication-20260817/chloroplast.primary.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          canonical_publication/results/trees/publication-20260817/chloroplast.primary.splits.nex
+  Consensus tree:                canonical_publication/results/trees/publication-20260817/chloroplast.primary.contree
+  UFBoot trees:                  canonical_publication/results/trees/publication-20260817/chloroplast.primary.ufboot
+  Screen log file:               canonical_publication/results/trees/publication-20260817/chloroplast.primary.log
+
+Date and Time: Thu Aug 20 02:41:28 2026

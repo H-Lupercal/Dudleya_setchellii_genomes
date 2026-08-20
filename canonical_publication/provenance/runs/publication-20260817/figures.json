@@ -1,0 +1,359 @@
+{
+  "figure_count": 12,
+  "fingerprint": {
+    "commands": [
+      "deterministic canonical renderer; PNG/PDF/SVG; unrooted tree layout; signed FST centered at zero"
+    ],
+    "digest": "8bf60bfd9e798420bc256974fa3589163226448fcf7f9fde1cac5f0037d3c0dd",
+    "inputs": [
+      [
+        "canonical_publication/config/publication_config.toml",
+        "aea3f0ddf0b95e79566bce9ba3ad3635fbc5c3c97172fa83677b0f7529838378"
+      ],
+      [
+        "canonical_publication/metadata/qc/publication-20260817/chloroplast_samples.tsv",
+        "613831e85e35d5f7b5acf8b2c45cb4b5e382c3e53dd88be2dc8e091a7ffb389b"
+      ],
+      [
+        "canonical_publication/metadata/qc/publication-20260817/mitochondria_samples.tsv",
+        "f10dfd88e7df1ee4e33f1b79bec1ec58fa030d4b9bc25488fcd0f8067b5e82e3"
+      ],
+      [
+        "canonical_publication/provenance/runs/publication-20260817/admixture/chloroplast.json",
+        "5ef051d41a2e056f1567af33348c8139be73c7f1b89af21c1451277dedf50bd3"
+      ],
+      [
+        "canonical_publication/provenance/runs/publication-20260817/admixture/mitochondria.json",
+        "753aa64b5f7aa303fa33f9ac48a4127dcd88478c661028edfa22c9538b778dc5"
+      ],
+      [
+        "canonical_publication/provenance/runs/publication-20260817/haplotypes/chloroplast.json",
+        "e500f0f147d2e5694c664694adf27b1420d0167a92dbf0ac35ecadb06135fb2b"
+      ],
+      [
+        "canonical_publication/provenance/runs/publication-20260817/haplotypes/mitochondria.json",
+        "e886a1a80066dfd0f1942b54367bd1c133e49c396a95ea38d1c20136a5c724a2"
+      ],
+      [
+        "canonical_publication/provenance/runs/publication-20260817/pca/chloroplast.json",
+        "1a24dd58557927958232e1d944fc5a929d1203c080a5a4cb3c607ef018006d17"
+      ],
+      [
+        "canonical_publication/provenance/runs/publication-20260817/pca/mitochondria.json",
+        "df22f0d15bf3691d3fcd770024511153ec0bea638304ea4bd295a48b78d85ca0"
+      ],
+      [
+        "canonical_publication/provenance/runs/publication-20260817/popgen/chloroplast.json",
+        "cf2b823f93c6f5e7023d339cd6c4aba9c6b9e9c657bb8d6491221f0891728cd0"
+      ],
+      [
+        "canonical_publication/provenance/runs/publication-20260817/popgen/mitochondria.json",
+        "13ec160630f14fa59d57232e2aad9c42c6df9e67c5da805a549a1c64c491737e"
+      ],
+      [
+        "canonical_publication/provenance/runs/publication-20260817/qc.json",
+        "4b8271d4f185afc15a4cae4013ab204c7c21d6351319f090b6448c9b051122e3"
+      ],
+      [
+        "canonical_publication/provenance/runs/publication-20260817/references.json",
+        "8e18b38b093541781168dd544de5140ff87919be9845fee3dc0bbe5741f92144"
+      ],
+      [
+        "canonical_publication/provenance/runs/publication-20260817/tree_reproducibility.json",
+        "256787af575953ebde5b9aa39b9c122c3a41e6533d5c5879b198026a3b730a02"
+      ],
+      [
+        "canonical_publication/provenance/runs/publication-20260817/trees/chloroplast.json",
+        "164b3e81e543fddb661f80fce884b4bed3554fc155a685cd42a0287d2819ccf2"
+      ],
+      [
+        "canonical_publication/provenance/runs/publication-20260817/trees/mitochondria.json",
+        "4b550167b34f26857176a304f27313cd261441f3cdeb1c675b30f549c60328f5"
+      ],
+      [
+        "canonical_publication/references/annotations/chloroplast.projected.tsv",
+        "e512bd7ae4368395962dcc8be043a3887435cf4703b28842d01c7393580270f0"
+      ],
+      [
+        "canonical_publication/references/annotations/mitochondria.projected.tsv",
+        "f2e7432054043ac1318b63efbbd9639cea662e4ae2d21edcf175cc071457ea5b"
+      ],
+      [
+        "canonical_publication/references/masks/chloroplast_ir_copies.bed",
+        "b3f7ff958213d25aadbffa099d93d6077dff0f4d48b10e6b2a4dbe97f968d91c"
+      ],
+      [
+        "canonical_publication/references/masks/chloroplast_population_sites.bed",
+        "e31faa1b6e19fc11cedaedfe4cabfb88c3946971ebd7b460dd47e11ec7207917"
+      ],
+      [
+        "canonical_publication/references/masks/mitochondria_repeat_mask.bed",
+        "453fd2c2698fd7985fc4f272ca368aa1c0b20d9b6e39f412192bb80c9f2f728b"
+      ],
+      [
+        "canonical_publication/references/masks/publication-20260817/mitochondria_high_confidence_sites.bed",
+        "0368d3ed7e3073cba93505d63692985a437ca9313af8143bf7e97c19f6aa7be5"
+      ],
+      [
+        "canonical_publication/references/selected/chloroplast.fa",
+        "b5e97f512314b89b0753542f9632edc88bbe5e7a6325d354ae09bc1401f5d612"
+      ],
+      [
+        "canonical_publication/references/selected/mitochondria.fa",
+        "9148e0f823866064d193c542140b322538e55db9f01cfd278bdfc928be7934c7"
+      ],
+      [
+        "canonical_publication/results/haplotypes/publication-20260817/chloroplast.haplotypes.tsv",
+        "7f9160de4bc0e6477c06fcc6886be9da0c7a283520cd6dc264a6d33ec31fe185"
+      ],
+      [
+        "canonical_publication/results/haplotypes/publication-20260817/chloroplast.network_edges.tsv",
+        "e9c4c7e441decd671d51e9054f50d3dd50171cff1ebd0a3cec14069b6b371e57"
+      ],
+      [
+        "canonical_publication/results/haplotypes/publication-20260817/chloroplast.sample_haplotypes.tsv",
+        "2269ea7cf96dc8df78f0db1ad8a56857037bcb3c45f2496f2dad12ece45319fb"
+      ],
+      [
+        "canonical_publication/results/haplotypes/publication-20260817/mitochondria.haplotypes.tsv",
+        "f030f59b824a15ae3341f82a671da748f4f8fafeb7086d0dc263029cbbd3ceaa"
+      ],
+      [
+        "canonical_publication/results/haplotypes/publication-20260817/mitochondria.network_edges.tsv",
+        "9396332eb40d7e182ca965cc4b4c667befe44b9d32aaaae8d83ab83e1e992b30"
+      ],
+      [
+        "canonical_publication/results/haplotypes/publication-20260817/mitochondria.sample_haplotypes.tsv",
+        "4362fcd608f07de89b46c6527ab42fd7e17f1aee967b8f754e5f3a2f21548b2d"
+      ],
+      [
+        "canonical_publication/results/pca/publication-20260817/chloroplast.coordinates.tsv",
+        "ac7034e3b94b251ac8a7895801e47f08c1fc9c7eddb98eb692c1d2dfec90ee4e"
+      ],
+      [
+        "canonical_publication/results/pca/publication-20260817/chloroplast.variance.tsv",
+        "505a301dcb718c7f7b14bb86ef1ff3a5adf526cf37fe90f4755671e1087a5377"
+      ],
+      [
+        "canonical_publication/results/pca/publication-20260817/mitochondria.coordinates.tsv",
+        "bfbe12ce551308246d178601c290ef2b28a4256d258558b050271a75f7761eab"
+      ],
+      [
+        "canonical_publication/results/pca/publication-20260817/mitochondria.variance.tsv",
+        "03f05e259c0b335e721e6ff3f7b1f900eb0cb5e112c3814333e12daab681eb1f"
+      ],
+      [
+        "canonical_publication/results/popgen/publication-20260817/chloroplast.pairwise_hudson_fst.tsv",
+        "e94a7ee568861a22822a2921e9d14e54f6ea957abbfc4379cd94baf440187827"
+      ],
+      [
+        "canonical_publication/results/popgen/publication-20260817/chloroplast.population_summary.tsv",
+        "adaeaa7b7ea33c2b8f0929c049fefb46730d95ae983a2ef4227971e1b7bc225a"
+      ],
+      [
+        "canonical_publication/results/popgen/publication-20260817/mitochondria.pairwise_hudson_fst.tsv",
+        "3d60f01920068b3726017489e4b8e460ba3066a62bbf2e88966e395a40a66895"
+      ],
+      [
+        "canonical_publication/results/popgen/publication-20260817/mitochondria.population_summary.tsv",
+        "8bb742f272a8d3bcdd62323b9080e33d99c17125a29d2a02ec60d5e648998b89"
+      ],
+      [
+        "canonical_publication/results/qc/publication-20260817/read_preprocessing_summary.tsv",
+        "cf7524100b0f4493f85b76e81fca47646c56b47a3e2896ead9f821c5c4347ed5"
+      ],
+      [
+        "canonical_publication/results/qc/publication-20260817/sample_breadth.tsv",
+        "38c7ff17e91495524983c7b0a3a7dee130d60f3b7cc061b786456bfe112e4c4e"
+      ],
+      [
+        "canonical_publication/results/supplement/publication-20260817/admixture/chloroplast/k_summary.tsv",
+        "771d7caeba0f566db7edfa64404028a0a3dc94ceb3f44853f7ecbadcfafd3068"
+      ],
+      [
+        "canonical_publication/results/supplement/publication-20260817/admixture/chloroplast/replicate_cv.tsv",
+        "fe1638deff80d3de76c46a8256ba01d2fa7d9c4989c0fae1073a8411801c8472"
+      ],
+      [
+        "canonical_publication/results/supplement/publication-20260817/admixture/chloroplast/sample_order.tsv",
+        "439aac0dc1a04eb332e0a5c027849d82be3d8be958a26ec732476fe3dd866662"
+      ],
+      [
+        "canonical_publication/results/supplement/publication-20260817/admixture/chloroplast/selected_K12.best_cv.Q.tsv",
+        "f84c8cb47ce635621b304f0411e2334b4b05c460d020c2fc8a7f413fe329a94c"
+      ],
+      [
+        "canonical_publication/results/supplement/publication-20260817/admixture/chloroplast/selected_solution.tsv",
+        "f8add9ed1fe6d37983404d9905871c90fa27415d9897a0a5d808cbe2aacba215"
+      ],
+      [
+        "canonical_publication/results/supplement/publication-20260817/admixture/mitochondria/k_summary.tsv",
+        "47cacce006181ad96fb0aaca07403e0e2fc9b5bb6d4ebffcdf5f671e8ee007be"
+      ],
+      [
+        "canonical_publication/results/supplement/publication-20260817/admixture/mitochondria/replicate_cv.tsv",
+        "c4db20729678a3ef0d0cac8b89da60b07a1b7960803cc12590dd438771041656"
+      ],
+      [
+        "canonical_publication/results/supplement/publication-20260817/admixture/mitochondria/sample_order.tsv",
+        "6cad35edb787e9b12a5758c2c51aa2bc0b07d5843709b775dbc77fe068cfa34d"
+      ],
+      [
+        "canonical_publication/results/supplement/publication-20260817/admixture/mitochondria/selected_K12.best_cv.Q.tsv",
+        "99b0b1d603b6f0558d19d1342a7306f408c162035d6f7e9f4a2f18d65c639d31"
+      ],
+      [
+        "canonical_publication/results/supplement/publication-20260817/admixture/mitochondria/selected_solution.tsv",
+        "7762c3c57c050bdbfb7dcf564a8443401eb022998290dab2f42bb72d504b8e2e"
+      ],
+      [
+        "canonical_publication/results/trees/publication-20260817/chloroplast.primary.treefile",
+        "38d92ee9d4480189e9eb729329b359214a988c54af1ca4a1078953e6fe580b48"
+      ],
+      [
+        "canonical_publication/results/trees/publication-20260817/mitochondria.primary.treefile",
+        "5197a5e6dd5a8f94feb56ba07389be528439747563176d2be0d668d0ea436240"
+      ],
+      [
+        "provenance:executable_sha256:biopython",
+        "c73f9387a63c5d3f89bbf323b4792ffb376e005b57d4d39718f7c000b7a1276a"
+      ],
+      [
+        "provenance:executable_sha256:matplotlib",
+        "c73f9387a63c5d3f89bbf323b4792ffb376e005b57d4d39718f7c000b7a1276a"
+      ],
+      [
+        "provenance:executable_sha256:networkx",
+        "c73f9387a63c5d3f89bbf323b4792ffb376e005b57d4d39718f7c000b7a1276a"
+      ],
+      [
+        "provenance:executable_sha256:numpy",
+        "c73f9387a63c5d3f89bbf323b4792ffb376e005b57d4d39718f7c000b7a1276a"
+      ],
+      [
+        "provenance:git_commit",
+        "5b932a95a1fa998569397491bfdec1d79d5bb84d"
+      ],
+      [
+        "provenance:pipeline_code",
+        "b0bbb3040f96b813ca2ed52be2a3fbe03c0b038be3ae775ce20e58bf45c1b2bb"
+      ],
+      [
+        "provenance:tool:biopython",
+        "1.87"
+      ],
+      [
+        "provenance:tool:matplotlib",
+        "3.10.9"
+      ],
+      [
+        "provenance:tool:networkx",
+        "3.6.1"
+      ],
+      [
+        "provenance:tool:numpy",
+        "2.5.0"
+      ]
+    ],
+    "stage": "publication_figures",
+    "upstream": [
+      [
+        "admixture:chloroplast",
+        "bc0e445f1dbff460f54485bfe59ebb999a8e3d031b670879ca6499eb8411922a"
+      ],
+      [
+        "admixture:mitochondria",
+        "ade2bfab05e4d3c5e6bb090d07473326e245f3debbeb45765c0fc57984fcf133"
+      ],
+      [
+        "haplotypes:chloroplast",
+        "67052c3a30ea2eec224184d97d9bb3ec1018d467fb326aadf3aa5f4f9cd27032"
+      ],
+      [
+        "haplotypes:mitochondria",
+        "46c90e00eff75a8d1f8a785ec800f1e8aff1736fce88f337f831c6edffa3e265"
+      ],
+      [
+        "pca:chloroplast",
+        "8f0c4fcb5c34d72efa5e3d541c6b3f4beacd652a23d9e0afc1c64b9423bfa1e3"
+      ],
+      [
+        "pca:mitochondria",
+        "26b4d54ce1887a41ec09763043d7202c1fd0852599fa52037a284562654d75fa"
+      ],
+      [
+        "popgen:chloroplast",
+        "955ac4995c2e7dc31c463c228bd2c4adbcf1e41722af2fcdcc985afbce5398e3"
+      ],
+      [
+        "popgen:mitochondria",
+        "b4ab8dc063fa68dd7ef7c126367106631b6390f36f1817f23dc9c849d31e6eb7"
+      ],
+      [
+        "qc",
+        "d10291fa6e15e79288529b85510f4a73b89ec35638b3d239452cf85c0a05f6d2"
+      ],
+      [
+        "references",
+        "7daec3ef86b9dd303ea00af35428c110c4bbeb3a4547d12b237284d3124db6a6"
+      ],
+      [
+        "tree_reproducibility",
+        "2a4f5d392b8cae887ffd8b3613c5aa5cbf0d1fa7c1d539c60dc0bcb1e9678c69"
+      ],
+      [
+        "trees:chloroplast",
+        "e955690ec70251282905f1e5ac85099affc5159719cccdc6a547f60fd09b52eb"
+      ],
+      [
+        "trees:mitochondria",
+        "9315e8908f455b157c16db63de44e11bb7765925cfb9c3602147e3084fb8d06f"
+      ]
+    ]
+  },
+  "formats": [
+    "png",
+    "pdf",
+    "svg"
+  ],
+  "outputs": {
+    "canonical_publication/reports/figures/publication-20260817/chloroplast.haplotype_network.pdf": "6a0f1654b0c26feb199efc3c5f88d8bbc3ae3dcf13ed128031a071f41f4274f4",
+    "canonical_publication/reports/figures/publication-20260817/chloroplast.haplotype_network.png": "80efe952db4fa608685548378f208f8e5e382559baaef1da43f8006382b7fdaf",
+    "canonical_publication/reports/figures/publication-20260817/chloroplast.haplotype_network.svg": "b32f67d0fac22573fc44bc9220da62a673f69f4d86d32966fe0d35751fd1a010",
+    "canonical_publication/reports/figures/publication-20260817/chloroplast.pca.pdf": "594aa54d6f7577921cd14a7093b3d37f9aedb4b57abb354aff32565e490d1018",
+    "canonical_publication/reports/figures/publication-20260817/chloroplast.pca.png": "8a571c61a30e1f095e66491af658a5c117132a5edf56b74cf57d08cef91d11fd",
+    "canonical_publication/reports/figures/publication-20260817/chloroplast.pca.svg": "80f8941326cbacaf02f67c05e3209565d1e24e2afc9393c092d1cf5349d4c5bd",
+    "canonical_publication/reports/figures/publication-20260817/chloroplast.primary_unrooted_tree.pdf": "8c47aa0539f1233e1d3ffc3e0feb3e80e6188d97175e0188a33ff4e5ef178183",
+    "canonical_publication/reports/figures/publication-20260817/chloroplast.primary_unrooted_tree.png": "042c08a4fbb88bce712e98a80b22f4ae0941f13cb930fdfd8a94827fef3fbf79",
+    "canonical_publication/reports/figures/publication-20260817/chloroplast.primary_unrooted_tree.svg": "3fd1c56e5c5d80374f3e6d831832321b4bb136b58ec719ee1cd2cff7bc192e1c",
+    "canonical_publication/reports/figures/publication-20260817/chloroplast.signed_hudson_fst.pdf": "c11ced6909753e1072a0c082d133e7e057bf5228be0fa9c2fe39325a2bd22f07",
+    "canonical_publication/reports/figures/publication-20260817/chloroplast.signed_hudson_fst.png": "c2177283a06da37662cc6cb675aa8827f47002ba291245f67448567ff5b88d0f",
+    "canonical_publication/reports/figures/publication-20260817/chloroplast.signed_hudson_fst.svg": "6189d0f2c6dd0cefd69176a09f3fe300de615d54317e9d9f41f98d123d3d2988",
+    "canonical_publication/reports/figures/publication-20260817/chloroplast.supplementary_admixture.pdf": "8d12008a2d8666d11a982eebb6060cd74db3feb5e8fddf088a396bd3e71352c3",
+    "canonical_publication/reports/figures/publication-20260817/chloroplast.supplementary_admixture.png": "504ac3f41de599cdf0eeae98a1f714d9124fbeafcb30e871e01c61e182edb84a",
+    "canonical_publication/reports/figures/publication-20260817/chloroplast.supplementary_admixture.svg": "2bccbf66bc2161f396cb8f53e6340aa36f86ba966cf5280a1fe41c84c820040d",
+    "canonical_publication/reports/figures/publication-20260817/figure_manifest.tsv": "e54860db7c9ad7aa0d9bdcd8beec22fb565bfe6fd3f29fbb518125f7a7f8179b",
+    "canonical_publication/reports/figures/publication-20260817/mitochondria.haplotype_network.pdf": "b20ced2eeccd49cce415602dbcde124c87439dcd10202af9e909ae4e916087b9",
+    "canonical_publication/reports/figures/publication-20260817/mitochondria.haplotype_network.png": "945f5359e915835fc0be5517c08bea294c982b87785a934461dd7bc4ec7fcf48",
+    "canonical_publication/reports/figures/publication-20260817/mitochondria.haplotype_network.svg": "f76ecbc55a1745f69585b81c83e25456123ba2e06b9dffa6cb3c518349d8e02d",
+    "canonical_publication/reports/figures/publication-20260817/mitochondria.pca.pdf": "cf47958ab58ac6b8f933fe533d2d479272ddec7816728ec6aa6ed9af46f392ac",
+    "canonical_publication/reports/figures/publication-20260817/mitochondria.pca.png": "8b9436213614c7ccd840a94189abbc97a22912e672e81d3ec5686cf36d66bc21",
+    "canonical_publication/reports/figures/publication-20260817/mitochondria.pca.svg": "5ca2341f0460aad4f6f00772d5ac8f747d53dad05b233abf58c241a5179cab29",
+    "canonical_publication/reports/figures/publication-20260817/mitochondria.primary_unrooted_tree.pdf": "71d14400ebbf19338f6ef721e1abf21a1ac344bddc15f861df6f19088f24925b",
+    "canonical_publication/reports/figures/publication-20260817/mitochondria.primary_unrooted_tree.png": "4ad5cdfe8aad24fb76dba41e186e5f15abdd7f0c2d085c4b7e302016a469168d",
+    "canonical_publication/reports/figures/publication-20260817/mitochondria.primary_unrooted_tree.svg": "02c8a0198a9776d6abb432e15c3416c7773feaeda5c06620dd9b1484bea07ab4",
+    "canonical_publication/reports/figures/publication-20260817/mitochondria.signed_hudson_fst.pdf": "b6d5ea10bbae168f7eb12c0332558d054d2149cb7badf63a5ce0544172b646d5",
+    "canonical_publication/reports/figures/publication-20260817/mitochondria.signed_hudson_fst.png": "336f88b1ba1910fe28df1bdf20617bd3aad01536826ce47a525c71f2f6e3f8b4",
+    "canonical_publication/reports/figures/publication-20260817/mitochondria.signed_hudson_fst.svg": "9852935011fad9c2cde17738877f75d28165eeaf77a5b53ba8fe8f9258371797",
+    "canonical_publication/reports/figures/publication-20260817/mitochondria.supplementary_admixture.pdf": "fc757ca0f9835ab8cee3c8b4387146dff4647f44782f8ba78e07e7bef3420987",
+    "canonical_publication/reports/figures/publication-20260817/mitochondria.supplementary_admixture.png": "c6ece771a3b97e401b5475661b384565f65578d4b5f32ebe28713a787f2f8248",
+    "canonical_publication/reports/figures/publication-20260817/mitochondria.supplementary_admixture.svg": "606a5cd7cfc098bb20ffc5b187671d39359ebbe43988b32682be98ac86d64dcd",
+    "canonical_publication/reports/figures/publication-20260817/preprocessing_qc.pdf": "2bbd1bb4ff620597cfecbf3efe448249e788307f9ab86f8811a4d130343f727a",
+    "canonical_publication/reports/figures/publication-20260817/preprocessing_qc.png": "a669baf7dded9fdf76e4f8002c154d477df45e65ec76d223fe3562a191227526",
+    "canonical_publication/reports/figures/publication-20260817/preprocessing_qc.svg": "a8b373f83fc47e94eb8a586725b489b71d0e0d85600683b316c85db9d7648fe3",
+    "canonical_publication/reports/figures/publication-20260817/reference_callability.pdf": "87ea0a3c956928eecdde2bb1d3eabfb04aaad12e9ae7168b7e72be7a312e75f2",
+    "canonical_publication/reports/figures/publication-20260817/reference_callability.png": "efec4ad9b5b9b6a146dc92187b69e4cbd3350fad9b64b7dcc87c19bf17124da0",
+    "canonical_publication/reports/figures/publication-20260817/reference_callability.svg": "7ee72440d4ab1e5f27c19adfe292a516ef0587a084b35c8d7a22e7b09dd313e6"
+  },
+  "status": "complete"
+}

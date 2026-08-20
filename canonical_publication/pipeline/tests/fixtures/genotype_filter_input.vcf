@@ -1,0 +1,9 @@
+##fileformat=VCFv4.2
+##contig=<ID=cp,length=3>
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Depth">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype quality">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	good	bad
+cp	1	.	A	T	40	PASS	.	GT:DP:GQ	1:10:30	0:4:30
+cp	2	.	C	.	.	PASS	.	GT:DP:GQ	0:10:30	0:10:19
+cp	3	.	G	.	.	PASS	.	GT:DP:GQ	0:.:30	0:10:.

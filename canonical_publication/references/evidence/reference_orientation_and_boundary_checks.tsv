@@ -1,0 +1,3 @@
+organelle	dominant_external_hsp_orientation	dominant_hsp_identity_percent	dominant_hsp_aligned_bp	same_orientation_assigned_query_bp	reverse_complement_assigned_query_bp	same_orientation_fraction_of_covered_query	reverse_complement_fraction_of_covered_query	assembly_boundary_evidence
+chloroplast	reverse_complement	99.571	68245	81999	68184	0.54599389	0.45400611	terminal direct-repeat trim validated by raw self-BLAST; read-backed check pending QC
+mitochondria	same	97.499	7156	79606	93446	0.46001202	0.53998798	candidate retained intact; read-backed high-confidence boundary check pending QC

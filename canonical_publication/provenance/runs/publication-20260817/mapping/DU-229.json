@@ -1,0 +1,167 @@
+{
+  "bam_validation": {
+    "coordinate_sort_order": "coordinate",
+    "forbidden_flag_record_count": 0,
+    "indexed_references": [
+      "chloroplast",
+      "mitochondria"
+    ],
+    "mapq_passing_record_count": 4617203,
+    "read_group": {
+      "ID": "DU-229",
+      "PL": "ILLUMINA",
+      "SM": "DU-229"
+    },
+    "record_count": 4617203
+  },
+  "current_reproduction_commands": [
+    "fastp --in1 source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.241122/QB3.Dudleya.Results.250118/DU-229_S75_L008_R1_001.fastq.gz --in2 source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.241122/QB3.Dudleya.Results.250118/DU-229_S75_L008_R2_001.fastq.gz --qualified_quality_phred 20 --unqualified_percent_limit 40 --length_required 50 --detect_adapter_for_pe --stdout --json canonical_publication/results/qc/publication-20260817/fastp/DU-229.fastp.json --html canonical_publication/results/qc/publication-20260817/fastp/DU-229.fastp.html | bwa mem -p -t 8 -R '@RG\\tID:DU-229\\tSM:DU-229\\tPL:ILLUMINA' canonical_publication/references/selected/organelle_combined.fa - | samtools view -F 3844 -q 20 -u - | samtools sort -T canonical_publication/work/publication-20260817/mapping/sort_tmp/DU-229.name -n -@ 4 -u - | samtools fixmate -m - - | samtools sort -T canonical_publication/work/publication-20260817/mapping/sort_tmp/DU-229.coordinate -@ 4 -u - | samtools markdup -r -@ 4 - canonical_publication/work/publication-20260817/mapping/DU-229.organelle.bam && samtools index canonical_publication/work/publication-20260817/mapping/DU-229.organelle.bam"
+  ],
+  "executed_commands": [
+    "fastp --in1 source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.241122/QB3.Dudleya.Results.250118/DU-229_S75_L008_R1_001.fastq.gz --in2 source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.241122/QB3.Dudleya.Results.250118/DU-229_S75_L008_R2_001.fastq.gz --qualified_quality_phred 20 --length_required 50 --detect_adapter_for_pe --stdout --json canonical_publication/results/qc/publication-20260817/fastp/DU-229.fastp.json --html canonical_publication/results/qc/publication-20260817/fastp/DU-229.fastp.html | bwa mem -p -t 8 -R '@RG\\tID:DU-229\\tSM:DU-229\\tPL:ILLUMINA' canonical_publication/references/selected/organelle_combined.fa - | samtools view -F 3844 -q 20 -u - | samtools sort -n -@ 4 -u - | samtools fixmate -m - - | samtools sort -@ 4 -u - | samtools markdup -r -@ 4 - canonical_publication/work/publication-20260817/mapping/DU-229.organelle.bam && samtools index canonical_publication/work/publication-20260817/mapping/DU-229.organelle.bam"
+  ],
+  "fingerprint": {
+    "commands": [
+      "fastp --in1 source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.241122/QB3.Dudleya.Results.250118/DU-229_S75_L008_R1_001.fastq.gz --in2 source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.241122/QB3.Dudleya.Results.250118/DU-229_S75_L008_R2_001.fastq.gz --qualified_quality_phred 20 --length_required 50 --detect_adapter_for_pe --stdout --json canonical_publication/results/qc/publication-20260817/fastp/DU-229.fastp.json --html canonical_publication/results/qc/publication-20260817/fastp/DU-229.fastp.html | bwa mem -p -t 8 -R '@RG\\tID:DU-229\\tSM:DU-229\\tPL:ILLUMINA' canonical_publication/references/selected/organelle_combined.fa - | samtools view -F 3844 -q 20 -u - | samtools sort -n -@ 4 -u - | samtools fixmate -m - - | samtools sort -@ 4 -u - | samtools markdup -r -@ 4 - canonical_publication/work/publication-20260817/mapping/DU-229.organelle.bam && samtools index canonical_publication/work/publication-20260817/mapping/DU-229.organelle.bam"
+    ],
+    "digest": "423c8e8646305cde71ec49ecf3a013ecc66a39db6e748ebc1871a800a4d9a938",
+    "inputs": [
+      [
+        "canonical_publication/references/selected/organelle_combined.fa",
+        "84a53a58f60464ba18c0f0da0445201c9bbfc5d10a9216932f8bf4df8d4cf4f8"
+      ],
+      [
+        "configuration:mapping_policy",
+        "7a6fd24c03b3f00a1f200e6ba28037c7c57f011e6b33a7bdd292a2f0b10cc5f6"
+      ],
+      [
+        "metadata:mapping_row",
+        "f177dceb8b24b7fc62fd3a2a0d2641161df5c12df8ef8cb02c21feda498f98c0"
+      ],
+      [
+        "provenance:executable_sha256:bwa",
+        "2d6b83b4b8851bc09d4aabdfc0429b0ffc8383261252aaed5e00682a04ad0a42"
+      ],
+      [
+        "provenance:executable_sha256:fastp",
+        "f26c4ed6d972561dacf3d5d5666cb0b5275070d9d1610448bac21aa3007019b3"
+      ],
+      [
+        "provenance:executable_sha256:samtools",
+        "38ba6496e9f19cc8f1b63ad017a2d39e8088cf12f46864d33e027d111457a98b"
+      ],
+      [
+        "provenance:git_commit",
+        "5b932a95a1fa998569397491bfdec1d79d5bb84d"
+      ],
+      [
+        "provenance:pipeline_code_at_reconciliation",
+        "345d1dfeded97e4a1d668c9622e9d219b3312996eb196e2f89ed6e46b1f7149b"
+      ],
+      [
+        "provenance:reconciliation_git_commit",
+        "5b932a95a1fa998569397491bfdec1d79d5bb84d"
+      ],
+      [
+        "provenance:tool:bwa",
+        "Program: bwa (alignment via Burrows-Wheeler transformation) | Version: 0.7.19-r1273 | Contact: Heng Li <hli@ds.dfci.harvard.edu>"
+      ],
+      [
+        "provenance:tool:fastp",
+        "fastp 1.3.6"
+      ],
+      [
+        "provenance:tool:samtools",
+        "samtools 1.23.1 | Using htslib 1.23.1 | Copyright (C) 2025 Genome Research Ltd."
+      ],
+      [
+        "source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.241122/QB3.Dudleya.Results.250118/DU-229_S75_L008_R1_001.fastq.gz",
+        "5e1aab5fec6bbfeedd38686afbecf2afcfa5c1aac58b2a643a9e41243168bc55"
+      ],
+      [
+        "source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.241122/QB3.Dudleya.Results.250118/DU-229_S75_L008_R2_001.fastq.gz",
+        "5830bb3f6262e3f9bc91bfe5ebdcf3f831ef269ca44579e78904e205857f07b6"
+      ]
+    ],
+    "stage": "mapping:DU-229",
+    "upstream": [
+      [
+        "metadata",
+        "2d1daa1599e6be48bd1eb1f2df702f713fe6a0cffa398f9513146a5b162558c5"
+      ],
+      [
+        "references",
+        "7daec3ef86b9dd303ea00af35428c110c4bbeb3a4547d12b237284d3124db6a6"
+      ],
+      [
+        "source_validation",
+        "691b70fb163cbb1b99003e8feb1bf965aa1815d8708461635f64c3da7efab236"
+      ]
+    ]
+  },
+  "git_commit": "5b932a95a1fa998569397491bfdec1d79d5bb84d",
+  "mapping_policy": {
+    "mapping": {
+      "exclude_sam_flags": 3844,
+      "mark_duplicates": true,
+      "minimum_base_quality": 20,
+      "minimum_mapping_quality": 20,
+      "nuclear_decoy": false
+    },
+    "preprocessing": {
+      "detect_adapters_for_pe": true,
+      "maximum_unqualified_base_percent": 40,
+      "minimum_length": 50,
+      "qualified_quality_phred": 20
+    },
+    "threads_per_job": 8
+  },
+  "outputs": {
+    "canonical_publication/results/qc/publication-20260817/fastp/DU-229.fastp.html": "02f505ff4287ee12753f792850ded94ecf824099d8722446cd86633e8cce9f3a",
+    "canonical_publication/results/qc/publication-20260817/fastp/DU-229.fastp.json": "5dabbcdb6c3e330afa667d6e45c3afb74f95356702c7244933b9fb12f476ac3a",
+    "canonical_publication/work/publication-20260817/mapping/DU-229.organelle.bam": "da98a8fd5faf9eab54d15a03f0c1d7ca05ed4a278685ed836e648f3007998e7c",
+    "canonical_publication/work/publication-20260817/mapping/DU-229.organelle.bam.bai": "6de43d4773df7a82451480001cc221ec5de51d03eaf55a75deb429124f17846d"
+  },
+  "pre_reconciliation_fingerprint": {
+    "commands": [
+      "fastp --in1 source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.241122/QB3.Dudleya.Results.250118/DU-229_S75_L008_R1_001.fastq.gz --in2 source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.241122/QB3.Dudleya.Results.250118/DU-229_S75_L008_R2_001.fastq.gz --qualified_quality_phred 20 --length_required 50 --detect_adapter_for_pe --stdout --json canonical_publication/results/qc/publication-20260817/fastp/DU-229.fastp.json --html canonical_publication/results/qc/publication-20260817/fastp/DU-229.fastp.html | bwa mem -p -t 8 -R '@RG\\tID:DU-229\\tSM:DU-229\\tPL:ILLUMINA' canonical_publication/references/selected/organelle_combined.fa - | samtools view -F 3844 -q 20 -u - | samtools sort -n -@ 4 -u - | samtools fixmate -m - - | samtools sort -@ 4 -u - | samtools markdup -r -@ 4 - canonical_publication/work/publication-20260817/mapping/DU-229.organelle.bam && samtools index canonical_publication/work/publication-20260817/mapping/DU-229.organelle.bam"
+    ],
+    "digest": "356e7bb62b5148ff38066ea8f7a3fe6e160de3c7db77d42d4db4e55349fe3ebf",
+    "inputs": [
+      [
+        "canonical_publication/config/publication_config.toml",
+        "0bc68756ee1d3b5bf5a4f2ce035da64a3ec7a9accd2a8bb7b13d0f532b593b42"
+      ],
+      [
+        "canonical_publication/references/selected/organelle_combined.fa",
+        "84a53a58f60464ba18c0f0da0445201c9bbfc5d10a9216932f8bf4df8d4cf4f8"
+      ],
+      [
+        "source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.241122/QB3.Dudleya.Results.250118/DU-229_S75_L008_R1_001.fastq.gz",
+        "5e1aab5fec6bbfeedd38686afbecf2afcfa5c1aac58b2a643a9e41243168bc55"
+      ],
+      [
+        "source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.241122/QB3.Dudleya.Results.250118/DU-229_S75_L008_R2_001.fastq.gz",
+        "5830bb3f6262e3f9bc91bfe5ebdcf3f831ef269ca44579e78904e205857f07b6"
+      ]
+    ],
+    "stage": "mapping:DU-229",
+    "upstream": []
+  },
+  "provenance_rebind": {
+    "reason": "stage-scoped provenance refresh after all raw-read, reference, metadata, policy, tool, executable, command, BAM, BAI, and fastp validations passed",
+    "rebound_from_fingerprint": "101c67d1bbebab075ad3fdf0a739838357bb1b785be37cea6739efd5b2d415a3"
+  },
+  "reconciliation_git_commit": "5b932a95a1fa998569397491bfdec1d79d5bb84d",
+  "resolved_defaults": [
+    "fastp --unqualified_percent_limit=40 (pinned fastp 1.3.6 default)"
+  ],
+  "sample_id": "DU-229",
+  "schema_version": 2,
+  "status": "complete",
+  "tool_versions": {
+    "bwa": "Program: bwa (alignment via Burrows-Wheeler transformation) | Version: 0.7.19-r1273 | Contact: Heng Li <hli@ds.dfci.harvard.edu>",
+    "fastp": "fastp 1.3.6",
+    "samtools": "samtools 1.23.1 | Using htslib 1.23.1 | Copyright (C) 2025 Genome Research Ltd."
+  }
+}

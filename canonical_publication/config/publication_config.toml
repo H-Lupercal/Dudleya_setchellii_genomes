@@ -1,0 +1,93 @@
+schema_version = 1
+status = "canonical_publication"
+
+[execution]
+mapping_jobs = 2
+mapping_threads_per_job = 8
+admixture_jobs = 4
+admixture_threads_per_job = 2
+
+[references]
+chloroplast_candidate = "source_data/reference_candidates/Dudleya_hifiasm_purged_manual_chloroplast.fa"
+mitochondria_candidate = "source_data/reference_candidates/Dudleya_hifiasm_purged_manual_mitochondria.fa"
+chloroplast_external = "source_data/reference_candidates/external/NC_085682.1.fasta"
+mitochondria_external = "source_data/reference_candidates/external/PV256627.1.fasta"
+chloroplast_deduplicated_length = 150274
+chloroplast_terminal_duplicate_minimum_identity_percent = 99.0
+minimum_chloroplast_query_coverage = 0.98
+minimum_mitochondria_query_coverage = 0.50
+minimum_identity_percent = 90.0
+mitochondria_repeat_minimum_length = 100
+mitochondria_repeat_minimum_identity_percent = 95.0
+
+[paths]
+raw_reads = "source_data/raw_reads/genomicsDrive_data_dump"
+reference_candidates = "source_data/reference_candidates"
+sample_manifest = "canonical_publication/metadata/samples/samples.tsv"
+population_metadata = "canonical_publication/metadata/populations/populations.tsv"
+work = "canonical_publication/work"
+results = "canonical_publication/results"
+provenance = "canonical_publication/provenance"
+
+[preprocessing]
+qualified_quality_phred = 20
+maximum_unqualified_base_percent = 40
+minimum_length = 50
+detect_adapters_for_pe = true
+
+[mapping]
+minimum_mapping_quality = 20
+minimum_base_quality = 20
+exclude_sam_flags = 3844
+mark_duplicates = true
+nuclear_decoy = false
+
+[qc]
+breadth_depths = [1, 3, 5, 10]
+eligibility_depth = 5
+minimum_breadth = 0.80
+sample_sets = "organelle_specific"
+breadth_denominator = "organelle_unique_mappability_mask"
+mitochondria_high_confidence_minimum_sample_fraction = 0.80
+mitochondria_high_confidence_minimum_interval_length = 50
+
+[variants]
+ploidy = 1
+minimum_depth = 5
+minimum_genotype_quality = 20
+minimum_site_quality = 30
+maximum_missing_fraction = 0.20
+primary_minimum_minor_allele_count = 1
+ordination_minimum_minor_allele_count = 2
+maximum_per_file_pileup_depth = 250
+
+[population_genetics]
+fst_estimator = "hudson_ratio_of_sums"
+bootstrap_block_size = 1000
+bootstrap_replicates = 1000
+bootstrap_seed = 1729
+
+[phylogeny]
+model = "MFP"
+shalrt_replicates = 1000
+ultrafast_bootstrap_replicates = 1000
+bnni = true
+cp_seed = 271828
+mt_seed = 314159
+concatenated_seed = 161803
+threads = 8
+rooting = "unrooted"
+strong_conflict_minimum_sh_alrt = 80.0
+strong_conflict_minimum_ultrafast_bootstrap = 95.0
+
+[admixture]
+role = "supplementary"
+minimum_k = 1
+maximum_k = 12
+replicates = 10
+seed_base = 424200
+
+[concatenation]
+role = "supplementary"
+sample_set = "shared_intersection"
+partitioned = true

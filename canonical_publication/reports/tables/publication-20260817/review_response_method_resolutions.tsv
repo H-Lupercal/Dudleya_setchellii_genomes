@@ -1,0 +1,11 @@
+legacy_or_review_issue	canonical_resolution	evidence
+forced shared sample count	independent chloroplast and mitochondrial DP5 breadth eligibility	cp=276;mt=271;shared=271
+reference-filled uncertain sites and loss of fixed-alternate consensus alleles	uncertain genotypes are N; consensus accepts every high-confidence SNP site before segregating-site MAC filters	high-confidence, primary MAC>=1, and ordination MAC>=2 VCF layers
+SNP-only nucleotide-diversity denominator	all positions jointly callable within each population	population summaries plus independent scikit-allel cross-check
+clamped custom differentiation statistic	signed Hudson ratio-of-sums with 1 kb block bootstrap	pairwise numerator, denominator, callable sites, and interval columns
+10,000-bootstrap requirement	retired; fixed 1,000 SH-aLRT and 1,000 UFBoot with BNNI	primary organelle tree states and fixed-seed reproducibility table
+unsupported ABAB/ABMU rooting alternatives	retired; primary organelle trees remain unrooted without a defensible outgroup	tree states, taxon checks, and unrooted publication figures
+circular mitochondrial genome-map presentation	retired; the mitochondrial reference is drawn linearly because circularity is not established	boundary-depth diagnostics and canonical reference/callability map
+whole mitochondrial candidate treated as equivalent to callable sequence	self-repeats excluded, followed by an eligible-sample read-backed high-confidence mask	repeat support, annotation overlap, reference concordance, and mask tables
+concatenated partition contribution based on padded coordinate span	report coordinate span separately from callable, variable, and parsimony-informative contributions	concatenated_site_contribution.tsv
+primary ADMIXTURE interpretation	supplementary descriptive sensitivity analysis only	K=1-12, ten seeds per K, boundary flags, and limitations report

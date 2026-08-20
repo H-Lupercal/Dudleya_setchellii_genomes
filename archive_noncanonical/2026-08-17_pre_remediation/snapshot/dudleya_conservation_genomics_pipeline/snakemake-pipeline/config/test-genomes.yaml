@@ -1,0 +1,58 @@
+# /WAVE/projects2/whittalllab/dudleya/snakemake-pipeline/config/test-genomes.yaml
+# Note: changing the layout of this file might break the update_sample_config.py script
+ref_genome: "/WAVE/projects/whittalllab/dudleya/draft_genome/Dudleya_hifiasm_purged_host_genome.fasta"
+anc_genome: "/WAVE/projects/whittalllab/dudleya/ancestral_genome_Du-14/D_cymosa_consensus.fa.gz"
+
+data_parent_dir: "/WAVE/datasets/whittalllab/dudleya"
+output_name: "results-test-genomes"
+
+samples:
+  ABAB_MAD_LP_322_Du-593:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/ABAB_MAD_LP_322_Du-593_S172_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/ABAB_MAD_LP_322_Du-593_S172_L005_R2_001.fastq.gz"
+  ABMU_HOR_LP_308_Du-777:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/ABMU_HOR_LP_308_Du-777_S232_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/ABMU_HOR_LP_308_Du-777_S232_L005_R2_001.fastq.gz"
+  CY_SIE_LP_012_Du-14:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/CY_SIE_LP_012_Du-14_S4_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/CY_SIE_LP_012_Du-14_S4_L005_R2_001.fastq.gz"
+  CY_SIE_LP_013_Du-37:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/CY_SIE_LP_013_Du-37_S5_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/CY_SIE_LP_013_Du-37_S5_L005_R2_001.fastq.gz"
+  STI_LP_015_Du-59:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/STI_LP_015_Du-59_S6_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/STI_LP_015_Du-59_S6_L005_R2_001.fastq.gz"
+  DAN_LP_011_Du-78:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/DAN_LP_011_Du-78_S7_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/DAN_LP_011_Du-78_S7_L005_R2_002.fastq.gz"
+  DAN_LP_010_Du-79:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/DAN_LP_010_Du-79_S8_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/DAN_LP_010_Du-79_S8_L005_R2_001.fastq.gz"
+  DUD_LP_QB3-1_Du-4A:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/DUD_LP_QB3-1_Du-4A_S68_L008_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/DUD_LP_QB3-1_Du-4A_S68_L008_R2_001.fastq.gz"
+  QUIN_LP_QB3-2_Du-173:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/QUIN_LP_QB3-2_Du-173_S73_L008_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/QUIN_LP_QB3-2_Du-173_S73_L008_R2_001.fastq.gz"
+  BAI_LP_QB3-3_Du-229:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/BAI_LP_QB3-3_Du-229_S75_L008_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/BAI_LP_QB3-3_Du-229_S75_L008_R2_001.fastq.gz"
+  TULP_LP_QB3-4_Du-247:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/TULP_LP_QB3-4_Du-247_S70_L008_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/TULP_LP_QB3-4_Du-247_S70_L008_R2_001.fastq.gz"
+  TULP_LP_QB3-5_Du-254:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/TULP_LP_QB3-5_Du-254_S71_L008_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/TULP_LP_QB3-5_Du-254_S71_L008_R2_001.fastq.gz"
+  TIL_LP_QB3-6_Du-270:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/TIL_LP_QB3-6_Du-270_S72_L008_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/TIL_LP_QB3-6_Du-270_S72_L008_R2_001.fastq.gz"
+  DUD_LP_QB3-7_Du-297:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/DUD_LP_QB3-7_Du-297_S69_L008_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/DUD_LP_QB3-7_Du-297_S69_L008_R2_001.fastq.gz"
+  KIRN_LP_QB3-8_Du-443:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/KIRN_LP_QB3-8_Du-443_S74_L008_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/KIRN_LP_QB3-8_Du-443_S74_L008_R2_001.fastq.gz"
+  RIC_LP_198_Du-527:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/RIC_LP_198_Du-527_S151_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/RIC_LP_198_Du-527_S151_L005_R2_001.fastq.gz"
+# Added 16 samples above

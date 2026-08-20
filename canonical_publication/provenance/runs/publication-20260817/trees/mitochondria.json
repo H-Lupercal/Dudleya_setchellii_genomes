@@ -1,0 +1,58 @@
+{
+  "fingerprint": {
+    "commands": [
+      "iqtree3 -s canonical_publication/results/alignments/publication-20260817/mitochondria.callable_alignment.fa -pre canonical_publication/results/trees/publication-20260817/mitochondria.primary -st DNA -m MFP -alrt 1000 -B 1000 -bnni -seed 314159 -nt 8"
+    ],
+    "digest": "9315e8908f455b157c16db63de44e11bb7765925cfb9c3602147e3084fb8d06f",
+    "inputs": [
+      [
+        "canonical_publication/config/publication_config.toml",
+        "aea3f0ddf0b95e79566bce9ba3ad3635fbc5c3c97172fa83677b0f7529838378"
+      ],
+      [
+        "canonical_publication/results/alignments/publication-20260817/mitochondria.callable_alignment.fa",
+        "50b9ee3d72aa5cf56e2b41f137bcdaf791d08b8dcd18695a073631a63d77e90e"
+      ],
+      [
+        "provenance:executable_sha256:biopython",
+        "c73f9387a63c5d3f89bbf323b4792ffb376e005b57d4d39718f7c000b7a1276a"
+      ],
+      [
+        "provenance:executable_sha256:iqtree3",
+        "a90852ab4541778813f998aca2a38e4f333f8ee6310bf7a93c43f8e71c936498"
+      ],
+      [
+        "provenance:git_commit",
+        "5b932a95a1fa998569397491bfdec1d79d5bb84d"
+      ],
+      [
+        "provenance:pipeline_code",
+        "ebed34e92a56118863477d329988b47dbea0c9b6c4195115097c8552e7385963"
+      ],
+      [
+        "provenance:tool:biopython",
+        "1.87"
+      ],
+      [
+        "provenance:tool:iqtree3",
+        "IQ-TREE version 3.1.2 for Linux x86 64-bit built May 17 2026 | Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren | Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,"
+      ]
+    ],
+    "stage": "tree:mitochondria",
+    "upstream": [
+      [
+        "consensus",
+        "65ca22d36ad8c195a3e262eaff243063319d649ed810f2fc1016cb3da1c99195"
+      ]
+    ]
+  },
+  "organelle": "mitochondria",
+  "outputs": {
+    "canonical_publication/results/trees/publication-20260817/mitochondria.primary.contree": "0ac8a16fa07ec890e6d7d670f5ee3e6e4a0c50eac750a45672ff91c13e427385",
+    "canonical_publication/results/trees/publication-20260817/mitochondria.primary.iqtree": "9288a1db62831f5f6af70c8b0a824994f5d0e92ecdbd9308817b6a5566c55d25",
+    "canonical_publication/results/trees/publication-20260817/mitochondria.primary.treefile": "5197a5e6dd5a8f94feb56ba07389be528439747563176d2be0d668d0ea436240"
+  },
+  "rooting": "unrooted",
+  "sample_count": 271,
+  "status": "complete"
+}

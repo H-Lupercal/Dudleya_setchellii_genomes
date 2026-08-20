@@ -1,0 +1,3 @@
+index_type	status	files	note
+samtools_faidx	CREATED_OR_UPDATED	dudleya_organelle_reference_verification/references/dudleya_cp_mt.fa.fai	Created with samtools faidx.
+bwa	CREATED_OR_UPDATED	dudleya_organelle_reference_verification/references/dudleya_cp_mt.fa.amb;dudleya_organelle_reference_verification/references/dudleya_cp_mt.fa.ann;dudleya_organelle_reference_verification/references/dudleya_cp_mt.fa.bwt;dudleya_organelle_reference_verification/references/dudleya_cp_mt.fa.pac;dudleya_organelle_reference_verification/references/dudleya_cp_mt.fa.sa	Created with bwa index.

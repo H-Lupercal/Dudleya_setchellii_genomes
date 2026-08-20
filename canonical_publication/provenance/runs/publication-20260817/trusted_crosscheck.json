@@ -1,0 +1,36 @@
+{
+  "comparison_count": 4830,
+  "failures": [],
+  "fingerprint": "9dc711f4bc65f22808f680f74acfbe951147e94a737f84ac35eebdd0195c5db2",
+  "fingerprint_payload": {
+    "command": "independent callable-site pi and Hudson ratio-of-sums FST cross-check",
+    "git_commit": "5b932a95a1fa998569397491bfdec1d79d5bb84d",
+    "implementation": "scikit-allel independent pi and Hudson FST",
+    "inputs": {
+      "canonical_publication/metadata/qc/publication-20260817/chloroplast_samples.tsv": "613831e85e35d5f7b5acf8b2c45cb4b5e382c3e53dd88be2dc8e091a7ffb389b",
+      "canonical_publication/metadata/qc/publication-20260817/mitochondria_samples.tsv": "f10dfd88e7df1ee4e33f1b79bec1ec58fa030d4b9bc25488fcd0f8067b5e82e3",
+      "canonical_publication/provenance/runs/publication-20260817/popgen/chloroplast.json": "cf2b823f93c6f5e7023d339cd6c4aba9c6b9e9c657bb8d6491221f0891728cd0",
+      "canonical_publication/provenance/runs/publication-20260817/popgen/mitochondria.json": "13ec160630f14fa59d57232e2aad9c42c6df9e67c5da805a549a1c64c491737e",
+      "canonical_publication/results/alignments/publication-20260817/chloroplast.callable_alignment.fa": "73f143fb7da0035a7d7903948d48dba4fbe7d9966fc015eda7fb5d8cfb9e5801",
+      "canonical_publication/results/alignments/publication-20260817/mitochondria.callable_alignment.fa": "50b9ee3d72aa5cf56e2b41f137bcdaf791d08b8dcd18695a073631a63d77e90e",
+      "canonical_publication/results/popgen/publication-20260817/chloroplast.pairwise_hudson_fst.tsv": "e94a7ee568861a22822a2921e9d14e54f6ea957abbfc4379cd94baf440187827",
+      "canonical_publication/results/popgen/publication-20260817/chloroplast.population_summary.tsv": "adaeaa7b7ea33c2b8f0929c049fefb46730d95ae983a2ef4227971e1b7bc225a",
+      "canonical_publication/results/popgen/publication-20260817/mitochondria.pairwise_hudson_fst.tsv": "3d60f01920068b3726017489e4b8e460ba3066a62bbf2e88966e395a40a66895",
+      "canonical_publication/results/popgen/publication-20260817/mitochondria.population_summary.tsv": "8bb742f272a8d3bcdd62323b9080e33d99c17125a29d2a02ec60d5e648998b89"
+    },
+    "numpy_version": "2.5.2",
+    "python_executable_sha256": "48128da6770ad81eec6da58234ad4fe9ebbc92bfa52e28856ca03cba9659e7d8",
+    "python_version": "3.13.12",
+    "scikit_allel_version": "1.3.13",
+    "script_sha256": "0bbde6b1d00cd33a25b3c4c137bb5b4b12c4aab1e13eb346db8674fe4cfa5cb2",
+    "upstream_fingerprints": {
+      "chloroplast": "955ac4995c2e7dc31c463c228bd2c4adbcf1e41722af2fcdcc985afbce5398e3",
+      "mitochondria": "b4ab8dc063fa68dd7ef7c126367106631b6390f36f1817f23dc9c849d31e6eb7"
+    }
+  },
+  "implementation": "scikit-allel",
+  "output": "canonical_publication/results/popgen/publication-20260817/trusted_scikit_allel_crosscheck.tsv",
+  "output_sha256": "1b272b2c50ae11b462c68307131562c465668b67bc7f16348463df4f230a2035",
+  "status": "PASS",
+  "version": "1.3.13"
+}

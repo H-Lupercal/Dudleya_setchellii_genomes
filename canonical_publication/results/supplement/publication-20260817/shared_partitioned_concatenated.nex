@@ -1,0 +1,5 @@
+#nexus
+begin sets;
+  charset chloroplast = 1-150274;
+  charset mitochondria = 150275-393633;
+end;

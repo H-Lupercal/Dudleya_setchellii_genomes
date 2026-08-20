@@ -1,0 +1,62 @@
+{
+  "checksum_validated_files": 560,
+  "declared_missing_provider_entries": [
+    "ABAB_MAD_LP_225_Du-592_S272_L005_R1_001.fastq.gz",
+    "QUI1_LP_256_Du-655_S264_L005_R2_001.fastq.gz",
+    "Undetermined_S0_L005_R1_001.fastq.gz",
+    "Undetermined_S0_L005_R2_001.fastq.gz"
+  ],
+  "failures": [],
+  "fingerprint": {
+    "commands": [
+      "resolve each provider MD5 basename uniquely beneath its deposit and compare the FASTQ content digest"
+    ],
+    "digest": "691b70fb163cbb1b99003e8feb1bf965aa1815d8708461635f64c3da7efab236",
+    "inputs": [
+      [
+        "canonical_publication/provenance/manifests/source_inputs.tsv",
+        "937188150e1f7c77d26374e8d020411f3465390476802d9dff6afc5f7ee4566d"
+      ],
+      [
+        "provenance:executable_sha256:python",
+        "c73f9387a63c5d3f89bbf323b4792ffb376e005b57d4d39718f7c000b7a1276a"
+      ],
+      [
+        "provenance:git_commit",
+        "5b932a95a1fa998569397491bfdec1d79d5bb84d"
+      ],
+      [
+        "provenance:pipeline_code",
+        "0f1ae36dc0ebbae6260f856a00c7698f6fd4beb3d70a01bed3c457f039e77d4c"
+      ],
+      [
+        "provenance:tool:python",
+        "Python 3.14.6"
+      ],
+      [
+        "source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.241122/QB3.Dudleya.Results.250118/md5sum.txt",
+        "ddc8ca2210c20bc05c112a0ef9397b5f3f27b069a5c132791b163df41eaa7950"
+      ],
+      [
+        "source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.250811/QB3.250916.Results5genomes/md5sum.txt",
+        "4f8050e27f8b3866f0b88d2a030b0f78c0c18ad3fe34b862d5eebeea568b51f8"
+      ],
+      [
+        "source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.251217/QB3.Results.260109/md5sum.txt",
+        "c92f9a6b0517130899fc26c9b4212a6a0edcb64b143bf88b07cb0b667d29dc98"
+      ]
+    ],
+    "stage": "immutable_source_validation",
+    "upstream": []
+  },
+  "outputs": {
+    "canonical_publication/provenance/manifests/publication-20260817.provider_md5_validation.tsv": "3a60b377d7e21d771b5f7b95220319c5ae4350a7e5a9571d7f8cd13f674be88e"
+  },
+  "provider_manifest_entries": 565,
+  "source_inventory_files": 577,
+  "source_inventory_sha256_pass": 577,
+  "status": "PASS_WITH_DECLARED_MISSING_AND_PROVIDER_METADATA_WARNING",
+  "unverifiable_provider_manifest_self_references": [
+    "source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.250811/QB3.250916.Results5genomes/md5sum.txt"
+  ]
+}

@@ -1,0 +1,3 @@
+organelle	fasta_accession	genbank_accession	fasta_length	genbank_length	sequence_identical
+chloroplast	NC_085682.1	NC_085682.1	150780	150780	yes
+mitochondria	PV256627.1	PV256627.1	242059	242059	yes

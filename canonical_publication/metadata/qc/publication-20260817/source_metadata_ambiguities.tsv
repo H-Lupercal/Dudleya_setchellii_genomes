@@ -1,0 +1,5 @@
+popcode	issue	preserved_value
+CY_BOU	blank source species inferred from explicit CY_ code convention	D. cymosa
+CY_CAS	blank source species inferred from explicit CY_ code convention	D. cymosa
+DUSE	population code declared only in source column header	source-declared unprefixed DUSE group
+TUL2	conflicting source population labels	"""Dud Tulare Hill-2"" | TH Clone site 2"

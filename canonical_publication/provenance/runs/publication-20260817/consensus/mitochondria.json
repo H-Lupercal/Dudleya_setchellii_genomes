@@ -1,0 +1,66 @@
+{
+  "accepted_high_confidence_variant_site_count": 157,
+  "analysis_mask_bases": 43182,
+  "fingerprint": {
+    "commands": [
+      "bcftools query per sample canonical_publication/work/publication-20260817/variants/mitochondria.genotype_masked.all_sites.bcf; derive invariant haploid GQ from homozygous PLs in canonical_publication/work/publication-20260817/variants/mitochondria.mpileup_likelihoods.bcf; accept high-confidence variants from canonical_publication/results/variants/publication-20260817/mitochondria.high_confidence_variant_sites.vcf.gz"
+    ],
+    "digest": "65ca22d36ad8c195a3e262eaff243063319d649ed810f2fc1016cb3da1c99195",
+    "inputs": [
+      [
+        "canonical_publication/config/publication_config.toml",
+        "aea3f0ddf0b95e79566bce9ba3ad3635fbc5c3c97172fa83677b0f7529838378"
+      ],
+      [
+        "canonical_publication/metadata/qc/publication-20260817/mitochondria_samples.tsv",
+        "f10dfd88e7df1ee4e33f1b79bec1ec58fa030d4b9bc25488fcd0f8067b5e82e3"
+      ],
+      [
+        "canonical_publication/references/masks/publication-20260817/mitochondria_high_confidence_sites.bed",
+        "0368d3ed7e3073cba93505d63692985a437ca9313af8143bf7e97c19f6aa7be5"
+      ],
+      [
+        "canonical_publication/results/variants/publication-20260817/mitochondria.high_confidence_variant_sites.vcf.gz",
+        "018a4f4f0c2107a0d43a2f38374623a98f792b6f518722cf45f7be433efe2ef3"
+      ],
+      [
+        "canonical_publication/work/publication-20260817/variants/mitochondria.genotype_masked.all_sites.bcf",
+        "05b57bd78f4893797cca726cee84871e29415ff0d69650cc5a1a75f09736bf46"
+      ],
+      [
+        "canonical_publication/work/publication-20260817/variants/mitochondria.mpileup_likelihoods.bcf",
+        "09ec617f5b2ad78b4091560b97f1787b22c2e75fdcbfc1c74ea4aa215e91e191"
+      ],
+      [
+        "provenance:executable_sha256:bcftools",
+        "228dbc164dc0ad835ab3b767ec05b5977004a989949151a19d8b20b11b37695c"
+      ],
+      [
+        "provenance:git_commit",
+        "5b932a95a1fa998569397491bfdec1d79d5bb84d"
+      ],
+      [
+        "provenance:pipeline_code",
+        "25c3c19292ea01880ac3dee0cbbd2a2be57f90c34bd0a2708b0f88c1eb13d1ef"
+      ],
+      [
+        "provenance:tool:bcftools",
+        "bcftools 1.24 | Using htslib 1.23.1 | Copyright (C) 2026 Genome Research Ltd."
+      ]
+    ],
+    "stage": "consensus:mitochondria",
+    "upstream": [
+      [
+        "variants",
+        "1959d3f75ad3f032d8ed05ef6cd5f275bcf1c87130c9ec39d401ce69f7cb22be"
+      ]
+    ]
+  },
+  "organelle": "mitochondria",
+  "outputs": {
+    "canonical_publication/results/alignments/publication-20260817/mitochondria.callable_alignment.fa": "50b9ee3d72aa5cf56e2b41f137bcdaf791d08b8dcd18695a073631a63d77e90e",
+    "canonical_publication/results/alignments/publication-20260817/mitochondria.callable_summary.tsv": "bb137c038f74a3397670958bda8530ef3211e208e26431f71d28a2f214591305"
+  },
+  "sample_count": 271,
+  "status": "complete"
+}

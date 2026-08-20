@@ -1,0 +1,7 @@
+comparison	query_covered_bp	subject_covered_bp	query_coverage	subject_coverage	weighted_identity_percent	hit_count
+chloroplast_raw_self	176964	176964	1.0	1.0	100.0	7
+chloroplast_raw_vs_NC_085682.1	176873	150534	0.9994857711172894	0.9983684838838042	99.26206769829199	10
+chloroplast_selected_vs_NC_085682.1	150183	150534	0.9993944394905306	0.9983684838838042	99.27572111357478	9
+mitochondria_selected_vs_PV256627.1	173052	102417	0.7110975965548839	0.42310758947198823	97.47175427617134	113
+chloroplast_selected_self	150274	150274	1.0	1.0	100.0	5
+mitochondria_selected_self	243359	243359	1.0	1.0	100.0	21

@@ -1,0 +1,70 @@
+{
+  "fingerprint": {
+    "commands": [
+      "bcftools mpileup -f canonical_publication/references/selected/organelle_combined.fa -b canonical_publication/work/publication-20260817/variants/chloroplast.bam.list -R canonical_publication/references/masks/chloroplast_population_sites.bed -d 250 -q 20 -Q 20 -a FORMAT/DP,FORMAT/AD -Ob -o canonical_publication/work/publication-20260817/variants/chloroplast.mpileup_likelihoods.bcf && bcftools call --ploidy 1 -m -a FORMAT/GQ -Ob -o canonical_publication/work/publication-20260817/variants/chloroplast.all_sites.bcf.uncorrected canonical_publication/work/publication-20260817/variants/chloroplast.mpileup_likelihoods.bcf && bcftools view -h canonical_publication/work/publication-20260817/variants/chloroplast.all_sites.bcf.uncorrected | sed 's/##INFO=<ID=MQ,Number=1,Type=Integer/##INFO=<ID=MQ,Number=1,Type=Float/' > canonical_publication/work/publication-20260817/variants/chloroplast.all_sites.bcf.header && bcftools reheader -h canonical_publication/work/publication-20260817/variants/chloroplast.all_sites.bcf.header -o canonical_publication/work/publication-20260817/variants/chloroplast.all_sites.bcf canonical_publication/work/publication-20260817/variants/chloroplast.all_sites.bcf.uncorrected && bcftools view -h canonical_publication/work/publication-20260817/variants/chloroplast.all_sites.bcf | grep -Fq '##INFO=<ID=MQ,Number=1,Type=Float' && rm -f canonical_publication/work/publication-20260817/variants/chloroplast.all_sites.bcf.uncorrected canonical_publication/work/publication-20260817/variants/chloroplast.all_sites.bcf.header",
+      "bcftools +setGT canonical_publication/work/publication-20260817/variants/chloroplast.all_sites.bcf -Ob -o canonical_publication/work/publication-20260817/variants/chloroplast.genotype_masked.all_sites.bcf -- -t q -n . -i 'FMT/DP=\".\" | FMT/GQ=\".\" | FMT/DP<5 | FMT/GQ<20'",
+      "bcftools norm -f canonical_publication/references/selected/organelle_combined.fa -Ou canonical_publication/work/publication-20260817/variants/chloroplast.genotype_masked.all_sites.bcf | bcftools view -m2 -M2 -v snps -Ou | bcftools +fill-tags -Ou -- -t AC,AN,F_MISSING | bcftools view -i 'QUAL>=30 && F_MISSING<=0.2' -Oz -o canonical_publication/results/variants/publication-20260817/chloroplast.high_confidence_variant_sites.vcf.gz",
+      "bcftools index -f canonical_publication/results/variants/publication-20260817/chloroplast.high_confidence_variant_sites.vcf.gz",
+      "bcftools view -i 'AC>=1 && AC<=AN-1' -Oz -o canonical_publication/results/variants/publication-20260817/chloroplast.primary.vcf.gz canonical_publication/results/variants/publication-20260817/chloroplast.high_confidence_variant_sites.vcf.gz",
+      "bcftools index -f canonical_publication/results/variants/publication-20260817/chloroplast.primary.vcf.gz",
+      "bcftools view -i 'AC>=2 && AC<=AN-2' -Oz -o canonical_publication/results/variants/publication-20260817/chloroplast.mac2_ordination.vcf.gz canonical_publication/results/variants/publication-20260817/chloroplast.primary.vcf.gz",
+      "bcftools index -f canonical_publication/results/variants/publication-20260817/chloroplast.mac2_ordination.vcf.gz"
+    ],
+    "digest": "0887aaad9365e7f7dbc0978292bb21340e2fb6ff8cd7ad7abe2f53d3a40bd2ad",
+    "inputs": [
+      [
+        "canonical_publication/config/publication_config.toml",
+        "aea3f0ddf0b95e79566bce9ba3ad3635fbc5c3c97172fa83677b0f7529838378"
+      ],
+      [
+        "canonical_publication/references/masks/chloroplast_population_sites.bed",
+        "e31faa1b6e19fc11cedaedfe4cabfb88c3946971ebd7b460dd47e11ec7207917"
+      ],
+      [
+        "canonical_publication/references/selected/organelle_combined.fa",
+        "84a53a58f60464ba18c0f0da0445201c9bbfc5d10a9216932f8bf4df8d4cf4f8"
+      ],
+      [
+        "canonical_publication/work/publication-20260817/variants/chloroplast.bam.list",
+        "f35503374594f713ece9d1c198d51a36e64a7a314b35f73e1f53047fe33a0c94"
+      ],
+      [
+        "provenance:executable_sha256:bcftools",
+        "228dbc164dc0ad835ab3b767ec05b5977004a989949151a19d8b20b11b37695c"
+      ],
+      [
+        "provenance:git_commit",
+        "5b932a95a1fa998569397491bfdec1d79d5bb84d"
+      ],
+      [
+        "provenance:pipeline_code",
+        "c516f99f0f2759939a08ffc391685fbbf6e7748939607a8bcbc8ef662cdfb3f4"
+      ],
+      [
+        "provenance:tool:bcftools",
+        "bcftools 1.24 | Using htslib 1.23.1 | Copyright (C) 2026 Genome Research Ltd."
+      ]
+    ],
+    "stage": "variants:chloroplast",
+    "upstream": [
+      [
+        "qc",
+        "d10291fa6e15e79288529b85510f4a73b89ec35638b3d239452cf85c0a05f6d2"
+      ]
+    ]
+  },
+  "organelle": "chloroplast",
+  "outputs": {
+    "canonical_publication/results/variants/publication-20260817/chloroplast.high_confidence_variant_sites.vcf.gz": "072f9203b833a2a11e6d12bec6bd1f31bf18484dc5f8fabd1b1977363805a526",
+    "canonical_publication/results/variants/publication-20260817/chloroplast.high_confidence_variant_sites.vcf.gz.csi": "3617c90a420c19e8d5969723cb634baf773012f640fff65a35c532102b0812da",
+    "canonical_publication/results/variants/publication-20260817/chloroplast.mac2_ordination.vcf.gz": "41f3562747aa5ab49ccefa939b28d35f7c0143aee37f7621e708757023c86e2d",
+    "canonical_publication/results/variants/publication-20260817/chloroplast.mac2_ordination.vcf.gz.csi": "32e5a943ae413b7ec5768bb669289458a454b0c948bbc69769e0eab616c91004",
+    "canonical_publication/results/variants/publication-20260817/chloroplast.primary.vcf.gz": "f47069ed6a2d529d6e87605d03a1c967cf161a57c77a6a646fb0fadf1ff343bb",
+    "canonical_publication/results/variants/publication-20260817/chloroplast.primary.vcf.gz.csi": "fc0107f9d52f5080f9ffecd98f7bac4002ed50eb50d606854859d2b8ec25394f",
+    "canonical_publication/work/publication-20260817/variants/chloroplast.all_sites.bcf": "d691c9950dfdd831d1c51adc4e4038fe2f3f9ed8489889694fc78fc02367130a",
+    "canonical_publication/work/publication-20260817/variants/chloroplast.genotype_masked.all_sites.bcf": "1e4f65dd35712cf6f396265e5b7133cdd9dc87c108a776ee7b665f65734ad0e6",
+    "canonical_publication/work/publication-20260817/variants/chloroplast.mpileup_likelihoods.bcf": "2c75a2d0e7e2c757cebbeafe8efff3ec42dea6b0519c47b5d08168501cdbd4d9"
+  },
+  "sample_count": 276,
+  "status": "complete"
+}

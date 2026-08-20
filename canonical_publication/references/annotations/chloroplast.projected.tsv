@@ -1,0 +1,243 @@
+feature_id	feature_type	gene	product	start_1based	end_1based	strand	query_coverage	identity_percent	external_accession	status
+feature_00026	gene	atpA		100	1623	-	1.000000	99.541000	NC_085682.1	draft_projection
+feature_00027	CDS	atpA	ATP synthase CF1 alpha subunit	100	1623	-	1.000000	99.541000	NC_085682.1	draft_projection
+feature_00028	gene	atpF		1682	2968	-	1.000000	99.301000	NC_085682.1	draft_projection
+feature_00030	gene	atpH		3358	3603	-	1.000000	99.593000	NC_085682.1	draft_projection
+feature_00031	CDS	atpH	ATP synthase CF0 subunit III	3358	3603	-	1.000000	99.593000	NC_085682.1	draft_projection
+feature_00032	gene	atpI		4279	5013	-	1.000000	99.592000	NC_085682.1	draft_projection
+feature_00033	CDS	atpI	ATP synthase CF0 subunit IV	4279	5013	-	1.000000	99.592000	NC_085682.1	draft_projection
+feature_00034	gene	rps2		5204	5914	-	1.000000	99.297000	NC_085682.1	draft_projection
+feature_00035	CDS	rps2	ribosomal protein S2	5204	5914	-	1.000000	99.297000	NC_085682.1	draft_projection
+feature_00036	gene	rpoC2		6224	10315	-	1.000000	99.096000	NC_085682.1	draft_projection
+feature_00037	CDS	rpoC2	RNA polymerase beta'' subunit	6224	10315	-	1.000000	99.096000	NC_085682.1	draft_projection
+feature_00038	gene	rpoC1		10476	13265	-	1.000000	99.215000	NC_085682.1	draft_projection
+feature_00040	gene	rpoB		13302	16513	-	1.000000	99.782000	NC_085682.1	draft_projection
+feature_00041	CDS	rpoB	RNA polymerase beta subunit	13302	16513	-	1.000000	99.782000	NC_085682.1	draft_projection
+feature_00042	gene	trnC-GCA		17637	17715	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00043	tRNA	trnC-GCA	tRNA-Cys	17637	17715	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00044	gene	petN		18557	18646	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00045	CDS	petN	cytochrome b6/f complex subunit VIII	18557	18646	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00046	gene	psbM		19448	19552	-	1.000000	99.048000	NC_085682.1	draft_projection
+feature_00047	CDS	psbM	photosystem II protein M	19448	19552	-	1.000000	99.048000	NC_085682.1	draft_projection
+feature_00048	gene	trnD-GUC		20497	20570	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00049	tRNA	trnD-GUC	tRNA-Asp	20497	20570	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00050	gene	trnY-GUA		20872	20955	-	1.000000	98.810000	NC_085682.1	draft_projection
+feature_00051	tRNA	trnY-GUA	tRNA-Tyr	20872	20955	-	1.000000	98.810000	NC_085682.1	draft_projection
+feature_00052	gene	trnE-UUC		21015	21087	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00053	tRNA	trnE-UUC	tRNA-Glu	21015	21087	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00054	gene	trnT-GGU		21470	21541	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00055	tRNA	trnT-GGU	tRNA-Thr	21470	21541	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00056	gene	psbD		22220	23281	+	1.000000	99.906000	NC_085682.1	draft_projection
+feature_00057	CDS	psbD	photosystem II protein D2	22220	23281	+	1.000000	99.906000	NC_085682.1	draft_projection
+feature_00058	gene	psbC		23229	24650	+	1.000000	99.789000	NC_085682.1	draft_projection
+feature_00059	CDS	psbC	photosystem II CP43 chlorophyll apoprotein	23229	24650	+	1.000000	99.789000	NC_085682.1	draft_projection
+feature_00060	gene	trnS-UGA		24836	24928	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00061	tRNA	trnS-UGA	tRNA-Ser	24836	24928	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00062	gene	lhbA		25233	25421	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00063	CDS	lhbA	LhbA	25233	25421	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00064	gene	trnG-UCC		26077	26147	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00065	tRNA	trnG-UCC	tRNA-Gly	26077	26147	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00066	gene	trnfM-CAU		26285	26358	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00067	tRNA	trnfM-CAU	tRNA-fMet	26285	26358	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00068	gene	rps14		26521	26823	-	1.000000	99.340000	NC_085682.1	draft_projection
+feature_00069	CDS	rps14	ribosomal protein S14	26521	26823	-	1.000000	99.340000	NC_085682.1	draft_projection
+feature_00070	gene	psaB		26938	29142	-	1.000000	99.683000	NC_085682.1	draft_projection
+feature_00071	CDS	psaB	photosystem I P700 apoprotein A2	26938	29142	-	1.000000	99.683000	NC_085682.1	draft_projection
+feature_00072	gene	psaA		29168	31420	-	1.000000	99.867000	NC_085682.1	draft_projection
+feature_00073	CDS	psaA	photosystem I P700 apoprotein A1	29168	31420	-	1.000000	99.867000	NC_085682.1	draft_projection
+feature_00074	gene	ycf3		32057	34016	-	1.002552	99.185000	NC_085682.1	draft_projection
+feature_00076	gene	trnS-GGA		34270	34356	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00077	tRNA	trnS-GGA	tRNA-Ser	34270	34356	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00078	gene	rps4		34565	35170	-	1.000000	99.835000	NC_085682.1	draft_projection
+feature_00079	CDS	rps4	ribosomal protein S4	34565	35170	-	1.000000	99.835000	NC_085682.1	draft_projection
+feature_00080	gene	trnT-UGU		35499	35571	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00081	tRNA	trnT-UGU	tRNA-Thr	35499	35571	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00082	gene	trnL-UAA		35988	36578	+	1.000000	98.826000	NC_085682.1	draft_projection
+feature_00084	gene	trnF-GAA		36824	36896	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00085	tRNA	trnF-GAA	tRNA-Phe	36824	36896	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00086	gene	ndhJ		37500	37976	-	1.000000	99.790000	NC_085682.1	draft_projection
+feature_00087	CDS	ndhJ	NADH-plastoquinone oxidoreductase subunit J	37500	37976	-	1.000000	99.790000	NC_085682.1	draft_projection
+feature_00088	gene	ndhK		38084	38773	-	1.000000	99.710000	NC_085682.1	draft_projection
+feature_00089	gene	ndhC		38818	39180	-	1.000000	99.725000	NC_085682.1	draft_projection
+feature_00090	CDS	ndhC	NADH-plastoquinone oxidoreductase subunit 3	38818	39180	-	1.000000	99.725000	NC_085682.1	draft_projection
+feature_00091	gene	trnV-UAC		40076	40721	-	1.001550	99.381000	NC_085682.1	draft_projection
+feature_00093	gene	trnM-CAU		40895	40967	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00094	tRNA	trnM-CAU	tRNA-Met	40895	40967	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00095	gene	atpE		41137	41538	-	1.000000	99.751000	NC_085682.1	draft_projection
+feature_00096	CDS	atpE	ATP synthase CF1 epsilon subunit	41137	41538	-	1.000000	99.751000	NC_085682.1	draft_projection
+feature_00097	gene	atpB		41535	43031	-	1.000000	99.399000	NC_085682.1	draft_projection
+feature_00098	CDS	atpB	ATP synthase CF1 beta subunit	41535	43031	-	1.000000	99.399000	NC_085682.1	draft_projection
+feature_00099	gene	rbcL		43725	45152	+	1.000000	99.650000	NC_085682.1	draft_projection
+feature_00100	CDS	rbcL	ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit	43725	45152	+	1.000000	99.650000	NC_085682.1	draft_projection
+feature_00101	gene	accD		45789	47229	+	1.000000	99.308000	NC_085682.1	draft_projection
+feature_00102	CDS	accD	acetyl-CoA carboxylase carboxyltransferase beta subunit	45789	47229	+	1.000000	99.308000	NC_085682.1	draft_projection
+feature_00103	gene	psaI		47800	47910	+	1.000000	99.099000	NC_085682.1	draft_projection
+feature_00104	CDS	psaI	photosystem I subunit VIII	47800	47910	+	1.000000	99.099000	NC_085682.1	draft_projection
+feature_00105	gene	ycf4		48149	48703	+	1.000000	99.640000	NC_085682.1	draft_projection
+feature_00106	CDS	ycf4	photosystem I assembly protein Ycf4	48149	48703	+	1.000000	99.640000	NC_085682.1	draft_projection
+feature_00107	gene	cemA		49300	49989	+	1.000000	99.420000	NC_085682.1	draft_projection
+feature_00108	CDS	cemA	chloroplast envelope membrane protein	49300	49989	+	1.000000	99.420000	NC_085682.1	draft_projection
+feature_00109	gene	petA		50215	51177	+	1.000000	99.688000	NC_085682.1	draft_projection
+feature_00110	CDS	petA	cytochrome f	50215	51177	+	1.000000	99.688000	NC_085682.1	draft_projection
+feature_00111	gene	psbJ		51906	52028	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00112	CDS	psbJ	photosystem II protein J	51906	52028	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00113	gene	psbL		52163	52361	-	1.005051	99.497000	NC_085682.1	draft_projection
+feature_00114	CDS	psbL	photosystem II protein L	52163	52361	-	1.005051	99.497000	NC_085682.1	draft_projection
+feature_00115	gene	psbF		52303	52422	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00116	CDS	psbF	photosystem II cytochrome b559 beta subunit	52303	52422	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00117	gene	psbE		52432	52683	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00118	CDS	psbE	photosystem II cytochrome b559 alpha subunit	52432	52683	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00119	gene	petL		53748	53843	+	1.000000	98.958000	NC_085682.1	draft_projection
+feature_00120	CDS	petL	cytochrome b6/f complex subunit VI	53748	53843	+	1.000000	98.958000	NC_085682.1	draft_projection
+feature_00121	gene	petG		54015	54128	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00122	CDS	petG	cytochrome b6/f complex subunit V	54015	54128	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00123	gene	trnW-CCA		54255	54328	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00124	tRNA	trnW-CCA	tRNA-Trp	54255	54328	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00125	gene	trnP-UGG		54482	54556	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00126	tRNA	trnP-UGG	tRNA-Pro	54482	54556	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00127	gene	psaJ		54813	54947	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00128	CDS	psaJ	photosystem I subunit IX	54813	54947	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00129	gene	rpl33		55389	55589	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00130	CDS	rpl33	ribosomal protein L33	55389	55589	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00131	gene	rps18		55732	56036	+	0.996732	98.689000	NC_085682.1	draft_projection
+feature_00132	CDS	rps18	ribosomal protein S18	55732	56036	+	0.996732	98.689000	NC_085682.1	draft_projection
+feature_00133	gene	rpl20		56504	56585	-	1.012346	98.780000	NC_085682.1	draft_projection
+feature_00134	CDS	rpl20	ribosomal protein L20	56504	56585	-	1.012346	98.780000	NC_085682.1	draft_projection
+feature_00137	gene	clpP		57673	59692	-	1.000000	99.455000	NC_085682.1	draft_projection
+feature_00139	gene	psbB		60133	61659	+	1.000000	99.869000	NC_085682.1	draft_projection
+feature_00140	CDS	psbB	photosystem II CP47 chlorophyll apoprotein	60133	61659	+	1.000000	99.869000	NC_085682.1	draft_projection
+feature_00141	gene	psbT		61839	61940	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00142	CDS	psbT	photosystem II protein T	61839	61940	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00143	gene	psbN		62001	62132	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00144	CDS	psbN	photosystem II protein N	62001	62132	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00145	gene	psbH		62235	62456	+	1.000000	99.099000	NC_085682.1	draft_projection
+feature_00146	CDS	psbH	photosystem II phosphoprotein	62235	62456	+	1.000000	99.099000	NC_085682.1	draft_projection
+feature_00147	gene	petB		62574	64042	+	1.000000	98.785000	NC_085682.1	draft_projection
+feature_00148	CDS	petB	cytochrome b6	63394	64042	+	0.992355	99.692000	NC_085682.1	draft_projection
+feature_00149	gene	petD		64242	65453	+	1.001653	99.670000	NC_085682.1	draft_projection
+feature_00150	CDS	petD	cytochrome b6/f complex subunit IV	64980	65453	+	0.981366	99.789000	NC_085682.1	draft_projection
+feature_00151	gene	rpoA		65641	66642	-	1.000000	99.800000	NC_085682.1	draft_projection
+feature_00152	CDS	rpoA	RNA polymerase alpha subunit	65641	66642	-	1.000000	99.800000	NC_085682.1	draft_projection
+feature_00153	gene	rps11		66708	67124	-	1.000000	99.520000	NC_085682.1	draft_projection
+feature_00154	CDS	rps11	ribosomal protein S11	66708	67124	-	1.000000	99.520000	NC_085682.1	draft_projection
+feature_00155	gene	rpl36		67241	67354	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00156	CDS	rpl36	ribosomal protein L36	67241	67354	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00157	gene	infA		67475	67717	-	1.000000	99.588000	NC_085682.1	draft_projection
+feature_00158	CDS	infA	translational initiation factor 1	67475	67717	-	1.000000	99.588000	NC_085682.1	draft_projection
+feature_00159	gene	rps8		67839	68243	-	1.000000	99.753000	NC_085682.1	draft_projection
+feature_00160	CDS	rps8	ribosomal protein S8	67839	68243	-	1.000000	99.753000	NC_085682.1	draft_projection
+feature_00161	gene	rpl14		68394	68762	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00162	CDS	rpl14	ribosomal protein L14	68394	68762	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00164	CDS	rpl16	ribosomal protein L16	68897	69295	-	0.977941	99.749000	NC_085682.1	draft_projection
+feature_00163	gene	rpl16		68897	70316	-	1.000705	99.437000	NC_085682.1	draft_projection
+feature_00165	gene	rps3		70468	71124	-	1.000000	99.391000	NC_085682.1	draft_projection
+feature_00166	CDS	rps3	ribosomal protein S3	70468	71124	-	1.000000	99.391000	NC_085682.1	draft_projection
+feature_00167	gene	rpl22		71242	71622	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00168	CDS	rpl22	ribosomal protein L22	71242	71622	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00169	gene	rps19		71665	71943	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00170	CDS	rps19	ribosomal protein S19	71665	71943	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00266	gene	rps19		71834	71943	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00172	gene	rpl2		71998	73488	-	1.000000	99.933000	NC_085682.1	draft_projection
+feature_00264	gene	rpl2		71998	73488	-	1.000000	99.933000	NC_085682.1	draft_projection
+feature_00174	gene	rpl23		73512	73793	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00175	CDS	rpl23	ribosomal protein L23	73512	73793	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00262	gene	rpl23		73512	73793	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00263	CDS	rpl23	ribosomal protein L23	73512	73793	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00176	gene	trnI-CAU		73959	74032	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00177	tRNA	trnI-CAU	tRNA-Ile	73959	74032	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00260	gene	trnI-CAU		73959	74032	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00261	tRNA	trnI-CAU	tRNA-Ile	73959	74032	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00180	gene	ycf15		81035	81471	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00257	gene	ycf15		81035	81471	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00181	gene	trnL-CAA		81883	81961	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00182	tRNA	trnL-CAA	tRNA-Leu	81883	81961	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00255	gene	trnL-CAA		81883	81961	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00256	tRNA	trnL-CAA	tRNA-Leu	81883	81961	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00183	gene	ndhB		82521	84731	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00253	gene	ndhB		82521	84731	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00185	gene	rps7		85052	85519	-	1.000000	99.786000	NC_085682.1	draft_projection
+feature_00186	CDS	rps7	ribosomal protein S7	85052	85519	-	1.000000	99.786000	NC_085682.1	draft_projection
+feature_00251	gene	rps7		85052	85519	-	1.000000	99.786000	NC_085682.1	draft_projection
+feature_00252	CDS	rps7	ribosomal protein S7	85052	85519	-	1.000000	99.786000	NC_085682.1	draft_projection
+feature_00002	gene	rps12		85573	86366	-	0.874449	100.000000	NC_085682.1	draft_projection
+feature_00135	gene	rps12		85573	86366	-	0.874449	100.000000	NC_085682.1	draft_projection
+feature_00187	gene	trnV-GAC		87612	87683	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00188	tRNA	trnV-GAC	tRNA-Val	87612	87683	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00249	gene	trnV-GAC		87612	87683	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00250	tRNA	trnV-GAC	tRNA-Val	87612	87683	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00189	gene	rrn16		87911	89400	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00190	rRNA	rrn16	16S ribosomal RNA	87911	89400	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00247	gene	rrn16		87912	89401	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00248	rRNA	rrn16	16S ribosomal RNA	87912	89401	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00191	gene	trnI-GAU		89698	90712	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00245	gene	trnI-GAU		89698	90712	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00193	gene	trnA-UGC		90781	91687	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00243	gene	trnA-UGC		90781	91687	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00195	gene	rrn23		91840	94647	+	0.999644	100.000000	NC_085682.1	draft_projection
+feature_00196	rRNA	rrn23	23S ribosomal RNA	91840	94647	+	0.999644	100.000000	NC_085682.1	draft_projection
+feature_00241	gene	rrn23		91840	94647	+	0.999644	100.000000	NC_085682.1	draft_projection
+feature_00242	rRNA	rrn23	23S ribosomal RNA	91840	94647	+	0.999644	100.000000	NC_085682.1	draft_projection
+feature_00197	gene	rrn4.5		94747	94849	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00198	rRNA	rrn4.5	4.5S ribosomal RNA	94747	94849	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00239	gene	rrn4.5		94747	94849	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00240	rRNA	rrn4.5	4.5S ribosomal RNA	94747	94849	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00199	gene	rrn5		95069	95189	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00200	rRNA	rrn5	5S ribosomal RNA	95069	95189	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00237	gene	rrn5		95069	95189	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00238	rRNA	rrn5	5S ribosomal RNA	95069	95189	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00201	gene	trnR-ACG		95421	95494	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00202	tRNA	trnR-ACG	tRNA-Arg	95421	95494	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00235	gene	trnR-ACG		95421	95494	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00236	tRNA	trnR-ACG	tRNA-Arg	95421	95494	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00203	gene	trnN-GUU		96087	96159	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00204	tRNA	trnN-GUU	tRNA-Asn	96087	96159	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00233	gene	trnN-GUU		96087	96159	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00234	tRNA	trnN-GUU	tRNA-Asn	96087	96159	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00231	gene	ycf1		96515	96730	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00232	CDS	ycf1	hypothetical chloroplast RF19	96515	96730	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00228	gene	rps15		101850	102128	+	1.000000	99.283000	NC_085682.1	draft_projection
+feature_00229	CDS	rps15	ribosomal protein S15	101850	102128	+	1.000000	99.283000	NC_085682.1	draft_projection
+feature_00226	gene	ndhH		102205	103401	+	1.000000	99.916000	NC_085682.1	draft_projection
+feature_00227	CDS	ndhH	NADH-plastoquinone oxidoreductase subunit 7	102205	103401	+	1.000000	99.916000	NC_085682.1	draft_projection
+feature_00224	gene	ndhA		103403	105483	+	1.000480	99.089000	NC_085682.1	draft_projection
+feature_00222	gene	ndhI		105561	106064	+	1.000000	99.405000	NC_085682.1	draft_projection
+feature_00223	CDS	ndhI	NADH-plastoquinone oxidoreductase subunit I	105561	106064	+	1.000000	99.405000	NC_085682.1	draft_projection
+feature_00220	gene	ndhG		106309	106839	+	1.000000	99.435000	NC_085682.1	draft_projection
+feature_00221	CDS	ndhG	NADH-plastoquinone oxidoreductase subunit 6	106309	106839	+	1.000000	99.435000	NC_085682.1	draft_projection
+feature_00218	gene	ndhE		107015	107320	+	1.000000	99.020000	NC_085682.1	draft_projection
+feature_00219	CDS	ndhE	NADH-plastoquinone oxidoreductase subunit 4L	107015	107320	+	1.000000	99.020000	NC_085682.1	draft_projection
+feature_00216	gene	psaC		107625	107870	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00217	CDS	psaC	photosystem I subunit VII	107625	107870	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00214	gene	ndhD		107998	109502	+	1.000000	99.336000	NC_085682.1	draft_projection
+feature_00215	CDS	ndhD	NADH-plastoquinone oxidoreductase subunit 4	107998	109502	+	1.000000	99.336000	NC_085682.1	draft_projection
+feature_00212	gene	ccsA		109758	110715	-	1.000000	99.688000	NC_085682.1	draft_projection
+feature_00213	CDS	ccsA	cytochrome c heme attachment protein	109758	110715	-	1.000000	99.688000	NC_085682.1	draft_projection
+feature_00210	gene	trnL-UAG		110787	110866	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00211	tRNA	trnL-UAG	tRNA-Leu	110787	110866	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00208	gene	rpl32		111332	111490	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00209	CDS	rpl32	ribosomal protein L32	111332	111490	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00206	gene	ndhF		112099	114301	+	1.000000	99.048000	NC_085682.1	draft_projection
+feature_00207	CDS	ndhF	NADH-plastoquinone oxidoreductase subunit 5	112099	114301	+	1.000000	99.048000	NC_085682.1	draft_projection
+feature_00205	gene	ycf1		114224	115364	-	1.000000	99.476000	NC_085682.1	draft_projection
+feature_00178	gene	ycf2		130955	137725	-	1.001331	99.734000	NC_085682.1	draft_projection
+feature_00179	CDS	ycf2	hypothetical chloroplast RF21	130955	137725	-	1.001331	99.734000	NC_085682.1	draft_projection
+feature_00258	gene	ycf2		130955	137725	-	1.001331	99.734000	NC_085682.1	draft_projection
+feature_00259	CDS	ycf2	hypothetical chloroplast RF21	130955	137725	-	1.001331	99.734000	NC_085682.1	draft_projection
+feature_00004	gene	trnH-GUG		140018	140090	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00005	tRNA	trnH-GUG	tRNA-His	140018	140090	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00006	gene	psbA		140337	141398	-	1.000000	99.906000	NC_085682.1	draft_projection
+feature_00007	CDS	psbA	photosystem II protein D1	140337	141398	-	1.000000	99.906000	NC_085682.1	draft_projection
+feature_00008	gene	trnK-UUU		141639	144127	-	1.000000	98.517000	NC_085682.1	draft_projection
+feature_00010	gene	matK		141909	143411	-	1.000000	98.603000	NC_085682.1	draft_projection
+feature_00011	CDS	matK	maturase K	141909	143411	-	1.000000	98.603000	NC_085682.1	draft_projection
+feature_00013	CDS	rps16	ribosomal protein S16	144790	145023	-	0.866667	98.291000	NC_085682.1	draft_projection
+feature_00012	gene	rps16		144790	145845	-	1.006660	98.393000	NC_085682.1	draft_projection
+feature_00014	gene	trnQ-UUG		147337	147408	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00015	tRNA	trnQ-UUG	tRNA-Gln	147337	147408	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00016	gene	psbK		147703	147888	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00017	CDS	psbK	photosystem II protein K	147703	147888	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00018	gene	psbI		148281	148391	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00019	CDS	psbI	photosystem II protein I	148281	148391	+	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00020	gene	trnS-GCU		148560	148647	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00021	tRNA	trnS-GCU	tRNA-Ser	148560	148647	-	1.000000	100.000000	NC_085682.1	draft_projection
+feature_00022	gene	trnG-GCC		149287	150025	+	1.001355	98.647000	NC_085682.1	draft_projection

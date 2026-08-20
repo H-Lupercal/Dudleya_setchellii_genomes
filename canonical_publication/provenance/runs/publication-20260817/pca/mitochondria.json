@@ -1,0 +1,65 @@
+{
+  "fingerprint": {
+    "commands": [
+      "mean imputation; marker standardization; sklearn PCA"
+    ],
+    "digest": "26b4d54ce1887a41ec09763043d7202c1fd0852599fa52037a284562654d75fa",
+    "inputs": [
+      [
+        "canonical_publication/metadata/qc/publication-20260817/mitochondria_samples.tsv",
+        "f10dfd88e7df1ee4e33f1b79bec1ec58fa030d4b9bc25488fcd0f8067b5e82e3"
+      ],
+      [
+        "canonical_publication/results/variants/publication-20260817/mitochondria.mac2_ordination.vcf.gz",
+        "c42ca2992e31992888c4ae26e8883af461d15ecdf4a0bf7971457f5b6f1e4f25"
+      ],
+      [
+        "provenance:executable_sha256:bcftools",
+        "228dbc164dc0ad835ab3b767ec05b5977004a989949151a19d8b20b11b37695c"
+      ],
+      [
+        "provenance:executable_sha256:numpy",
+        "c73f9387a63c5d3f89bbf323b4792ffb376e005b57d4d39718f7c000b7a1276a"
+      ],
+      [
+        "provenance:executable_sha256:scikit-learn",
+        "c73f9387a63c5d3f89bbf323b4792ffb376e005b57d4d39718f7c000b7a1276a"
+      ],
+      [
+        "provenance:git_commit",
+        "5b932a95a1fa998569397491bfdec1d79d5bb84d"
+      ],
+      [
+        "provenance:pipeline_code",
+        "68fc535fc1dbfadd826c0301754aba9a4f48a223b537ef5a2e64a86d89a1c6ad"
+      ],
+      [
+        "provenance:tool:bcftools",
+        "bcftools 1.24 | Using htslib 1.23.1 | Copyright (C) 2026 Genome Research Ltd."
+      ],
+      [
+        "provenance:tool:numpy",
+        "2.5.0"
+      ],
+      [
+        "provenance:tool:scikit-learn",
+        "1.9.0"
+      ]
+    ],
+    "stage": "pca:mitochondria",
+    "upstream": [
+      [
+        "variants",
+        "1959d3f75ad3f032d8ed05ef6cd5f275bcf1c87130c9ec39d401ce69f7cb22be"
+      ]
+    ]
+  },
+  "marker_count": 122,
+  "organelle": "mitochondria",
+  "outputs": {
+    "canonical_publication/results/pca/publication-20260817/mitochondria.coordinates.tsv": "bfbe12ce551308246d178601c290ef2b28a4256d258558b050271a75f7761eab",
+    "canonical_publication/results/pca/publication-20260817/mitochondria.variance.tsv": "03f05e259c0b335e721e6ff3f7b1f900eb0cb5e112c3814333e12daab681eb1f"
+  },
+  "sample_count": 271,
+  "status": "complete"
+}

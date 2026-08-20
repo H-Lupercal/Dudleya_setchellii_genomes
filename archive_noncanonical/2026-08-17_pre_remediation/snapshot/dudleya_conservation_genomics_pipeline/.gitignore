@@ -1,0 +1,27 @@
+# Data files #
+###################
+*.gz*
+*.fastq*
+*.bam
+*.bam.bai
+*.saf.idx
+
+# Draft and Ancestral Genomes #
+################
+draft_genome/
+ancestral_genome_Du-14/
+
+# Pipeline logs, metadata, and results #
+################
+*.log
+*.out
+*.err
+*.snakemake*
+*.tsv
+results/
+old-pipeline-testing/
+
+# Misc files #
+################
+*.pac
+*.DS_Store

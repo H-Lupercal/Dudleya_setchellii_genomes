@@ -1,0 +1,167 @@
+{
+  "bam_validation": {
+    "coordinate_sort_order": "coordinate",
+    "forbidden_flag_record_count": 0,
+    "indexed_references": [
+      "chloroplast",
+      "mitochondria"
+    ],
+    "mapq_passing_record_count": 391043,
+    "read_group": {
+      "ID": "QUI2_LP_340_Du-641",
+      "PL": "ILLUMINA",
+      "SM": "QUI2_LP_340_Du-641"
+    },
+    "record_count": 391043
+  },
+  "current_reproduction_commands": [
+    "fastp --in1 source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.251217/QB3.Results.260109/QUI2/QUI2_LP_340_Du-641_S211_L005_R1_001.fastq.gz --in2 source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.251217/QB3.Results.260109/QUI2/QUI2_LP_340_Du-641_S211_L005_R2_001.fastq.gz --qualified_quality_phred 20 --unqualified_percent_limit 40 --length_required 50 --detect_adapter_for_pe --stdout --json canonical_publication/results/qc/publication-20260817/fastp/QUI2_LP_340_Du-641.fastp.json --html canonical_publication/results/qc/publication-20260817/fastp/QUI2_LP_340_Du-641.fastp.html | bwa mem -p -t 8 -R '@RG\\tID:QUI2_LP_340_Du-641\\tSM:QUI2_LP_340_Du-641\\tPL:ILLUMINA' canonical_publication/references/selected/organelle_combined.fa - | samtools view -F 3844 -q 20 -u - | samtools sort -T canonical_publication/work/publication-20260817/mapping/sort_tmp/QUI2_LP_340_Du-641.name -n -@ 4 -u - | samtools fixmate -m - - | samtools sort -T canonical_publication/work/publication-20260817/mapping/sort_tmp/QUI2_LP_340_Du-641.coordinate -@ 4 -u - | samtools markdup -r -@ 4 - canonical_publication/work/publication-20260817/mapping/QUI2_LP_340_Du-641.organelle.bam && samtools index canonical_publication/work/publication-20260817/mapping/QUI2_LP_340_Du-641.organelle.bam"
+  ],
+  "executed_commands": [
+    "fastp --in1 source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.251217/QB3.Results.260109/QUI2/QUI2_LP_340_Du-641_S211_L005_R1_001.fastq.gz --in2 source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.251217/QB3.Results.260109/QUI2/QUI2_LP_340_Du-641_S211_L005_R2_001.fastq.gz --qualified_quality_phred 20 --length_required 50 --detect_adapter_for_pe --stdout --json canonical_publication/results/qc/publication-20260817/fastp/QUI2_LP_340_Du-641.fastp.json --html canonical_publication/results/qc/publication-20260817/fastp/QUI2_LP_340_Du-641.fastp.html | bwa mem -p -t 8 -R '@RG\\tID:QUI2_LP_340_Du-641\\tSM:QUI2_LP_340_Du-641\\tPL:ILLUMINA' canonical_publication/references/selected/organelle_combined.fa - | samtools view -F 3844 -q 20 -u - | samtools sort -n -@ 4 -u - | samtools fixmate -m - - | samtools sort -@ 4 -u - | samtools markdup -r -@ 4 - canonical_publication/work/publication-20260817/mapping/QUI2_LP_340_Du-641.organelle.bam && samtools index canonical_publication/work/publication-20260817/mapping/QUI2_LP_340_Du-641.organelle.bam"
+  ],
+  "fingerprint": {
+    "commands": [
+      "fastp --in1 source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.251217/QB3.Results.260109/QUI2/QUI2_LP_340_Du-641_S211_L005_R1_001.fastq.gz --in2 source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.251217/QB3.Results.260109/QUI2/QUI2_LP_340_Du-641_S211_L005_R2_001.fastq.gz --qualified_quality_phred 20 --length_required 50 --detect_adapter_for_pe --stdout --json canonical_publication/results/qc/publication-20260817/fastp/QUI2_LP_340_Du-641.fastp.json --html canonical_publication/results/qc/publication-20260817/fastp/QUI2_LP_340_Du-641.fastp.html | bwa mem -p -t 8 -R '@RG\\tID:QUI2_LP_340_Du-641\\tSM:QUI2_LP_340_Du-641\\tPL:ILLUMINA' canonical_publication/references/selected/organelle_combined.fa - | samtools view -F 3844 -q 20 -u - | samtools sort -n -@ 4 -u - | samtools fixmate -m - - | samtools sort -@ 4 -u - | samtools markdup -r -@ 4 - canonical_publication/work/publication-20260817/mapping/QUI2_LP_340_Du-641.organelle.bam && samtools index canonical_publication/work/publication-20260817/mapping/QUI2_LP_340_Du-641.organelle.bam"
+    ],
+    "digest": "3d0d0938236ebdfff8054352a2d625b5754666d78a0b85e3d9ef4ae45340817d",
+    "inputs": [
+      [
+        "canonical_publication/references/selected/organelle_combined.fa",
+        "84a53a58f60464ba18c0f0da0445201c9bbfc5d10a9216932f8bf4df8d4cf4f8"
+      ],
+      [
+        "configuration:mapping_policy",
+        "7a6fd24c03b3f00a1f200e6ba28037c7c57f011e6b33a7bdd292a2f0b10cc5f6"
+      ],
+      [
+        "metadata:mapping_row",
+        "388ad490d2a8f6883125eb357d404fd34a174582de49a44756e72286585862d0"
+      ],
+      [
+        "provenance:executable_sha256:bwa",
+        "2d6b83b4b8851bc09d4aabdfc0429b0ffc8383261252aaed5e00682a04ad0a42"
+      ],
+      [
+        "provenance:executable_sha256:fastp",
+        "f26c4ed6d972561dacf3d5d5666cb0b5275070d9d1610448bac21aa3007019b3"
+      ],
+      [
+        "provenance:executable_sha256:samtools",
+        "38ba6496e9f19cc8f1b63ad017a2d39e8088cf12f46864d33e027d111457a98b"
+      ],
+      [
+        "provenance:git_commit",
+        "5b932a95a1fa998569397491bfdec1d79d5bb84d"
+      ],
+      [
+        "provenance:pipeline_code_at_reconciliation",
+        "345d1dfeded97e4a1d668c9622e9d219b3312996eb196e2f89ed6e46b1f7149b"
+      ],
+      [
+        "provenance:reconciliation_git_commit",
+        "5b932a95a1fa998569397491bfdec1d79d5bb84d"
+      ],
+      [
+        "provenance:tool:bwa",
+        "Program: bwa (alignment via Burrows-Wheeler transformation) | Version: 0.7.19-r1273 | Contact: Heng Li <hli@ds.dfci.harvard.edu>"
+      ],
+      [
+        "provenance:tool:fastp",
+        "fastp 1.3.6"
+      ],
+      [
+        "provenance:tool:samtools",
+        "samtools 1.23.1 | Using htslib 1.23.1 | Copyright (C) 2025 Genome Research Ltd."
+      ],
+      [
+        "source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.251217/QB3.Results.260109/QUI2/QUI2_LP_340_Du-641_S211_L005_R1_001.fastq.gz",
+        "f716795f506f47ad0cdbc088c0f8b694db3a4130bf419fb7e2e8a6134b64d40c"
+      ],
+      [
+        "source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.251217/QB3.Results.260109/QUI2/QUI2_LP_340_Du-641_S211_L005_R2_001.fastq.gz",
+        "05179434d1810239938c1ffd93c411fbafd7069cd3dc4a398d16f83828171bda"
+      ]
+    ],
+    "stage": "mapping:QUI2_LP_340_Du-641",
+    "upstream": [
+      [
+        "metadata",
+        "2d1daa1599e6be48bd1eb1f2df702f713fe6a0cffa398f9513146a5b162558c5"
+      ],
+      [
+        "references",
+        "7daec3ef86b9dd303ea00af35428c110c4bbeb3a4547d12b237284d3124db6a6"
+      ],
+      [
+        "source_validation",
+        "691b70fb163cbb1b99003e8feb1bf965aa1815d8708461635f64c3da7efab236"
+      ]
+    ]
+  },
+  "git_commit": "5b932a95a1fa998569397491bfdec1d79d5bb84d",
+  "mapping_policy": {
+    "mapping": {
+      "exclude_sam_flags": 3844,
+      "mark_duplicates": true,
+      "minimum_base_quality": 20,
+      "minimum_mapping_quality": 20,
+      "nuclear_decoy": false
+    },
+    "preprocessing": {
+      "detect_adapters_for_pe": true,
+      "maximum_unqualified_base_percent": 40,
+      "minimum_length": 50,
+      "qualified_quality_phred": 20
+    },
+    "threads_per_job": 8
+  },
+  "outputs": {
+    "canonical_publication/results/qc/publication-20260817/fastp/QUI2_LP_340_Du-641.fastp.html": "4ea5133110756631379cf2d558ad50a4227f42d5787cd763f7d3085644bc3d26",
+    "canonical_publication/results/qc/publication-20260817/fastp/QUI2_LP_340_Du-641.fastp.json": "e406ddbe6cc5940bc586d5a6088ed55bb862ffb500ff82c7471d2c7e7edf2b0a",
+    "canonical_publication/work/publication-20260817/mapping/QUI2_LP_340_Du-641.organelle.bam": "e79354e22c4e5b57ce0831585fe3e4eaff200da418438f6d728954954a9f4ab9",
+    "canonical_publication/work/publication-20260817/mapping/QUI2_LP_340_Du-641.organelle.bam.bai": "59cecd0059f286442f74e4616db39d395def8e28491cc51db91d761ad538e6aa"
+  },
+  "pre_reconciliation_fingerprint": {
+    "commands": [
+      "fastp --in1 source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.251217/QB3.Results.260109/QUI2/QUI2_LP_340_Du-641_S211_L005_R1_001.fastq.gz --in2 source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.251217/QB3.Results.260109/QUI2/QUI2_LP_340_Du-641_S211_L005_R2_001.fastq.gz --qualified_quality_phred 20 --length_required 50 --detect_adapter_for_pe --stdout --json canonical_publication/results/qc/publication-20260817/fastp/QUI2_LP_340_Du-641.fastp.json --html canonical_publication/results/qc/publication-20260817/fastp/QUI2_LP_340_Du-641.fastp.html | bwa mem -p -t 8 -R '@RG\\tID:QUI2_LP_340_Du-641\\tSM:QUI2_LP_340_Du-641\\tPL:ILLUMINA' canonical_publication/references/selected/organelle_combined.fa - | samtools view -F 3844 -q 20 -u - | samtools sort -n -@ 4 -u - | samtools fixmate -m - - | samtools sort -@ 4 -u - | samtools markdup -r -@ 4 - canonical_publication/work/publication-20260817/mapping/QUI2_LP_340_Du-641.organelle.bam && samtools index canonical_publication/work/publication-20260817/mapping/QUI2_LP_340_Du-641.organelle.bam"
+    ],
+    "digest": "d158ed68f5ae94d67de2f032dd9d237ffaa35865fc6c3e4da72e8bc01862def9",
+    "inputs": [
+      [
+        "canonical_publication/config/publication_config.toml",
+        "0bc68756ee1d3b5bf5a4f2ce035da64a3ec7a9accd2a8bb7b13d0f532b593b42"
+      ],
+      [
+        "canonical_publication/references/selected/organelle_combined.fa",
+        "84a53a58f60464ba18c0f0da0445201c9bbfc5d10a9216932f8bf4df8d4cf4f8"
+      ],
+      [
+        "source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.251217/QB3.Results.260109/QUI2/QUI2_LP_340_Du-641_S211_L005_R1_001.fastq.gz",
+        "f716795f506f47ad0cdbc088c0f8b694db3a4130bf419fb7e2e8a6134b64d40c"
+      ],
+      [
+        "source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.251217/QB3.Results.260109/QUI2/QUI2_LP_340_Du-641_S211_L005_R2_001.fastq.gz",
+        "05179434d1810239938c1ffd93c411fbafd7069cd3dc4a398d16f83828171bda"
+      ]
+    ],
+    "stage": "mapping:QUI2_LP_340_Du-641",
+    "upstream": []
+  },
+  "provenance_rebind": {
+    "reason": "stage-scoped provenance refresh after all raw-read, reference, metadata, policy, tool, executable, command, BAM, BAI, and fastp validations passed",
+    "rebound_from_fingerprint": "ba94939d7647b7475893d1932fc5f75761c669751861519d4dcc560df7865564"
+  },
+  "reconciliation_git_commit": "5b932a95a1fa998569397491bfdec1d79d5bb84d",
+  "resolved_defaults": [
+    "fastp --unqualified_percent_limit=40 (pinned fastp 1.3.6 default)"
+  ],
+  "sample_id": "QUI2_LP_340_Du-641",
+  "schema_version": 2,
+  "status": "complete",
+  "tool_versions": {
+    "bwa": "Program: bwa (alignment via Burrows-Wheeler transformation) | Version: 0.7.19-r1273 | Contact: Heng Li <hli@ds.dfci.harvard.edu>",
+    "fastp": "fastp 1.3.6",
+    "samtools": "samtools 1.23.1 | Using htslib 1.23.1 | Copyright (C) 2025 Genome Research Ltd."
+  }
+}

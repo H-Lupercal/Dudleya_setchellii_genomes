@@ -1,0 +1,28 @@
+{
+  "errors": [],
+  "final_manifest": "canonical_publication/provenance/manifests/publication-20260817.final_artifacts.tsv",
+  "high_confidence_variant_counts": {
+    "chloroplast": 2273,
+    "mitochondria": 157
+  },
+  "pairwise_counts": {
+    "chloroplast": 595,
+    "mitochondria": 595
+  },
+  "population_counts": {
+    "chloroplast": 35,
+    "mitochondria": 35
+  },
+  "run_id": "publication-20260817",
+  "sample_counts": {
+    "chloroplast": 276,
+    "mitochondria": 271,
+    "shared": 271
+  },
+  "status": "PASS",
+  "strong_conflict_count": 0,
+  "variant_counts": {
+    "chloroplast": 2261,
+    "mitochondria": 146
+  }
+}

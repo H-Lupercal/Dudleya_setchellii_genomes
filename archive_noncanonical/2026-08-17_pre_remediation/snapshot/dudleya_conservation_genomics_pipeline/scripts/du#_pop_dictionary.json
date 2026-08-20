@@ -1,0 +1,4002 @@
+[
+  {
+    "DU#": 10,
+    "Code": "UVAC",
+    "Population": "Little Uvas Creek"
+  },
+  {
+    "DU#": 100,
+    "Code": "RSV",
+    "Population": "Rancho San Vicente"
+  },
+  {
+    "DU#": 101,
+    "Code": "RSV",
+    "Population": "Rancho San Vicente"
+  },
+  {
+    "DU#": 102,
+    "Code": "RSV",
+    "Population": "Rancho San Vicente"
+  },
+  {
+    "DU#": 103,
+    "Code": "RSV",
+    "Population": "Rancho San Vicente"
+  },
+  {
+    "DU#": 104,
+    "Code": "RSV",
+    "Population": "Rancho San Vicente"
+  },
+  {
+    "DU#": 105,
+    "Code": "OCO",
+    "Population": "O'Connell Ranch Pacheco Pass"
+  },
+  {
+    "DU#": 106,
+    "Code": "OCO",
+    "Population": "O'Connell Ranch Pacheco Pass"
+  },
+  {
+    "DU#": 107,
+    "Code": "OCO",
+    "Population": "O'Connell Ranch Pacheco Pass"
+  },
+  {
+    "DU#": 108,
+    "Code": "OCO",
+    "Population": "O'Connell Ranch Pacheco Pass"
+  },
+  {
+    "DU#": 109,
+    "Code": "OCO",
+    "Population": "O'Connell Ranch Pacheco Pass"
+  },
+  {
+    "DU#": 11,
+    "Code": "CY_LGC",
+    "Population": "Los Gatos Creek"
+  },
+  {
+    "DU#": 110,
+    "Code": "OCO",
+    "Population": "O'Connell Ranch Pacheco Pass"
+  },
+  {
+    "DU#": 111,
+    "Code": "OCO",
+    "Population": "O'Connell Ranch Pacheco Pass"
+  },
+  {
+    "DU#": 112,
+    "Code": "OCO",
+    "Population": "O'Connell Ranch Pacheco Pass"
+  },
+  {
+    "DU#": 113,
+    "Code": "OCO",
+    "Population": "O'Connell Ranch Pacheco Pass"
+  },
+  {
+    "DU#": 114,
+    "Code": "OCO",
+    "Population": "O'Connell Ranch Pacheco Pass"
+  },
+  {
+    "DU#": 115,
+    "Code": "OCO",
+    "Population": "O'Connell Ranch Pacheco Pass"
+  },
+  {
+    "DU#": 116,
+    "Code": "OCO",
+    "Population": "O'Connell Ranch Pacheco Pass"
+  },
+  {
+    "DU#": 117,
+    "Code": "OCO",
+    "Population": "O'Connell Ranch Pacheco Pass"
+  },
+  {
+    "DU#": 118,
+    "Code": "OCO",
+    "Population": "O'Connell Ranch Pacheco Pass"
+  },
+  {
+    "DU#": 119,
+    "Code": "OCO",
+    "Population": "O'Connell Ranch Pacheco Pass"
+  },
+  {
+    "DU#": 12,
+    "Code": "UVAC",
+    "Population": "Little Uvas Creek"
+  },
+  {
+    "DU#": 120,
+    "Code": "OCO",
+    "Population": "O'Connell Ranch Pacheco Pass"
+  },
+  {
+    "DU#": 121,
+    "Code": "OCO",
+    "Population": "O'Connell Ranch Pacheco Pass"
+  },
+  {
+    "DU#": 122,
+    "Code": "OCO",
+    "Population": "O'Connell Ranch Pacheco Pass"
+  },
+  {
+    "DU#": 123,
+    "Code": "OCO",
+    "Population": "O'Connell Ranch Pacheco Pass"
+  },
+  {
+    "DU#": 124,
+    "Code": "OCO",
+    "Population": "O'Connell Ranch Pacheco Pass"
+  },
+  {
+    "DU#": 125,
+    "Code": "OCO",
+    "Population": "O'Connell Ranch Pacheco Pass"
+  },
+  {
+    "DU#": 126,
+    "Code": "OCO",
+    "Population": "O'Connell Ranch Pacheco Pass"
+  },
+  {
+    "DU#": 127,
+    "Code": "CY_UVAR",
+    "Population": "Little Uvas Road"
+  },
+  {
+    "DU#": 128,
+    "Code": "CY_UVAR",
+    "Population": "Little Uvas Road"
+  },
+  {
+    "DU#": 129,
+    "Code": "CY_UVAR",
+    "Population": "Little Uvas Road"
+  },
+  {
+    "DU#": 13,
+    "Code": "DUD",
+    "Population": "Dude Rock"
+  },
+  {
+    "DU#": 130,
+    "Code": "CY_UVAR",
+    "Population": "Little Uvas Road"
+  },
+  {
+    "DU#": 131,
+    "Code": "CY_UVAR",
+    "Population": "Little Uvas Road"
+  },
+  {
+    "DU#": 132,
+    "Code": "CY_UVAR",
+    "Population": "Little Uvas Road"
+  },
+  {
+    "DU#": 133,
+    "Code": "CY_UVAR",
+    "Population": "Little Uvas Road"
+  },
+  {
+    "DU#": 134,
+    "Code": "CY_UVAR",
+    "Population": "Little Uvas Road"
+  },
+  {
+    "DU#": 135,
+    "Code": "CY_UVAR",
+    "Population": "Little Uvas Road"
+  },
+  {
+    "DU#": 136,
+    "Code": "CY_UVAR",
+    "Population": "Little Uvas Road"
+  },
+  {
+    "DU#": 137,
+    "Code": "CY_UVAR",
+    "Population": "Little Uvas Road"
+  },
+  {
+    "DU#": 138,
+    "Code": "CY_UVAR",
+    "Population": "Little Uvas Road"
+  },
+  {
+    "DU#": 139,
+    "Code": "MALR",
+    "Population": "Malech Ranch"
+  },
+  {
+    "DU#": 14,
+    "Code": "CY_SIE",
+    "Population": "Sierra Azule"
+  },
+  {
+    "DU#": 140,
+    "Code": "MALR",
+    "Population": "Malech Ranch"
+  },
+  {
+    "DU#": 141,
+    "Code": "CY_FRE",
+    "Population": "Fremont Peak"
+  },
+  {
+    "DU#": 142,
+    "Code": "CY_FRE",
+    "Population": "Fremont Peak"
+  },
+  {
+    "DU#": 143,
+    "Code": "CY_FRE",
+    "Population": "Fremont Peak"
+  },
+  {
+    "DU#": 144,
+    "Code": "CY_FRE",
+    "Population": "Fremont Peak"
+  },
+  {
+    "DU#": 145,
+    "Code": "CY_FRE",
+    "Population": "Fremont Peak"
+  },
+  {
+    "DU#": 146,
+    "Code": "CY_FRE",
+    "Population": "Fremont Peak"
+  },
+  {
+    "DU#": 147,
+    "Code": "CY_FRE",
+    "Population": "Fremont Peak"
+  },
+  {
+    "DU#": 148,
+    "Code": "CY_FRE",
+    "Population": "Fremont Peak"
+  },
+  {
+    "DU#": 149,
+    "Code": "CY_FRE",
+    "Population": "Fremont Peak"
+  },
+  {
+    "DU#": 15,
+    "Code": "DUD",
+    "Population": "Dude Rock"
+  },
+  {
+    "DU#": 150,
+    "Code": "CY_FRE",
+    "Population": "Fremont Peak"
+  },
+  {
+    "DU#": 151,
+    "Code": "CY_UVAU",
+    "Population": "Upper Little Uvas Road"
+  },
+  {
+    "DU#": 152,
+    "Code": "CY_UVAU",
+    "Population": "Upper Little Uvas Road"
+  },
+  {
+    "DU#": 153,
+    "Code": "CY_UVAU",
+    "Population": "Upper Little Uvas Road"
+  },
+  {
+    "DU#": 154,
+    "Code": "QUIN",
+    "Population": "Quicksilver NE"
+  },
+  {
+    "DU#": 155,
+    "Code": "QUIN",
+    "Population": "Quicksilver NE"
+  },
+  {
+    "DU#": 156,
+    "Code": "QUIN",
+    "Population": "Quicksilver NE"
+  },
+  {
+    "DU#": 157,
+    "Code": "QUIN",
+    "Population": "Quicksilver NE"
+  },
+  {
+    "DU#": 158,
+    "Code": "QUIN",
+    "Population": "Quicksilver NE"
+  },
+  {
+    "DU#": 159,
+    "Code": "QUIN",
+    "Population": "Quicksilver NE"
+  },
+  {
+    "DU#": 16,
+    "Code": "DUD",
+    "Population": "Dude Rock"
+  },
+  {
+    "DU#": 160,
+    "Code": "QUIN",
+    "Population": "Quicksilver NE"
+  },
+  {
+    "DU#": 161,
+    "Code": "QUIN",
+    "Population": "Quicksilver NE"
+  },
+  {
+    "DU#": 162,
+    "Code": "QUIN",
+    "Population": "Quicksilver NE"
+  },
+  {
+    "DU#": 163,
+    "Code": "QUIN",
+    "Population": "Quicksilver NE"
+  },
+  {
+    "DU#": 164,
+    "Code": "QUIN",
+    "Population": "Quicksilver NE"
+  },
+  {
+    "DU#": 165,
+    "Code": "QUIN",
+    "Population": "Quicksilver NE"
+  },
+  {
+    "DU#": 166,
+    "Code": "QUIN",
+    "Population": "Quicksilver NE"
+  },
+  {
+    "DU#": 167,
+    "Code": "QUIN",
+    "Population": "Quicksilver NE"
+  },
+  {
+    "DU#": 168,
+    "Code": "QUIN",
+    "Population": "Quicksilver NE"
+  },
+  {
+    "DU#": 169,
+    "Code": "QUIN",
+    "Population": "Quicksilver NE"
+  },
+  {
+    "DU#": 17,
+    "Code": "DUD",
+    "Population": "Dude Rock"
+  },
+  {
+    "DU#": 170,
+    "Code": "QUIN",
+    "Population": "Quicksilver NE"
+  },
+  {
+    "DU#": 171,
+    "Code": "QUIN",
+    "Population": "Quicksilver NE"
+  },
+  {
+    "DU#": 172,
+    "Code": "QUIN",
+    "Population": "Quicksilver NE"
+  },
+  {
+    "DU#": 173,
+    "Code": "QUIN",
+    "Population": "Quicksilver NE"
+  },
+  {
+    "DU#": 174,
+    "Code": "DOV",
+    "Population": "Dove Road"
+  },
+  {
+    "DU#": 175,
+    "Code": "DOV",
+    "Population": "Dove Road"
+  },
+  {
+    "DU#": 176,
+    "Code": "DOV",
+    "Population": "Dove Road"
+  },
+  {
+    "DU#": 177,
+    "Code": "DOV",
+    "Population": "Dove Road"
+  },
+  {
+    "DU#": 178,
+    "Code": "DOV",
+    "Population": "Dove Road"
+  },
+  {
+    "DU#": 179,
+    "Code": "DOV",
+    "Population": "Dove Road"
+  },
+  {
+    "DU#": 18,
+    "Code": "DUD",
+    "Population": "Dude Rock"
+  },
+  {
+    "DU#": 180,
+    "Code": "DOV",
+    "Population": "Dove Road"
+  },
+  {
+    "DU#": 181,
+    "Code": "CROS",
+    "Population": "Crosp South End"
+  },
+  {
+    "DU#": 182,
+    "Code": "CROS",
+    "Population": "Crosp South End"
+  },
+  {
+    "DU#": 183,
+    "Code": "CROS",
+    "Population": "Crosp South End"
+  },
+  {
+    "DU#": 184,
+    "Code": "CROS",
+    "Population": "Crosp South End"
+  },
+  {
+    "DU#": 185,
+    "Code": "CROS",
+    "Population": "Crosp South End"
+  },
+  {
+    "DU#": 186,
+    "Code": "CROS",
+    "Population": "Crosp South End"
+  },
+  {
+    "DU#": 187,
+    "Code": "CROS",
+    "Population": "Crosp South End"
+  },
+  {
+    "DU#": 188,
+    "Code": "CROS",
+    "Population": "Crosp South End"
+  },
+  {
+    "DU#": 189,
+    "Code": "CROS",
+    "Population": "Crosp South End"
+  },
+  {
+    "DU#": 19,
+    "Code": "STI",
+    "Population": "Stiles Ranch"
+  },
+  {
+    "DU#": 190,
+    "Code": "CROS",
+    "Population": "Crosp South End"
+  },
+  {
+    "DU#": 191,
+    "Code": "CROS",
+    "Population": "Crosp South End"
+  },
+  {
+    "DU#": 192,
+    "Code": "CROS",
+    "Population": "Crosp South End"
+  },
+  {
+    "DU#": 193,
+    "Code": "CROS",
+    "Population": "Crosp South End"
+  },
+  {
+    "DU#": 194,
+    "Code": "CROS",
+    "Population": "Crosp South End"
+  },
+  {
+    "DU#": 195,
+    "Code": "CROS",
+    "Population": "Crosp South End"
+  },
+  {
+    "DU#": 196,
+    "Code": "CROS",
+    "Population": "Crosp South End"
+  },
+  {
+    "DU#": 197,
+    "Code": "CROS",
+    "Population": "Crosp South End"
+  },
+  {
+    "DU#": 198,
+    "Code": "CROS",
+    "Population": "Crosp South End"
+  },
+  {
+    "DU#": 199,
+    "Code": "CROS",
+    "Population": "Crosp South End"
+  },
+  {
+    "DU#": "1A",
+    "Code": "DUD",
+    "Population": "Dude Rock"
+  },
+  {
+    "DU#": "1B",
+    "Code": "",
+    "Population": ""
+  },
+  {
+    "DU#": 20,
+    "Code": "DUD",
+    "Population": "Dude Rock"
+  },
+  {
+    "DU#": 200,
+    "Code": "CROS",
+    "Population": "Crosp South End"
+  },
+  {
+    "DU#": 201,
+    "Code": "MALV",
+    "Population": "Malech Vista"
+  },
+  {
+    "DU#": 202,
+    "Code": "MALV",
+    "Population": "Malech Vista"
+  },
+  {
+    "DU#": 203,
+    "Code": "MALV",
+    "Population": "Malech Vista"
+  },
+  {
+    "DU#": 204,
+    "Code": "MALV",
+    "Population": "Malech Vista"
+  },
+  {
+    "DU#": 205,
+    "Code": "MALV",
+    "Population": "Malech Vista"
+  },
+  {
+    "DU#": 206,
+    "Code": "MALV",
+    "Population": "Malech Vista"
+  },
+  {
+    "DU#": 207,
+    "Code": "MALV",
+    "Population": "Malech Vista"
+  },
+  {
+    "DU#": 208,
+    "Code": "MALV",
+    "Population": "Malech Vista"
+  },
+  {
+    "DU#": 209,
+    "Code": "MALV",
+    "Population": "Malech Vista"
+  },
+  {
+    "DU#": 21,
+    "Code": "CY_SIE",
+    "Population": "Sierra Azule"
+  },
+  {
+    "DU#": 210,
+    "Code": "MALV",
+    "Population": "Malech Vista"
+  },
+  {
+    "DU#": 211,
+    "Code": "MALV",
+    "Population": "Malech Vista"
+  },
+  {
+    "DU#": 212,
+    "Code": "MALV",
+    "Population": "Malech Vista"
+  },
+  {
+    "DU#": 213,
+    "Code": "MALV",
+    "Population": "Malech Vista"
+  },
+  {
+    "DU#": 214,
+    "Code": "MALV",
+    "Population": "Malech Vista"
+  },
+  {
+    "DU#": 215,
+    "Code": "MALV",
+    "Population": "Malech Vista"
+  },
+  {
+    "DU#": 216,
+    "Code": "MALV",
+    "Population": "Malech Vista"
+  },
+  {
+    "DU#": 217,
+    "Code": "MALV",
+    "Population": "Malech Vista"
+  },
+  {
+    "DU#": 218,
+    "Code": "MALV",
+    "Population": "Malech Vista"
+  },
+  {
+    "DU#": 219,
+    "Code": "MALV",
+    "Population": "Malech Vista"
+  },
+  {
+    "DU#": 22,
+    "Code": "UVAC",
+    "Population": "Little Uvas Creek"
+  },
+  {
+    "DU#": 220,
+    "Code": "MALV",
+    "Population": "Malech Vista"
+  },
+  {
+    "DU#": 221,
+    "Code": "MALV",
+    "Population": "Malech Vista"
+  },
+  {
+    "DU#": 222,
+    "Code": "BAI",
+    "Population": "Baird Ridgeline"
+  },
+  {
+    "DU#": 223,
+    "Code": "BAI",
+    "Population": "Baird Ridgeline"
+  },
+  {
+    "DU#": 224,
+    "Code": "BAI",
+    "Population": "Baird Ridgeline"
+  },
+  {
+    "DU#": 225,
+    "Code": "BAI",
+    "Population": "Baird Ridgeline"
+  },
+  {
+    "DU#": 226,
+    "Code": "BAI",
+    "Population": "Baird Ridgeline"
+  },
+  {
+    "DU#": 227,
+    "Code": "BAI",
+    "Population": "Baird Ridgeline"
+  },
+  {
+    "DU#": 228,
+    "Code": "BAI",
+    "Population": "Baird Ridgeline"
+  },
+  {
+    "DU#": 229,
+    "Code": "BAI",
+    "Population": "Baird Ridgeline"
+  },
+  {
+    "DU#": 23,
+    "Code": "CROM",
+    "Population": "Crosp-Mid Elev. Transect"
+  },
+  {
+    "DU#": 230,
+    "Code": "BAI",
+    "Population": "Baird Ridgeline"
+  },
+  {
+    "DU#": 231,
+    "Code": "BAI",
+    "Population": "Baird Ridgeline"
+  },
+  {
+    "DU#": 232,
+    "Code": "BAI",
+    "Population": "Baird Ridgeline"
+  },
+  {
+    "DU#": 233,
+    "Code": "BAI",
+    "Population": "Baird Ridgeline"
+  },
+  {
+    "DU#": 234,
+    "Code": "BAI",
+    "Population": "Baird Ridgeline"
+  },
+  {
+    "DU#": 235,
+    "Code": "BAI",
+    "Population": "Baird Ridgeline"
+  },
+  {
+    "DU#": 236,
+    "Code": "BAI",
+    "Population": "Baird Ridgeline"
+  },
+  {
+    "DU#": 237,
+    "Code": "BAI",
+    "Population": "Baird Ridgeline"
+  },
+  {
+    "DU#": 238,
+    "Code": "BAI",
+    "Population": "Baird Ridgeline"
+  },
+  {
+    "DU#": 239,
+    "Code": "BAI",
+    "Population": "Baird Ridgeline"
+  },
+  {
+    "DU#": 24,
+    "Code": "UVAC",
+    "Population": "Little Uvas Creek"
+  },
+  {
+    "DU#": 240,
+    "Code": "BAI",
+    "Population": "Baird Ridgeline"
+  },
+  {
+    "DU#": 241,
+    "Code": "BAI",
+    "Population": "Baird Ridgeline"
+  },
+  {
+    "DU#": 242,
+    "Code": "TULP",
+    "Population": "Tulare PGE Rd."
+  },
+  {
+    "DU#": 243,
+    "Code": "TULP",
+    "Population": "Tulare PGE Rd."
+  },
+  {
+    "DU#": 244,
+    "Code": "TULP",
+    "Population": "Tulare PGE Rd."
+  },
+  {
+    "DU#": 245,
+    "Code": "TULP",
+    "Population": "Tulare PGE Rd."
+  },
+  {
+    "DU#": 246,
+    "Code": "TULP",
+    "Population": "Tulare PGE Rd."
+  },
+  {
+    "DU#": 247,
+    "Code": "TULP",
+    "Population": "Tulare PGE Rd."
+  },
+  {
+    "DU#": 248,
+    "Code": "TULP",
+    "Population": "Tulare PGE Rd."
+  },
+  {
+    "DU#": 249,
+    "Code": "TULP",
+    "Population": "Tulare PGE Rd."
+  },
+  {
+    "DU#": 25,
+    "Code": "DUD",
+    "Population": "Dude Rock"
+  },
+  {
+    "DU#": 250,
+    "Code": "TULP",
+    "Population": "Tulare PGE Rd."
+  },
+  {
+    "DU#": 251,
+    "Code": "TULP",
+    "Population": "Tulare PGE Rd."
+  },
+  {
+    "DU#": 252,
+    "Code": "TULP",
+    "Population": "Tulare PGE Rd."
+  },
+  {
+    "DU#": 253,
+    "Code": "TULP",
+    "Population": "Tulare PGE Rd."
+  },
+  {
+    "DU#": 254,
+    "Code": "TULP",
+    "Population": "Tulare PGE Rd."
+  },
+  {
+    "DU#": 255,
+    "Code": "TULP",
+    "Population": "Tulare PGE Rd."
+  },
+  {
+    "DU#": 256,
+    "Code": "TULP",
+    "Population": "Tulare PGE Rd."
+  },
+  {
+    "DU#": 257,
+    "Code": "TULP",
+    "Population": "Tulare PGE Rd."
+  },
+  {
+    "DU#": 258,
+    "Code": "TULP",
+    "Population": "Tulare PGE Rd."
+  },
+  {
+    "DU#": 259,
+    "Code": "TULP",
+    "Population": "Tulare PGE Rd."
+  },
+  {
+    "DU#": 26,
+    "Code": "RSV",
+    "Population": "Rancho San Vicente"
+  },
+  {
+    "DU#": 260,
+    "Code": "TULP",
+    "Population": "Tulare PGE Rd."
+  },
+  {
+    "DU#": 261,
+    "Code": "TULP",
+    "Population": "Tulare PGE Rd."
+  },
+  {
+    "DU#": 262,
+    "Code": "TULP",
+    "Population": "Tulare PGE Rd."
+  },
+  {
+    "DU#": 263,
+    "Code": "TIL",
+    "Population": "Tilton Ranch Road"
+  },
+  {
+    "DU#": 264,
+    "Code": "TIL",
+    "Population": "Tilton Ranch Road"
+  },
+  {
+    "DU#": 265,
+    "Code": "TIL",
+    "Population": "Tilton Ranch Road"
+  },
+  {
+    "DU#": 266,
+    "Code": "TIL",
+    "Population": "Tilton Ranch Road"
+  },
+  {
+    "DU#": 267,
+    "Code": "TIL",
+    "Population": "Tilton Ranch Road"
+  },
+  {
+    "DU#": 268,
+    "Code": "TIL",
+    "Population": "Tilton Ranch Road"
+  },
+  {
+    "DU#": 269,
+    "Code": "TIL",
+    "Population": "Tilton Ranch Road"
+  },
+  {
+    "DU#": 27,
+    "Code": "DUD",
+    "Population": "Dude Rock"
+  },
+  {
+    "DU#": 270,
+    "Code": "TIL",
+    "Population": "Tilton Ranch Road"
+  },
+  {
+    "DU#": 271,
+    "Code": "TIL",
+    "Population": "Tilton Ranch Road"
+  },
+  {
+    "DU#": 272,
+    "Code": "TIL",
+    "Population": "Tilton Ranch Road"
+  },
+  {
+    "DU#": 273,
+    "Code": "TIL",
+    "Population": "Tilton Ranch Road"
+  },
+  {
+    "DU#": 274,
+    "Code": "TIL",
+    "Population": "Tilton Ranch Road"
+  },
+  {
+    "DU#": 275,
+    "Code": "TIL",
+    "Population": "Tilton Ranch Road"
+  },
+  {
+    "DU#": 276,
+    "Code": "TIL",
+    "Population": "Tilton Ranch Road"
+  },
+  {
+    "DU#": 277,
+    "Code": "TIL",
+    "Population": "Tilton Ranch Road"
+  },
+  {
+    "DU#": 278,
+    "Code": "TIL",
+    "Population": "Tilton Ranch Road"
+  },
+  {
+    "DU#": 279,
+    "Code": "TIL",
+    "Population": "Tilton Ranch Road"
+  },
+  {
+    "DU#": 28,
+    "Code": "DUD",
+    "Population": "Dude Rock"
+  },
+  {
+    "DU#": 280,
+    "Code": "TIL",
+    "Population": "Tilton Ranch Road"
+  },
+  {
+    "DU#": 281,
+    "Code": "TIL",
+    "Population": "Tilton Ranch Road"
+  },
+  {
+    "DU#": 282,
+    "Code": "TIL",
+    "Population": "Tilton Ranch Road"
+  },
+  {
+    "DU#": 283,
+    "Code": "DUD",
+    "Population": "Dude Sup Rock"
+  },
+  {
+    "DU#": 284,
+    "Code": "DUD",
+    "Population": "Dude Sup Rock"
+  },
+  {
+    "DU#": 285,
+    "Code": "DUD",
+    "Population": "Dude Sup Rock"
+  },
+  {
+    "DU#": 286,
+    "Code": "DUD",
+    "Population": "Dude Sup Rock"
+  },
+  {
+    "DU#": 287,
+    "Code": "DUD",
+    "Population": "Dude Sup Rock"
+  },
+  {
+    "DU#": 288,
+    "Code": "DUD",
+    "Population": "Dude Sup Rock"
+  },
+  {
+    "DU#": 289,
+    "Code": "DUD",
+    "Population": "Dude Sup Rock"
+  },
+  {
+    "DU#": 29,
+    "Code": "UVAC",
+    "Population": "Little Uvas Creek"
+  },
+  {
+    "DU#": 290,
+    "Code": "DUD",
+    "Population": "Dude Sup Rock"
+  },
+  {
+    "DU#": 291,
+    "Code": "DUD",
+    "Population": "Dude Sup Rock"
+  },
+  {
+    "DU#": 292,
+    "Code": "DUD",
+    "Population": "Dude Sup Rock"
+  },
+  {
+    "DU#": 293,
+    "Code": "DUD",
+    "Population": "Dude Sup Rock"
+  },
+  {
+    "DU#": 294,
+    "Code": "DUD",
+    "Population": "Dude Sup Rock"
+  },
+  {
+    "DU#": 295,
+    "Code": "DUD",
+    "Population": "Dude Sup Rock"
+  },
+  {
+    "DU#": 296,
+    "Code": "DUD",
+    "Population": "Dude Sup Rock"
+  },
+  {
+    "DU#": 297,
+    "Code": "DUD",
+    "Population": "Dude Sup Rock"
+  },
+  {
+    "DU#": 298,
+    "Code": "DUD",
+    "Population": "Dude Sup Rock"
+  },
+  {
+    "DU#": 299,
+    "Code": "DUD",
+    "Population": "Dude Sup Rock"
+  },
+  {
+    "DU#": "2A",
+    "Code": "",
+    "Population": ""
+  },
+  {
+    "DU#": "2B",
+    "Code": "",
+    "Population": ""
+  },
+  {
+    "DU#": 30,
+    "Code": "DUD",
+    "Population": "Dude Rock"
+  },
+  {
+    "DU#": 300,
+    "Code": "DUD",
+    "Population": "Dude Sup Rock"
+  },
+  {
+    "DU#": 301,
+    "Code": "DUD",
+    "Population": "Dude Sup Rock"
+  },
+  {
+    "DU#": 302,
+    "Code": "TULP",
+    "Population": "Tulare Hill NW Parks"
+  },
+  {
+    "DU#": 303,
+    "Code": "TULP",
+    "Population": "Tulare Hill NW Parks"
+  },
+  {
+    "DU#": 304,
+    "Code": "TULP",
+    "Population": "Tulare Hill NW Parks"
+  },
+  {
+    "DU#": 305,
+    "Code": "TULP",
+    "Population": "Tulare Hill NW Parks"
+  },
+  {
+    "DU#": 306,
+    "Code": "TULP",
+    "Population": "Tulare Hill NW Parks"
+  },
+  {
+    "DU#": 307,
+    "Code": "TULP",
+    "Population": "Tulare Hill NW Parks"
+  },
+  {
+    "DU#": 308,
+    "Code": "TULP",
+    "Population": "Tulare Hill NW Parks"
+  },
+  {
+    "DU#": 309,
+    "Code": "TULP",
+    "Population": "Tulare Hill NW Parks"
+  },
+  {
+    "DU#": 31,
+    "Code": "STI",
+    "Population": "Stiles Ranch"
+  },
+  {
+    "DU#": 310,
+    "Code": "TULP",
+    "Population": "Tulare Hill NW Parks"
+  },
+  {
+    "DU#": 311,
+    "Code": "TULP",
+    "Population": "Tulare Hill NW Parks"
+  },
+  {
+    "DU#": 312,
+    "Code": "TULP",
+    "Population": "Tulare Hill NW Parks"
+  },
+  {
+    "DU#": 313,
+    "Code": "TULP",
+    "Population": "Tulare Hill NW Parks"
+  },
+  {
+    "DU#": 314,
+    "Code": "TULP",
+    "Population": "Tulare Hill NW Parks"
+  },
+  {
+    "DU#": 315,
+    "Code": "TULP",
+    "Population": "Tulare Hill NW Parks"
+  },
+  {
+    "DU#": 316,
+    "Code": "TULP",
+    "Population": "Tulare Hill NW Parks"
+  },
+  {
+    "DU#": 317,
+    "Code": "TULP",
+    "Population": "Tulare Hill NW Parks"
+  },
+  {
+    "DU#": 318,
+    "Code": "TULP",
+    "Population": "Tulare Hill NW Parks"
+  },
+  {
+    "DU#": 319,
+    "Code": "TULP",
+    "Population": "Tulare Hill NW Parks"
+  },
+  {
+    "DU#": 32,
+    "Code": "DUD",
+    "Population": "Dude Rock"
+  },
+  {
+    "DU#": 320,
+    "Code": "TULP",
+    "Population": "Tulare Hill NW Parks"
+  },
+  {
+    "DU#": 321,
+    "Code": "TULP",
+    "Population": "Tulare Hill NW Parks"
+  },
+  {
+    "DU#": 322,
+    "Code": "TULP",
+    "Population": "Tulare Hill NW Parks"
+  },
+  {
+    "DU#": 323,
+    "Code": "TULP",
+    "Population": "Tulare Hill NW Parks"
+  },
+  {
+    "DU#": 324,
+    "Code": "TULP",
+    "Population": "Tulare Hill NW Parks"
+  },
+  {
+    "DU#": 325,
+    "Code": "TULM",
+    "Population": "Tulare Mec"
+  },
+  {
+    "DU#": 326,
+    "Code": "TULM",
+    "Population": "Tulare Mec"
+  },
+  {
+    "DU#": 327,
+    "Code": "TULM",
+    "Population": "Tulare Mec"
+  },
+  {
+    "DU#": 328,
+    "Code": "TULM",
+    "Population": "Tulare Mec"
+  },
+  {
+    "DU#": 329,
+    "Code": "TULM",
+    "Population": "Tulare Mec"
+  },
+  {
+    "DU#": 330,
+    "Code": "TULM",
+    "Population": "Tulare Mec"
+  },
+  {
+    "DU#": 331,
+    "Code": "TULM",
+    "Population": "Tulare Mec"
+  },
+  {
+    "DU#": 332,
+    "Code": "TULM",
+    "Population": "Tulare Mec"
+  },
+  {
+    "DU#": 333,
+    "Code": "TULM",
+    "Population": "Tulare Mec"
+  },
+  {
+    "DU#": 334,
+    "Code": "TULM",
+    "Population": "Tulare Mec"
+  },
+  {
+    "DU#": 335,
+    "Code": "TULM",
+    "Population": "Tulare Mec"
+  },
+  {
+    "DU#": 336,
+    "Code": "TULM",
+    "Population": "Tulare Mec"
+  },
+  {
+    "DU#": 337,
+    "Code": "TULM",
+    "Population": "Tulare Mec"
+  },
+  {
+    "DU#": 338,
+    "Code": "TULM",
+    "Population": "Tulare Mec"
+  },
+  {
+    "DU#": 339,
+    "Code": "TULM",
+    "Population": "Tulare Mec"
+  },
+  {
+    "DU#": "33A",
+    "Code": "DUD",
+    "Population": "Dude Rock  (Field Count 22)"
+  },
+  {
+    "DU#": "33B",
+    "Code": "DUD",
+    "Population": "Dude Rock   (Field Count 22)"
+  },
+  {
+    "DU#": 34,
+    "Code": "DUD",
+    "Population": "Dude Rock"
+  },
+  {
+    "DU#": 340,
+    "Code": "TULM",
+    "Population": "Tulare Mec"
+  },
+  {
+    "DU#": 341,
+    "Code": "TULM",
+    "Population": "Tulare Mec"
+  },
+  {
+    "DU#": 342,
+    "Code": "TULM",
+    "Population": "Tulare Mec"
+  },
+  {
+    "DU#": 343,
+    "Code": "SILG",
+    "Population": "Silver Creek Golf"
+  },
+  {
+    "DU#": 344,
+    "Code": "SILG",
+    "Population": "Silver Creek Golf"
+  },
+  {
+    "DU#": 345,
+    "Code": "SILG",
+    "Population": "Silver Creek Golf"
+  },
+  {
+    "DU#": 346,
+    "Code": "SILG",
+    "Population": "Silver Creek Golf"
+  },
+  {
+    "DU#": 347,
+    "Code": "SILG",
+    "Population": "Silver Creek Golf"
+  },
+  {
+    "DU#": 348,
+    "Code": "SILG",
+    "Population": "Silver Creek Golf"
+  },
+  {
+    "DU#": 349,
+    "Code": "SILG",
+    "Population": "Silver Creek Golf"
+  },
+  {
+    "DU#": 35,
+    "Code": "DUD",
+    "Population": "Dude Rock"
+  },
+  {
+    "DU#": 350,
+    "Code": "SILG",
+    "Population": "Silver Creek Golf"
+  },
+  {
+    "DU#": 351,
+    "Code": "SILG",
+    "Population": "Silver Creek Golf"
+  },
+  {
+    "DU#": 352,
+    "Code": "SILG",
+    "Population": "Silver Creek Golf"
+  },
+  {
+    "DU#": 353,
+    "Code": "SILG",
+    "Population": "Silver Creek Golf"
+  },
+  {
+    "DU#": 354,
+    "Code": "SILG",
+    "Population": "Silver Creek Golf"
+  },
+  {
+    "DU#": 355,
+    "Code": "SILG",
+    "Population": "Silver Creek Golf"
+  },
+  {
+    "DU#": 356,
+    "Code": "SILG",
+    "Population": "Silver Creek Golf"
+  },
+  {
+    "DU#": 357,
+    "Code": "SILG",
+    "Population": "Silver Creek Golf"
+  },
+  {
+    "DU#": 358,
+    "Code": "SILG",
+    "Population": "Silver Creek Golf"
+  },
+  {
+    "DU#": 359,
+    "Code": "SILG",
+    "Population": "Silver Creek Golf"
+  },
+  {
+    "DU#": 36,
+    "Code": "DUD",
+    "Population": "Dude Rock"
+  },
+  {
+    "DU#": 360,
+    "Code": "SILG",
+    "Population": "Silver Creek Golf"
+  },
+  {
+    "DU#": 361,
+    "Code": "SILG",
+    "Population": "Silver Creek Golf"
+  },
+  {
+    "DU#": 362,
+    "Code": "SILG",
+    "Population": "Silver Creek Golf"
+  },
+  {
+    "DU#": 363,
+    "Code": "SILG",
+    "Population": "Silver Creek Golf"
+  },
+  {
+    "DU#": 364,
+    "Code": "KIRT",
+    "Population": "KC Transect"
+  },
+  {
+    "DU#": 365,
+    "Code": "KIRT",
+    "Population": "KC Transect"
+  },
+  {
+    "DU#": 366,
+    "Code": "KIRT",
+    "Population": "KC Transect"
+  },
+  {
+    "DU#": 367,
+    "Code": "KIRT",
+    "Population": "KC Transect"
+  },
+  {
+    "DU#": 368,
+    "Code": "KIRT",
+    "Population": "KC Transect"
+  },
+  {
+    "DU#": 369,
+    "Code": "KIRT",
+    "Population": "KC Transect"
+  },
+  {
+    "DU#": 37,
+    "Code": "CY_SIE",
+    "Population": "Sierra Azule  (repeat)"
+  },
+  {
+    "DU#": 370,
+    "Code": "KIRT",
+    "Population": "KC Transect"
+  },
+  {
+    "DU#": 371,
+    "Code": "KIRT",
+    "Population": "KC Transect"
+  },
+  {
+    "DU#": 372,
+    "Code": "KIRT",
+    "Population": "KC Transect"
+  },
+  {
+    "DU#": 373,
+    "Code": "KIRT",
+    "Population": "KC Transect"
+  },
+  {
+    "DU#": 374,
+    "Code": "KIRT",
+    "Population": "KC Transect"
+  },
+  {
+    "DU#": 375,
+    "Code": "KIRT",
+    "Population": "KC Transect"
+  },
+  {
+    "DU#": 376,
+    "Code": "KIRT",
+    "Population": "KC Transect"
+  },
+  {
+    "DU#": 377,
+    "Code": "KIRT",
+    "Population": "KC Transect"
+  },
+  {
+    "DU#": 378,
+    "Code": "KIRT",
+    "Population": "KC Transect"
+  },
+  {
+    "DU#": 379,
+    "Code": "KIRT",
+    "Population": "KC Transect"
+  },
+  {
+    "DU#": 380,
+    "Code": "KIRT",
+    "Population": "KC Transect"
+  },
+  {
+    "DU#": 381,
+    "Code": "CROB",
+    "Population": "Crosp Bench"
+  },
+  {
+    "DU#": 382,
+    "Code": "CROB",
+    "Population": "Crosp Bench"
+  },
+  {
+    "DU#": 383,
+    "Code": "CROB",
+    "Population": "Crosp Bench"
+  },
+  {
+    "DU#": 384,
+    "Code": "CROB",
+    "Population": "Crosp Bench"
+  },
+  {
+    "DU#": 385,
+    "Code": "CROB",
+    "Population": "Crosp Bench"
+  },
+  {
+    "DU#": 386,
+    "Code": "CROB",
+    "Population": "Crosp Bench"
+  },
+  {
+    "DU#": 387,
+    "Code": "CROB",
+    "Population": "Crosp Bench"
+  },
+  {
+    "DU#": 388,
+    "Code": "CROB",
+    "Population": "Crosp Bench"
+  },
+  {
+    "DU#": 389,
+    "Code": "CROB",
+    "Population": "Crosp Bench"
+  },
+  {
+    "DU#": "38A",
+    "Code": "DUD",
+    "Population": "DUSE Dude Rock  (repeat)"
+  },
+  {
+    "DU#": "38B",
+    "Code": "DUD",
+    "Population": "Dude Rock"
+  },
+  {
+    "DU#": "38C",
+    "Code": "DUD",
+    "Population": "Dude Rock"
+  },
+  {
+    "DU#": "38D",
+    "Code": "DUD",
+    "Population": "Dude Rock"
+  },
+  {
+    "DU#": "38E",
+    "Code": "DUD",
+    "Population": "Dude Rock"
+  },
+  {
+    "DU#": "38F",
+    "Code": "DUD",
+    "Population": "Dude Rock"
+  },
+  {
+    "DU#": "38G",
+    "Code": "DUD",
+    "Population": "Dude Rock"
+  },
+  {
+    "DU#": 39,
+    "Code": "DUD",
+    "Population": "Dude Rock"
+  },
+  {
+    "DU#": 390,
+    "Code": "CROB",
+    "Population": "Crosp Bench"
+  },
+  {
+    "DU#": 391,
+    "Code": "CROB",
+    "Population": "Crosp Bench"
+  },
+  {
+    "DU#": 392,
+    "Code": "CROB",
+    "Population": "Crosp Bench"
+  },
+  {
+    "DU#": 393,
+    "Code": "CROB",
+    "Population": "Crosp Bench"
+  },
+  {
+    "DU#": 394,
+    "Code": "CROB",
+    "Population": "Crosp Bench"
+  },
+  {
+    "DU#": 395,
+    "Code": "CROB",
+    "Population": "Crosp Bench"
+  },
+  {
+    "DU#": 396,
+    "Code": "CROB",
+    "Population": "Crosp Bench"
+  },
+  {
+    "DU#": 397,
+    "Code": "CROT",
+    "Population": "CR (Dsp.) Transect"
+  },
+  {
+    "DU#": 398,
+    "Code": "CROT",
+    "Population": "CR (Dsp.) Transect"
+  },
+  {
+    "DU#": 399,
+    "Code": "CROT",
+    "Population": "CR (Dsp.) Transect"
+  },
+  {
+    "DU#": "3A",
+    "Code": "",
+    "Population": ""
+  },
+  {
+    "DU#": "3B",
+    "Code": "",
+    "Population": ""
+  },
+  {
+    "DU#": 40,
+    "Code": "DUD",
+    "Population": "Dude Rock"
+  },
+  {
+    "DU#": 400,
+    "Code": "CROT",
+    "Population": "CR (Dsp.) Transect"
+  },
+  {
+    "DU#": 401,
+    "Code": "CROT",
+    "Population": "CR (Dsp.) Transect"
+  },
+  {
+    "DU#": 402,
+    "Code": "CROT",
+    "Population": "CR (Dsp.) Transect"
+  },
+  {
+    "DU#": 403,
+    "Code": "CROT",
+    "Population": "CR (Dsp.) Transect"
+  },
+  {
+    "DU#": 404,
+    "Code": "CROT",
+    "Population": "CR (Dsp.) Transect"
+  },
+  {
+    "DU#": 405,
+    "Code": "CROT",
+    "Population": "CR (Dsp.) Transect"
+  },
+  {
+    "DU#": 406,
+    "Code": "CROT",
+    "Population": "CR (Dsp.) Transect"
+  },
+  {
+    "DU#": 407,
+    "Code": "CROT",
+    "Population": "CR (Dsp.) Transect"
+  },
+  {
+    "DU#": 408,
+    "Code": "CROT",
+    "Population": "CR (Dsp.) Transect"
+  },
+  {
+    "DU#": 409,
+    "Code": "CROT",
+    "Population": "CR (Dsp.) Transect"
+  },
+  {
+    "DU#": 41,
+    "Code": "UVAC",
+    "Population": "Little Uvas Creek  (repeat)"
+  },
+  {
+    "DU#": 410,
+    "Code": "CROT",
+    "Population": "CR (Dsp.) Transect"
+  },
+  {
+    "DU#": 411,
+    "Code": "CROT",
+    "Population": "CR (Dsp.) Transect"
+  },
+  {
+    "DU#": 412,
+    "Code": "CROT",
+    "Population": "CR (Dsp.) Transect"
+  },
+  {
+    "DU#": 413,
+    "Code": "CROT",
+    "Population": "CR (Dsp.) Transect"
+  },
+  {
+    "DU#": 414,
+    "Code": "CROT",
+    "Population": "CR (Dsp.) Transect"
+  },
+  {
+    "DU#": 415,
+    "Code": "CROT",
+    "Population": "CR (Dsp.) Transect"
+  },
+  {
+    "DU#": 416,
+    "Code": "CROT",
+    "Population": "CR (Dsp.) Transect"
+  },
+  {
+    "DU#": 417,
+    "Code": "CROT",
+    "Population": "CR (Dsp.) Transect"
+  },
+  {
+    "DU#": 418,
+    "Code": "CROT",
+    "Population": "CR (Dsp.) Transect"
+  },
+  {
+    "DU#": 419,
+    "Code": "CROT",
+    "Population": "CR (Dsp.) Transect"
+  },
+  {
+    "DU#": 42,
+    "Code": "TUL2",
+    "Population": "Dud Tulare Hill-2"
+  },
+  {
+    "DU#": 420,
+    "Code": "CROT",
+    "Population": "CR (Dsp.) Transect"
+  },
+  {
+    "DU#": 421,
+    "Code": "KIRN",
+    "Population": "Kirby N. Rd. Canyon"
+  },
+  {
+    "DU#": 422,
+    "Code": "KIRN",
+    "Population": "Kirby N. Rd. Canyon"
+  },
+  {
+    "DU#": 423,
+    "Code": "KIRN",
+    "Population": "Kirby N. Rd. Canyon"
+  },
+  {
+    "DU#": 424,
+    "Code": "KIRN",
+    "Population": "Kirby N. Rd. Canyon"
+  },
+  {
+    "DU#": 425,
+    "Code": "KIRN",
+    "Population": "Kirby N. Rd. Canyon"
+  },
+  {
+    "DU#": 426,
+    "Code": "KIRN",
+    "Population": "Kirby N. Rd. Canyon"
+  },
+  {
+    "DU#": 427,
+    "Code": "KIRN",
+    "Population": "Kirby N. Rd. Canyon"
+  },
+  {
+    "DU#": 428,
+    "Code": "KIRN",
+    "Population": "Kirby N. Rd. Canyon"
+  },
+  {
+    "DU#": 429,
+    "Code": "KIRN",
+    "Population": "Kirby N. Rd. Canyon"
+  },
+  {
+    "DU#": 43,
+    "Code": "DUD",
+    "Population": "Dude Rock (24-261 color)"
+  },
+  {
+    "DU#": 430,
+    "Code": "KIRN",
+    "Population": "Kirby N. Rd. Canyon"
+  },
+  {
+    "DU#": 431,
+    "Code": "KIRN",
+    "Population": "Kirby N. Rd. Canyon"
+  },
+  {
+    "DU#": 432,
+    "Code": "KIRN",
+    "Population": "Kirby N. Rd. Canyon"
+  },
+  {
+    "DU#": 433,
+    "Code": "KIRN",
+    "Population": "Kirby N. Rd. Canyon"
+  },
+  {
+    "DU#": 434,
+    "Code": "KIRN",
+    "Population": "Kirby N. Rd. Canyon"
+  },
+  {
+    "DU#": 435,
+    "Code": "KIRN",
+    "Population": "Kirby N. Rd. Canyon"
+  },
+  {
+    "DU#": 436,
+    "Code": "KIRN",
+    "Population": "Kirby N. Rd. Canyon"
+  },
+  {
+    "DU#": 437,
+    "Code": "KIRN",
+    "Population": "Kirby N. Rd. Canyon"
+  },
+  {
+    "DU#": 438,
+    "Code": "KIRN",
+    "Population": "Kirby N. Rd. Canyon"
+  },
+  {
+    "DU#": 439,
+    "Code": "KIRN",
+    "Population": "Kirby N. Rd. Canyon"
+  },
+  {
+    "DU#": 44,
+    "Code": "CROM",
+    "Population": "Crosp Mid-Elev. Transect  (repeat)"
+  },
+  {
+    "DU#": 440,
+    "Code": "KIRN",
+    "Population": "Kirby N. Rd. Canyon"
+  },
+  {
+    "DU#": 441,
+    "Code": "KIRN",
+    "Population": "Kirby N. Rd. Canyon"
+  },
+  {
+    "DU#": 442,
+    "Code": "KIRN",
+    "Population": "Kirby N. Rd. Canyon"
+  },
+  {
+    "DU#": 443,
+    "Code": "KIRN",
+    "Population": "Kirby N. Rd. Canyon"
+  },
+  {
+    "DU#": 444,
+    "Code": "KIRN",
+    "Population": "Kirby N. Rd. Canyon"
+  },
+  {
+    "DU#": 445,
+    "Code": "CY_SIE",
+    "Population": "Sierra Azule"
+  },
+  {
+    "DU#": 446,
+    "Code": "CY_SIE",
+    "Population": "Sierra Azule"
+  },
+  {
+    "DU#": 447,
+    "Code": "CY_SIE",
+    "Population": "Sierra Azule"
+  },
+  {
+    "DU#": 448,
+    "Code": "CY_SIE",
+    "Population": "Sierra Azule"
+  },
+  {
+    "DU#": 449,
+    "Code": "CY_SIE",
+    "Population": "Sierra Azule"
+  },
+  {
+    "DU#": 45,
+    "Code": "STI",
+    "Population": "Stiles Ranch"
+  },
+  {
+    "DU#": 450,
+    "Code": "CY_SIE",
+    "Population": "Sierra Azule"
+  },
+  {
+    "DU#": 451,
+    "Code": "CY_SIE",
+    "Population": "Sierra Azule"
+  },
+  {
+    "DU#": 452,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 453,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 454,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 455,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 456,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 457,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 458,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 459,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 46,
+    "Code": "STI",
+    "Population": "Stiles Ranch"
+  },
+  {
+    "DU#": 460,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 461,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 462,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 463,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 464,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 465,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 466,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 467,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 468,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 469,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 47,
+    "Code": "STI",
+    "Population": "Stiles Ranch"
+  },
+  {
+    "DU#": 470,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 471,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 472,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 473,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 474,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 475,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 476,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 477,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 478,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 479,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 48,
+    "Code": "STI",
+    "Population": "Stiles Ranch"
+  },
+  {
+    "DU#": 480,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 481,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 482,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 483,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 484,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 485,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 486,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 487,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 488,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 489,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 49,
+    "Code": "STI",
+    "Population": "Stiles Ranch"
+  },
+  {
+    "DU#": 490,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 491,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 492,
+    "Code": "TULT",
+    "Population": "TH- Transect"
+  },
+  {
+    "DU#": 493,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 494,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 495,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 496,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 497,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 498,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 499,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": "4A",
+    "Code": "DUD",
+    "Population": "Dude Rock"
+  },
+  {
+    "DU#": "4B",
+    "Code": "",
+    "Population": ""
+  },
+  {
+    "DU#": 50,
+    "Code": "STI",
+    "Population": "Stiles Ranch"
+  },
+  {
+    "DU#": 500,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 501,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 502,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 503,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 504,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 505,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 506,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 507,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 508,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 509,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 51,
+    "Code": "STI",
+    "Population": "Stiles Ranch"
+  },
+  {
+    "DU#": 510,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 511,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 512,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 513,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 514,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 515,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 516,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 517,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 518,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 519,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 52,
+    "Code": "STI",
+    "Population": "Stiles Ranch"
+  },
+  {
+    "DU#": 520,
+    "Code": "TUL2",
+    "Population": "TH Clone site 2"
+  },
+  {
+    "DU#": 521,
+    "Code": "RIC",
+    "Population": "Richmond Ranch Lone Coffee berry Seep"
+  },
+  {
+    "DU#": 522,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 523,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 524,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 525,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 526,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 527,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 528,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 529,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 53,
+    "Code": "STI",
+    "Population": "Stiles Ranch"
+  },
+  {
+    "DU#": 530,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 531,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 532,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 533,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 534,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 535,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 536,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 537,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 538,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 539,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 54,
+    "Code": "STI",
+    "Population": "Stiles Ranch"
+  },
+  {
+    "DU#": 540,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 541,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 542,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 543,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 544,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 545,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 546,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 547,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 548,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 549,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 55,
+    "Code": "STI",
+    "Population": "Stiles Ranch"
+  },
+  {
+    "DU#": 550,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 551,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 552,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 553,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 554,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 555,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 556,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 557,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 558,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 559,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 56,
+    "Code": "STI",
+    "Population": "Stiles Ranch"
+  },
+  {
+    "DU#": 560,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 561,
+    "Code": "CY_RED",
+    "Population": "Redwood Gulch"
+  },
+  {
+    "DU#": 562,
+    "Code": "CY_RED",
+    "Population": "Redwood Gulch"
+  },
+  {
+    "DU#": 563,
+    "Code": "CY_RED",
+    "Population": "Redwood Gulch"
+  },
+  {
+    "DU#": 564,
+    "Code": "CY_RED",
+    "Population": "Redwood Gulch"
+  },
+  {
+    "DU#": 565,
+    "Code": "CY_RED",
+    "Population": "Redwood Gulch"
+  },
+  {
+    "DU#": 566,
+    "Code": "CY_RED",
+    "Population": "Redwood Gulch"
+  },
+  {
+    "DU#": 567,
+    "Code": "CY_RED",
+    "Population": "Redwood Gulch"
+  },
+  {
+    "DU#": 568,
+    "Code": "CY_RED",
+    "Population": "Redwood Gulch"
+  },
+  {
+    "DU#": 569,
+    "Code": "CY_RED",
+    "Population": "Redwood Gulch"
+  },
+  {
+    "DU#": 57,
+    "Code": "STI",
+    "Population": "Stiles Ranch"
+  },
+  {
+    "DU#": 570,
+    "Code": "CY_RED",
+    "Population": "Redwood Gulch"
+  },
+  {
+    "DU#": 571,
+    "Code": "CY_RED",
+    "Population": "Redwood Gulch"
+  },
+  {
+    "DU#": 572,
+    "Code": "CY_RED",
+    "Population": "Redwood Gulch"
+  },
+  {
+    "DU#": 573,
+    "Code": "CY_RED",
+    "Population": "Redwood Gulch"
+  },
+  {
+    "DU#": 574,
+    "Code": "CY_BGL",
+    "Population": "Below Green Lake"
+  },
+  {
+    "DU#": 575,
+    "Code": "—",
+    "Population": "Mormon Trail"
+  },
+  {
+    "DU#": 576,
+    "Code": "—",
+    "Population": "Mormon Trail"
+  },
+  {
+    "DU#": 577,
+    "Code": "CY_BGL",
+    "Population": "Below Green Lake"
+  },
+  {
+    "DU#": 578,
+    "Code": "CY_BGL",
+    "Population": "Below Green Lake"
+  },
+  {
+    "DU#": 579,
+    "Code": "—",
+    "Population": "San Bernardino Oak Glen"
+  },
+  {
+    "DU#": 58,
+    "Code": "STI",
+    "Population": "Stiles Ranch"
+  },
+  {
+    "DU#": 580,
+    "Code": "—",
+    "Population": "San Bernardino"
+  },
+  {
+    "DU#": 581,
+    "Code": "—",
+    "Population": "San Bernardino Monkey Falls"
+  },
+  {
+    "DU#": 582,
+    "Code": "",
+    "Population": "Big Falls"
+  },
+  {
+    "DU#": 583,
+    "Code": "ABAB_MAD",
+    "Population": "Madonna Inn"
+  },
+  {
+    "DU#": 584,
+    "Code": "ABAB_MAD",
+    "Population": "Madonna Inn"
+  },
+  {
+    "DU#": 585,
+    "Code": "ABAB_MAD",
+    "Population": "Madonna Inn"
+  },
+  {
+    "DU#": 586,
+    "Code": "ABAB_MAD",
+    "Population": "Madonna Inn"
+  },
+  {
+    "DU#": 587,
+    "Code": "ABAB_MAD",
+    "Population": "Madonna Inn"
+  },
+  {
+    "DU#": 588,
+    "Code": "ABAB_MAD",
+    "Population": "Madonna Inn"
+  },
+  {
+    "DU#": 589,
+    "Code": "ABAB_MAD",
+    "Population": "Madonna Inn"
+  },
+  {
+    "DU#": 59,
+    "Code": "STI",
+    "Population": "Stiles Ranch"
+  },
+  {
+    "DU#": 590,
+    "Code": "ABAB_MAD",
+    "Population": "Madonna Inn"
+  },
+  {
+    "DU#": 591,
+    "Code": "ABAB_MAD",
+    "Population": "Madonna Inn"
+  },
+  {
+    "DU#": 592,
+    "Code": "ABAB_MAD",
+    "Population": "Madonna Inn"
+  },
+  {
+    "DU#": 593,
+    "Code": "ABAB_MAD",
+    "Population": "Madonna Inn"
+  },
+  {
+    "DU#": 594,
+    "Code": "ABAB_MAD",
+    "Population": "Madonna Inn"
+  },
+  {
+    "DU#": 595,
+    "Code": "ABAB_MAD",
+    "Population": "Madonna Inn"
+  },
+  {
+    "DU#": 596,
+    "Code": "ABAB_MAD",
+    "Population": "Madonna Inn"
+  },
+  {
+    "DU#": 597,
+    "Code": "ABAB_MAD",
+    "Population": "Madonna Inn"
+  },
+  {
+    "DU#": 598,
+    "Code": "ABAB_MAD",
+    "Population": "Madonna Inn"
+  },
+  {
+    "DU#": 599,
+    "Code": "ABAB_JUL",
+    "Population": "Julian"
+  },
+  {
+    "DU#": "5A",
+    "Code": "",
+    "Population": ""
+  },
+  {
+    "DU#": "5B",
+    "Code": "",
+    "Population": ""
+  },
+  {
+    "DU#": 60,
+    "Code": "STI",
+    "Population": "Stiles Ranch"
+  },
+  {
+    "DU#": 600,
+    "Code": "ABAB_JUL",
+    "Population": "Julian"
+  },
+  {
+    "DU#": 601,
+    "Code": "ABAB_JUL",
+    "Population": "Julian"
+  },
+  {
+    "DU#": 602,
+    "Code": "CY_BAL",
+    "Population": "Baldwih lake"
+  },
+  {
+    "DU#": 603,
+    "Code": "CY_BAL",
+    "Population": "Baldwih lake"
+  },
+  {
+    "DU#": 604,
+    "Code": "CY_BAL",
+    "Population": "Baldwih lake"
+  },
+  {
+    "DU#": 605,
+    "Code": "CY_CAS",
+    "Population": "Castle Rock Falls"
+  },
+  {
+    "DU#": 606,
+    "Code": "CY_CAS",
+    "Population": "Castle Rock Falls"
+  },
+  {
+    "DU#": 607,
+    "Code": "CY_CAS",
+    "Population": "Castle Rock Falls"
+  },
+  {
+    "DU#": 607,
+    "Code": "CY_CAS",
+    "Population": "Castle Rock Falls"
+  },
+  {
+    "DU#": 608,
+    "Code": "CY_CAS",
+    "Population": "Castle Rock Falls"
+  },
+  {
+    "DU#": 608,
+    "Code": "CY_CAS",
+    "Population": "Castle Rock Falls"
+  },
+  {
+    "DU#": 609,
+    "Code": "CY_CAS",
+    "Population": "Castle Rock Falls"
+  },
+  {
+    "DU#": 609,
+    "Code": "CY_CAS",
+    "Population": "Castle Rock Falls"
+  },
+  {
+    "DU#": 61,
+    "Code": "STI",
+    "Population": "Stiles Ranch"
+  },
+  {
+    "DU#": 610,
+    "Code": "CY_CAS",
+    "Population": "Castle Rock Falls"
+  },
+  {
+    "DU#": 611,
+    "Code": "CY_CAS",
+    "Population": "Castle Rock Falls"
+  },
+  {
+    "DU#": 612,
+    "Code": "CY_HICN",
+    "Population": "Hick's Road North"
+  },
+  {
+    "DU#": 612,
+    "Code": "CY_HICN",
+    "Population": "Hick's Road North"
+  },
+  {
+    "DU#": 613,
+    "Code": "CY_HICN",
+    "Population": "Hick's Road North"
+  },
+  {
+    "DU#": 613,
+    "Code": "CY_HICN",
+    "Population": "Hick's Road North"
+  },
+  {
+    "DU#": 614,
+    "Code": "CY_HICN",
+    "Population": "Hick's Road North"
+  },
+  {
+    "DU#": 615,
+    "Code": "CY_HICN",
+    "Population": "Hick's Road North"
+  },
+  {
+    "DU#": 615,
+    "Code": "CY_HICN",
+    "Population": "Hick's Road North"
+  },
+  {
+    "DU#": 616,
+    "Code": "CY_HICN",
+    "Population": "Hick's Road North"
+  },
+  {
+    "DU#": 616,
+    "Code": "CY_HICN",
+    "Population": "Hick's Road North"
+  },
+  {
+    "DU#": 617,
+    "Code": "CY_HICN",
+    "Population": "Hick's Road North"
+  },
+  {
+    "DU#": 618,
+    "Code": "CY_HICN",
+    "Population": "Hick's Road North"
+  },
+  {
+    "DU#": 619,
+    "Code": "CY_HICN",
+    "Population": "Hick's Road North"
+  },
+  {
+    "DU#": 62,
+    "Code": "STI",
+    "Population": "Stiles Ranch"
+  },
+  {
+    "DU#": 620,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 621,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 622,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 623,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 624,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 625,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 626,
+    "Code": "RIC",
+    "Population": "Richmond Ranch"
+  },
+  {
+    "DU#": 627,
+    "Code": "QUI2",
+    "Population": "Quicklsilver SE Mine Hill Tr. #2"
+  },
+  {
+    "DU#": 628,
+    "Code": "QUI2",
+    "Population": "Quicklsilver SE Mine Hill Tr. #2"
+  },
+  {
+    "DU#": 629,
+    "Code": "QUI2",
+    "Population": "Quicklsilver SE Mine Hill Tr. #2"
+  },
+  {
+    "DU#": 63,
+    "Code": "STI",
+    "Population": "Stiles Ranch"
+  },
+  {
+    "DU#": 630,
+    "Code": "QUI2",
+    "Population": "Quicklsilver SE Mine Hill Tr. #2"
+  },
+  {
+    "DU#": 631,
+    "Code": "QUI2",
+    "Population": "Quicklsilver SE Mine Hill Tr. #2"
+  },
+  {
+    "DU#": 632,
+    "Code": "QUI2",
+    "Population": "Quicklsilver SE Mine Hill Tr. #2"
+  },
+  {
+    "DU#": 633,
+    "Code": "QUI2",
+    "Population": "Quicklsilver SE Mine Hill Tr. #2"
+  },
+  {
+    "DU#": 634,
+    "Code": "QUI2",
+    "Population": "Quicklsilver SE Mine Hill Tr. #2"
+  },
+  {
+    "DU#": 635,
+    "Code": "QUI2",
+    "Population": "Quicklsilver SE Mine Hill Tr. #2"
+  },
+  {
+    "DU#": 636,
+    "Code": "QUI2",
+    "Population": "Quicklsilver SE Mine Hill Tr. #2"
+  },
+  {
+    "DU#": 637,
+    "Code": "QUI2",
+    "Population": "Quicklsilver SE Mine Hill Tr. #2"
+  },
+  {
+    "DU#": 638,
+    "Code": "QUI2",
+    "Population": "Quicklsilver SE Mine Hill Tr. #2"
+  },
+  {
+    "DU#": 639,
+    "Code": "QUI2",
+    "Population": "Quicklsilver SE Mine Hill Tr. #2"
+  },
+  {
+    "DU#": 64,
+    "Code": "DAN",
+    "Population": "Dana Rock"
+  },
+  {
+    "DU#": 640,
+    "Code": "QUI2",
+    "Population": "Quicklsilver SE Mine Hill Tr. #2"
+  },
+  {
+    "DU#": 641,
+    "Code": "QUI2",
+    "Population": "Quicklsilver SE Mine Hill Tr. #2"
+  },
+  {
+    "DU#": 642,
+    "Code": "QUI2",
+    "Population": "Quicklsilver SE Mine Hill Tr. #2"
+  },
+  {
+    "DU#": 643,
+    "Code": "QUI2",
+    "Population": "Quicklsilver SE Mine Hill Tr. #2"
+  },
+  {
+    "DU#": 644,
+    "Code": "QUI2",
+    "Population": "Quicklsilver SE Mine Hill Tr. #2"
+  },
+  {
+    "DU#": 645,
+    "Code": "QUI2",
+    "Population": "Quicklsilver SE Mine Hill Tr. #2"
+  },
+  {
+    "DU#": 646,
+    "Code": "QUI2",
+    "Population": "Quicklsilver SE Mine Hill Tr. #2"
+  },
+  {
+    "DU#": 647,
+    "Code": "QUI2",
+    "Population": "Quicklsilver SE Mine Hill Tr. #2"
+  },
+  {
+    "DU#": 648,
+    "Code": "QUI1",
+    "Population": "Quicklsilver SE Mine Hill Tr. #1"
+  },
+  {
+    "DU#": 649,
+    "Code": "QUI1",
+    "Population": "Quicklsilver SE Mine Hill Tr. #1"
+  },
+  {
+    "DU#": 65,
+    "Code": "DAN",
+    "Population": "Dana Rock"
+  },
+  {
+    "DU#": 650,
+    "Code": "QUI1",
+    "Population": "Quicklsilver SE Mine Hill Tr. #1"
+  },
+  {
+    "DU#": 651,
+    "Code": "QUI1",
+    "Population": "Quicklsilver SE Mine Hill Tr. #1"
+  },
+  {
+    "DU#": 652,
+    "Code": "QUI1",
+    "Population": "Quicklsilver SE Mine Hill Tr. #1"
+  },
+  {
+    "DU#": 653,
+    "Code": "QUI1",
+    "Population": "Quicklsilver SE Mine Hill Tr. #1"
+  },
+  {
+    "DU#": 654,
+    "Code": "QUI1",
+    "Population": "Quicklsilver SE Mine Hill Tr. #1"
+  },
+  {
+    "DU#": 655,
+    "Code": "QUI1",
+    "Population": "Quicklsilver SE Mine Hill Tr. #1"
+  },
+  {
+    "DU#": 656,
+    "Code": "QUI1",
+    "Population": "Quicklsilver SE Mine Hill Tr. #1"
+  },
+  {
+    "DU#": 657,
+    "Code": "QUI1",
+    "Population": "Quicklsilver SE Mine Hill Tr. #1"
+  },
+  {
+    "DU#": 658,
+    "Code": "QUI1",
+    "Population": "Quicklsilver SE Mine Hill Tr. #1"
+  },
+  {
+    "DU#": 659,
+    "Code": "QUI1",
+    "Population": "Quicklsilver SE Mine Hill Tr. #1"
+  },
+  {
+    "DU#": 66,
+    "Code": "DAN",
+    "Population": "Dana Rock"
+  },
+  {
+    "DU#": 660,
+    "Code": "QUI1",
+    "Population": "Quicklsilver SE Mine Hill Tr. #1"
+  },
+  {
+    "DU#": 661,
+    "Code": "QUI1",
+    "Population": "Quicklsilver SE Mine Hill Tr. #1"
+  },
+  {
+    "DU#": 662,
+    "Code": "QUI1",
+    "Population": "Quicklsilver SE Mine Hill Tr. #1"
+  },
+  {
+    "DU#": 663,
+    "Code": "QUI1",
+    "Population": "Quicklsilver SE Mine Hill Tr. #1"
+  },
+  {
+    "DU#": 664,
+    "Code": "CY_WOO",
+    "Population": "Hicks & Woods Rd."
+  },
+  {
+    "DU#": 665,
+    "Code": "CY_WOO",
+    "Population": "Hicks & Woods Rd."
+  },
+  {
+    "DU#": 667,
+    "Code": "CY_WOO",
+    "Population": "Hicks & Woods Rd."
+  },
+  {
+    "DU#": 668,
+    "Code": "CY_WOO",
+    "Population": "Hicks & Woods Rd."
+  },
+  {
+    "DU#": 669,
+    "Code": "CY_WOO",
+    "Population": "Hicks & Woods Rd."
+  },
+  {
+    "DU#": 67,
+    "Code": "DAN",
+    "Population": "Dana Rock"
+  },
+  {
+    "DU#": 675,
+    "Code": "CY_WOO",
+    "Population": "Hicks & Woods Rd."
+  },
+  {
+    "DU#": 676,
+    "Code": "CY_WOO",
+    "Population": "Hicks & Woods Rd."
+  },
+  {
+    "DU#": 68,
+    "Code": "DAN",
+    "Population": "Dana Rock"
+  },
+  {
+    "DU#": 680,
+    "Code": "CY_WOO",
+    "Population": "Hicks & Woods Rd."
+  },
+  {
+    "DU#": 683,
+    "Code": "CY_HUN",
+    "Population": "Hunting Hollow"
+  },
+  {
+    "DU#": 684,
+    "Code": "CY_HUN",
+    "Population": "Hunting Hollow"
+  },
+  {
+    "DU#": 685,
+    "Code": "CY_HUN",
+    "Population": "Hunting Hollow"
+  },
+  {
+    "DU#": 686,
+    "Code": "CY_HUN",
+    "Population": "Hunting Hollow"
+  },
+  {
+    "DU#": 687,
+    "Code": "CY_HUN",
+    "Population": "Hunting Hollow"
+  },
+  {
+    "DU#": 688,
+    "Code": "CY_HUN",
+    "Population": "Hunting Hollow"
+  },
+  {
+    "DU#": 689,
+    "Code": "CY_HUN",
+    "Population": "Hunting Hollow"
+  },
+  {
+    "DU#": 69,
+    "Code": "DAN",
+    "Population": "Dana Rock"
+  },
+  {
+    "DU#": 690,
+    "Code": "CY_HUN",
+    "Population": "Hunting Hollow"
+  },
+  {
+    "DU#": 691,
+    "Code": "CY_HUN",
+    "Population": "Hunting Hollow"
+  },
+  {
+    "DU#": 692,
+    "Code": "CY_HUN",
+    "Population": "Hunting Hollow"
+  },
+  {
+    "DU#": 693,
+    "Code": "CY_HUN",
+    "Population": "Hunting Hollow"
+  },
+  {
+    "DU#": 694,
+    "Code": "CY_HUN",
+    "Population": "Hunting Hollow"
+  },
+  {
+    "DU#": 695,
+    "Code": "CY_HUN",
+    "Population": "Hunting Hollow"
+  },
+  {
+    "DU#": 696,
+    "Code": "CY_HUN",
+    "Population": "Hunting Hollow"
+  },
+  {
+    "DU#": 697,
+    "Code": "CY_HUN",
+    "Population": "Hunting Hollow"
+  },
+  {
+    "DU#": 698,
+    "Code": "CY_HUN",
+    "Population": "Hunting Hollow"
+  },
+  {
+    "DU#": 699,
+    "Code": "CY_HUN",
+    "Population": "Hunting Hollow"
+  },
+  {
+    "DU#": "6A",
+    "Code": "",
+    "Population": ""
+  },
+  {
+    "DU#": "6B",
+    "Code": "",
+    "Population": ""
+  },
+  {
+    "DU#": 7,
+    "Code": "RSV",
+    "Population": "Rancho San Vicente"
+  },
+  {
+    "DU#": 70,
+    "Code": "DAN",
+    "Population": "Dana Rock"
+  },
+  {
+    "DU#": 700,
+    "Code": "CY_HUN",
+    "Population": "Hunting Hollow"
+  },
+  {
+    "DU#": 701,
+    "Code": "CY_HUN",
+    "Population": "Hunting Hollow"
+  },
+  {
+    "DU#": 702,
+    "Code": "CY_HUN",
+    "Population": "Hunting Hollow"
+  },
+  {
+    "DU#": 703,
+    "Code": "COM",
+    "Population": "Communication Hill"
+  },
+  {
+    "DU#": 704,
+    "Code": "COM",
+    "Population": "Communication Hill"
+  },
+  {
+    "DU#": 705,
+    "Code": "COM",
+    "Population": "Communication Hill"
+  },
+  {
+    "DU#": 706,
+    "Code": "COM",
+    "Population": "Communication Hill"
+  },
+  {
+    "DU#": 707,
+    "Code": "COM",
+    "Population": "Communication Hill"
+  },
+  {
+    "DU#": 708,
+    "Code": "COM",
+    "Population": "Communication Hill"
+  },
+  {
+    "DU#": 709,
+    "Code": "COM",
+    "Population": "Communication Hill"
+  },
+  {
+    "DU#": 71,
+    "Code": "DAN",
+    "Population": "Dana Rock"
+  },
+  {
+    "DU#": 710,
+    "Code": "COM",
+    "Population": "Communication Hill"
+  },
+  {
+    "DU#": 711,
+    "Code": "COM",
+    "Population": "Communication Hill"
+  },
+  {
+    "DU#": 712,
+    "Code": "COM",
+    "Population": "Communication Hill"
+  },
+  {
+    "DU#": 713,
+    "Code": "COM",
+    "Population": "Communication Hill"
+  },
+  {
+    "DU#": 714,
+    "Code": "COM",
+    "Population": "Communication Hill"
+  },
+  {
+    "DU#": 715,
+    "Code": "COM",
+    "Population": "Communication Hill"
+  },
+  {
+    "DU#": 716,
+    "Code": "COM",
+    "Population": "Communication Hill"
+  },
+  {
+    "DU#": 717,
+    "Code": "SILR",
+    "Population": "Silver Creek Valley Rd. + Razorback + water tower"
+  },
+  {
+    "DU#": 718,
+    "Code": "SILR",
+    "Population": "Silver Creek Valley Rd. + Razorback + water tower"
+  },
+  {
+    "DU#": 719,
+    "Code": "SILR",
+    "Population": "Silver Creek Valley Rd. + Razorback + water tower"
+  },
+  {
+    "DU#": 72,
+    "Code": "DAN",
+    "Population": "Dana Rock"
+  },
+  {
+    "DU#": 720,
+    "Code": "SILR",
+    "Population": "Silver Creek Valley Rd. + Razorback + water tower"
+  },
+  {
+    "DU#": 721,
+    "Code": "SILR",
+    "Population": "Silver Creek Valley Rd. + Razorback + water tower"
+  },
+  {
+    "DU#": 722,
+    "Code": "SILR",
+    "Population": "Silver Creek Valley Rd. + Razorback + water tower"
+  },
+  {
+    "DU#": 723,
+    "Code": "SILR",
+    "Population": "Silver Creek Valley Rd. + Razorback + water tower"
+  },
+  {
+    "DU#": 724,
+    "Code": "SILR",
+    "Population": "Silver Creek Valley Rd. + Razorback + water tower"
+  },
+  {
+    "DU#": 725,
+    "Code": "SILR",
+    "Population": "Silver Creek Valley Rd. + Razorback + water tower"
+  },
+  {
+    "DU#": 726,
+    "Code": "SILR",
+    "Population": "Silver Creek Valley Rd. + Razorback + water tower"
+  },
+  {
+    "DU#": 727,
+    "Code": "SILR",
+    "Population": "Silver Creek Valley Rd. + Razorback + water tower"
+  },
+  {
+    "DU#": 728,
+    "Code": "SILR",
+    "Population": "Silver Creek Valley Rd. + Razorback + water tower"
+  },
+  {
+    "DU#": 729,
+    "Code": "SILR",
+    "Population": "Silver Creek Valley Rd. + Razorback + water tower"
+  },
+  {
+    "DU#": 73,
+    "Code": "DAN",
+    "Population": "Dana Rock"
+  },
+  {
+    "DU#": 730,
+    "Code": "SILR",
+    "Population": "Silver Creek Valley Rd. + Razorback + water tower"
+  },
+  {
+    "DU#": 731,
+    "Code": "SILR",
+    "Population": "Silver Creek Valley Rd. + Razorback + water tower"
+  },
+  {
+    "DU#": 732,
+    "Code": "SILR",
+    "Population": "Silver Creek Valley Rd. + Razorback + water tower"
+  },
+  {
+    "DU#": 733,
+    "Code": "SILR",
+    "Population": "Silver Creek Valley Rd. + Razorback + water tower"
+  },
+  {
+    "DU#": 734,
+    "Code": "SILR",
+    "Population": "Silver Creek Valley Rd. + Razorback + water tower"
+  },
+  {
+    "DU#": 735,
+    "Code": "SILR",
+    "Population": "Silver Creek Valley Rd. + Razorback + water tower"
+  },
+  {
+    "DU#": 736,
+    "Code": "SILR",
+    "Population": "Silver Creek Valley Rd. + Razorback + water tower"
+  },
+  {
+    "DU#": 737,
+    "Code": "CY_BOU",
+    "Population": "Boulder Ridge"
+  },
+  {
+    "DU#": 738,
+    "Code": "CY_BOU",
+    "Population": "Boulder Ridge"
+  },
+  {
+    "DU#": 739,
+    "Code": "CY_BOU",
+    "Population": "Boulder Ridge"
+  },
+  {
+    "DU#": 74,
+    "Code": "DAN",
+    "Population": "Dana Rock"
+  },
+  {
+    "DU#": 740,
+    "Code": "CY_BOU",
+    "Population": "Boulder Ridge"
+  },
+  {
+    "DU#": 741,
+    "Code": "CY_BOU",
+    "Population": "Boulder Ridge"
+  },
+  {
+    "DU#": 742,
+    "Code": "CY_BOU",
+    "Population": "Boulder Ridge"
+  },
+  {
+    "DU#": 743,
+    "Code": "CY_BOU",
+    "Population": "Boulder Ridge"
+  },
+  {
+    "DU#": 744,
+    "Code": "CY_BOU",
+    "Population": "Boulder Ridge"
+  },
+  {
+    "DU#": 745,
+    "Code": "CY_BOU",
+    "Population": "Boulder Ridge"
+  },
+  {
+    "DU#": 746,
+    "Code": "CY_BOU",
+    "Population": "Boulder Ridge"
+  },
+  {
+    "DU#": 747,
+    "Code": "CY_BOU",
+    "Population": "Boulder Ridge"
+  },
+  {
+    "DU#": 748,
+    "Code": "CY_BOU",
+    "Population": "Boulder Ridge"
+  },
+  {
+    "DU#": 749,
+    "Code": "CY_BOU",
+    "Population": "Boulder Ridge"
+  },
+  {
+    "DU#": 75,
+    "Code": "DAN",
+    "Population": "Dana Rock"
+  },
+  {
+    "DU#": 750,
+    "Code": "CY_BOU",
+    "Population": "Boulder Ridge"
+  },
+  {
+    "DU#": 751,
+    "Code": "CY_BOU",
+    "Population": "Boulder Ridge"
+  },
+  {
+    "DU#": 752,
+    "Code": "CY_BOU",
+    "Population": "Boulder Ridge"
+  },
+  {
+    "DU#": 753,
+    "Code": "CY_BOU",
+    "Population": "Boulder Ridge"
+  },
+  {
+    "DU#": 754,
+    "Code": "CY_BOU",
+    "Population": "Boulder Ridge"
+  },
+  {
+    "DU#": 755,
+    "Code": "CY_BOU",
+    "Population": "Boulder Ridge"
+  },
+  {
+    "DU#": 756,
+    "Code": "CY_BOU",
+    "Population": "Boulder Ridge"
+  },
+  {
+    "DU#": 757,
+    "Code": "CY_HICS",
+    "Population": "Hicks Rd. South"
+  },
+  {
+    "DU#": 758,
+    "Code": "CY_HICS",
+    "Population": "Hicks Rd. South"
+  },
+  {
+    "DU#": 759,
+    "Code": "CY_HICS",
+    "Population": "Hicks Rd. South"
+  },
+  {
+    "DU#": 76,
+    "Code": "DAN",
+    "Population": "Dana Rock"
+  },
+  {
+    "DU#": 760,
+    "Code": "CY_HICS",
+    "Population": "Hicks Rd. South"
+  },
+  {
+    "DU#": 761,
+    "Code": "CY_HICS",
+    "Population": "Hicks Rd. South"
+  },
+  {
+    "DU#": 762,
+    "Code": "CY_HICS",
+    "Population": "Hicks Rd. South"
+  },
+  {
+    "DU#": 763,
+    "Code": "CY_HICS",
+    "Population": "Hicks Rd. South"
+  },
+  {
+    "DU#": 764,
+    "Code": "CY_HICS",
+    "Population": "Hicks Rd. South"
+  },
+  {
+    "DU#": 765,
+    "Code": "CY_HICS",
+    "Population": "Hicks Rd. South"
+  },
+  {
+    "DU#": 766,
+    "Code": "CY_HICS",
+    "Population": "Hicks Rd. South"
+  },
+  {
+    "DU#": 767,
+    "Code": "CY_ALA",
+    "Population": "Los Alanitos Dam"
+  },
+  {
+    "DU#": 768,
+    "Code": "CY_ALA",
+    "Population": "Los Alanitos Dam"
+  },
+  {
+    "DU#": 769,
+    "Code": "CY_ALA",
+    "Population": "Los Alanitos Dam"
+  },
+  {
+    "DU#": 769,
+    "Code": "CY_ALA",
+    "Population": "Los Alanitos Dam"
+  },
+  {
+    "DU#": 77,
+    "Code": "DAN",
+    "Population": "Dana Rock"
+  },
+  {
+    "DU#": 770,
+    "Code": "ABMU_HOR",
+    "Population": "Horse Canyon (SLO)"
+  },
+  {
+    "DU#": 770,
+    "Code": "ABMU_HOR",
+    "Population": "Horse Canyon (SLO)"
+  },
+  {
+    "DU#": 771,
+    "Code": "ABMU_HOR",
+    "Population": "Horse Canyon (SLO)"
+  },
+  {
+    "DU#": 771,
+    "Code": "ABMU_HOR",
+    "Population": "Horse Canyon (SLO)"
+  },
+  {
+    "DU#": 772,
+    "Code": "ABMU_HOR",
+    "Population": "Horse Canyon (SLO)"
+  },
+  {
+    "DU#": 772,
+    "Code": "ABMU_HOR",
+    "Population": "Horse Canyon (SLO)"
+  },
+  {
+    "DU#": 773,
+    "Code": "ABMU_HOR",
+    "Population": "Horse Canyon (SLO)"
+  },
+  {
+    "DU#": 773,
+    "Code": "ABMU_HOR",
+    "Population": "Horse Canyon (SLO)"
+  },
+  {
+    "DU#": 774,
+    "Code": "ABMU_HOR",
+    "Population": "Horse Canyon (SLO)"
+  },
+  {
+    "DU#": 774,
+    "Code": "ABMU_HOR",
+    "Population": "Horse Canyon (SLO)"
+  },
+  {
+    "DU#": 775,
+    "Code": "ABMU_HOR",
+    "Population": "Horse Canyon (SLO)"
+  },
+  {
+    "DU#": 776,
+    "Code": "ABMU_HOR",
+    "Population": "Horse Canyon (SLO)"
+  },
+  {
+    "DU#": 777,
+    "Code": "ABMU_HOR",
+    "Population": "Horse Canyon (SLO)"
+  },
+  {
+    "DU#": 778,
+    "Code": "ABMU_HOR",
+    "Population": "Horse Canyon (SLO)"
+  },
+  {
+    "DU#": 779,
+    "Code": "ABMU_HOR",
+    "Population": "Horse Canyon (SLO)"
+  },
+  {
+    "DU#": 78,
+    "Code": "DAN",
+    "Population": "Dana Rock"
+  },
+  {
+    "DU#": 780,
+    "Code": "ABBE_BERN",
+    "Population": "San Bernardino Creek Road"
+  },
+  {
+    "DU#": 781,
+    "Code": "ABBE_BERN",
+    "Population": "San Bernardino Creek Road"
+  },
+  {
+    "DU#": 782,
+    "Code": "ABBE_BERN",
+    "Population": "San Bernardino Creek Road"
+  },
+  {
+    "DU#": 783,
+    "Code": "ABBE_BERN",
+    "Population": "San Bernardino Creek Road"
+  },
+  {
+    "DU#": 784,
+    "Code": "ABBE_BERN",
+    "Population": "San Bernardino Creek Road"
+  },
+  {
+    "DU#": 785,
+    "Code": "ABBE_BERN",
+    "Population": "San Bernardino Creek Road"
+  },
+  {
+    "DU#": 79,
+    "Code": "DAN",
+    "Population": "Dana Rock"
+  },
+  {
+    "DU#": 8,
+    "Code": "DUD",
+    "Population": "Dude Rock"
+  },
+  {
+    "DU#": 80,
+    "Code": "DAN",
+    "Population": "Dana Rock"
+  },
+  {
+    "DU#": 81,
+    "Code": "DAN",
+    "Population": "Dana Rock"
+  },
+  {
+    "DU#": 82,
+    "Code": "DAN",
+    "Population": "Dana Rock"
+  },
+  {
+    "DU#": 83,
+    "Code": "DAN",
+    "Population": "Dana Rock"
+  },
+  {
+    "DU#": 84,
+    "Code": "RSV",
+    "Population": "Rancho San Vicente"
+  },
+  {
+    "DU#": 85,
+    "Code": "RSV",
+    "Population": "Rancho San Vicente"
+  },
+  {
+    "DU#": 86,
+    "Code": "RSV",
+    "Population": "Rancho San Vicente"
+  },
+  {
+    "DU#": 87,
+    "Code": "RSV",
+    "Population": "Rancho San Vicente"
+  },
+  {
+    "DU#": 88,
+    "Code": "RSV",
+    "Population": "Rancho San Vicente"
+  },
+  {
+    "DU#": 89,
+    "Code": "RSV",
+    "Population": "Rancho San Vicente"
+  },
+  {
+    "DU#": 9,
+    "Code": "BAI",
+    "Population": "Baird Ridgeline"
+  },
+  {
+    "DU#": 90,
+    "Code": "RSV",
+    "Population": "Rancho San Vicente"
+  },
+  {
+    "DU#": 91,
+    "Code": "RSV",
+    "Population": "Rancho San Vicente"
+  },
+  {
+    "DU#": 92,
+    "Code": "RSV",
+    "Population": "Rancho San Vicente"
+  },
+  {
+    "DU#": 93,
+    "Code": "RSV",
+    "Population": "Rancho San Vicente"
+  },
+  {
+    "DU#": 94,
+    "Code": "RSV",
+    "Population": "Rancho San Vicente"
+  },
+  {
+    "DU#": 95,
+    "Code": "RSV",
+    "Population": "Rancho San Vicente"
+  },
+  {
+    "DU#": 96,
+    "Code": "RSV",
+    "Population": "Rancho San Vicente"
+  },
+  {
+    "DU#": 97,
+    "Code": "RSV",
+    "Population": "Rancho San Vicente"
+  },
+  {
+    "DU#": 98,
+    "Code": "RSV",
+    "Population": "Rancho San Vicente"
+  },
+  {
+    "DU#": 99,
+    "Code": "RSV",
+    "Population": "Rancho San Vicente"
+  }
+]

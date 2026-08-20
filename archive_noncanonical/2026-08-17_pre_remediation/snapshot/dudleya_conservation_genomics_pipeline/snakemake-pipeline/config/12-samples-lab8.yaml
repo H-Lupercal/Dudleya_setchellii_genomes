@@ -1,0 +1,45 @@
+# /WAVE/projects2/whittalllab/dudleya/snakemake-pipeline/config/samples.yaml
+# Note: changing the layout of this file might break the update_sample_config.py script
+ref_genome: "/WAVE/projects/whittalllab/dudleya/draft_genome/Dudleya_hifiasm_purged_host_genome.fasta"
+anc_genome: "/WAVE/projects/whittalllab/dudleya/ancestral_genome_Du-14/D_cymosa_consensus.fa.gz"
+
+data_parent_dir: "/WAVE/datasets/whittalllab/dudleya"
+output_name: "results-12-samples-lab8"
+
+samples:
+  BAI_LP_105_Du-222:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/BAI_LP_105_Du-222_S37_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/BAI_LP_105_Du-222_S37_L005_R2_001.fastq.gz"
+  BAI_LP_106_Du-223:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/BAI_LP_106_Du-223_S47_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/BAI_LP_106_Du-223_S47_L005_R2_001.fastq.gz"
+  BAI_LP_108_Du-225:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/BAI_LP_108_Du-225_S68_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/BAI_LP_108_Du-225_S68_L005_R2_001.fastq.gz"
+  COM_LP_269_Du-703:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/COM_LP_269_Du-703_S239_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/COM_LP_269_Du-703_S239_L005_R2_001.fastq.gz"
+  COM_LP_270_Du-704:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/COM_LP_270_Du-704_S250_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/COM_LP_270_Du-704_S250_L005_R2_001.fastq.gz"
+  COM_LP_272_Du-707:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/COM_LP_272_Du-707_S266_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/COM_LP_272_Du-707_S266_L005_R2_001.fastq.gz"
+  CY_HICS_LP_297_Du-761:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/CY_HICS_LP_297_Du-761_S279_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/CY_HICS_LP_297_Du-761_S279_L005_R2_001.fastq.gz"
+  CY_WOO_LP_259_Du-664:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/CY_WOO_LP_259_Du-664_S217_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/CY_WOO_LP_259_Du-664_S217_L005_R2_001.fastq.gz"
+  CY_ALA_LP_299_Du-768:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/CY_ALA_LP_299_Du-768_S221_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/CY_ALA_LP_299_Du-768_S221_L005_R2_001.fastq.gz"
+  ABBE_BERN_LP_313_Du-782:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/ABBE_BERN_LP_313_Du-782_S280_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/ABBE_BERN_LP_313_Du-782_S280_L005_R2_001.fastq.gz"
+  ABMU_HOR_LP_360_Du-772:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/ABMU_HOR_LP_360_Du-772_S260_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/ABMU_HOR_LP_360_Du-772_S260_L005_R2_001.fastq.gz"
+  ABAB_MAD_LP_222_Du-589:
+    r1: "/WAVE/datasets/whittalllab/dudleya/raw_reads/ABAB_MAD_LP_222_Du-589_S244_L005_R1_001.fastq.gz"
+    r2: "/WAVE/datasets/whittalllab/dudleya/raw_reads/ABAB_MAD_LP_222_Du-589_S244_L005_R2_001.fastq.gz"

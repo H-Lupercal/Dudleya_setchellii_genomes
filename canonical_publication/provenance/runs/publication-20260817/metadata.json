@@ -1,0 +1,55 @@
+{
+  "fingerprint": {
+    "commands": [
+      "discover FASTQ pairs from immutable source paths; join population codes; materialize source-declared DUSE default; preserve metadata ambiguities; no manual exclusions"
+    ],
+    "digest": "2d1daa1599e6be48bd1eb1f2df702f713fe6a0cffa398f9513146a5b162558c5",
+    "inputs": [
+      [
+        "canonical_publication/config/publication_config.toml",
+        "aea3f0ddf0b95e79566bce9ba3ad3635fbc5c3c97172fa83677b0f7529838378"
+      ],
+      [
+        "canonical_publication/provenance/manifests/source_inputs.tsv",
+        "937188150e1f7c77d26374e8d020411f3465390476802d9dff6afc5f7ee4566d"
+      ],
+      [
+        "canonical_publication/provenance/runs/publication-20260817/source_validation.json",
+        "0ac15ba3535286abfc4a19f1124b94056613c5eb0ee5e55d590e0624e166c5aa"
+      ],
+      [
+        "provenance:executable_sha256:python",
+        "c73f9387a63c5d3f89bbf323b4792ffb376e005b57d4d39718f7c000b7a1276a"
+      ],
+      [
+        "provenance:git_commit",
+        "5b932a95a1fa998569397491bfdec1d79d5bb84d"
+      ],
+      [
+        "provenance:pipeline_code",
+        "e829eb79c942b6adf95bebafe45105ad05b7f412054ea1ee263c24d2d9bacca5"
+      ],
+      [
+        "provenance:tool:python",
+        "Python 3.14.6"
+      ],
+      [
+        "source_data/raw_reads/genomicsDrive_data_dump/QB3.Berkeley.251217/Dudleya DNAx - Population Codes.csv",
+        "2d7a9ef311d4a84d90afb18df9b0b8f90a1fd9021047c85afd05697bf06801fc"
+      ]
+    ],
+    "stage": "metadata",
+    "upstream": [
+      [
+        "immutable_sources",
+        "691b70fb163cbb1b99003e8feb1bf965aa1815d8708461635f64c3da7efab236"
+      ]
+    ]
+  },
+  "outputs": {
+    "canonical_publication/metadata/populations/populations.tsv": "d11b2c0a0114f69d368a53a4a1ae9ed1d3d503e10a92993452335ed8fc38f094",
+    "canonical_publication/metadata/qc/publication-20260817/source_metadata_ambiguities.tsv": "cc3883116b060783bed5e53d2702463d0e56886b5db5cf836f2563c03932349d",
+    "canonical_publication/metadata/samples/samples.tsv": "863d63b74551996015a7af939330ce6671a23b0b1f93d5749fae1a7eb7e96ee2"
+  },
+  "status": "complete"
+}

@@ -1,0 +1,58 @@
+{
+  "fingerprint": {
+    "commands": [
+      "report incompatible unrooted splits only when SH-aLRT>=80 and UFBoot>=95 in both organelles"
+    ],
+    "digest": "e1ca77de515477ac47c50ca107bb3f2131f3c5c9617cdc3dd2d1bd44a2d08218",
+    "inputs": [
+      [
+        "canonical_publication/config/publication_config.toml",
+        "aea3f0ddf0b95e79566bce9ba3ad3635fbc5c3c97172fa83677b0f7529838378"
+      ],
+      [
+        "canonical_publication/metadata/qc/publication-20260817/shared_samples.tsv",
+        "f10dfd88e7df1ee4e33f1b79bec1ec58fa030d4b9bc25488fcd0f8067b5e82e3"
+      ],
+      [
+        "canonical_publication/results/trees/publication-20260817/chloroplast.primary.treefile",
+        "38d92ee9d4480189e9eb729329b359214a988c54af1ca4a1078953e6fe580b48"
+      ],
+      [
+        "canonical_publication/results/trees/publication-20260817/mitochondria.primary.treefile",
+        "5197a5e6dd5a8f94feb56ba07389be528439747563176d2be0d668d0ea436240"
+      ],
+      [
+        "provenance:executable_sha256:biopython",
+        "c73f9387a63c5d3f89bbf323b4792ffb376e005b57d4d39718f7c000b7a1276a"
+      ],
+      [
+        "provenance:git_commit",
+        "5b932a95a1fa998569397491bfdec1d79d5bb84d"
+      ],
+      [
+        "provenance:pipeline_code",
+        "ebed34e92a56118863477d329988b47dbea0c9b6c4195115097c8552e7385963"
+      ],
+      [
+        "provenance:tool:biopython",
+        "1.87"
+      ]
+    ],
+    "stage": "tree:organelle_conflicts",
+    "upstream": [
+      [
+        "chloroplast",
+        "e955690ec70251282905f1e5ac85099affc5159719cccdc6a547f60fd09b52eb"
+      ],
+      [
+        "mitochondria",
+        "9315e8908f455b157c16db63de44e11bb7765925cfb9c3602147e3084fb8d06f"
+      ]
+    ]
+  },
+  "outputs": {
+    "canonical_publication/results/supplement/publication-20260817/strongly_supported_organelle_conflicts.tsv": "20b881fd1bf101f21340e16c182fef7b3b5c5dae4ebcdf0583631099fa03d16b"
+  },
+  "status": "complete",
+  "strong_conflict_count": 0
+}

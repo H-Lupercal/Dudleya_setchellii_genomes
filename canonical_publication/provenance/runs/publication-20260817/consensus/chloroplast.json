@@ -1,0 +1,66 @@
+{
+  "accepted_high_confidence_variant_site_count": 2273,
+  "analysis_mask_bases": 124538,
+  "fingerprint": {
+    "commands": [
+      "bcftools query per sample canonical_publication/work/publication-20260817/variants/chloroplast.genotype_masked.all_sites.bcf; derive invariant haploid GQ from homozygous PLs in canonical_publication/work/publication-20260817/variants/chloroplast.mpileup_likelihoods.bcf; accept high-confidence variants from canonical_publication/results/variants/publication-20260817/chloroplast.high_confidence_variant_sites.vcf.gz"
+    ],
+    "digest": "610739ef89a4f1f4962b574d1bd07de957da110b09525f9bef06b3acc5b66405",
+    "inputs": [
+      [
+        "canonical_publication/config/publication_config.toml",
+        "aea3f0ddf0b95e79566bce9ba3ad3635fbc5c3c97172fa83677b0f7529838378"
+      ],
+      [
+        "canonical_publication/metadata/qc/publication-20260817/chloroplast_samples.tsv",
+        "613831e85e35d5f7b5acf8b2c45cb4b5e382c3e53dd88be2dc8e091a7ffb389b"
+      ],
+      [
+        "canonical_publication/references/masks/chloroplast_population_sites.bed",
+        "e31faa1b6e19fc11cedaedfe4cabfb88c3946971ebd7b460dd47e11ec7207917"
+      ],
+      [
+        "canonical_publication/results/variants/publication-20260817/chloroplast.high_confidence_variant_sites.vcf.gz",
+        "072f9203b833a2a11e6d12bec6bd1f31bf18484dc5f8fabd1b1977363805a526"
+      ],
+      [
+        "canonical_publication/work/publication-20260817/variants/chloroplast.genotype_masked.all_sites.bcf",
+        "1e4f65dd35712cf6f396265e5b7133cdd9dc87c108a776ee7b665f65734ad0e6"
+      ],
+      [
+        "canonical_publication/work/publication-20260817/variants/chloroplast.mpileup_likelihoods.bcf",
+        "2c75a2d0e7e2c757cebbeafe8efff3ec42dea6b0519c47b5d08168501cdbd4d9"
+      ],
+      [
+        "provenance:executable_sha256:bcftools",
+        "228dbc164dc0ad835ab3b767ec05b5977004a989949151a19d8b20b11b37695c"
+      ],
+      [
+        "provenance:git_commit",
+        "5b932a95a1fa998569397491bfdec1d79d5bb84d"
+      ],
+      [
+        "provenance:pipeline_code",
+        "25c3c19292ea01880ac3dee0cbbd2a2be57f90c34bd0a2708b0f88c1eb13d1ef"
+      ],
+      [
+        "provenance:tool:bcftools",
+        "bcftools 1.24 | Using htslib 1.23.1 | Copyright (C) 2026 Genome Research Ltd."
+      ]
+    ],
+    "stage": "consensus:chloroplast",
+    "upstream": [
+      [
+        "variants",
+        "0887aaad9365e7f7dbc0978292bb21340e2fb6ff8cd7ad7abe2f53d3a40bd2ad"
+      ]
+    ]
+  },
+  "organelle": "chloroplast",
+  "outputs": {
+    "canonical_publication/results/alignments/publication-20260817/chloroplast.callable_alignment.fa": "73f143fb7da0035a7d7903948d48dba4fbe7d9966fc015eda7fb5d8cfb9e5801",
+    "canonical_publication/results/alignments/publication-20260817/chloroplast.callable_summary.tsv": "ce47a514780ed804bcf89a72995ea9e27136357d34db1372623f498efac29859"
+  },
+  "sample_count": 276,
+  "status": "complete"
+}

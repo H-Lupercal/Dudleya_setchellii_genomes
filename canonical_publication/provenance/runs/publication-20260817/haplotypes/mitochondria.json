@@ -1,0 +1,60 @@
+{
+  "ambiguous_sample_count": 72,
+  "fingerprint": {
+    "commands": [
+      "all accepted variable sites including singletons; ambiguous samples unassigned; haplotype minimum-spanning network"
+    ],
+    "digest": "46c90e00eff75a8d1f8a785ec800f1e8aff1736fce88f337f831c6edffa3e265",
+    "inputs": [
+      [
+        "canonical_publication/metadata/qc/publication-20260817/mitochondria_samples.tsv",
+        "f10dfd88e7df1ee4e33f1b79bec1ec58fa030d4b9bc25488fcd0f8067b5e82e3"
+      ],
+      [
+        "canonical_publication/results/alignments/publication-20260817/mitochondria.callable_alignment.fa",
+        "50b9ee3d72aa5cf56e2b41f137bcdaf791d08b8dcd18695a073631a63d77e90e"
+      ],
+      [
+        "provenance:executable_sha256:networkx",
+        "c73f9387a63c5d3f89bbf323b4792ffb376e005b57d4d39718f7c000b7a1276a"
+      ],
+      [
+        "provenance:executable_sha256:python",
+        "c73f9387a63c5d3f89bbf323b4792ffb376e005b57d4d39718f7c000b7a1276a"
+      ],
+      [
+        "provenance:git_commit",
+        "5b932a95a1fa998569397491bfdec1d79d5bb84d"
+      ],
+      [
+        "provenance:pipeline_code",
+        "a2d7aabae4d0c9506aabffa758abc9b63e3947432436b5bf8d1f2d799668aba9"
+      ],
+      [
+        "provenance:tool:networkx",
+        "3.6.1"
+      ],
+      [
+        "provenance:tool:python",
+        "Python 3.14.6"
+      ]
+    ],
+    "stage": "haplotypes:mitochondria",
+    "upstream": [
+      [
+        "consensus",
+        "65ca22d36ad8c195a3e262eaff243063319d649ed810f2fc1016cb3da1c99195"
+      ]
+    ]
+  },
+  "haplotype_count": 45,
+  "organelle": "mitochondria",
+  "outputs": {
+    "canonical_publication/results/haplotypes/publication-20260817/mitochondria.haplotype_positions.tsv": "f14358dfc3a28ee1a1566f155a06d7d5bed04c928c8b16f52a4fa12589799449",
+    "canonical_publication/results/haplotypes/publication-20260817/mitochondria.haplotypes.tsv": "f030f59b824a15ae3341f82a671da748f4f8fafeb7086d0dc263029cbbd3ceaa",
+    "canonical_publication/results/haplotypes/publication-20260817/mitochondria.network_edges.tsv": "9396332eb40d7e182ca965cc4b4c667befe44b9d32aaaae8d83ab83e1e992b30",
+    "canonical_publication/results/haplotypes/publication-20260817/mitochondria.sample_haplotypes.tsv": "4362fcd608f07de89b46c6527ab42fd7e17f1aee967b8f754e5f3a2f21548b2d"
+  },
+  "retained_high_confidence_variable_sites": 146,
+  "status": "complete"
+}

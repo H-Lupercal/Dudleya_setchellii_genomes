@@ -1,9 +1,0 @@
-=== 16_admixture Single-run ADMIXTURE-style clustering ===
-Started: 2026-07-08T18:29:25-07:00
-Command: /home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/python3 dudleya_organelle_alignment_pipeline/scripts/run_admixture_analysis.py --snp-alignment-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/10_snp_alignment --metadata-path /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/07_downstream_sample_set/included_samples.tsv --output-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/16_admixture --run-label primary --threads 16 --force
-
-cpDNA: best K=8 with mean CV error 0.07502000 at /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/16_admixture/cpDNA.primary.bestK8.structure.png
-mtDNA: best K=8 with mean CV error 0.11165000 at /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/16_admixture/mtDNA.primary.bestK8.structure.png
-Output directory: /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/16_admixture
-
-Finished: 2026-07-08T18:29:37-07:00

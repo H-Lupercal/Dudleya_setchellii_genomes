@@ -1,0 +1,1446 @@
+{
+  "executable_sha256": {
+    "bwa": "2d6b83b4b8851bc09d4aabdfc0429b0ffc8383261252aaed5e00682a04ad0a42",
+    "fastp": "f26c4ed6d972561dacf3d5d5666cb0b5275070d9d1610448bac21aa3007019b3",
+    "samtools": "38ba6496e9f19cc8f1b63ad017a2d39e8088cf12f46864d33e027d111457a98b"
+  },
+  "fingerprint": {
+    "commands": [
+      "validate all mapping inputs, exact executed commands, BAM/BAI/fastp outputs, and resolved pinned defaults"
+    ],
+    "digest": "a2be760b6266c33de6bc46ce6c9dfd88f7458872ba6575e13385d63c396a80fb",
+    "inputs": [
+      [
+        "configuration:mapping_policy",
+        "7a6fd24c03b3f00a1f200e6ba28037c7c57f011e6b33a7bdd292a2f0b10cc5f6"
+      ],
+      [
+        "metadata:sample_manifest",
+        "863d63b74551996015a7af939330ce6671a23b0b1f93d5749fae1a7eb7e96ee2"
+      ],
+      [
+        "reference:combined",
+        "84a53a58f60464ba18c0f0da0445201c9bbfc5d10a9216932f8bf4df8d4cf4f8"
+      ]
+    ],
+    "stage": "mapping_provenance_completion",
+    "upstream": [
+      [
+        "ABAB_MAD_LP_222_Du-589",
+        "3086d6043295a0e05a044305a0174af48efb9d87de778555df44c70623d65b1b"
+      ],
+      [
+        "ABAB_MAD_LP_223_Du-590",
+        "dab3c424c2cc71ffe915f77d8c9a54eaccfda05dcd9f9e77dd96296f6ce3b8fc"
+      ],
+      [
+        "ABAB_MAD_LP_322_Du-593",
+        "75d8b5ef22d556f2a8b9f094d2ecdaa3e6919fe6f3479ccd854d4ddc7b4fb025"
+      ],
+      [
+        "ABAB_MAD_LP_323_Du-594",
+        "fe097f6c35c7e45a1a520c4dd9488a7c3b379c8d9ad46374148c8049a3cd6b32"
+      ],
+      [
+        "ABAB_MAD_LP_324_Du-595",
+        "3f1559f8ec1fe7fd3cdee4486356edd071191c9d27f6ba0e7cb20cc24573afb7"
+      ],
+      [
+        "ABAB_MAD_LP_325_Du-596",
+        "f8f4397c347881c36ec5c5182502e985c09cb75d63622ce8103601dbf4021609"
+      ],
+      [
+        "ABAB_MAD_LP_326_Du-597",
+        "943acfee440d67d2705f737a3b9230a95013cbc7b586a7b9c4476a397af83cab"
+      ],
+      [
+        "ABAB_MAD_LP_327_Du-598",
+        "df80910dedff50c5fb55a9f006025c5418ccb1d33f8ff74c09af590481acaf7a"
+      ],
+      [
+        "ABBE_BERN_LP_311_Du-780",
+        "c49127f9fdbd33ccaec3be21e0da6a9f1cabb955df405065008ba5aac1774eab"
+      ],
+      [
+        "ABBE_BERN_LP_312_Du-781",
+        "e857cf938819ede427d576e7149e0c292d58a2f702078eca39fa3fb0f6d92d71"
+      ],
+      [
+        "ABBE_BERN_LP_313_Du-782",
+        "8efe6509be62459dc1ab3326cbd717951df6cfffc75c4517e458bf7f6dc0da6a"
+      ],
+      [
+        "ABBE_BERN_LP_314_Du-783",
+        "16c8b103a9553a81bfc11a6a895b7a8ddb34c0800c2ed7d2bed6ee50b92004fd"
+      ],
+      [
+        "ABMU_HOR_LP_306_Du-775",
+        "558d85739718489aa09da33f00bd52cff17bfa1f50f8528c6eef7b9e5d7883f6"
+      ],
+      [
+        "ABMU_HOR_LP_308_Du-777",
+        "6b0ecd8cd8b83aa238cd6667846260bab61755e7e51d6ef7de742ca647c99abb"
+      ],
+      [
+        "ABMU_HOR_LP_358_Du-770",
+        "c5632544987cb55a269c967b4accfcac154bc8a2e153cf4d538fffb606d20d0a"
+      ],
+      [
+        "ABMU_HOR_LP_359_Du-771",
+        "eddc3c36286d8ab2ff6999ebc87ea1de4f95d698736a94880c79d097dfed6625"
+      ],
+      [
+        "ABMU_HOR_LP_360_Du-772",
+        "6eb2a2b7928e77585c2edb959c7210f72aef5030c8d9d3092799be370ec362df"
+      ],
+      [
+        "ABMU_HOR_LP_361_Du-773",
+        "f09e25228cb6ac14bb66995b42ab6229eff5c012e94e08a1ee84a01573c75cbb"
+      ],
+      [
+        "BAI_LP_105_Du-222",
+        "511c136375b87ae9c8954e53877aa4d13c06ff3ff3a80c0ca1523d06a9e9a4fd"
+      ],
+      [
+        "BAI_LP_106_Du-223",
+        "b7b7ca1ff9e838381713f55cf40e5a0a5fd26a933b81ad155c0e91812ca46c67"
+      ],
+      [
+        "BAI_LP_108_Du-225",
+        "76c75a8a21c225cefdf41904549f2067a935daedb02b81166e3090dac8b35d17"
+      ],
+      [
+        "BAI_LP_109_Du-226",
+        "7119b5bf918d00c719a36d7ddda038d1c41c3ca70defbd237e7e704453261408"
+      ],
+      [
+        "BAI_LP_110_Du-227",
+        "bb76a9fa6ef45e768418794f5a03dfc2aceb672c98f59f0c0b54cee3623856bf"
+      ],
+      [
+        "BAI_LP_111_Du-228",
+        "d08aae347b196d33cba073dfc4ff05a8d44025e41ad414d16a1fafa482a4e34a"
+      ],
+      [
+        "BAI_LP_112_Du-230",
+        "165d6b258a66ffeda14195fef1b857a7de2a691d2d174e89b31a48977e3344b4"
+      ],
+      [
+        "BAI_LP_113_Du-231",
+        "12a8e8fc3d4cb90c43287e57caa7ed9df9440f0935675351875223a85815b7a0"
+      ],
+      [
+        "BAI_LP_114_Du-232",
+        "479777558744c7af74ff4366a1afffcd128380120ff41d1d6b35f2ba4a119ea8"
+      ],
+      [
+        "BAI_LP_319_Du-233",
+        "2d0fff9ec9b010f4c33a780cc5d3e43c6d8d6e72112b7bf2d8033ba5fa941802"
+      ],
+      [
+        "COM_LP_269_Du-703",
+        "2ff494113dd02aa5fb5e88445283f97dddbfc7a885ddb95fbe708d4022d879ad"
+      ],
+      [
+        "COM_LP_270_Du-704",
+        "81d07804114fba15bdf73d0474d1dc4181842d59b095dc9e0922d5bd99b0850b"
+      ],
+      [
+        "COM_LP_272_Du-707",
+        "f7c9c3c1d17196f73a48c647ec8fdf1aa431545b7b3985939565229a8353812f"
+      ],
+      [
+        "COM_LP_274_Du-709",
+        "c4e476b7e284a3dbb6bffb9c747cb736cdad971fb8881d5e873165bf6c23d541"
+      ],
+      [
+        "COM_LP_276_Du-711",
+        "bf1e94f4f3d7a96c1581e0ea5cb342cc281be0c7735d193a9d36c194453f1a3b"
+      ],
+      [
+        "COM_LP_277_Du-712",
+        "6a76df58ac5ca6a11d590eb4a03d7043962c8ebab4ebb7b69e0d962496c37c39"
+      ],
+      [
+        "COM_LP_341_Du-713",
+        "2f9f6708fdccfd1147295223f85a88a01387fe68061f8659e472827cb9919517"
+      ],
+      [
+        "COM_LP_342_Du-714",
+        "06a0457adb837cb6878c492c75929fdf091fc7c7d4a93f6d83f6333f480594f8"
+      ],
+      [
+        "COM_LP_343_Du-715",
+        "94d4e202182942716402368e3234b573907720fe5f8fda0b1a360aafbac8827c"
+      ],
+      [
+        "CROB_LP_169_Du-381",
+        "833cdcc66579bf48c771f31418678248291df9e3d3069811269513a9cd6ada45"
+      ],
+      [
+        "CROB_LP_170_Du-382",
+        "dcd3460bdee99b6a7840ff0b613c1fa0aa4f9e331d355c2401ccbfc4284a5043"
+      ],
+      [
+        "CROB_LP_172_Du-384",
+        "0c294eb1205c86dbb2e0cb83e37487873c80abfe764d184e833d0e1e88e33e54"
+      ],
+      [
+        "CROB_LP_173_Du-385",
+        "208a5ee22e9fd7b30883f601aa4d9fb3c2a288e85b808f8f9c496cbfbcc0fa30"
+      ],
+      [
+        "CROB_LP_174_Du-386",
+        "3ca730a41a8131a4dbcfd871a82d77fd73b9dc06ae714c5046dd48f4b4a34578"
+      ],
+      [
+        "CROB_LP_175_Du-387",
+        "238641916e9542c321e1ea5c1433c166a5b3e99017fbffc4d2fb836db8da9e65"
+      ],
+      [
+        "CROB_LP_176_Du-388",
+        "f45d9bcaadc84363e4f132c37bdb8b9a8addcacab47a9712852208f608e97b29"
+      ],
+      [
+        "CROB_LP_177_Du-389",
+        "aeea7c94b52ea34e349536bc7ed5211e8f70e04487bd6ffa5c23692bb1c41d49"
+      ],
+      [
+        "CROB_LP_320_Du-395",
+        "509e231a044b1f42e3532f0bd7fdfd69a3bca6e61c8b0de2f0f977fca3e100bd"
+      ],
+      [
+        "CROB_LP_321_Du-396",
+        "f43aea9fb043f1dbe9221f4537fc0bd69f7afcf3faab2ea0679e8622648c08cd"
+      ],
+      [
+        "CROS_LP_085_Du-181",
+        "2b8eea595fb7dcf42d1a512e741759c6a10335f5e694305aea86d02b70e5c81f"
+      ],
+      [
+        "CROS_LP_086_Du-182",
+        "8e7446f0ffcd77115a27b03a3f33bf4a7f40313e4a400556e6685d8c6b2748a7"
+      ],
+      [
+        "CROS_LP_087_Du-183",
+        "c40e17379b412d512c7a782eb3458e86e2c4f5c805783a1923eefdd7c057ac52"
+      ],
+      [
+        "CROS_LP_088_Du-184",
+        "a867c0e068945c16a6f3b7b77be455ee033827402b96e9ef6028a3586d996107"
+      ],
+      [
+        "CROS_LP_089_Du-185",
+        "9258b763cddad6dbbf01f04d6b7c9f92169acd1a758df8e3e643136432ce9c01"
+      ],
+      [
+        "CROS_LP_090_Du-186",
+        "5acba9598e31b48dda514af28d0b705c3475139634abe10e281adebcf02f5ec5"
+      ],
+      [
+        "CROS_LP_091_Du-187",
+        "4a8810e4642c4a4dea78a0090b56d102221e7a55d8fd276b0b1dbf7228ec0cdf"
+      ],
+      [
+        "CROS_LP_092_Du-188",
+        "83507a523ed291920edb4885fdfbf49b80e28c83e66e6fefc504090a0b5587d3"
+      ],
+      [
+        "CROS_LP_093_Du-189",
+        "a47ace162a7a217ccc40a6431c0867648ac9d3da9cafef34495716d98d812b8f"
+      ],
+      [
+        "CROS_LP_094_Du-190",
+        "6d9b009ac92542d361cf4a90175370c73bfb92b31d08b6c3630d453743185c48"
+      ],
+      [
+        "CY_ALA_LP_298-Du-767",
+        "fa6ca529e18f087a8d8543377ff40e08dfe5d11d27c6ed7938f9ccb393709ae7"
+      ],
+      [
+        "CY_ALA_LP_299-Du-768",
+        "cb5af3f3abee66d829ee9ab87082914b1653555febe05706e70b935159aa1814"
+      ],
+      [
+        "CY_ALA_LP_357_Du-769",
+        "7a9c8e7f525062e47384c293df2fed469ba80a0fc65cd6bb8ffc3141269db0d8"
+      ],
+      [
+        "CY_BAL_LP_226_Du-602",
+        "751a344e770720eace7780e3b3664b04540a9f967ab689926175a153f6adef3d"
+      ],
+      [
+        "CY_BAL_LP_227_Du-603",
+        "6b1c28e28721275f350cbd112da5d4df881f8effa0d7cf9b99d34b671c2fe2c5"
+      ],
+      [
+        "CY_BAL_LP_228_Du-604",
+        "6f070f0e7406793c0535cee08597a40bd189b551d4a501df1e44af0576ef2ae2"
+      ],
+      [
+        "CY_BGL_LP_210_Du-577",
+        "b1bc820fd192f2ce940778c4a9fa8a20e07d3a793fd9624b8c7c88dc9654dc2b"
+      ],
+      [
+        "CY_BGL_LP_212_Du-579",
+        "275a6989ddde6d290ad9516bc911583ff1c88dadaef681241aea12014f27fcaa"
+      ],
+      [
+        "CY_BOU_LP_288_Du-737",
+        "237857bc602d45095437353db12a3c5ffd8a022970146ec469bcd8312eff87b8"
+      ],
+      [
+        "CY_BOU_LP_290_Du-739",
+        "c7b9138520a1b25b5a6f2fe4584ad09ce7c0f5df9212c45f02c3a7ca25d3857e"
+      ],
+      [
+        "CY_BOU_LP_291_Du-740",
+        "bfdb6b368a9f94f08e82085c3d283b18c328c9e73871b018e7bed1948ec02f86"
+      ],
+      [
+        "CY_BOU_LP_292_Du-741",
+        "686bad3ec79de5a59dce0597c566fc6a8dd083336b5476695ccf094b661df883"
+      ],
+      [
+        "CY_BOU_LP_354_Du-742",
+        "1786124132fc803b4ce440576d7a5e25aeb347b2c881bf856e1f09b9e6016139"
+      ],
+      [
+        "CY_CAS_LP_328_Du-610",
+        "ce29bb31787d7a5ea1fd92b4f81687ec47ee62a685f8b04f4e38d87b9412ca97"
+      ],
+      [
+        "CY_CAS_LP_329_Du-611",
+        "2e3636b190c5750d7df8b8533687307aacd028bbb25c4926c8f4d0f24d77a07c"
+      ],
+      [
+        "CY_CAS_LP_330_Du-607",
+        "092ffbda09a264695d51b655f70d7a0972c655e597dfec7d9c0276745715a280"
+      ],
+      [
+        "CY_CAS_LP_331_Du-608",
+        "93beae1357101eafbc5bc0a73385aa0159f65f2967f30cda99f2908b06a3a2a5"
+      ],
+      [
+        "CY_CAS_LP_332_Du-609",
+        "e475ea5368384358a61d4a60e31e4142d206d8dfecfc5851a55a02f9e9998be1"
+      ],
+      [
+        "CY_HICN_LP_236_Du-614",
+        "e610ddea3fecf610b04e461fdfa18b5beec5f2a8cfb1b13937e27d4e954c1871"
+      ],
+      [
+        "CY_HICN_LP_333_Du-612",
+        "e5f2fc0db68870bad87f5f2013eb286e78e71e11cb14152d89062206649bcf96"
+      ],
+      [
+        "CY_HICN_LP_334_Du-613",
+        "8bbd4bb1ab9dcb75a81e06c3308dd505b91732a066cf165463f76e98e7c72f57"
+      ],
+      [
+        "CY_HICN_LP_335_Du-615",
+        "dddaab181dfe977eb2633cb8e158d9dccd5934d883b0b824f911e4fca7aed5b4"
+      ],
+      [
+        "CY_HICN_LP_336_Du-616",
+        "bf5de30846ce32f50f4013704b905c79b577f71a11561e5ce6a9f7af73e0823d"
+      ],
+      [
+        "CY_HICS_LP_293_Du-757",
+        "84c51876fb3ed025a113347ee234b0c0064567676b642ad590fba7d6e011db88"
+      ],
+      [
+        "CY_HICS_LP_295_Du-759",
+        "d7a699617a851bed693a4be5e5b29553b255ef6575d8e20a5e37e638a0e2fc2b"
+      ],
+      [
+        "CY_HICS_LP_297_Du-761",
+        "fda0fa50b2d4f8bb7b98b451f63010a02f596d1795052bcf3be34a5836651072"
+      ],
+      [
+        "CY_HICS_LP_355_Du-762",
+        "04f79890101588fd1c2c5ec36e595bcf25d30865cadb678a1efaf635cc84cc08"
+      ],
+      [
+        "CY_HICS_LP_356_Du-763",
+        "fb52e921256bb17ef0f0dfb45c7ef9f4332faec6df5903f2d1cad6c9ea67825e"
+      ],
+      [
+        "CY_HUN_LP_264_Du-683",
+        "f93c1acf47fad4211cb7734500eb2841b0d2bff2a8a581f24fe835227b5c508b"
+      ],
+      [
+        "CY_HUN_LP_265_Du-684",
+        "8e583e58a6916a322f87847a4caf9b60bee05d5d5fb9c493fe49920a98bae285"
+      ],
+      [
+        "CY_HUN_LP_266_Du-685",
+        "555b52a9d3fd8bd76b1da7609f9f1f9759c354207841c5e46ba41087e292d38a"
+      ],
+      [
+        "CY_HUN_LP_267_Du-686",
+        "87bb45b33c2719fc79a01999a8b2d656307cf4f8eac73aa16db011cb5f2ad574"
+      ],
+      [
+        "CY_HUN_LP_268_Du-687",
+        "06b00aa86d37ece9215580a4d0dc96d615e24b4dc4a112c66d667250898d024d"
+      ],
+      [
+        "CY_RED_LP_202_Du-561",
+        "a191c1f79c199fe2eebdec43a6c0c11a8e06ca6b2308fa6ae07939bbb9bf6cb8"
+      ],
+      [
+        "CY_SIE_LP_188_Du-445",
+        "9d7780c60d6a5fabd41debd2d1d7f0bf68a4ffe0d22ef04a84553f7f9e060e97"
+      ],
+      [
+        "CY_SIE_LP_189_Du-446",
+        "e2ad9ec07832dc04caec3b9041e59e899fa450930920c03d250021629f168a9a"
+      ],
+      [
+        "CY_SIE_LP_190_Du-447",
+        "d266230ffb1190c2b6b2e9348dc695f5bc793c70483edb17ee16e632dc180673"
+      ],
+      [
+        "CY_SIE_LP_191_Du-448",
+        "1df8f153076ace71797c41f5aee5a92f83d553af65e0e2cd81a55958e3d50738"
+      ],
+      [
+        "CY_WOO_LP_259_Du-664",
+        "5d706fa9ac0b6443bb09e713d5ec27b2da404c93e7f0d5327375e1e7112a638a"
+      ],
+      [
+        "CY_WOO_LP_260_Du-665",
+        "57534ca44506299458079a140456e3eaae76989b3653310d2e4ece636c0d4df8"
+      ],
+      [
+        "CY_WOO_LP_261_Du-667",
+        "4fd9c991ffaec2f5475ce425fcc9a17d7dda0c3a09a9163e9174f9ddcbc003a7"
+      ],
+      [
+        "CY_WOO_LP_262_Du-668",
+        "6ffa93993cd9ec0db59dfe43fb7fdbed81805c2080fa7bf61a06c2dce85996a8"
+      ],
+      [
+        "CY_WOO_LP_263_Du-669",
+        "2f3f6a2c442d7ad4b002eacfd03d902ae4e657e51fa9a72c0c1ffdea72918ec0"
+      ],
+      [
+        "DAN_LP_043_Du-68",
+        "06dd274954855c2696ddeb28e8323ba26dae827f808cf24b3a8154a7bd292a70"
+      ],
+      [
+        "DAN_LP_044_Du-69",
+        "8152aa307ba84b9557c6eb4e64aa8a066b3c3afbd260a7e8f49e4e550421c010"
+      ],
+      [
+        "DAN_LP_045_Du-70",
+        "2b74ad9c5072895ffef0f7ca18e7779e25bbaeaedd0b25f6b8cad19344126c09"
+      ],
+      [
+        "DAN_LP_046_Du-71",
+        "6c13269faaefee2c282a6390a9a451365ff4b3abd1d9e9b01f9cf6f13d4bf484"
+      ],
+      [
+        "DAN_LP_047_Du-72",
+        "77c9eb2cece7b1fac886e050796054e102ae2bfd672297a3383fe83c32f8345c"
+      ],
+      [
+        "DOV_LP_078_Du-174",
+        "71d3e061ed8d9b75d340c5960e2c1b8933fda466ac5eaa082a5a8a33e3a47dd8"
+      ],
+      [
+        "DOV_LP_079_Du-175",
+        "9de158f11c58e0ded90f2b5d1d6fe62961764a2df7432c7c9f7cfb3a547a9c58"
+      ],
+      [
+        "DOV_LP_080_Du-176",
+        "426e4cb97eb9b0b3ee17e40d6e01db45ef1fa3e5624e860bb2c5c8d31f4162cc"
+      ],
+      [
+        "DOV_LP_081_Du-177",
+        "c85ed7274e06fa10ddf4e7c263dddfe367b3a1f3f4cb183775df8a82b44e1fc6"
+      ],
+      [
+        "DOV_LP_082_Du-178",
+        "c3710c9cb61d827f4efa390ffb0117c4ea292ddfc3046922cedae66bfff49186"
+      ],
+      [
+        "DOV_LP_083_Du-179",
+        "775b9bd14a903970f16192f1e844001529ac3d6911f487b2ceb4d6360c02d096"
+      ],
+      [
+        "DOV_LP_084_Du-180",
+        "d4a2ea038fe3238f568800f248ccd53260f4824960bf36d15a3f83347435ea03"
+      ],
+      [
+        "DU-173",
+        "390d3dc976cd3084a0b92d42910d79ec74f95382960f95892e26dbb8b2d2f736"
+      ],
+      [
+        "DU-229",
+        "423c8e8646305cde71ec49ecf3a013ecc66a39db6e748ebc1871a800a4d9a938"
+      ],
+      [
+        "DU-247",
+        "4cf35aa84af00d7c70771923d8f35314a841843c17bc6674c75120c84e39d8fd"
+      ],
+      [
+        "DU-254",
+        "3166e04d0d48065b5c8c440ba34e5c8d0777209f4122b9e65aff20dc4108ba59"
+      ],
+      [
+        "DU-270",
+        "f98f61153fb6b5cab413cdd1844bdd02419e49087f47f8e0a0c509468cdfca55"
+      ],
+      [
+        "DU-297",
+        "af6409de6dd864886f2a1d175e72f41c629182a527932b6a13af213ce72556bc"
+      ],
+      [
+        "DU-443",
+        "2b997bcdc37365d1db5bbbbda15e82ba73aabfe4ffb8b5fb4158a5f25a21c16b"
+      ],
+      [
+        "DU-4A",
+        "98adca080d3a97afb30e88fa9ff2613557a6544eedf02b92182896a62bd0ba21"
+      ],
+      [
+        "DU014LP012",
+        "78451b09487c43ae16cf7e33dfc42991a89721483f548ca1f1f7344eb99af7ad"
+      ],
+      [
+        "DU037LP013",
+        "0968186f41afcd6212db2cf24fd5487d23d8a2a53651b5b06709b5ea0c195b92"
+      ],
+      [
+        "DU059LP015",
+        "a3c941bab6b7102c65be1e83dc772bdb536f5f5b29976fda65964ceb46fb5070"
+      ],
+      [
+        "DU078LP011",
+        "8ba1bb0fb717e600fef368e13414e5173f69940014f4f987bebee652f851add9"
+      ],
+      [
+        "DU079LP010",
+        "dde5948995ae3fa240e32279399fe1a55e6a6417202d4f9454be5ddadeacfef2"
+      ],
+      [
+        "DUD_LP_132_Du-283",
+        "b2cde09734e7dad7abfad311b5af5779fac53918ce4c446c8b45dec2db45681a"
+      ],
+      [
+        "DUD_LP_133_Du-284",
+        "0eee098111f61c84bcf774cb5942c2d2a52035d38c85a41ecc089543c9636c54"
+      ],
+      [
+        "DUD_LP_134_Du-285",
+        "98e8e14eb0c416c2ee2ab18239d4afbc4d26cd594c75f60ebb54064e756db871"
+      ],
+      [
+        "DUD_LP_135_Du-286",
+        "eb8201ac97a2aa3b4d9840089a3d71682004aa97b5c91e8d83085a8fe5616e46"
+      ],
+      [
+        "DUD_LP_136_Du-287",
+        "bce1e2e7e8480d1d7ca8ac40fdc7dda41f013052dbae757ebc95b7fbf2d62d8d"
+      ],
+      [
+        "DUD_LP_137_Du-288",
+        "1333702a362fb28daf97c22091af2ba64da5a07ee1d71fc9d4c717914e5eb45a"
+      ],
+      [
+        "DUD_LP_138_Du-289",
+        "d3324168e8bd8d5c61c5d687f926a0533de28d13ad0fa1c9b4685abdbde17484"
+      ],
+      [
+        "DUD_LP_139_Du-290",
+        "38424b5e8a99483bfaf417c3b6283e77ae989017f6c47883cba7edc267f8b768"
+      ],
+      [
+        "KIRN_LP_179_Du-421",
+        "48ababcaa821be4e71ad8d0d9e4c4f4074390205f75a2e74169107d7924b009d"
+      ],
+      [
+        "KIRN_LP_180_Du-422",
+        "ada20139220a92c6d49768d74fd91637b8f078e95aee599aff1312ad5f7812f7"
+      ],
+      [
+        "KIRN_LP_181_Du-423",
+        "5c1b6c5e9a7d3bf8c7363d5d951436a2056988ec98cafe18d550ab342251fef3"
+      ],
+      [
+        "KIRN_LP_182_Du-424",
+        "dcaa3da4bc01512072137b638340d09e486fa0460e3215641508e4ec76ee9f83"
+      ],
+      [
+        "KIRN_LP_183_Du-425",
+        "6575888b2711d7c2fc80d9958fb6cadae426e2b636909f539c008e13812e8fcd"
+      ],
+      [
+        "KIRN_LP_184_Du-426",
+        "823597c085448576f7ee7cb814ea387f3d44c2d24ef344f17500111090b69577"
+      ],
+      [
+        "KIRN_LP_185_Du-427",
+        "a239fe55770f2854c8b7953b0991fa87880fffefc2179ebcf3525585419ef26e"
+      ],
+      [
+        "KIRN_LP_186_Du-428",
+        "74a660cff72a9ed61d3bd71bf5dec339466d9bf441e28d11a425417d4083b7e7"
+      ],
+      [
+        "KIRN_LP_187_Du-429",
+        "6b8a208883a588ebf3d9d6d721ae131f96724afd1df4a7e703b2eebe1291944d"
+      ],
+      [
+        "KIRT_LP_159_Du-364",
+        "18942a1cd9d7ed01431026bf6660df3e84cf6ad88cff511925d64c6d06ef81d6"
+      ],
+      [
+        "KIRT_LP_160_Du-365",
+        "568c8bea82572cb89b6a61f2cb406e4bce84b8fad344c630c022c61f1adbf790"
+      ],
+      [
+        "KIRT_LP_161_Du-366",
+        "fc3d7146bfd602ff4e6ee7a514cf5a639a94c3f613b86c8ca033580661dc31c8"
+      ],
+      [
+        "KIRT_LP_162_Du-367",
+        "c5b667303b5398b40d66583170a9ddb0a9505321bb73da3e4e8239afa5caaf99"
+      ],
+      [
+        "KIRT_LP_163_Du-368",
+        "9f0968150f0a98169a231e8ce56e3ddaf395eebca2f8fbc5d4866106f4a520ba"
+      ],
+      [
+        "KIRT_LP_164_Du-369",
+        "e4a329aa4de8917688dbd5950d705787b2f0e5901023d52b3c393f577dd24c6d"
+      ],
+      [
+        "KIRT_LP_165_Du-370",
+        "c430a117cc76add12d9eba9cd5256247b53b3eff13edaaa18587bb49ce1b356a"
+      ],
+      [
+        "KIRT_LP_166_Du-371",
+        "12c3f28facbbca6bafe5df3ed807c2a7bce0631ce6d2c364f93f8860261a35c5"
+      ],
+      [
+        "KIRT_LP_167_Du-372",
+        "373dd5fe8cba45246bfff648c34542c46d27929b70dd5d3ab93b28718967c438"
+      ],
+      [
+        "KIRT_LP_168_Du-373",
+        "8a5e44aec5afdc8c075146618ffca8594d613e3ec2d17ff650c6644f4bb92f0d"
+      ],
+      [
+        "MALV_LP_095_Du-201",
+        "7b0e42e68b16f940dfe6e861b15aae169bed60edcb7104cb789c15144c7b791e"
+      ],
+      [
+        "MALV_LP_096_Du-202",
+        "1f63c485439786ba2dbb017f116c11f1d4ddaeaa5e4b894205ace4358a3cb266"
+      ],
+      [
+        "MALV_LP_097_Du-203",
+        "40a7c5388d34f6c5342ab9458b60454cea48cc23395922404c7dee7aedf9bbe5"
+      ],
+      [
+        "MALV_LP_098_Du-204",
+        "3e1c81492e84f0e5e2eacdf673a3401b9e6ab06e8af84e92384794bca70a8c25"
+      ],
+      [
+        "MALV_LP_099_Du-205",
+        "8053741f253b658eace0b45cafe76ce4c32b94dcb47e622ef93c09ade0740053"
+      ],
+      [
+        "MALV_LP_100_Du-206",
+        "996fe2cbd5037b7d944b6da7e48d5bfdde308a85a583e64b549e3f54e216f3e8"
+      ],
+      [
+        "MALV_LP_101_Du-207",
+        "d37320c19295106a070a200e188b74029454d7dcecedb9b74d5d138201501c6b"
+      ],
+      [
+        "MALV_LP_102_Du-208",
+        "cbfb30d232d13aedb1b74477b22040662a8eb48203229159e3f429e49b87d270"
+      ],
+      [
+        "MALV_LP_103_Du-209",
+        "52d97471e2a644401e2a867dcf8016af415abf5bf98ce733079c45789334ad9e"
+      ],
+      [
+        "MALV_LP_104_Du-210",
+        "4deb254cffd5407ca03e878adb58e5df38d20a488fb2e59f313f35e795e9f781"
+      ],
+      [
+        "OCO_LP_058_Du-115",
+        "a7aadaeddc1411e00de59ee16e6abdef313e8550ffa6018fb715c6a147dd207e"
+      ],
+      [
+        "OCO_LP_059_Du-106",
+        "e1f6f7aa0c14cfb6c0d953935836170cd60f45db925a5e5e82b11b5d396e3acf"
+      ],
+      [
+        "OCO_LP_060_Du-107",
+        "fed6226f3e1f7177a2ed1e9209d706d71e1a2deefb2a80fd5c087bc1713a7c47"
+      ],
+      [
+        "OCO_LP_061_Du-108",
+        "819f159b4e12a05514a1a92a1ac6bcb3dfda4eedcf39b5eb7856d0f9f764b464"
+      ],
+      [
+        "OCO_LP_062_Du-109",
+        "09d40a0504459ac36c89488a7cd4c5ca29f211b5212e619e19e0188a4ad6b2cd"
+      ],
+      [
+        "OCO_LP_063_Du-110",
+        "8ac93a4a1fdb3ee42f0f556e4302660950b28d298ddd0a18a3b345507ed2e851"
+      ],
+      [
+        "OCO_LP_064_Du-111",
+        "c1b3096d5cff9d54bebfb440d2221fbfdc36412cc813a53384dbebdf13e11135"
+      ],
+      [
+        "OCO_LP_065_Du-112",
+        "61f5de1a2f15e04e770c1bd02d130770ee3cb7055bf1652a070a0bba660b92a5"
+      ],
+      [
+        "OCO_LP_066_Du-113",
+        "040e117e07656786e54985206c7210c7643b3d8cdc8ced68f22356c9a3168b62"
+      ],
+      [
+        "OCO_LP_067_Du-114",
+        "114877fca20ae68690ab1019c1401e434002c9c4d2c4b31f012c9b267b830005"
+      ],
+      [
+        "QUI1_LP_249_Du-648",
+        "116fe2d0e105a57e4ae340e73c1a557f54e8a5977eddf4483b2aaaa1c7e7afd0"
+      ],
+      [
+        "QUI1_LP_250_Du-649",
+        "fd3a7ec4c00b9a1535762c3428b866f69d6ca1afd81df4a122ccc574aa1fec03"
+      ],
+      [
+        "QUI1_LP_251_Du-650",
+        "2c87e819dd110850ea00222303769f0406584e1fea4d0797828c2074c2a10e57"
+      ],
+      [
+        "QUI1_LP_252_Du-651",
+        "32cf79662f714e0a2f2302b10827071be7dc1a8bddc3f553c578454ebdbfa2cf"
+      ],
+      [
+        "QUI1_LP_253_Du-652",
+        "6d26b71cad8a943fb4657231165b643e2e28e4cfef1f10033fc48fb5e40d2587"
+      ],
+      [
+        "QUI1_LP_254_Du-653",
+        "5604f05621290b49ff72b1799291f319b873d395ce0c58611597b9fded06bc75"
+      ],
+      [
+        "QUI1_LP_255_Du-654",
+        "14b6887f6942f11480269d00f60cd6ed77604b4a07e1542c3b9002b90c805948"
+      ],
+      [
+        "QUI1_LP_257_Du-656",
+        "417491045bc1b79948907f07e9d319a87b3eaffb71ae0a69a3901ce9521028e5"
+      ],
+      [
+        "QUI1_LP_258_Du-657",
+        "a94125406c3defba91d8b5606d83fa68519b26086d4e99c739194617d852a4ac"
+      ],
+      [
+        "QUI2_LP_243_Du-631",
+        "1578e535dd6b995153be7cb8b92a9bd1bf17e03e59df4a0a118d0cd23ee66a5f"
+      ],
+      [
+        "QUI2_LP_244_Du-632",
+        "20403e0cf0820fbf6b7180d069512093603fa7545b7aa2687221dad0d0dd6cba"
+      ],
+      [
+        "QUI2_LP_245_Du-633",
+        "6a606fd1c8fa423888c06219813565a304ed78857294147a193750db7110331a"
+      ],
+      [
+        "QUI2_LP_246_Du-634",
+        "ed2ef0873276ffc53c95a0d1b08476d570f1980b65393c59cfc16beaed4fb5b8"
+      ],
+      [
+        "QUI2_LP_247_Du-635",
+        "0886c30877254fa57913010eb507d4d132d1221755d0f15d8347c23d4d6bd3ba"
+      ],
+      [
+        "QUI2_LP_248_Du-636",
+        "0d6bab113c14b2606179af8e2e3da26e26a3624939b18cecf7ec9242960dc23e"
+      ],
+      [
+        "QUI2_LP_337_Du-638",
+        "08d305eb34ddbfbc6b2dc5b3f0108467029d9adc7a6fc43569f135c6a401f8f2"
+      ],
+      [
+        "QUI2_LP_338_Du-639",
+        "9ff40e5f24257d7ca4683100efd0e1867918159a395f4137e6ced3f3b42ae83e"
+      ],
+      [
+        "QUI2_LP_339_Du-640",
+        "9ba9b9e3c2646cba386ef35b02b9a59e07a3fb1f447833c058105e49efb40670"
+      ],
+      [
+        "QUI2_LP_340_Du-641",
+        "3d0d0938236ebdfff8054352a2d625b5754666d78a0b85e3d9ef4ae45340817d"
+      ],
+      [
+        "QUIN_LP_069_Du-155",
+        "169b729a9ff1910fa3a537c8978c3725e4a1eece871e7b4b17688ae32a1c2613"
+      ],
+      [
+        "QUIN_LP_070_Du-156",
+        "e6b910b8fc5092d094e19a0771c04e4ee80c0ef8b74cd663c1458329833a5882"
+      ],
+      [
+        "QUIN_LP_071_Du-157",
+        "50ad86e946bfba202912033a0be1298993ed5cd3907e4c215bf4d1d38f4b45dd"
+      ],
+      [
+        "QUIN_LP_072_Du-158",
+        "01a0b221c081e6ee942d5f1ef57c29651c68072ae9b8c54c7e493a8d7082d454"
+      ],
+      [
+        "QUIN_LP_073_Du-159",
+        "e9b993b1a6b9ce5cd282296a852a04daa1a1fffef481d07e7976c65dd0d48f68"
+      ],
+      [
+        "QUIN_LP_074_Du-160",
+        "7f94232649b50a302c0ffeb6081a67fb300f88bef3fc5b480630fd508ebe50f0"
+      ],
+      [
+        "QUIN_LP_075_Du-161",
+        "7a7db90a2bfc751f5c4ae63fc46d34b4d2be9858e4e9566052d2c3443a443a6f"
+      ],
+      [
+        "QUIN_LP_076_Du-162",
+        "d48f7276dcf67706c475cbef8cba6e3691022f678bf04f491c9b9b5904392350"
+      ],
+      [
+        "QUIN_LP_077_Du-163",
+        "906faed47828615db273d7c6bad807dec09e6157f88c7f5e6c2f078c086de368"
+      ],
+      [
+        "QUIN_LP_318_Du-164",
+        "6660643d5fd74d1d0229708e89dada9f81e6dc347d95355f7e94ced8a969e0af"
+      ],
+      [
+        "RIC_LP_192_Du-521",
+        "22f58456ff24c719cd3cffcef34f75c2bb7e01b6dbf642889cab365464ad9d78"
+      ],
+      [
+        "RIC_LP_193_Du-522",
+        "e2b931212e08b2390e0bd9bf5406559acd3cb25cb3c0bb8a5cf404bcda0bfe5e"
+      ],
+      [
+        "RIC_LP_194_Du-523",
+        "6af729433137023a5bcb5a96e1853624d0bd15b1260d83239c48f2198226a811"
+      ],
+      [
+        "RIC_LP_195_Du-524",
+        "0298cdc66cfe538ae255369877951518fdc637b40aee75166cd32a9b9366fec5"
+      ],
+      [
+        "RIC_LP_196_Du-525",
+        "384810a5c7fcfd9515249e408fd5d8adba8dbc9a2f90a26eaca434b694fc69b2"
+      ],
+      [
+        "RIC_LP_197_Du-526",
+        "0addff6ebfe4b8890be8dce0f60fc45e0dc5ffc472b625169f64c0d3e0880f80"
+      ],
+      [
+        "RIC_LP_198_Du-527",
+        "e584509eaeb20e216a5fc2a09714a6267ba6e91970ae0a3f4a29626d14e2d576"
+      ],
+      [
+        "RIC_LP_199_Du-528",
+        "403c1a5a2e24e154bb278ee4c789836159635155981e0e3ec1f0517d3c24a70b"
+      ],
+      [
+        "RIC_LP_200_Du-529",
+        "9f09cb7575df5e9a313b21d034ad7f7e7ff57533df8baf157470bdc12db21b37"
+      ],
+      [
+        "RIC_LP_201_Du-530",
+        "5ccedddf66673b869071e4df125dee5bbfb5e2fc1519f13ef13d549c48ffa283"
+      ],
+      [
+        "RSV_LP_049_Du-85",
+        "6b483c11d4e9060b0acc73a659c0e7ccecddafe5329edca4def1cfce7b5c0bc9"
+      ],
+      [
+        "RSV_LP_050_Du-87",
+        "bd92e14dbc314004a70b8bfc9e72292fff852f16e209dc74728404f3b6672980"
+      ],
+      [
+        "RSV_LP_051_Du-88",
+        "67e96d658e61137daa5011405bec6a68a30806d9659b661741dde790ec7fe247"
+      ],
+      [
+        "RSV_LP_052_Du-89",
+        "f4066e784e4112944f458a3e63f72801f62e181d88356e9b942d8d08a804aa30"
+      ],
+      [
+        "RSV_LP_053_Du-90",
+        "34ab63ba50f3948c8670efdb09abbf0764b3b5f9c05ebd435ed1374c3d25d628"
+      ],
+      [
+        "RSV_LP_055_Du-92",
+        "83d8b28511bd2e8c52fea140a36414f769f4186c365695b7b4c66bc81901cc5c"
+      ],
+      [
+        "RSV_LP_057_Du-94",
+        "1800d889f0a61b3045435ee0f0980f435b293c5711a092a09576825ed05a9b7c"
+      ],
+      [
+        "RSV_LP_315_Du-95",
+        "bcd395f3895f1fc6bd7b84b18fe21058bf88149a05a2905b1661437a414b4fef"
+      ],
+      [
+        "RSV_LP_316_Du-96",
+        "78ea01d2eda99127a4ec0c75bd0289cbffe95cfa8be61da14e589ce4562f3395"
+      ],
+      [
+        "SILG_LP_149_Du-343",
+        "886337111050f36147b6d8d65982efa00ae5d8a0be053c4ea3559a95acbb3450"
+      ],
+      [
+        "SILG_LP_150_Du-344",
+        "1d6d0e32af0935445fa5330367b94fc54bd53bc6aad3bd56a12f5ed8ed137cc4"
+      ],
+      [
+        "SILG_LP_151_Du-345",
+        "1b4c8d8b34a21b064e302dcaca95278d49a7cafaf8f66547c32161c112a88354"
+      ],
+      [
+        "SILG_LP_152_Du-346",
+        "f1566ab80a10c1bb2372e4531e59853be71518a96959bccfc7da2018300f1d65"
+      ],
+      [
+        "SILG_LP_153_Du-347",
+        "b7866383ba5dac9d9a244ce2a3a29bbc13ac35c19783dd20f4039cab5d4d46b4"
+      ],
+      [
+        "SILG_LP_154_Du-348",
+        "4a076f367585b6417547bc2d0162a43c83af9679f9cfed3b975b8aab62d8ca9b"
+      ],
+      [
+        "SILG_LP_155_Du-349",
+        "283ff126d65519e1ede393aacbcdc59263892ec2fecc28dc51a5bfcb15a3be72"
+      ],
+      [
+        "SILG_LP_156_Du-350",
+        "86d11f71e7559c1117617dd9ef0673cc8794dae365946f29718e27a0212aa129"
+      ],
+      [
+        "SILG_LP_157_Du-351",
+        "d4f7f5b708da4a9fb421a471fcbfcea5936a1fb7f26d2ac7b753760a3404c7d3"
+      ],
+      [
+        "SILG_LP_158_Du-352",
+        "e53c99bf471bceaaf9ed9ae72c0d067dc63a61fd28e98f58d8e6fc8ad8b5d5b7"
+      ],
+      [
+        "SILR_LP_346_Du-729",
+        "789d154b940020e31426094a303c31d62da0491830a8cddc6cca91ade2f80c13"
+      ],
+      [
+        "SILR_LP_347_Du-730",
+        "ed75bf9fc868b14cdb5daf78e213d694e0e36708ac89e03cc142f2558f320ceb"
+      ],
+      [
+        "SILR_LP_348_Du-731",
+        "5e11142309b7d2647baf3f879737f4cd5087cca0f5bafd0478677b1a61e40cec"
+      ],
+      [
+        "SILR_LP_349_Du-732",
+        "369f6a4cf36aa5b7ac10e062f3ba668843f3719eff5c6c015ad8caa8206b0c6c"
+      ],
+      [
+        "SILR_LP_351_Du-734",
+        "62e706f99e87eb3279cd2fa13aeb677cdfb4e425c66b47fdcdf0c8427c4e034a"
+      ],
+      [
+        "SILR_LP_353_Du-736",
+        "f2da8dcf6e81d9faae62aedd0840ced02f03619ca2f0b7fa1e23759789b20b07"
+      ],
+      [
+        "STI_LP_027_Du-45",
+        "cc3380fc800ccbe7c73115828a1d5cece7046e1f13ae983d8e82385745fc25f4"
+      ],
+      [
+        "STI_LP_028_Du-46",
+        "1601982f1c458c0ae7704d1428d0074c715ded2339f86ca41d04ad3196c438e6"
+      ],
+      [
+        "STI_LP_029_Du-47",
+        "c30a8ba941a78b3857504ea57c0767b4755ab141bbfb705c28e0c5636106d366"
+      ],
+      [
+        "STI_LP_030_Du-48",
+        "2e9c1088f920b5d81de4aaf1c97074f5c5519cd14fa11215d59b712554e026fa"
+      ],
+      [
+        "STI_LP_031_Du-49",
+        "2197e87638f643bb4e371294b99bc05590b2d5804bdfd882b1ae81d7ba59001c"
+      ],
+      [
+        "STI_LP_032_Du-50",
+        "ec904a4b5505973f8d5bc8d544e665a8e5033ee2d43820000fcbbe7de4d3bee1"
+      ],
+      [
+        "STI_LP_033_Du-51",
+        "cc3f3ae5d5db4ac7b4c03dd5a8846d42bffb491b4cd90f9ad57df587f6c6f3eb"
+      ],
+      [
+        "STI_LP_034_Du-52",
+        "9a8da4185402f2ca5d64d700212345f46d85c71ad2cfe0d3f3375705b0a9d7d1"
+      ],
+      [
+        "STI_LP_035_Du-53",
+        "fc69c8d9b18d1f9bafee96b67638de7960ce6b30826f9e19e998e0a3321192eb"
+      ],
+      [
+        "STI_LP_036_Du-54",
+        "bf353bba909e371964c166522aa83cb7d4a699c574ca6851ad6e2260d31a396f"
+      ],
+      [
+        "STI_LP_037_Du-55",
+        "3a63dd15b738c79a5956d4b9f260bee4f7243f8eee984e5e95db88b790eb8225"
+      ],
+      [
+        "STI_LP_038_Du-56",
+        "bca8ff9a3797f6d801f7366e2d9abb348e431583e73db52d01ca02e9a0887779"
+      ],
+      [
+        "STI_LP_039_Du-57",
+        "ed9e8e6bfa2362ccdad8d14b9d5cc069009a7e57b6a4ed41517470b737a6e342"
+      ],
+      [
+        "STI_LP_040_Du-58",
+        "aa55156bae1ffc92ee0700659e5faaeac966465d53382bd309345d58f87a4b69"
+      ],
+      [
+        "STI_LP_041_Du-60",
+        "57b6bd183ebf4a6de275a3b6386ef545e2e931bc6f3babf5e518990ae44f8b56"
+      ],
+      [
+        "STI_LP_042_Du-61",
+        "3d97a3355f703c66283a90f304f0235a4e249355dcab8fae68a53cde79697a8a"
+      ],
+      [
+        "TIL_LP_123_Du-263",
+        "889a3a0904aa2903b9f99a7d14cb8df51c0ea903ee374d40b908700c7c62276a"
+      ],
+      [
+        "TIL_LP_124_Du-264",
+        "786f39673983ab5b1f20dccfbdc3c63d036b27927ff7fd3be2d2832be794c271"
+      ],
+      [
+        "TIL_LP_125_Du-265",
+        "897a83bf54fa9d277e8470aac59f6e251bafcc9871711cf6cde363fa444fe9a7"
+      ],
+      [
+        "TIL_LP_126_Du-266",
+        "6f388bb353067fd15c273a4a8886ee5c547a93ac528558f9554f32786474e939"
+      ],
+      [
+        "TIL_LP_127_Du-267",
+        "3d079c175118e2a24653f6c9d9f9d890bd0dbf024e94aff24149872a4504d028"
+      ],
+      [
+        "TIL_LP_128_Du-268",
+        "97d9f75c60ba09c963c5715550695c601950cea456b016153cb1c74679d5eff0"
+      ],
+      [
+        "TIL_LP_129_Du-269",
+        "1f36dad2028004f8e0cb944417d84cbb671c91a14437c3b3a0e2f6a64d4ce7d6"
+      ],
+      [
+        "TIL_LP_130_Du-271",
+        "036e78dc80fb49a6d52044f167e40475b3810ea33dfc6922956eced162996439"
+      ],
+      [
+        "TIL_LP_131_Du-272",
+        "e1cb37e20c9045fbf915c5ace4d608c8adfebccd038c6b6d9a2a2f5effea34ef"
+      ],
+      [
+        "TULP_LP_115_Du-242",
+        "735cb77c25d38a28002fbb8ca04684f9b0c584a635524b0d37ff04cbc971e7c3"
+      ],
+      [
+        "TULP_LP_116_Du-243",
+        "6b2ba110fcfc1334b142bae53b35d313e8b3188eac182401c9d32671fcc9690e"
+      ],
+      [
+        "TULP_LP_117_Du-244",
+        "67658857d4ba7e6f1ef54650243dcfaacd783d9c551be4e224e03df2bf5faaef"
+      ],
+      [
+        "TULP_LP_118_Du-245",
+        "3632cefacc40e1be8d8523ea104aa5cc54cdc9dc0b706ec5c17c8557facd93b2"
+      ],
+      [
+        "TULP_LP_119_Du-246",
+        "73108ad98ebb665bbf3c7507bf8bfea260d910ba642534916c8f5667372f84c5"
+      ],
+      [
+        "TULP_LP_120_Du-248",
+        "892e87cf668d32c8c469e30475813c9f4363cd71c8434165308fced1d4468d56"
+      ],
+      [
+        "TULP_LP_121_Du-249",
+        "513124e3571313368838c73ff2622abb31d179f4eb7cf289d945afadf08e8abe"
+      ],
+      [
+        "TULP_LP_122_Du-250",
+        "75b4070fe4b2ae9efd01a5b6029674aef2de1f3c4fac39e1b15c064aff2c399e"
+      ],
+      [
+        "TULP_LP_140_Du-302",
+        "b09f28991eda600c5d8a150a5cb67a38c0a65647290ce0ecb68ecbfd48c532a1"
+      ],
+      [
+        "TULP_LP_141_Du-303",
+        "f072d8e61c139b041d279b85adbb813526fe961da69a2909475d659c924f8942"
+      ],
+      [
+        "TULP_LP_142_Du-304",
+        "c66728b8b33cf546f6d0b816671d6472a28d04fe8fc13747dce6ea2ab30d8858"
+      ],
+      [
+        "TULP_LP_143_Du-305",
+        "5ab05cacd6f90a5c745fb6ddca3d46542c2108517586f7c5fc40a77adb9b0134"
+      ],
+      [
+        "TULP_LP_144_Du-306",
+        "03a81ec09147996213a95d8d039210233b460b91bf65b3d802afebc8e3b2869e"
+      ],
+      [
+        "TULP_LP_145_Du-307",
+        "518629e69e0e67d2290530c69e653273bb40f540b9b315b62e43384b5e58de2f"
+      ],
+      [
+        "TULP_LP_146_Du-308",
+        "689414c3c6cb96936c3822d12cab1a6306b375f099f22325cc827a4d650160fa"
+      ],
+      [
+        "TULP_LP_147_Du-309",
+        "22313f8c65977cc9af6ab84fd7466d766a740bfaa19942e34e102541ddd90e1a"
+      ],
+      [
+        "TULP_LP_148_Du-310",
+        "0892a1191bb826de27786408cab23a80ec090d3b543ca90f722d32a0f47e50c5"
+      ],
+      [
+        "metadata",
+        "2d1daa1599e6be48bd1eb1f2df702f713fe6a0cffa398f9513146a5b162558c5"
+      ],
+      [
+        "references",
+        "7daec3ef86b9dd303ea00af35428c110c4bbeb3a4547d12b237284d3124db6a6"
+      ],
+      [
+        "source_validation",
+        "691b70fb163cbb1b99003e8feb1bf965aa1815d8708461635f64c3da7efab236"
+      ]
+    ]
+  },
+  "outputs": {
+    "canonical_publication/provenance/runs/publication-20260817/mapping/ABAB_MAD_LP_222_Du-589.json": "e336173987ffca831cbfaffe6b7e90dbc252ef6f30875c0c500d0fe79dc275a8",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/ABAB_MAD_LP_223_Du-590.json": "3bf8813f8af20283d5b4e360859f8175725bbe9cc20eacec982dd76993d944c8",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/ABAB_MAD_LP_322_Du-593.json": "a721d2947c5a78f5173344b787bc06d0d8582587e59ec361fad83bb494d1038e",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/ABAB_MAD_LP_323_Du-594.json": "8b16b941468e0bba363268f0e7185daec0919c351988e87fea8aa4c14e9a3946",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/ABAB_MAD_LP_324_Du-595.json": "cd2821dcb898534ed4fd4e6da86cf82281bac838c21c60179e4c36f2bc518b1c",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/ABAB_MAD_LP_325_Du-596.json": "ff4fe6facbe302ccd13738c350529c1d48cbd5a13e47dcaf4cd4240e7f3f677f",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/ABAB_MAD_LP_326_Du-597.json": "129e533c6455bdac1a0bd380e3119a08752feed47bc0bf97337f195e49129a13",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/ABAB_MAD_LP_327_Du-598.json": "0215d5de91064ad4e4bc6485ff30dbb3d1ea65705b03ba2c4c1bebf3b51a973d",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/ABBE_BERN_LP_311_Du-780.json": "0d7bbe8e206b43c6cc67f137fe84d6a0f26c25c87caa4081210b580da32dcfa8",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/ABBE_BERN_LP_312_Du-781.json": "51128ae303c29bf28f6efff4e1445bfd6e8e84697d65bedd3fba9f05b7f622a7",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/ABBE_BERN_LP_313_Du-782.json": "6197b377d949f362c1cf92261d7dbf92be34e0b78a4f51254ea5bce2be8c3c84",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/ABBE_BERN_LP_314_Du-783.json": "28b961b34947ceeb77eda5b38b2e2901cc520cd6c3569b0469e86f25a35082fe",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/ABMU_HOR_LP_306_Du-775.json": "9aa42ee3118cccf4b12fac6a69861a99804678c211f96ac82c4060df7ccefb25",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/ABMU_HOR_LP_308_Du-777.json": "f1390a9784e23fdc9ef5b81599b51e6fa769a3d26446fb01f24e0d924ebcfe0d",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/ABMU_HOR_LP_358_Du-770.json": "80a7d011728d127c48142420d1e0a491df9ead42d482dabb3990cd9d728a2f81",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/ABMU_HOR_LP_359_Du-771.json": "f0e40e12c3c2523d1682c3fda5e45d7ffc20fce0df4c40efa526c6ea0f366188",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/ABMU_HOR_LP_360_Du-772.json": "0082479a5ee11391d727da8f0170a7d5702b2c05ed31931a14a37677ee896186",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/ABMU_HOR_LP_361_Du-773.json": "e25df40e9debc79816bef2da611bdba5e5bbc3ee894efaa2b52fe2684b587711",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/BAI_LP_105_Du-222.json": "5d74e9875caec94832e30cacf06d94dd28a4b53fc89250e3411b1e61199b7def",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/BAI_LP_106_Du-223.json": "57a5acbe896ff35f7cbfd26353ac144d17610a03f68a454d5655c27a19eb27e2",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/BAI_LP_108_Du-225.json": "c06a1762ec6aa24661e99ba1b328a30fdcd34691fd3d9db6d4e8da6c11217a6a",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/BAI_LP_109_Du-226.json": "243fb5c2fbdcd57d2fc190fba07950b5976055443a6d09f36587fa2a82e9b009",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/BAI_LP_110_Du-227.json": "6ea7efc0283a3aaf4679669aa34d4069e03c2324e8a5d9c9d666c06a64b7984b",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/BAI_LP_111_Du-228.json": "52523360ebfbbbf98cbee64b3a685c6ffc7358bc4e6d528f152756cfd57d18f3",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/BAI_LP_112_Du-230.json": "7ee4f01f7fafc3fc1f70bba6bd7e23d06d395d37e7ee27ffcbbf1e9772a2804c",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/BAI_LP_113_Du-231.json": "a3af804894e219bf92a0f0f2497912acc20d7b328ba55b8a30ba0f636b932ca9",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/BAI_LP_114_Du-232.json": "90d5a3cb0da256728dab3946ccd2a569bd1664c5497966d26da90cd354b0aaba",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/BAI_LP_319_Du-233.json": "0c3126da5bc8e115809a7d7944d37f648a40adba72cb423ae4b54c4d7926d9fb",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/COM_LP_269_Du-703.json": "2eb58206ca7e2d6adebc4346afe7c894e29470a89d4bbce7958c363d28e1420b",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/COM_LP_270_Du-704.json": "736d2ee8c74f77a007eaa36b72daf4f533e5fae12cac131fc9dd52f0ca559868",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/COM_LP_272_Du-707.json": "df707b011841d4214f52eb53e6031e86cd6ffe1fa928980e2eca3e7c698d8c4e",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/COM_LP_274_Du-709.json": "bbb3aabb7c1a41914a6788c143d941cc16492e84547574d28c7c43b78800d84a",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/COM_LP_276_Du-711.json": "46bbfcbceb3d50e2fd151f29736342547b0cb3e72267f1f7a610e86097b26d99",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/COM_LP_277_Du-712.json": "dad086b2b52ecd2826f4f63275cca384829ae67affee01a0eb8ee2055bdd1abf",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/COM_LP_341_Du-713.json": "f5c53c29b0fb8832cd9bd8c9612cf1fc200228811188ebd001b9b8eaf7319fd2",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/COM_LP_342_Du-714.json": "4f7dfd6dc53c6850184d585a82994a2a656aaf207d1b0b877946a8c8ffccad48",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/COM_LP_343_Du-715.json": "0059b490e0f0b417bee37e41664cbeaf2e421e56466d92cd8fa52628750b6389",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CROB_LP_169_Du-381.json": "895284bd97454da7a763ce97634faa423bd70c1c427b228288d704ec47faa039",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CROB_LP_170_Du-382.json": "ec572a00bcf57b0f05969b1ddbf1f9a7d293a8c519ba2a816213d8d2145ace5d",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CROB_LP_172_Du-384.json": "0fa8c91fbc0158a6698446454e30c4eb516ce8a3e10eb4992cd6fb56a654b75e",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CROB_LP_173_Du-385.json": "7909dd7c803769e4a7486aa3f2242132433c95847316852dd526d52f67ec74f8",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CROB_LP_174_Du-386.json": "b3a190fd6543065238d27aa5db93d5df2b88d7c8c6b80b74067152a1b5a93497",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CROB_LP_175_Du-387.json": "a7ec573f623ca291093ee9a04610b20e298fbdb52f0dbc6c2d3711bb8e6a1ca1",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CROB_LP_176_Du-388.json": "e188a86f664221d23c38e784b9806112e83237fe2efc26d168cb0dae15e11c24",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CROB_LP_177_Du-389.json": "c3a2a12622f5c931a6224abe66179a678aec5458e2737a79e493779c44421688",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CROB_LP_320_Du-395.json": "aac828c7b291fc47cc90dab9559cc3fcc18d2f233fc13e48e775864ea07262f7",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CROB_LP_321_Du-396.json": "9ab61089e2244d7a59a65cb1e055575be7ee4e07c64f2bb7aae22f78a4c8ddb4",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CROS_LP_085_Du-181.json": "1381c6e67e879d79b8709f69067bae538420b02fed52ac1ab573795edd7c79d4",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CROS_LP_086_Du-182.json": "44d3da752a8a6e649f6f7dad8ca4f170b9f8c007d257a7aaeb974c53a646af00",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CROS_LP_087_Du-183.json": "2842d299061c14fea263c7a34174747f481a191feaf83493b61ec2d56079ed41",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CROS_LP_088_Du-184.json": "d93d4253d24d86bf845654fb274fda48329ac1bbbf4d409bc29f6e4b59678da0",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CROS_LP_089_Du-185.json": "92c20d1e29d35eab588f7b19a86e647439fd5f79db66625ea38a0511ffb84b55",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CROS_LP_090_Du-186.json": "4a3758baa53bc68a33efdba0ea21c5845dd081c35fb1bc6203b03c402d689d37",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CROS_LP_091_Du-187.json": "e212f397468629f232c75fe43b6a104426d6025873f3df6a3dea6ae1a85e5e24",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CROS_LP_092_Du-188.json": "c202504aec0329ae27d407e1fa134837d09620676fb75df06693352bcfe9cdf1",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CROS_LP_093_Du-189.json": "bad11f2c1af7bda5664e4af366bb69fb2560dad87871ec083bf85c5189831ec2",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CROS_LP_094_Du-190.json": "b33123e179f00c0947509db3b1c2e60ec83aa1a9fdc0629617a1b8404f192f73",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_ALA_LP_298-Du-767.json": "5b7b90b1f1049ee19046542321d4381be85d9b34710d4e633466fc3120145535",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_ALA_LP_299-Du-768.json": "5f3606d29c4e7a4f23570fb9ae8b3280f2af0706bf321b399465a7dab299e416",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_ALA_LP_357_Du-769.json": "0e884c4165191a12498bdf6a734140ec28b60e8f1eb65070caabd995bada0183",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_BAL_LP_226_Du-602.json": "e7596c9974e9da97cdc5d8421d23d2bd162bfff27e0695e5107337ed380c2a0b",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_BAL_LP_227_Du-603.json": "b709765983e5e80e3eaf2ee878dd735b7eece37aa9f20679f138220700d13e64",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_BAL_LP_228_Du-604.json": "b1fed440aceeb6c96ac641f1da690bb65ab8b9b86049d3098bc6ddfad4b04bc6",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_BGL_LP_210_Du-577.json": "9e655c8d82c7bb03352969c8034075fcfc3e4e402fe15e5880cb4b0867a870fa",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_BGL_LP_212_Du-579.json": "d70255ba9039b897fb933305004f640067fd419275b68156675578827b9f112e",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_BOU_LP_288_Du-737.json": "c68b3dc552b1c710d12c4f0857b55a15a3e9de500c4c78c6c3c5a903d52ecce3",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_BOU_LP_290_Du-739.json": "021050d2b8f6c0fba499cd5055fba80af6edcd6d726f4a770e9c1c63a5bd7f79",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_BOU_LP_291_Du-740.json": "829b46a5a544dae1807e55580652aef4d4b4602f6bf96c09fa44ec5f687f687b",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_BOU_LP_292_Du-741.json": "3c2161e56628f09777a580e536eff24b1a6f16920b1d52d81fbd02d79119b11f",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_BOU_LP_354_Du-742.json": "88c4d5067f639c2ea983c0bb26906a42d76bc863738f4b044065499c8d324ee6",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_CAS_LP_328_Du-610.json": "c27923d7a3bf9650be7edfce0c466e9a3d2ddb7ca9b3205d537d3f12cd27d164",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_CAS_LP_329_Du-611.json": "1a4da2ebb5bae57db6387c51211636ec0e9960be6934e40f78edbccf7a761ea4",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_CAS_LP_330_Du-607.json": "16143fb7dca07d1b2faa92fa435d58413a1d230e56acee6e71e2bcb7c85ef951",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_CAS_LP_331_Du-608.json": "a4256f88055d6cff7be10d42f2f08efe08a576b66c8ca227668af5233c4aae35",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_CAS_LP_332_Du-609.json": "5efc48b36cc29b8f245849d9a474031e8a938e8cb28488a9f530c2480e90709b",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_HICN_LP_236_Du-614.json": "c777d112143790deaabbdc7681a5c3e05835c5b5ccb6c89301c2ec8e51a4b421",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_HICN_LP_333_Du-612.json": "100a8252882516d099dc2ed2a336d5b34586b3ff92f79772358490308b97ded5",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_HICN_LP_334_Du-613.json": "d7e603ca98c9c5fc598df0486e1467cc54fd55be107aaa48f992d0791fb28e22",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_HICN_LP_335_Du-615.json": "f46f4c08cc07809611c124ba9a18a81ea53065aa4a84515b9ed4d0ade2a39b58",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_HICN_LP_336_Du-616.json": "3417baf7b7d32e3e9cc1e4cf7c15be80ec6daf4a26471e7a6a4d3c6ed5ab6686",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_HICS_LP_293_Du-757.json": "080b8aa1c1c9bbb83ddd3b031338b620543dd869cd51b6644e0228ac8c1e7d42",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_HICS_LP_295_Du-759.json": "fe44a88316ae131e0e14b5ec9362b824406e15024a52065cbaaef9471f702435",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_HICS_LP_297_Du-761.json": "70b8d1b8a970a0653cc2362f0e3e7d8ebf9d47b000862ff674c352ca72e4a555",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_HICS_LP_355_Du-762.json": "2d7b7c0956f8d09e3578cc67ffd7f06eee98d1d5896232f3333cc16cb0a886fa",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_HICS_LP_356_Du-763.json": "eb8d78a6c6b161ee2129aa0b29ddff0110a20acf0b0fb91710c9229276aa97fb",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_HUN_LP_264_Du-683.json": "faf745883587e0a3e89cbd3914061997ff6ebe7113a6661f99161611e0660b34",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_HUN_LP_265_Du-684.json": "3de95e03c4072a8cbde12c2075f3b0a343a1b880038b4747e48e734db7bd74e4",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_HUN_LP_266_Du-685.json": "3e7025164f8a6071369b4e0a47668c70afac114e600c388e2ed86499a94de5e8",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_HUN_LP_267_Du-686.json": "60e3bdd1d4a4a283c686846085d494357775dd1f1f7e3a21759401c7fa373b2d",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_HUN_LP_268_Du-687.json": "9e0db143b85a2c9f0184b888c7657b1f0bd17b8f5f43701894f2e8c5d67c4867",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_RED_LP_202_Du-561.json": "0bf3eac9eb108cc7b408146a793461c671eba0b2452000b89aaf14cc2892f548",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_SIE_LP_188_Du-445.json": "401b94f4c4e889dff167a3d2f5e735cf818da291ab7bde05a21d2d0125be648e",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_SIE_LP_189_Du-446.json": "73cf5a16597366c4f69f610e72cb3adee52b24551f027ed200c9eabdffdbc3e0",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_SIE_LP_190_Du-447.json": "c14d56847f61c3b6b48c6e5e75ae318a3074495f676d9995a4ecafa291782327",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_SIE_LP_191_Du-448.json": "5eb9ccc97f74e79babcafb29877f5a9552f4feb2924e68eda8fbb3537165289a",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_WOO_LP_259_Du-664.json": "3a09a61d5e89b3cc226e529caa9f8d567bb592a615d87b0d8f2c847e62e26b29",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_WOO_LP_260_Du-665.json": "4de1df3ff9a83768db554206df6a1ee778b37dde465be14fe8f37c803e322df2",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_WOO_LP_261_Du-667.json": "25afab2b1c2b7fcb8fbc4f4e7a34aef9f3d285dcd6a64a389e24bb3045e06178",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_WOO_LP_262_Du-668.json": "2932d4297e8edc928cea17dc7b2f32cd8ef21b211da376254287f54505e0b66e",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/CY_WOO_LP_263_Du-669.json": "e1374a03dd406821c8d9c8fbf076b89147da3d43ddec36a168fee6c1c6154973",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DAN_LP_043_Du-68.json": "5f1d4621d93c75b07832544da38402ba0d598f78330771df9f3d451f88e41bfd",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DAN_LP_044_Du-69.json": "bb24b0cd41139c5ecc36441c4a0acc7852b621317c70129403bfc1258d32f506",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DAN_LP_045_Du-70.json": "696c9f6060b49780f6c6c48e48249b9c01b50cd5df0fe43eb1c2d6bf8abde94c",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DAN_LP_046_Du-71.json": "c734c153559871b6066c53f266395cc5c5f15604c81b19818f3b49595ccb785b",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DAN_LP_047_Du-72.json": "6e760da26750986ae5ce1dba47a9bc3c22bd7ec4543a1e5298eb3dd4b427edd0",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DOV_LP_078_Du-174.json": "42f977f679f613641e3b5e473d8f967e349bcb2a1c57a69d65959f30aca3115c",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DOV_LP_079_Du-175.json": "1210e725b3170064028d09585f3c33774bb8aaae792a59f897c88153561c53fc",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DOV_LP_080_Du-176.json": "8821019d92cfca03a4ffc3a50be72b5cc9b452e5fcc3bb6e1ed3306b88d5638d",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DOV_LP_081_Du-177.json": "b6851d743638e14a1c1f2efae088bc164c1134d41e1206c21f30fc5064a72c73",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DOV_LP_082_Du-178.json": "78737f3eda9d9f1eb6b4d4d664eda03e2661a9be97f3736543bd9fbdfbd6820c",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DOV_LP_083_Du-179.json": "1e07ecd54f98b33898a20d1b9c9352904eb2df55efc67cbc80c60f365417a675",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DOV_LP_084_Du-180.json": "1dc17e9fc5958b94e96a99b555234031a4aca42244585d4c2c9255282a0a334f",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DU-173.json": "8a442294e98910ca25b8664869a15bf938f5bf991ac623f404c1f7d894a79a27",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DU-229.json": "e78a900f4d284b37bbe770ccc2fde57c53fc16d4248f24e6ef0a716cbf64db06",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DU-247.json": "d1ac962736c417d6a6973e13818167ec6f4d0b3953c725c9685509c0af72e2c7",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DU-254.json": "b55d4d64b33f6eeabfd925403696c67b5b4f494e9834a7275aac5e3b21bf372c",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DU-270.json": "92094430a675769d7c34e1a4c890e6f22d41f7421629617c2230a3222314b33d",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DU-297.json": "6a8d7ef91da62b623a840490c2c41ce134967251d24bd5b0e652f135fcdb56bb",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DU-443.json": "1122de26ea2fcc7f78678605fd71d5cf3ab8c9c9df94277e3ff97990bad4989e",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DU-4A.json": "61ef70087ec6f9ad5389ec2c88bbaace186660d1d39f8c19d9fd9e1588401e4b",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DU014LP012.json": "7291e6fae95287af75f987459459b1f5030bca06d251808f13d7eb0cad8a5a42",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DU037LP013.json": "c528b869adf5e0c8be13eb3c2a327d133bba672118ca314e24a1519bd56211b2",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DU059LP015.json": "842f3831d850b5ee2488133546467cec1d18f0bef42099c5031c6a01a7a26e25",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DU078LP011.json": "9ebaf5994c499ea9729fd6f9a5f85e5cddab3385a105dd64bf7156f90c43338f",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DU079LP010.json": "3170ed5117c469ca2f43c0dee96fb60d7ce3655090cafd4f9690b3b994cffd06",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DUD_LP_132_Du-283.json": "aff8fae0015004180a902f7210241530023429d56b67a62014174e0f62204b6e",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DUD_LP_133_Du-284.json": "398710b77e16ef223da1e548d9314e39ea1072e413c6c712cd30c9fcd0a430bb",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DUD_LP_134_Du-285.json": "a95ff55bcfa552e49cdb1c8776e658f579be6073ab6bb4bfe277e4636cb1b5f9",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DUD_LP_135_Du-286.json": "f8f3e0dcf688f01bd6078beb366c054c5d83e88c4d78bc96c05de1ee241f6916",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DUD_LP_136_Du-287.json": "23e93b0306090533c21544df5bde2aa495e3fc470e61e352d1b397e17d99378d",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DUD_LP_137_Du-288.json": "fd71a9a3efc92750618b56344ddbdf8b794adb9133fc26bb4d41d1a5ec2b8973",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DUD_LP_138_Du-289.json": "1b82033d372fce1455874b685b24486be41058267ef31b5cad0fa02740c46f0c",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/DUD_LP_139_Du-290.json": "8e54729c07e4af7b252a83246f2fbfd4a97093c6b652b6afb11e10334bee8613",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/KIRN_LP_179_Du-421.json": "1e217ea576c56e27ddfcf355169fc9f91b12b4bf0cf0ea1e47492e22a74f30c1",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/KIRN_LP_180_Du-422.json": "e5758b61b6f73c75754b2b989fddf3927da1a1bd59c8c8f30cc83b27666d09bb",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/KIRN_LP_181_Du-423.json": "182e2cb8e14e95b25822931d62b051710c703623b40a446e061b0a879cba70b4",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/KIRN_LP_182_Du-424.json": "bdbf7b66804d95b33f73809566c54e46d7a21412f71092b2085089d1ae7813b0",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/KIRN_LP_183_Du-425.json": "a6913912a790fbce62e2f4d6c7e5c6080c8da63b3311bdf08e4ca27fcaff6f79",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/KIRN_LP_184_Du-426.json": "1a62c305958d107f848d1c21ed9acf9173f0377eda28f3214d6d8fbbe3e90e0a",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/KIRN_LP_185_Du-427.json": "f67af7b8b79594c3746736616d5cfbfa1f8893bc925881c525aad58b859d71fd",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/KIRN_LP_186_Du-428.json": "b00b12e296a89156173bd06a908764be8d8dc6aedd5108b52b19f0ae030b9d5a",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/KIRN_LP_187_Du-429.json": "cf7cf0cc74c5be46533bb6cf958a3abf5b987255abc2a50e6bd9e353397e7e52",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/KIRT_LP_159_Du-364.json": "54bf093af713bba76c8e4b9d999f7a4d69ea646405a9e1a503017050c41410dc",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/KIRT_LP_160_Du-365.json": "a218fe6ea33872cc233e118c07e4ee038e7d9334b28ed4207bdcd69c3d29697a",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/KIRT_LP_161_Du-366.json": "db2ca73cbd9f701313dc315eb1ebd538427afadbbc252e0b2d9317aff2ca0051",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/KIRT_LP_162_Du-367.json": "4ea348a75568172a88837b093aca8dc3ffb95417e986c728db1ab592409ea72c",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/KIRT_LP_163_Du-368.json": "c26aca8aa3a1b4b01c92929917e7b7adc513a582a15f26def92e1642e28c8deb",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/KIRT_LP_164_Du-369.json": "20025f63b7941db729cff23a2c1b955a5157d665b6cddb4755cbcb8bba762661",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/KIRT_LP_165_Du-370.json": "1e895d6a49b3040d50e47a01ee5ec5b9727f6d572b9dfff7038b3ca2adfc955a",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/KIRT_LP_166_Du-371.json": "e88712086ff85293a979a104cb7c62b579fa99a551584cc9acfe2df543449236",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/KIRT_LP_167_Du-372.json": "423aa55217f586d530aa2824c70abc8b88445105734f9fc335574746236e0fb2",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/KIRT_LP_168_Du-373.json": "9964db8cabcc56bfc813686359e53f82750324994d2d36da5589aed8dd042d3f",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/MALV_LP_095_Du-201.json": "37607b26b1aa1c92b0364678ae153234c972a0bbb35cb3f545e45a70ff6fd8d5",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/MALV_LP_096_Du-202.json": "89333a8eae4641960cd8bd604e45d53686d9a18fd4446c2ce1e554b19dc65e68",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/MALV_LP_097_Du-203.json": "092c532ab14d30806d0dedc216f6cbbdbbf6375a592bc16faed8148fc0b03a75",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/MALV_LP_098_Du-204.json": "9b40191b656796f54c14d198852babe1caf409cb2393b9514513433262697047",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/MALV_LP_099_Du-205.json": "603bab42d5a1788655a8f28c10ed4849ff36ddf9d32bc395a7da31454077be0c",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/MALV_LP_100_Du-206.json": "9f18d5b523f5fff94bbbb90a36f202ba70dbe1ef7119cb5d32bf832da49a80ab",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/MALV_LP_101_Du-207.json": "dab9c074c6d948d909b780d9b2ddfb8e3c105ce5ac0dc56bcf4df246e5cb271d",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/MALV_LP_102_Du-208.json": "90cbd7f8c11554e992d87e98fc4e1182394d95eb532760a040a2841d26d622e8",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/MALV_LP_103_Du-209.json": "09c9247245fbe978469849c1c5709bf3b40e9b7968f642d55114891ba79bc815",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/MALV_LP_104_Du-210.json": "ea3a342f908217eee11403178f3cc9704edc18043cd30c1618165dd053f3c9cc",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/OCO_LP_058_Du-115.json": "6e4bfe75168115778e26b1ef4fb9ab4f47745118cdb66ec2eb7495d134000701",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/OCO_LP_059_Du-106.json": "5a56b0f70db0219e8183e55f084c135a04b75564ca6eaf949d7722fa19a78931",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/OCO_LP_060_Du-107.json": "fa269f3f30868d3774ba7852a166bfa0fd4af9a8a9963e733c3726d65825b7c6",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/OCO_LP_061_Du-108.json": "a3503cb9cbe483aae53eac4d5265dfbe9f7cdeb4133545e78d977b1e1d9cec00",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/OCO_LP_062_Du-109.json": "89689a6faadf7d74ece201330df26afe34115ea245cc62b617a50e53d0d9e940",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/OCO_LP_063_Du-110.json": "1b673addf34fcd098b24c768e14f65b9c70c32be7f07a90fe3d4ed67e71be0ea",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/OCO_LP_064_Du-111.json": "91619a24bbb6bbfc4278c0756ed77bcc7adaddbfbccc691a5a09bebcac51d10a",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/OCO_LP_065_Du-112.json": "9f4f1c124da76d01812889f9565583f198271965cc90eb56cf73de50c7749adf",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/OCO_LP_066_Du-113.json": "e63daf423b742f62a7da5c0550470251a53b75bb847b9e229ff8b3b8dbc1fea4",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/OCO_LP_067_Du-114.json": "9662af980139efe243fe872bd03809353d28c3b00ee1890749f8bb69a04073f5",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUI1_LP_249_Du-648.json": "660d1b98e987c91e627da71ad2134da9d85128632bc49d1a0e2975bbfe89d37a",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUI1_LP_250_Du-649.json": "883fcff4728ccc84f207f2dabe2a5dd059544d3b6a3d8087caf2ec5acb5aacc4",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUI1_LP_251_Du-650.json": "139158b13824af48449da4db526bea369967e7909d95bcf45d18574317a0ff89",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUI1_LP_252_Du-651.json": "8d6f178a530d852b1aa4dde036a6eb92a142e1a570daa87729b342d3d5b9350d",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUI1_LP_253_Du-652.json": "db58da1769eed357d0a87f64b952fd2abab25f765f4c09940d09c7739589526c",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUI1_LP_254_Du-653.json": "db82e1ca8ac0806e7be8a289c832bc3398e120f1805aedacd73a49bedbf5bf6f",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUI1_LP_255_Du-654.json": "c528b3e585fd279d771a5aec051044696f909ab2b008c4041f1447431d93b6c5",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUI1_LP_257_Du-656.json": "4599f82fb3f07096ffd823ca890f83de1ca5b8738c43f96fa83b9e70d7668488",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUI1_LP_258_Du-657.json": "0ccb85f92de4b6538ab8a3f1d2669c1718e0df6f0b8f780ddf67f388f4eb4941",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUI2_LP_243_Du-631.json": "b55eaca4d6b9b8eb02998b5ed275102961b992d02df4627fc9199011c6e0841f",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUI2_LP_244_Du-632.json": "cfdd99c5bc5cf3c860d3f415afde73bb9e9e574fb6dfbb1af3cf56dca0e3bc0b",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUI2_LP_245_Du-633.json": "0e147d363c12f16bff3d0f8fe47a28a95ec8b09b85c68d5cea7618a08f44ffe7",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUI2_LP_246_Du-634.json": "ccca5f22a07281d6c21dd4e7e1d01acef055a2b8cdb1eb81e7d3830eed20a383",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUI2_LP_247_Du-635.json": "d918322a1147360166d0dd002685c73933a4d064e6408bc1d127caae494af554",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUI2_LP_248_Du-636.json": "13bc6615a54589ea3d0317f82716c9407d9847a9aba901234c9265ee7cacfd35",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUI2_LP_337_Du-638.json": "fdc55a100d06f4ce48159ffc99df62023a4ec93d1485714bce55cab863b5a52d",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUI2_LP_338_Du-639.json": "0ee9fcc9db60a7155b0ff5fbbb114cf1253620293440551fbb2b79c2b4f4b117",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUI2_LP_339_Du-640.json": "3aebd033e466085b9148b70f12bd30ce79636f4e229b0058ea181259af4d57ef",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUI2_LP_340_Du-641.json": "898e20fed814e1d05135012e0fb1cc530bd3060aafda756229cd2a3b54e98b92",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUIN_LP_069_Du-155.json": "de6aece2bae8443ce91c4ffdc420dbf25868d933cc0372be922813dd74e8fd35",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUIN_LP_070_Du-156.json": "cc20aa919924c633ac417618ac9de00cafd2b630225154730238716a89731120",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUIN_LP_071_Du-157.json": "ef0627e72cdffa04379ebbef1d347fe98696aec70398cfb1a19d4f0f3ad79c06",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUIN_LP_072_Du-158.json": "b9add28eebf338b4d247e595344eeb4be196446379d73aa525f24bf797fd9fe3",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUIN_LP_073_Du-159.json": "418e4f73135edfb22ca01ec5a716835a421e9e32cc7d87ca60001c61650f3f1e",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUIN_LP_074_Du-160.json": "2199a9ef81d0e43f83aa043c0cf57fde9f6251aadde398af07cf7eca3a2a9b89",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUIN_LP_075_Du-161.json": "c59890c8075d083f929efd5c73cb248595ea05301b262feb25ac63f2f314d3a7",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUIN_LP_076_Du-162.json": "fb382091182e266b5e34a9f21d75a6c208e240cd9c9e6f640084ce3b31a9ae76",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUIN_LP_077_Du-163.json": "66cd114713d1717e91d7426a686f588bfcc477650ecf860a55a21f86ff15898e",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/QUIN_LP_318_Du-164.json": "ac65851f78e18f6821740c642c46bbca11af954ea575b45d8292fe5ac468ebba",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/RIC_LP_192_Du-521.json": "3b3fe39ca6ae8f10a8ebb13ba1be0bd4240b1e8d2f38e6de911584a39f402692",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/RIC_LP_193_Du-522.json": "984f646de7a5e26755e067bae47278de4e0f3ae1c7b34bec430bb7e04b674488",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/RIC_LP_194_Du-523.json": "aabbb35cc9c0e4e33e9c65fd915e6cebce91c2ec283dea2de968c14318b459b5",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/RIC_LP_195_Du-524.json": "7da4792435b9ecdee21cf04510a3ce116e2839f6f157f82d495ac1a4be0bc589",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/RIC_LP_196_Du-525.json": "4f906284295902a364701db7ea13889c7959ae40818cb6ae82d8b8d0cb1e401d",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/RIC_LP_197_Du-526.json": "276464388dce17653d554bee7664025b7b3ed38dd26a95df434cb4106633b942",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/RIC_LP_198_Du-527.json": "30a9bbc74c5ef5376d785989bb9021c12c0f044be23467c33ac87bcf8ed058f8",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/RIC_LP_199_Du-528.json": "d3a51e9ef59cd7b90bae7084e991e7522320ed15685bbc19cb86f7aa7c6fb969",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/RIC_LP_200_Du-529.json": "6f584e5adbd11b149b23b694417f4ef924c1c31702fdb041d903f63c5fb00cfa",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/RIC_LP_201_Du-530.json": "14456a4f07dd5ff37d7229fc53f1b0fade35b64bf07961291721318d1e18bda6",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/RSV_LP_049_Du-85.json": "c1fc1f6aba5ec53ca2ecc63442377925166d7204748893304916ee3576c00510",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/RSV_LP_050_Du-87.json": "76142918abfc81c9bd52616342617f690c079ada9c644b93599e81ee8d4f8c9e",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/RSV_LP_051_Du-88.json": "b518cef7bf47db6de724209dd911c707b9a83ecb3bda1d82b843322a465f45b8",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/RSV_LP_052_Du-89.json": "9433d246d5267eb243ae1181304b59ff7cdfa953214ac5671449555c49e5805f",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/RSV_LP_053_Du-90.json": "965d98dfea64ebcc73d1cbeb11c830a87840d72929114cbe6578ac0d18330b74",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/RSV_LP_055_Du-92.json": "ba353daa8d7c521aee240886dfa82b9bf5b7e8e0603e6ebf97fec842291859a6",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/RSV_LP_057_Du-94.json": "f69097f206f65326bf9985c9988f1f0b1e3abaca8a429e10001c1bc837900243",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/RSV_LP_315_Du-95.json": "10ec4d457b10c5fa64a2a92f216807ea5ee6bb06c439fdb54b74853a6bc1da82",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/RSV_LP_316_Du-96.json": "bce5abe88632aca6df267d44688418b3fad1de5bf91de5984d6b14fc3d337b54",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/SILG_LP_149_Du-343.json": "53268a2cb4b37cc24504244b24f0b7c76ef80eccfe5f49a4788d33124dc39fcb",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/SILG_LP_150_Du-344.json": "5e66255aeadb696b1a89e09163836a367d3f581d556cacf577696956dce84c85",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/SILG_LP_151_Du-345.json": "c82b05243b6a592ee9fb8c8e1faae8aec5df0713778c7938ff9fb6bbcb98a67d",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/SILG_LP_152_Du-346.json": "86d25674f7405443eede52bb00bde1715d6c27b2b5d23e65b764ce112e190420",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/SILG_LP_153_Du-347.json": "ca6744989a59ae36f449edbbe3db25c162530c4f1a46465f4c7c275b0d88ae59",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/SILG_LP_154_Du-348.json": "cd9c08c5bf0e950c0183acddb71d0e754c7042499242ea34423149008b78811a",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/SILG_LP_155_Du-349.json": "fb297f2901cf15bbb90e3a67199f04e2b08b7519ccf47e73fd04e8790d6f8fb3",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/SILG_LP_156_Du-350.json": "0d11270bce53b0dcd11e73d1d80bae5d8817b9d92d98267aa1dae26b1adb8a2f",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/SILG_LP_157_Du-351.json": "179e119c00f36e790e385b6c7aa76aeaadee325ca926536bf0c6d5d38c6fb06e",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/SILG_LP_158_Du-352.json": "ea09aed4942841612f9d24698ee8d12d4c1e77751fac63690944f142db1bc907",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/SILR_LP_346_Du-729.json": "4c40eca7d19ac0689396c2e4ad688ec60fc9b0368ad9546e5e1c68eb42790198",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/SILR_LP_347_Du-730.json": "6d56c661927e0821a70baca02eddb9710376e277a93262fa2af58e60c114062e",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/SILR_LP_348_Du-731.json": "c028fac2b93254709076ea309dbf8372e4071c6efe2afc3897ee5023b61aa31d",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/SILR_LP_349_Du-732.json": "5c83c8fa41862218ef0385c2fb7b751cc648f226661ab7864c4cd637b42a7e34",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/SILR_LP_351_Du-734.json": "4e43c77134e19523613ce8def44d459629fbbfc04cd35c5100fd374c466317db",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/SILR_LP_353_Du-736.json": "8aa6f07e04dfd8bb414bc1afa8e326f33e72d4b6fb19bc629ad20283503e56ed",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/STI_LP_027_Du-45.json": "5f7976f5e4c31fa81bdeb51d85d770dc799c4a52b9d9ebe21034599f58d87fda",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/STI_LP_028_Du-46.json": "09e75c9fb8ac8aaf5754faf623757c9c549283fd32902d4566f06a3201b878ab",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/STI_LP_029_Du-47.json": "d5f2ceb81d97b99e86126bc9daecb187aadd1956e2d6ce5260507170cca841bf",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/STI_LP_030_Du-48.json": "dd99406a9dd727afc074651aed3078801db9e766736894843e7023cc2a64fdfd",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/STI_LP_031_Du-49.json": "9002cafbf3a4f276fdc906aa9ddcd6724aaac2dfa5db9b631979010ad50a9dbf",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/STI_LP_032_Du-50.json": "fcee030b5b7cd327c7becb3ba2de490ab70a52cef931669ef546b8a7c55ecc0f",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/STI_LP_033_Du-51.json": "b5a0a12c6451b5f6361f949975030fb4734b037a85dbb4d0b6183a37415798f6",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/STI_LP_034_Du-52.json": "12360057cad7c7f7aeb96d058c9f1aed607cdbc80a5b94316064df90175f20bf",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/STI_LP_035_Du-53.json": "790f0f043f457dee93b89d77657a4fbf1691afb16a9696b682de9ebde2affb8a",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/STI_LP_036_Du-54.json": "2521de1290df7f4d8734ac70261aadb8ea657c3c63704b72aba675c648d0ebc3",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/STI_LP_037_Du-55.json": "b90f327d624afc86ff7ba9ce04d9eb91620da7b1e1954eae186b98f7dec7e5a1",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/STI_LP_038_Du-56.json": "de1ddae9b7abc053397939c4c09804e7d5a6fdb825db68cb31132361ed639a6e",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/STI_LP_039_Du-57.json": "06f81e906be4ff39239a32699d8cad429cda1551e5a36c3774fd3752fae934c1",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/STI_LP_040_Du-58.json": "e714da4e25b773fad5d2ec3bfff26feaa96d08a3d08c68957bdc6c22588b45e7",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/STI_LP_041_Du-60.json": "c003d1222e641569d1406288c11e12a743cb51c074190323449c851387436ca6",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/STI_LP_042_Du-61.json": "cb87e81763114a56a402a639af192620cda00ce5bee01e4f598dbcd5d788ae31",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TIL_LP_123_Du-263.json": "8be4f7ed3485bd0c669db21cdc0f2cbf730ed00c8a987e8f3fdd97897ddc4299",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TIL_LP_124_Du-264.json": "0dea67a4f804edaae6296aeb6718fdc9794f6223af89cfbd79efdf179a37e5e1",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TIL_LP_125_Du-265.json": "0175d42206118d05bcdee5ceb15ce5e370e5db3195915af4c698cc554f615023",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TIL_LP_126_Du-266.json": "c0c50eab5f0fa3c83b7691440fa2c45950b4500848b488bad1873d3b40dd677e",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TIL_LP_127_Du-267.json": "b4e934d8c147be667fd6d50c4e1041469713daffb5122994b82876ea72c60390",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TIL_LP_128_Du-268.json": "0a8b4732fe248722cdaec85c391f823fd0bf8fe4629e70a7f6db2d503c262deb",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TIL_LP_129_Du-269.json": "7d7466e38679b5665c7df2157a865a35721aeeb0f3b767bfad5a2e51c7f96e30",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TIL_LP_130_Du-271.json": "93d438c5d40af4fabbe882fbfb46ccf4a92173bcfe5b3ae7ccd3b46134153260",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TIL_LP_131_Du-272.json": "39cc4ffed2e689b51fd16522776bd5deda0eaef135a5d349a39dfcf6e2f6096d",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TULP_LP_115_Du-242.json": "8cf719b2f3b600a7d9ab2386c6958471bb229fb49bab52531be79b40172e5152",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TULP_LP_116_Du-243.json": "218463f9e893ab63ad69c210c7104267f61a332e3c08295f159fe29c9f030125",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TULP_LP_117_Du-244.json": "8085daff56c8f51123e4d0c9aaf17d27ab45eb1a24ecebda874979a299e49360",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TULP_LP_118_Du-245.json": "0b61a738c5f496671b1529e8c3936d31a72a95b31f79106d10dc6e2657e5612a",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TULP_LP_119_Du-246.json": "1d9ff58a6c10e84612431634104500f79a9a590915d9c1c307632fc5162ee23a",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TULP_LP_120_Du-248.json": "7c69439f0d8a2e0ec2a3e3836a21ccbf6d62bea0c9af6ee5f0dd1a7dc52ddea9",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TULP_LP_121_Du-249.json": "37fb3c71a1d7dd3f7b12ef4b06ad0252d689aa5fce7e75894c3846c79b158f4d",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TULP_LP_122_Du-250.json": "cbc24369268612bf04154eb0c4fe9aaa873f7e40b36ccc5116914fe0167b7b5c",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TULP_LP_140_Du-302.json": "e860c76a0e6c33d7b8ca22f6cb4eba4ec8b9bc7e48c8faa6d68efd44625e1778",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TULP_LP_141_Du-303.json": "98dd3124cd7df3b07976975be6a74769b45e739df9e77c7aa0b237f7b7cda090",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TULP_LP_142_Du-304.json": "8f090ae4e5e7d1536456cfdf018d0ca05b9be218e921abfee88cce5bb521685e",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TULP_LP_143_Du-305.json": "58d674055689d808f3ebb0e76484056e2c85afc6da520858eb2bc88469534cee",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TULP_LP_144_Du-306.json": "5545150a17687d4b8aeec7e3db95ed96bcf1ff5499bf769f7616cae2d9d42a1a",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TULP_LP_145_Du-307.json": "9ec617c80acbf319d8f546f850f5dfcbe958518893ddab066ce1d3a1d36b3d26",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TULP_LP_146_Du-308.json": "4193dd20c5e684daf9fe67be9cf8f719526668bdbfdd04579c3c1fa1d4821fd4",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TULP_LP_147_Du-309.json": "c8710820de86041a937e6f002bdc777be348455c7ad0463057373eae95a34c7d",
+    "canonical_publication/provenance/runs/publication-20260817/mapping/TULP_LP_148_Du-310.json": "e30d3e086bbdd4f3a4cea2e85072b19f0644f11e9b7b92ca9b1a0411bc63457b"
+  },
+  "provenance_rebind": {
+    "reason": "validated stage-scoped provenance refresh; no mapping artifact was regenerated",
+    "rebound_from_fingerprint": "63bd48574f1ccbabcc9a6433b228fabe163a0d1c5368f3171694708dd67f2611"
+  },
+  "reconciliation_git_commit": "5b932a95a1fa998569397491bfdec1d79d5bb84d",
+  "sample_count": 278,
+  "status": "complete",
+  "tool_versions": {
+    "bwa": "Program: bwa (alignment via Burrows-Wheeler transformation) | Version: 0.7.19-r1273 | Contact: Heng Li <hli@ds.dfci.harvard.edu>",
+    "fastp": "fastp 1.3.6",
+    "samtools": "samtools 1.23.1 | Using htslib 1.23.1 | Copyright (C) 2025 Genome Research Ltd."
+  }
+}

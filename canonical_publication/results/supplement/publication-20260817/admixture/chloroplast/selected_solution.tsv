@@ -1,0 +1,2 @@
+selected_k	replicate	seed	cv_error	boundary_optimum	q_path
+12	9	425409	0.03649	yes	canonical_publication/results/supplement/publication-20260817/admixture/chloroplast/selected_K12.best_cv.Q.tsv

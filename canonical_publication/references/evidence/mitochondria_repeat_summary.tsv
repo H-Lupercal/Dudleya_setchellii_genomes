@@ -1,0 +1,2 @@
+reference_length	repeat_intervals	repeat_masked_bases	repeat_masked_fraction	remaining_unique_bases_before_read_qc	interpretation
+243359	5	196351	0.80683681	47008	both copies of self-alignments meeting configured length/identity thresholds are excluded; candidate retained intact

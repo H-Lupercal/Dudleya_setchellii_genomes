@@ -1,0 +1,13 @@
+metric	value	interpretation
+chloroplast_start_1kb_eligible_sample_mean_depth	1294.04300000	circular boundary flank; equal weight per chloroplast-eligible sample
+chloroplast_unique_eligibility_bases	98802	both inverted-repeat copies excluded from breadth denominator
+chloroplast_end_1kb_eligible_sample_mean_depth	1213.05125000	circular boundary flank; equal weight per chloroplast-eligible sample
+chloroplast_interior_eligible_sample_mean_depth	849.98978771	reference interior; equal weight per chloroplast-eligible sample
+chloroplast_median_sample_boundary_to_interior_ratio	1.43186718	median among chloroplast-eligible samples; low values flag unsupported circularization boundaries
+mitochondria_start_1kb_eligible_sample_mean_depth	0.04252399	assembly boundary flank; equal weight per mitochondrial-eligible sample
+mitochondria_unique_eligibility_bases	47008	both copies of qualifying self-repeats excluded from breadth denominator
+mitochondria_end_1kb_eligible_sample_mean_depth	117.31967528	assembly boundary flank; equal weight per mitochondrial-eligible sample
+mitochondria_interior_eligible_sample_mean_depth	35.05121996	reference interior; equal weight per mitochondrial-eligible sample
+mitochondria_median_sample_boundary_to_interior_ratio	0.00000000	median among mitochondrial-eligible samples; interpret with repeat mask
+mitochondria_high_confidence_unique_bases	43182	DP>=5 in >=80% of mitochondrial-eligible samples after self-repeat exclusion
+mitochondria_median_sample_repeat_to_unique_mean_depth_ratio	0.00544354	eligible-sample read-backed repeat diagnostic; repeat coordinates remain excluded regardless of depth

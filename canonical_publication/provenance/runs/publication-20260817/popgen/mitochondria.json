@@ -1,0 +1,74 @@
+{
+  "fingerprint": {
+    "commands": [
+      "callable-site pi; Hudson ratio-of-sums FST; 1000-bp block bootstrap x1000; seed=1729"
+    ],
+    "digest": "b4ab8dc063fa68dd7ef7c126367106631b6390f36f1817f23dc9c849d31e6eb7",
+    "inputs": [
+      [
+        "canonical_publication/config/publication_config.toml",
+        "aea3f0ddf0b95e79566bce9ba3ad3635fbc5c3c97172fa83677b0f7529838378"
+      ],
+      [
+        "canonical_publication/metadata/qc/publication-20260817/mitochondria_samples.tsv",
+        "f10dfd88e7df1ee4e33f1b79bec1ec58fa030d4b9bc25488fcd0f8067b5e82e3"
+      ],
+      [
+        "canonical_publication/references/selected/mitochondria.fa",
+        "9148e0f823866064d193c542140b322538e55db9f01cfd278bdfc928be7934c7"
+      ],
+      [
+        "canonical_publication/results/alignments/publication-20260817/mitochondria.callable_alignment.fa",
+        "50b9ee3d72aa5cf56e2b41f137bcdaf791d08b8dcd18695a073631a63d77e90e"
+      ],
+      [
+        "canonical_publication/results/haplotypes/publication-20260817/mitochondria.sample_haplotypes.tsv",
+        "4362fcd608f07de89b46c6527ab42fd7e17f1aee967b8f754e5f3a2f21548b2d"
+      ],
+      [
+        "provenance:executable_sha256:numpy",
+        "c73f9387a63c5d3f89bbf323b4792ffb376e005b57d4d39718f7c000b7a1276a"
+      ],
+      [
+        "provenance:executable_sha256:python",
+        "c73f9387a63c5d3f89bbf323b4792ffb376e005b57d4d39718f7c000b7a1276a"
+      ],
+      [
+        "provenance:git_commit",
+        "5b932a95a1fa998569397491bfdec1d79d5bb84d"
+      ],
+      [
+        "provenance:pipeline_code",
+        "1f526dc30e5bb937416a4b7a16cc9b60a69b9225a1f899d264963a295170c279"
+      ],
+      [
+        "provenance:tool:numpy",
+        "2.5.0"
+      ],
+      [
+        "provenance:tool:python",
+        "Python 3.14.6"
+      ]
+    ],
+    "stage": "popgen:mitochondria",
+    "upstream": [
+      [
+        "consensus",
+        "65ca22d36ad8c195a3e262eaff243063319d649ed810f2fc1016cb3da1c99195"
+      ],
+      [
+        "haplotypes",
+        "46c90e00eff75a8d1f8a785ec800f1e8aff1736fce88f337f831c6edffa3e265"
+      ]
+    ]
+  },
+  "organelle": "mitochondria",
+  "outputs": {
+    "canonical_publication/results/popgen/publication-20260817/mitochondria.pairwise_hudson_fst.tsv": "3d60f01920068b3726017489e4b8e460ba3066a62bbf2e88966e395a40a66895",
+    "canonical_publication/results/popgen/publication-20260817/mitochondria.pi_crosscheck.tsv": "c2f3772b47df56087136f5d214b612623e0b73357a47c2e60f3440651db8f21e",
+    "canonical_publication/results/popgen/publication-20260817/mitochondria.population_summary.tsv": "8bb742f272a8d3bcdd62323b9080e33d99c17125a29d2a02ec60d5e648998b89"
+  },
+  "pairwise_comparison_count": 595,
+  "population_count": 35,
+  "status": "complete"
+}

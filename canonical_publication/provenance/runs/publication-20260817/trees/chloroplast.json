@@ -1,0 +1,58 @@
+{
+  "fingerprint": {
+    "commands": [
+      "iqtree3 -s canonical_publication/results/alignments/publication-20260817/chloroplast.callable_alignment.fa -pre canonical_publication/results/trees/publication-20260817/chloroplast.primary -st DNA -m MFP -alrt 1000 -B 1000 -bnni -seed 271828 -nt 8"
+    ],
+    "digest": "e955690ec70251282905f1e5ac85099affc5159719cccdc6a547f60fd09b52eb",
+    "inputs": [
+      [
+        "canonical_publication/config/publication_config.toml",
+        "aea3f0ddf0b95e79566bce9ba3ad3635fbc5c3c97172fa83677b0f7529838378"
+      ],
+      [
+        "canonical_publication/results/alignments/publication-20260817/chloroplast.callable_alignment.fa",
+        "73f143fb7da0035a7d7903948d48dba4fbe7d9966fc015eda7fb5d8cfb9e5801"
+      ],
+      [
+        "provenance:executable_sha256:biopython",
+        "c73f9387a63c5d3f89bbf323b4792ffb376e005b57d4d39718f7c000b7a1276a"
+      ],
+      [
+        "provenance:executable_sha256:iqtree3",
+        "a90852ab4541778813f998aca2a38e4f333f8ee6310bf7a93c43f8e71c936498"
+      ],
+      [
+        "provenance:git_commit",
+        "5b932a95a1fa998569397491bfdec1d79d5bb84d"
+      ],
+      [
+        "provenance:pipeline_code",
+        "ebed34e92a56118863477d329988b47dbea0c9b6c4195115097c8552e7385963"
+      ],
+      [
+        "provenance:tool:biopython",
+        "1.87"
+      ],
+      [
+        "provenance:tool:iqtree3",
+        "IQ-TREE version 3.1.2 for Linux x86 64-bit built May 17 2026 | Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren | Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,"
+      ]
+    ],
+    "stage": "tree:chloroplast",
+    "upstream": [
+      [
+        "consensus",
+        "610739ef89a4f1f4962b574d1bd07de957da110b09525f9bef06b3acc5b66405"
+      ]
+    ]
+  },
+  "organelle": "chloroplast",
+  "outputs": {
+    "canonical_publication/results/trees/publication-20260817/chloroplast.primary.contree": "e6ea1339289beae8f1fa2908a4e153a6dfbc0cd168aa587e10497039688db05c",
+    "canonical_publication/results/trees/publication-20260817/chloroplast.primary.iqtree": "fcae879a8f158eb3ef3b8900a52e9c891c9424ce8d1460c9d1779ef78099950b",
+    "canonical_publication/results/trees/publication-20260817/chloroplast.primary.treefile": "38d92ee9d4480189e9eb729329b359214a988c54af1ca4a1078953e6fe580b48"
+  },
+  "rooting": "unrooted",
+  "sample_count": 276,
+  "status": "complete"
+}

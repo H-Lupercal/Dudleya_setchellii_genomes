@@ -1,9 +1,0 @@
-=== 11_callable_consensus Full callable-site consensus alignments ===
-Started: 2026-07-08T18:23:32-07:00
-Command: python3 dudleya_organelle_alignment_pipeline/scripts/run_callable_consensus.py --sample-table /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/07_downstream_sample_set/included_samples.tsv --track-table /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/05_analysis_masks/analysis_tracks.tsv --depth-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/06_all_sample_alignment/qc --variant-calling-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/08_variant_calling --variant-filtering-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/09_variant_filtering --output-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/11_callable_consensus --run-label primary
-
-cpDNA: 124538 callable consensus sites across 278 samples
-mtDNA: 44930 callable consensus sites across 278 samples
-Output directory: /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/11_callable_consensus
-
-Finished: 2026-07-08T18:24:10-07:00

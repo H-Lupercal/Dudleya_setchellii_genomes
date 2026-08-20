@@ -1,9 +1,0 @@
-=== 17_population_genetics Pairwise Fst and population summaries ===
-Started: 2026-07-08T18:29:37-07:00
-Command: /home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/python3 dudleya_organelle_alignment_pipeline/scripts/run_population_genetics.py --snp-alignment-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/10_snp_alignment --metadata-path /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/07_downstream_sample_set/included_samples.tsv --output-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/17_population_genetics --run-label primary
-
-cpDNA: 35 populations, 595 pairwise Fst comparisons at /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/17_population_genetics/cpDNA.primary.population_genetics.pairwise_fst.tsv
-mtDNA: 35 populations, 595 pairwise Fst comparisons at /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/17_population_genetics/mtDNA.primary.population_genetics.pairwise_fst.tsv
-Output directory: /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/17_population_genetics
-
-Finished: 2026-07-08T18:29:42-07:00

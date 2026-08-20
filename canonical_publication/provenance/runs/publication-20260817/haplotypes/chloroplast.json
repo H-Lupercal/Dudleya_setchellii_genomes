@@ -1,0 +1,60 @@
+{
+  "ambiguous_sample_count": 180,
+  "fingerprint": {
+    "commands": [
+      "all accepted variable sites including singletons; ambiguous samples unassigned; haplotype minimum-spanning network"
+    ],
+    "digest": "67052c3a30ea2eec224184d97d9bb3ec1018d467fb326aadf3aa5f4f9cd27032",
+    "inputs": [
+      [
+        "canonical_publication/metadata/qc/publication-20260817/chloroplast_samples.tsv",
+        "613831e85e35d5f7b5acf8b2c45cb4b5e382c3e53dd88be2dc8e091a7ffb389b"
+      ],
+      [
+        "canonical_publication/results/alignments/publication-20260817/chloroplast.callable_alignment.fa",
+        "73f143fb7da0035a7d7903948d48dba4fbe7d9966fc015eda7fb5d8cfb9e5801"
+      ],
+      [
+        "provenance:executable_sha256:networkx",
+        "c73f9387a63c5d3f89bbf323b4792ffb376e005b57d4d39718f7c000b7a1276a"
+      ],
+      [
+        "provenance:executable_sha256:python",
+        "c73f9387a63c5d3f89bbf323b4792ffb376e005b57d4d39718f7c000b7a1276a"
+      ],
+      [
+        "provenance:git_commit",
+        "5b932a95a1fa998569397491bfdec1d79d5bb84d"
+      ],
+      [
+        "provenance:pipeline_code",
+        "a2d7aabae4d0c9506aabffa758abc9b63e3947432436b5bf8d1f2d799668aba9"
+      ],
+      [
+        "provenance:tool:networkx",
+        "3.6.1"
+      ],
+      [
+        "provenance:tool:python",
+        "Python 3.14.6"
+      ]
+    ],
+    "stage": "haplotypes:chloroplast",
+    "upstream": [
+      [
+        "consensus",
+        "610739ef89a4f1f4962b574d1bd07de957da110b09525f9bef06b3acc5b66405"
+      ]
+    ]
+  },
+  "haplotype_count": 50,
+  "organelle": "chloroplast",
+  "outputs": {
+    "canonical_publication/results/haplotypes/publication-20260817/chloroplast.haplotype_positions.tsv": "6d339ea8e8a82be539a6c54bc67a5120b71cf4946d68805ddcfc8c7e03d51313",
+    "canonical_publication/results/haplotypes/publication-20260817/chloroplast.haplotypes.tsv": "7f9160de4bc0e6477c06fcc6886be9da0c7a283520cd6dc264a6d33ec31fe185",
+    "canonical_publication/results/haplotypes/publication-20260817/chloroplast.network_edges.tsv": "e9c4c7e441decd671d51e9054f50d3dd50171cff1ebd0a3cec14069b6b371e57",
+    "canonical_publication/results/haplotypes/publication-20260817/chloroplast.sample_haplotypes.tsv": "2269ea7cf96dc8df78f0db1ad8a56857037bcb3c45f2496f2dad12ece45319fb"
+  },
+  "retained_high_confidence_variable_sites": 2261,
+  "status": "complete"
+}

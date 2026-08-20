@@ -1,9 +1,0 @@
-=== 15_pca PCA visualizations ===
-Started: 2026-07-08T18:26:59-07:00
-Command: /home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/python3 dudleya_organelle_alignment_pipeline/scripts/run_pca_analysis.py --snp-alignment-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/10_snp_alignment --metadata-path /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/07_downstream_sample_set/included_samples.tsv --output-dir /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/15_pca --run-label primary
-
-cpDNA: PCA for 278 samples and 2022 retained SNP sites at /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/15_pca/cpDNA.primary.pca.png
-mtDNA: PCA for 278 samples and 146 retained SNP sites at /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/15_pca/mtDNA.primary.pca.png
-Output directory: /home/neil/Downloads/dudleya/Dudleya_S_genomes/full_pipeline_run/results/15_pca
-
-Finished: 2026-07-08T18:27:00-07:00

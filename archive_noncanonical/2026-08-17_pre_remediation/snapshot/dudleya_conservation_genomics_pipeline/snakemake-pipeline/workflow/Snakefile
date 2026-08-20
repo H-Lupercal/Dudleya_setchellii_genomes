@@ -1,0 +1,427 @@
+import os
+
+# Config:
+# configfile specified in profile (config/config.yaml)
+
+# config maps sample name (POPCODE_LP_xxx_Du-xxx) to r1 and r2 filepaths
+SAMPLES = config["samples"].keys()
+DATA_DIR = config["data_parent_dir"]
+N_SAMPLES = len(config["samples"])
+# Chromosomes for ANGSD chromosome scatter-gather:
+CHROMS = [line.strip() for line in open(config["chroms_file"]) if line.strip()]
+
+pathvars:
+    name = config["output_name"]
+
+# ---- Overall Goal: ----
+rule all:
+    input:
+        "results/<name>/pca/pca.png",
+        "results/<name>/ngsdist/population.dist",
+        "results/<name>/tree/tree.png",
+        "results/<name>/qc/aggregate_qc.png"
+
+
+# ---- Rule 1: Fastp Filter ----
+rule fastp:
+    input:
+        r1 = lambda wildcards: config["samples"][wildcards.sample]["r1"],
+        r2 = lambda wildcards: config["samples"][wildcards.sample]["r2"]
+    output:
+        r1 = os.path.join(DATA_DIR, "filtered_reads", "{sample}_R1.fastq.gz"), # store next to raw reads rather than locally
+        r2 = os.path.join(DATA_DIR, "filtered_reads", "{sample}_R2.fastq.gz"),
+        html = os.path.join(DATA_DIR, "qc_reports_reads", "{sample}_fastp_report.html"),
+        json = os.path.join(DATA_DIR, "qc_reports_reads", "{sample}_fastp_report.json")
+    threads: 4
+    resources:
+        mem_mb = lambda wc, input: max(2.5 * input.size_mb, 2000),    # 2GB or scale by input size
+        cpus_per_task = lambda wildcards, threads: threads  # dynamically allocate # cpus = # threads
+    shell:
+        """
+        fastp -i {input.r1} -I {input.r2} \
+              -o {output.r1} -O {output.r2} \
+              --trim_poly_g \
+              --length_required 100 \
+              -q 20 \
+              --thread {threads} \
+              --html {output.html} \
+              --json {output.json}
+        """
+
+# ---- Rule 2: Map to Reference and Sort ----
+rule map_and_sort:
+    input:
+        ref = config["ref_genome"],
+        r1 = os.path.join(DATA_DIR, "filtered_reads", "{sample}_R1.fastq.gz"),
+        r2 = os.path.join(DATA_DIR, "filtered_reads", "{sample}_R2.fastq.gz")
+    output:
+        bam = os.path.join(DATA_DIR, "mapped_reads", "{sample}_sorted.bam")
+    threads: 16
+    resources:
+        slurm_partition = "condo",
+        runtime = 360,      # 6 hours
+        mem_mb = 32000,     # 32 GB RAM
+        cpus_per_task = lambda wildcards, threads: threads
+    benchmark:
+        "benchmarks/bwa_mem_samtools/{sample}.tsv"
+    shell:
+        # MANUAL thread allocation (12 for BWA, 4 for Sam). Update if reducing threads.
+        """
+        bwa mem -t 12 {input.ref} {input.r1} {input.r2} | \
+        samtools sort -@ 4 -o {output.bam}
+        """
+
+# ---- Rule 3: Index BAMs ----
+rule samtools_index:
+    input:
+        os.path.join(DATA_DIR, "mapped_reads", "{sample}_sorted.bam")
+    output:
+        os.path.join(DATA_DIR, "mapped_reads", "{sample}_sorted.bam.bai")
+    shell:
+        "samtools index {input}"
+
+# ---- Rule 4: Flagstat ----
+rule samtools_flagstat:
+    input:
+        bam = os.path.join(DATA_DIR, "mapped_reads", "{sample}_sorted.bam"),
+        bai = os.path.join(DATA_DIR, "mapped_reads", "{sample}_sorted.bam.bai")
+    output:
+        os.path.join(DATA_DIR, "qc_reports_reads", "{sample}_flagstat.txt")
+    shell:
+        "samtools flagstat {input.bam} > {output}"
+
+
+# ---- Rule 5: Create Population Info ----
+rule create_pop_info:
+    output:
+        info = "results/<name>/info/population.info"
+    run:
+        with open(output.info, "w") as f:
+            for sample in SAMPLES:
+                f.write(sample + "\n")
+
+
+# ---- Rule 5: Create BAM Filelist
+# The "aggregate" or "gather" step. Requires that ALL samples have been processed.
+rule create_bam_list:
+    input:
+        bams = expand(os.path.join(DATA_DIR, "mapped_reads", "{sample}_sorted.bam"), sample=SAMPLES),
+        indexes = expand(os.path.join(DATA_DIR, "mapped_reads", "{sample}_sorted.bam.bai"), sample=SAMPLES),
+        flagstat = expand("results/<name>/qc/{sample}_flagstat.txt", sample=SAMPLES)
+    output:
+        bam_list = "results/<name>/info/bam.filelist"
+    run:
+        with open(output.bam_list, 'w') as f:
+            for bam in input.bams:
+                f.write(str(bam) + "\n")
+
+# ---- Rule 6: ANGSD ----
+# Runs per chromosome for efficiency; gathered in Rule 7
+rule angsd:
+    input:
+        bam_list = "results/<name>/info/bam.filelist",
+        ref = config["ref_genome"],
+        anc = config["anc_genome"]
+    output:
+        beagle = os.path.join(DATA_DIR, "angsd_runs/<name>/{chrom}/population.beagle.gz"), # store in datasets dir
+        mafs   = os.path.join(DATA_DIR, "angsd_runs/<name>/{chrom}/population.mafs.gz"),
+        bcf    = os.path.join(DATA_DIR, "angsd_runs/<name>/{chrom}/population.bcf"),
+        depth  = os.path.join(DATA_DIR, "angsd_runs/<name>/{chrom}/population.depthSample")
+        # additional ANGSD output files not listed here will also be created
+    params:
+        data_dir = DATA_DIR,
+        name = config["output_name"]
+    threads: 32
+    resources:
+        slurm_partition = "mem",
+        runtime = 360,      # 6 hours
+        mem_mb = lambda wildcards, attempt: attempt * max(800 * len(config["samples"]), 96000), # 96GB or scale by n_samples
+        cpus_per_task = lambda wildcards, threads: threads
+    benchmark:
+        "benchmarks/angsd/{chrom}.tsv"
+    shell:
+        """
+        angsd -b {input.bam_list} -ref {input.ref} -anc {input.anc} \
+              -r {wildcards.chrom} \
+              -GL 1 -doGlf 2 -doMajorMinor 1 -doCounts 1 -doMaf 1 \
+              -doSaf 1 -doPost 1 -doGeno 32 -doBcf 1 -uniqueOnly 1 \
+              -doDepth 1 -maxDepth 1000 \
+              -minMapQ 30 -minQ 20 \
+              -trim 5 \
+              -nThreads {threads} \
+              -out {params.data_dir}/angsd_runs/{params.name}/{wildcards.chrom}/population \
+        """
+
+# ---- Rule 7: Gather Per-Chromosome ANGSD Files ----
+rule concat_angsd:
+    input:
+        beagle = expand(os.path.join(DATA_DIR, "angsd_runs/<name>/{chrom}/population.beagle.gz"), chrom=CHROMS),
+        mafs   = expand(os.path.join(DATA_DIR, "angsd_runs/<name>/{chrom}/population.mafs.gz"), chrom=CHROMS),
+        bcf    = expand(os.path.join(DATA_DIR, "angsd_runs/<name>/{chrom}/population.bcf"), chrom=CHROMS),
+        depth  = expand(os.path.join(DATA_DIR, "angsd_runs/<name>/{chrom}/population.depthSample"), chrom=CHROMS)
+        # add more inputs/outputs if additional ANGSD modules are used
+    output:
+        beagle      = os.path.join(DATA_DIR, "angsd_runs/<name>/population.beagle.gz"),
+        mafs        = os.path.join(DATA_DIR, "angsd_runs/<name>/population.mafs.gz"),
+        bcf         = temp(os.path.join(DATA_DIR, "angsd_runs/<name>/population.bcf")),
+        depthSample = os.path.join(DATA_DIR, "angsd_runs/<name>/population.depthSample")
+    params:
+        name = config["output_name"]
+    resources:
+        runtime = 120,
+        mem_mb = 8000,
+        cpus_per_task = 1
+    run:
+        import numpy as np
+
+        # --- Beagle: keep header from first file only ---
+        shell(
+            "(zcat {input.beagle[0]} | head -1; "
+            " for f in {input.beagle}; do zcat $f | tail -n +2; done"
+            ") | gzip > {output.beagle}"
+        )
+
+        # --- MAFs: same header-once pattern ---
+        shell(
+            "(zcat {input.mafs[0]} | head -1; "
+            " for f in {input.mafs}; do zcat $f | tail -n +2; done"
+            ") | gzip > {output.mafs}"
+        )
+
+        # --- BCF: bcftools handles its own header merging ---
+        shell("bcftools concat -o {output.bcf} -O b {input.bcf}")
+
+        # --- depthSample: element-wise sum across chromosomes ---
+        depth_sum = None
+        for f in input.depth:
+            arr = np.loadtxt(f)
+            depth_sum = arr if depth_sum is None else depth_sum + arr
+
+        assert depth_sum.shape[0] == len(config["samples"]), (
+            f"depthSample row count ({depth_sum.shape[0]}) does not match "
+            f"sample count ({len(config['samples'])}). BAM list order may be inconsistent."
+        )
+
+        np.savetxt(output.depthSample, depth_sum, fmt="%g")
+        
+
+# ---- Rule 8: Convert BCF --> VCF
+rule convert_bcf:
+    input:
+        bcf = os.path.join(DATA_DIR, "angsd_runs/<name>/population.bcf")
+    output:
+        vcf = temp(os.path.join(DATA_DIR, "angsd_runs/<name>/population_unnamed.vcf.gz"))
+    resources:
+        runtime = 360       # 6 hours
+    shell:
+        """
+        bcftools convert -O z \
+              -o {output.vcf} \
+              {input.bcf}
+        """
+
+# ---- Rule 8: Index & Rename VCF ----
+rule index_vcf:
+    input:
+        vcf = os.path.join(DATA_DIR, "angsd_runs/<name>/population_unnamed.vcf.gz"),
+        info = "results/<name>/info/population.info"
+    output:
+        vcf   = os.path.join(DATA_DIR, "angsd_runs/<name>/population.vcf.gz"),
+        index = os.path.join(DATA_DIR, "angsd_runs/<name>/population.vcf.gz.tbi")
+    shell:
+        """
+        bcftools reheader \
+            -s {input.info} \
+            -o {output.vcf} \
+            {input}
+        
+        tabix -p vcf {output.vcf}
+        """
+
+# ---- Rule 9: Filter VCF ----
+#   -m2 -M2: biallelic SNPs only (required for IQ-TREE)
+#   F_MISSING > 0.2: exclude sites missing in >20% of samples — tune
+#   --min-af 0.05: removes singletons and very rare variants; reduces noise but also removes potentially informative rare variants
+#   TODO: consider loosening cutoffs: F_MISSING > 0.4, 
+rule filter_vcf:
+    input:
+        vcf   = os.path.join(DATA_DIR, "angsd_runs/<name>/population.vcf.gz"),
+        index = os.path.join(DATA_DIR, "angsd_runs/<name>/population.vcf.gz.tbi")
+    output:
+        vcf   = os.path.join(DATA_DIR, "angsd_runs/<name>/population_filtered.vcf.gz"),
+        index = os.path.join(DATA_DIR, "angsd_runs/<name>/population_filtered.vcf.gz.tbi")
+    resources:
+        runtime = 720   # 12 hours
+    shell:
+        """
+        bcftools view -m2 -M2 -v snps {input.vcf} | \
+        bcftools filter -e 'F_MISSING > 0.2' | \
+        bcftools view --min-af 0.05:minor \
+            -o {output.vcf} -O z
+        tabix -p vcf {output.vcf}
+        """
+
+# ---- Rule 10: Convert VCF --> PHY
+rule vcf_to_phylip:
+    input:
+        vcf = os.path.join(DATA_DIR, "angsd_runs/<name>/population_filtered.vcf.gz")
+    output:
+        phy = "results/<name>/tree/population_filtered.min4.phy"
+    params:
+        name = config["output_name"]
+    shell:
+        """
+        python workflow/scripts/vcf2phylip.py \
+            -i {input.vcf} \
+            --output-folder "results/{params.name}/tree" \
+            -m 4
+        """
+
+# ---- Rule 11: IQ-TREE Prep - generates variable sites alignment
+rule iqtree_prep:
+    input:
+        phy = "results/<name>/tree/population_filtered.min4.phy"
+    output:
+        varsites = "results/<name>/tree/population_filtered.varsites.phy"
+    params:
+        name = config["output_name"]
+    threads: 16
+    resources:
+        runtime = 1440,
+        mem_mb = lambda wc, input, attempt: attempt * max(6 * input.size_mb, 64000),    # 64GB or scale by input size
+        cpus_per_task = lambda wildcards, threads: threads
+    shell:
+        """
+        iqtree -s {input.phy} \
+                -st DNA \
+                -m GTR+ASC \
+                -B 1000 \
+                --bnni \
+                -T {threads} \
+                -redo \
+                --prefix results/{params.name}/tree/population_filtered || true
+        """
+
+# ---- Rule 12: IQ-TREE ----
+# -m GTR+ASC = ascertainment bias correction
+# --bnni = branch NNI optimization for improved bootstrap accuracy
+rule iqtree:
+    input:
+        phy = "results/<name>/tree/population_filtered.varsites.phy"
+    output:
+        contree  = "results/<name>/tree/population_filtered.contree",
+        treefile = "results/<name>/tree/population_filtered.treefile"
+    params:
+        name = config["output_name"]
+    threads: 16
+    resources:
+        runtime = 1440,
+        mem_mb = lambda wc, input, attempt: attempt * max(6 * input.size_mb, 64000),    # 64GB or scale by input size
+        cpus_per_task = lambda wildcards, threads: threads
+    shell:
+        """
+        iqtree -s {input.phy} \
+                -st DNA \
+                -m GTR+ASC \
+                -B 1000 \
+                --bnni \
+                -T {threads} \
+                --prefix results/{params.name}/tree/population_filtered \
+                --redo
+        """
+
+# ---- Rule 12: Visualize IQ-TREE ----
+rule plot_tree:
+    input:
+        tree = "results/<name>/tree/population_filtered.contree"
+    output:
+        png = "results/<name>/tree/tree.png"
+    conda:
+        "/WAVE/projects/whittalllab/conda_envs/visualization"
+    script:
+        "scripts/iqtree_visualize.py"
+
+
+# ---- Rule 13: PCAngsd ----
+rule pcangsd:
+    input:
+        os.path.join(DATA_DIR, "angsd_runs/<name>/population.beagle.gz"),
+    output:
+        "results/<name>/pca/population.cov"
+    params:
+        name = config["output_name"]
+    threads: 8
+    resources:
+        # slurm_partition = "mem",
+        runtime = 1440,      # 24 hours
+        mem_mb = lambda wc, input: max(20 * input.size_mb, 4000),    # 4GB or scale by input size
+        cpus_per_task = lambda wildcards, threads: threads
+    shell:
+        """
+        pcangsd -b {input} -o results/{params.name}/pca/population -t {threads}
+        """
+
+# ---- Rule 14: Plot PCA ----
+rule plot_pca:
+    input:
+        cov = "results/<name>/pca/population.cov",
+        info = "results/<name>/info/population.info"
+    output:
+        "results/<name>/pca/pca.png"
+    conda:
+        "/WAVE/projects/whittalllab/conda_envs/visualization"
+    script:
+        "scripts/pcangsd_visualize.py"
+
+
+# ---- Rule 15: ngsDist ----
+rule ngsdist:
+    input:
+        beagle = os.path.join(DATA_DIR, "angsd_runs/<name>/population.beagle.gz"),
+        info = "results/<name>/info/population.info"
+    output:
+        dist = "results/<name>/ngsdist/population.dist",
+        n_sites = "results/<name>/ngsdist/n_sites.txt"
+    params:
+        name = config["output_name"],
+        n_ind = N_SAMPLES
+    threads: 32
+    resources:
+        slurm_partition = "mem",
+        runtime = 1440,      # 24 hours
+        mem_mb = lambda wc, input, attempt: attempt * max(20 * input.size_mb, 32000),    # 32GB or scale by input size
+        cpus_per_task = lambda wildcards, threads: threads
+    shell:
+        """
+        N_SITES=$(zcat {input.beagle} | tail -n +2 | wc -l)
+
+        echo $N_SITES > {output.n_sites}
+
+        ngsDist \
+            --geno {input.beagle} \
+            --probs \
+            --n_ind {params.n_ind} \
+            --n_sites $N_SITES \
+            --labels {input.info} \
+            --pairwise_del \
+            --avg_nuc_dist \
+            --evol_model 0 \
+            --out {output.dist} \
+            --n_threads {threads} \
+            --verbose 2
+        """
+
+
+# ---- Rule 16: Aggregate QC Report ----
+rule aggregate_qc:
+    input:
+        fastp_jsons = expand(os.path.join(DATA_DIR, "qc_reports_reads", "{sample}_fastp_report.json"), sample=SAMPLES),
+        flagstats   = expand(os.path.join(DATA_DIR, "qc_reports_reads", "{sample}_flagstat.txt"), sample=SAMPLES),
+        depthSample = os.path.join(DATA_DIR, "angsd_runs/<name>/population.depthSample")
+    output:
+        csv  = "results/<name>/qc/aggregate_qc.csv",
+        plot = "results/<name>/qc/aggregate_qc.png"
+    conda:
+        "/WAVE/projects/whittalllab/conda_envs/visualization"
+    script:
+        "scripts/aggregate_qc.py"

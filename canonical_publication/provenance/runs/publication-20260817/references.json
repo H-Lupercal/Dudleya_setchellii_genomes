@@ -1,0 +1,135 @@
+{
+  "fingerprint": {
+    "commands": [
+      "blastn candidate/external and self comparisons; validate chloroplast terminal repeat and IRs; mask mitochondrial repeats",
+      "project external GenBank annotations by BLAST; bwa index; samtools faidx"
+    ],
+    "digest": "7daec3ef86b9dd303ea00af35428c110c4bbeb3a4547d12b237284d3124db6a6",
+    "inputs": [
+      [
+        "canonical_publication/config/publication_config.toml",
+        "aea3f0ddf0b95e79566bce9ba3ad3635fbc5c3c97172fa83677b0f7529838378"
+      ],
+      [
+        "canonical_publication/provenance/runs/publication-20260817/source_validation.json",
+        "0ac15ba3535286abfc4a19f1124b94056613c5eb0ee5e55d590e0624e166c5aa"
+      ],
+      [
+        "provenance:executable_sha256:biopython",
+        "c73f9387a63c5d3f89bbf323b4792ffb376e005b57d4d39718f7c000b7a1276a"
+      ],
+      [
+        "provenance:executable_sha256:blastn",
+        "0b88d4a00cb7fa579c203653151175b24c83d27fe240d420abe7b5261a3083d1"
+      ],
+      [
+        "provenance:executable_sha256:bwa",
+        "2d6b83b4b8851bc09d4aabdfc0429b0ffc8383261252aaed5e00682a04ad0a42"
+      ],
+      [
+        "provenance:executable_sha256:samtools",
+        "38ba6496e9f19cc8f1b63ad017a2d39e8088cf12f46864d33e027d111457a98b"
+      ],
+      [
+        "provenance:git_commit",
+        "5b932a95a1fa998569397491bfdec1d79d5bb84d"
+      ],
+      [
+        "provenance:pipeline_code",
+        "ac1b101802862330ca406eef365deec2a5cfa3ab86a419103cdfb6a3597ca413"
+      ],
+      [
+        "provenance:tool:biopython",
+        "1.87"
+      ],
+      [
+        "provenance:tool:blastn",
+        "blastn: 2.17.0+ | Package: blast 2.17.0, build Aug 11 2025 09:46:06"
+      ],
+      [
+        "provenance:tool:bwa",
+        "Program: bwa (alignment via Burrows-Wheeler transformation) | Version: 0.7.19-r1273 | Contact: Heng Li <hli@ds.dfci.harvard.edu>"
+      ],
+      [
+        "provenance:tool:samtools",
+        "samtools 1.23.1 | Using htslib 1.23.1 | Copyright (C) 2025 Genome Research Ltd."
+      ],
+      [
+        "source_data/reference_candidates/Dudleya_hifiasm_purged_manual_chloroplast.fa",
+        "d879448329698e443be587c46d8800a03be62e2a207c4e8f549cddae2f2e4d3a"
+      ],
+      [
+        "source_data/reference_candidates/Dudleya_hifiasm_purged_manual_mitochondria.fa",
+        "5ac70cb01596036a3885e31f5734bcafc93a10e5d910ad5f9f5100215edf2b5f"
+      ],
+      [
+        "source_data/reference_candidates/external/NC_085682.1.fasta",
+        "fe937efda1661625b49d19e1a68b601b235e6551e9b0bd6c3a4861b215a21912"
+      ],
+      [
+        "source_data/reference_candidates/external/NC_085682.1.gb",
+        "fbf74436bfb33b53a57f9d5f3d1e0a3d887017c0bbb968a8bef12088fe7d5609"
+      ],
+      [
+        "source_data/reference_candidates/external/PV256627.1.fasta",
+        "45a91b8768762cd7cfe05fd5bd342424d1c23fcfe55bf911a64bf06ac9075b93"
+      ],
+      [
+        "source_data/reference_candidates/external/PV256627.1.gb",
+        "172d4e3ba510910c2a0675afb34c6e73bbf7abfee28af726f9fbc98e49201cd9"
+      ]
+    ],
+    "stage": "references",
+    "upstream": [
+      [
+        "immutable_sources",
+        "691b70fb163cbb1b99003e8feb1bf965aa1815d8708461635f64c3da7efab236"
+      ]
+    ]
+  },
+  "outputs": {
+    "canonical_publication/references/annotations/chloroplast.projected.gff3": "75e8fc4b2dac775110c8967d87bada2d1f30049bcb2ceddd99df78d01db8de8f",
+    "canonical_publication/references/annotations/chloroplast.projected.tsv": "e512bd7ae4368395962dcc8be043a3887435cf4703b28842d01c7393580270f0",
+    "canonical_publication/references/annotations/mitochondria.projected.gff3": "af327dd35ea1df2d6ebd010aed53f43fd883924048e045554c48582a4e73dd1c",
+    "canonical_publication/references/annotations/mitochondria.projected.tsv": "f2e7432054043ac1318b63efbbd9639cea662e4ae2d21edcf175cc071457ea5b",
+    "canonical_publication/references/evidence/annotation_projection/annotation_projection_summary.tsv": "e9a8cb66416fbe6cf492ed811cc236e7a93684a3d95d9c97df746ef4baadbbeb",
+    "canonical_publication/references/evidence/annotation_projection/chloroplast.external_features.fa": "b6bcb502c4f3bea09135ba61f2d4feb373429f43445246884c921ee2096056f5",
+    "canonical_publication/references/evidence/annotation_projection/chloroplast.feature_projection.blastn.tsv": "1a0cf39dbc45404c876216003599103a80e9e1d7a4af9071c412d6b239cfd584",
+    "canonical_publication/references/evidence/annotation_projection/chloroplast.unmapped_features.tsv": "fe5b9c7fd72c876b8f63dee85e193f5c4d686e77835f9e4acbe7a9579fa50bf5",
+    "canonical_publication/references/evidence/annotation_projection/mitochondria.external_features.fa": "b373e30f9a70e1f3676bb51f9e9a7ea2d8aa57bc412ebbc58f20df23ea4a3a9d",
+    "canonical_publication/references/evidence/annotation_projection/mitochondria.feature_projection.blastn.tsv": "a17ed27ea057494270d677a448e3f7273a88cc2515a2b24147134052947eccc4",
+    "canonical_publication/references/evidence/annotation_projection/mitochondria.unmapped_features.tsv": "dfb060f53b5fbe3c010f19fe03029433a523632a7c7c46ee5774de9dfd125764",
+    "canonical_publication/references/evidence/chloroplast_raw_self.blastn.tsv": "cfa493865b16732b76c364cf531d022760edcd17550d93f20bc1523e77454ddf",
+    "canonical_publication/references/evidence/chloroplast_raw_vs_NC_085682.1.blastn.tsv": "525186d55dcd9adf8251876f491a8e92036ad28c31cc884c28dd61af7e7be7cb",
+    "canonical_publication/references/evidence/chloroplast_removed_terminal_sequence.fa": "49ed31888f3f9ea42ca9abfff10d855a181bab23821b7d5baaadad7e8ead9e98",
+    "canonical_publication/references/evidence/chloroplast_selected_self.blastn.tsv": "873fa6d6d869afec4329c44b531b9f2854ffa7627dcdaa90d73076ddfba5555d",
+    "canonical_publication/references/evidence/chloroplast_selected_vs_NC_085682.1.blastn.tsv": "a06e6529f620efd80454d15ae8219181bdf4c69f849fae5ffd301e004d41514a",
+    "canonical_publication/references/evidence/chloroplast_terminal_repeat_validation.tsv": "2f0bf5d6a6587819069f1120e85c64ee6f4b8d80fb43f8469ddcac5f36d05296",
+    "canonical_publication/references/evidence/external_accession_sequence_consistency.tsv": "44912df07c0216b0a2bbb2a94f232a767a6b4d3c2582ab998cd3cf02d5eedd84",
+    "canonical_publication/references/evidence/mitochondria_repeat_summary.tsv": "98edd73f6635422e870d5c24bc3ed0e28e57723bd0ae056b32e66781034e008c",
+    "canonical_publication/references/evidence/mitochondria_selected_self.blastn.tsv": "ecdfc2b92e41eb956fb75f6e3d02b0b990859badfd2bb78506bc4b9a2cbe2cae",
+    "canonical_publication/references/evidence/mitochondria_selected_vs_PV256627.1.blastn.tsv": "afcc36ef818bd3231fbb0bc0b15d177a4e025e6289a14f04f5d5470e5b2cfc94",
+    "canonical_publication/references/evidence/reference_orientation_and_boundary_checks.tsv": "491c10704491c2c1b0a0d46a2b9e0829485f422e23ac9ad52358139f47697896",
+    "canonical_publication/references/evidence/reference_selection.tsv": "7f8e3ce900a6778416f97e6823ad7fb5c7c600ac8d1eaf5cf4ae2661a13880b7",
+    "canonical_publication/references/evidence/reference_similarity_summary.tsv": "24b7af12cad6dea6002c9ae933d3fb0e678237f66f7abf92f033a3c0e5062a3f",
+    "canonical_publication/references/masks/chloroplast_duplicate_ir_mask.bed": "781acf8199a4f093709d895be91c6ae07458b19340cb6f51e0d7ee261d278235",
+    "canonical_publication/references/masks/chloroplast_full_reference.bed": "6c647a0c77dd17e5bead03be27bc2bd8395d9a80751cd6d5b4ce9bc51ecd73af",
+    "canonical_publication/references/masks/chloroplast_ir_copies.bed": "b3f7ff958213d25aadbffa099d93d6077dff0f4d48b10e6b2a4dbe97f968d91c",
+    "canonical_publication/references/masks/chloroplast_population_sites.bed": "e31faa1b6e19fc11cedaedfe4cabfb88c3946971ebd7b460dd47e11ec7207917",
+    "canonical_publication/references/masks/chloroplast_unique_eligibility_sites.bed": "3b1bf2e392daa01350874231f7354d15f6926016022079ed0700c5921c2f7c41",
+    "canonical_publication/references/masks/mitochondria_full_reference.bed": "1863ebd09252a281b23ea9925603128b4c5e7de3e494c0dadbe87f57305f25cc",
+    "canonical_publication/references/masks/mitochondria_repeat_mask.bed": "453fd2c2698fd7985fc4f272ca368aa1c0b20d9b6e39f412192bb80c9f2f728b",
+    "canonical_publication/references/selected/chloroplast.fa": "b5e97f512314b89b0753542f9632edc88bbe5e7a6325d354ae09bc1401f5d612",
+    "canonical_publication/references/selected/chloroplast.fa.fai": "9f36f3549d609b99e56461f04604bbf3de352af0e593da7760f48f77c1169912",
+    "canonical_publication/references/selected/mitochondria.fa": "9148e0f823866064d193c542140b322538e55db9f01cfd278bdfc928be7934c7",
+    "canonical_publication/references/selected/mitochondria.fa.fai": "809bbdc6410f457be5c483b5e9e16fea8986dcbe60185d2499ee2c552ce44e73",
+    "canonical_publication/references/selected/organelle_combined.fa": "84a53a58f60464ba18c0f0da0445201c9bbfc5d10a9216932f8bf4df8d4cf4f8",
+    "canonical_publication/references/selected/organelle_combined.fa.amb": "244a32f192fbbd808cb51ef728648dc1ab59d7668b60d11d6fed620f6332029d",
+    "canonical_publication/references/selected/organelle_combined.fa.ann": "1ff8aa0fcd21683ae8683ddf6473a16aeccdc15e1ebfecf004900ee7a6c80c73",
+    "canonical_publication/references/selected/organelle_combined.fa.bwt": "da5246b10917b9207e0ecf77c65df365995689b283e36baa87eaac3bb8fccaae",
+    "canonical_publication/references/selected/organelle_combined.fa.fai": "4817bef96b64589cb58bcb00d21d1f0a4ab11c3a69858cf88a6933bca82607dc",
+    "canonical_publication/references/selected/organelle_combined.fa.pac": "0f36e205a3c6e619e167607dba8e5659e1e681f15d6cab4777c239e05874d2f1",
+    "canonical_publication/references/selected/organelle_combined.fa.sa": "132f222467a5d072808dbd1eaa3116e8cf1035fce26ad315169b39923063f47a"
+  },
+  "status": "complete"
+}
