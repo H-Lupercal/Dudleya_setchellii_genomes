@@ -26,6 +26,22 @@ def _md5(path: Path) -> str:
     return digest.hexdigest()
 
 
+def _revalidate_provider_row(root: Path, row: dict[str, str]) -> dict[str, str]:
+    relative = row["resolved_source_path"]
+    if not relative:
+        return {
+            **row,
+            "supplementary_observed_md5": "",
+            "supplementary_status": "DECLARED_MISSING_NOT_HASHABLE",
+        }
+    current = _md5(root / relative)
+    return {
+        **row,
+        "supplementary_observed_md5": current,
+        "supplementary_status": "PASS" if current == row["expected_md5"] else "FAIL",
+    }
+
+
 def _sketch_sample(root: Path, output: Path, sample: str, inputs: list[str]) -> None:
     if output.with_suffix(".msh").is_file():
         return
@@ -168,16 +184,10 @@ def run_identity_audit(root: Path, run_id: str) -> list[Path]:
     revalidated = []
     exact_groups: dict[str, list[str]] = defaultdict(list)
     for row in provider:
-        source = root / row["resolved_source_path"]
-        current = _md5(source)
-        revalidated.append(
-            {
-                **row,
-                "supplementary_observed_md5": current,
-                "supplementary_status": "PASS" if current == row["expected_md5"] else "FAIL",
-            }
-        )
-        exact_groups[current].append(row["resolved_source_path"])
+        result = _revalidate_provider_row(root, row)
+        revalidated.append(result)
+        if row["resolved_source_path"]:
+            exact_groups[result["supplementary_observed_md5"]].append(row["resolved_source_path"])
     exact = [
         {
             "observed_md5": digest,

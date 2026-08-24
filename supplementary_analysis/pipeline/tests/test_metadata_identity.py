@@ -1,4 +1,5 @@
 from dudleya_supplement.identity import MixedAlleleCall, classify_mixed_allele_samples, index_hopping_status, parse_structured_id
+from dudleya_supplement.identity_audit import _revalidate_provider_row
 from dudleya_supplement.metadata import apply_metadata_policy, derive_populations
 
 
@@ -41,3 +42,15 @@ def test_mixed_allele_screen_uses_support_fraction_and_robust_outlier_rule() -> 
     assert results["ordinary"].mixed_site_count == 0
     assert results["suspect"].mixed_site_count == 12
     assert results["suspect"].status == "suspected"
+
+
+def test_declared_missing_provider_record_is_preserved_without_hashing_repo_root(tmp_path) -> None:
+    row = {
+        "resolved_source_path": "",
+        "expected_md5": "a" * 32,
+        "observed_md5": "",
+        "status": "DECLARED_MISSING",
+    }
+    result = _revalidate_provider_row(tmp_path, row)
+    assert result["supplementary_observed_md5"] == ""
+    assert result["supplementary_status"] == "DECLARED_MISSING_NOT_HASHABLE"
