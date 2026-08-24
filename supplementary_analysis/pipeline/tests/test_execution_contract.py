@@ -41,9 +41,11 @@ def test_acceptance_requires_canonical_counts_and_checksums() -> None:
         all_artifacts_checksummed=True,
         canonical_unchanged=True,
         shared_display_count=271,
+        restored_identical_tip_count=42,
         rf_representative_count=229,
     )
     assert checks["status"] == "PASS"
+    assert checks["restored_identical_tip_count"]["status"] == "PASS"
     checks["canonical_counts"] = {"status": "FAIL"}
 
 

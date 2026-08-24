@@ -63,12 +63,10 @@ def likelihood_decision(
 
 
 def parse_identical_sequence_map(text: str) -> dict[str, str]:
-    result: dict[str, str] = {}
-    patterns = (
-        r"NOTE:\s+(\S+) is identical to (\S+) but kept",
-        r"NOTE:\s+(\S+) \(identical to (\S+)\) is ignored",
-    )
-    for pattern in patterns:
-        for duplicate, representative in re.findall(pattern, text):
-            result[duplicate] = representative
-    return result
+    """Return only tips IQ-TREE collapsed and later restored at zero length.
+
+    IQ-TREE also reports identical sequences that it explicitly keeps. Those
+    tips are already in the representative tree and must not be labeled as
+    restored collapsed samples.
+    """
+    return {duplicate: representative for duplicate, representative in re.findall(r"NOTE:\s+(\S+) \(identical to (\S+)\) is ignored", text)}

@@ -54,10 +54,7 @@ def test_identical_tip_mapping_is_parsed_from_iqtree_notes() -> None:
     text = """NOTE: DU-229 is identical to BAI_LP_110_Du-227 but kept for subsequent analysis
 NOTE: CROB_LP_321_Du-396 (identical to CROB_LP_173_Du-385) is ignored but added at the end
 """
-    assert parse_identical_sequence_map(text) == {
-        "DU-229": "BAI_LP_110_Du-227",
-        "CROB_LP_321_Du-396": "CROB_LP_173_Du-385",
-    }
+    assert parse_identical_sequence_map(text) == {"CROB_LP_321_Du-396": "CROB_LP_173_Du-385"}
 
 
 def test_likelihood_report_parses_all_seven_regions(tmp_path: Path) -> None:

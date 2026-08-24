@@ -10,6 +10,7 @@ def acceptance_checks(
     all_artifacts_checksummed: bool,
     canonical_unchanged: bool,
     shared_display_count: int,
+    restored_identical_tip_count: int,
     rf_representative_count: int,
 ) -> dict[str, object]:
     checks: dict[str, dict[str, object]] = {
@@ -21,6 +22,10 @@ def acceptance_checks(
         "artifact_checksums": {"status": "PASS" if all_artifacts_checksummed else "FAIL"},
         "canonical_unchanged": {"status": "PASS" if canonical_unchanged else "FAIL"},
         "shared_display_count": {"status": "PASS" if shared_display_count == 271 else "FAIL", "observed": shared_display_count},
+        "restored_identical_tip_count": {
+            "status": "PASS" if restored_identical_tip_count == 42 else "FAIL",
+            "observed": restored_identical_tip_count,
+        },
         "rf_representative_count": {
             "status": "PASS" if rf_representative_count == 229 else "FAIL",
             "observed": rf_representative_count,

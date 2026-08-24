@@ -231,6 +231,7 @@ def write_acceptance(root: Path, run_id: str, canonical_unchanged: bool) -> list
         all_artifacts_checksummed=len(manifest_rows) == len(paths) and all(row["sha256"] for row in manifest_rows),
         canonical_unchanged=canonical_unchanged,
         shared_display_count=len(tangle),
+        restored_identical_tip_count=sum(row["identical_zero_length_tip_group"] == "yes" for row in tangle),
         rf_representative_count=int(rf["taxon_space"].split("_", 1)[0]),
     )
     claim_rows = read_tsv(claim_decision_path(root, run_id, phase1=False))
