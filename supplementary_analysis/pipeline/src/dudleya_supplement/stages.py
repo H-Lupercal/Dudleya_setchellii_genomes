@@ -83,6 +83,17 @@ def _software_versions() -> dict[str, str]:
     return versions
 
 
+def _canonical_fingerprint_value(state: dict[str, object]) -> str:
+    """Normalize canonical state schemas used across the base run."""
+    value = state.get("fingerprint")
+    if isinstance(value, str):
+        return value
+    if isinstance(value, dict):
+        digest = value.get("digest")
+        return digest if isinstance(digest, str) else ""
+    return ""
+
+
 def _resume_or_fail(root: Path, run_id: str, stage: str, fingerprint: object, resume: bool) -> bool:
     path = _state_path(root, run_id, stage)
     if resume and path.is_file():
@@ -116,11 +127,13 @@ def verify_canonical_unchanged(root: Path, run_id: str) -> dict[str, dict[str, o
             stage_number, path = stage_path.split("\t", 1)
             rows.append({"path": path, "mode": mode, "git_blob": digest, "stage": stage_number})
         write_tsv(blob_path, rows, ["path", "mode", "git_blob", "stage"], root)
+    fingerprint_path = root / "supplementary_analysis/provenance/manifests/publication-20260817.stage_fingerprints.tsv"
+    if not fingerprint_path.is_file():
         fingerprint_rows = []
         canonical_run = root / "canonical_publication/provenance/runs/publication-20260817"
         for state_path in sorted(canonical_run.glob("*.json")):
             state = json.loads(state_path.read_text())
-            digest = state.get("fingerprint", {}).get("digest", "")
+            digest = _canonical_fingerprint_value(state)
             fingerprint_rows.append(
                 {
                     "path": state_path.relative_to(root).as_posix(),
@@ -130,7 +143,7 @@ def verify_canonical_unchanged(root: Path, run_id: str) -> dict[str, dict[str, o
                 }
             )
         write_tsv(
-            root / "supplementary_analysis/provenance/manifests/publication-20260817.stage_fingerprints.tsv",
+            fingerprint_path,
             fingerprint_rows,
             ["path", "stage", "fingerprint", "sha256"],
             root,

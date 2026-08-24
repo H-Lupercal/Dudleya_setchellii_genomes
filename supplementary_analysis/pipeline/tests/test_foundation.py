@@ -11,6 +11,7 @@ from dudleya_supplement.provenance import (
     validate_immutable_snapshot,
     validate_resume,
 )
+from dudleya_supplement.stages import _canonical_fingerprint_value
 
 
 def valid_config() -> dict[str, object]:
@@ -98,3 +99,10 @@ def test_code_fingerprint_includes_supplement_and_explicit_canonical_imports(tmp
         "supplementary_analysis/pipeline/src/pkg/a.py",
         "canonical_publication/pipeline/src/base/stats.py",
     }
+
+
+def test_canonical_fingerprint_reader_accepts_legacy_and_current_state_shapes() -> None:
+    digest = "a" * 64
+    assert _canonical_fingerprint_value({"fingerprint": digest}) == digest
+    assert _canonical_fingerprint_value({"fingerprint": {"digest": digest}}) == digest
+    assert _canonical_fingerprint_value({}) == ""
