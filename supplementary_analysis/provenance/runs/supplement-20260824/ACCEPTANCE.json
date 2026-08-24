@@ -3,7 +3,7 @@
     "status": "PASS"
   },
   "artifact_manifest": "supplementary_analysis/provenance/manifests/supplement-20260824.final_artifacts.tsv",
-  "artifact_manifest_sha256": "41e2ad6f063c8559b053afc9b535eb7f8b53bb244de62dbfc2a8065216cceb7a",
+  "artifact_manifest_sha256": "cf38c04a78ad35bf4853d0bdb94a15b64eb4b0b1bffb597e146227f5c0db90ee",
   "base_run_id": "publication-20260817",
   "canonical_counts": {
     "observed": {

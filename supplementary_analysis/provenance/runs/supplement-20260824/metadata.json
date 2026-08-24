@@ -13,8 +13,8 @@
     "commands": [
       "apply decision-plan v2.5 sample-level metadata policy"
     ],
-    "digest": "02d067c0a0afbcd72bfb0fa10ae76dff0b5527b93b5e2766e6623534cc1f6fa8",
-    "git_commit": "f478cce8467d70f97c85f3d0ffe146174f545a83",
+    "digest": "bd005a47b82ef5cf5859365d3ab0c553c97e0183b7b4fa831bf62402038aca14",
+    "git_commit": "78250eba5699da94a72a490c54d875b89748e329",
     "inputs": {
       "canonical_publication/metadata/populations/populations.tsv": "d11b2c0a0114f69d368a53a4a1ae9ed1d3d503e10a92993452335ed8fc38f094",
       "canonical_publication/metadata/qc/publication-20260817/source_metadata_ambiguities.tsv": "cc3883116b060783bed5e53d2702463d0e56886b5db5cf836f2563c03932349d",
@@ -41,12 +41,12 @@
       "supplementary_analysis/pipeline/src/dudleya_supplement/reporting.py": "0d28ecd87411a0431a6eb3ed52f096fc19c370b367f477bede536cf37973c7ed",
       "supplementary_analysis/pipeline/src/dudleya_supplement/scenario.py": "50610a9a8369484f687788870629abde15a92daf619f29be2c5b74a5b0f78628",
       "supplementary_analysis/pipeline/src/dudleya_supplement/sensitivity.py": "bac79d2bd56b417ad999b8705f414058c074ebbb933da7ec1a95f93d03ae7158",
-      "supplementary_analysis/pipeline/src/dudleya_supplement/stages.py": "0966a93c9a784fec22ff0bc044bf0ce8d0a36d878b2f449389acbec8fe8fb947",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/stages.py": "2eab8a338cf15e332c231fcb39d59d134cd1a77311254ad3e4c82d9ba98a85f5",
       "supplementary_analysis/pipeline/src/dudleya_supplement/workflow.py": "c48c56b15aafdcf17581ea084934cdb6d439c52195dd88a392acb8ad581fb1b0"
     },
     "stage": "metadata",
     "upstream": {
-      "canonical_guard": "1c80dab4f8e3fed42f64f913867985ef8a6ee69d24c3f549a914a019b0d18b65"
+      "canonical_guard": "5c222e51e478fd578505ec011ab08c608dceabb6eba1b91845b455e954b9118c"
     }
   },
   "outputs": {

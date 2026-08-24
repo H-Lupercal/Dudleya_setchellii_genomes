@@ -13,8 +13,8 @@
     "commands": [
       "verify canonical filesystem is byte- and metadata-unchanged"
     ],
-    "digest": "f35ac61c2d6632d30ae9bbabe611e5084d9a5d7407d8eb4f437344f2d2685f05",
-    "git_commit": "f478cce8467d70f97c85f3d0ffe146174f545a83",
+    "digest": "c37aec00fcd7685f579f8fd26dbaeb826abb9cb97526bbcab5a30a95735e9e0f",
+    "git_commit": "78250eba5699da94a72a490c54d875b89748e329",
     "inputs": {
       "canonical:filesystem_snapshot": "b9aa1eed6bc4b8d6385f2bd729e01aa940182bf46c9ae340414cb6b2b4460168",
       "supplementary_analysis/config/supplementary_config.toml": "768958da71c08e36ebc0c7eb2aaeb0468170eacf3cc2ab574e47cc1c4288fcf3",
@@ -39,13 +39,13 @@
       "supplementary_analysis/pipeline/src/dudleya_supplement/reporting.py": "0d28ecd87411a0431a6eb3ed52f096fc19c370b367f477bede536cf37973c7ed",
       "supplementary_analysis/pipeline/src/dudleya_supplement/scenario.py": "50610a9a8369484f687788870629abde15a92daf619f29be2c5b74a5b0f78628",
       "supplementary_analysis/pipeline/src/dudleya_supplement/sensitivity.py": "bac79d2bd56b417ad999b8705f414058c074ebbb933da7ec1a95f93d03ae7158",
-      "supplementary_analysis/pipeline/src/dudleya_supplement/stages.py": "0966a93c9a784fec22ff0bc044bf0ce8d0a36d878b2f449389acbec8fe8fb947",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/stages.py": "2eab8a338cf15e332c231fcb39d59d134cd1a77311254ad3e4c82d9ba98a85f5",
       "supplementary_analysis/pipeline/src/dudleya_supplement/workflow.py": "c48c56b15aafdcf17581ea084934cdb6d439c52195dd88a392acb8ad581fb1b0",
       "supplementary_analysis/provenance/manifests/publication-20260817.canonical_filesystem_snapshot.json": "574bfe9807949286b402032357f6473d9fa62bb51b0fd260c9a64aab5cb60d90"
     },
     "stage": "canonical_guard_final",
     "upstream": {
-      "acceptance": "eb0d9e49c8073962a51a0cb1d1379b6af005c6486a99be15cc96d41fa257416f"
+      "acceptance": "e5e0dedc74994e267f7953571b6c3c27faf3d3fb598c7beffd9fc83c6740f537"
     }
   },
   "outputs": {},

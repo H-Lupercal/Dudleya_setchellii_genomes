@@ -16,8 +16,8 @@
       "PC-QC permutation tests",
       "5 kb coordinate tracks"
     ],
-    "digest": "25ce3037a764bc804a328679a590f2b8164cbdf183e1a6874a7dc6f780ba929c",
-    "git_commit": "f478cce8467d70f97c85f3d0ffe146174f545a83",
+    "digest": "8c5f25296e291e9d6a453908b230b225bc7100c0fb2d272639f5a8de7522daf8",
+    "git_commit": "78250eba5699da94a72a490c54d875b89748e329",
     "inputs": {
       "canonical_publication/pipeline/src/organelle_pipeline/analysis.py": "539cd1780aaea88fb361bcaf72613b3be54826799a603b94094de6194c1d51ed",
       "canonical_publication/pipeline/src/organelle_pipeline/consensus.py": "3dc9acaae5c284a739bde0267163fab1fc74400b4575853d8a73c962f4bdc22e",
@@ -47,13 +47,13 @@
       "supplementary_analysis/pipeline/src/dudleya_supplement/reporting.py": "0d28ecd87411a0431a6eb3ed52f096fc19c370b367f477bede536cf37973c7ed",
       "supplementary_analysis/pipeline/src/dudleya_supplement/scenario.py": "50610a9a8369484f687788870629abde15a92daf619f29be2c5b74a5b0f78628",
       "supplementary_analysis/pipeline/src/dudleya_supplement/sensitivity.py": "bac79d2bd56b417ad999b8705f414058c074ebbb933da7ec1a95f93d03ae7158",
-      "supplementary_analysis/pipeline/src/dudleya_supplement/stages.py": "0966a93c9a784fec22ff0bc044bf0ce8d0a36d878b2f449389acbec8fe8fb947",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/stages.py": "2eab8a338cf15e332c231fcb39d59d134cd1a77311254ad3e4c82d9ba98a85f5",
       "supplementary_analysis/pipeline/src/dudleya_supplement/workflow.py": "c48c56b15aafdcf17581ea084934cdb6d439c52195dd88a392acb8ad581fb1b0",
       "supplementary_analysis/provenance/manifests/publication-20260817.canonical_filesystem_snapshot.json": "574bfe9807949286b402032357f6473d9fa62bb51b0fd260c9a64aab5cb60d90"
     },
     "stage": "comparative_analyses",
     "upstream": {
-      "likelihood_mapping": "3200574924b55d5bfd876d5d39628676cabf7c20b6aeb1d9ec0ac6bc7f09ec00"
+      "likelihood_mapping": "ed7d9e109f956589a531a6dc5d4ea9bbb7cf043384c1877d81894013f2f2d41b"
     }
   },
   "outputs": {

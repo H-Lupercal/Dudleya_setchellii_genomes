@@ -13,8 +13,8 @@
       "checksum final artifacts and evaluate acceptance",
       "update CURRENT_RUN only on PASS"
     ],
-    "digest": "eb0d9e49c8073962a51a0cb1d1379b6af005c6486a99be15cc96d41fa257416f",
-    "git_commit": "f478cce8467d70f97c85f3d0ffe146174f545a83",
+    "digest": "e5e0dedc74994e267f7953571b6c3c27faf3d3fb598c7beffd9fc83c6740f537",
+    "git_commit": "78250eba5699da94a72a490c54d875b89748e329",
     "inputs": {
       "canonical_publication/pipeline/src/organelle_pipeline/analysis.py": "539cd1780aaea88fb361bcaf72613b3be54826799a603b94094de6194c1d51ed",
       "canonical_publication/pipeline/src/organelle_pipeline/consensus.py": "3dc9acaae5c284a739bde0267163fab1fc74400b4575853d8a73c962f4bdc22e",
@@ -44,20 +44,20 @@
       "supplementary_analysis/pipeline/src/dudleya_supplement/reporting.py": "0d28ecd87411a0431a6eb3ed52f096fc19c370b367f477bede536cf37973c7ed",
       "supplementary_analysis/pipeline/src/dudleya_supplement/scenario.py": "50610a9a8369484f687788870629abde15a92daf619f29be2c5b74a5b0f78628",
       "supplementary_analysis/pipeline/src/dudleya_supplement/sensitivity.py": "bac79d2bd56b417ad999b8705f414058c074ebbb933da7ec1a95f93d03ae7158",
-      "supplementary_analysis/pipeline/src/dudleya_supplement/stages.py": "0966a93c9a784fec22ff0bc044bf0ce8d0a36d878b2f449389acbec8fe8fb947",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/stages.py": "2eab8a338cf15e332c231fcb39d59d134cd1a77311254ad3e4c82d9ba98a85f5",
       "supplementary_analysis/pipeline/src/dudleya_supplement/workflow.py": "c48c56b15aafdcf17581ea084934cdb6d439c52195dd88a392acb8ad581fb1b0",
       "supplementary_analysis/provenance/manifests/publication-20260817.canonical_filesystem_snapshot.json": "574bfe9807949286b402032357f6473d9fa62bb51b0fd260c9a64aab5cb60d90"
     },
     "stage": "acceptance",
     "upstream": {
-      "reports": "ae35877791618cc14ca55d861bf31f024208eec6af9ccf0d52a70a1780132362"
+      "reports": "458ea0484e4bf46d8dc01070a3d26c82774ff2576e140f11373715b672f2391c"
     }
   },
   "outputs": {
     "supplementary_analysis/CURRENT_RUN": "ca6c3051d904dd20006f8afdcde49a840d324e2e442af19dac25a28c752cf2a5",
-    "supplementary_analysis/provenance/manifests/supplement-20260824.acceptance.sha256": "a6f2e71ef2745cf2b9900383bec28d4454f3f3aefb5b3ade7444141cc485501e",
-    "supplementary_analysis/provenance/manifests/supplement-20260824.final_artifacts.tsv": "41e2ad6f063c8559b053afc9b535eb7f8b53bb244de62dbfc2a8065216cceb7a",
-    "supplementary_analysis/provenance/runs/supplement-20260824/ACCEPTANCE.json": "06f0d7cfa92bb8de071de2e751a7683caa9c6e6672170e0668375a94717477d0"
+    "supplementary_analysis/provenance/manifests/supplement-20260824.acceptance.sha256": "9b2a2e51022e9a790ed453fe17b93c7e3cc85610f2f6f1ff75d34886a5b394d4",
+    "supplementary_analysis/provenance/manifests/supplement-20260824.final_artifacts.tsv": "cf38c04a78ad35bf4853d0bdb94a15b64eb4b0b1bffb597e146227f5c0db90ee",
+    "supplementary_analysis/provenance/runs/supplement-20260824/ACCEPTANCE.json": "0682b1f8f734bff7c36d3f616628694891c9811ceecedb35d17cd665b0f51303"
   },
   "stage": "acceptance",
   "status": "complete"
