@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import subprocess
+from datetime import UTC, datetime
 from pathlib import Path
 
 import matplotlib
@@ -23,7 +24,12 @@ def _save(fig, prefix: Path) -> list[Path]:
     for extension in FORMATS:
         path = prefix.with_suffix(f".{extension}")
         kwargs = {"dpi": 300} if extension == "png" else {}
-        fig.savefig(path, bbox_inches="tight", metadata={"Creator": "Dudleya supplementary pipeline", "Date": "2026-08-24"}, **kwargs)
+        metadata: dict[str, object] = {"Creator": "Dudleya supplementary pipeline"}
+        if extension == "pdf":
+            metadata["CreationDate"] = datetime(2026, 8, 24, tzinfo=UTC)
+        elif extension == "svg":
+            metadata["Date"] = "2026-08-24"
+        fig.savefig(path, bbox_inches="tight", metadata=metadata, **kwargs)
         outputs.append(path)
     plt.close(fig)
     return outputs
@@ -31,7 +37,7 @@ def _save(fig, prefix: Path) -> list[Path]:
 
 def _robustness(root: Path, run_id: str, prefix: Path) -> list[Path]:
     rows = read_tsv(root / f"supplementary_analysis/results/sensitivity/{run_id}/sensitivity_summary.tsv")
-    labels = [f"{row['scenario']}\n{row['organelle'][:2]}" for row in rows]
+    labels = [f"{row['scenario']}\n{'cp' if row['organelle'] == 'chloroplast' else 'mt'}" for row in rows]
     x = np.arange(len(rows))
     fig, axes = plt.subplots(2, 2, figsize=(12, 8))
     axes[0, 0].bar(x, [float(row["pi_spearman_rho"]) for row in rows], color="#4c78a8")
@@ -43,15 +49,17 @@ def _robustness(root: Path, run_id: str, prefix: Path) -> list[Path]:
     axes[1, 0].bar(x, [float(row["protest_r"]) for row in rows], color="#54a24b")
     axes[1, 0].axhline(0.90, color="black", linestyle="--", linewidth=1)
     axes[1, 0].set(title="PC1–PC3 Procrustes agreement", ylabel="r", ylim=(0, 1.03))
-    axes[1, 1].scatter(
-        [int(row["eligible_samples"]) for row in rows],
-        [int(row["retained_snps"]) for row in rows],
-        c=[COLORS[row["organelle"]] for row in rows],
-        s=55,
-    )
     for row in rows:
-        axes[1, 1].annotate(row["scenario"], (int(row["eligible_samples"]), int(row["retained_snps"])), fontsize=7)
+        short = "cp" if row["organelle"] == "chloroplast" else "mt"
+        axes[1, 1].scatter(
+            int(row["eligible_samples"]),
+            int(row["retained_snps"]),
+            color=COLORS[row["organelle"]],
+            s=55,
+            label=f"{row['scenario']} {short}",
+        )
     axes[1, 1].set(title="Samples and retained SNPs", xlabel="Eligible samples", ylabel="SNPs")
+    axes[1, 1].legend(fontsize=7, loc="center left", bbox_to_anchor=(1.01, 0.5))
     for axis in axes.flat[:3]:
         axis.set_xticks(x, labels, rotation=35, ha="right", fontsize=7)
     fig.suptitle("Supplementary Figure 1 — Filtering robustness")
@@ -69,8 +77,17 @@ def _phylogenetic_information(root: Path, run_id: str, prefix: Path) -> list[Pat
             value = float(row[f"region_{index}_fraction"])
             axis.bar([0], [value], bottom=bottom, color=palette[index - 1], label=f"Region {index}")
             bottom += value
-        axis.set(xticks=[], ylim=(0, 1), ylabel="Quartet fraction", title=row["organelle"].capitalize())
-        axis.text(0, 1.03, row["decision"].replace("_", " ").title(), ha="center", fontsize=9)
+        axis.set(
+            xticks=[],
+            ylim=(0, 1),
+            ylabel="Quartet fraction",
+            xlabel=(
+                f"Composition failures: {row['composition_failed_count']}/{row['alignment_sequence_count']}; "
+                f">50% gaps/ambiguity: {row['over_50pct_ambiguity_count']}"
+            ),
+        )
+        axis.set_title(row["organelle"].capitalize(), y=1.10)
+        axis.text(0.5, 1.02, row["decision"].replace("_", " ").title(), transform=axis.transAxes, ha="center", fontsize=9)
     axes[1].legend(ncol=2, fontsize=8, loc="center left", bbox_to_anchor=(1.02, 0.5))
     fig.suptitle("Supplementary Figure 2 — Seven-region likelihood mapping")
     fig.tight_layout()
@@ -92,7 +109,11 @@ def _technical(root: Path, run_id: str, prefix: Path) -> list[Path]:
         matrix = _genotype_matrix(root / f"canonical_publication/results/variants/publication-20260817/{organelle}.primary.vcf.gz")
         show = matrix[:, : min(500, matrix.shape[1])]
         axis.imshow(show, aspect="auto", interpolation="nearest", cmap="viridis", vmin=0, vmax=1)
-        axis.set(title=f"{organelle.capitalize()} genotypes (first 500 SNPs)", xlabel="SNP", ylabel="Sample")
+        axis.set(
+            title=f"{organelle.capitalize()} genotypes (first 500 SNPs)",
+            xlabel="SNP (purple=reference; yellow=alternate; white=missing)",
+            ylabel="Sample",
+        )
     for axis, organelle in zip(axes[1], ("chloroplast", "mitochondria"), strict=True):
         selected = [row for row in stats if row["organelle"] == organelle]
         labels = [f"{row['component']}:{row['technical_variable'][:4]}" for row in selected]

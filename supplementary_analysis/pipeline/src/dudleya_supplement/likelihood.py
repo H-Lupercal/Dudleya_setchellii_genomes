@@ -11,6 +11,13 @@ from .io import write_tsv
 from .phylogeny import likelihood_decision, parse_split_nexus, supported_incompatible_pair
 
 
+def run_command_logged(command: list[str], *, cwd: Path, log: Path) -> None:
+    """Run a verbose command while preserving its complete screen output."""
+    log.parent.mkdir(parents=True, exist_ok=True)
+    with log.open("w") as handle:
+        subprocess.run(command, cwd=cwd, stdout=handle, stderr=subprocess.STDOUT, check=True)
+
+
 def build_likelihood_command(
     *,
     alignment: Path,
@@ -56,7 +63,7 @@ def parse_likelihood_report(path: Path) -> dict[str, float | int]:
     totals = [line for line in before_resolution.splitlines() if re.match(r"^\s+\d+\s+\d+\s+\(\s*\d", line)]
     if not totals:
         raise ValueError(f"Missing total seven-region row: {path}")
-    values = re.findall(r"(\d+)\s+\(\s*([0-9.]+)\)", totals[-1])
+    values = re.findall(r"(\d+)\s+\(\s*([0-9.]+)\s*\)", totals[-1])
     if len(values) != 7:
         raise ValueError(f"Expected seven likelihood regions, found {len(values)}: {path}")
     overall = re.search(
@@ -76,6 +83,21 @@ def parse_likelihood_report(path: Path) -> dict[str, float | int]:
     result["side_fraction"] = float(overall.group(2)) / 100.0
     result["center_fraction"] = float(overall.group(3)) / 100.0
     return result
+
+
+def parse_likelihood_diagnostics(path: Path) -> dict[str, int]:
+    """Extract model-assumption warnings from IQ-TREE's run log."""
+    text = path.read_text()
+    alignment = re.search(r"Alignment has (\d+) sequences with", text)
+    composition = re.search(r"(\d+) sequences failed composition chi2 test", text)
+    ambiguity = re.search(r"WARNING: (\d+) sequences contain more than 50% gaps/ambiguity", text)
+    if alignment is None or composition is None:
+        raise ValueError(f"Missing alignment/composition diagnostics: {path}")
+    return {
+        "alignment_sequence_count": int(alignment.group(1)),
+        "composition_failed_count": int(composition.group(1)),
+        "over_50pct_ambiguity_count": int(ambiguity.group(1)) if ambiguity else 0,
+    }
 
 
 def _run_outline(root: Path, run_id: str, organelle: str) -> list[Path]:
@@ -133,9 +155,9 @@ def run_likelihood_mapping(root: Path, run_id: str, config: dict[str, object]) -
                 prefix=work_prefix.relative_to(root),
                 threads=8,
             )
-            subprocess.run(command, cwd=root, check=True)
+            run_command_logged(command, cwd=root, log=Path(f"{work_prefix}.screen.log"))
         copied = []
-        for suffix in (".iqtree", ".lmap.svg", ".lmap.eps"):
+        for suffix in (".iqtree", ".log", ".lmap.svg", ".lmap.eps"):
             source = Path(f"{work_prefix}{suffix}")
             if source.is_file():
                 destination = output_dir / f"{organelle}{suffix}"
@@ -143,6 +165,7 @@ def run_likelihood_mapping(root: Path, run_id: str, config: dict[str, object]) -
                 copied.append(destination)
         report = output_dir / f"{organelle}.iqtree"
         stats = parse_likelihood_report(report)
+        diagnostics = parse_likelihood_diagnostics(Path(f"{work_prefix}.log"))
         taxa, splits = parse_split_nexus(root / f"canonical_publication/results/trees/publication-20260817/{organelle}.primary.splits.nex")
         conflict = supported_incompatible_pair(taxa, splits, minimum_frequency=float(settings["split_trigger"]))  # type: ignore[index]
         decision = likelihood_decision(
@@ -159,6 +182,7 @@ def run_likelihood_mapping(root: Path, run_id: str, config: dict[str, object]) -
                 "seed": seed,
                 "quartets": settings["quartets"],  # type: ignore[index]
                 **stats,
+                **diagnostics,
                 "bootstrap_split_taxa": len(taxa),
                 "supported_incompatible_pair": "yes" if conflict else "no",
                 "decision": decision,

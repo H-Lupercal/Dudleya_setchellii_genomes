@@ -1,6 +1,13 @@
+import sys
 from pathlib import Path
 
-from dudleya_supplement.likelihood import build_likelihood_command, parse_likelihood_report
+import pytest
+from dudleya_supplement.likelihood import (
+    build_likelihood_command,
+    parse_likelihood_diagnostics,
+    parse_likelihood_report,
+    run_command_logged,
+)
 from dudleya_supplement.phylogeny import (
     likelihood_decision,
     parse_identical_sequence_map,
@@ -70,6 +77,23 @@ def test_likelihood_report_parses_all_seven_regions(tmp_path: Path) -> None:
     assert values["side_fraction"] == 0.30
 
 
+def test_likelihood_report_accepts_iqtree3_percentage_spacing(tmp_path: Path) -> None:
+    report = tmp_path / "iqtree3.iqtree"
+    report.write_text(
+        "Quartet support of areas 1-7 (mainly for clustered analysis):\n"
+        "    100000   32786   (32.79 ) 32658   (32.66 ) 32670   (32.67 ) "
+        "202 (0.20  ) 190 (0.19  ) 196 (0.20  ) 1298 (1.30  )\n"
+        "Quartet resolution per sequence\n"
+        "Overall quartet resolution:\n"
+        "Number of fully resolved  quartets (regions 1+2+3): 98114 (=98.11%)\n"
+        "Number of partly resolved quartets (regions 4+5+6): 588 (=0.59%)\n"
+        "Number of unresolved      quartets (region 7)     : 1298 (=1.30%)\n"
+    )
+    values = parse_likelihood_report(report)
+    assert values["region_1_count"] == 32786
+    assert values["region_7_fraction"] == pytest.approx(0.013)
+
+
 def test_likelihood_mapping_declares_dna_sequence_type() -> None:
     command = build_likelihood_command(
         alignment=Path("canonical/alignment.fa"),
@@ -80,3 +104,23 @@ def test_likelihood_mapping_declares_dna_sequence_type() -> None:
         threads=8,
     )
     assert command[command.index("-st") + 1] == "DNA"
+
+
+def test_likelihood_command_output_is_redirected_to_work_log(tmp_path: Path) -> None:
+    log = tmp_path / "screen.log"
+    run_command_logged([sys.executable, "-c", "print('quartet diagnostics')"], cwd=tmp_path, log=log)
+    assert log.read_text() == "quartet diagnostics\n"
+
+
+def test_likelihood_diagnostics_capture_composition_and_ambiguity(tmp_path: Path) -> None:
+    log = tmp_path / "mitochondria.log"
+    log.write_text(
+        "Alignment has 271 sequences with 243359 columns, 2405 distinct patterns\n"
+        "WARNING: 271 sequences contain more than 50% gaps/ambiguity\n"
+        "****  TOTAL 82.33%  269 sequences failed composition chi2 test (p-value<5%; df=3)\n"
+    )
+    assert parse_likelihood_diagnostics(log) == {
+        "alignment_sequence_count": 271,
+        "composition_failed_count": 269,
+        "over_50pct_ambiguity_count": 271,
+    }

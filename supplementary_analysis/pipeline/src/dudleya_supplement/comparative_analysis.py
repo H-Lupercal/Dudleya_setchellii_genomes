@@ -45,6 +45,63 @@ def _permutation_spearman(x: np.ndarray, y: np.ndarray, seed: int, permutations:
     return observed, (exceed + 1) / (permutations + 1)
 
 
+def finite_pair_spearman(left: list[float], right: list[float]) -> tuple[float, int]:
+    """Calculate Spearman agreement after paired finite-value filtering."""
+    finite = [(x, y) for x, y in zip(left, right, strict=True) if math.isfinite(x) and math.isfinite(y)]
+    if len(finite) < 2:
+        return math.nan, len(finite)
+    left_finite, right_finite = zip(*finite, strict=True)
+    return float(spearmanr(left_finite, right_finite).statistic), len(finite)
+
+
+def summarize_population_resampling(
+    site_rows: list[dict[str, str]],
+    pi_rows: list[dict[str, str]],
+    *,
+    named_outliers: tuple[str, ...] = ("CY_SIE", "CY_CAS"),
+) -> dict[str, object]:
+    """Summarize the two distinct Figure-5 controls without conflating them."""
+    cp_shared = np.asarray([float(row["cp_multi_population_haplotypes"]) for row in site_rows])
+    observed_mt = float(site_rows[0]["observed_mt_multi_population_haplotypes"])
+    lower, upper = np.quantile(cp_shared, [0.025, 0.975])
+    marker_result = "observed_within_cp_distribution" if lower <= observed_mt <= upper else "observed_outside_cp_distribution"
+
+    grouped: dict[str, list[float]] = defaultdict(list)
+    sample_sizes = {int(row["sample_size"]) for row in pi_rows}
+    if sample_sizes != {4}:
+        raise RuntimeError(f"Population pi resampling must use common n=4, found {sorted(sample_sizes)}")
+    for row in pi_rows:
+        grouped[row["population"]].append(float(row["nucleotide_diversity"]))
+    missing = [population for population in named_outliers if population not in grouped]
+    if missing:
+        raise RuntimeError(f"Named outlier populations missing from pi resampling: {missing}")
+    medians = {population: float(np.median(values)) for population, values in grouped.items()}
+    ranked = sorted(medians, key=medians.get, reverse=True)
+    sample_size_result = (
+        "named_outlier_medians_remain_top_ranked"
+        if set(ranked[: len(named_outliers)]) == set(named_outliers)
+        else "named_outlier_medians_not_top_ranked"
+    )
+    summary: dict[str, object] = {
+        "site_draws": len(site_rows),
+        "site_seed": int(site_rows[0]["seed"]) if "seed" in site_rows[0] else 424200,
+        "observed_mt_multi_population_haplotypes": observed_mt,
+        "cp_draw_q025_multi_population_haplotypes": float(lower),
+        "cp_draw_median_multi_population_haplotypes": float(np.median(cp_shared)),
+        "cp_draw_q975_multi_population_haplotypes": float(upper),
+        "marker_count_result": marker_result,
+        "pi_draws_per_population": len(next(iter(grouped.values()))),
+        "pi_seed": int(pi_rows[0]["seed"]) if "seed" in pi_rows[0] else 424201,
+        "common_sample_size": 4,
+        "sample_size_result": sample_size_result,
+    }
+    for population in named_outliers:
+        other_values = [value for other, values in grouped.items() if other != population for value in values]
+        summary[f"{population}_median_pi"] = medians[population]
+        summary[f"{population}_fraction_other_draws_below_median"] = float(np.mean(np.asarray(other_values) < medians[population]))
+    return summary
+
+
 def run_technical_confounders(root: Path, run_id: str) -> list[Path]:
     output = root / f"supplementary_analysis/results/comparative/{run_id}/technical_confounders.tsv"
     rows: list[dict[str, object]] = []
@@ -175,7 +232,7 @@ def run_organelle_comparison(root: Path, run_id: str) -> list[Path]:
     pairs = sorted(set(fst["chloroplast"]) & set(fst["mitochondria"]))
     cp_values = [fst["chloroplast"][pair] for pair in pairs]
     mt_values = [fst["mitochondria"][pair] for pair in pairs]
-    rho = float(spearmanr(cp_values, mt_values).statistic)
+    rho, finite_count = finite_pair_spearman(cp_values, mt_values)
     fst_path = output_dir / "common_pair_fst_agreement.tsv"
     write_tsv(
         fst_path,
@@ -186,11 +243,26 @@ def run_organelle_comparison(root: Path, run_id: str) -> list[Path]:
                 "chloroplast_hudson_fst": f"{fst['chloroplast'][pair]:.12g}",
                 "mitochondria_hudson_fst": f"{fst['mitochondria'][pair]:.12g}",
                 "global_spearman_rho": f"{rho:.12g}",
-                "common_pair_count": len(pairs),
+                "eligible_common_pair_count": len(pairs),
+                "finite_common_pair_count": finite_count,
+                "nonfinite_common_pair_count": len(pairs) - finite_count,
+                "used_for_correlation": (
+                    "yes" if math.isfinite(fst["chloroplast"][pair]) and math.isfinite(fst["mitochondria"][pair]) else "no"
+                ),
             }
             for pair in pairs
         ],
-        ["population_1", "population_2", "chloroplast_hudson_fst", "mitochondria_hudson_fst", "global_spearman_rho", "common_pair_count"],
+        [
+            "population_1",
+            "population_2",
+            "chloroplast_hudson_fst",
+            "mitochondria_hudson_fst",
+            "global_spearman_rho",
+            "eligible_common_pair_count",
+            "finite_common_pair_count",
+            "nonfinite_common_pair_count",
+            "used_for_correlation",
+        ],
         root,
     )
     return [cp_out, mt_out, rf_path, tangle, fst_path]
@@ -307,7 +379,10 @@ def run_population_resampling(root: Path, run_id: str) -> list[Path]:
             )
     pi_path = output_dir / "population_pi_n4_resampling.tsv"
     write_tsv(pi_path, pi_rows, list(pi_rows[0]), root)
-    return [site_path, pi_path]
+    summary = summarize_population_resampling(site_rows, pi_rows)
+    summary_path = output_dir / "population_resampling_summary.tsv"
+    write_tsv(summary_path, [summary], list(summary), root)
+    return [site_path, pi_path, summary_path]
 
 
 def _depth_windows(root: Path, run_id: str, organelle: str, samples: list[str], length: int, window: int) -> np.ndarray:

@@ -11,18 +11,85 @@ from .provenance import sha256_file
 from .reporting import acceptance_checks
 
 
+def resolve_phase2_claims(
+    claim_rows: list[dict[str, str]],
+    *,
+    likelihood_rows: list[dict[str, str]],
+    rf_row: dict[str, str],
+    resampling_summary: dict[str, str],
+) -> list[dict[str, str]]:
+    """Replace Phase-2 placeholders with results and required interpretation."""
+    rows = [dict(row) for row in claim_rows]
+    by_metric = {row["metric"]: row for row in rows}
+
+    likelihood_failures = [
+        row["organelle"] for row in likelihood_rows if row["decision"] in {"INSUFFICIENT_RESOLUTION", "INSUFFICIENT_INFORMATION"}
+    ]
+    composition_caveats = [row["organelle"] for row in likelihood_rows if int(row.get("composition_failed_count", "0")) > 0]
+    likelihood_claim = by_metric["seven_region_likelihood_mapping"]
+    likelihood_claim["result_status"] = "FAIL" if likelihood_failures else "PASS_WITH_CAVEAT" if composition_caveats else "PASS"
+    likelihood_claim["required_interpretation_change"] = (
+        f"Report insufficient resolution for {','.join(likelihood_failures)}; do not infer a network from unresolved signal"
+        if likelihood_failures
+        else (
+            "Present trees as unrooted and report composition-test failures for "
+            f"{','.join(composition_caveats)}; no NeighborNet trigger was met"
+            if composition_caveats
+            else "Present both organelle trees as unrooted; no NeighborNet trigger was met"
+        )
+    )
+
+    rf_numerator = int(rf_row["rf_numerator"])
+    rf_denominator = int(rf_row["rf_denominator"])
+    topology_claim = by_metric["supported_topology_compatibility"]
+    topology_claim["result_status"] = "PASS_WITH_CAVEAT" if rf_numerator else "PASS"
+    topology_claim["required_interpretation_change"] = (
+        f"Report supported-topology discordance as RF {rf_numerator}/{rf_denominator}; do not describe total evolutionary disagreement"
+        if rf_numerator
+        else "Report agreement only on the support-contracted 229-representative taxon space"
+    )
+
+    marker_robust = resampling_summary["marker_count_result"] == "observed_outside_cp_distribution"
+    sample_robust = resampling_summary["sample_size_result"] == "named_outlier_medians_remain_top_ranked"
+    resampling_claim = by_metric["resampling_distributions"]
+    if marker_robust and sample_robust:
+        resampling_claim["result_status"] = "PASS"
+    elif marker_robust or sample_robust:
+        resampling_claim["result_status"] = "PASS_WITH_CAVEAT"
+    else:
+        resampling_claim["result_status"] = "FAIL"
+    resampling_claim["required_interpretation_change"] = (
+        "Sample-size-standardized diversity outliers persist, but mitochondrial haplotype sharing falls within the "
+        "146-site chloroplast distribution; treat sharing as marker-count-sensitive"
+        if sample_robust and not marker_robust
+        else "Interpret marker-count and sample-size controls according to population_resampling_summary.tsv"
+    )
+    return rows
+
+
 def write_reports(root: Path, run_id: str) -> list[Path]:
     report_dir = root / f"supplementary_analysis/reports/manuscript_support/{run_id}"
     report_dir.mkdir(parents=True, exist_ok=True)
     sensitivity = read_tsv(root / f"supplementary_analysis/results/sensitivity/{run_id}/sensitivity_status.tsv")
     likelihood = read_tsv(root / f"supplementary_analysis/results/phylogeny/{run_id}/likelihood_mapping/likelihood_mapping_summary.tsv")
     rf = read_tsv(root / f"supplementary_analysis/results/comparative/{run_id}/organelle_comparison/supported_unrooted_rf.tsv")[0]
+    fst_agreement = read_tsv(
+        root / f"supplementary_analysis/results/comparative/{run_id}/organelle_comparison/common_pair_fst_agreement.tsv"
+    )[0]
+    resampling = read_tsv(
+        root / f"supplementary_analysis/results/comparative/{run_id}/population_diversity/population_resampling_summary.tsv"
+    )[0]
+    claim_path = report_dir / "claim_analysis_decisions.tsv"
+    claim_rows = resolve_phase2_claims(read_tsv(claim_path), likelihood_rows=likelihood, rf_row=rf, resampling_summary=resampling)
+    write_tsv(claim_path, claim_rows, list(claim_rows[0]), root)
     report = report_dir / "supplementary_analysis_report.md"
     status_lines = "\n".join(f"- {row['scenario']} {row['organelle']} {row['metric']}: {row['status']}" for row in sensitivity)
     likelihood_lines = "\n".join(
         f"- {row['organelle']}: resolved={100 * float(row['resolved_fraction']):.2f}%, "
         f"partly resolved={100 * float(row['side_fraction']):.2f}%, unresolved={100 * float(row['center_fraction']):.2f}% "
-        f"({row['decision']})."
+        f"({row['decision']}); composition failures={row.get('composition_failed_count', 'not_recorded')}/"
+        f"{row.get('alignment_sequence_count', 'not_recorded')}, >50% gaps/ambiguity="
+        f"{row.get('over_50pct_ambiguity_count', 'not_recorded')}."
         for row in likelihood
     )
     report.write_text(
@@ -65,6 +132,26 @@ UFBoot≥95 support, normalized RF was {rf["rf_numerator"]}/{rf["rf_denominator"
 The tanglegram restores/displays all 271 shared samples, including 42 annotated zero-length
 identical-tip memberships.
 
+Across eligible common population pairs, cp–mt FST rank agreement was
+rho={float(fst_agreement["global_spearman_rho"]):.4f} using
+{fst_agreement["finite_common_pair_count"]}/{fst_agreement["eligible_common_pair_count"]} finite pairs;
+{fst_agreement["nonfinite_common_pair_count"]} nonfinite pairs remain in the table but were not
+used in the correlation.
+
+## Marker-count and sample-size controls
+
+Observed mitochondrial multi-population haplotype sharing was
+{float(resampling["observed_mt_multi_population_haplotypes"]):.0f}; this equals the median of the
+1,000 chloroplast 146-site draws (95% interval
+{float(resampling["cp_draw_q025_multi_population_haplotypes"]):.0f}–
+{float(resampling["cp_draw_q975_multi_population_haplotypes"]):.0f}). Thus this sharing count is
+marker-count-sensitive. At common n=4, CY_SIE and CY_CAS retained the two highest median
+chloroplast pi values; their medians exceeded
+{100 * float(resampling["CY_SIE_fraction_other_draws_below_median"]):.1f}% and
+{100 * float(resampling["CY_CAS_fraction_other_draws_below_median"]):.1f}% of draws from other
+populations, respectively. This is a descriptive resampling comparison, not an independent-locus
+hypothesis test.
+
 ## Interpretation
 
 The organelles describe lineage history, not a nuclear-genome admixture history. ADMIXTURE
@@ -78,7 +165,8 @@ independent-diploid interpretation. Organelle inheritance mode was not establish
   while a negative result does not prove biological independence.
 - Index hopping is untestable without index sequences, sample sheets, and demultiplexing metrics.
 - Mitochondrial inference receives extra restraint because the primary alignment contains only
-  146 SNPs and weak-split topology was not fully reproducible.
+  146 SNPs, {likelihood[1].get("composition_failed_count", "many")}/{likelihood[1].get("alignment_sequence_count", "271")}
+  sequences failed the composition test, and weak-split topology was not fully reproducible.
 - Marker-count resampling does not control mutation rate, mask, missingness, or organelle biology.
 """
     )
@@ -100,7 +188,7 @@ independent-diploid interpretation. Organelle inheritance mode was not establish
         table_rows.append({"path": path.relative_to(root).as_posix(), "sha256": sha256_file(path)})
     table_manifest = root / f"supplementary_analysis/reports/tables/{run_id}/table_manifest.tsv"
     write_tsv(table_manifest, table_rows, ["path", "sha256"], root)
-    return [report, geography, table_manifest]
+    return [claim_path, report, geography, table_manifest]
 
 
 def _artifact_paths(root: Path, run_id: str) -> list[Path]:
@@ -143,6 +231,14 @@ def write_acceptance(root: Path, run_id: str, canonical_unchanged: bool) -> list
         shared_display_count=len(tangle),
         rf_representative_count=int(rf["taxon_space"].split("_", 1)[0]),
     )
+    claim_rows = read_tsv(root / f"supplementary_analysis/reports/manuscript_support/{run_id}/claim_analysis_decisions.tsv")
+    pending_claims = [row["metric"] for row in claim_rows if row["result_status"].startswith("PENDING")]
+    acceptance["claim_decisions_final"] = {
+        "status": "PASS" if not pending_claims else "FAIL",
+        "pending_metrics": pending_claims,
+    }
+    if pending_claims:
+        acceptance["status"] = "FAIL"
     sensitivity_statuses = {
         row["status"] for row in read_tsv(root / f"supplementary_analysis/results/sensitivity/{run_id}/sensitivity_status.tsv")
     }
