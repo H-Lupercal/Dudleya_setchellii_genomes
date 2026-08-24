@@ -19,6 +19,10 @@ def _paths(value: str) -> list[str]:
     return [item for item in value.split(";") if item]
 
 
+def _msh_path(prefix: Path) -> Path:
+    return Path(f"{prefix}.msh")
+
+
 def _md5(path: Path) -> str:
     digest = hashlib.md5(usedforsecurity=False)
     with path.open("rb") as handle:
@@ -44,7 +48,7 @@ def _revalidate_provider_row(root: Path, row: dict[str, str]) -> dict[str, str]:
 
 
 def _sketch_sample(root: Path, output: Path, sample: str, inputs: list[str]) -> None:
-    if output.with_suffix(".msh").is_file():
+    if _msh_path(output).is_file():
         return
     output.parent.mkdir(parents=True, exist_ok=True)
     files = " ".join(shlex.quote(value) for value in inputs)
@@ -75,7 +79,7 @@ def _sketch_samples(
         ]
         for future in futures:
             future.result()
-    return [prefix.with_suffix(".msh") for prefix in prefixes]
+    return [_msh_path(prefix) for prefix in prefixes]
 
 
 def _mash_audit(root: Path, run_id: str, samples: list[dict[str, str]]) -> tuple[list[dict[str, object]], list[dict[str, object]]]:
@@ -85,14 +89,12 @@ def _mash_audit(root: Path, run_id: str, samples: list[dict[str, str]]) -> tuple
     complete = [row for row in samples if row["pair_status"] == "complete" and row["analysis_eligible"] == "yes"]
     sample_sketches = _sketch_samples(root, work, complete, workers=4)
     combined = work / "all_samples"
-    if not combined.with_suffix(".msh").is_file():
+    if not _msh_path(combined).is_file():
         subprocess.run(["mash", "paste", str(combined), *map(str, sample_sketches)], cwd=root, check=True)
     distances = work / "all_pairs.dist.tsv"
     if not distances.is_file():
         with distances.open("w") as handle:
-            subprocess.run(
-                ["mash", "dist", str(combined.with_suffix(".msh")), str(combined.with_suffix(".msh"))], stdout=handle, check=True
-            )
+            subprocess.run(["mash", "dist", str(_msh_path(combined)), str(_msh_path(combined))], stdout=handle, check=True)
     controls = complete[: min(10, len(complete))]
     within_distances: list[float] = []
     for row in controls:
@@ -101,9 +103,7 @@ def _mash_audit(root: Path, run_id: str, samples: list[dict[str, str]]) -> tuple
         right = work / "controls" / f"{row['sample_id']}.R2"
         _sketch_sample(root, left, f"{row['sample_id']}_R1", r1)
         _sketch_sample(root, right, f"{row['sample_id']}_R2", r2)
-        result = subprocess.run(
-            ["mash", "dist", str(left.with_suffix(".msh")), str(right.with_suffix(".msh"))], capture_output=True, text=True, check=True
-        )
+        result = subprocess.run(["mash", "dist", str(_msh_path(left)), str(_msh_path(right))], capture_output=True, text=True, check=True)
         within_distances.append(float(result.stdout.split("\t")[2]))
     different_controls = [
         (controls[index], controls[index + 1])
@@ -116,8 +116,8 @@ def _mash_audit(root: Path, run_id: str, samples: list[dict[str, str]]) -> tuple
             [
                 "mash",
                 "dist",
-                str((work / "samples" / left["sample_id"]).with_suffix(".msh")),
-                str((work / "samples" / right["sample_id"]).with_suffix(".msh")),
+                str(_msh_path(work / "samples" / left["sample_id"])),
+                str(_msh_path(work / "samples" / right["sample_id"])),
             ],
             capture_output=True,
             text=True,

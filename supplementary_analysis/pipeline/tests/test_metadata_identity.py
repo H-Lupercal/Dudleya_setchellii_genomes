@@ -1,7 +1,7 @@
 import threading
 
 from dudleya_supplement.identity import MixedAlleleCall, classify_mixed_allele_samples, index_hopping_status, parse_structured_id
-from dudleya_supplement.identity_audit import _revalidate_provider_row, _sketch_samples
+from dudleya_supplement.identity_audit import _msh_path, _revalidate_provider_row, _sketch_samples
 from dudleya_supplement.metadata import apply_metadata_policy, derive_populations
 
 
@@ -71,3 +71,8 @@ def test_identity_sketches_use_bounded_parallel_workers(tmp_path, monkeypatch) -
     paths = _sketch_samples(tmp_path, tmp_path / "work", rows, workers=4)
     assert len(paths) == 4
     assert len(threads) == 4
+
+
+def test_mash_extension_is_appended_without_collapsing_r1_r2_control_names(tmp_path) -> None:
+    assert _msh_path(tmp_path / "sample.R1").name == "sample.R1.msh"
+    assert _msh_path(tmp_path / "sample.R2").name == "sample.R2.msh"
