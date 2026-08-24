@@ -1,0 +1,15 @@
+{
+  "checks": {
+    "claim_documentation_present": "PASS",
+    "confirmed_identity_defects_corrected_or_excluded": "PASS",
+    "inheritance_documentation_present": "PASS",
+    "metadata_disposition_complete": "PASS",
+    "resolved_provider_md5_records": "PASS",
+    "sensitivity_outputs_present": "PASS"
+  },
+  "confirmed_identity_defects": [],
+  "provider_md5_failures": [],
+  "run_id": "supplement-20260824",
+  "status": "PASS",
+  "unresolved_identity_samples": 265
+}

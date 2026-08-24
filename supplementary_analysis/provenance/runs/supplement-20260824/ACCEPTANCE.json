@@ -1,0 +1,48 @@
+{
+  "artifact_checksums": {
+    "status": "PASS"
+  },
+  "artifact_manifest": "supplementary_analysis/provenance/manifests/supplement-20260824.final_artifacts.tsv",
+  "artifact_manifest_sha256": "41e2ad6f063c8559b053afc9b535eb7f8b53bb244de62dbfc2a8065216cceb7a",
+  "base_run_id": "publication-20260817",
+  "canonical_counts": {
+    "observed": {
+      "chloroplast": 276,
+      "mitochondria": 271,
+      "shared": 271
+    },
+    "status": "PASS"
+  },
+  "canonical_unchanged": {
+    "status": "PASS"
+  },
+  "claim_decisions_final": {
+    "pending_metrics": [],
+    "status": "PASS"
+  },
+  "decision_plan_version": "2.5",
+  "figure_family_count": {
+    "observed": 6,
+    "status": "PASS"
+  },
+  "geography": "not_run:no_approved_coordinates",
+  "restored_identical_tip_count": {
+    "observed": 42,
+    "status": "PASS"
+  },
+  "rf_representative_count": {
+    "observed": 229,
+    "status": "PASS"
+  },
+  "run_id": "supplement-20260824",
+  "scientific_failures_block_acceptance": false,
+  "scientific_sensitivity_statuses": [
+    "PASS",
+    "PASS_WITH_CAVEAT"
+  ],
+  "shared_display_count": {
+    "observed": 271,
+    "status": "PASS"
+  },
+  "status": "PASS"
+}

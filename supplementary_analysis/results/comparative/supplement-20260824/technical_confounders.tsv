@@ -1,0 +1,19 @@
+organelle	component	technical_variable	spearman_rho	permutation_p	permutations	seed	bh_adjusted_p_within_organelle	nuclear_decoy	residual_ambiguity
+chloroplast	PC1	missingness	0.535189925651	0.0001	9999	424300	0.000225	unavailable	NUMT/NUPT ambiguity cannot be excluded
+chloroplast	PC1	log_depth	-0.312540098524	0.0001	9999	424301	0.000225	unavailable	NUMT/NUPT ambiguity cannot be excluded
+chloroplast	PC1	reference_concordance	-0.861293504194	0.0001	9999	424302	0.000225	unavailable	NUMT/NUPT ambiguity cannot be excluded
+chloroplast	PC2	missingness	0.164633571351	0.007	9999	424303	0.009	unavailable	NUMT/NUPT ambiguity cannot be excluded
+chloroplast	PC2	log_depth	0.00456634558088	0.9438	9999	424304	0.9438	unavailable	NUMT/NUPT ambiguity cannot be excluded
+chloroplast	PC2	reference_concordance	-0.324309376018	0.0001	9999	424305	0.000225	unavailable	NUMT/NUPT ambiguity cannot be excluded
+chloroplast	PC3	missingness	0.178697925775	0.0023	9999	424306	0.00345	unavailable	NUMT/NUPT ambiguity cannot be excluded
+chloroplast	PC3	log_depth	-0.139927098428	0.0224	9999	424307	0.0252	unavailable	NUMT/NUPT ambiguity cannot be excluded
+chloroplast	PC3	reference_concordance	-0.224322361472	0.0003	9999	424308	0.00054	unavailable	NUMT/NUPT ambiguity cannot be excluded
+mitochondria	PC1	missingness	0.0962047571338	0.1165	9999	424309	0.1310625	unavailable	NUMT/NUPT ambiguity cannot be excluded
+mitochondria	PC1	log_depth	-0.125646826417	0.0383	9999	424310	0.07704	unavailable	NUMT/NUPT ambiguity cannot be excluded
+mitochondria	PC1	reference_concordance	-0.328503696012	0.0001	9999	424311	0.0009	unavailable	NUMT/NUPT ambiguity cannot be excluded
+mitochondria	PC2	missingness	-0.129330319803	0.0367	9999	424312	0.07704	unavailable	NUMT/NUPT ambiguity cannot be excluded
+mitochondria	PC2	log_depth	-0.0955174474071	0.1133	9999	424313	0.1310625	unavailable	NUMT/NUPT ambiguity cannot be excluded
+mitochondria	PC2	reference_concordance	0.123804814208	0.0428	9999	424314	0.07704	unavailable	NUMT/NUPT ambiguity cannot be excluded
+mitochondria	PC3	missingness	0.141084268931	0.0198	9999	424315	0.07704	unavailable	NUMT/NUPT ambiguity cannot be excluded
+mitochondria	PC3	log_depth	-0.108349325017	0.0717	9999	424316	0.10755	unavailable	NUMT/NUPT ambiguity cannot be excluded
+mitochondria	PC3	reference_concordance	0.0727047357119	0.2348	9999	424317	0.2348	unavailable	NUMT/NUPT ambiguity cannot be excluded

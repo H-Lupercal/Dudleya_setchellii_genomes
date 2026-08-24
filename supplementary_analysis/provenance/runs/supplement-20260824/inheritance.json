@@ -1,0 +1,60 @@
+{
+  "executable_versions": {
+    "bcftools": "bcftools 1.24",
+    "git": "git version 2.43.0",
+    "iqtree3": "IQ-TREE version 3.1.2 for Linux x86 64-bit built May 17 2026",
+    "mash": "2.3",
+    "outline": "Usage: outline [options] infile",
+    "python": "3.14.6",
+    "samtools": "samtools 1.23.1"
+  },
+  "fingerprint": {
+    "commands": [
+      "apply conservative inheritance wording gate"
+    ],
+    "digest": "1d1fae252f64083788153ad92e90a046e08176583af70ddef6287da624530610",
+    "git_commit": "f478cce8467d70f97c85f3d0ffe146174f545a83",
+    "inputs": {
+      "canonical_publication/pipeline/src/organelle_pipeline/analysis.py": "539cd1780aaea88fb361bcaf72613b3be54826799a603b94094de6194c1d51ed",
+      "canonical_publication/pipeline/src/organelle_pipeline/consensus.py": "3dc9acaae5c284a739bde0267163fab1fc74400b4575853d8a73c962f4bdc22e",
+      "canonical_publication/pipeline/src/organelle_pipeline/haplotypes.py": "47ae60ab2255154b81293e8543e4a885cc576a6d38791214ed7c5308075d2fc7",
+      "canonical_publication/pipeline/src/organelle_pipeline/ordination.py": "00020dbe696d617433803ba3e183bbb102dfb58b500dcf394834a40739cef056",
+      "canonical_publication/pipeline/src/organelle_pipeline/popgen.py": "4a9d3708f181fd77d211d04abe699a2801b7ac21f518c75a09a25f7033c44ba2",
+      "canonical_publication/pipeline/src/organelle_pipeline/variants.py": "81656213ebdd4e08201380d18bfdc71f0c61a62e314996558061df7ced3b9243",
+      "supplementary_analysis/config/supplementary_config.toml": "768958da71c08e36ebc0c7eb2aaeb0468170eacf3cc2ab574e47cc1c4288fcf3",
+      "supplementary_analysis/pipeline/scripts/run_pipeline.py": "7eabddba7163128b535e5abd7497af15b05ddde7e81335bb403b9b6238db1758",
+      "supplementary_analysis/pipeline/scripts/run_stage.py": "31d9bc5ac7db1bb5822a6a8ac76a728079a270ce4a3d6a3660d4db45d4fbe2d1",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/__init__.py": "41f7b69d55ff6cefcae56d0d8abf2cda8611f6d958608e8a072b18372beb71cd",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/comparative.py": "f425da4fea172717460e77e62e40677699ceb9e3f43224a620c85260283e6169",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/comparative_analysis.py": "c02228539b577682e255febb88684e84dbfcd4d95608da448cf76669fbebf820",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/configuration.py": "b7bbf3cd664848beb6c557ee81005ece4dc358b9c0a57c58724012561d37f236",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/documentation.py": "8836869faee41ce0cc829086c2644c44a09d5de5f3f41fb017beb0558e6747cc",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/figures.py": "77e7ec45380f277696aea92edb074665a31a0ef670b2e07b52f94943ed439e7a",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/finalization.py": "5c9ee59a82c4d1e353753437186d385f24282b988033e48f8246baac072e6c9c",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/identity.py": "97e91b60a2394cbdc5ff0d1d8662ff0f6d37ca18ca85ec7c6993e9c9c6dd294e",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/identity_audit.py": "8367d8bc30df8f0581b854ed1983571c5dea83b24708971ae6ead113be93f3d8",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/io.py": "2288d39ae798f5500ee1a4287bb23c2eef6233ed584ed3971e02c01a30158576",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/likelihood.py": "5eea8b7e7fbf9554d98c2eca4d09aaac032b765e2b44c7d6a4ed0d456fb5ef46",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/metadata.py": "2e977929072473a285d8a669d19af349b811f23ff72c2d05277cc35cf18ad5e3",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/paths.py": "7453b00287392044539f37f1920ee64b330df72674d435939d4687ba59515bb3",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/phylogeny.py": "877c6c89762132fd7d226088ce1daba2027f17a0a0e6357508ffe4faa293fb51",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/provenance.py": "266c438d85aca599807cd1f649d11d305cdafce0bc1993a6b885a1aeeaeeb8b9",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/rendering.py": "7a0f5b6c2f050f354d0f590f07c4ba98062efc73687cbe40f2009022659d10a3",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/reporting.py": "0d28ecd87411a0431a6eb3ed52f096fc19c370b367f477bede536cf37973c7ed",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/scenario.py": "50610a9a8369484f687788870629abde15a92daf619f29be2c5b74a5b0f78628",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/sensitivity.py": "bac79d2bd56b417ad999b8705f414058c074ebbb933da7ec1a95f93d03ae7158",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/stages.py": "0966a93c9a784fec22ff0bc044bf0ce8d0a36d878b2f449389acbec8fe8fb947",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/workflow.py": "c48c56b15aafdcf17581ea084934cdb6d439c52195dd88a392acb8ad581fb1b0",
+      "supplementary_analysis/provenance/manifests/publication-20260817.canonical_filesystem_snapshot.json": "574bfe9807949286b402032357f6473d9fa62bb51b0fd260c9a64aab5cb60d90"
+    },
+    "stage": "inheritance",
+    "upstream": {
+      "claims": "6feb7f7bf0a4db759e18154699f9823e836bca3db8821970e1b2227388fca3d4"
+    }
+  },
+  "outputs": {
+    "supplementary_analysis/reports/manuscript_support/supplement-20260824/organelle_inheritance_evidence.md": "b520fa77dfceb73350f92eb3f1e48d1f5ea91012f2d04fb119906791ebf26d05"
+  },
+  "stage": "inheritance",
+  "status": "complete"
+}

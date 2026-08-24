@@ -1,0 +1,5 @@
+entity	issue	status	action
+DUSE	population label	unresolved	exclude from population inference; retain sample-level analyses
+CY_CAS	blank source species	supported_inference_not_independently_verified	retain population label; describe taxonomy inference
+CY_SIE	statistical outlier	not_a_metadata_defect	retain and report as biological/statistical outlier
+TUL2	conflicting display names	unresolved	do not display unsupported resolved name

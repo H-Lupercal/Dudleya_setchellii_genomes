@@ -1,0 +1,547 @@
+IQ-TREE version 3.1.2 for Linux x86 64-bit built May 17 2026
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    sparky (AVX512, FMA3, 30 GB RAM)
+Command: iqtree3 -s supplementary_analysis/results/sensitivity/supplement-20260824/mtmask70/alignments/mitochondria.callable_alignment.fa -pre supplementary_analysis/results/sensitivity/supplement-20260824/mtmask70/trees/mitochondria.primary -st DNA -m MFP -alrt 1000 -B 1000 -bnni -seed 314159 -nt 8
+Seed:    314159 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 24 04:09:55 2026
+Kernel:  AVX+FMA - 8 threads (16 CPU cores detected)
+
+Reading alignment file supplementary_analysis/results/sensitivity/supplement-20260824/mtmask70/alignments/mitochondria.callable_alignment.fa ... Fasta format detected
+Reading fasta file: done in 0.314369 secs using 93.52% CPU
+Constructing alignment: done in 0.178282 secs using 757.2% CPU
+WARNING: 196351 sites contain only gaps or ambiguous characters.
+Alignment has 271 sequences with 243359 columns, 2734 distinct patterns
+122 parsimony-informative, 24 singleton sites, 243213 constant sites
+                         Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 9.41753e-05 secs using 808.1% CPU
+   1  ABAB_MAD_LP_223_Du-590    82.51%    failed      1.21%
+   2  ABAB_MAD_LP_322_Du-593    80.69%    failed      0.03%
+   3  ABAB_MAD_LP_323_Du-594    80.85%    failed      0.13%
+   4  ABAB_MAD_LP_324_Du-595    80.69%    failed      0.03%
+   5  ABAB_MAD_LP_325_Du-596    80.70%    failed      0.04%
+   6  ABAB_MAD_LP_326_Du-597    80.69%    failed      0.03%
+   7  ABAB_MAD_LP_327_Du-598    81.09%    failed      0.06%
+   8  ABBE_BERN_LP_311_Du-780   82.21%    failed      2.37%
+   9  ABBE_BERN_LP_312_Du-781   82.21%    failed      2.31%
+  10  ABBE_BERN_LP_313_Du-782   82.28%    failed      3.92%
+  11  ABBE_BERN_LP_314_Du-783   82.21%    failed      2.28%
+  12  ABMU_HOR_LP_306_Du-775    80.69%    failed      0.04%
+  13  ABMU_HOR_LP_308_Du-777    80.69%    failed      0.04%
+  14  ABMU_HOR_LP_358_Du-770    80.69%    failed      0.03%
+  15  ABMU_HOR_LP_359_Du-771    80.69%    failed      0.04%
+  16  ABMU_HOR_LP_360_Du-772    80.69%    failed      0.03%
+  17  ABMU_HOR_LP_361_Du-773    80.69%    failed      0.04%
+  18  BAI_LP_105_Du-222         82.20%    failed      2.07%
+  19  BAI_LP_106_Du-223         81.59%    failed      0.34%
+  20  BAI_LP_108_Du-225         82.20%    failed      2.09%
+  21  BAI_LP_109_Du-226         82.20%    failed      2.13%
+  22  BAI_LP_110_Du-227         82.20%    failed      2.03%
+  23  BAI_LP_111_Du-228         82.20%    failed      2.03%
+  24  BAI_LP_112_Du-230         82.20%    failed      2.09%
+  25  BAI_LP_113_Du-231         82.20%    failed      2.09%
+  26  BAI_LP_114_Du-232         82.21%    failed      2.15%
+  27  BAI_LP_319_Du-233         82.21%    failed      2.34%
+  28  COM_LP_269_Du-703         82.20%    failed      2.01%
+  29  COM_LP_270_Du-704         82.20%    failed      2.22%
+  30  COM_LP_272_Du-707         82.07%    failed      1.94%
+  31  COM_LP_274_Du-709         82.20%    failed      2.22%
+  32  COM_LP_276_Du-711         82.19%    failed      1.89%
+  33  COM_LP_277_Du-712         82.20%    failed      2.22%
+  34  COM_LP_341_Du-713         82.20%    failed      2.16%
+  35  COM_LP_342_Du-714         82.20%    failed      2.16%
+  36  COM_LP_343_Du-715         82.20%    failed      2.25%
+  37  CROB_LP_169_Du-381        81.09%    failed      0.40%
+  38  CROB_LP_170_Du-382        80.68%    failed      0.04%
+  39  CROB_LP_172_Du-384        80.69%    failed      0.04%
+  40  CROB_LP_173_Du-385        80.69%    failed      0.04%
+  41  CROB_LP_174_Du-386        80.68%    failed      0.04%
+  42  CROB_LP_175_Du-387        80.69%    failed      0.04%
+  43  CROB_LP_176_Du-388        80.68%    failed      0.04%
+  44  CROB_LP_177_Du-389        80.68%    failed      0.04%
+  45  CROB_LP_320_Du-395        80.69%    failed      0.04%
+  46  CROB_LP_321_Du-396        80.69%    failed      0.04%
+  47  CROS_LP_085_Du-181        80.68%    failed      0.04%
+  48  CROS_LP_086_Du-182        80.68%    failed      0.04%
+  49  CROS_LP_087_Du-183        80.68%    failed      0.04%
+  50  CROS_LP_088_Du-184        80.68%    failed      0.04%
+  51  CROS_LP_089_Du-185        80.68%    failed      0.04%
+  52  CROS_LP_090_Du-186        80.68%    failed      0.04%
+  53  CROS_LP_091_Du-187        80.68%    failed      0.04%
+  54  CROS_LP_092_Du-188        80.69%    failed      0.04%
+  55  CROS_LP_093_Du-189        80.68%    failed      0.04%
+  56  CROS_LP_094_Du-190        80.69%    failed      0.04%
+  57  CY_ALA_LP_298-Du-767      82.21%    failed      2.31%
+  58  CY_ALA_LP_299-Du-768      82.21%    failed      2.41%
+  59  CY_ALA_LP_357_Du-769      82.21%    failed      2.34%
+  60  CY_BAL_LP_226_Du-602      80.91%    failed      0.07%
+  61  CY_BAL_LP_227_Du-603      81.01%    failed      0.06%
+  62  CY_BGL_LP_210_Du-577      82.21%    failed      2.42%
+  63  CY_BGL_LP_212_Du-579      82.21%    failed      2.34%
+  64  CY_BOU_LP_288_Du-737      82.46%    passed      6.93%
+  65  CY_BOU_LP_290_Du-739      82.20%    failed      2.28%
+  66  CY_BOU_LP_291_Du-740      82.20%    failed      2.32%
+  67  CY_BOU_LP_292_Du-741      82.20%    failed      2.32%
+  68  CY_BOU_LP_354_Du-742      82.20%    failed      2.28%
+  69  CY_CAS_LP_328_Du-610      82.21%    failed      2.29%
+  70  CY_CAS_LP_329_Du-611      82.20%    failed      2.36%
+  71  CY_CAS_LP_330_Du-607      82.25%    failed      3.04%
+  72  CY_CAS_LP_331_Du-608      82.21%    failed      2.45%
+  73  CY_CAS_LP_332_Du-609      82.20%    failed      2.36%
+  74  CY_HICN_LP_236_Du-614     80.69%    failed      0.04%
+  75  CY_HICN_LP_333_Du-612     80.69%    failed      0.04%
+  76  CY_HICN_LP_334_Du-613     80.69%    failed      0.04%
+  77  CY_HICN_LP_335_Du-615     80.69%    failed      0.04%
+  78  CY_HICN_LP_336_Du-616     80.69%    failed      0.04%
+  79  CY_HICS_LP_293_Du-757     82.20%    failed      2.28%
+  80  CY_HICS_LP_297_Du-761     82.43%    passed      6.45%
+  81  CY_HICS_LP_355_Du-762     82.20%    failed      2.32%
+  82  CY_HICS_LP_356_Du-763     82.21%    failed      2.69%
+  83  CY_HUN_LP_264_Du-683      81.31%    failed      0.05%
+  84  CY_HUN_LP_266_Du-685      80.79%    failed      0.04%
+  85  CY_HUN_LP_267_Du-686      80.83%    failed      0.04%
+  86  CY_HUN_LP_268_Du-687      81.57%    failed      0.02%
+  87  CY_SIE_LP_188_Du-445      80.69%    failed      0.04%
+  88  CY_SIE_LP_189_Du-446      80.69%    failed      0.04%
+  89  CY_SIE_LP_190_Du-447      80.69%    failed      0.04%
+  90  CY_SIE_LP_191_Du-448      80.69%    failed      0.04%
+  91  CY_WOO_LP_259_Du-664      82.21%    failed      2.73%
+  92  CY_WOO_LP_260_Du-665      82.23%    failed      2.46%
+  93  CY_WOO_LP_261_Du-667      83.34%    failed      1.72%
+  94  CY_WOO_LP_262_Du-668      82.21%    failed      2.48%
+  95  CY_WOO_LP_263_Du-669      82.21%    failed      2.45%
+  96  DAN_LP_043_Du-68          80.76%    failed      0.09%
+  97  DAN_LP_044_Du-69          80.76%    failed      0.09%
+  98  DAN_LP_045_Du-70          80.76%    failed      0.09%
+  99  DAN_LP_046_Du-71          80.75%    failed      0.09%
+ 100  DAN_LP_047_Du-72          80.76%    failed      0.09%
+ 101  DOV_LP_078_Du-174         82.25%    failed      2.28%
+ 102  DOV_LP_079_Du-175         82.20%    failed      2.11%
+ 103  DOV_LP_080_Du-176         82.20%    failed      2.11%
+ 104  DOV_LP_081_Du-177         82.20%    failed      2.11%
+ 105  DOV_LP_082_Du-178         82.20%    failed      2.08%
+ 106  DOV_LP_083_Du-179         82.20%    failed      2.11%
+ 107  DOV_LP_084_Du-180         82.20%    failed      2.11%
+ 108  DU-173                    80.80%    failed      0.02%
+ 109  DU-229                    82.20%    failed      2.03%
+ 110  DU-247                    80.68%    failed      0.04%
+ 111  DU-254                    80.68%    failed      0.04%
+ 112  DU-270                    80.74%    failed      0.02%
+ 113  DU-297                    80.68%    failed      0.04%
+ 114  DU-443                    80.69%    failed      0.04%
+ 115  DU-4A                     80.68%    failed      0.04%
+ 116  DU014LP012                82.19%    failed      2.01%
+ 117  DU037LP013                82.20%    failed      2.32%
+ 118  DU059LP015                80.74%    failed      0.02%
+ 119  DU078LP011                80.76%    failed      0.09%
+ 120  DU079LP010                80.74%    failed      0.08%
+ 121  DUD_LP_132_Du-283         80.69%    failed      0.04%
+ 122  DUD_LP_133_Du-284         80.69%    failed      0.04%
+ 123  DUD_LP_134_Du-285         80.69%    failed      0.04%
+ 124  DUD_LP_135_Du-286         80.69%    failed      0.04%
+ 125  DUD_LP_136_Du-287         80.68%    failed      0.04%
+ 126  DUD_LP_137_Du-288         80.68%    failed      0.04%
+ 127  DUD_LP_138_Du-289         80.69%    failed      0.04%
+ 128  DUD_LP_139_Du-290         80.98%    failed      0.11%
+ 129  KIRN_LP_179_Du-421        80.68%    failed      0.04%
+ 130  KIRN_LP_180_Du-422        80.68%    failed      0.04%
+ 131  KIRN_LP_181_Du-423        80.69%    failed      0.04%
+ 132  KIRN_LP_182_Du-424        80.68%    failed      0.04%
+ 133  KIRN_LP_183_Du-425        80.69%    failed      0.04%
+ 134  KIRN_LP_184_Du-426        80.68%    failed      0.04%
+ 135  KIRN_LP_185_Du-427        80.69%    failed      0.04%
+ 136  KIRN_LP_186_Du-428        80.69%    failed      0.04%
+ 137  KIRN_LP_187_Du-429        80.69%    failed      0.04%
+ 138  KIRT_LP_159_Du-364        80.68%    failed      0.04%
+ 139  KIRT_LP_160_Du-365        80.68%    failed      0.04%
+ 140  KIRT_LP_161_Du-366        80.68%    failed      0.04%
+ 141  KIRT_LP_162_Du-367        80.68%    failed      0.04%
+ 142  KIRT_LP_163_Du-368        80.68%    failed      0.04%
+ 143  KIRT_LP_164_Du-369        80.68%    failed      0.04%
+ 144  KIRT_LP_165_Du-370        80.68%    failed      0.04%
+ 145  KIRT_LP_166_Du-371        80.68%    failed      0.04%
+ 146  KIRT_LP_167_Du-372        80.71%    failed      0.05%
+ 147  KIRT_LP_168_Du-373        80.68%    failed      0.04%
+ 148  MALV_LP_095_Du-201        80.68%    failed      0.04%
+ 149  MALV_LP_096_Du-202        80.68%    failed      0.04%
+ 150  MALV_LP_097_Du-203        80.68%    failed      0.04%
+ 151  MALV_LP_098_Du-204        80.68%    failed      0.04%
+ 152  MALV_LP_099_Du-205        80.68%    failed      0.04%
+ 153  MALV_LP_100_Du-206        80.68%    failed      0.04%
+ 154  MALV_LP_101_Du-207        80.68%    failed      0.04%
+ 155  MALV_LP_102_Du-208        80.68%    failed      0.04%
+ 156  MALV_LP_103_Du-209        80.68%    failed      0.04%
+ 157  MALV_LP_104_Du-210        80.68%    failed      0.04%
+ 158  OCO_LP_058_Du-115         82.21%    failed      2.15%
+ 159  OCO_LP_059_Du-106         80.70%    failed      0.04%
+ 160  OCO_LP_060_Du-107         80.69%    failed      0.04%
+ 161  OCO_LP_061_Du-108         80.69%    failed      0.04%
+ 162  OCO_LP_062_Du-109         80.69%    failed      0.04%
+ 163  OCO_LP_063_Du-110         80.69%    failed      0.04%
+ 164  OCO_LP_064_Du-111         80.69%    failed      0.04%
+ 165  OCO_LP_065_Du-112         80.69%    failed      0.04%
+ 166  OCO_LP_066_Du-113         82.29%    failed      2.71%
+ 167  OCO_LP_067_Du-114         82.68%    failed      1.77%
+ 168  QUI1_LP_249_Du-648        82.20%    failed      2.19%
+ 169  QUI1_LP_250_Du-649        82.20%    failed      2.12%
+ 170  QUI1_LP_252_Du-651        82.20%    failed      2.12%
+ 171  QUI1_LP_253_Du-652        82.20%    failed      1.99%
+ 172  QUI1_LP_254_Du-653        82.97%    passed      7.95%
+ 173  QUI1_LP_255_Du-654        82.21%    failed      2.22%
+ 174  QUI1_LP_257_Du-656        82.44%    failed      3.89%
+ 175  QUI1_LP_258_Du-657        82.20%    failed      2.12%
+ 176  QUI2_LP_243_Du-631        80.80%    failed      0.02%
+ 177  QUI2_LP_244_Du-632        80.81%    failed      0.02%
+ 178  QUI2_LP_245_Du-633        80.80%    failed      0.02%
+ 179  QUI2_LP_246_Du-634        80.80%    failed      0.02%
+ 180  QUI2_LP_247_Du-635        80.80%    failed      0.02%
+ 181  QUI2_LP_248_Du-636        80.80%    failed      0.02%
+ 182  QUI2_LP_337_Du-638        80.80%    failed      0.02%
+ 183  QUI2_LP_338_Du-639        80.99%    failed      0.03%
+ 184  QUI2_LP_339_Du-640        80.80%    failed      0.02%
+ 185  QUI2_LP_340_Du-641        80.80%    failed      0.02%
+ 186  QUIN_LP_069_Du-155        80.80%    failed      0.02%
+ 187  QUIN_LP_070_Du-156        80.80%    failed      0.02%
+ 188  QUIN_LP_071_Du-157        80.80%    failed      0.02%
+ 189  QUIN_LP_072_Du-158        80.80%    failed      0.02%
+ 190  QUIN_LP_073_Du-159        80.80%    failed      0.02%
+ 191  QUIN_LP_074_Du-160        80.80%    failed      0.02%
+ 192  QUIN_LP_075_Du-161        80.80%    failed      0.02%
+ 193  QUIN_LP_076_Du-162        80.80%    failed      0.02%
+ 194  QUIN_LP_077_Du-163        80.80%    failed      0.02%
+ 195  QUIN_LP_318_Du-164        80.80%    failed      0.02%
+ 196  RIC_LP_192_Du-521         80.68%    failed      0.04%
+ 197  RIC_LP_193_Du-522         80.69%    failed      0.04%
+ 198  RIC_LP_194_Du-523         80.68%    failed      0.04%
+ 199  RIC_LP_195_Du-524         80.68%    failed      0.04%
+ 200  RIC_LP_196_Du-525         80.68%    failed      0.04%
+ 201  RIC_LP_197_Du-526         80.69%    failed      0.04%
+ 202  RIC_LP_198_Du-527         80.68%    failed      0.04%
+ 203  RIC_LP_199_Du-528         80.68%    failed      0.04%
+ 204  RIC_LP_200_Du-529         80.68%    failed      0.04%
+ 205  RIC_LP_201_Du-530         80.68%    failed      0.04%
+ 206  RSV_LP_049_Du-85          80.75%    failed      0.02%
+ 207  RSV_LP_050_Du-87          80.75%    failed      0.02%
+ 208  RSV_LP_051_Du-88          80.75%    failed      0.02%
+ 209  RSV_LP_052_Du-89          80.75%    failed      0.02%
+ 210  RSV_LP_053_Du-90          80.75%    failed      0.02%
+ 211  RSV_LP_055_Du-92          80.75%    failed      0.02%
+ 212  RSV_LP_057_Du-94          80.75%    failed      0.02%
+ 213  RSV_LP_315_Du-95          80.75%    failed      0.02%
+ 214  RSV_LP_316_Du-96          80.75%    failed      0.02%
+ 215  SILG_LP_149_Du-343        82.24%    failed      3.53%
+ 216  SILG_LP_150_Du-344        82.20%    failed      2.11%
+ 217  SILG_LP_151_Du-345        82.20%    failed      2.05%
+ 218  SILG_LP_152_Du-346        82.21%    failed      2.08%
+ 219  SILG_LP_153_Du-347        82.21%    failed      2.24%
+ 220  SILG_LP_154_Du-348        82.21%    failed      2.10%
+ 221  SILG_LP_155_Du-349        82.21%    failed      2.06%
+ 222  SILG_LP_156_Du-350        82.21%    failed      2.11%
+ 223  SILG_LP_157_Du-351        84.21%    failed      1.52%
+ 224  SILG_LP_158_Du-352        83.17%    passed     66.78%
+ 225  SILR_LP_346_Du-729        80.69%    failed      0.04%
+ 226  SILR_LP_347_Du-730        80.68%    failed      0.04%
+ 227  SILR_LP_348_Du-731        80.69%    failed      0.04%
+ 228  SILR_LP_349_Du-732        80.68%    failed      0.04%
+ 229  SILR_LP_351_Du-734        80.68%    failed      0.04%
+ 230  SILR_LP_353_Du-736        80.69%    failed      0.04%
+ 231  STI_LP_027_Du-45          80.96%    failed      0.07%
+ 232  STI_LP_028_Du-46          80.75%    failed      0.02%
+ 233  STI_LP_029_Du-47          83.71%    failed      0.00%
+ 234  STI_LP_030_Du-48          80.75%    failed      0.02%
+ 235  STI_LP_031_Du-49          80.75%    failed      0.02%
+ 236  STI_LP_032_Du-50          80.75%    failed      0.02%
+ 237  STI_LP_033_Du-51          80.91%    failed      0.05%
+ 238  STI_LP_034_Du-52          80.75%    failed      0.02%
+ 239  STI_LP_035_Du-53          80.75%    failed      0.02%
+ 240  STI_LP_036_Du-54          80.75%    failed      0.02%
+ 241  STI_LP_037_Du-55          80.75%    failed      0.02%
+ 242  STI_LP_038_Du-56          80.75%    failed      0.02%
+ 243  STI_LP_039_Du-57          80.75%    failed      0.02%
+ 244  STI_LP_040_Du-58          81.20%    failed      3.57%
+ 245  STI_LP_041_Du-60          80.75%    failed      0.02%
+ 246  STI_LP_042_Du-61          80.76%    failed      0.02%
+ 247  TIL_LP_123_Du-263         82.42%    failed      0.08%
+ 248  TIL_LP_124_Du-264         80.75%    failed      0.02%
+ 249  TIL_LP_125_Du-265         82.19%    failed      0.03%
+ 250  TIL_LP_126_Du-266         80.76%    failed      0.02%
+ 251  TIL_LP_128_Du-268         80.75%    failed      0.02%
+ 252  TIL_LP_129_Du-269         80.75%    failed      0.02%
+ 253  TIL_LP_130_Du-271         80.75%    failed      0.02%
+ 254  TIL_LP_131_Du-272         80.75%    failed      0.02%
+ 255  TULP_LP_115_Du-242        80.69%    failed      0.04%
+ 256  TULP_LP_116_Du-243        80.68%    failed      0.04%
+ 257  TULP_LP_117_Du-244        80.68%    failed      0.04%
+ 258  TULP_LP_118_Du-245        80.68%    failed      0.04%
+ 259  TULP_LP_119_Du-246        80.68%    failed      0.04%
+ 260  TULP_LP_120_Du-248        80.68%    failed      0.04%
+ 261  TULP_LP_121_Du-249        80.68%    failed      0.04%
+ 262  TULP_LP_122_Du-250        80.68%    failed      0.04%
+ 263  TULP_LP_140_Du-302        80.69%    failed      0.04%
+ 264  TULP_LP_141_Du-303        80.69%    failed      0.04%
+ 265  TULP_LP_142_Du-304        80.71%    failed      0.04%
+ 266  TULP_LP_143_Du-305        80.70%    failed      0.04%
+ 267  TULP_LP_144_Du-306        80.76%    failed      0.06%
+ 268  TULP_LP_145_Du-307        80.69%    failed      0.04%
+ 269  TULP_LP_146_Du-308        80.79%    failed      0.05%
+ 270  TULP_LP_147_Du-309        80.69%    failed      0.04%
+ 271  TULP_LP_148_Du-310        80.73%    failed      0.06%
+WARNING: 271 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                     81.21%  267 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: minimal branch length is reduced to 0.000000410916 for long alignment
+NOTE: DU-229 is identical to BAI_LP_110_Du-227 but kept for subsequent analysis
+NOTE: COM_LP_342_Du-714 is identical to COM_LP_341_Du-713 but kept for subsequent analysis
+NOTE: CROB_LP_176_Du-388 is identical to CROB_LP_170_Du-382 but kept for subsequent analysis
+NOTE: CROB_LP_175_Du-387 is identical to CROB_LP_173_Du-385 but kept for subsequent analysis
+NOTE: CROB_LP_177_Du-389 is identical to CROB_LP_174_Du-386 but kept for subsequent analysis
+NOTE: CROS_LP_086_Du-182 is identical to CROS_LP_085_Du-181 but kept for subsequent analysis
+NOTE: KIRT_LP_164_Du-369 is identical to CROS_LP_093_Du-189 but kept for subsequent analysis
+NOTE: CY_BOU_LP_354_Du-742 is identical to CY_BOU_LP_290_Du-739 but kept for subsequent analysis
+NOTE: CY_BOU_LP_292_Du-741 is identical to CY_BOU_LP_291_Du-740 but kept for subsequent analysis
+NOTE: DU-443 is identical to CY_SIE_LP_189_Du-446 but kept for subsequent analysis
+NOTE: DOV_LP_081_Du-177 is identical to DOV_LP_080_Du-176 but kept for subsequent analysis
+NOTE: QUIN_LP_077_Du-163 is identical to DU-173 but kept for subsequent analysis
+NOTE: DU-254 is identical to DU-247 but kept for subsequent analysis
+NOTE: DUD_LP_134_Du-285 is identical to DUD_LP_133_Du-284 but kept for subsequent analysis
+NOTE: TULP_LP_140_Du-302 is identical to DUD_LP_138_Du-289 but kept for subsequent analysis
+NOTE: KIRT_LP_160_Du-365 is identical to KIRN_LP_180_Du-422 but kept for subsequent analysis
+NOTE: KIRN_LP_185_Du-427 is identical to KIRN_LP_181_Du-423 but kept for subsequent analysis
+NOTE: RIC_LP_192_Du-521 is identical to KIRN_LP_182_Du-424 but kept for subsequent analysis
+NOTE: KIRT_LP_161_Du-366 is identical to KIRT_LP_159_Du-364 but kept for subsequent analysis
+NOTE: MALV_LP_096_Du-202 is identical to MALV_LP_095_Du-201 but kept for subsequent analysis
+NOTE: MALV_LP_099_Du-205 is identical to MALV_LP_098_Du-204 but kept for subsequent analysis
+NOTE: QUI2_LP_248_Du-636 is identical to QUI2_LP_243_Du-631 but kept for subsequent analysis
+NOTE: QUI2_LP_339_Du-640 is identical to QUI2_LP_246_Du-634 but kept for subsequent analysis
+NOTE: QUIN_LP_071_Du-157 is identical to QUIN_LP_069_Du-155 but kept for subsequent analysis
+NOTE: QUIN_LP_074_Du-160 is identical to QUIN_LP_070_Du-156 but kept for subsequent analysis
+NOTE: SILR_LP_348_Du-731 is identical to SILR_LP_346_Du-729 but kept for subsequent analysis
+NOTE: SILR_LP_349_Du-732 is identical to SILR_LP_347_Du-730 but kept for subsequent analysis
+NOTE: STI_LP_032_Du-50 is identical to STI_LP_031_Du-49 but kept for subsequent analysis
+NOTE: STI_LP_039_Du-57 is identical to STI_LP_034_Du-52 but kept for subsequent analysis
+Checking for duplicate sequences: done in 0.000636101 secs using 790.9% CPU
+Identifying sites to remove: done in 0.106767 secs using 782.2% CPU
+NOTE: 38 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: CROB_LP_321_Du-396 (identical to CROB_LP_173_Du-385) is ignored but added at the end
+NOTE: CROS_LP_088_Du-184 (identical to CROS_LP_085_Du-181) is ignored but added at the end
+NOTE: CROS_LP_090_Du-186 (identical to CROS_LP_085_Du-181) is ignored but added at the end
+NOTE: DU-4A (identical to CROS_LP_085_Du-181) is ignored but added at the end
+NOTE: KIRT_LP_165_Du-370 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: KIRT_LP_166_Du-371 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: KIRT_LP_168_Du-373 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: RIC_LP_194_Du-523 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: RIC_LP_195_Du-524 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: RIC_LP_196_Du-525 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: RIC_LP_198_Du-527 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: RIC_LP_199_Du-528 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: RIC_LP_200_Du-529 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: RIC_LP_201_Du-530 (identical to CROS_LP_093_Du-189) is ignored but added at the end
+NOTE: CY_HICS_LP_293_Du-757 (identical to CY_BOU_LP_290_Du-739) is ignored but added at the end
+NOTE: CY_HICS_LP_355_Du-762 (identical to CY_BOU_LP_291_Du-740) is ignored but added at the end
+NOTE: DOV_LP_083_Du-179 (identical to DOV_LP_080_Du-176) is ignored but added at the end
+NOTE: DOV_LP_084_Du-180 (identical to DOV_LP_080_Du-176) is ignored but added at the end
+NOTE: DU-297 (identical to DU-247) is ignored but added at the end
+NOTE: TULP_LP_116_Du-243 (identical to DU-247) is ignored but added at the end
+NOTE: TULP_LP_117_Du-244 (identical to DU-247) is ignored but added at the end
+NOTE: TULP_LP_118_Du-245 (identical to DU-247) is ignored but added at the end
+NOTE: TULP_LP_119_Du-246 (identical to DU-247) is ignored but added at the end
+NOTE: TULP_LP_122_Du-250 (identical to DU-247) is ignored but added at the end
+NOTE: DUD_LP_135_Du-286 (identical to DUD_LP_133_Du-284) is ignored but added at the end
+NOTE: KIRN_LP_187_Du-429 (identical to KIRN_LP_181_Du-423) is ignored but added at the end
+NOTE: RIC_LP_193_Du-522 (identical to KIRN_LP_181_Du-423) is ignored but added at the end
+NOTE: KIRT_LP_163_Du-368 (identical to KIRT_LP_159_Du-364) is ignored but added at the end
+NOTE: MALV_LP_097_Du-203 (identical to MALV_LP_095_Du-201) is ignored but added at the end
+NOTE: MALV_LP_102_Du-208 (identical to MALV_LP_095_Du-201) is ignored but added at the end
+NOTE: MALV_LP_103_Du-209 (identical to MALV_LP_095_Du-201) is ignored but added at the end
+NOTE: MALV_LP_100_Du-206 (identical to MALV_LP_098_Du-204) is ignored but added at the end
+NOTE: MALV_LP_101_Du-207 (identical to MALV_LP_098_Du-204) is ignored but added at the end
+NOTE: MALV_LP_104_Du-210 (identical to MALV_LP_098_Du-204) is ignored but added at the end
+NOTE: QUI2_LP_337_Du-638 (identical to QUI2_LP_243_Du-631) is ignored but added at the end
+NOTE: QUI2_LP_340_Du-641 (identical to QUI2_LP_243_Du-631) is ignored but added at the end
+NOTE: QUIN_LP_072_Du-158 (identical to QUIN_LP_069_Du-155) is ignored but added at the end
+NOTE: SILR_LP_351_Du-734 (identical to SILR_LP_347_Du-730) is ignored but added at the end
+Alignment was printed to supplementary_analysis/results/sensitivity/supplement-20260824/mtmask70/trees/mitochondria.primary.uniqueseq.phy
+
+For your convenience alignment with unique sequences printed to supplementary_analysis/results/sensitivity/supplement-20260824/mtmask70/trees/mitochondria.primary.uniqueseq.phy
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.004 seconds
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -66943.693
+Optimal log-likelihood: -66943.671
+Rate parameters:  A-C: 0.63946  A-G: 0.46363  A-T: 1.58673  C-G: 0.43158  C-T: 0.65645  G-T: 1.00000
+Base frequencies:  A: 0.267  C: 0.228  G: 0.233  T: 0.272
+Proportion of invariable sites: 0.500
+Gamma shape alpha: 0.020
+Parameters optimization took 1 rounds (0.068 sec)
+Time for fast ML tree search: 0.440 seconds
+
+NOTE: ModelFinder requires 217 MB RAM!
+ModelFinder will test up to 968 DNA models (sample size: 243359 epsilon: 0.100) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  JC            67261.608    463 135449.216   135450.985   140265.478
+  2  JC+I          67119.179    464 135166.359   135168.135   139993.023
+  3  JC+G4         67212.299    464 135352.598   135354.374   140179.262
+  4  JC+I+G4       67188.149    465 135306.298   135308.083   140143.365
+  5  JC+R2         67233.436    465 135396.872   135398.656   140233.938
+  6  JC+R3         67227.135    467 135388.270   135390.070   140246.141
+ 14  JC+I+R2       67209.046    466 135350.092   135351.884   140197.561
+ 15  JC+I+R3       67198.542    468 135333.083   135334.891   140201.357
+ 24  JC+I          67119.179    464 135166.359   135168.135   139993.023
+ 46  F81+I         67116.078    464 135160.156   135161.933   139986.820
+ 68  F81+F+I       66892.567    467 134719.135   134720.934   139577.006
+ 90  K2P+I         67110.940    465 135151.880   135153.664   139988.946
+112  K2P+I         67110.940    465 135151.880   135153.664   139988.946
+134  HKY+I         67110.940    465 135151.880   135153.664   139988.946
+156  HKY+F+I       66887.581    468 134711.162   134712.969   139579.435
+178  TNe+I         67110.425    466 135152.850   135154.642   140000.318
+200  TNe+I         67110.425    466 135152.850   135154.642   140000.318
+222  TN+I          67110.424    466 135152.848   135154.640   140000.317
+244  TN+F+I        66887.049    469 134712.098   134713.913   139590.773
+266  K3P+I         67109.027    466 135150.054   135151.846   139997.522
+288  K3P+I         67109.027    466 135150.054   135151.846   139997.522
+310  K3Pu+I        67109.025    466 135150.051   135151.843   139997.519
+332  K3Pu+F+I      66885.831    469 134709.662   134711.477   139588.338
+354  TPM2+I        67104.956    466 135141.911   135143.703   139989.380
+376  TPM2+I        67104.956    466 135141.911   135143.703   139989.380
+398  TPM2u+I       67104.858    466 135141.716   135143.508   139989.185
+420  TPM2u+F+I     66882.975    469 134703.950   134705.765   139582.625
+442  TPM3+I        67095.551    466 135123.102   135124.894   139970.570
+464  TPM3+I        67095.551    466 135123.102   135124.894   139970.570
+486  TPM3u+I       67095.546    466 135123.091   135124.883   139970.560
+508  TPM3u+F+I     66875.117    469 134688.233   134690.048   139566.909
+530  TIMe+I        67108.515    467 135151.029   135152.829   140008.900
+552  TIMe+I        67108.515    467 135151.030   135152.829   140008.900
+574  TIM+I         67108.511    467 135151.022   135152.821   140008.893
+596  TIM+F+I       66885.298    470 134710.597   134712.420   139599.675
+618  TIM2e+I       67104.555    467 135143.111   135144.910   140000.982
+640  TIM2e+I       67104.555    467 135143.111   135144.910   140000.982
+662  TIM2+I        67104.373    467 135142.746   135144.546   140000.617
+684  TIM2+F+I      66882.417    470 134704.834   134706.657   139593.912
+706  TIM3e+I       67094.987    467 135123.975   135125.774   139981.846
+728  TIM3e+I       67094.987    467 135123.975   135125.774   139981.846
+750  TIM3+I        67094.982    467 135123.964   135125.764   139981.835
+772  TIM3+F+I      66874.616    470 134689.232   134691.055   139578.310
+794  TVMe+I        67089.393    468 135114.786   135116.594   139983.060
+816  TVMe+I        67089.393    468 135114.786   135116.594   139983.060
+838  TVM+I         67089.363    468 135114.727   135116.534   139983.000
+860  TVM+F+I       66870.482    471 134682.964   134684.794   139582.444
+882  SYM+I         67088.834    469 135115.669   135117.484   139994.344
+904  SYM+I         67088.834    469 135115.669   135117.484   139994.344
+926  GTR+I         67088.832    469 135115.665   135117.480   139994.340
+948  GTR+F+I       66869.950    472 134683.899   134685.737   139593.781
+Akaike Information Criterion:           TVM+F+I
+Corrected Akaike Information Criterion: TVM+F+I
+Bayesian Information Criterion:         TPM3u+F+I
+Best-fit model: TPM3u+F+I chosen according to BIC
+
+All model information printed to supplementary_analysis/results/sensitivity/supplement-20260824/mtmask70/trees/mitochondria.primary.model.gz
+CPU time for ModelFinder: 22.946 seconds (0h:0m:22s)
+Wall-clock time for ModelFinder: 2.983 seconds (0h:0m:2s)
+Generating 1000 samples for ultrafast bootstrap (seed: 314159)...
+
+NOTE: 31 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -66875.118
+Optimal log-likelihood: -66875.116
+Rate parameters:  A-C: 0.38202  A-G: 0.40956  A-T: 1.00000  C-G: 0.38202  C-T: 0.40956  G-T: 1.00000
+Base frequencies:  A: 0.267  C: 0.228  G: 0.233  T: 0.272
+Proportion of invariable sites: 0.992
+Parameters optimization took 1 rounds (0.019 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.0153899 secs using 802.6% CPU
+Computing ML distances took 0.015532 sec (of wall-clock time) 0.124176 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.000149965 secs using 784.2% CPU
+Constructing RapidNJ tree: done in 0.0053699 secs using 882.2% CPU
+Computing RapidNJ tree took 0.005547 sec (of wall-clock time) 0.049354 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -66898.750
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.533 second
+Computing log-likelihood of 98 initial trees ... 0.548 seconds
+Current best score: -66875.116
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -66875.116
+Iteration 10 / LogL: -66875.682 / Time: 0h:0m:8s
+Iteration 20 / LogL: -66878.386 / Time: 0h:0m:12s
+Finish initializing candidate tree set (20)
+Current best tree score: -66875.116 / CPU time: 8.916
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -66904.015 / Time: 0h:0m:14s (0h:0m:29s left)
+Iteration 40 / LogL: -66894.457 / Time: 0h:0m:17s (0h:0m:22s left)
+Iteration 50 / LogL: -66893.658 / Time: 0h:0m:20s (0h:0m:17s left)
+Iteration 60 / LogL: -66886.107 / Time: 0h:0m:22s (0h:0m:13s left)
+Iteration 70 / LogL: -66888.858 / Time: 0h:0m:25s (0h:0m:9s left)
+Iteration 80 / LogL: -66928.681 / Time: 0h:0m:27s (0h:0m:6s left)
+Iteration 90 / LogL: -66886.094 / Time: 0h:0m:30s (0h:0m:3s left)
+Iteration 100 / LogL: -66882.271 / Time: 0h:0m:33s (0h:0m:0s left)
+Refining ufboot trees with NNI 1 branch...
+100 samples done
+200 samples done
+300 samples done
+400 samples done
+500 samples done
+600 samples done
+700 samples done
+800 samples done
+900 samples done
+1000 samples done
+Total 1000 ufboot trees refined
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:2m:25s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -66875.116
+Optimal log-likelihood: -66875.116
+Rate parameters:  A-C: 0.38112  A-G: 0.40938  A-T: 1.00000  C-G: 0.38112  C-T: 0.40938  G-T: 1.00000
+Base frequencies:  A: 0.267  C: 0.228  G: 0.233  T: 0.272
+Proportion of invariable sites: 0.992
+Parameters optimization took 1 rounds (0.019 sec)
+BEST SCORE FOUND : -66875.116
+
+Testing tree branches by SH-like aLRT with 1000 replicates...
+4.184 sec.
+Creating bootstrap support values...
+Split supports printed to NEXUS file supplementary_analysis/results/sensitivity/supplement-20260824/mtmask70/trees/mitochondria.primary.splits.nex
+Total tree length: 0.004
+
+Total number of iterations: 102
+CPU time used for tree search: 1119.781 sec (0h:18m:39s)
+Wall-clock time used for tree search: 142.557 sec (0h:2m:22s)
+Total CPU time used: 1179.826 sec (0h:19m:39s)
+Total wall-clock time used: 150.265 sec (0h:2m:30s)
+UFBoot trees printed to supplementary_analysis/results/sensitivity/supplement-20260824/mtmask70/trees/mitochondria.primary.ufboot
+
+Computing bootstrap consensus tree...
+Reading input file supplementary_analysis/results/sensitivity/supplement-20260824/mtmask70/trees/mitochondria.primary.splits.nex...
+233 taxa and 8527 splits.
+Consensus tree written to supplementary_analysis/results/sensitivity/supplement-20260824/mtmask70/trees/mitochondria.primary.contree
+Reading input trees file supplementary_analysis/results/sensitivity/supplement-20260824/mtmask70/trees/mitochondria.primary.contree
+Log-likelihood of consensus tree: -66885.700
+
+Analysis results written to: 
+  IQ-TREE report:                supplementary_analysis/results/sensitivity/supplement-20260824/mtmask70/trees/mitochondria.primary.iqtree
+  Maximum-likelihood tree:       supplementary_analysis/results/sensitivity/supplement-20260824/mtmask70/trees/mitochondria.primary.treefile
+  Likelihood distances:          supplementary_analysis/results/sensitivity/supplement-20260824/mtmask70/trees/mitochondria.primary.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          supplementary_analysis/results/sensitivity/supplement-20260824/mtmask70/trees/mitochondria.primary.splits.nex
+  Consensus tree:                supplementary_analysis/results/sensitivity/supplement-20260824/mtmask70/trees/mitochondria.primary.contree
+  UFBoot trees:                  supplementary_analysis/results/sensitivity/supplement-20260824/mtmask70/trees/mitochondria.primary.ufboot
+  Screen log file:               supplementary_analysis/results/sensitivity/supplement-20260824/mtmask70/trees/mitochondria.primary.log
+
+Date and Time: Mon Aug 24 04:12:27 2026
