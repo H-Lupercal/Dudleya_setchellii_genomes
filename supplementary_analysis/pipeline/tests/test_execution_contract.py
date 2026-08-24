@@ -1,0 +1,61 @@
+from pathlib import Path
+
+import pytest
+from Bio import Phylo
+from dudleya_supplement.comparative import expected_pair_count, normalized_unrooted_rf, validate_resampling_spec
+from dudleya_supplement.figures import FIGURE_FAMILIES, validate_figure_manifest
+from dudleya_supplement.reporting import acceptance_checks
+from organelle_pipeline.popgen import callable_nucleotide_diversity
+
+
+def test_population_pair_count_formula() -> None:
+    assert expected_pair_count(35) == 595
+    assert expected_pair_count(1) == 0
+
+
+def test_resampling_contract_is_exact() -> None:
+    validate_resampling_spec(site_draws=1000, site_seed=424200, pi_draws=1000, pi_seed=424201, common_n=4)
+    with pytest.raises(ValueError):
+        validate_resampling_spec(site_draws=999, site_seed=424200, pi_draws=1000, pi_seed=424201, common_n=4)
+
+
+def test_figure_manifest_has_exactly_six_families(tmp_path: Path) -> None:
+    rows = []
+    for index, family in enumerate(FIGURE_FAMILIES, 1):
+        for extension in ("png", "pdf", "svg"):
+            rows.append({"figure_id": f"S{index}", "family": family, "format": extension, "path": f"x.{extension}"})
+    validate_figure_manifest(rows)
+    with pytest.raises(ValueError):
+        validate_figure_manifest(rows[:-1])
+
+
+def test_acceptance_requires_canonical_counts_and_checksums() -> None:
+    checks = acceptance_checks(
+        canonical_counts={"chloroplast": 276, "mitochondria": 271, "shared": 271},
+        figure_family_count=6,
+        all_artifacts_checksummed=True,
+        canonical_unchanged=True,
+        shared_display_count=271,
+        rf_representative_count=229,
+    )
+    assert checks["status"] == "PASS"
+    checks["canonical_counts"] = {"status": "FAIL"}
+
+
+def test_callable_denominator_is_recalculated_for_each_sample_draw() -> None:
+    first = callable_nucleotide_diversity(["ACGT", "ACNT", "ATGT", "ACGA"])
+    second = callable_nucleotide_diversity(["ACGT", "ACNT", "ATGT"])
+    assert first.compared_sites != second.compared_sites
+
+
+def test_multifurcating_unrooted_rf_is_supported(tmp_path: Path) -> None:
+    left_path = tmp_path / "left.tree"
+    right_path = tmp_path / "right.tree"
+    left_path.write_text("(A,B,C,(D,E));\n")
+    right_path.write_text("(A,B,(C,D),E);\n")
+    left = Phylo.read(left_path, "newick")
+    right = Phylo.read(right_path, "newick")
+    numerator, denominator, normalized = normalized_unrooted_rf(left, right)
+    assert numerator >= 0
+    assert denominator >= numerator
+    assert 0 <= normalized <= 1

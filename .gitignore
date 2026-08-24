@@ -47,6 +47,7 @@ canonical_publication/results/qc/*/fastp/*.json
 !canonical_publication/results/variants/**/*.vcf
 !canonical_publication/results/variants/**/*.vcf.gz
 !canonical_publication/pipeline/tests/fixtures/*.vcf
+!supplementary_analysis/results/**/*.vcf.gz
 
 # The archive remains on disk and is checksummed, but large derived products
 # are represented in Git by its manifest rather than duplicated into history.
@@ -89,6 +90,12 @@ htmlcov/
 .superpowers/
 .tools/
 **/.matplotlib/
+
+# Supplementary analyses keep only final, provenance-bearing artifacts.
+supplementary_analysis/work/**
+!supplementary_analysis/work/.gitkeep
+supplementary_analysis/.pytest_cache/
+supplementary_analysis/provenance/runs/*/logs/
 
 # Preserve the nested repository's worktree code while keeping its internal
 # Git object database local and untouched.
