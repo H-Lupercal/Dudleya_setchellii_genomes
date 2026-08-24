@@ -7,7 +7,7 @@
 The canonical run being verified/extended is `publication-20260817` (acceptance PASS). Nothing here revives the pre-remediation archive logic.
 
 > **Path convention:** all paths are from the repository root and begin with `canonical_publication/`.
-> **Git status:** `docs/` is untracked. Planning artifact only; no code or canonical output modified.
+> **Documentation location:** `supplementary_analysis/supplementary_analysis_decision_plan.md`. Planning artifact only; no code or canonical output modified.
 
 ---
 

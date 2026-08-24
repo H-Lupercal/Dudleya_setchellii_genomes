@@ -2,6 +2,8 @@
 
 This workspace implements approved decision plan v2.5 without modifying the canonical publication run. The immutable base is `canonical_publication/` run `publication-20260817`; all supplementary outputs belong to run `supplement-20260824` and remain under this directory.
 
+The approved scope and scientific decision rules are recorded in [`supplementary_analysis_decision_plan.md`](supplementary_analysis_decision_plan.md).
+
 ## Supported command
 
 ```bash
@@ -34,4 +36,3 @@ No preprocessing or mapping command is part of this workflow. Permissive and str
 - Geography is `not_run:no_approved_coordinates`.
 
 `CURRENT_RUN` is created or updated only after supplementary acceptance passes. Intermediate files, BAM-derived depth caches, IQ-TREE checkpoints, and raw sketches are ignored beneath `work/`; final tables, figures, reports, configurations, and provenance manifests are tracked.
-
