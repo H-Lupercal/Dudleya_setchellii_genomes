@@ -8,6 +8,7 @@ import shutil
 import statistics
 import subprocess
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 from .identity import MixedAlleleCall, classify_mixed_allele_samples, parse_structured_id
@@ -51,16 +52,38 @@ def _sketch_sample(root: Path, output: Path, sample: str, inputs: list[str]) -> 
     subprocess.run(["bash", "-o", "pipefail", "-c", command], cwd=root, check=True)
 
 
+def _sketch_samples(
+    root: Path,
+    work: Path,
+    samples: list[dict[str, str]],
+    *,
+    workers: int = 4,
+) -> list[Path]:
+    if workers < 1 or workers > 4:
+        raise ValueError("Identity sketch workers must be between 1 and 4")
+    prefixes = [work / "samples" / row["sample_id"] for row in samples]
+    with ThreadPoolExecutor(max_workers=workers, thread_name_prefix="mash-sketch") as executor:
+        futures = [
+            executor.submit(
+                _sketch_sample,
+                root,
+                prefix,
+                row["sample_id"],
+                _paths(row["r1_paths"]) + _paths(row["r2_paths"]),
+            )
+            for row, prefix in zip(samples, prefixes, strict=True)
+        ]
+        for future in futures:
+            future.result()
+    return [prefix.with_suffix(".msh") for prefix in prefixes]
+
+
 def _mash_audit(root: Path, run_id: str, samples: list[dict[str, str]]) -> tuple[list[dict[str, object]], list[dict[str, object]]]:
     if shutil.which("mash") is None:
         raise RuntimeError("Mash 2.3 is required for the approved raw-read identity audit")
     work = root / f"supplementary_analysis/work/{run_id}/identity/mash"
-    sample_sketches: list[Path] = []
     complete = [row for row in samples if row["pair_status"] == "complete" and row["analysis_eligible"] == "yes"]
-    for row in complete:
-        prefix = work / "samples" / row["sample_id"]
-        _sketch_sample(root, prefix, row["sample_id"], _paths(row["r1_paths"]) + _paths(row["r2_paths"]))
-        sample_sketches.append(prefix.with_suffix(".msh"))
+    sample_sketches = _sketch_samples(root, work, complete, workers=4)
     combined = work / "all_samples"
     if not combined.with_suffix(".msh").is_file():
         subprocess.run(["mash", "paste", str(combined), *map(str, sample_sketches)], cwd=root, check=True)

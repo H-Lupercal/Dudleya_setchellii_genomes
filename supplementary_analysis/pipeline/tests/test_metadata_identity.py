@@ -1,5 +1,7 @@
+import threading
+
 from dudleya_supplement.identity import MixedAlleleCall, classify_mixed_allele_samples, index_hopping_status, parse_structured_id
-from dudleya_supplement.identity_audit import _revalidate_provider_row
+from dudleya_supplement.identity_audit import _revalidate_provider_row, _sketch_samples
 from dudleya_supplement.metadata import apply_metadata_policy, derive_populations
 
 
@@ -54,3 +56,18 @@ def test_declared_missing_provider_record_is_preserved_without_hashing_repo_root
     result = _revalidate_provider_row(tmp_path, row)
     assert result["supplementary_observed_md5"] == ""
     assert result["supplementary_status"] == "DECLARED_MISSING_NOT_HASHABLE"
+
+
+def test_identity_sketches_use_bounded_parallel_workers(tmp_path, monkeypatch) -> None:
+    barrier = threading.Barrier(4)
+    threads = set()
+
+    def fake_sketch(root, output, sample, inputs):
+        threads.add(threading.get_ident())
+        barrier.wait(timeout=2)
+
+    monkeypatch.setattr("dudleya_supplement.identity_audit._sketch_sample", fake_sketch)
+    rows = [{"sample_id": f"S{index}", "r1_paths": f"S{index}.R1.gz", "r2_paths": f"S{index}.R2.gz"} for index in range(4)]
+    paths = _sketch_samples(tmp_path, tmp_path / "work", rows, workers=4)
+    assert len(paths) == 4
+    assert len(threads) == 4
