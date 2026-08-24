@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import pytest
 from Bio import Phylo
 from dudleya_supplement.comparative import expected_pair_count, normalized_unrooted_rf, validate_resampling_spec
+from dudleya_supplement.documentation import claim_decision_path
 from dudleya_supplement.figures import FIGURE_FAMILIES, validate_figure_manifest
 from dudleya_supplement.finalization import resolve_phase2_claims
 from dudleya_supplement.rendering import _save
@@ -108,3 +109,11 @@ def test_phase2_claims_are_resolved_from_completed_results() -> None:
     assert by_metric["supported_topology_compatibility"]["result_status"] == "PASS_WITH_CAVEAT"
     assert by_metric["resampling_distributions"]["result_status"] == "PASS_WITH_CAVEAT"
     assert all(row["result_status"] != "PENDING_PHASE2" for row in resolved)
+
+
+def test_phase1_and_final_claim_documents_have_separate_owners(tmp_path: Path) -> None:
+    phase1 = claim_decision_path(tmp_path, "run", phase1=True)
+    final = claim_decision_path(tmp_path, "run", phase1=False)
+    assert phase1.name == "claim_analysis_decisions.phase1.tsv"
+    assert final.name == "claim_analysis_decisions.tsv"
+    assert phase1 != final

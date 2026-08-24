@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from .documentation import claim_decision_path
 from .figures import validate_figure_manifest
 from .io import read_tsv, write_json, write_tsv
 from .provenance import sha256_file
@@ -79,8 +80,9 @@ def write_reports(root: Path, run_id: str) -> list[Path]:
     resampling = read_tsv(
         root / f"supplementary_analysis/results/comparative/{run_id}/population_diversity/population_resampling_summary.tsv"
     )[0]
-    claim_path = report_dir / "claim_analysis_decisions.tsv"
-    claim_rows = resolve_phase2_claims(read_tsv(claim_path), likelihood_rows=likelihood, rf_row=rf, resampling_summary=resampling)
+    phase1_claim_path = claim_decision_path(root, run_id, phase1=True)
+    claim_path = claim_decision_path(root, run_id, phase1=False)
+    claim_rows = resolve_phase2_claims(read_tsv(phase1_claim_path), likelihood_rows=likelihood, rf_row=rf, resampling_summary=resampling)
     write_tsv(claim_path, claim_rows, list(claim_rows[0]), root)
     report = report_dir / "supplementary_analysis_report.md"
     status_lines = "\n".join(f"- {row['scenario']} {row['organelle']} {row['metric']}: {row['status']}" for row in sensitivity)
@@ -231,7 +233,7 @@ def write_acceptance(root: Path, run_id: str, canonical_unchanged: bool) -> list
         shared_display_count=len(tangle),
         rf_representative_count=int(rf["taxon_space"].split("_", 1)[0]),
     )
-    claim_rows = read_tsv(root / f"supplementary_analysis/reports/manuscript_support/{run_id}/claim_analysis_decisions.tsv")
+    claim_rows = read_tsv(claim_decision_path(root, run_id, phase1=False))
     pending_claims = [row["metric"] for row in claim_rows if row["result_status"].startswith("PENDING")]
     acceptance["claim_decisions_final"] = {
         "status": "PASS" if not pending_claims else "FAIL",

@@ -8,6 +8,11 @@ from pathlib import Path
 from .io import read_tsv, write_json, write_tsv
 
 
+def claim_decision_path(root: Path, run_id: str, *, phase1: bool) -> Path:
+    filename = "claim_analysis_decisions.phase1.tsv" if phase1 else "claim_analysis_decisions.tsv"
+    return root / f"supplementary_analysis/reports/manuscript_support/{run_id}/{filename}"
+
+
 def provider_checksum_gate(rows: list[dict[str, str]]) -> tuple[str, list[str]]:
     failures = [row.get("provider_name", "unknown") for row in rows if row["supplementary_status"] == "FAIL"]
     return ("FAIL", failures) if failures else ("PASS", [])
@@ -73,7 +78,7 @@ def write_claim_decisions(root: Path, run_id: str) -> list[Path]:
             "required_interpretation_change": "Qualify patterns that overlap their predeclared null distributions",
         },
     ]
-    output = root / f"supplementary_analysis/reports/manuscript_support/{run_id}/claim_analysis_decisions.tsv"
+    output = claim_decision_path(root, run_id, phase1=True)
     write_tsv(output, rows, list(rows[0]), root)
     return [output]
 
@@ -101,7 +106,7 @@ def write_inheritance_evidence(root: Path, run_id: str) -> list[Path]:
 def write_phase1_acceptance(root: Path, run_id: str) -> list[Path]:
     verification = read_tsv(root / f"supplementary_analysis/metadata/qc/{run_id}/metadata_verification.tsv")
     identity = read_tsv(root / f"supplementary_analysis/results/verification/{run_id}/identity/sample_identity_outcomes.tsv")
-    claim_path = root / f"supplementary_analysis/reports/manuscript_support/{run_id}/claim_analysis_decisions.tsv"
+    claim_path = claim_decision_path(root, run_id, phase1=True)
     inheritance_path = root / f"supplementary_analysis/reports/manuscript_support/{run_id}/organelle_inheritance_evidence.md"
     confirmed = [row["sample_id"] for row in identity if row["outcome"].startswith("confirmed")]
     provider_status, provider_failures = provider_checksum_gate(
