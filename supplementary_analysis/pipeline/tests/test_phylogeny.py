@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from dudleya_supplement.likelihood import parse_likelihood_report
+from dudleya_supplement.likelihood import build_likelihood_command, parse_likelihood_report
 from dudleya_supplement.phylogeny import (
     likelihood_decision,
     parse_identical_sequence_map,
@@ -68,3 +68,15 @@ def test_likelihood_report_parses_all_seven_regions(tmp_path: Path) -> None:
     values = parse_likelihood_report(report)
     assert values["region_7_fraction"] == 0.10
     assert values["side_fraction"] == 0.30
+
+
+def test_likelihood_mapping_declares_dna_sequence_type() -> None:
+    command = build_likelihood_command(
+        alignment=Path("canonical/alignment.fa"),
+        model="TVM+F+I+R4",
+        quartets=100_000,
+        seed=271828,
+        prefix=Path("supplement/work/chloroplast"),
+        threads=8,
+    )
+    assert command[command.index("-st") + 1] == "DNA"

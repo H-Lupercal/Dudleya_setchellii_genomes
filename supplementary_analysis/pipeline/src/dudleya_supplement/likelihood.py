@@ -11,6 +11,42 @@ from .io import write_tsv
 from .phylogeny import likelihood_decision, parse_split_nexus, supported_incompatible_pair
 
 
+def build_likelihood_command(
+    *,
+    alignment: Path,
+    model: str,
+    quartets: int,
+    seed: int,
+    prefix: Path,
+    threads: int,
+) -> list[str]:
+    """Build an IQ-TREE likelihood-mapping command with an explicit DNA type.
+
+    Callable organelle alignments can contain enough missing data that IQ-TREE
+    cannot reliably infer the alphabet even when the observed symbols are only
+    A, C, G, T, and N.
+    """
+    return [
+        "iqtree3",
+        "-s",
+        str(alignment),
+        "-st",
+        "DNA",
+        "-m",
+        model,
+        "-lmap",
+        str(quartets),
+        "-n",
+        "0",
+        "-seed",
+        str(seed),
+        "-pre",
+        str(prefix),
+        "-nt",
+        str(threads),
+    ]
+
+
 def parse_likelihood_report(path: Path) -> dict[str, float | int]:
     text = path.read_text()
     section = text.split("Quartet support of areas 1-7", 1)
@@ -89,23 +125,14 @@ def run_likelihood_mapping(root: Path, run_id: str, config: dict[str, object]) -
         work_prefix.parent.mkdir(parents=True, exist_ok=True)
         work_report = Path(f"{work_prefix}.iqtree")
         if not work_report.is_file():
-            command = [
-                "iqtree3",
-                "-s",
-                str(alignment.relative_to(root)),
-                "-m",
-                str(model),
-                "-lmap",
-                str(settings["quartets"]),  # type: ignore[index]
-                "-n",
-                "0",
-                "-seed",
-                str(seed),
-                "-pre",
-                str(work_prefix.relative_to(root)),
-                "-nt",
-                "8",
-            ]
+            command = build_likelihood_command(
+                alignment=alignment.relative_to(root),
+                model=str(model),
+                quartets=int(settings["quartets"]),  # type: ignore[index]
+                seed=int(seed),
+                prefix=work_prefix.relative_to(root),
+                threads=8,
+            )
             subprocess.run(command, cwd=root, check=True)
         copied = []
         for suffix in (".iqtree", ".lmap.svg", ".lmap.eps"):
