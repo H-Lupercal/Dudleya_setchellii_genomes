@@ -1,3 +1,4 @@
+import subprocess
 from pathlib import Path
 
 import pytest
@@ -11,7 +12,7 @@ from dudleya_supplement.provenance import (
     validate_immutable_snapshot,
     validate_resume,
 )
-from dudleya_supplement.stages import _canonical_fingerprint_value
+from dudleya_supplement.stages import _canonical_fingerprint_value, _git_commit
 
 
 def valid_config() -> dict[str, object]:
@@ -106,3 +107,21 @@ def test_canonical_fingerprint_reader_accepts_legacy_and_current_state_shapes() 
     assert _canonical_fingerprint_value({"fingerprint": digest}) == digest
     assert _canonical_fingerprint_value({"fingerprint": {"digest": digest}}) == digest
     assert _canonical_fingerprint_value({}) == ""
+
+
+def test_provenance_commit_ignores_later_results_only_commit(tmp_path: Path) -> None:
+    subprocess.run(["git", "init", "-q"], cwd=tmp_path, check=True)
+    subprocess.run(["git", "config", "user.email", "test@example.invalid"], cwd=tmp_path, check=True)
+    subprocess.run(["git", "config", "user.name", "Test"], cwd=tmp_path, check=True)
+    source = tmp_path / "supplementary_analysis/pipeline/src/pkg/module.py"
+    source.parent.mkdir(parents=True)
+    source.write_text("VALUE = 1\n")
+    subprocess.run(["git", "add", "."], cwd=tmp_path, check=True)
+    subprocess.run(["git", "commit", "-qm", "code"], cwd=tmp_path, check=True)
+    code_commit = subprocess.run(["git", "rev-parse", "HEAD"], cwd=tmp_path, check=True, capture_output=True, text=True).stdout.strip()
+    result = tmp_path / "supplementary_analysis/results/run/table.tsv"
+    result.parent.mkdir(parents=True)
+    result.write_text("value\n1\n")
+    subprocess.run(["git", "add", "."], cwd=tmp_path, check=True)
+    subprocess.run(["git", "commit", "-qm", "results"], cwd=tmp_path, check=True)
+    assert _git_commit(tmp_path) == code_commit

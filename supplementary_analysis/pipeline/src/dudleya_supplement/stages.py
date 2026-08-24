@@ -31,7 +31,30 @@ from .scenario import run_all_sensitivity
 
 
 def _git_commit(root: Path) -> str:
-    return subprocess.run(["git", "rev-parse", "HEAD"], cwd=root, capture_output=True, text=True, check=True).stdout.strip()
+    """Return the latest commit affecting executable/configuration inputs.
+
+    A later commit containing only generated results must not make an otherwise
+    content-identical run stale. Exact source/config hashes remain part of every
+    stage fingerprint.
+    """
+    provenance_paths = [
+        "supplementary_analysis/config",
+        "supplementary_analysis/environment.yml",
+        "supplementary_analysis/run_pipeline.sh",
+        "supplementary_analysis/pipeline/src",
+        "supplementary_analysis/pipeline/scripts",
+        "canonical_publication/pipeline/src/organelle_pipeline",
+    ]
+    commit = subprocess.run(
+        ["git", "rev-list", "-1", "HEAD", "--", *provenance_paths],
+        cwd=root,
+        capture_output=True,
+        text=True,
+        check=True,
+    ).stdout.strip()
+    if not commit:
+        raise RuntimeError("No Git commit found for supplementary executable/configuration inputs")
+    return commit
 
 
 def _state_path(root: Path, run_id: str, stage: str) -> Path:
