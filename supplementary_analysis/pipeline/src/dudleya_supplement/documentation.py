@@ -8,6 +8,11 @@ from pathlib import Path
 from .io import read_tsv, write_json, write_tsv
 
 
+def provider_checksum_gate(rows: list[dict[str, str]]) -> tuple[str, list[str]]:
+    failures = [row.get("provider_name", "unknown") for row in rows if row["supplementary_status"] == "FAIL"]
+    return ("FAIL", failures) if failures else ("PASS", [])
+
+
 def write_claim_decisions(root: Path, run_id: str) -> list[Path]:
     statuses = read_tsv(root / f"supplementary_analysis/results/sensitivity/{run_id}/sensitivity_status.tsv")
     by_metric: dict[str, list[str]] = {}
@@ -99,9 +104,13 @@ def write_phase1_acceptance(root: Path, run_id: str) -> list[Path]:
     claim_path = root / f"supplementary_analysis/reports/manuscript_support/{run_id}/claim_analysis_decisions.tsv"
     inheritance_path = root / f"supplementary_analysis/reports/manuscript_support/{run_id}/organelle_inheritance_evidence.md"
     confirmed = [row["sample_id"] for row in identity if row["outcome"].startswith("confirmed")]
+    provider_status, provider_failures = provider_checksum_gate(
+        read_tsv(root / f"supplementary_analysis/results/verification/{run_id}/identity/provider_md5_revalidation.tsv")
+    )
     metadata_complete = {row["entity"] for row in verification} == {"DUSE", "CY_CAS", "CY_SIE", "TUL2"}
     checks = {
         "metadata_disposition_complete": "PASS" if metadata_complete else "FAIL",
+        "resolved_provider_md5_records": provider_status,
         "confirmed_identity_defects_corrected_or_excluded": "PASS" if not confirmed else "FAIL",
         "sensitivity_outputs_present": "PASS"
         if (root / f"supplementary_analysis/results/sensitivity/{run_id}/sensitivity_summary.tsv").is_file()
@@ -114,6 +123,7 @@ def write_phase1_acceptance(root: Path, run_id: str) -> list[Path]:
         "status": "PASS" if all(value == "PASS" for value in checks.values()) else "FAIL",
         "checks": checks,
         "confirmed_identity_defects": confirmed,
+        "provider_md5_failures": provider_failures,
         "unresolved_identity_samples": sum(row["outcome"] == "unresolved" for row in identity),
     }
     output = root / f"supplementary_analysis/results/verification/{run_id}/phase1_acceptance.json"

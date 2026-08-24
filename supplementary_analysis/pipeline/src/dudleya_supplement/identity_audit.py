@@ -40,11 +40,24 @@ def _revalidate_provider_row(root: Path, row: dict[str, str]) -> dict[str, str]:
             "supplementary_status": "DECLARED_MISSING_NOT_HASHABLE",
         }
     current = _md5(root / relative)
+    if row["status"] == "UNVERIFIABLE_SELF_REFERENCE":
+        return {
+            **row,
+            "supplementary_observed_md5": current,
+            "supplementary_status": "UNVERIFIABLE_SELF_REFERENCE",
+        }
     return {
         **row,
         "supplementary_observed_md5": current,
         "supplementary_status": "PASS" if current == row["expected_md5"] else "FAIL",
     }
+
+
+def _candidate_cutoff(within_distances: list[float], different_distances: list[float]) -> float:
+    if not within_distances:
+        raise ValueError("At least one within-library split control is required")
+    strict_within = min(within_distances)
+    return min(strict_within, min(different_distances)) if different_distances else strict_within
 
 
 def _sketch_sample(root: Path, output: Path, sample: str, inputs: list[str]) -> None:
@@ -124,9 +137,7 @@ def _mash_audit(root: Path, run_id: str, samples: list[dict[str, str]]) -> tuple
             check=True,
         )
         different_distances.append(float(result.stdout.split("\t")[2]))
-    within_cutoff = max(within_distances)
-    different_floor = min(different_distances) if different_distances else -1.0
-    cutoff = min(within_cutoff, different_floor) if different_floor >= 0 else within_cutoff
+    cutoff = _candidate_cutoff(within_distances, different_distances)
     rows = []
     seen: set[tuple[str, str]] = set()
     for line in distances.read_text().splitlines():
@@ -158,6 +169,7 @@ def _mash_audit(root: Path, run_id: str, samples: list[dict[str, str]]) -> tuple
             "median": statistics.median(within_distances),
             "maximum": max(within_distances),
             "candidate_cutoff": cutoff,
+            "candidate_rule": "distance<=minimum_within_library_split_control_and_below_different_library_floor",
         },
         {
             "control_type": "different_library",
@@ -166,6 +178,7 @@ def _mash_audit(root: Path, run_id: str, samples: list[dict[str, str]]) -> tuple
             "median": statistics.median(different_distances) if different_distances else "NA",
             "maximum": max(different_distances) if different_distances else "NA",
             "candidate_cutoff": cutoff,
+            "candidate_rule": "distance<=minimum_within_library_split_control_and_below_different_library_floor",
         },
     ]
     return rows, calibration

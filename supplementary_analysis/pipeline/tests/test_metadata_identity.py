@@ -1,7 +1,8 @@
 import threading
 
+from dudleya_supplement.documentation import provider_checksum_gate
 from dudleya_supplement.identity import MixedAlleleCall, classify_mixed_allele_samples, index_hopping_status, parse_structured_id
-from dudleya_supplement.identity_audit import _msh_path, _revalidate_provider_row, _sketch_samples
+from dudleya_supplement.identity_audit import _candidate_cutoff, _msh_path, _revalidate_provider_row, _sketch_samples
 from dudleya_supplement.metadata import apply_metadata_policy, derive_populations
 
 
@@ -76,3 +77,34 @@ def test_identity_sketches_use_bounded_parallel_workers(tmp_path, monkeypatch) -
 def test_mash_extension_is_appended_without_collapsing_r1_r2_control_names(tmp_path) -> None:
     assert _msh_path(tmp_path / "sample.R1").name == "sample.R1.msh"
     assert _msh_path(tmp_path / "sample.R2").name == "sample.R2.msh"
+
+
+def test_self_referential_provider_manifest_is_not_misreported_as_a_checksum_failure(tmp_path) -> None:
+    manifest = tmp_path / "md5sum.txt"
+    manifest.write_text("self reference cannot have a stable self hash\n")
+    row = {
+        "resolved_source_path": "md5sum.txt",
+        "expected_md5": "a" * 32,
+        "observed_md5": "b" * 32,
+        "status": "UNVERIFIABLE_SELF_REFERENCE",
+    }
+    result = _revalidate_provider_row(tmp_path, row)
+    assert result["supplementary_observed_md5"]
+    assert result["supplementary_status"] == "UNVERIFIABLE_SELF_REFERENCE"
+
+
+def test_mash_candidate_cutoff_requires_similarity_at_least_as_close_as_best_split_control() -> None:
+    assert _candidate_cutoff([0.012, 0.014, 0.036], [0.069]) == 0.012
+
+
+def test_provider_checksum_gate_accepts_declared_exceptions_but_rejects_resolved_failure() -> None:
+    accepted = [
+        {"supplementary_status": "PASS"},
+        {"supplementary_status": "DECLARED_MISSING_NOT_HASHABLE"},
+        {"supplementary_status": "UNVERIFIABLE_SELF_REFERENCE"},
+    ]
+    assert provider_checksum_gate(accepted) == ("PASS", [])
+    assert provider_checksum_gate([*accepted, {"provider_name": "bad.fastq.gz", "supplementary_status": "FAIL"}]) == (
+        "FAIL",
+        ["bad.fastq.gz"],
+    )
