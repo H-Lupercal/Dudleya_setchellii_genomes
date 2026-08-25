@@ -1,0 +1,618 @@
+IQ-TREE version 3.1.2 for Linux x86 64-bit built May 17 2026
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    sparky (AVX512, FMA3, 30 GB RAM)
+Command: iqtree3 -s supplementary_analysis/results/sensitivity/supplement-20260824-v26/strict/alignments/chloroplast.callable_alignment.fa -pre supplementary_analysis/results/sensitivity/supplement-20260824-v26/strict/trees/chloroplast.primary -st DNA -m MFP -alrt 1000 -B 1000 -bnni -seed 271828 -nt 8
+Seed:    271828 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 24 23:31:35 2026
+Kernel:  AVX+FMA - 8 threads (16 CPU cores detected)
+
+Reading alignment file supplementary_analysis/results/sensitivity/supplement-20260824-v26/strict/alignments/chloroplast.callable_alignment.fa ... Fasta format detected
+Reading fasta file: done in 0.191871 secs using 93.69% CPU
+Constructing alignment: done in 0.106595 secs using 745.4% CPU
+WARNING: 42290 sites contain only gaps or ambiguous characters.
+Alignment has 274 sequences with 150274 columns, 6255 distinct patterns
+1985 parsimony-informative, 242 singleton sites, 148047 constant sites
+                         Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.000267029 secs using 357.6% CPU
+   1  ABAB_MAD_LP_223_Du-590    33.06%    passed     44.01%
+   2  ABAB_MAD_LP_322_Du-593    31.40%    passed     96.81%
+   3  ABAB_MAD_LP_323_Du-594    33.00%    passed     35.96%
+   4  ABAB_MAD_LP_324_Du-595    32.87%    passed     46.09%
+   5  ABAB_MAD_LP_325_Du-596    32.42%    passed     78.52%
+   6  ABAB_MAD_LP_326_Du-597    32.62%    passed     64.67%
+   7  ABAB_MAD_LP_327_Du-598    33.00%    passed     41.95%
+   8  ABBE_BERN_LP_311_Du-780   31.76%    passed     99.51%
+   9  ABBE_BERN_LP_312_Du-781   32.56%    passed     56.90%
+  10  ABBE_BERN_LP_313_Du-782   32.93%    passed     49.26%
+  11  ABBE_BERN_LP_314_Du-783   32.93%    passed     37.95%
+  12  ABMU_HOR_LP_306_Du-775    32.07%    passed     93.52%
+  13  ABMU_HOR_LP_308_Du-777    31.93%    passed     96.31%
+  14  ABMU_HOR_LP_358_Du-770    31.48%    passed     98.93%
+  15  ABMU_HOR_LP_359_Du-771    31.48%    passed     99.26%
+  16  ABMU_HOR_LP_360_Du-772    31.29%    passed     95.90%
+  17  ABMU_HOR_LP_361_Du-773    31.55%    passed     99.38%
+  18  BAI_LP_105_Du-222         29.87%    passed     51.82%
+  19  BAI_LP_106_Du-223         29.85%    passed     43.45%
+  20  BAI_LP_108_Du-225         30.06%    passed     52.73%
+  21  BAI_LP_109_Du-226         29.95%    passed     46.95%
+  22  BAI_LP_110_Du-227         29.56%    passed     40.98%
+  23  BAI_LP_111_Du-228         29.73%    passed     41.48%
+  24  BAI_LP_112_Du-230         30.17%    passed     59.34%
+  25  BAI_LP_113_Du-231         29.92%    passed     47.45%
+  26  BAI_LP_114_Du-232         30.02%    passed     52.92%
+  27  BAI_LP_319_Du-233         31.90%    passed     92.39%
+  28  COM_LP_269_Du-703         31.59%    passed     95.78%
+  29  COM_LP_270_Du-704         32.17%    passed     68.29%
+  30  COM_LP_272_Du-707         31.59%    passed     97.94%
+  31  COM_LP_274_Du-709         31.72%    passed     98.06%
+  32  COM_LP_276_Du-711         32.14%    passed     63.53%
+  33  COM_LP_277_Du-712         31.95%    passed     80.85%
+  34  COM_LP_341_Du-713         31.32%    passed     99.89%
+  35  COM_LP_342_Du-714         32.07%    passed     75.73%
+  36  COM_LP_343_Du-715         31.59%    passed     97.51%
+  37  CROB_LP_169_Du-381        32.45%    passed     66.75%
+  38  CROB_LP_170_Du-382        31.03%    passed     98.78%
+  39  CROB_LP_172_Du-384        31.95%    passed     85.86%
+  40  CROB_LP_173_Du-385        30.84%    passed     96.18%
+  41  CROB_LP_174_Du-386        30.56%    passed     89.74%
+  42  CROB_LP_175_Du-387        30.88%    passed     95.51%
+  43  CROB_LP_176_Du-388        30.82%    passed     95.74%
+  44  CROB_LP_177_Du-389        30.15%    passed     66.43%
+  45  CROB_LP_320_Du-395        31.23%    passed     99.23%
+  46  CROB_LP_321_Du-396        31.10%    passed     99.25%
+  47  CROS_LP_085_Du-181        30.06%    passed     52.77%
+  48  CROS_LP_086_Du-182        29.31%    passed     22.17%
+  49  CROS_LP_087_Du-183        29.71%    passed     38.99%
+  50  CROS_LP_088_Du-184        29.53%    passed     35.41%
+  51  CROS_LP_089_Du-185        28.79%    passed     19.07%
+  52  CROS_LP_090_Du-186        29.39%    passed     26.21%
+  53  CROS_LP_091_Du-187        29.11%    passed      6.00%
+  54  CROS_LP_092_Du-188        29.84%    passed     19.05%
+  55  CROS_LP_093_Du-189        29.92%    passed     64.08%
+  56  CROS_LP_094_Du-190        29.12%    passed      5.58%
+  57  CY_ALA_LP_298-Du-767      32.44%    passed     57.23%
+  58  CY_ALA_LP_299-Du-768      32.49%    passed     56.48%
+  59  CY_ALA_LP_357_Du-769      31.42%    passed     99.94%
+  60  CY_BAL_LP_226_Du-602      32.36%    passed     72.34%
+  61  CY_BAL_LP_227_Du-603      32.57%    passed     56.52%
+  62  CY_BAL_LP_228_Du-604      33.41%    passed     21.73%
+  63  CY_BGL_LP_210_Du-577      32.06%    passed     94.05%
+  64  CY_BGL_LP_212_Du-579      31.30%    passed     98.35%
+  65  CY_BOU_LP_288_Du-737      32.30%    passed     77.31%
+  66  CY_BOU_LP_290_Du-739      31.20%    passed     98.93%
+  67  CY_BOU_LP_291_Du-740      32.14%    passed     82.64%
+  68  CY_BOU_LP_292_Du-741      32.13%    passed     81.35%
+  69  CY_BOU_LP_354_Du-742      31.24%    passed     99.81%
+  70  CY_CAS_LP_328_Du-610      32.69%    passed     41.08%
+  71  CY_CAS_LP_329_Du-611      32.12%    passed     88.55%
+  72  CY_CAS_LP_330_Du-607      32.55%    passed     65.90%
+  73  CY_CAS_LP_331_Du-608      32.89%    passed     28.69%
+  74  CY_CAS_LP_332_Du-609      32.50%    passed     60.34%
+  75  CY_HICN_LP_236_Du-614     31.59%    passed     99.43%
+  76  CY_HICN_LP_333_Du-612     32.80%    passed     31.34%
+  77  CY_HICN_LP_334_Du-613     33.18%    passed     12.13%
+  78  CY_HICN_LP_335_Du-615     32.71%    passed     35.99%
+  79  CY_HICN_LP_336_Du-616     32.53%    passed     55.00%
+  80  CY_HICS_LP_293_Du-757     32.60%    passed     43.00%
+  81  CY_HICS_LP_295_Du-759     34.10%    passed     14.07%
+  82  CY_HICS_LP_297_Du-761     32.56%    passed     55.41%
+  83  CY_HICS_LP_355_Du-762     31.60%    passed     99.83%
+  84  CY_HICS_LP_356_Du-763     31.89%    passed     91.46%
+  85  CY_HUN_LP_264_Du-683      32.61%    passed     72.58%
+  86  CY_HUN_LP_266_Du-685      32.30%    passed     89.95%
+  87  CY_HUN_LP_267_Du-686      32.72%    passed     63.86%
+  88  CY_HUN_LP_268_Du-687      32.83%    passed     51.94%
+  89  CY_SIE_LP_188_Du-445      30.43%    passed     80.27%
+  90  CY_SIE_LP_189_Du-446      30.35%    passed     70.92%
+  91  CY_SIE_LP_190_Du-447      30.27%    passed     65.69%
+  92  CY_SIE_LP_191_Du-448      30.86%    passed     89.92%
+  93  CY_WOO_LP_259_Du-664      32.04%    passed     88.37%
+  94  CY_WOO_LP_260_Du-665      32.78%    passed     35.41%
+  95  CY_WOO_LP_261_Du-667      33.58%    passed      7.98%
+  96  CY_WOO_LP_262_Du-668      32.71%    passed     36.40%
+  97  CY_WOO_LP_263_Du-669      32.35%    passed     64.71%
+  98  DAN_LP_043_Du-68          32.18%    passed     58.42%
+  99  DAN_LP_044_Du-69          31.58%    passed     97.86%
+ 100  DAN_LP_045_Du-70          29.79%    passed     53.07%
+ 101  DAN_LP_046_Du-71          31.28%    passed     99.88%
+ 102  DAN_LP_047_Du-72          31.76%    passed     93.75%
+ 103  DOV_LP_078_Du-174         30.75%    passed     90.87%
+ 104  DOV_LP_079_Du-175         29.75%    passed     36.04%
+ 105  DOV_LP_080_Du-176         28.97%    passed     25.35%
+ 106  DOV_LP_081_Du-177         29.14%    passed     19.34%
+ 107  DOV_LP_082_Du-178         29.65%    passed     44.39%
+ 108  DOV_LP_083_Du-179         29.61%    passed     34.55%
+ 109  DOV_LP_084_Du-180         29.44%    passed     24.71%
+ 110  DU-173                    29.31%    passed     30.61%
+ 111  DU-229                    29.65%    passed     37.91%
+ 112  DU-247                    29.34%    passed     14.22%
+ 113  DU-254                    29.57%    passed     22.79%
+ 114  DU-270                    29.81%    passed     40.86%
+ 115  DU-297                    29.25%    passed     10.57%
+ 116  DU-443                    29.77%    passed     46.82%
+ 117  DU-4A                     29.38%    passed     26.91%
+ 118  DU014LP012                28.94%    passed     17.54%
+ 119  DU037LP013                28.76%    passed     16.84%
+ 120  DU059LP015                29.09%    passed     24.23%
+ 121  DU078LP011                28.61%    passed     12.54%
+ 122  DU079LP010                29.15%    passed     36.03%
+ 123  DUD_LP_132_Du-283         32.16%    passed     73.82%
+ 124  DUD_LP_133_Du-284         31.17%    passed     96.60%
+ 125  DUD_LP_134_Du-285         31.02%    passed     91.41%
+ 126  DUD_LP_135_Du-286         31.04%    passed     91.36%
+ 127  DUD_LP_136_Du-287         30.96%    passed     90.42%
+ 128  DUD_LP_137_Du-288         31.54%    passed     99.07%
+ 129  DUD_LP_138_Du-289         31.17%    passed     98.00%
+ 130  DUD_LP_139_Du-290         31.55%    passed     99.83%
+ 131  KIRN_LP_179_Du-421        29.97%    passed     61.36%
+ 132  KIRN_LP_180_Du-422        30.59%    passed     89.45%
+ 133  KIRN_LP_181_Du-423        30.76%    passed     95.05%
+ 134  KIRN_LP_182_Du-424        30.09%    passed     66.44%
+ 135  KIRN_LP_183_Du-425        30.30%    passed     79.74%
+ 136  KIRN_LP_184_Du-426        30.32%    passed     77.65%
+ 137  KIRN_LP_185_Du-427        30.17%    passed     71.92%
+ 138  KIRN_LP_186_Du-428        29.94%    passed     64.05%
+ 139  KIRN_LP_187_Du-429        29.99%    passed     68.74%
+ 140  KIRT_LP_159_Du-364        32.42%    passed     53.59%
+ 141  KIRT_LP_160_Du-365        31.10%    passed     99.86%
+ 142  KIRT_LP_161_Du-366        31.17%    passed     99.90%
+ 143  KIRT_LP_162_Du-367        31.32%    passed     99.83%
+ 144  KIRT_LP_163_Du-368        31.27%    passed     99.91%
+ 145  KIRT_LP_164_Du-369        31.26%    passed     99.61%
+ 146  KIRT_LP_165_Du-370        29.99%    passed     62.19%
+ 147  KIRT_LP_166_Du-371        30.50%    passed     83.96%
+ 148  KIRT_LP_167_Du-372        31.79%    passed     95.37%
+ 149  KIRT_LP_168_Du-373        30.68%    passed     90.26%
+ 150  MALV_LP_095_Du-201        28.75%    passed     10.58%
+ 151  MALV_LP_096_Du-202        29.32%    passed     29.29%
+ 152  MALV_LP_097_Du-203        29.07%    passed     19.44%
+ 153  MALV_LP_098_Du-204        29.26%    passed     17.81%
+ 154  MALV_LP_099_Du-205        30.06%    passed     50.89%
+ 155  MALV_LP_100_Du-206        29.24%    passed     21.77%
+ 156  MALV_LP_101_Du-207        29.23%    passed     18.34%
+ 157  MALV_LP_102_Du-208        29.62%    passed     31.51%
+ 158  MALV_LP_103_Du-209        29.53%    passed     23.84%
+ 159  MALV_LP_104_Du-210        29.52%    passed     27.89%
+ 160  OCO_LP_058_Du-115         32.69%    passed     56.97%
+ 161  OCO_LP_059_Du-106         32.58%    passed     73.63%
+ 162  OCO_LP_060_Du-107         33.03%    passed     39.35%
+ 163  OCO_LP_061_Du-108         32.33%    passed     90.19%
+ 164  OCO_LP_062_Du-109         32.28%    passed     92.86%
+ 165  OCO_LP_063_Du-110         33.05%    passed     44.09%
+ 166  OCO_LP_064_Du-111         32.83%    passed     53.25%
+ 167  OCO_LP_065_Du-112         32.66%    passed     65.70%
+ 168  OCO_LP_066_Du-113         33.08%    passed     29.19%
+ 169  OCO_LP_067_Du-114         33.01%    passed     41.21%
+ 170  QUI1_LP_249_Du-648        32.60%    passed     40.92%
+ 171  QUI1_LP_250_Du-649        32.67%    passed     35.29%
+ 172  QUI1_LP_251_Du-650        33.24%    passed     12.72%
+ 173  QUI1_LP_252_Du-651        32.88%    passed     23.79%
+ 174  QUI1_LP_253_Du-652        32.22%    passed     73.99%
+ 175  QUI1_LP_254_Du-653        33.03%    passed     20.64%
+ 176  QUI1_LP_255_Du-654        32.18%    passed     76.89%
+ 177  QUI1_LP_257_Du-656        32.76%    passed     33.68%
+ 178  QUI1_LP_258_Du-657        31.78%    passed     95.08%
+ 179  QUI2_LP_243_Du-631        31.68%    passed     99.36%
+ 180  QUI2_LP_244_Du-632        32.89%    passed     23.60%
+ 181  QUI2_LP_245_Du-633        32.72%    passed     38.58%
+ 182  QUI2_LP_246_Du-634        32.22%    passed     78.58%
+ 183  QUI2_LP_247_Du-635        32.08%    passed     84.12%
+ 184  QUI2_LP_248_Du-636        31.92%    passed     92.46%
+ 185  QUI2_LP_337_Du-638        33.07%    passed     17.48%
+ 186  QUI2_LP_338_Du-639        32.77%    passed     38.48%
+ 187  QUI2_LP_339_Du-640        31.92%    passed     89.61%
+ 188  QUI2_LP_340_Du-641        31.92%    passed     92.53%
+ 189  QUIN_LP_069_Du-155        32.73%    passed     38.74%
+ 190  QUIN_LP_070_Du-156        33.00%    passed     18.73%
+ 191  QUIN_LP_071_Du-157        32.62%    passed     47.92%
+ 192  QUIN_LP_072_Du-158        32.93%    passed     24.30%
+ 193  QUIN_LP_073_Du-159        32.71%    passed     34.39%
+ 194  QUIN_LP_074_Du-160        32.47%    passed     54.48%
+ 195  QUIN_LP_075_Du-161        29.27%    passed     30.14%
+ 196  QUIN_LP_076_Du-162        30.18%    passed     58.07%
+ 197  QUIN_LP_077_Du-163        29.42%    passed     27.77%
+ 198  QUIN_LP_318_Du-164        32.04%    passed     87.12%
+ 199  RIC_LP_192_Du-521         30.20%    passed     70.62%
+ 200  RIC_LP_193_Du-522         30.32%    passed     76.25%
+ 201  RIC_LP_194_Du-523         30.17%    passed     71.48%
+ 202  RIC_LP_195_Du-524         31.34%    passed     99.55%
+ 203  RIC_LP_196_Du-525         31.30%    passed     99.74%
+ 204  RIC_LP_197_Du-526         32.10%    passed     88.56%
+ 205  RIC_LP_198_Du-527         29.71%    passed     49.29%
+ 206  RIC_LP_199_Du-528         30.51%    passed     89.79%
+ 207  RIC_LP_200_Du-529         29.89%    passed     63.91%
+ 208  RIC_LP_201_Du-530         29.72%    passed     54.85%
+ 209  RSV_LP_049_Du-85          30.73%    passed     90.10%
+ 210  RSV_LP_050_Du-87          30.22%    passed     67.98%
+ 211  RSV_LP_051_Du-88          32.41%    passed     60.32%
+ 212  RSV_LP_052_Du-89          31.22%    passed     99.30%
+ 213  RSV_LP_053_Du-90          30.91%    passed     95.17%
+ 214  RSV_LP_055_Du-92          31.77%    passed     96.84%
+ 215  RSV_LP_057_Du-94          30.75%    passed     92.29%
+ 216  RSV_LP_315_Du-95          30.39%    passed     73.54%
+ 217  RSV_LP_316_Du-96          31.22%    passed     99.25%
+ 218  SILG_LP_149_Du-343        32.35%    passed     56.09%
+ 219  SILG_LP_150_Du-344        32.32%    passed     68.76%
+ 220  SILG_LP_151_Du-345        31.81%    passed     93.18%
+ 221  SILG_LP_152_Du-346        32.11%    passed     73.83%
+ 222  SILG_LP_153_Du-347        32.24%    passed     68.51%
+ 223  SILG_LP_154_Du-348        31.55%    passed     99.03%
+ 224  SILG_LP_155_Du-349        32.23%    passed     69.62%
+ 225  SILG_LP_156_Du-350        31.96%    passed     90.98%
+ 226  SILG_LP_157_Du-351        32.39%    passed     53.06%
+ 227  SILG_LP_158_Du-352        33.04%    passed     81.86%
+ 228  SILR_LP_346_Du-729        31.65%    passed     95.77%
+ 229  SILR_LP_347_Du-730        30.62%    passed     96.26%
+ 230  SILR_LP_348_Du-731        31.50%    passed     98.44%
+ 231  SILR_LP_349_Du-732        31.39%    passed     99.28%
+ 232  SILR_LP_351_Du-734        31.31%    passed     99.92%
+ 233  SILR_LP_353_Du-736        32.45%    passed     43.64%
+ 234  STI_LP_027_Du-45          32.38%    passed     64.91%
+ 235  STI_LP_028_Du-46          31.67%    passed     97.61%
+ 236  STI_LP_029_Du-47          32.89%    passed     28.98%
+ 237  STI_LP_030_Du-48          31.94%    passed     91.12%
+ 238  STI_LP_031_Du-49          32.65%    passed     45.88%
+ 239  STI_LP_032_Du-50          31.94%    passed     94.06%
+ 240  STI_LP_033_Du-51          32.62%    passed     54.39%
+ 241  STI_LP_034_Du-52          31.65%    passed     99.43%
+ 242  STI_LP_035_Du-53          30.64%    passed     86.04%
+ 243  STI_LP_036_Du-54          32.23%    passed     76.85%
+ 244  STI_LP_037_Du-55          30.82%    passed     94.52%
+ 245  STI_LP_038_Du-56          30.84%    passed     92.79%
+ 246  STI_LP_039_Du-57          31.84%    passed     95.29%
+ 247  STI_LP_040_Du-58          33.06%    passed     32.56%
+ 248  STI_LP_041_Du-60          31.68%    passed     99.17%
+ 249  STI_LP_042_Du-61          31.78%    passed     96.92%
+ 250  TIL_LP_123_Du-263         32.49%    passed     65.24%
+ 251  TIL_LP_124_Du-264         31.79%    passed     96.61%
+ 252  TIL_LP_125_Du-265         32.63%    passed     43.96%
+ 253  TIL_LP_126_Du-266         32.22%    passed     79.71%
+ 254  TIL_LP_128_Du-268         31.73%    passed     96.74%
+ 255  TIL_LP_129_Du-269         32.12%    passed     87.00%
+ 256  TIL_LP_130_Du-271         31.48%    passed     99.93%
+ 257  TIL_LP_131_Du-272         32.21%    passed     78.43%
+ 258  TULP_LP_115_Du-242        28.97%    passed      6.28%
+ 259  TULP_LP_116_Du-243        29.17%    passed     10.02%
+ 260  TULP_LP_117_Du-244        29.75%    passed     26.22%
+ 261  TULP_LP_118_Du-245        28.72%    failed      4.85%
+ 262  TULP_LP_119_Du-246        28.80%    failed      4.69%
+ 263  TULP_LP_120_Du-248        28.45%    failed      2.86%
+ 264  TULP_LP_121_Du-249        29.43%    passed      6.59%
+ 265  TULP_LP_122_Du-250        29.16%    passed      6.17%
+ 266  TULP_LP_140_Du-302        32.32%    passed     60.51%
+ 267  TULP_LP_141_Du-303        31.53%    passed     99.93%
+ 268  TULP_LP_142_Du-304        32.43%    passed     56.03%
+ 269  TULP_LP_143_Du-305        32.29%    passed     67.17%
+ 270  TULP_LP_144_Du-306        32.11%    passed     77.84%
+ 271  TULP_LP_145_Du-307        32.50%    passed     40.63%
+ 272  TULP_LP_146_Du-308        32.22%    passed     75.07%
+ 273  TULP_LP_147_Du-309        31.14%    passed     97.37%
+ 274  TULP_LP_148_Du-310        31.87%    passed     94.51%
+****  TOTAL                     31.32%  3 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: minimal branch length is reduced to 0.000000665451 for long alignment
+Checking for duplicate sequences: done in 0.000931025 secs using 595% CPU
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.028 seconds
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -168549.748
+Optimal log-likelihood: -168549.741
+Rate parameters:  A-C: 1.00160  A-G: 0.85649  A-T: 0.24623  C-G: 0.38773  C-T: 0.76698  G-T: 1.00000
+Base frequencies:  A: 0.317  C: 0.182  G: 0.176  T: 0.325
+Proportion of invariable sites: 0.493
+Gamma shape alpha: 0.454
+Parameters optimization took 1 rounds (0.204 sec)
+Time for fast ML tree search: 1.518 seconds
+
+NOTE: ModelFinder requires 580 MB RAM!
+ModelFinder will test up to 968 DNA models (sample size: 150274 epsilon: 0.100) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  JC            173004.663   545 347099.326   347103.300   352505.843
+  2  JC+I          172897.168   546 346886.336   346890.325   352302.773
+  3  JC+G4         172901.105   546 346894.211   346898.200   352310.648
+  4  JC+I+G4       172891.673   547 346877.346   346881.350   352303.704
+  5  JC+R2         172919.781   547 346933.563   346937.567   352359.921
+  6  JC+R3         172893.029   549 346884.058   346888.091   352330.256
+  7  JC+R4         172881.475   551 346864.950   346869.013   352330.989
+ 14  JC+I+R2       172889.600   548 346875.200   346879.219   352311.478
+ 15  JC+I+R3       172882.702   550 346865.403   346869.451   352321.522
+ 24  JC+I          172897.168   546 346886.336   346890.325   352302.773
+ 25  JC+G4         172901.105   546 346894.211   346898.200   352310.648
+ 26  JC+I+G4       172891.673   547 346877.346   346881.350   352303.704
+ 36  JC+I+R2       172889.600   548 346875.200   346879.219   352311.478
+ 46  F81+I         172885.246   546 346862.492   346866.482   352278.930
+ 47  F81+G4        172889.192   546 346870.384   346874.374   352286.822
+ 48  F81+I+G4      172879.767   547 346853.534   346857.538   352279.892
+ 58  F81+I+R2      172889.564   548 346875.129   346879.147   352311.407
+ 68  F81+F+I       168826.862   549 338751.724   338755.758   344197.923
+ 69  F81+F+G4      168829.946   549 338757.893   338761.926   344204.091
+ 70  F81+F+I+G4    168821.069   550 338742.138   338746.186   344198.257
+ 80  F81+F+I+R2    168830.252   551 338762.503   338766.566   344228.542
+ 90  K2P+I         172875.072   547 346844.145   346848.149   352270.503
+ 91  K2P+G4        172879.028   547 346852.057   346856.061   352278.415
+ 92  K2P+I+G4      172869.596   548 346835.191   346839.210   352271.469
+102  K2P+I+R2      172879.328   549 346856.655   346860.689   352302.854
+112  K2P+I         172875.073   547 346844.145   346848.149   352270.503
+113  K2P+G4        172879.028   547 346852.057   346856.061   352278.415
+114  K2P+I+G4      172869.596   548 346835.191   346839.210   352271.469
+124  K2P+I+R2      172879.328   549 346856.655   346860.689   352302.854
+134  HKY+I         172875.085   547 346844.170   346848.174   352270.528
+135  HKY+G4        172879.042   547 346852.084   346856.088   352278.442
+136  HKY+I+G4      172869.609   548 346835.218   346839.237   352271.496
+146  HKY+I+R2      172879.310   549 346856.621   346860.654   352302.819
+156  HKY+F+I       168806.848   550 338713.696   338717.744   344169.815
+157  HKY+F+G4      168809.825   550 338719.651   338723.699   344175.770
+158  HKY+F+I+G4    168801.012   551 338704.024   338708.086   344170.062
+168  HKY+F+I+R2    168810.105   552 338724.210   338728.288   344200.169
+178  TNe+I         172874.464   548 346844.929   346848.948   352281.207
+179  TNe+G4        172878.417   548 346852.835   346856.853   352289.113
+180  TNe+I+G4      172868.986   549 346835.972   346840.006   352282.171
+190  TNe+I+R2      172878.717   550 346857.433   346861.482   352313.552
+200  TNe+I         172874.465   548 346844.929   346848.948   352281.207
+201  TNe+G4        172878.417   548 346852.835   346856.853   352289.113
+202  TNe+I+G4      172868.986   549 346835.972   346840.006   352282.171
+212  TNe+I+R2      172878.717   550 346857.433   346861.482   352313.552
+222  TN+I          172874.468   548 346844.937   346848.955   352281.215
+223  TN+G4         172878.422   548 346852.843   346856.862   352289.121
+224  TN+I+G4       172868.991   549 346835.982   346840.015   352282.180
+234  TN+I+R2       172878.711   550 346857.422   346861.470   352313.541
+244  TN+F+I        168805.577   551 338713.153   338717.216   344179.192
+245  TN+F+G4       168808.550   551 338719.101   338723.163   344185.139
+246  TN+F+I+G4     168799.737   552 338703.474   338707.552   344179.433
+256  TN+F+I+R2     168808.810   553 338723.620   338727.713   344209.499
+266  K3P+I         172682.189   548 346460.378   346464.397   351896.656
+267  K3P+G4        172686.237   548 346468.475   346472.494   351904.753
+268  K3P+I+G4      172676.712   549 346451.424   346455.458   351897.623
+278  K3P+I+R2      172686.486   550 346472.972   346477.020   351929.090
+288  K3P+I         172682.189   548 346460.378   346464.397   351896.656
+289  K3P+G4        172686.237   548 346468.475   346472.494   351904.753
+290  K3P+I+G4      172676.712   549 346451.424   346455.458   351897.623
+300  K3P+I+R2      172686.486   550 346472.972   346477.020   351929.090
+310  K3Pu+I        172682.197   548 346460.394   346464.412   351896.672
+311  K3Pu+G4       172686.225   548 346468.451   346472.470   351904.729
+312  K3Pu+I+G4     172676.721   549 346451.441   346455.474   351897.639
+322  K3Pu+I+R2     172686.465   550 346472.930   346476.978   351929.049
+332  K3Pu+F+I      168552.142   551 338206.285   338210.348   343672.324
+333  K3Pu+F+G4     168554.825   551 338211.650   338215.713   343677.689
+334  K3Pu+F+I+G4   168546.106   552 338196.211   338200.289   343672.170
+344  K3Pu+F+I+R2   168555.018   553 338216.037   338220.129   343701.916
+354  TPM2+I        172873.927   548 346843.854   346847.873   352280.133
+355  TPM2+G4       172877.731   548 346851.462   346855.481   352287.740
+356  TPM2+I+G4     172868.404   549 346834.807   346838.841   352281.006
+366  TPM2+I+R2     172877.977   550 346855.955   346860.003   352312.073
+376  TPM2+I        172873.927   548 346843.854   346847.873   352280.133
+377  TPM2+G4       172877.731   548 346851.462   346855.481   352287.740
+378  TPM2+I+G4     172868.404   549 346834.807   346838.841   352281.006
+388  TPM2+I+R2     172877.977   550 346855.955   346860.003   352312.073
+398  TPM2u+I       172873.931   548 346843.863   346847.882   352280.141
+399  TPM2u+G4      172877.734   548 346851.468   346855.487   352287.747
+400  TPM2u+I+G4    172868.412   549 346834.825   346838.858   352281.023
+410  TPM2u+I+R2    172877.974   550 346855.949   346859.997   352312.067
+420  TPM2u+F+I     168778.491   551 338658.983   338663.045   344125.021
+421  TPM2u+F+G4    168781.207   551 338664.414   338668.477   344130.453
+422  TPM2u+F+I+G4  168772.533   552 338649.067   338653.144   344125.026
+432  TPM2u+F+I+R2  168781.411   553 338668.823   338672.915   344154.702
+442  TPM3+I        172873.495   548 346842.990   346847.009   352279.268
+443  TPM3+G4       172877.297   548 346850.593   346854.612   352286.871
+444  TPM3+I+G4     172867.965   549 346833.931   346837.964   352280.129
+454  TPM3+I+R2     172877.546   550 346855.091   346859.139   352311.210
+464  TPM3+I        172873.495   548 346842.990   346847.009   352279.269
+465  TPM3+G4       172877.297   548 346850.593   346854.612   352286.872
+466  TPM3+I+G4     172867.965   549 346833.931   346837.964   352280.129
+476  TPM3+I+R2     172877.546   550 346855.091   346859.140   352311.210
+486  TPM3u+I       172873.488   548 346842.975   346846.994   352279.254
+487  TPM3u+G4      172877.287   548 346850.574   346854.592   352286.852
+488  TPM3u+I+G4    172867.961   549 346833.922   346837.955   352280.120
+498  TPM3u+I+R2    172877.535   550 346855.070   346859.118   352311.188
+508  TPM3u+F+I     168778.262   551 338658.524   338662.587   344124.563
+509  TPM3u+F+G4    168781.021   551 338664.041   338668.104   344130.080
+510  TPM3u+F+I+G4  168772.259   552 338648.519   338652.596   344124.478
+520  TPM3u+F+I+R2  168781.237   553 338668.473   338672.566   344154.353
+530  TIMe+I        172681.577   549 346461.154   346465.187   351907.352
+531  TIMe+G4       172685.598   549 346469.195   346473.229   351915.394
+532  TIMe+I+G4     172676.088   550 346452.175   346456.224   351908.294
+542  TIMe+I+R2     172685.833   551 346473.666   346477.729   351939.705
+552  TIMe+I        172681.577   549 346461.154   346465.187   351907.352
+553  TIMe+G4       172685.598   549 346469.195   346473.229   351915.394
+554  TIMe+I+G4     172676.088   550 346452.175   346456.224   351908.294
+564  TIMe+I+R2     172685.833   551 346473.666   346477.729   351939.705
+574  TIM+I         172681.570   549 346461.141   346465.174   351907.339
+575  TIM+G4        172685.593   549 346469.185   346473.219   351915.384
+576  TIM+I+G4      172676.089   550 346452.179   346456.227   351908.297
+586  TIM+I+R2      172685.828   551 346473.656   346477.719   351939.694
+596  TIM+F+I       168550.842   552 338205.685   338209.762   343681.644
+597  TIM+F+G4      168553.538   552 338211.076   338215.154   343687.035
+598  TIM+F+I+G4    168544.824   553 338195.648   338199.741   343681.527
+608  TIM+F+I+R2    168553.725   554 338215.451   338219.558   343711.250
+618  TIM2e+I       172873.329   549 346844.659   346848.692   352290.857
+619  TIM2e+G4      172877.117   549 346852.235   346856.268   352298.433
+620  TIM2e+I+G4    172867.793   550 346835.586   346839.634   352291.704
+630  TIM2e+I+R2    172877.321   551 346856.643   346860.706   352322.682
+640  TIM2e+I       172873.329   549 346844.659   346848.692   352290.857
+641  TIM2e+G4      172877.117   549 346852.235   346856.268   352298.433
+642  TIM2e+I+G4    172867.793   550 346835.586   346839.634   352291.704
+652  TIM2e+I+R2    172877.321   551 346856.643   346860.706   352322.682
+662  TIM2+I        172873.318   549 346844.636   346848.669   352290.834
+663  TIM2+G4       172877.110   549 346852.220   346856.253   352298.418
+664  TIM2+I+G4     172867.791   550 346835.582   346839.630   352291.701
+674  TIM2+I+R2     172877.317   551 346856.635   346860.698   352322.674
+684  TIM2+F+I      168777.140   552 338658.280   338662.357   344134.239
+685  TIM2+F+G4     168779.866   552 338663.731   338667.809   344139.690
+686  TIM2+F+I+G4   168771.181   553 338648.363   338652.455   344134.242
+696  TIM2+F+I+R2   168780.062   554 338668.125   338672.232   344163.924
+706  TIM3e+I       172872.872   549 346843.743   346847.777   352289.942
+707  TIM3e+G4      172876.657   549 346851.315   346855.348   352297.513
+708  TIM3e+I+G4    172867.327   550 346834.655   346838.703   352290.773
+718  TIM3e+I+R2    172876.871   551 346855.743   346859.805   352321.781
+728  TIM3e+I       172872.872   549 346843.743   346847.777   352289.942
+729  TIM3e+G4      172876.657   549 346851.315   346855.348   352297.513
+730  TIM3e+I+G4    172867.327   550 346834.655   346838.703   352290.773
+740  TIM3e+I+R2    172876.871   551 346855.743   346859.805   352321.781
+750  TIM3+I        172872.855   549 346843.709   346847.743   352289.907
+751  TIM3+G4       172876.649   549 346851.297   346855.331   352297.495
+752  TIM3+I+G4     172867.324   550 346834.648   346838.696   352290.767
+762  TIM3+I+R2     172876.865   551 346855.731   346859.794   352321.769
+772  TIM3+F+I      168776.980   552 338657.961   338662.038   344133.920
+773  TIM3+F+G4     168779.795   552 338663.589   338667.667   344139.548
+774  TIM3+F+I+G4   168771.040   553 338648.079   338652.172   344133.958
+784  TIM3+F+I+R2   168779.998   554 338667.995   338672.103   344163.795
+794  TVMe+I        172680.653   550 346461.305   346465.354   351917.424
+795  TVMe+G4       172684.867   550 346469.733   346473.781   351925.852
+796  TVMe+I+G4     172675.215   551 346452.429   346456.492   351918.468
+806  TVMe+I+R2     172685.065   552 346474.129   346478.207   351950.088
+816  TVMe+I        172680.653   550 346461.305   346465.354   351917.424
+817  TVMe+G4       172684.867   550 346469.733   346473.781   351925.852
+818  TVMe+I+G4     172675.215   551 346452.429   346456.492   351918.468
+828  TVMe+I+R2     172685.065   552 346474.129   346478.207   351950.088
+838  TVM+I         172680.640   550 346461.280   346465.328   351917.399
+839  TVM+G4        172684.861   550 346469.723   346473.771   351925.841
+840  TVM+I+G4      172675.217   551 346452.434   346456.497   351918.473
+850  TVM+I+R2      172685.051   552 346474.103   346478.180   351950.062
+860  TVM+F+I       168545.282   553 338196.563   338200.656   343682.442
+861  TVM+F+G4      168547.947   553 338201.895   338205.987   343687.774
+862  TVM+F+I+G4    168539.215   554 338186.430   338190.538   343682.230
+872  TVM+F+I+R2    168548.113   555 338206.226   338210.348   343711.946
+882  SYM+I         172679.999   551 346461.997   346466.060   351928.036
+883  SYM+G4        172684.225   551 346470.450   346474.513   351936.489
+884  SYM+I+G4      172674.583   552 346453.166   346457.243   351929.125
+894  SYM+I+R2      172684.393   553 346474.786   346478.878   351960.665
+904  SYM+I         172679.999   551 346461.997   346466.060   351928.036
+905  SYM+G4        172684.225   551 346470.450   346474.513   351936.489
+906  SYM+I+G4      172674.583   552 346453.166   346457.243   351929.125
+916  SYM+I+R2      172684.393   553 346474.786   346478.878   351960.665
+926  GTR+I         172679.999   551 346461.998   346466.061   351928.037
+927  GTR+G4        172684.223   551 346470.445   346474.508   351936.484
+928  GTR+I+G4      172674.585   552 346453.170   346457.247   351929.129
+938  GTR+I+R2      172684.387   553 346474.774   346478.866   351960.653
+948  GTR+F+I       168544.016   554 338196.032   338200.139   343691.831
+949  GTR+F+G4      168546.667   554 338201.334   338205.441   343697.133
+950  GTR+F+I+G4    168537.949   555 338185.898   338190.020   343691.618
+960  GTR+F+I+R2    168546.844   556 338205.688   338209.825   343721.327
+Akaike Information Criterion:           GTR+F+I+G4
+Corrected Akaike Information Criterion: GTR+F+I+G4
+Bayesian Information Criterion:         K3Pu+F+I+G4
+Best-fit model: K3Pu+F+I+G4 chosen according to BIC
+
+All model information printed to supplementary_analysis/results/sensitivity/supplement-20260824-v26/strict/trees/chloroplast.primary.model.gz
+CPU time for ModelFinder: 484.679 seconds (0h:8m:4s)
+Wall-clock time for ModelFinder: 62.227 seconds (0h:1m:2s)
+Generating 1000 samples for ultrafast bootstrap (seed: 271828)...
+
+NOTE: 246 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Thoroughly optimizing +I+G parameters from 10 start values...
+Init pinv, alpha: 0.000, 0.454 / Estimate: 0.000, 0.020 / LogL: -168554.870
+Init pinv, alpha: 0.109, 0.454 / Estimate: 0.109, 0.083 / LogL: -168552.670
+Init pinv, alpha: 0.219, 0.454 / Estimate: 0.219, 0.158 / LogL: -168550.800
+Init pinv, alpha: 0.328, 0.454 / Estimate: 0.328, 0.241 / LogL: -168548.915
+Init pinv, alpha: 0.438, 0.454 / Estimate: 0.438, 0.362 / LogL: -168547.051
+Init pinv, alpha: 0.547, 0.454 / Estimate: 0.547, 0.575 / LogL: -168545.325
+Init pinv, alpha: 0.657, 0.454 / Estimate: 0.657, 1.062 / LogL: -168544.170
+Init pinv, alpha: 0.766, 0.454 / Estimate: 0.766, 3.016 / LogL: -168545.771
+Init pinv, alpha: 0.876, 0.454 / Estimate: 0.872, 998.324 / LogL: -168570.072
+Init pinv, alpha: 0.985, 0.454 / Estimate: 0.914, 998.435 / LogL: -168758.619
+Optimal pinv,alpha: 0.657, 1.062 / LogL: -168544.170
+
+Parameters optimization took 16.102 sec
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.05496 secs using 801% CPU
+Computing ML distances took 0.056155 sec (of wall-clock time) 0.449146 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.000209093 secs using 832.6% CPU
+Constructing RapidNJ tree: done in 0.00629687 secs using 885.5% CPU
+Computing RapidNJ tree took 0.006530 sec (of wall-clock time) 0.059073 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -168676.279
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 2.555 second
+Computing log-likelihood of 98 initial trees ... 3.320 seconds
+Current best score: -168544.170
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -168544.165
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -168542.865
+Iteration 10 / LogL: -168553.633 / Time: 0h:1m:33s
+Iteration 20 / LogL: -168554.971 / Time: 0h:1m:42s
+Finish initializing candidate tree set (20)
+Current best tree score: -168542.865 / CPU time: 23.679
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -168564.750 / Time: 0h:1m:48s (0h:1m:53s left)
+Iteration 40 / LogL: -168579.039 / Time: 0h:1m:53s (0h:1m:21s left)
+Iteration 50 / LogL: -168553.264 / Time: 0h:1m:59s (0h:1m:0s left)
+Iteration 60 / LogL: -168924.117 / Time: 0h:2m:4s (0h:0m:44s left)
+Iteration 70 / LogL: -168557.307 / Time: 0h:2m:10s (0h:0m:31s left)
+Iteration 80 / LogL: -168547.233 / Time: 0h:2m:15s (0h:0m:20s left)
+Iteration 90 / LogL: -168576.907 / Time: 0h:2m:21s (0h:0m:10s left)
+Iteration 100 / LogL: -168547.094 / Time: 0h:2m:27s (0h:0m:1s left)
+Refining ufboot trees with NNI 1 branch...
+100 samples done
+200 samples done
+300 samples done
+400 samples done
+500 samples done
+600 samples done
+700 samples done
+800 samples done
+900 samples done
+1000 samples done
+Total 1000 ufboot trees refined
+TREE SEARCH COMPLETED AFTER 103 ITERATIONS / Time: 0h:7m:9s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -168542.865
+Optimal log-likelihood: -168542.859
+Rate parameters:  A-C: 1.00000  A-G: 0.80672  A-T: 0.28107  C-G: 0.28107  C-T: 0.80672  G-T: 1.00000
+Base frequencies:  A: 0.317  C: 0.182  G: 0.176  T: 0.325
+Proportion of invariable sites: 0.657
+Gamma shape alpha: 1.083
+Parameters optimization took 1 rounds (0.191 sec)
+BEST SCORE FOUND : -168542.859
+
+Testing tree branches by SH-like aLRT with 1000 replicates...
+9.572 sec.
+Creating bootstrap support values...
+Split supports printed to NEXUS file supplementary_analysis/results/sensitivity/supplement-20260824-v26/strict/trees/chloroplast.primary.splits.nex
+Total tree length: 0.023
+
+Total number of iterations: 103
+CPU time used for tree search: 2722.499 sec (0h:45m:22s)
+Wall-clock time used for tree search: 350.592 sec (0h:5m:50s)
+Total CPU time used: 3418.942 sec (0h:56m:58s)
+Total wall-clock time used: 439.541 sec (0h:7m:19s)
+UFBoot trees printed to supplementary_analysis/results/sensitivity/supplement-20260824-v26/strict/trees/chloroplast.primary.ufboot
+
+Computing bootstrap consensus tree...
+Reading input file supplementary_analysis/results/sensitivity/supplement-20260824-v26/strict/trees/chloroplast.primary.splits.nex...
+274 taxa and 3107 splits.
+Consensus tree written to supplementary_analysis/results/sensitivity/supplement-20260824-v26/strict/trees/chloroplast.primary.contree
+Reading input trees file supplementary_analysis/results/sensitivity/supplement-20260824-v26/strict/trees/chloroplast.primary.contree
+Log-likelihood of consensus tree: -168590.987
+
+Analysis results written to: 
+  IQ-TREE report:                supplementary_analysis/results/sensitivity/supplement-20260824-v26/strict/trees/chloroplast.primary.iqtree
+  Maximum-likelihood tree:       supplementary_analysis/results/sensitivity/supplement-20260824-v26/strict/trees/chloroplast.primary.treefile
+  Likelihood distances:          supplementary_analysis/results/sensitivity/supplement-20260824-v26/strict/trees/chloroplast.primary.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          supplementary_analysis/results/sensitivity/supplement-20260824-v26/strict/trees/chloroplast.primary.splits.nex
+  Consensus tree:                supplementary_analysis/results/sensitivity/supplement-20260824-v26/strict/trees/chloroplast.primary.contree
+  UFBoot trees:                  supplementary_analysis/results/sensitivity/supplement-20260824-v26/strict/trees/chloroplast.primary.ufboot
+  Screen log file:               supplementary_analysis/results/sensitivity/supplement-20260824-v26/strict/trees/chloroplast.primary.log
+
+Date and Time: Mon Aug 24 23:38:56 2026

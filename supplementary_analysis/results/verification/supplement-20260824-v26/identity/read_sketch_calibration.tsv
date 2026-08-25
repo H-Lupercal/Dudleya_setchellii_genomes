@@ -1,0 +1,3 @@
+control_type	count	minimum	median	maximum	candidate_cutoff	candidate_rule
+within_library_R1_vs_R2	10	0.0120368	0.0145175	0.0363451	0.0120368	distance<=minimum_within_library_split_control_and_below_different_library_floor
+different_library	1	0.0690053	0.0690053	0.0690053	0.0120368	distance<=minimum_within_library_split_control_and_below_different_library_floor

@@ -1,0 +1,2 @@
+taxon_space	rf_numerator	rf_denominator	normalized_unrooted_rf	branch_rule	interpretation
+229_mitochondrial_unique_representatives	64	96	0.666666666667	retain only SH-aLRT>=80 and UFBoot>=95	supported-topology compatibility; not total evolutionary disagreement

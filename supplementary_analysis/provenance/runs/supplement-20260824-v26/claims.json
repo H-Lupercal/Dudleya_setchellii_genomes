@@ -1,0 +1,61 @@
+{
+  "executable_versions": {
+    "bcftools": "bcftools 1.24",
+    "git": "git version 2.43.0",
+    "iqtree3": "IQ-TREE version 3.1.2 for Linux x86 64-bit built May 17 2026",
+    "mash": "2.3",
+    "outline": "Usage: outline [options] infile",
+    "python": "3.14.6",
+    "samtools": "samtools 1.23.1"
+  },
+  "fingerprint": {
+    "commands": [
+      "map sensitivity status to claims"
+    ],
+    "digest": "4858b6ebbd1f132c90d40f0ffa3d1df7c2920f2b49eb5492895019530f4273ce",
+    "git_commit": "24e2877c88fe98975a946522de54708c0040b65d",
+    "inputs": {
+      "canonical_publication/pipeline/src/organelle_pipeline/analysis.py": "539cd1780aaea88fb361bcaf72613b3be54826799a603b94094de6194c1d51ed",
+      "canonical_publication/pipeline/src/organelle_pipeline/consensus.py": "3dc9acaae5c284a739bde0267163fab1fc74400b4575853d8a73c962f4bdc22e",
+      "canonical_publication/pipeline/src/organelle_pipeline/haplotypes.py": "47ae60ab2255154b81293e8543e4a885cc576a6d38791214ed7c5308075d2fc7",
+      "canonical_publication/pipeline/src/organelle_pipeline/ordination.py": "00020dbe696d617433803ba3e183bbb102dfb58b500dcf394834a40739cef056",
+      "canonical_publication/pipeline/src/organelle_pipeline/popgen.py": "4a9d3708f181fd77d211d04abe699a2801b7ac21f518c75a09a25f7033c44ba2",
+      "canonical_publication/pipeline/src/organelle_pipeline/variants.py": "81656213ebdd4e08201380d18bfdc71f0c61a62e314996558061df7ced3b9243",
+      "supplementary_analysis/config/supplementary_config.v2.6.toml": "c9067a67b35b03070cf7aa874a6f0368e8834f4748c0ce034b891f3dbebfb2a8",
+      "supplementary_analysis/pipeline/scripts/run_pipeline.py": "7eabddba7163128b535e5abd7497af15b05ddde7e81335bb403b9b6238db1758",
+      "supplementary_analysis/pipeline/scripts/run_stage.py": "31d9bc5ac7db1bb5822a6a8ac76a728079a270ce4a3d6a3660d4db45d4fbe2d1",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/__init__.py": "41f7b69d55ff6cefcae56d0d8abf2cda8611f6d958608e8a072b18372beb71cd",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/comparative.py": "f425da4fea172717460e77e62e40677699ceb9e3f43224a620c85260283e6169",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/comparative_analysis.py": "3c8aef2e396d08f3be465869684d16c6d6b8f80d54f862f2348697099f507ced",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/configuration.py": "dfe1ebcc91ee308fd7a253a17bb4e47664ae79b48b6fcb0b38a7f3a5c24fed3c",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/documentation.py": "81a9724433ec850cd6e9771a22dcd675b0a48d471c184a620827f86c79d054b9",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/figures.py": "77e7ec45380f277696aea92edb074665a31a0ef670b2e07b52f94943ed439e7a",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/finalization.py": "334986a0edf27f26ed136bb6c61645e232c4085b2d2875fa69c2e82f7882cbd5",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/identity.py": "97e91b60a2394cbdc5ff0d1d8662ff0f6d37ca18ca85ec7c6993e9c9c6dd294e",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/identity_audit.py": "8367d8bc30df8f0581b854ed1983571c5dea83b24708971ae6ead113be93f3d8",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/io.py": "2288d39ae798f5500ee1a4287bb23c2eef6233ed584ed3971e02c01a30158576",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/likelihood.py": "58fe8c3afc7fd4c1723043b2a9a0b5edfccfe08b27fb71ef6f42a63c42019ebb",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/metadata.py": "2e977929072473a285d8a669d19af349b811f23ff72c2d05277cc35cf18ad5e3",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/paths.py": "7453b00287392044539f37f1920ee64b330df72674d435939d4687ba59515bb3",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/phylogeny.py": "877c6c89762132fd7d226088ce1daba2027f17a0a0e6357508ffe4faa293fb51",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/provenance.py": "266c438d85aca599807cd1f649d11d305cdafce0bc1993a6b885a1aeeaeeb8b9",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/rendering.py": "21155ee094c4a6ebc860db89bae0495126c26a8c904386ef09a4534c7ec55a80",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/reporting.py": "0d28ecd87411a0431a6eb3ed52f096fc19c370b367f477bede536cf37973c7ed",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/scenario.py": "617c6e32166abf117d065a991197483869a5c29e980b6ec46fe4d6904a0f7cdd",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/sensitivity.py": "ee36e510faa568d7f44c0e5bb8e5bb27ba189814b88062b61377f4fe6b000497",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/stages.py": "bdb86a42e882239ce1a87f43ac4b567716a2415edaa53d74a12e26188388a7dc",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/technical_sensitivity.py": "fe490190bbec48dd5aa07405b543a3f36b9560f9c58f0abd572233007844e387",
+      "supplementary_analysis/pipeline/src/dudleya_supplement/workflow.py": "aa6978859891dc9993e097a84f24b5d0ff2280d4c4b5d5a08c8f508f32742701",
+      "supplementary_analysis/provenance/manifests/publication-20260817.canonical_filesystem_snapshot.json": "574bfe9807949286b402032357f6473d9fa62bb51b0fd260c9a64aab5cb60d90"
+    },
+    "stage": "claims",
+    "upstream": {
+      "sensitivity": "58630b1465f8f537edbb2d12413761bc67830859ab316b4e5787104977b689b8"
+    }
+  },
+  "outputs": {
+    "supplementary_analysis/reports/manuscript_support/supplement-20260824-v26/claim_analysis_decisions.phase1.tsv": "5300869c8030be29de34443829f99e5cac07d405e32f9872e348fea61c0073d7"
+  },
+  "stage": "claims",
+  "status": "complete"
+}

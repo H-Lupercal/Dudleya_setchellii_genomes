@@ -1,0 +1,3 @@
+organelle	samples	canonical_mac2_markers	fully_called_mac2_markers	protest_r	protest_p	permutations	seed	status
+chloroplast	276	2023	1111	0.800377571953	0.0001	9999	424318	PASS_WITH_CAVEAT
+mitochondria	271	122	31	0.79769593609	0.0001	9999	424319	FAIL
