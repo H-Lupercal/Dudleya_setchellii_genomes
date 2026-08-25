@@ -38,14 +38,18 @@ def write_claim_decisions(root: Path, run_id: str) -> list[Path]:
             "analysis": "Filtering and mitochondrial-mask sensitivity",
             "metric": "pi",
             "result_status": aggregate("pi"),
-            "required_interpretation_change": "Report ranges and identify threshold-sensitive populations if caveat/fail",
+            "required_interpretation_change": (
+                "Use sensitivity_extreme_cases.tsv to report local extremes; DUSE is excluded from population inference"
+            ),
         },
         {
             "claim": "Relative population differentiation is robust to approved filtering thresholds",
             "analysis": "Filtering and mitochondrial-mask sensitivity",
             "metric": "fst",
             "result_status": aggregate("fst"),
-            "required_interpretation_change": "Restrict claims to consistently supported pairwise contrasts if caveat/fail",
+            "required_interpretation_change": (
+                "Use sensitivity_extreme_cases.tsv and restrict claims to consistently supported pairs; DUSE is excluded"
+            ),
         },
         {
             "claim": "Leading ordination structure is not a filtering artifact",
@@ -55,12 +59,22 @@ def write_claim_decisions(root: Path, run_id: str) -> list[Path]:
             "required_interpretation_change": "Describe threshold-dependent structure rather than stable clusters if caveat/fail",
         },
         {
+            "claim": "Leading ordination structure persists when missing-genotype imputation is eliminated",
+            "analysis": "Fully called-site PCA and PC1-PC3 technical-covariate tests",
+            "metric": "technical_confounder_sensitivity",
+            "result_status": "PENDING_PHASE2",
+            "required_interpretation_change": (
+                "Report whether fully called-site PCA is stable and state that covariate correlations do not establish causation"
+            ),
+        },
+        {
             "claim": "Organelle alignments contain tree-like phylogenetic information",
             "analysis": "Likelihood mapping",
             "metric": "seven_region_likelihood_mapping",
             "result_status": "PENDING_PHASE2",
             "required_interpretation_change": (
-                "State insufficient resolution or conflicting signal according to the predeclared decision rule"
+                "State insufficient resolution or conflicting signal under the rule; describe organelle lineages without "
+                "assuming inheritance mode"
             ),
         },
         {
@@ -68,7 +82,9 @@ def write_claim_decisions(root: Path, run_id: str) -> list[Path]:
             "analysis": "Support-contracted tanglegram and normalized unrooted RF",
             "metric": "supported_topology_compatibility",
             "result_status": "PENDING_PHASE2",
-            "required_interpretation_change": "Avoid total-history disagreement language; report numerator and denominator",
+            "required_interpretation_change": (
+                "Keep the comparison unrooted; avoid total-history disagreement language; report numerator and denominator"
+            ),
         },
         {
             "claim": "Observed population-diversity patterns are not solely consequences of marker count or sample size",

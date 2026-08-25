@@ -22,7 +22,7 @@ from organelle_pipeline.variants import build_all_sites_call_command, build_prim
 from sklearn.decomposition import PCA
 
 from .io import read_tsv, write_tsv
-from .sensitivity import classify_fst, classify_pi, compare_pi, procrustes_permutation_test
+from .sensitivity import classify_fst, classify_pi, compare_pi, procrustes_permutation_test, rank_extreme_cases
 
 ORGANELLES = ("chloroplast", "mitochondria")
 
@@ -621,11 +621,12 @@ def _coordinate_matrix(path: Path, common: list[str]) -> np.ndarray:
     return np.asarray([[float(rows[sample][f"PC{component}"]) for component in range(1, 4)] for sample in common])
 
 
-def summarize_sensitivity(root: Path, run_id: str, protest_seeds: list[int]) -> tuple[Path, Path]:
+def summarize_sensitivity(root: Path, run_id: str, protest_seeds: list[int]) -> tuple[Path, Path, Path]:
     base = root / f"supplementary_analysis/results/sensitivity/{run_id}"
     scenarios = ("permissive", "strict", "mtmask70", "mtmask90")
     summary_rows: list[dict[str, object]] = []
     status_rows: list[dict[str, object]] = []
+    extreme_rows: list[dict[str, object]] = []
     seed_index = 0
     for scenario_name in scenarios:
         organelles = ORGANELLES if scenario_name in {"permissive", "strict"} else ("mitochondria",)
@@ -650,6 +651,24 @@ def summarize_sensitivity(root: Path, run_id: str, protest_seeds: list[int]) -> 
 
             rho = float(spearmanr(left, right).statistic) if len(common_pairs) > 1 else float("nan")
             deltas = [abs(a - b) for a, b in zip(left, right, strict=True)]
+            extreme_rows.extend(
+                rank_extreme_cases(
+                    canonical_pi,
+                    scenario_pi,
+                    scenario=scenario_name,
+                    organelle=organelle,
+                    metric="pi",
+                )
+            )
+            extreme_rows.extend(
+                rank_extreme_cases(
+                    canonical_fst,
+                    scenario_fst,
+                    scenario=scenario_name,
+                    organelle=organelle,
+                    metric="fst",
+                )
+            )
             canonical_coords = {row["sample_id"] for row in read_tsv(base / f"canonical/pca/{organelle}.coordinates.tsv")}
             scenario_coords = {row["sample_id"] for row in read_tsv(base / f"{scenario_name}/pca/{organelle}.coordinates.tsv")}
             common_samples = sorted(canonical_coords & scenario_coords)
@@ -716,9 +735,29 @@ def summarize_sensitivity(root: Path, run_id: str, protest_seeds: list[int]) -> 
             )
     summary_path = base / "sensitivity_summary.tsv"
     status_path = base / "sensitivity_status.tsv"
+    extremes_path = base / "sensitivity_extreme_cases.tsv"
     write_tsv(summary_path, summary_rows, list(summary_rows[0]), root)
     write_tsv(status_path, status_rows, ["scenario", "organelle", "metric", "status"], root)
-    return summary_path, status_path
+    write_tsv(
+        extremes_path,
+        extreme_rows,
+        [
+            "scenario",
+            "organelle",
+            "metric",
+            "rank",
+            "population_1",
+            "population_2",
+            "canonical_value",
+            "scenario_value",
+            "signed_change",
+            "absolute_change",
+            "proportional_change",
+            "transition_type",
+        ],
+        root,
+    )
+    return summary_path, status_path, extremes_path
 
 
 def run_all_sensitivity(root: Path, run_id: str, config: dict[str, object]) -> list[Path]:

@@ -10,12 +10,16 @@ from pathlib import Path
 
 import numpy as np
 from Bio import Phylo, SeqIO
+from organelle_pipeline.ordination import prepare_haploid_pca_matrix
 from scipy.stats import spearmanr
+from sklearn.decomposition import PCA
 
 from .comparative import normalized_unrooted_rf, supported_contracted_tree, validate_resampling_spec
 from .io import read_tsv, write_tsv
 from .phylogeny import parse_identical_sequence_map
 from .scenario import run_scenario_popgen
+from .sensitivity import procrustes_permutation_test
+from .technical_sensitivity import EXPECTED_FULLY_CALLED_MARKERS, classify_pca_sensitivity, select_fully_called_markers
 
 
 def _records(path: Path) -> dict[str, str]:
@@ -149,6 +153,141 @@ def run_technical_confounders(root: Path, run_id: str) -> list[Path]:
             row["bh_adjusted_p_within_organelle"] = f"{adjusted:.12g}"
     write_tsv(output, rows, list(rows[0]), root)
     return [output]
+
+
+def _vcf_genotypes(path: Path) -> tuple[list[str], np.ndarray]:
+    samples = subprocess.run(["bcftools", "query", "-l", str(path)], capture_output=True, text=True, check=True).stdout.splitlines()
+    query = subprocess.run(
+        ["bcftools", "query", "-f", "%POS[\t%GT]\n", str(path)], capture_output=True, text=True, check=True
+    ).stdout.splitlines()
+    markers = [[float(value) if value in {"0", "1"} else np.nan for value in line.split("\t")[1:]] for line in query]
+    if not markers:
+        raise RuntimeError(f"No markers available for fully called-site PCA: {path}")
+    return samples, np.asarray(markers, dtype=float).T
+
+
+def run_complete_site_pca_sensitivity(root: Path, run_id: str, config: dict[str, object]) -> list[Path]:
+    output_dir = root / f"supplementary_analysis/results/comparative/{run_id}/technical_sensitivity"
+    output_dir.mkdir(parents=True, exist_ok=True)
+    protest_seeds = [int(value) for value in config["seeds"]["complete_pca_protest"]]  # type: ignore[index]
+    confounder_seed = int(config["seeds"]["complete_pca_confounders_start"])  # type: ignore[index]
+    breadth_rows = {
+        row["sample_id"]: row for row in read_tsv(root / "canonical_publication/results/qc/publication-20260817/sample_breadth.tsv")
+    }
+    summary_rows: list[dict[str, object]] = []
+    association_rows: list[dict[str, object]] = []
+    outputs: list[Path] = []
+    for organelle_index, (organelle, prefix) in enumerate((("chloroplast", "cp"), ("mitochondria", "mt"))):
+        source = root / f"canonical_publication/results/variants/publication-20260817/{organelle}.mac2_ordination.vcf.gz"
+        filtered = output_dir / f"{organelle}.complete_sites.vcf.gz"
+        subprocess.run(["bcftools", "view", "-i", "F_MISSING=0", "-Oz", "-o", str(filtered), str(source)], check=True)
+        subprocess.run(["bcftools", "index", "-f", str(filtered)], check=True)
+        samples, genotypes = _vcf_genotypes(filtered)
+        complete = select_fully_called_markers(genotypes)
+        if complete.shape[1] != EXPECTED_FULLY_CALLED_MARKERS[organelle]:
+            raise RuntimeError(
+                f"Expected {EXPECTED_FULLY_CALLED_MARKERS[organelle]} fully called {organelle} MAC>=2 SNPs, found {complete.shape[1]}"
+            )
+        matrix = prepare_haploid_pca_matrix(complete)
+        component_count = min(10, matrix.shape[0] - 1, matrix.shape[1])
+        model = PCA(n_components=component_count, svd_solver="full")
+        coordinates = model.fit_transform(matrix)
+        canonical_rows = {
+            row["sample_id"]: row
+            for row in read_tsv(root / f"canonical_publication/results/pca/publication-20260817/{organelle}.coordinates.tsv")
+        }
+        if set(samples) != set(canonical_rows):
+            raise RuntimeError(f"Fully called-site PCA sample mismatch for {organelle}")
+        coordinate_path = output_dir / f"{organelle}.complete_sites.coordinates.tsv"
+        variance_path = output_dir / f"{organelle}.complete_sites.variance.tsv"
+        coordinate_rows = [
+            {
+                "sample_id": sample,
+                "popcode": canonical_rows[sample]["popcode"],
+                **{f"PC{index + 1}": f"{value:.12g}" for index, value in enumerate(values)},
+            }
+            for sample, values in zip(samples, coordinates, strict=True)
+        ]
+        write_tsv(
+            coordinate_path,
+            coordinate_rows,
+            ["sample_id", "popcode", *[f"PC{index}" for index in range(1, component_count + 1)]],
+            root,
+        )
+        write_tsv(
+            variance_path,
+            [
+                {"component": f"PC{index}", "explained_variance_ratio": f"{value:.12g}"}
+                for index, value in enumerate(model.explained_variance_ratio_, 1)
+            ],
+            ["component", "explained_variance_ratio"],
+            root,
+        )
+        canonical_matrix = np.asarray(
+            [[float(canonical_rows[sample][f"PC{component}"]) for component in range(1, 4)] for sample in samples]
+        )
+        protest = procrustes_permutation_test(
+            canonical_matrix,
+            coordinates[:, :3],
+            permutations=9999,
+            seed=protest_seeds[organelle_index],
+        )
+        status = classify_pca_sensitivity(protest.correlation, protest.p_value)
+        summary_rows.append(
+            {
+                "organelle": organelle,
+                "samples": len(samples),
+                "canonical_mac2_markers": int(
+                    subprocess.run(["bcftools", "view", "-H", str(source)], capture_output=True, text=True, check=True).stdout.count("\n")
+                ),
+                "fully_called_mac2_markers": complete.shape[1],
+                "protest_r": f"{protest.correlation:.12g}",
+                "protest_p": f"{protest.p_value:.12g}",
+                "permutations": protest.permutations,
+                "seed": protest.seed,
+                "status": status,
+            }
+        )
+        summaries = {
+            row["sample_id"]: row
+            for row in read_tsv(root / f"canonical_publication/results/alignments/publication-20260817/{organelle}.callable_summary.tsv")
+        }
+        start = len(association_rows)
+        p_values: list[float] = []
+        for component in range(1, 4):
+            pc_values = coordinates[:, component - 1]
+            variables = {
+                "missingness": np.asarray([1.0 - float(summaries[sample]["callable_fraction_of_analysis_mask"]) for sample in samples]),
+                "log_depth": np.asarray(
+                    [math.log1p(float(breadth_rows[sample][f"{prefix}_unique_sites_mean_depth"])) for sample in samples]
+                ),
+                "reference_concordance": np.asarray([float(summaries[sample]["callable_reference_identity"]) for sample in samples]),
+            }
+            for variable, values in variables.items():
+                rho, p_value = _permutation_spearman(pc_values, values, confounder_seed)
+                association_rows.append(
+                    {
+                        "organelle": organelle,
+                        "component": f"PC{component}",
+                        "technical_variable": variable,
+                        "spearman_rho": f"{rho:.12g}",
+                        "permutation_p": f"{p_value:.12g}",
+                        "permutations": 9999,
+                        "seed": confounder_seed,
+                        "bh_adjusted_p_within_organelle": "",
+                        "interpretation_limit": ("association cannot distinguish genuine divergence from reference-mapping bias"),
+                    }
+                )
+                p_values.append(p_value)
+                confounder_seed += 1
+        for row, adjusted in zip(association_rows[start:], _bh_adjust(p_values), strict=True):
+            row["bh_adjusted_p_within_organelle"] = f"{adjusted:.12g}"
+        outputs.extend([filtered, Path(f"{filtered}.csi"), coordinate_path, variance_path])
+    summary_path = output_dir / "complete_site_pca_summary.tsv"
+    associations_path = output_dir / "complete_site_technical_confounders.tsv"
+    write_tsv(summary_path, summary_rows, list(summary_rows[0]), root)
+    write_tsv(associations_path, association_rows, list(association_rows[0]), root)
+    return [*outputs, summary_path, associations_path]
 
 
 def _representative_names(path: Path) -> list[str]:
@@ -476,10 +615,11 @@ def run_coordinate_tracks(root: Path, run_id: str) -> list[Path]:
     return [output]
 
 
-def run_comparative_analyses(root: Path, run_id: str) -> list[Path]:
+def run_comparative_analyses(root: Path, run_id: str, config: dict[str, object]) -> list[Path]:
     return [
         *run_identity_sensitivity(root, run_id),
         *run_technical_confounders(root, run_id),
+        *run_complete_site_pca_sensitivity(root, run_id, config),
         *run_organelle_comparison(root, run_id),
         *run_population_resampling(root, run_id),
         *run_coordinate_tracks(root, run_id),

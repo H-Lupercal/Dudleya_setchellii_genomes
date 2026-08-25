@@ -47,6 +47,9 @@ def main() -> int:
         raise SystemExit("Supplementary configuration must be beneath supplementary_analysis/")
     config = tomllib.loads(config_path.read_text())
     validate_config(config)
+    configured_run_id = config["workflow"].get("run_id")
+    if configured_run_id is not None and args.run_id != configured_run_id:
+        raise SystemExit(f"Configuration requires --run-id {configured_run_id}")
     start, end = STAGES.index(args.from_stage), STAGES.index(args.until_stage)
     if start > end:
         raise SystemExit("--from-stage must not follow --until-stage")
@@ -76,6 +79,6 @@ def main() -> int:
         if args.resume:
             command.append("--resume")
         print(f"{role} {stage}: {' '.join(command)}", flush=True)
-        if not args.dry_run and STAGES.index(stage) >= start:
+        if not args.dry_run:
             subprocess.run(command, cwd=root, env=environment, check=True)
     return 0

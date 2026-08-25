@@ -12,12 +12,24 @@ from .provenance import sha256_file
 from .reporting import acceptance_checks
 
 
+def scientific_claim_summary(claim_rows: list[dict[str, str]]) -> dict[str, object]:
+    counts: dict[str, int] = {}
+    for row in claim_rows:
+        status = row["result_status"]
+        counts[status] = counts.get(status, 0) + 1
+    return {
+        "status_counts": dict(sorted(counts.items())),
+        "all_scientific_claims_pass_without_caveat": set(counts) <= {"PASS"},
+    }
+
+
 def resolve_phase2_claims(
     claim_rows: list[dict[str, str]],
     *,
     likelihood_rows: list[dict[str, str]],
     rf_row: dict[str, str],
     resampling_summary: dict[str, str],
+    technical_sensitivity_rows: list[dict[str, str]],
 ) -> list[dict[str, str]]:
     """Replace Phase-2 placeholders with results and required interpretation."""
     rows = [dict(row) for row in claim_rows]
@@ -29,16 +41,20 @@ def resolve_phase2_claims(
     composition_caveats = [row["organelle"] for row in likelihood_rows if int(row.get("composition_failed_count", "0")) > 0]
     likelihood_claim = by_metric["seven_region_likelihood_mapping"]
     likelihood_claim["result_status"] = "FAIL" if likelihood_failures else "PASS_WITH_CAVEAT" if composition_caveats else "PASS"
+    mitochondrial_likelihood = next((row for row in likelihood_rows if row["organelle"] == "mitochondria"), None)
     likelihood_claim["required_interpretation_change"] = (
         f"Report insufficient resolution for {','.join(likelihood_failures)}; do not infer a network from unresolved signal"
         if likelihood_failures
         else (
-            "Present trees as unrooted and report composition-test failures for "
-            f"{','.join(composition_caveats)}; no NeighborNet trigger was met"
+            "Most mitochondrial quartets were resolved, but information was weaker than chloroplast and close to the "
+            "predeclared unresolved threshold; severe missingness/composition diagnostics require cautious interpretation; "
+            f"composition failures occurred for {','.join(composition_caveats)}; no NeighborNet trigger was met"
             if composition_caveats
             else "Present both organelle trees as unrooted; no NeighborNet trigger was met"
         )
     )
+    if mitochondrial_likelihood is not None and float(mitochondrial_likelihood["center_fraction"]) >= 0.14:
+        likelihood_claim["result_status"] = "PASS_WITH_CAVEAT"
 
     rf_numerator = int(rf_row["rf_numerator"])
     rf_denominator = int(rf_row["rf_denominator"])
@@ -65,6 +81,14 @@ def resolve_phase2_claims(
         if sample_robust and not marker_robust
         else "Interpret marker-count and sample-size controls according to population_resampling_summary.tsv"
     )
+
+    technical_claim = by_metric["technical_confounder_sensitivity"]
+    technical_statuses = {row["status"] for row in technical_sensitivity_rows}
+    technical_claim["result_status"] = "FAIL" if "FAIL" in technical_statuses else "PASS_WITH_CAVEAT"
+    technical_claim["required_interpretation_change"] = (
+        "Leading structure is associated with technical/reference-related covariates, but those correlations "
+        "cannot distinguish genuine divergence from reference-mapping bias; report fully called-site PCA stability"
+    )
     return rows
 
 
@@ -73,6 +97,13 @@ def write_reports(root: Path, run_id: str) -> list[Path]:
     report_dir.mkdir(parents=True, exist_ok=True)
     sensitivity = read_tsv(root / f"supplementary_analysis/results/sensitivity/{run_id}/sensitivity_status.tsv")
     likelihood = read_tsv(root / f"supplementary_analysis/results/phylogeny/{run_id}/likelihood_mapping/likelihood_mapping_summary.tsv")
+    likelihood_sensitivity = read_tsv(
+        root / f"supplementary_analysis/results/phylogeny/{run_id}/likelihood_mapping_sensitivity/likelihood_mapping_sensitivity.tsv"
+    )[0]
+    technical_sensitivity = read_tsv(
+        root / f"supplementary_analysis/results/comparative/{run_id}/technical_sensitivity/complete_site_pca_summary.tsv"
+    )
+    sketch_calibration = read_tsv(root / f"supplementary_analysis/results/verification/{run_id}/identity/read_sketch_calibration.tsv")
     rf = read_tsv(root / f"supplementary_analysis/results/comparative/{run_id}/organelle_comparison/supported_unrooted_rf.tsv")[0]
     fst_agreement = read_tsv(
         root / f"supplementary_analysis/results/comparative/{run_id}/organelle_comparison/common_pair_fst_agreement.tsv"
@@ -82,7 +113,13 @@ def write_reports(root: Path, run_id: str) -> list[Path]:
     )[0]
     phase1_claim_path = claim_decision_path(root, run_id, phase1=True)
     claim_path = claim_decision_path(root, run_id, phase1=False)
-    claim_rows = resolve_phase2_claims(read_tsv(phase1_claim_path), likelihood_rows=likelihood, rf_row=rf, resampling_summary=resampling)
+    claim_rows = resolve_phase2_claims(
+        read_tsv(phase1_claim_path),
+        likelihood_rows=likelihood,
+        rf_row=rf,
+        resampling_summary=resampling,
+        technical_sensitivity_rows=technical_sensitivity,
+    )
     write_tsv(claim_path, claim_rows, list(claim_rows[0]), root)
     report = report_dir / "supplementary_analysis_report.md"
     status_lines = "\n".join(f"- {row['scenario']} {row['organelle']} {row['metric']}: {row['status']}" for row in sensitivity)
@@ -94,6 +131,15 @@ def write_reports(root: Path, run_id: str) -> list[Path]:
         f"{row.get('over_50pct_ambiguity_count', 'not_recorded')}."
         for row in likelihood
     )
+    technical_lines = "\n".join(
+        f"- {row['organelle']}: {row['fully_called_mac2_markers']} fully called MAC≥2 SNPs; "
+        f"PC1–PC3 Procrustes r={float(row['protest_r']):.4f}, p={float(row['protest_p']):.4g} ({row['status']})."
+        for row in technical_sensitivity
+    )
+    within_controls = next(row for row in sketch_calibration if row["control_type"] == "within_library_R1_vs_R2")
+    different_controls = next(row for row in sketch_calibration if row["control_type"] == "different_library")
+    primary_mt = next(row for row in likelihood if row["organelle"] == "mitochondria")
+    threshold_margin = 100 * (0.15 - float(primary_mt["center_fraction"]))
     report.write_text(
         f"""# Supplementary analysis report — {run_id}
 
@@ -123,10 +169,32 @@ is unresolved. Geography was `not_run:no_approved_coordinates`.
 
 Scientific caveats or failures remain visible in the figures and require interpretation changes
 recorded in `claim_analysis_decisions.tsv`; they are not provenance failures.
+The ten largest population-level π and pairwise FST changes for each nonzero comparison are
+reported in `sensitivity_extreme_cases.tsv`; global PASS labels do not erase these local extremes.
+
+## Technical-confounder sensitivity
+
+{technical_lines}
+
+Leading chloroplast structure is strongly associated with reference concordance in the primary
+analysis. These associations cannot distinguish genuine biological divergence from reference-mapping
+bias and therefore do not demonstrate that PCA structure is artifactual. The fully called-site PCA
+tests whether missing-genotype imputation materially changes the leading axes; it does not resolve
+the biological-versus-reference-bias ambiguity.
 
 ## Phylogenetic information
 
 {likelihood_lines}
+
+Most sampled mitochondrial quartets were resolved, but mitochondrial information content was
+substantially weaker than chloroplast and lay only {threshold_margin:.2f} percentage points below
+the predeclared unresolved threshold. Severe missingness and composition diagnostics in the primary
+full-length alignment require cautious interpretation. A diagnostic-only likelihood map restricted
+to the exact 43,182-base mitochondrial analysis mask resolved
+{100 * float(likelihood_sensitivity["resolved_fraction"]):.2f}% of quartets, with
+{100 * float(likelihood_sensitivity["side_fraction"]):.2f}% partly resolved and
+{100 * float(likelihood_sensitivity["center_fraction"]):.2f}% unresolved. This sensitivity does not
+replace the primary result and cannot trigger NeighborNet.
 
 The cp–mt comparison is unrooted. After contracting branches lacking joint SH-aLRT≥80 and
 UFBoot≥95 support, normalized RF was {rf["rf_numerator"]}/{rf["rf_denominator"]} =
@@ -160,11 +228,21 @@ The organelles describe lineage history, not a nuclear-genome admixture history.
 remains a demoted sensitivity visualization because its linked haploid markers violate the usual
 independent-diploid interpretation. Organelle inheritance mode was not established here.
 
+## Workflow/provenance acceptance
+
+`status: PASS` in `ACCEPTANCE.json` means **workflow/provenance acceptance: PASS**. Scientific
+conclusions retain their separate PASS, PASS_WITH_CAVEAT, or FAIL states in
+`claim_analysis_decisions.tsv`; workflow acceptance does not mean every scientific claim passed
+without qualification.
+
 ## Limitations
 
 - No nuclear decoy was available, so residual NUMT/NUPT ambiguity cannot be excluded.
 - Raw-read sketches are screens: sketch similarity alone is suspected, not confirmed identity,
-  while a negative result does not prove biological independence.
+  while a negative result does not prove biological independence. Calibration used
+  {within_controls["count"]} within-library controls but only {different_controls["count"]}
+  different-library control, so its threshold remains a screening heuristic rather than a robust
+  false-positive boundary.
 - Index hopping is untestable without index sequences, sample sheets, and demultiplexing metrics.
 - Mitochondrial inference receives extra restraint because the primary alignment contains only
   146 SNPs, {likelihood[1].get("composition_failed_count", "many")}/{likelihood[1].get("alignment_sequence_count", "271")}
@@ -187,6 +265,8 @@ independent-diploid interpretation. Organelle inheritance mode was not establish
     )
     table_rows = []
     for path in sorted((root / "supplementary_analysis/results").rglob("*.tsv")):
+        if run_id not in path.parts:
+            continue
         table_rows.append({"path": path.relative_to(root).as_posix(), "sha256": sha256_file(path)})
     table_manifest = root / f"supplementary_analysis/reports/tables/{run_id}/table_manifest.tsv"
     write_tsv(table_manifest, table_rows, ["path", "sha256"], root)
@@ -195,19 +275,32 @@ independent-diploid interpretation. Organelle inheritance mode was not establish
 
 def _artifact_paths(root: Path, run_id: str) -> list[Path]:
     base = root / "supplementary_analysis"
-    paths = []
-    for subtree in ("config", "pipeline/src", "pipeline/scripts", "metadata", "results", "reports"):
+    paths: list[Path] = []
+    for subtree in ("config", "pipeline/src", "pipeline/scripts", "decision_plans"):
         for path in sorted((base / subtree).rglob("*")):
             if path.is_file() and "__pycache__" not in path.parts:
                 paths.append(path)
-    for name in ("README.md", "environment.yml", "run_pipeline.sh"):
+    for path in sorted((base / "metadata/samples").rglob("*")):
+        if path.is_file():
+            paths.append(path)
+    for path in sorted((base / "metadata/populations").rglob("*")):
+        if path.is_file() and (path.name == ".gitkeep" or run_id in path.name):
+            paths.append(path)
+    for subtree in (f"metadata/qc/{run_id}", "results", "reports"):
+        for path in sorted((base / subtree).rglob("*")):
+            if not path.is_file() or "__pycache__" in path.parts:
+                continue
+            if subtree in {"results", "reports"} and path.name != ".gitkeep" and run_id not in path.parts:
+                continue
+            paths.append(path)
+    for name in ("README.md", "environment.yml", "run_pipeline.sh", "supplementary_analysis_decision_plan.md"):
         path = base / name
         if path.is_file():
             paths.append(path)
     return sorted(set(paths))
 
 
-def write_acceptance(root: Path, run_id: str, canonical_unchanged: bool) -> list[Path]:
+def write_acceptance(root: Path, run_id: str, canonical_unchanged: bool, config: dict[str, object]) -> list[Path]:
     figure_manifest = root / f"supplementary_analysis/reports/figures/{run_id}/supplementary_figure_manifest.tsv"
     figure_rows = read_tsv(figure_manifest)
     validate_figure_manifest(figure_rows)
@@ -249,7 +342,11 @@ def write_acceptance(root: Path, run_id: str, canonical_unchanged: bool) -> list
         {
             "run_id": run_id,
             "base_run_id": "publication-20260817",
-            "decision_plan_version": "2.5",
+            "decision_plan_version": config["workflow"]["decision_plan_version"],  # type: ignore[index]
+            "acceptance_scope": "workflow_and_provenance",
+            "status_label": f"WORKFLOW_PROVENANCE_{acceptance['status']}",
+            "scientific_claim_matrix": claim_decision_path(root, run_id, phase1=False).relative_to(root).as_posix(),
+            "scientific_claim_summary": scientific_claim_summary(claim_rows),
             "scientific_sensitivity_statuses": sorted(sensitivity_statuses),
             "scientific_failures_block_acceptance": False,
             "geography": "not_run:no_approved_coordinates",
@@ -257,6 +354,8 @@ def write_acceptance(root: Path, run_id: str, canonical_unchanged: bool) -> list
             "artifact_manifest_sha256": sha256_file(manifest),
         }
     )
+    if "supersedes" in config:
+        acceptance["supersedes"] = config["supersedes"]
     output = root / f"supplementary_analysis/provenance/runs/{run_id}/ACCEPTANCE.json"
     write_json(output, acceptance, root)
     if acceptance["status"] != "PASS":

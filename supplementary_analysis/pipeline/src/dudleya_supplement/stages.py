@@ -181,20 +181,75 @@ def verify_canonical_unchanged(root: Path, run_id: str) -> dict[str, dict[str, o
     return current
 
 
+def verify_superseded_run(root: Path, config: dict[str, object]) -> dict[str, object]:
+    """Verify immutable run-specific artifacts from the accepted v2.5 supplement."""
+    if config.get("workflow", {}).get("decision_plan_version") != "2.6":  # type: ignore[union-attr]
+        return {"run_id": None, "verified_artifact_count": 0}
+    supersedes = config["supersedes"]  # type: ignore[index]
+    old_run = str(supersedes["run_id"])  # type: ignore[index]
+    acceptance = root / f"supplementary_analysis/provenance/runs/{old_run}/ACCEPTANCE.json"
+    manifest = root / f"supplementary_analysis/provenance/manifests/{old_run}.final_artifacts.tsv"
+    for path, expected in (
+        (acceptance, str(supersedes["acceptance_sha256"])),  # type: ignore[index]
+        (manifest, str(supersedes["artifact_manifest_sha256"])),  # type: ignore[index]
+    ):
+        if not path.is_file() or sha256_file(path) != expected:
+            raise StaleSupplementError(f"Superseded supplementary record changed: {path.relative_to(root)}")
+    verified = 0
+    for row in read_tsv(manifest):
+        relative = row["path"]
+        if old_run not in relative:
+            continue
+        path = root / relative
+        if not path.is_file() or sha256_file(path) != row["sha256"]:
+            raise StaleSupplementError(f"Superseded supplementary artifact changed: {relative}")
+        verified += 1
+    if verified == 0:
+        raise StaleSupplementError(f"Superseded supplementary manifest contains no run-specific artifacts: {old_run}")
+    if (root / ".git").exists():
+        protected_paths = [
+            f"supplementary_analysis/results/**/{old_run}",
+            f"supplementary_analysis/reports/**/{old_run}",
+            f"supplementary_analysis/provenance/runs/{old_run}",
+            f"supplementary_analysis/provenance/manifests/{old_run}.final_artifacts.tsv",
+        ]
+        old_commit = str(supersedes["git_commit"])  # type: ignore[index]
+        diff = subprocess.run(
+            ["git", "diff", "--exit-code", old_commit, "--", *protected_paths],
+            cwd=root,
+            capture_output=True,
+            text=True,
+        )
+        status = subprocess.run(
+            ["git", "status", "--short", "--", *protected_paths],
+            cwd=root,
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+        if diff.returncode or diff.stdout or diff.stderr or status.stdout or status.stderr:
+            raise StaleSupplementError(f"Superseded supplementary run differs from commit {old_commit}: {old_run}")
+    return {"run_id": old_run, "verified_artifact_count": verified}
+
+
 def run_canonical_guard(root: Path, config_path: Path, run_id: str, resume: bool, final: bool = False) -> None:
     config = tomllib.loads(config_path.read_text())
     canonical_config = config["canonical"]
-    for path_key, hash_key in (
+    canonical_hash_pairs = [
         ("acceptance", "acceptance_sha256"),
         ("sample_manifest", "sample_manifest_sha256"),
         ("chloroplast_alignment", "chloroplast_alignment_sha256"),
         ("mitochondria_alignment", "mitochondria_alignment_sha256"),
-    ):
+    ]
+    if "mitochondria_mask" in canonical_config:
+        canonical_hash_pairs.append(("mitochondria_mask", "mitochondria_mask_sha256"))
+    for path_key, hash_key in canonical_hash_pairs:
         path = root / canonical_config[path_key]
         observed = sha256_file(path)
         if observed != canonical_config[hash_key]:
             raise StaleSupplementError(f"Canonical expected hash mismatch: {canonical_config[path_key]}")
     current = verify_canonical_unchanged(root, run_id)
+    superseded = verify_superseded_run(root, config)
     stage = "canonical_guard_final" if final else "canonical_guard"
     baseline = root / "supplementary_analysis/provenance/manifests/publication-20260817.canonical_filesystem_snapshot.json"
     inputs = {
@@ -229,7 +284,14 @@ def run_canonical_guard(root: Path, config_path: Path, run_id: str, resume: bool
         )
         if diff.returncode or diff.stdout or diff.stderr or status.stdout or status.stderr:
             raise StaleSupplementError("Canonical Git diff/status is not clean against main")
-    _finish_state(root, run_id, stage, fingerprint, [], {"canonical_entry_count": len(current)})
+    _finish_state(
+        root,
+        run_id,
+        stage,
+        fingerprint,
+        [],
+        {"canonical_entry_count": len(current), "superseded_run_verification": superseded},
+    )
 
 
 def run_metadata(root: Path, config_path: Path, run_id: str, resume: bool) -> None:
@@ -242,11 +304,12 @@ def run_metadata(root: Path, config_path: Path, run_id: str, resume: bool) -> No
     inputs.update(
         {path.relative_to(root).as_posix(): sha256_file(path) for path in (config_path, samples_path, populations_path, ambiguity_path)}
     )
+    decision_version = str(tomllib.loads(config_path.read_text())["workflow"]["decision_plan_version"])
     fingerprint = build_fingerprint(
         "metadata",
         inputs,
         {"canonical_guard": canonical_state["fingerprint"]["digest"]},  # type: ignore[index]
-        ["apply decision-plan v2.5 sample-level metadata policy"],
+        [f"apply decision-plan v{decision_version} sample-level metadata policy"],
         _git_commit(root),
     )
     if _resume_or_fail(root, run_id, "metadata", fingerprint, resume):
@@ -414,9 +477,10 @@ def run_stage(stage: str, root: Path, config_path: Path, run_id: str, resume: bo
                 "1000 site draws",
                 "1000 n=4 pi draws",
                 "PC-QC permutation tests",
+                "fully called-site PCA and PC-QC sensitivity",
                 "5 kb coordinate tracks",
             ],
-            lambda: run_comparative_analyses(root, run_id),
+            lambda: run_comparative_analyses(root, run_id, config),
         )
     elif stage == "figures":
         _run_action_stage(
@@ -449,7 +513,7 @@ def run_stage(stage: str, root: Path, config_path: Path, run_id: str, resume: bo
             "reports",
             resume,
             ["checksum final artifacts and evaluate acceptance", "update CURRENT_RUN only on PASS"],
-            lambda: write_acceptance(root, run_id, canonical_unchanged=True),
+            lambda: write_acceptance(root, run_id, canonical_unchanged=True, config=config),
         )
     else:
         raise ValueError(f"Unknown supplementary stage: {stage}")

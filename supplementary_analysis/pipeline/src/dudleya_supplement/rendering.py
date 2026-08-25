@@ -69,9 +69,13 @@ def _robustness(root: Path, run_id: str, prefix: Path) -> list[Path]:
 
 def _phylogenetic_information(root: Path, run_id: str, prefix: Path) -> list[Path]:
     rows = read_tsv(root / f"supplementary_analysis/results/phylogeny/{run_id}/likelihood_mapping/likelihood_mapping_summary.tsv")
-    fig, axes = plt.subplots(1, 2, figsize=(11, 4.7))
+    sensitivity = read_tsv(
+        root / f"supplementary_analysis/results/phylogeny/{run_id}/likelihood_mapping_sensitivity/likelihood_mapping_sensitivity.tsv"
+    )[0]
+    panels = [*rows, sensitivity]
+    fig, axes = plt.subplots(1, 3, figsize=(15, 4.7))
     palette = ["#2e8b57", "#4aa564", "#72bd72", "#d6a140", "#e4ba66", "#efcf91", "#a7a7a7"]
-    for axis, row in zip(axes, rows, strict=True):
+    for axis, row in zip(axes, panels, strict=True):
         bottom = 0.0
         for index in range(1, 8):
             value = float(row[f"region_{index}_fraction"])
@@ -86,10 +90,15 @@ def _phylogenetic_information(root: Path, run_id: str, prefix: Path) -> list[Pat
                 f">50% gaps/ambiguity: {row['over_50pct_ambiguity_count']}"
             ),
         )
-        axis.set_title(row["organelle"].capitalize(), y=1.10)
-        axis.text(0.5, 1.02, row["decision"].replace("_", " ").title(), transform=axis.transAxes, ha="center", fontsize=9)
-    axes[1].legend(ncol=2, fontsize=8, loc="center left", bbox_to_anchor=(1.02, 0.5))
-    fig.suptitle("Supplementary Figure 2 — Seven-region likelihood mapping")
+        title = row["organelle"].capitalize()
+        decision = row.get("decision", "DIAGNOSTIC_ONLY").replace("_", " ").title()
+        if row.get("analysis") == "mitochondria_mask_restricted":
+            title = "Mitochondria\n43,182-base mask sensitivity"
+            decision = "Diagnostic only — no network trigger"
+        axis.set_title(title, y=1.10)
+        axis.text(0.5, 1.02, decision, transform=axis.transAxes, ha="center", fontsize=9)
+    axes[2].legend(ncol=2, fontsize=8, loc="center left", bbox_to_anchor=(1.02, 0.5))
+    fig.suptitle("Supplementary Figure 2 — Seven-region likelihood mapping\nPrimary results plus diagnostic-only mt mask sensitivity")
     fig.tight_layout()
     return _save(fig, prefix)
 
@@ -104,6 +113,15 @@ def _genotype_matrix(vcf: Path) -> np.ndarray:
 
 def _technical(root: Path, run_id: str, prefix: Path) -> list[Path]:
     stats = read_tsv(root / f"supplementary_analysis/results/comparative/{run_id}/technical_confounders.tsv")
+    complete_stats = read_tsv(
+        root / f"supplementary_analysis/results/comparative/{run_id}/technical_sensitivity/complete_site_technical_confounders.tsv"
+    )
+    complete_summary = {
+        row["organelle"]: row
+        for row in read_tsv(
+            root / f"supplementary_analysis/results/comparative/{run_id}/technical_sensitivity/complete_site_pca_summary.tsv"
+        )
+    }
     fig, axes = plt.subplots(2, 2, figsize=(12, 8))
     for axis, organelle in zip(axes[0], ("chloroplast", "mitochondria"), strict=True):
         matrix = _genotype_matrix(root / f"canonical_publication/results/variants/publication-20260817/{organelle}.primary.vcf.gz")
@@ -116,15 +134,28 @@ def _technical(root: Path, run_id: str, prefix: Path) -> list[Path]:
         )
     for axis, organelle in zip(axes[1], ("chloroplast", "mitochondria"), strict=True):
         selected = [row for row in stats if row["organelle"] == organelle]
+        complete_selected = [row for row in complete_stats if row["organelle"] == organelle]
         labels = [f"{row['component']}:{row['technical_variable'][:4]}" for row in selected]
         values = [float(row["spearman_rho"]) for row in selected]
-        significant = [float(row["bh_adjusted_p_within_organelle"]) < 0.05 for row in selected]
-        axis.bar(np.arange(len(values)), values, color=["#c44e52" if item else "#7f7f7f" for item in significant])
+        complete_values = [float(row["spearman_rho"]) for row in complete_selected]
+        x = np.arange(len(values))
+        axis.bar(x - 0.18, values, width=0.36, color="#4c78a8", label="Canonical PCA")
+        axis.bar(x + 0.18, complete_values, width=0.36, color="#f58518", label="Fully called-site PCA")
         axis.axhline(0, color="black", linewidth=0.8)
-        axis.set(xticks=np.arange(len(values)), xticklabels=labels, title=f"{organelle.capitalize()} PC–QC tests", ylabel="Spearman ρ")
+        summary = complete_summary[organelle]
+        axis.set(
+            xticks=x,
+            xticklabels=labels,
+            title=(
+                f"{organelle.capitalize()} PC–QC tests\nComplete-site Procrustes r={float(summary['protest_r']):.3f} ({summary['status']})"
+            ),
+            ylabel="Spearman ρ",
+        )
         axis.tick_params(axis="x", labelrotation=55, labelsize=7)
+        axis.legend(fontsize=7)
     fig.suptitle(
-        "Supplementary Figure 3 — Genotypes and technical confounders\nResidual NUMT/NUPT ambiguity cannot be excluded (no nuclear decoy)"
+        "Supplementary Figure 3 — Genotypes and technical confounders\n"
+        "Associations do not distinguish biological divergence from reference-mapping bias; residual NUMT/NUPT ambiguity remains"
     )
     fig.tight_layout()
     return _save(fig, prefix)

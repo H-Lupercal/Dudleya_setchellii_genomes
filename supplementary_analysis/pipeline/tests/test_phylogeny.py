@@ -4,6 +4,7 @@ from pathlib import Path
 import pytest
 from dudleya_supplement.likelihood import (
     build_likelihood_command,
+    mask_restricted_sequences,
     parse_likelihood_diagnostics,
     parse_likelihood_report,
     run_command_logged,
@@ -121,3 +122,32 @@ def test_likelihood_diagnostics_capture_composition_and_ambiguity(tmp_path: Path
         "composition_failed_count": 269,
         "over_50pct_ambiguity_count": 271,
     }
+
+
+def test_mask_restricted_alignment_uses_exact_zero_based_half_open_intervals() -> None:
+    restricted = mask_restricted_sequences(
+        {"sample-a": "AACCGG", "sample-b": "TTGGCC"},
+        [(1, 3), (4, 6)],
+        expected_length=4,
+    )
+    assert restricted == {"sample-a": "ACGG", "sample-b": "TGCC"}
+    assert len(restricted) == 2
+
+
+def test_mitochondrial_sensitivity_uses_matched_primary_likelihood_settings() -> None:
+    command = build_likelihood_command(
+        alignment=Path("supplement/mitochondria.mask_restricted.fa"),
+        model="TPM3u+F+I",
+        quartets=100_000,
+        seed=314159,
+        prefix=Path("supplement/work/mitochondria.mask_restricted"),
+        threads=8,
+    )
+    assert command[command.index("-m") + 1] == "TPM3u+F+I"
+    assert command[command.index("-lmap") + 1] == "100000"
+    assert command[command.index("-seed") + 1] == "314159"
+
+
+def test_mask_restricted_alignment_rejects_wrong_length() -> None:
+    with pytest.raises(ValueError, match="expected 5"):
+        mask_restricted_sequences({"sample": "AACCGG"}, [(1, 3), (4, 6)], expected_length=5)

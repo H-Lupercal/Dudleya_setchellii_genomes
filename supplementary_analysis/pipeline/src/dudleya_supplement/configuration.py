@@ -6,7 +6,7 @@ from collections.abc import Mapping
 
 
 class SupplementConfigurationError(ValueError):
-    """Raised when configuration departs from decision-plan v2.5."""
+    """Raised when configuration departs from an approved decision-plan revision."""
 
 
 def _get(config: Mapping[str, object], section: str, key: str) -> object:
@@ -17,10 +17,12 @@ def _get(config: Mapping[str, object], section: str, key: str) -> object:
 
 
 def validate_config(config: Mapping[str, object]) -> None:
+    decision_version = _get(config, "workflow", "decision_plan_version")
+    if decision_version not in {"2.5", "2.6"}:
+        raise SupplementConfigurationError(f"Unsupported workflow.decision_plan_version={decision_version!r}")
     exact = {
         ("workflow", "kind"): "supplementary",
         ("workflow", "base_run_id"): "publication-20260817",
-        ("workflow", "decision_plan_version"): "2.5",
         ("likelihood_mapping", "quartets"): 100000,
         ("likelihood_mapping", "center_limit"): 0.15,
         ("likelihood_mapping", "side_trigger"): 0.20,
@@ -32,6 +34,19 @@ def validate_config(config: Mapping[str, object]) -> None:
         ("seeds", "protest"): [424210, 424211, 424212, 424213, 424214, 424215],
         ("seeds", "technical_confounders_start"): 424300,
     }
+    if decision_version == "2.6":
+        exact.update(
+            {
+                ("workflow", "run_id"): "supplement-20260824-v26",
+                ("supersedes", "run_id"): "supplement-20260824",
+                ("supersedes", "git_commit"): "dfbf23dacea8edd220cab88d090692e2cf7a5099",
+                ("supersedes", "acceptance_sha256"): ("0682b1f8f734bff7c36d3f616628694891c9811ceecedb35d17cd665b0f51303"),
+                ("supersedes", "artifact_manifest_sha256"): ("cf38c04a78ad35bf4853d0bdb94a15b64eb4b0b1bffb597e146227f5c0db90ee"),
+                ("seeds", "complete_pca_protest"): [424318, 424319],
+                ("seeds", "complete_pca_confounders_start"): 424320,
+                ("likelihood_mapping", "mitochondria_mask_length"): 43182,
+            }
+        )
     scenarios = config.get("scenarios")
     if not isinstance(scenarios, Mapping):
         raise SupplementConfigurationError("Missing configuration: scenarios")

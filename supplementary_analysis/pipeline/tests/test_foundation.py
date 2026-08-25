@@ -1,4 +1,5 @@
 import subprocess
+from copy import deepcopy
 from pathlib import Path
 
 import pytest
@@ -12,7 +13,7 @@ from dudleya_supplement.provenance import (
     validate_immutable_snapshot,
     validate_resume,
 )
-from dudleya_supplement.stages import _canonical_fingerprint_value, _git_commit
+from dudleya_supplement.stages import _canonical_fingerprint_value, _git_commit, verify_superseded_run
 
 
 def valid_config() -> dict[str, object]:
@@ -68,6 +69,27 @@ def test_configuration_locks_approved_scenarios_and_six_figures() -> None:
         validate_config(broken)
 
 
+def test_configuration_accepts_locked_v26_revision_contract() -> None:
+    config = deepcopy(valid_config())
+    config["workflow"] = {
+        "kind": "supplementary",
+        "base_run_id": "publication-20260817",
+        "decision_plan_version": "2.6",
+        "run_id": "supplement-20260824-v26",
+    }
+    config["supersedes"] = {
+        "run_id": "supplement-20260824",
+        "git_commit": "dfbf23dacea8edd220cab88d090692e2cf7a5099",
+        "acceptance_sha256": "0682b1f8f734bff7c36d3f616628694891c9811ceecedb35d17cd665b0f51303",
+        "artifact_manifest_sha256": "cf38c04a78ad35bf4853d0bdb94a15b64eb4b0b1bffb597e146227f5c0db90ee",
+    }
+    config["seeds"].update(  # type: ignore[union-attr]
+        {"complete_pca_protest": [424318, 424319], "complete_pca_confounders_start": 424320}
+    )
+    config["likelihood_mapping"]["mitochondria_mask_length"] = 43182  # type: ignore[index]
+    validate_config(config)
+
+
 def test_resume_rejects_changed_inputs() -> None:
     saved = build_fingerprint("metadata", {"input": "aaa"}, {}, ["run metadata"], "commit-a")
     current = build_fingerprint("metadata", {"input": "bbb"}, {}, ["run metadata"], "commit-a")
@@ -85,6 +107,31 @@ def test_canonical_snapshot_detects_content_and_timestamp_changes(tmp_path: Path
     file.write_text("b\n")
     with pytest.raises(StaleSupplementError, match="immutable canonical"):
         validate_immutable_snapshot(saved, filesystem_snapshot(canonical))
+
+
+def test_superseded_run_guard_detects_changed_run_specific_artifact(tmp_path: Path) -> None:
+    acceptance = tmp_path / "supplementary_analysis/provenance/runs/old/ACCEPTANCE.json"
+    artifact = tmp_path / "supplementary_analysis/results/sensitivity/old/table.tsv"
+    manifest = tmp_path / "supplementary_analysis/provenance/manifests/old.final_artifacts.tsv"
+    for path in (acceptance, artifact, manifest):
+        path.parent.mkdir(parents=True, exist_ok=True)
+    acceptance.write_text('{"status":"PASS"}\n')
+    artifact.write_text("value\n1\n")
+    from dudleya_supplement.provenance import sha256_file
+
+    manifest.write_text(f"path\tsha256\nsupplementary_analysis/results/sensitivity/old/table.tsv\t{sha256_file(artifact)}\n")
+    config = {
+        "workflow": {"decision_plan_version": "2.6"},
+        "supersedes": {
+            "run_id": "old",
+            "acceptance_sha256": sha256_file(acceptance),
+            "artifact_manifest_sha256": sha256_file(manifest),
+        },
+    }
+    assert verify_superseded_run(tmp_path, config)["verified_artifact_count"] == 1
+    artifact.write_text("value\n2\n")
+    with pytest.raises(StaleSupplementError, match="Superseded supplementary artifact changed"):
+        verify_superseded_run(tmp_path, config)
 
 
 def test_code_fingerprint_includes_supplement_and_explicit_canonical_imports(tmp_path: Path) -> None:

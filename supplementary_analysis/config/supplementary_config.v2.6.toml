@@ -1,0 +1,84 @@
+schema_version = 1
+
+[workflow]
+kind = "supplementary"
+base_run_id = "publication-20260817"
+decision_plan_version = "2.6"
+run_id = "supplement-20260824-v26"
+
+[supersedes]
+run_id = "supplement-20260824"
+git_commit = "dfbf23dacea8edd220cab88d090692e2cf7a5099"
+acceptance_sha256 = "0682b1f8f734bff7c36d3f616628694891c9811ceecedb35d17cd665b0f51303"
+artifact_manifest_sha256 = "cf38c04a78ad35bf4853d0bdb94a15b64eb4b0b1bffb597e146227f5c0db90ee"
+
+[canonical]
+acceptance = "canonical_publication/provenance/runs/publication-20260817/ACCEPTANCE.json"
+acceptance_sha256 = "585f72eef82130f5709aed9a850367c76dd8035945a18ddc5d86e3ab1c3c4fda"
+sample_manifest = "canonical_publication/metadata/samples/samples.tsv"
+sample_manifest_sha256 = "863d63b74551996015a7af939330ce6671a23b0b1f93d5749fae1a7eb7e96ee2"
+population_manifest = "canonical_publication/metadata/populations/populations.tsv"
+mapping_work = "canonical_publication/work/publication-20260817/mapping"
+mapping_states = "canonical_publication/provenance/runs/publication-20260817/mapping"
+chloroplast_alignment = "canonical_publication/results/alignments/publication-20260817/chloroplast.callable_alignment.fa"
+chloroplast_alignment_sha256 = "73f143fb7da0035a7d7903948d48dba4fbe7d9966fc015eda7fb5d8cfb9e5801"
+mitochondria_alignment = "canonical_publication/results/alignments/publication-20260817/mitochondria.callable_alignment.fa"
+mitochondria_alignment_sha256 = "50b9ee3d72aa5cf56e2b41f137bcdaf791d08b8dcd18695a073631a63d77e90e"
+mitochondria_mask = "canonical_publication/references/masks/publication-20260817/mitochondria_high_confidence_sites.bed"
+mitochondria_mask_sha256 = "0368d3ed7e3073cba93505d63692985a437ca9313af8143bf7e97c19f6aa7be5"
+
+[scenarios.canonical]
+dp = 5
+gq = 20
+missing = 0.20
+breadth = 0.80
+eligibility_dp = 5
+
+[scenarios.permissive]
+dp = 3
+gq = 15
+missing = 0.30
+breadth = 0.70
+eligibility_dp = 3
+
+[scenarios.strict]
+dp = 10
+gq = 30
+missing = 0.10
+breadth = 0.90
+eligibility_dp = 10
+
+[scenarios.mtmask70]
+mask_support = 0.70
+
+[scenarios.mtmask90]
+mask_support = 0.90
+
+[seeds]
+cp_tree = 271828
+mt_tree = 314159
+site_resampling = 424200
+pi_resampling = 424201
+protest = [424210, 424211, 424212, 424213, 424214, 424215]
+technical_confounders_start = 424300
+complete_pca_protest = [424318, 424319]
+complete_pca_confounders_start = 424320
+
+[likelihood_mapping]
+quartets = 100000
+center_limit = 0.15
+side_trigger = 0.20
+split_trigger = 0.20
+chloroplast_model = "TVM+F+I+R4"
+mitochondria_model = "TPM3u+F+I"
+mitochondria_mask_length = 43182
+
+[figures]
+families = [
+  "robustness",
+  "phylogenetic_information",
+  "technical_confounders",
+  "organelle_comparison",
+  "population_diversity",
+  "genome_coordinate",
+]

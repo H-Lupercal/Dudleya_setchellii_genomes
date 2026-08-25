@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import math
 import statistics
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
@@ -63,6 +64,65 @@ def classify_fst(rho: float, median_absolute_change: float) -> str:
     if rho >= 0.90 and median_absolute_change <= 0.10:
         return "PASS_WITH_CAVEAT"
     return "FAIL"
+
+
+def rank_extreme_cases(
+    canonical: Mapping[object, float],
+    scenario_values: Mapping[object, float],
+    *,
+    scenario: str,
+    organelle: str,
+    metric: str,
+    limit: int = 10,
+) -> list[dict[str, object]]:
+    """Return the largest finite nonzero sensitivity changes with explicit zero transitions."""
+    if metric not in {"pi", "fst"}:
+        raise ValueError(f"Unsupported sensitivity metric: {metric}")
+    ranked: list[tuple[tuple[float, float], dict[str, object]]] = []
+    for key in sorted(set(canonical) & set(scenario_values), key=str):
+        left, right = canonical[key], scenario_values[key]
+        if not math.isfinite(left) or not math.isfinite(right):
+            continue
+        signed = right - left
+        absolute = abs(signed)
+        if absolute <= 1e-12:
+            continue
+        parts = tuple(key) if isinstance(key, tuple) else tuple(str(key).split("|", 1))
+        population_1 = str(parts[0])
+        population_2 = str(parts[1]) if len(parts) > 1 else ""
+        transition = "none"
+        proportional: str | float = "NA"
+        transition_priority = 0.0
+        magnitude = absolute
+        if metric == "pi":
+            if left == 0 and right != 0:
+                transition = "zero_to_nonzero"
+                transition_priority = 1.0
+            elif left != 0 and right == 0:
+                transition = "nonzero_to_zero"
+                transition_priority = 1.0
+            else:
+                proportional = absolute / abs(left)
+                magnitude = float(proportional)
+        row: dict[str, object] = {
+            "scenario": scenario,
+            "organelle": organelle,
+            "metric": metric,
+            "rank": 0,
+            "population_1": population_1,
+            "population_2": population_2,
+            "canonical_value": f"{left:.12g}",
+            "scenario_value": f"{right:.12g}",
+            "signed_change": f"{signed:.12g}",
+            "absolute_change": f"{absolute:.12g}",
+            "proportional_change": f"{proportional:.12g}" if isinstance(proportional, float) else proportional,
+            "transition_type": transition,
+        }
+        ranked.append(((transition_priority, magnitude), row))
+    selected = sorted(ranked, key=lambda item: item[0], reverse=True)[:limit]
+    for rank, (_, row) in enumerate(selected, 1):
+        row["rank"] = rank
+    return [row for _, row in selected]
 
 
 def _procrustes_correlation(left: np.ndarray, right: np.ndarray) -> float:
