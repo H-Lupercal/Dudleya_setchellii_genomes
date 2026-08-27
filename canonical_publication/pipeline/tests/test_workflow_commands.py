@@ -25,12 +25,28 @@ def test_publication_figures_run_after_admixture_and_before_reports() -> None:
     assert '"--config",' in source
 
 
+def test_pairwise_distances_run_after_consensus_and_before_figures_and_reports() -> None:
+    source, stages = _pipeline_source()
+
+    assert stages.index("consensus") < stages.index("distances") < stages.index("figures") < stages.index("reports")
+    assert '"distances": [' in source
+    assert 'str(scripts / "sample_distances.py")' in source
+
+
 def test_report_acceptance_explicitly_requires_figure_state_and_manifest() -> None:
     root = Path(__file__).resolve().parents[3]
     source = (root / "canonical_publication/pipeline/scripts/build_reports.py").read_text()
 
     assert 'run_provenance_dir / "figures.json"' in source
     assert "figure_manifest.tsv" in source
+
+
+def test_report_acceptance_requires_validated_sample_distance_outputs() -> None:
+    root = Path(__file__).resolve().parents[3]
+    source = (root / "canonical_publication/pipeline/scripts/build_reports.py").read_text()
+
+    assert "validate_pairwise_distance_outputs" in source
+    assert 'run_provenance_dir / "distances"' in source
 
 
 def test_report_acceptance_distinguishes_provider_manifest_self_reference_from_read_failure() -> None:

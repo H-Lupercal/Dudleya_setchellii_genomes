@@ -8,6 +8,8 @@ from collections import Counter
 from dataclasses import dataclass
 from itertools import combinations
 
+import numpy as np
+
 BASES = frozenset("ACGT")
 
 
@@ -33,6 +35,59 @@ class HaplotypeDiversityResult:
     diversity: float
     assigned_samples: int
     ambiguous_samples: int
+
+
+@dataclass(frozen=True)
+class PairwiseDistanceResult:
+    differences: int
+    sites_compared: int
+    p_distance: float
+
+
+@dataclass(frozen=True)
+class PackedSequence:
+    length: int
+    base_masks: tuple[int, int, int, int]
+    callable_mask: int
+
+
+def pack_sequence(sequence: str) -> PackedSequence:
+    """Pack A/C/G/T positions into bitsets for fast all-pairs comparisons."""
+
+    encoded = np.frombuffer(sequence.upper().encode("ascii"), dtype=np.uint8)
+    masks = tuple(
+        int.from_bytes(np.packbits(encoded == ord(base), bitorder="little").tobytes(), "little")
+        for base in "ACGT"
+    )
+    return PackedSequence(
+        length=len(sequence),
+        base_masks=masks,  # type: ignore[arg-type]
+        callable_mask=masks[0] | masks[1] | masks[2] | masks[3],
+    )
+
+
+def packed_pairwise_distance(left: PackedSequence, right: PackedSequence) -> PairwiseDistanceResult:
+    """Count substitutions at positions callable in both packed sequences."""
+
+    if left.length != right.length:
+        raise ValueError("Pairwise-distance sequences must have equal lengths")
+    jointly_callable = left.callable_mask & right.callable_mask
+    sites_compared = jointly_callable.bit_count()
+    matches = sum((left_mask & right_mask).bit_count() for left_mask, right_mask in zip(left.base_masks, right.base_masks, strict=True))
+    differences = sites_compared - matches
+    return PairwiseDistanceResult(
+        differences=differences,
+        sites_compared=sites_compared,
+        p_distance=(differences / sites_compared) if sites_compared else math.nan,
+    )
+
+
+def pairwise_sequence_distance(left: str, right: str) -> PairwiseDistanceResult:
+    """Count raw nucleotide differences, excluding non-ACGT calls pairwise."""
+
+    if len(left) != len(right):
+        raise ValueError("Pairwise-distance sequences must have equal lengths")
+    return packed_pairwise_distance(pack_sequence(left), pack_sequence(right))
 
 
 def haplotype_diversity_from_assignments(

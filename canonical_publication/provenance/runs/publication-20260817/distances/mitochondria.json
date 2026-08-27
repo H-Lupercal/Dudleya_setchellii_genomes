@@ -1,0 +1,65 @@
+{
+  "fingerprint": {
+    "commands": [
+      "packed A/C/G/T bitsets; pair-specific callability; raw substitutions; p-distance"
+    ],
+    "digest": "dfb780ff548396fad9a559c0cd84ad6561860aee6c774b2e136fae44c58608d2",
+    "inputs": [
+      [
+        "canonical_publication/metadata/qc/publication-20260817/mitochondria_samples.tsv",
+        "f10dfd88e7df1ee4e33f1b79bec1ec58fa030d4b9bc25488fcd0f8067b5e82e3"
+      ],
+      [
+        "canonical_publication/provenance/runs/publication-20260817/consensus/mitochondria.json",
+        "4dad37cc1db50bccbbc3bc6e09de2c6ad4cf8733ca0bef38c0e3b18500617041"
+      ],
+      [
+        "canonical_publication/results/alignments/publication-20260817/mitochondria.callable_alignment.fa",
+        "50b9ee3d72aa5cf56e2b41f137bcdaf791d08b8dcd18695a073631a63d77e90e"
+      ],
+      [
+        "provenance:executable_sha256:numpy",
+        "48128da6770ad81eec6da58234ad4fe9ebbc92bfa52e28856ca03cba9659e7d8"
+      ],
+      [
+        "provenance:executable_sha256:python",
+        "48128da6770ad81eec6da58234ad4fe9ebbc92bfa52e28856ca03cba9659e7d8"
+      ],
+      [
+        "provenance:git_commit",
+        "6cfc540a64a9934caaef2265413f36f277225888"
+      ],
+      [
+        "provenance:pipeline_code",
+        "e98008c5f7c0ddde7cbe50e09a2a5c8da578bbfbcb566dcedaa9ec5ad32775ac"
+      ],
+      [
+        "provenance:tool:numpy",
+        "2.4.4"
+      ],
+      [
+        "provenance:tool:python",
+        "Python 3.13.12"
+      ]
+    ],
+    "stage": "sample_distances:mitochondria",
+    "upstream": [
+      [
+        "consensus",
+        "65ca22d36ad8c195a3e262eaff243063319d649ed810f2fc1016cb3da1c99195"
+      ]
+    ]
+  },
+  "maximum_pairwise_differences": 48,
+  "median_pairwise_differences": 9,
+  "minimum_pairwise_differences": 0,
+  "organelle": "mitochondria",
+  "outputs": {
+    "canonical_publication/results/supplement/publication-20260817/pairwise_distances/mitochondria.sample_pairwise_callable_sites.tsv": "9e483864ad8819a8bee8f6e4917ec4fa82206f66102b1f2b9327016ef39525d5",
+    "canonical_publication/results/supplement/publication-20260817/pairwise_distances/mitochondria.sample_pairwise_differences.tsv": "752338441b0b73d29ea09f7c52e213032a172c8fe5d38f69fed441325718a535",
+    "canonical_publication/results/supplement/publication-20260817/pairwise_distances/mitochondria.sample_pairwise_distances.tsv": "23d5fc93448e0dd9bf46b36e2eeaf78b8fe320728cabc1635c912e04a1c431fd"
+  },
+  "pairwise_comparison_count": 36585,
+  "sample_count": 271,
+  "status": "complete"
+}

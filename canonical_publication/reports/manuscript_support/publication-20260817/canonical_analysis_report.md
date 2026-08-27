@@ -48,6 +48,13 @@ Genotypes are haploid and are masked when DP <5, GQ <20, or either field is miss
 
 Supplementary ADMIXTURE tested K=1–12 with ten fixed seeds per K. The minimum mean cross-validation error selected K=12 for chloroplast (boundary optimum) and K=12 for mitochondria (boundary optimum). These are sensitivity results under the limitations stated below.
 
+## Supplementary sample-level nucleotide differences
+
+For every sample pair, raw nucleotide differences were counted separately for chloroplast and mitochondria at reference-coordinate positions where both samples had an A, C, G, or T call. Positions containing an uncertain or missing call in either sample were excluded pairwise. Companion callable-site matrices and p-distances are reported because raw-count denominators vary among pairs.
+
+- Chloroplast (276 samples; 37,950 pairs): minimum/median/maximum differences = 0/168/692.
+- Mitochondria (271 samples; 36,585 pairs): minimum/median/maximum differences = 0/9/48.
+
 ## Phylogenetic interpretation
 
 Separate unrooted chloroplast and mitochondrial ModelFinder trees with 1,000 SH-aLRT and 1,000 ultrafast-bootstrap replicates are primary. The partitioned concatenated tree is supplementary. The coordinate-padded chloroplast partition spans 38.2% of concatenated coordinates, but masked all-N coordinates are not treated as evidence: chloroplast contributes 71.5% of sites with at least two callable shared samples, 85.2% of jointly callable shared-sample sites, 93.9% of variable sites, including singletons, and 94.3% of parsimony-informative sites; mitochondria contributes 28.5%, 14.8%, 6.1% and 5.7%, respectively. 0 pairs of strongly supported incompatible organelle splits were detected.

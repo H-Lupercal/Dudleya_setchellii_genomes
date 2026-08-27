@@ -257,6 +257,34 @@ def _miniature_figure_repository(root: Path, run_id: str) -> None:
             f"trees-{organelle}",
             (tree,),
         )
+        distance_dir = root / f"canonical_publication/results/supplement/{run_id}/pairwise_distances"
+        differences = _write(
+            distance_dir / f"{organelle}.sample_pairwise_differences.tsv",
+            "sample_id\ts1\ts2\ts3\ts4\n"
+            "s1\t0\t1\t2\t3\n"
+            "s2\t1\t0\t3\t2\n"
+            "s3\t2\t3\t0\t1\n"
+            "s4\t3\t2\t1\t0\n",
+        )
+        callable_sites = _write(
+            distance_dir / f"{organelle}.sample_pairwise_callable_sites.tsv",
+            "sample_id\ts1\ts2\ts3\ts4\n"
+            "s1\t10\t9\t8\t7\n"
+            "s2\t9\t10\t7\t8\n"
+            "s3\t8\t7\t10\t9\n"
+            "s4\t7\t8\t9\t10\n",
+        )
+        long_form = _write(
+            distance_dir / f"{organelle}.sample_pairwise_distances.tsv",
+            "organelle\tsample_1\tsample_2\tdifferences\tsites_compared\tp_distance\n"
+            f"{organelle}\ts1\ts2\t1\t9\t0.111111111111\n",
+        )
+        _state(
+            root,
+            f"canonical_publication/provenance/runs/{run_id}/distances/{organelle}.json",
+            f"distances-{organelle}",
+            (differences, callable_sites, long_form),
+        )
         admixture_dir = root / f"canonical_publication/results/supplement/{run_id}/admixture/{organelle}"
         replicate = _write(
             admixture_dir / "replicate_cv.tsv",
@@ -323,12 +351,12 @@ def test_renderer_writes_all_formats_manifest_and_provenance(tmp_path: Path) -> 
     figure_dir = tmp_path / f"canonical_publication/reports/figures/{run_id}"
     manifest = figure_dir / "figure_manifest.tsv"
     rows = manifest.read_text().splitlines()
-    assert len(rows) == 37
+    assert len(rows) == 43
     for extension in ("png", "pdf", "svg"):
         outputs = sorted(figure_dir.glob(f"*.{extension}"))
-        assert len(outputs) == 12
+        assert len(outputs) == 14
         assert all(path.stat().st_size > 100 for path in outputs)
     state = json.loads((tmp_path / f"canonical_publication/provenance/runs/{run_id}/figures.json").read_text())
     assert state["status"] == "complete"
-    assert len(state["outputs"]) == 37
+    assert len(state["outputs"]) == 43
     assert all(hashlib.sha256((tmp_path / path).read_bytes()).hexdigest() == digest for path, digest in state["outputs"].items())

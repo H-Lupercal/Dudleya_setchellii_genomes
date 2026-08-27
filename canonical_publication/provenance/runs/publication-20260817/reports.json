@@ -3,7 +3,7 @@
     "commands": [
       "rebuild reports; account for every legacy artifact; verify acceptance; checksum canonical deliverables"
     ],
-    "digest": "47e2f2370a816d07d8d66a96764dd34e5ab0fae5f5de64769c6639bc5cd11c0b",
+    "digest": "1c15fd7aa1cebab889c15458d1cc6b9d1cb641e8124566372df4bc2e9cca9ba0",
     "inputs": [
       [
         "archive:snapshot_content",
@@ -42,8 +42,16 @@
         "4dad37cc1db50bccbbc3bc6e09de2c6ad4cf8733ca0bef38c0e3b18500617041"
       ],
       [
+        "canonical_publication/provenance/runs/publication-20260817/distances/chloroplast.json",
+        "936b261af1dc290979002eef282761203386520c2f0b035db0dd4c576a1dfdca"
+      ],
+      [
+        "canonical_publication/provenance/runs/publication-20260817/distances/mitochondria.json",
+        "7560091ab3e2c2cc1f8fe3713d654aecfb651cb94cacbe24281108437d0e8638"
+      ],
+      [
         "canonical_publication/provenance/runs/publication-20260817/figures.json",
-        "80a7ec33932907b14f00026693511bd3069f7659eeb7286d2d822f13e1970e5f"
+        "bf34466d388045ed8b345e43f9f049a67334339c92637519497c73965a3aec13"
       ],
       [
         "canonical_publication/provenance/runs/publication-20260817/haplotypes/chloroplast.json",
@@ -1259,15 +1267,15 @@
       ],
       [
         "provenance:git_commit",
-        "5b932a95a1fa998569397491bfdec1d79d5bb84d"
+        "6cfc540a64a9934caaef2265413f36f277225888"
       ],
       [
         "provenance:manifested_pipeline_code",
-        "d46306ba5f5ff311a1dd0d89f0d3c1f77970c87e7a8e9ab1c60173819a153ec9"
+        "9363fad888eca730650c68df039faad101fdbb48022daf568afc515c0cf4cf3a"
       ],
       [
         "provenance:pipeline_code",
-        "f8f43aced441531f73262346515f9c8ecb63451e495c32605911eb2fe7f7f335"
+        "dfd3db7b09c25cf381a6d0203bf513e7761198f72570087bcf595675e02e2c63"
       ],
       [
         "provenance:tool:bcftools",
@@ -1305,8 +1313,16 @@
         "65ca22d36ad8c195a3e262eaff243063319d649ed810f2fc1016cb3da1c99195"
       ],
       [
+        "distances/chloroplast.json",
+        "b3f3f2bf1bdf8ae39dedd2859c853dcd751f774b8d091bc226ff1aef56bd1357"
+      ],
+      [
+        "distances/mitochondria.json",
+        "dfb780ff548396fad9a559c0cd84ad6561860aee6c774b2e136fae44c58608d2"
+      ],
+      [
         "figures.json",
-        "8bf60bfd9e798420bc256974fa3589163226448fcf7f9fde1cac5f0037d3c0dd"
+        "c944d5b7d0e06460f3db0b58b2237e64a590d8f5760fd44c81e2f36ba05e2829"
       ],
       [
         "haplotypes/chloroplast.json",
@@ -2502,9 +2518,9 @@
     "README.md": "2ab0e07a3ca5e251e09e0681b5feaf373dc3ef489820b80219d9cb5f2727c17f",
     "canonical_publication/CURRENT_RUN": "fee7579b8c679f1b729b35a1cdd3c9d0dc91dbf3e45f6143eb9b94c8525509d4",
     "canonical_publication/provenance/invalidation/publication-20260817.legacy_artifact_invalidation.tsv": "0a57f6904519b81208adfd8f164a3ef106b8e6c6cfa08045804ed6e4b093289f",
-    "canonical_publication/provenance/manifests/publication-20260817.final_artifacts.tsv": "686bf09db2c24e8db72dd2a1fdce74f7f30094933bf030b11127dfed5ba035a7",
+    "canonical_publication/provenance/manifests/publication-20260817.final_artifacts.tsv": "0817889739b03b9b33c4fe3aa41baf95d6d6b20b2a2a2daf314a7dbf952890f8",
     "canonical_publication/provenance/runs/publication-20260817/ACCEPTANCE.json": "585f72eef82130f5709aed9a850367c76dd8035945a18ddc5d86e3ab1c3c4fda",
-    "canonical_publication/reports/manuscript_support/publication-20260817/canonical_analysis_report.md": "fe9a399b6118c598dc7cff6495c619b387f9242057db502ba4662dafdfca0c15",
+    "canonical_publication/reports/manuscript_support/publication-20260817/canonical_analysis_report.md": "d2a7f468fe162910bac38a3b16be3ed2901254528442d59aeb3d866ed16fa890",
     "canonical_publication/reports/tables/publication-20260817/canonical_summary.tsv": "072df1fe8b7cdcfa0e74c591a505d9165304bc7c2b4b75b526faa54f360ce2dc",
     "canonical_publication/reports/tables/publication-20260817/review_response_method_resolutions.tsv": "65bf17b2df96bb81dab662ba2f82cb4620ce680faee2f762aabfc5a11c9390ab"
   },

@@ -478,6 +478,56 @@ def render_admixture(root: Path, run_id: str, organelle: str, output: Path) -> l
     return save_figure(figure, output, f"{organelle}.supplementary_admixture")
 
 
+def render_pairwise_differences(root: Path, run_id: str, organelle: str, output: Path) -> list[Path]:
+    matrix_path = (
+        root
+        / f"canonical_publication/results/supplement/{run_id}/pairwise_distances/{organelle}.sample_pairwise_differences.tsv"
+    )
+    with matrix_path.open(newline="") as handle:
+        rows = list(csv.reader(handle, delimiter="\t"))
+    if not rows or not rows[0] or rows[0][0] != "sample_id":
+        raise RuntimeError(f"Invalid pairwise-difference matrix header for {organelle}")
+    sample_ids = rows[0][1:]
+    row_ids = [row[0] for row in rows[1:]]
+    if len(sample_ids) != len(set(sample_ids)) or row_ids != sample_ids:
+        raise RuntimeError(f"Pairwise-difference matrix sample order mismatch for {organelle}")
+    try:
+        matrix = np.asarray([[int(value) for value in row[1:]] for row in rows[1:]], dtype=np.int64)
+    except ValueError as error:
+        raise RuntimeError(f"Non-integer pairwise difference for {organelle}") from error
+    if matrix.shape != (len(sample_ids), len(sample_ids)):
+        raise RuntimeError(f"Pairwise-difference matrix is not square for {organelle}")
+    if not np.array_equal(matrix, matrix.T) or np.any(np.diag(matrix) != 0) or np.any(matrix < 0):
+        raise RuntimeError(f"Pairwise-difference matrix invariants failed for {organelle}")
+
+    tree = Phylo.read(root / f"canonical_publication/results/trees/{run_id}/{organelle}.primary.treefile", "newick")
+    tree_order = [terminal.name for terminal in tree.get_terminals()]
+    if len(tree_order) != len(set(tree_order)) or set(tree_order) != set(sample_ids):
+        raise RuntimeError(f"Tree/distance sample mismatch for {organelle}")
+    index = {sample_id: position for position, sample_id in enumerate(sample_ids)}
+    order = [index[sample_id] for sample_id in tree_order]
+    ordered = matrix[np.ix_(order, order)]
+
+    figure, axis = plt.subplots(figsize=(8.5, 7.5), constrained_layout=True)
+    maximum = max(1, int(ordered.max()))
+    image = axis.imshow(ordered, cmap="YlGnBu", vmin=0, vmax=maximum, interpolation="none", rasterized=True)
+    axis.set_xticks([])
+    axis.set_yticks([])
+    axis.set_xlabel("Samples ordered by maximum-likelihood tree tip order")
+    axis.set_ylabel("Samples ordered by maximum-likelihood tree tip order")
+    axis.set_title(f"Supplementary {organelle} pairwise nucleotide differences", fontweight="bold")
+    colorbar = figure.colorbar(image, ax=axis, shrink=0.8)
+    colorbar.set_label("Raw differences at pairwise-callable sites")
+    axis.text(
+        0.0,
+        -0.075,
+        "Each pair excludes positions with a non-ACGT call in either sample; exact values and denominators are in the TSV matrices.",
+        transform=axis.transAxes,
+        fontsize=7.5,
+    )
+    return save_figure(figure, output, f"{organelle}.pairwise_differences")
+
+
 def main() -> int:
     args = parse_args()
     validate_run_id(args.run_id)
@@ -495,6 +545,7 @@ def main() -> int:
         **{f"pca:{organelle}": run_state / f"pca/{organelle}.json" for organelle in ORGANELLES},
         **{f"haplotypes:{organelle}": run_state / f"haplotypes/{organelle}.json" for organelle in ORGANELLES},
         **{f"popgen:{organelle}": run_state / f"popgen/{organelle}.json" for organelle in ORGANELLES},
+        **{f"distances:{organelle}": run_state / f"distances/{organelle}.json" for organelle in ORGANELLES},
         **{f"trees:{organelle}": run_state / f"trees/{organelle}.json" for organelle in ORGANELLES},
         **{f"admixture:{organelle}": run_state / f"admixture/{organelle}.json" for organelle in ORGANELLES},
     }
@@ -525,6 +576,8 @@ def main() -> int:
                 f"population_summary:{organelle}": root
                 / f"canonical_publication/results/popgen/{args.run_id}/{organelle}.population_summary.tsv",
                 f"fst:{organelle}": root / f"canonical_publication/results/popgen/{args.run_id}/{organelle}.pairwise_hudson_fst.tsv",
+                f"distance_differences:{organelle}": root
+                / f"canonical_publication/results/supplement/{args.run_id}/pairwise_distances/{organelle}.sample_pairwise_differences.tsv",
                 f"tree:{organelle}": root / f"canonical_publication/results/trees/{args.run_id}/{organelle}.primary.treefile",
                 f"admixture_replicates:{organelle}": root
                 / f"canonical_publication/results/supplement/{args.run_id}/admixture/{organelle}/replicate_cv.tsv",
@@ -572,7 +625,10 @@ def main() -> int:
         "publication_figures",
         declared,
         {label: state["fingerprint"]["digest"] for label, state in states.items()},  # type: ignore[index]
-        ["deterministic canonical renderer; PNG/PDF/SVG; unrooted tree layout; signed FST centered at zero"],
+        [
+            "deterministic canonical renderer; PNG/PDF/SVG; unrooted tree layout; signed FST centered at zero; "
+            "pairwise-difference heatmaps in maximum-likelihood tree tip order"
+        ],
     )
     if args.resume and state_path.exists():
         saved = json.loads(state_path.read_text())
@@ -602,6 +658,7 @@ def main() -> int:
             figure_paths.extend(render_fst(root, args.run_id, organelle, staging))
             figure_paths.extend(render_tree(root, args.run_id, organelle, staging))
             figure_paths.extend(render_admixture(root, args.run_id, organelle, staging))
+            figure_paths.extend(render_pairwise_differences(root, args.run_id, organelle, staging))
         manifest = staging / "figure_manifest.tsv"
         with manifest.open("w", newline="") as handle:
             writer = csv.writer(handle, delimiter="\t", lineterminator="\n")

@@ -15,6 +15,7 @@ from pathlib import Path
 
 from Bio import Phylo
 from organelle_pipeline.configuration import validate_publication_config
+from organelle_pipeline.distances import validate_pairwise_distance_outputs
 from organelle_pipeline.inventory import ACCEPTABLE_SOURCE_VALIDATION_STATUSES, validate_inventory
 from organelle_pipeline.paths import repository_relative, validate_run_id
 from organelle_pipeline.provenance import (
@@ -259,6 +260,31 @@ def main() -> int:
         row["partition"]: row
         for row in read_tsv(root / "canonical_publication/results/supplement" / run_id / "concatenated_site_contribution.tsv")
     }
+    distance_summaries = {}
+    for organelle in ("chloroplast", "mitochondria"):
+        distance_state_path = run_provenance_dir / "distances" / f"{organelle}.json"
+        if not distance_state_path.is_file():
+            raise RuntimeError(f"Missing sample-distance provenance for {organelle}")
+        distance_state = json.loads(distance_state_path.read_text())
+        validate_saved_outputs(root, distance_state)
+        metadata_rows = read_tsv(root / "canonical_publication/metadata/qc" / run_id / f"{organelle}_samples.tsv")
+        expected_samples = tuple(row["sample_id"] for row in metadata_rows)
+        alignment_records = dict(
+            read_single_fasta(
+                root / "canonical_publication/results/alignments" / run_id / f"{organelle}.callable_alignment.fa",
+                expected_records=len(expected_samples),
+            )
+        )
+        expected_callable = tuple(sum(base.upper() in "ACGT" for base in alignment_records[sample]) for sample in expected_samples)
+        distance_base = root / "canonical_publication/results/supplement" / run_id / "pairwise_distances"
+        distance_summaries[organelle] = validate_pairwise_distance_outputs(
+            organelle,
+            expected_samples,
+            distance_base / f"{organelle}.sample_pairwise_differences.tsv",
+            distance_base / f"{organelle}.sample_pairwise_callable_sites.tsv",
+            distance_base / f"{organelle}.sample_pairwise_distances.tsv",
+            expected_callable,
+        )
     source_state_summary = json.loads((run_provenance_dir / "source_validation.json").read_text())
     declared_missing_sources = source_state_summary.get("declared_missing_provider_entries", [])
     provider_self_reference_warnings = source_state_summary.get("unverifiable_provider_manifest_self_references", [])
@@ -408,6 +434,21 @@ def main() -> int:
         f"K={admixture_states['mitochondria']['selected_k']} for mitochondria "
         f"({'boundary optimum' if admixture_states['mitochondria']['boundary_optimum'] else 'interior optimum'}). "
         "These are sensitivity results under the limitations stated below.\n\n"
+        "## Supplementary sample-level nucleotide differences\n\n"
+        "For every sample pair, raw nucleotide differences were counted separately for chloroplast and mitochondria at "
+        "reference-coordinate positions where both samples had an A, C, G, or T call. Positions containing an uncertain "
+        "or missing call in either sample were excluded pairwise. Companion callable-site matrices and p-distances are "
+        "reported because raw-count denominators vary among pairs.\n\n"
+        f"- Chloroplast ({distance_summaries['chloroplast'].sample_count} samples; "
+        f"{distance_summaries['chloroplast'].pair_count:,} pairs): minimum/median/maximum differences = "
+        f"{distance_summaries['chloroplast'].minimum_differences}/"
+        f"{distance_summaries['chloroplast'].median_differences:g}/"
+        f"{distance_summaries['chloroplast'].maximum_differences}.\n"
+        f"- Mitochondria ({distance_summaries['mitochondria'].sample_count} samples; "
+        f"{distance_summaries['mitochondria'].pair_count:,} pairs): minimum/median/maximum differences = "
+        f"{distance_summaries['mitochondria'].minimum_differences}/"
+        f"{distance_summaries['mitochondria'].median_differences:g}/"
+        f"{distance_summaries['mitochondria'].maximum_differences}.\n\n"
         "## Phylogenetic interpretation\n\n"
         "Separate unrooted chloroplast and mitochondrial ModelFinder trees with "
         f"{int(config['phylogeny']['shalrt_replicates']):,} SH-aLRT and "
@@ -527,6 +568,20 @@ def main() -> int:
         )
 
     acceptance_errors = []
+    for organelle in ("chloroplast", "mitochondria"):
+        distance_state_path = run_provenance_dir / "distances" / f"{organelle}.json"
+        if not distance_state_path.is_file():
+            acceptance_errors.append(f"{organelle} sample-distance provenance is missing")
+            continue
+        distance_state = json.loads(distance_state_path.read_text())
+        summary = distance_summaries[organelle]
+        expected_pairs = summary.sample_count * (summary.sample_count - 1) // 2
+        if (
+            distance_state.get("status") != "complete"
+            or distance_state.get("sample_count") != summary.sample_count
+            or distance_state.get("pairwise_comparison_count") != expected_pairs
+        ):
+            acceptance_errors.append(f"{organelle} sample-distance provenance/count mismatch")
     expected_mapping_states = {
         run_provenance_dir / "mapping" / f"{row['sample_id']}.json"
         for row in sample_manifest_rows
@@ -672,7 +727,7 @@ def main() -> int:
         acceptance_errors.append("canonical figure manifest is missing")
     else:
         figure_rows = read_tsv(figure_manifest_path)
-        expected_figure_rows = 12 * 3
+        expected_figure_rows = 14 * 3
         if len(figure_rows) != expected_figure_rows:
             acceptance_errors.append(f"canonical figure manifest has {len(figure_rows)} rows; expected {expected_figure_rows}")
         for row in figure_rows:

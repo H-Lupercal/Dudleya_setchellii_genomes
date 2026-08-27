@@ -1,10 +1,10 @@
 {
-  "figure_count": 12,
+  "figure_count": 14,
   "fingerprint": {
     "commands": [
-      "deterministic canonical renderer; PNG/PDF/SVG; unrooted tree layout; signed FST centered at zero"
+      "deterministic canonical renderer; PNG/PDF/SVG; unrooted tree layout; signed FST centered at zero; pairwise-difference heatmaps in maximum-likelihood tree tip order"
     ],
-    "digest": "8bf60bfd9e798420bc256974fa3589163226448fcf7f9fde1cac5f0037d3c0dd",
+    "digest": "c944d5b7d0e06460f3db0b58b2237e64a590d8f5760fd44c81e2f36ba05e2829",
     "inputs": [
       [
         "canonical_publication/config/publication_config.toml",
@@ -25,6 +25,14 @@
       [
         "canonical_publication/provenance/runs/publication-20260817/admixture/mitochondria.json",
         "753aa64b5f7aa303fa33f9ac48a4127dcd88478c661028edfa22c9538b778dc5"
+      ],
+      [
+        "canonical_publication/provenance/runs/publication-20260817/distances/chloroplast.json",
+        "936b261af1dc290979002eef282761203386520c2f0b035db0dd4c576a1dfdca"
+      ],
+      [
+        "canonical_publication/provenance/runs/publication-20260817/distances/mitochondria.json",
+        "7560091ab3e2c2cc1f8fe3713d654aecfb651cb94cacbe24281108437d0e8638"
       ],
       [
         "canonical_publication/provenance/runs/publication-20260817/haplotypes/chloroplast.json",
@@ -207,6 +215,14 @@
         "7762c3c57c050bdbfb7dcf564a8443401eb022998290dab2f42bb72d504b8e2e"
       ],
       [
+        "canonical_publication/results/supplement/publication-20260817/pairwise_distances/chloroplast.sample_pairwise_differences.tsv",
+        "5090cf1ecdbd206fddc2e21254411662b58399b5373cf46df48ab9235bd7761d"
+      ],
+      [
+        "canonical_publication/results/supplement/publication-20260817/pairwise_distances/mitochondria.sample_pairwise_differences.tsv",
+        "752338441b0b73d29ea09f7c52e213032a172c8fe5d38f69fed441325718a535"
+      ],
+      [
         "canonical_publication/results/trees/publication-20260817/chloroplast.primary.treefile",
         "38d92ee9d4480189e9eb729329b359214a988c54af1ca4a1078953e6fe580b48"
       ],
@@ -216,27 +232,27 @@
       ],
       [
         "provenance:executable_sha256:biopython",
-        "c73f9387a63c5d3f89bbf323b4792ffb376e005b57d4d39718f7c000b7a1276a"
+        "48128da6770ad81eec6da58234ad4fe9ebbc92bfa52e28856ca03cba9659e7d8"
       ],
       [
         "provenance:executable_sha256:matplotlib",
-        "c73f9387a63c5d3f89bbf323b4792ffb376e005b57d4d39718f7c000b7a1276a"
+        "48128da6770ad81eec6da58234ad4fe9ebbc92bfa52e28856ca03cba9659e7d8"
       ],
       [
         "provenance:executable_sha256:networkx",
-        "c73f9387a63c5d3f89bbf323b4792ffb376e005b57d4d39718f7c000b7a1276a"
+        "48128da6770ad81eec6da58234ad4fe9ebbc92bfa52e28856ca03cba9659e7d8"
       ],
       [
         "provenance:executable_sha256:numpy",
-        "c73f9387a63c5d3f89bbf323b4792ffb376e005b57d4d39718f7c000b7a1276a"
+        "48128da6770ad81eec6da58234ad4fe9ebbc92bfa52e28856ca03cba9659e7d8"
       ],
       [
         "provenance:git_commit",
-        "5b932a95a1fa998569397491bfdec1d79d5bb84d"
+        "6cfc540a64a9934caaef2265413f36f277225888"
       ],
       [
         "provenance:pipeline_code",
-        "b0bbb3040f96b813ca2ed52be2a3fbe03c0b038be3ae775ce20e58bf45c1b2bb"
+        "56c82195c858633950146d40e76481aeecb8bf4dda0087e31c7c187659537eaf"
       ],
       [
         "provenance:tool:biopython",
@@ -244,7 +260,7 @@
       ],
       [
         "provenance:tool:matplotlib",
-        "3.10.9"
+        "3.10.8"
       ],
       [
         "provenance:tool:networkx",
@@ -252,7 +268,7 @@
       ],
       [
         "provenance:tool:numpy",
-        "2.5.0"
+        "2.4.4"
       ]
     ],
     "stage": "publication_figures",
@@ -264,6 +280,14 @@
       [
         "admixture:mitochondria",
         "ade2bfab05e4d3c5e6bb090d07473326e245f3debbeb45765c0fc57984fcf133"
+      ],
+      [
+        "distances:chloroplast",
+        "b3f3f2bf1bdf8ae39dedd2859c853dcd751f774b8d091bc226ff1aef56bd1357"
+      ],
+      [
+        "distances:mitochondria",
+        "dfb780ff548396fad9a559c0cd84ad6561860aee6c774b2e136fae44c58608d2"
       ],
       [
         "haplotypes:chloroplast",
@@ -320,6 +344,9 @@
     "canonical_publication/reports/figures/publication-20260817/chloroplast.haplotype_network.pdf": "6a0f1654b0c26feb199efc3c5f88d8bbc3ae3dcf13ed128031a071f41f4274f4",
     "canonical_publication/reports/figures/publication-20260817/chloroplast.haplotype_network.png": "80efe952db4fa608685548378f208f8e5e382559baaef1da43f8006382b7fdaf",
     "canonical_publication/reports/figures/publication-20260817/chloroplast.haplotype_network.svg": "b32f67d0fac22573fc44bc9220da62a673f69f4d86d32966fe0d35751fd1a010",
+    "canonical_publication/reports/figures/publication-20260817/chloroplast.pairwise_differences.pdf": "79662d0e6f6e86c96b9348305fa955e196b41a12e6c0e731ba4931dd15d3244e",
+    "canonical_publication/reports/figures/publication-20260817/chloroplast.pairwise_differences.png": "51fc55b4c1724e996f8cb3f5307d5c4ebe509cb2558bdd56b929cf3cff7f236c",
+    "canonical_publication/reports/figures/publication-20260817/chloroplast.pairwise_differences.svg": "2259c49c46d31012c8a39a96a8d7b096feb8457e9677880cf6c5057cbdded6aa",
     "canonical_publication/reports/figures/publication-20260817/chloroplast.pca.pdf": "594aa54d6f7577921cd14a7093b3d37f9aedb4b57abb354aff32565e490d1018",
     "canonical_publication/reports/figures/publication-20260817/chloroplast.pca.png": "8a571c61a30e1f095e66491af658a5c117132a5edf56b74cf57d08cef91d11fd",
     "canonical_publication/reports/figures/publication-20260817/chloroplast.pca.svg": "80f8941326cbacaf02f67c05e3209565d1e24e2afc9393c092d1cf5349d4c5bd",
@@ -332,10 +359,13 @@
     "canonical_publication/reports/figures/publication-20260817/chloroplast.supplementary_admixture.pdf": "8d12008a2d8666d11a982eebb6060cd74db3feb5e8fddf088a396bd3e71352c3",
     "canonical_publication/reports/figures/publication-20260817/chloroplast.supplementary_admixture.png": "504ac3f41de599cdf0eeae98a1f714d9124fbeafcb30e871e01c61e182edb84a",
     "canonical_publication/reports/figures/publication-20260817/chloroplast.supplementary_admixture.svg": "2bccbf66bc2161f396cb8f53e6340aa36f86ba966cf5280a1fe41c84c820040d",
-    "canonical_publication/reports/figures/publication-20260817/figure_manifest.tsv": "e54860db7c9ad7aa0d9bdcd8beec22fb565bfe6fd3f29fbb518125f7a7f8179b",
+    "canonical_publication/reports/figures/publication-20260817/figure_manifest.tsv": "0745723c9463586247feef3db6d25ac07d0c1dd40e50df858381fb4b3d35cfa5",
     "canonical_publication/reports/figures/publication-20260817/mitochondria.haplotype_network.pdf": "b20ced2eeccd49cce415602dbcde124c87439dcd10202af9e909ae4e916087b9",
     "canonical_publication/reports/figures/publication-20260817/mitochondria.haplotype_network.png": "945f5359e915835fc0be5517c08bea294c982b87785a934461dd7bc4ec7fcf48",
     "canonical_publication/reports/figures/publication-20260817/mitochondria.haplotype_network.svg": "f76ecbc55a1745f69585b81c83e25456123ba2e06b9dffa6cb3c518349d8e02d",
+    "canonical_publication/reports/figures/publication-20260817/mitochondria.pairwise_differences.pdf": "ffe38f570009b418564ab8c26c081596f1fc7981db48d84036090421006e8ca9",
+    "canonical_publication/reports/figures/publication-20260817/mitochondria.pairwise_differences.png": "f57dbb22d7187db9dea473c9253b0242369c6ce420b32145f4b1ea20abd7c06e",
+    "canonical_publication/reports/figures/publication-20260817/mitochondria.pairwise_differences.svg": "1ea6f18cb53593b99e17e0ec619054a90a6565c6460e8ae6fc72892bbd275811",
     "canonical_publication/reports/figures/publication-20260817/mitochondria.pca.pdf": "cf47958ab58ac6b8f933fe533d2d479272ddec7816728ec6aa6ed9af46f392ac",
     "canonical_publication/reports/figures/publication-20260817/mitochondria.pca.png": "8b9436213614c7ccd840a94189abbc97a22912e672e81d3ec5686cf36d66bc21",
     "canonical_publication/reports/figures/publication-20260817/mitochondria.pca.svg": "5ca2341f0460aad4f6f00772d5ac8f747d53dad05b233abf58c241a5179cab29",

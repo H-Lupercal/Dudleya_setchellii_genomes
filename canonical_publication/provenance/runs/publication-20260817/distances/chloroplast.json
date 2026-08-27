@@ -1,0 +1,65 @@
+{
+  "fingerprint": {
+    "commands": [
+      "packed A/C/G/T bitsets; pair-specific callability; raw substitutions; p-distance"
+    ],
+    "digest": "b3f3f2bf1bdf8ae39dedd2859c853dcd751f774b8d091bc226ff1aef56bd1357",
+    "inputs": [
+      [
+        "canonical_publication/metadata/qc/publication-20260817/chloroplast_samples.tsv",
+        "613831e85e35d5f7b5acf8b2c45cb4b5e382c3e53dd88be2dc8e091a7ffb389b"
+      ],
+      [
+        "canonical_publication/provenance/runs/publication-20260817/consensus/chloroplast.json",
+        "ae147d5615423fa6a0e98d03a48ce96b4e24efffff5339626d0d2c9c9375b4d8"
+      ],
+      [
+        "canonical_publication/results/alignments/publication-20260817/chloroplast.callable_alignment.fa",
+        "73f143fb7da0035a7d7903948d48dba4fbe7d9966fc015eda7fb5d8cfb9e5801"
+      ],
+      [
+        "provenance:executable_sha256:numpy",
+        "48128da6770ad81eec6da58234ad4fe9ebbc92bfa52e28856ca03cba9659e7d8"
+      ],
+      [
+        "provenance:executable_sha256:python",
+        "48128da6770ad81eec6da58234ad4fe9ebbc92bfa52e28856ca03cba9659e7d8"
+      ],
+      [
+        "provenance:git_commit",
+        "6cfc540a64a9934caaef2265413f36f277225888"
+      ],
+      [
+        "provenance:pipeline_code",
+        "e98008c5f7c0ddde7cbe50e09a2a5c8da578bbfbcb566dcedaa9ec5ad32775ac"
+      ],
+      [
+        "provenance:tool:numpy",
+        "2.4.4"
+      ],
+      [
+        "provenance:tool:python",
+        "Python 3.13.12"
+      ]
+    ],
+    "stage": "sample_distances:chloroplast",
+    "upstream": [
+      [
+        "consensus",
+        "610739ef89a4f1f4962b574d1bd07de957da110b09525f9bef06b3acc5b66405"
+      ]
+    ]
+  },
+  "maximum_pairwise_differences": 692,
+  "median_pairwise_differences": 168.0,
+  "minimum_pairwise_differences": 0,
+  "organelle": "chloroplast",
+  "outputs": {
+    "canonical_publication/results/supplement/publication-20260817/pairwise_distances/chloroplast.sample_pairwise_callable_sites.tsv": "252e94eaa0b13d059ef0c83e1b022d532ba20047dceecdbbc37462ae9f289a97",
+    "canonical_publication/results/supplement/publication-20260817/pairwise_distances/chloroplast.sample_pairwise_differences.tsv": "5090cf1ecdbd206fddc2e21254411662b58399b5373cf46df48ab9235bd7761d",
+    "canonical_publication/results/supplement/publication-20260817/pairwise_distances/chloroplast.sample_pairwise_distances.tsv": "679d9ff6851feea37ae6d58c254441ac5faf43a0caa7600b3c6ccdf5e3326dee"
+  },
+  "pairwise_comparison_count": 37950,
+  "sample_count": 276,
+  "status": "complete"
+}

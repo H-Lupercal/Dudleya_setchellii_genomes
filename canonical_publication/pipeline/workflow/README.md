@@ -10,7 +10,8 @@ immutable sources ──┬──> references, annotations, static masks ──�
                     └──> sample metadata ────────────────────────┼──> preprocessing + mapping
                                                                └──> mapping provenance gate
 references + mapping provenance ───────────────────────────────────> QC eligibility + read-backed mtDNA mask
-QC ──> all-site calls + filtered SNP layers ──┬──> callable consensus ──┬──> haplotypes
+QC ──> all-site calls + filtered SNP layers ──┬──> callable consensus ──┬──> supplementary sample distances
+                                              │                        ├──> haplotypes
                                               │                        ├──> population genetics ──> independent cross-check
                                               │                        └──> primary organelle trees
                                               │                              ├──> supplementary partitioned concatenation
