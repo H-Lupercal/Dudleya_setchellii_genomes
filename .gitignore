@@ -63,6 +63,7 @@ __pycache__/
 htmlcov/
 .snakemake/
 .superpowers/
+.worktrees/
 .tools/
 **/.matplotlib/
 

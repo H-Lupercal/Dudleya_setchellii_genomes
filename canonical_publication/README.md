@@ -3,6 +3,31 @@
 This tree contains the repaired Dudleya organelle workflow and only outputs
 whose complete dependency chain was generated or fingerprint-validated here.
 
+## Publication status
+
+`publication-20260817` is the accepted scientific run. Its original
+`CURRENT_RUN`, `ACCEPTANCE.json`, final-artifact manifest, and run provenance
+are historical commit-relative records and are intentionally unchanged.
+
+`publication-20260817-package-20260826` is the current packaging/provenance
+attestation. It binds the current canonical deliverables, pipeline code,
+documentation, CI workflow, relocated archive manifest, and the unchanged base
+run evidence. `PUBLICATION_PACKAGE_PASS` is not a renewed scientific review or
+a claim that the 278-sample workflow was rerun.
+
+Verify the current package without checking out `archive_noncanonical`:
+
+```bash
+PYTHONPATH=canonical_publication/pipeline/src \
+  python canonical_publication/pipeline/scripts/attest_publication_package.py \
+  verify --repository-root .
+```
+
+The package pointer is `CURRENT_PACKAGE`; package acceptance records live under
+`provenance/packages/`, and their artifact manifests and checksum indexes live
+under `provenance/manifests/`. A differing attestation is never written over an
+existing package identifier; use a new package identifier for a future change.
+
 Create the pinned main environment at the runner's local tool prefix (the
 prefix is ignored by Git), and create the independent validator separately:
 
@@ -12,6 +37,10 @@ micromamba create -y -p .tools/bioconda-env \
 micromamba create -y -p .tools/scikit-allel-validation \
   -f canonical_publication/validation_environment.yml
 ```
+
+GitHub Actions uses `pipeline/ci_environment.yml`, a separately pinned subset
+for tests, linting, and package verification. It is not a scientific execution
+environment and does not replace the historical `environment.yml`.
 
 Run from the repository root:
 
