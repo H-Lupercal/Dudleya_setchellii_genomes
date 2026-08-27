@@ -93,7 +93,7 @@ def test_canonical_text_has_no_absolute_workstation_path() -> None:
 
 def test_only_audit_reporting_and_path_guard_name_the_archive() -> None:
     root = Path(__file__).resolve().parents[3]
-    allowed = {"build_reports.py", "paths.py"}
+    allowed = {"build_reports.py", "paths.py", "publication_package.py"}
     offenders = []
     for path in (root / "canonical_publication/pipeline").rglob("*.py"):
         if "archive_noncanonical/" in path.read_text() and path.name not in allowed and "tests" not in path.parts:

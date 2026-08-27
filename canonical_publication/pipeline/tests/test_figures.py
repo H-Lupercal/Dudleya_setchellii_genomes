@@ -260,24 +260,15 @@ def _miniature_figure_repository(root: Path, run_id: str) -> None:
         distance_dir = root / f"canonical_publication/results/supplement/{run_id}/pairwise_distances"
         differences = _write(
             distance_dir / f"{organelle}.sample_pairwise_differences.tsv",
-            "sample_id\ts1\ts2\ts3\ts4\n"
-            "s1\t0\t1\t2\t3\n"
-            "s2\t1\t0\t3\t2\n"
-            "s3\t2\t3\t0\t1\n"
-            "s4\t3\t2\t1\t0\n",
+            "sample_id\ts1\ts2\ts3\ts4\ns1\t0\t1\t2\t3\ns2\t1\t0\t3\t2\ns3\t2\t3\t0\t1\ns4\t3\t2\t1\t0\n",
         )
         callable_sites = _write(
             distance_dir / f"{organelle}.sample_pairwise_callable_sites.tsv",
-            "sample_id\ts1\ts2\ts3\ts4\n"
-            "s1\t10\t9\t8\t7\n"
-            "s2\t9\t10\t7\t8\n"
-            "s3\t8\t7\t10\t9\n"
-            "s4\t7\t8\t9\t10\n",
+            "sample_id\ts1\ts2\ts3\ts4\ns1\t10\t9\t8\t7\ns2\t9\t10\t7\t8\ns3\t8\t7\t10\t9\ns4\t7\t8\t9\t10\n",
         )
         long_form = _write(
             distance_dir / f"{organelle}.sample_pairwise_distances.tsv",
-            "organelle\tsample_1\tsample_2\tdifferences\tsites_compared\tp_distance\n"
-            f"{organelle}\ts1\ts2\t1\t9\t0.111111111111\n",
+            f"organelle\tsample_1\tsample_2\tdifferences\tsites_compared\tp_distance\n{organelle}\ts1\ts2\t1\t9\t0.111111111111\n",
         )
         _state(
             root,

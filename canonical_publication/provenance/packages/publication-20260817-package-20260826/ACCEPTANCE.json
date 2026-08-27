@@ -1,0 +1,27 @@
+{
+  "acceptance_scope": "publication_package_and_provenance",
+  "archive_snapshot": {
+    "branch": "archive/noncanonical-2026-08-17",
+    "manifest_sha256": "7d7d0eb52daaf27c0d12f0608d37b064e15c8161fc5d79b86cd19a828a7ef047",
+    "scope": "tracked files only; ignored local outputs excluded",
+    "source_commit": "abb16527d20a9dd949261d5ca2bc602987a82cee",
+    "subtree": "6d2f2ed95021de132c561017008b78cb47a3a294",
+    "tracked_file_count": 1717
+  },
+  "artifact_count": 825,
+  "artifact_manifest": "canonical_publication/provenance/manifests/publication-20260817-package-20260826.final_artifacts.tsv",
+  "artifact_manifest_sha256": "878460c0a0ea4acd3b413e97ff5658360f717ec4a70d680ae90f899eae438439",
+  "base_run": {
+    "acceptance_path": "canonical_publication/provenance/runs/publication-20260817/ACCEPTANCE.json",
+    "acceptance_sha256": "585f72eef82130f5709aed9a850367c76dd8035945a18ddc5d86e3ab1c3c4fda",
+    "artifact_manifest_path": "canonical_publication/provenance/manifests/publication-20260817.final_artifacts.tsv",
+    "artifact_manifest_sha256": "0817889739b03b9b33c4fe3aa41baf95d6d6b20b2a2a2daf314a7dbf952890f8",
+    "historical_artifact_count": 800,
+    "run_id": "publication-20260817"
+  },
+  "errors": [],
+  "package_id": "publication-20260817-package-20260826",
+  "pipeline_code_digest": "be95e8db676b5fc0119577200877bfbd94f0ce6352f4a25112524af7c8739c3c",
+  "status": "PASS",
+  "status_label": "PUBLICATION_PACKAGE_PASS"
+}

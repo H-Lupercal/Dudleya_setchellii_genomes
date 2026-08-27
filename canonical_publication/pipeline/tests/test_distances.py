@@ -51,9 +51,7 @@ def _consensus_state(root: Path, run_id: str, organelle: str, outputs: tuple[Pat
             {
                 "status": "complete",
                 "fingerprint": {"digest": f"consensus-{organelle}"},
-                "outputs": {
-                    output.relative_to(root).as_posix(): hashlib.sha256(output.read_bytes()).hexdigest() for output in outputs
-                },
+                "outputs": {output.relative_to(root).as_posix(): hashlib.sha256(output.read_bytes()).hexdigest() for output in outputs},
             }
         )
     )
@@ -66,15 +64,10 @@ def _read_tsv(path: Path) -> list[list[str]]:
 
 def test_distance_stage_writes_ordered_symmetric_matrices_long_form_and_resume_state(tmp_path: Path) -> None:
     run_id = "miniature-run"
-    metadata = (
-        "sample_id\tpopcode\tspecies\n"
-        "s2\tP1\tD. setchellii\n"
-        "s1\tP1\tD. setchellii\n"
-        "s3\tP2\tD. cymosa\n"
-    )
+    metadata = "sample_id\tpopcode\tspecies\ns2\tP1\tD. setchellii\ns1\tP1\tD. setchellii\ns3\tP2\tD. cymosa\n"
     alignment = ">s1\nACGTN\n>s2\nATGTN\n>s3\nNNGTA\n"
     for organelle in ("chloroplast", "mitochondria"):
-        metadata_path = _write(
+        _write(
             tmp_path / f"canonical_publication/metadata/qc/{run_id}/{organelle}_samples.tsv",
             metadata,
         )
@@ -122,9 +115,7 @@ def test_distance_stage_writes_ordered_symmetric_matrices_long_form_and_resume_s
             [organelle, "s2", "s3", "0", "2", "0"],
             [organelle, "s1", "s3", "0", "2", "0"],
         ]
-        state = json.loads(
-            (tmp_path / f"canonical_publication/provenance/runs/{run_id}/distances/{organelle}.json").read_text()
-        )
+        state = json.loads((tmp_path / f"canonical_publication/provenance/runs/{run_id}/distances/{organelle}.json").read_text())
         assert state["status"] == "complete"
         assert state["sample_count"] == 3
         assert state["pairwise_comparison_count"] == 3
@@ -188,8 +179,7 @@ def test_distance_output_validator_rejects_asymmetric_matrix(tmp_path: Path) -> 
     )
     long_form = _write(
         distance_dir / "mitochondria.sample_pairwise_distances.tsv",
-        "organelle\tsample_1\tsample_2\tdifferences\tsites_compared\tp_distance\n"
-        "mitochondria\ts1\ts2\t1\t4\t0.25\n",
+        "organelle\tsample_1\tsample_2\tdifferences\tsites_compared\tp_distance\nmitochondria\ts1\ts2\t1\t4\t0.25\n",
     )
     distances = importlib.import_module("organelle_pipeline.distances")
 

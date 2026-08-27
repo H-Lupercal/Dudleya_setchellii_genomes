@@ -55,10 +55,7 @@ def pack_sequence(sequence: str) -> PackedSequence:
     """Pack A/C/G/T positions into bitsets for fast all-pairs comparisons."""
 
     encoded = np.frombuffer(sequence.upper().encode("ascii"), dtype=np.uint8)
-    masks = tuple(
-        int.from_bytes(np.packbits(encoded == ord(base), bitorder="little").tobytes(), "little")
-        for base in "ACGT"
-    )
+    masks = tuple(int.from_bytes(np.packbits(encoded == ord(base), bitorder="little").tobytes(), "little") for base in "ACGT")
     return PackedSequence(
         length=len(sequence),
         base_masks=masks,  # type: ignore[arg-type]

@@ -22,3 +22,9 @@ local-only files in addition to the archive branch.
 Existing accepted-run provenance files are unchanged historical records. Paths
 within them are relative to the source commit above, where the original archive
 layout remains available.
+
+The current publication-package attestation records these identifiers and the
+canonical manifest-copy checksum under
+`canonical_publication/provenance/packages/publication-20260817-package-20260826/`.
+Its verifier uses only this canonical metadata copy; it does not require an
+archive checkout or read any ignored local output.

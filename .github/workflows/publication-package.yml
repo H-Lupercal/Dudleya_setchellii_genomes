@@ -1,0 +1,44 @@
+name: Publication package
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publication-package-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Check out repository and LFS artifacts
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          fetch-depth: 2
+          lfs: true
+
+      - name: Create pinned canonical environment
+        uses: mamba-org/setup-micromamba@d7c9bd84e824b79d2af72a2d4196c7f4300d3476 # v3.0.0
+        with:
+          environment-file: canonical_publication/environment.yml
+          cache-environment: true
+          cache-downloads: true
+          post-cleanup: all
+
+      - name: Verify publication package and code quality
+        shell: micromamba-shell {0}
+        env:
+          PYTHONPATH: canonical_publication/pipeline/src
+        run: |
+          pytest -q canonical_publication/pipeline/tests
+          ruff check canonical_publication/pipeline
+          ruff format --check canonical_publication/pipeline
+          python canonical_publication/pipeline/scripts/attest_publication_package.py verify --repository-root .
+          git diff --check HEAD^ HEAD

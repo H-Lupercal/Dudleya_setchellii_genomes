@@ -479,10 +479,7 @@ def render_admixture(root: Path, run_id: str, organelle: str, output: Path) -> l
 
 
 def render_pairwise_differences(root: Path, run_id: str, organelle: str, output: Path) -> list[Path]:
-    matrix_path = (
-        root
-        / f"canonical_publication/results/supplement/{run_id}/pairwise_distances/{organelle}.sample_pairwise_differences.tsv"
-    )
+    matrix_path = root / f"canonical_publication/results/supplement/{run_id}/pairwise_distances/{organelle}.sample_pairwise_differences.tsv"
     with matrix_path.open(newline="") as handle:
         rows = list(csv.reader(handle, delimiter="\t"))
     if not rows or not rows[0] or rows[0][0] != "sample_id":
