@@ -267,7 +267,7 @@ def test_publication_ci_runs_every_release_gate() -> None:
         "uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8",
         "uses: mamba-org/setup-micromamba@d7c9bd84e824b79d2af72a2d4196c7f4300d3476",
         "lfs: true",
-        "canonical_publication/environment.yml",
+        "canonical_publication/pipeline/ci_environment.yml",
         "pytest -q canonical_publication/pipeline/tests",
         "ruff check canonical_publication/pipeline",
         "ruff format --check canonical_publication/pipeline",

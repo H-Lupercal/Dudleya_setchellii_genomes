@@ -38,6 +38,10 @@ micromamba create -y -p .tools/scikit-allel-validation \
   -f canonical_publication/validation_environment.yml
 ```
 
+GitHub Actions uses `pipeline/ci_environment.yml`, a separately pinned subset
+for tests, linting, and package verification. It is not a scientific execution
+environment and does not replace the historical `environment.yml`.
+
 Run from the repository root:
 
 ```bash
