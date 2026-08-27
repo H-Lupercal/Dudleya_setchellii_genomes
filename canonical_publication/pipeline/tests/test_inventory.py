@@ -4,6 +4,7 @@ import pytest
 from organelle_pipeline.inventory import (
     ACCEPTABLE_SOURCE_VALIDATION_STATUSES,
     classify_provider_md5,
+    inventory_manifest_digest,
     inventory_tree,
     source_validation_status,
     validate_inventory,
@@ -116,7 +117,7 @@ def test_archive_inventory_validation_rejects_content_drift(tmp_path: Path) -> N
         for record in records
     ]
 
-    assert len(validate_inventory(rows, tmp_path)) == 64
+    assert validate_inventory(rows, tmp_path) == inventory_manifest_digest(rows)
     artifact.write_text("modified\n")
     with pytest.raises(ValueError, match="checksum"):
         validate_inventory(rows, tmp_path)
@@ -135,4 +136,80 @@ def test_archive_inventory_validation_rejects_duplicate_paths(tmp_path: Path) ->
     }
 
     with pytest.raises(ValueError, match="Duplicate inventory path"):
-        validate_inventory([row, row], tmp_path)
+        inventory_manifest_digest([row, row])
+
+
+def test_archive_manifest_digest_does_not_require_archived_files() -> None:
+    rows = [
+        {
+            "archived_path": "archive_noncanonical/dated/snapshot/result.tsv",
+            "artifact_type": "file",
+            "size_bytes": "8",
+            "sha256": "0" * 64,
+        }
+    ]
+
+    assert len(inventory_manifest_digest(rows)) == 64
+
+
+@pytest.mark.parametrize(
+    ("row", "message"),
+    [
+        (
+            {
+                "archived_path": "/absolute/result.tsv",
+                "artifact_type": "file",
+                "size_bytes": "8",
+                "sha256": "0" * 64,
+            },
+            "escapes repository",
+        ),
+        (
+            {
+                "archived_path": "archive_noncanonical/../result.tsv",
+                "artifact_type": "file",
+                "size_bytes": "8",
+                "sha256": "0" * 64,
+            },
+            "escapes repository",
+        ),
+        (
+            {
+                "archived_path": "archive_noncanonical/result.tsv",
+                "artifact_type": "directory",
+                "size_bytes": "8",
+                "sha256": "0" * 64,
+            },
+            "Unsupported inventory artifact type",
+        ),
+        (
+            {
+                "archived_path": "archive_noncanonical/result.tsv",
+                "artifact_type": "file",
+                "size_bytes": "-1",
+                "sha256": "0" * 64,
+            },
+            "Invalid inventory size",
+        ),
+        (
+            {
+                "archived_path": "archive_noncanonical/result.tsv",
+                "artifact_type": "file",
+                "size_bytes": "8",
+                "sha256": "not-a-sha256",
+            },
+            "Invalid inventory SHA-256",
+        ),
+        (
+            {
+                "archived_path": "archive_noncanonical/result.tsv",
+                "artifact_type": "file",
+                "size_bytes": "8",
+            },
+            "Missing inventory fields",
+        ),
+    ],
+)
+def test_archive_manifest_digest_rejects_invalid_metadata(row: dict[str, str], message: str) -> None:
+    with pytest.raises(ValueError, match=message):
+        inventory_manifest_digest([row])

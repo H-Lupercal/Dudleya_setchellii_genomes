@@ -49,34 +49,9 @@ canonical_publication/results/qc/*/fastp/*.json
 !canonical_publication/pipeline/tests/fixtures/*.vcf
 !supplementary_analysis/results/**/*.vcf.gz
 
-# The archive remains on disk and is checksummed, but large derived products
-# are represented in Git by its manifest rather than duplicated into history.
-archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/results/**
-!archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/results/**/
-!archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/results/**/*.md
-!archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/results/**/*.tsv
-!archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/results/**/*.csv
-!archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/results/**/*.treefile
-archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/*.pdf
-archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/*.png
-archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/*.svg
-archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/*.log
-archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/*.phy
-archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/*.ped
-archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/*.bed
-archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/*.bim
-archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/*.fam
-archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/*.nosex
-archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/*.P
-archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/*.Q
-!archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/results/**/*.txt
-!archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/results/**/*.bed
-
-# Per-base depth and callable-position matrices are large derived datasets,
-# despite their tabular extensions.  They remain local and are represented by
-# the checksummed archive manifest.
-archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/results/**/*.depth.tsv
-archive_noncanonical/2026-08-17_pre_remediation/snapshot/**/results/**/*.callable_sites.tsv
+# The tracked noncanonical snapshot is preserved on the remote archive branch.
+# Any complete or partial local checkout remains workstation-only on main.
+archive_noncanonical/
 
 # Runtime caches and local environments
 __pycache__/
@@ -96,7 +71,3 @@ supplementary_analysis/work/**
 !supplementary_analysis/work/.gitkeep
 supplementary_analysis/.pytest_cache/
 supplementary_analysis/provenance/runs/*/logs/
-
-# Preserve the nested repository's worktree code while keeping its internal
-# Git object database local and untouched.
-archive_noncanonical/2026-08-17_pre_remediation/snapshot/dudleya_conservation_genomics_pipeline/.git/

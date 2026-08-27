@@ -118,20 +118,50 @@ def write_inventory(path: Path | str, records: list[ArtifactRecord]) -> None:
         writer.writerows(asdict(record) for record in records)
 
 
-def validate_inventory(rows: list[dict[str, str]], repository_root: Path | str) -> str:
-    """Verify every manifested file/link and return an aggregate content digest."""
+def inventory_manifest_digest(rows: list[dict[str, str]]) -> str:
+    """Validate archived artifact metadata and return its aggregate digest."""
 
-    root = Path(repository_root).resolve()
     aggregate = hashlib.sha256()
     seen_paths: set[str] = set()
-    for row in rows:
+    required_fields = frozenset({"archived_path", "artifact_type", "size_bytes", "sha256"})
+    for row_number, row in enumerate(rows, start=1):
+        missing_fields = required_fields - row.keys()
+        if missing_fields:
+            raise ValueError(f"Missing inventory fields in row {row_number}: {sorted(missing_fields)}")
+
         relative = row["archived_path"]
+        relative_path = Path(relative)
+        if not relative or relative == "." or relative_path.is_absolute() or ".." in relative_path.parts:
+            raise ValueError(f"Inventory path escapes repository: {relative}")
         if relative in seen_paths:
             raise ValueError(f"Duplicate inventory path: {relative}")
         seen_paths.add(relative)
+
+        artifact_type = row["artifact_type"]
+        if artifact_type not in {"file", "symlink"}:
+            raise ValueError(f"Unsupported inventory artifact type: {artifact_type}")
+        try:
+            size = int(row["size_bytes"])
+        except ValueError as error:
+            raise ValueError(f"Invalid inventory size: {row['size_bytes']}") from error
+        if size < 0:
+            raise ValueError(f"Invalid inventory size: {row['size_bytes']}")
+
+        digest = row["sha256"]
+        if len(digest) != 64 or any(character not in "0123456789abcdef" for character in digest):
+            raise ValueError(f"Invalid inventory SHA-256: {digest}")
+        aggregate.update(f"{relative}\0{artifact_type}\0{size}\0{digest}\n".encode())
+    return aggregate.hexdigest()
+
+
+def validate_inventory(rows: list[dict[str, str]], repository_root: Path | str) -> str:
+    """Verify every manifested file/link and return an aggregate content digest."""
+
+    aggregate_digest = inventory_manifest_digest(rows)
+    root = Path(repository_root).resolve()
+    for row in rows:
+        relative = row["archived_path"]
         relative_path = Path(relative)
-        if relative_path.is_absolute() or ".." in relative_path.parts:
-            raise ValueError(f"Inventory path escapes repository: {relative}")
         manifest_path = root / relative_path
         path = manifest_path.resolve(strict=False)
         expected_type = row["artifact_type"]
@@ -153,5 +183,4 @@ def validate_inventory(rows: list[dict[str, str]], repository_root: Path | str) 
             raise ValueError(f"Inventory size mismatch: {relative}")
         if observed_digest != row["sha256"]:
             raise ValueError(f"Inventory checksum mismatch: {relative}")
-        aggregate.update(f"{relative}\0{expected_type}\0{observed_size}\0{observed_digest}\n".encode())
-    return aggregate.hexdigest()
+    return aggregate_digest

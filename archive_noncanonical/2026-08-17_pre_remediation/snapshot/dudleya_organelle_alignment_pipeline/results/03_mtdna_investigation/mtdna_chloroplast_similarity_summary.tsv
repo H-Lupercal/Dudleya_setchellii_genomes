@@ -1,7 +1,0 @@
-metric	value
-hsp_count	28
-mtdna_union_bp_with_chloroplast_hit	4651
-mtdna_union_fraction_with_chloroplast_hit	0.019112
-covered_consensus_blocks_bp	44930
-chloroplast_hit_bp_overlapping_consensus_covered_blocks	873
-chloroplast_hit_fraction_of_consensus_covered_blocks	0.019430

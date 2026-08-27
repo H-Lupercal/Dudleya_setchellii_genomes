@@ -1,7 +1,0 @@
-tool	required_for	status	path	note
-bwa	reference_indexing_and_mapping	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/bwa	Available on PATH.
-samtools	reference_indexing_and_mapping	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/samtools	Available on PATH.
-fastp	read_qc_or_variant_calling	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/fastp	Available on PATH.
-fastqc	read_qc_or_variant_calling	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/fastqc	Available on PATH.
-multiqc	read_qc_or_variant_calling	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/multiqc	Available on PATH.
-bcftools	read_qc_or_variant_calling	FOUND	/home/neil/Downloads/dudleya/Dudleya_S_genomes/.tools/bioconda-env/bin/bcftools	Available on PATH.

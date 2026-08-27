@@ -1,3 +1,0 @@
-organelle	own_reference	own_query_coverage	own_identity	cross_reference	cross_query_coverage	cross_identity	own_to_cross_coverage_ratio	status
-chloroplast	gb|PX244389.1|	1.0	99.565	gb|PV256627.1|	0.1892	92.695	5.29	PASS_ORGANELLE_LABEL_SUPPORTED
-mitochondria	gb|PV256627.1|	0.7099	97.69	gb|OQ076651.1|	0.0124	77.676	57.25	PASS_ORGANELLE_LABEL_SUPPORTED

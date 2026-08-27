@@ -70,6 +70,15 @@ def test_report_fingerprint_tracks_the_full_manifested_pipeline_code_surface() -
     assert "pipeline_code_digest(root)" in source
 
 
+def test_report_accounting_uses_canonical_archive_metadata_without_snapshot_checkout() -> None:
+    root = Path(__file__).resolve().parents[3]
+    source = (root / "canonical_publication/pipeline/scripts/build_reports.py").read_text()
+
+    assert "canonical_publication/provenance/archive/2026-08-17_pre_remediation/manifest.tsv" in source
+    assert 'root / "archive_noncanonical/2026-08-17_pre_remediation/manifest.tsv"' not in source
+    assert 'root / "archive_noncanonical/2026-08-17_pre_remediation/snapshot"' not in source
+
+
 def test_finalized_mapping_can_be_rebound_after_downstream_only_code_change() -> None:
     root = Path(__file__).resolve().parents[3]
     mapper = (root / "canonical_publication/pipeline/scripts/map_samples.py").read_text()

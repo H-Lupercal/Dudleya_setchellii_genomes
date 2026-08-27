@@ -1,6 +1,0 @@
-figure	path
-cpDNA_fst_heatmap	submission_figures/cpDNA.pairwise_fst_heatmap.png
-cpDNA_population_colored_tree	submission_figures/cpDNA.population_colored_tree.png
-mtDNA_fst_heatmap	submission_figures/mtDNA.pairwise_fst_heatmap.png
-mtDNA_population_colored_tree	submission_figures/mtDNA.population_colored_tree.png
-submission_panel	submission_figures/dudleya_organelle_submission_panel.png

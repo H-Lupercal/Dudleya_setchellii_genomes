@@ -53,7 +53,9 @@ instead of silently concatenating lanes without validated lane-aware
 provenance.
 
 Canonical scientific stages refuse inputs resolving beneath
-`archive_noncanonical/`. The final audit-report stage reads the archive
-manifest and rehashes the snapshot solely to verify preservation and account
-for every retired artifact; archived scientific outputs are never analysis
-inputs.
+`archive_noncanonical/`. The final audit-report stage reads the preserved
+manifest from `canonical_publication/provenance/archive/` to account for every
+retired artifact without requiring the archived snapshot in a canonical
+checkout. Tracked snapshot contents remain available on
+`archive/noncanonical-2026-08-17`; archived scientific outputs are never
+analysis inputs.

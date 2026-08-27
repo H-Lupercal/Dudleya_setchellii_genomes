@@ -1,5 +1,0 @@
-dudleya_organelle_alignment_pipeline/results/06_all_sample_alignment/bam/ABAB_MAD_LP_223_Du-590.organelle.sorted.bam
-dudleya_organelle_alignment_pipeline/results/06_all_sample_alignment/bam/ABAB_MAD_LP_322_Du-593.organelle.sorted.bam
-dudleya_organelle_alignment_pipeline/results/06_all_sample_alignment/bam/ABAB_MAD_LP_323_Du-594.organelle.sorted.bam
-dudleya_organelle_alignment_pipeline/results/06_all_sample_alignment/bam/ABAB_MAD_LP_324_Du-595.organelle.sorted.bam
-dudleya_organelle_alignment_pipeline/results/06_all_sample_alignment/bam/ABAB_MAD_LP_325_Du-596.organelle.sorted.bam

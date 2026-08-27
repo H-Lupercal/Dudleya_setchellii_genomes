@@ -1,8 +1,10 @@
 import csv
+import hashlib
 import subprocess
 from pathlib import Path
 
 import pytest
+from organelle_pipeline.inventory import inventory_manifest_digest
 from organelle_pipeline.paths import (
     CanonicalPathError,
     assert_canonical_path,
@@ -56,13 +58,16 @@ def test_run_id_cannot_escape_canonical_output_directories() -> None:
         validate_run_id("../../archive_noncanonical")
 
 
-def test_archive_manifest_represents_every_legacy_artifact() -> None:
+def test_canonical_archive_manifest_preserves_historical_inventory() -> None:
     root = Path(__file__).resolve().parents[3]
-    snapshot = root / "archive_noncanonical/2026-08-17_pre_remediation/snapshot"
-    with (root / "archive_noncanonical/2026-08-17_pre_remediation/manifest.tsv").open(newline="") as handle:
-        manifested = {row["archived_path"] for row in csv.DictReader(handle, delimiter="\t")}
-    observed = {path.relative_to(root).as_posix() for path in snapshot.rglob("*") if path.is_file() or path.is_symlink()}
-    assert observed == manifested
+    manifest = root / "canonical_publication/provenance/archive/2026-08-17_pre_remediation/manifest.tsv"
+    with manifest.open(newline="") as handle:
+        rows = list(csv.DictReader(handle, delimiter="\t"))
+
+    assert len(rows) == 5674
+    assert all(row["archived_path"].startswith("archive_noncanonical/2026-08-17_pre_remediation/snapshot/") for row in rows)
+    assert len(inventory_manifest_digest(rows)) == 64
+    assert hashlib.sha256(manifest.read_bytes()).hexdigest() == "7d7d0eb52daaf27c0d12f0608d37b064e15c8161fc5d79b86cd19a828a7ef047"
 
 
 def test_no_canonical_symlink_resolves_into_archive() -> None:
@@ -96,33 +101,17 @@ def test_only_audit_reporting_and_path_guard_name_the_archive() -> None:
     assert offenders == []
 
 
-def test_large_archive_matrices_are_local_only_but_small_reports_remain_visible() -> None:
+def test_local_archive_checkout_is_ignored_on_main() -> None:
     root = Path(__file__).resolve().parents[3]
-    snapshot = root / "archive_noncanonical/2026-08-17_pre_remediation/snapshot/full_pipeline_run/results"
-    large_derived = (
-        snapshot / "06_all_sample_alignment/qc/DU079LP010.depth.tsv",
-        snapshot / "11_callable_consensus/cpDNA.primary.callable_sites.tsv",
-    )
-    small_report = snapshot / "06_all_sample_alignment/all_sample_alignment_report.md"
+    local_archive_path = Path("archive_noncanonical/local-only-output.txt")
 
-    for path in large_derived:
-        assert path.is_file()
-        assert (
-            subprocess.run(
-                ["git", "check-ignore", "--quiet", str(path.relative_to(root))],
-                cwd=root,
-                check=False,
-            ).returncode
-            == 0
-        )
-    assert small_report.is_file()
     assert (
         subprocess.run(
-            ["git", "check-ignore", "--quiet", str(small_report.relative_to(root))],
+            ["git", "check-ignore", "--quiet", str(local_archive_path)],
             cwd=root,
             check=False,
         ).returncode
-        == 1
+        == 0
     )
 
 

@@ -1,3 +1,0 @@
-record	observed_length	expected_length	status	note
-chloroplast	150274	150274	PASS	Length matches expected verified reference.
-mitochondria	243359	243359	PASS	Length matches expected verified reference.

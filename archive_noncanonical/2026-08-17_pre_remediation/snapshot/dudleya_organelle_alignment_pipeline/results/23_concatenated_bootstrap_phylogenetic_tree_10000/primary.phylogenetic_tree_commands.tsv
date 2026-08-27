@@ -1,2 +1,0 @@
-organelle	method	command
-cpDNA_mtDNA	iqtree_ml_ufboot10000	/home/neil/miniconda3/bin/iqtree -s dudleya_organelle_alignment_pipeline/results/22_concatenated_consensus/cpDNA_mtDNA.primary.concatenated_consensus.fa --seqtype DNA -m GTR+F+G4 --prefix dudleya_organelle_alignment_pipeline/results/23_concatenated_bootstrap_phylogenetic_tree_10000/cpDNA_mtDNA.primary.iqtree_ml -T 14 --safe --redo --quiet -B 10000 --bnni

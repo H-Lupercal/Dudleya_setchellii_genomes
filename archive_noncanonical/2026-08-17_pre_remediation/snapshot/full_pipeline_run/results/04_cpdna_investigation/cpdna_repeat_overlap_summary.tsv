@@ -1,9 +1,0 @@
-metric	value
-large_repeat_merged_bp	51472
-large_repeat_fraction_of_cpdna	0.342521
-high_mapq_consensus_ge14_bp	103929
-high_mapq_consensus_ge14_fraction	0.691597
-non_consensus_high_mapq_bp	46345
-repeat_bp_inside_high_mapq_consensus_ge14	5149
-repeat_bp_inside_non_consensus_high_mapq	46323
-fraction_non_consensus_explained_by_large_repeats	0.999525

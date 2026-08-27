@@ -16,7 +16,7 @@ from pathlib import Path
 from Bio import Phylo
 from organelle_pipeline.configuration import validate_publication_config
 from organelle_pipeline.distances import validate_pairwise_distance_outputs
-from organelle_pipeline.inventory import ACCEPTABLE_SOURCE_VALIDATION_STATUSES, validate_inventory
+from organelle_pipeline.inventory import ACCEPTABLE_SOURCE_VALIDATION_STATUSES, inventory_manifest_digest
 from organelle_pipeline.paths import repository_relative, validate_run_id
 from organelle_pipeline.provenance import (
     build_stage_fingerprint_from_hashes,
@@ -135,9 +135,9 @@ def main() -> int:
     for directory in (report_dir, table_dir, manifest_dir, invalidation_dir):
         directory.mkdir(parents=True, exist_ok=True)
 
-    archive_manifest = root / "archive_noncanonical/2026-08-17_pre_remediation/manifest.tsv"
+    archive_manifest = root / "canonical_publication/provenance/archive/2026-08-17_pre_remediation/manifest.tsv"
     archive_rows = read_tsv(archive_manifest)
-    archive_content_digest = validate_inventory(archive_rows, root)
+    archive_content_digest = inventory_manifest_digest(archive_rows)
     run_provenance_dir = provenance_dir / "runs" / run_id
     state_path = run_provenance_dir / "reports.json"
     input_state_paths = sorted(
@@ -736,11 +736,6 @@ def main() -> int:
                 acceptance_errors.append(f"canonical figure manifest checksum failed: {row['path']}")
     if len(archive_rows) != len(read_tsv(invalidation_path)):
         acceptance_errors.append("invalidation report does not account for every archive row")
-    snapshot_root = root / "archive_noncanonical/2026-08-17_pre_remediation/snapshot"
-    archived_on_disk = {path.relative_to(root).as_posix() for path in snapshot_root.rglob("*") if path.is_file() or path.is_symlink()}
-    archived_in_manifest = {row["archived_path"] for row in archive_rows}
-    if archived_on_disk != archived_in_manifest:
-        acceptance_errors.append("archive manifest paths do not exactly match the legacy snapshot")
     for path in (root / "canonical_publication").rglob("*"):
         if path.is_symlink() and "archive_noncanonical" in str(path.resolve(strict=False)):
             acceptance_errors.append(f"canonical symlink resolves into archive: {path}")
@@ -802,8 +797,9 @@ def main() -> int:
         "This repository is organized by scientific status:\n\n"
         "- [`source_data/`](source_data/) — immutable raw reads and reference candidates.\n"
         "- [`canonical_publication/`](canonical_publication/) — repaired code and accepted publication outputs.\n"
-        "- [`archive_noncanonical/`](archive_noncanonical/) — preserved pre-remediation artifacts "
-        "that must not be used for current inference.\n\n"
+        "- [`canonical_publication/provenance/archive/`](canonical_publication/provenance/archive/) — "
+        "audit metadata for pre-remediation artifacts; tracked snapshot contents are preserved on "
+        "`archive/noncanonical-2026-08-17`.\n\n"
         f"Current canonical run: `{run_id}` (acceptance PASS). The sole supported entrypoint is "
         "`canonical_publication/run_pipeline.sh`; see `canonical_publication/CURRENT_RUN` and "
         "`canonical_publication/provenance/runs/` for checksummed status.\n"
